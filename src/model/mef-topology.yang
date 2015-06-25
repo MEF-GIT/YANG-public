@@ -17,18 +17,18 @@ module mef-topology {
      Phone:   +1 310-642-2800 \\
      Fax:     +1 310-642-2808";
   description
-    "This module models the NMS level view of the network devices," +
-    " their physical interfaces, and the network topology. When " +
-    "the NMS discovers a network device,it is to pull the device" +
-    " configuration and operational status as expected for an " +
-    "NMS. Once the NMS has a network device's configuration, " +
-    "it creates the /mef-topology/devices/device{} entry and" +
-    " populates the list of physical interfaces. The Peers " +
-    "entries are populated as configuration to reflect physical " +
-    "cabling interconnections.Hints could be detected from " +
-    "LLDP Neighbor information[802.1AB]." +
+    "This module models the NMS level view of the network devices, 
+     their physical interfaces, and the network topology. 
+     When the NMS discovers a network device,it is to pull the 
+     device configuration and operational status as expected for 
+     an NMS. Once the NMS has a network device's configuration, 
+     it creates the /mef-topology/devices/device{} entry and 
+     populates the list of physical interfaces. The Peers entries 
+     are populated as configuration to reflect physical cabling 
+     interconnections.Hints could be detected from LLDP Neighbor 
+     information[802.1AB].
      
-     "Reference Overview:
+     Reference Overview:
      A number of base documents have been used to create 
      the MEF Topology YANG Module. The following are the 
      abbreviations for the baseline documents:
@@ -71,72 +71,105 @@ module mef-topology {
      of Ethernet over Transport and Metro Ethernet 
      Network(EoT/MEN)' March 2007";
 
-  revision 2015-05-12 {
+  revision 2015-05-26 {
     description
-    	      "Draft Revision 1";
-    reference "EVC Ethernet Services Definitions YANG Modules" +
-    		" (MEF XX), TBD";
-  }
-
+      "Formal Project Review Draft 1.";
+    reference "EVC Ethernet Services Definitions YANG Modules " +
+    		"(MEF XX), TBD";
+  }     
+     
   container mef-topology {
-  	description "TBD";
+    description
+      "MEF Topology";
     container devices {
-    	description "TBD";
+      description
+        "Network Devices in the CEN.";
       list device {
         key "dev-id";
         description
-          "TBD.";
-        reference "TBD";
+          "Network Device List.";
         container interfaces {
-        	description "TBD";
+          description
+            "Physical Ports/Interfaces associated with this " +
+            "Network Device.";
           list interface {
             key "phy";
             description
-              "TBD.";
-            reference "TBD";
-            container peer {
-            	description "TBD";
-              leaf peer-device {
-                type mef-types:identifier45;
-          	    description "TBD";
-              }
-              leaf peer-phy {
-                type mef-types:identifier45;
-                description
-                  "TBD";
-                reference "TBD";
-              }
-            }
+              "External Interface for the Network Device.";
             leaf phy {
               type mef-types:identifier45;
               description
-                "TBD";
-              reference "TBD";
+                "The Phy Name for the Physical Port.";
             }
             leaf ieee8023-phy {
               type identityref {
                 base mef-types:ieee-8023-interface-type;
-              }
-              must "(. != 'mef-types:ieee8023-1000BASE-PX-D') and " +
-              		"(. != 'mef-types:ieee8023-1000BASE-PX-U')" 
-              {
-                error-message "The Physical Layer for each " +
-                		"physical link implementing the UNI cannot" +
-                		" be 1000BASE-PX-D and 1000BASE-PX-U.";
-            	description "TBD";
               }
               description
                 "The Physical Layer for each physical link " +
                 "implementing the UNI MUST be one of the PHYs " +
                 "listed in IEEE Std 802.3–2012 but excluding " +
                 "1000BASE-PX-D and 1000BASE-PX-U.";
-              reference "[MEF10.3] Section 9.2 [R60]";
+              reference "[MEF10.3] Section 9.2 [R60].";
             }
           }
         }
+        leaf role {
+          type mef-types:device-role;
+          default "ce";
+          description
+            "The role of this device in the network.";
+        }
         leaf dev-id {
           type mef-types:identifier45;
-    	  description "TBD";
+          description
+            "Device Identifier.";
+        }
+      }
+    }
+    container connections {
+      description
+        "Physical Network Connections";    	
+      list connection {
+        key "name";
+        leaf name {
+          type mef-types:identifier45;
+        }
+        container endpoint-1 {
+          description
+            "End Point 1";
+          leaf device {
+      	    type leafref {
+      	        path "../../../../devices/device/dev-id";
+      	    }
+            description
+              "Hostname or IP Address for the End Point's Device.";
+          }
+          leaf interface {
+        	type leafref {
+          	  path "../../../../devices/device[dev-id = current()/../device]/interfaces/interface/phy";
+          	}
+            description
+              "The Phy Name for the End Point's Physical Port.";
+          }
+        }
+        container endpoint-2 {
+          description
+            "End Point 2";
+          leaf device {
+          	type leafref {
+          	  path "../../../../devices/device/dev-id";
+          	}
+            description
+              "Hostname or IP Address for the End Point's Device.";
+          }
+          leaf interface {
+            type leafref {
+              path "../../../../devices/device[dev-id = current()/../device]/interfaces/interface/phy";
+            }
+            description
+              "The Phy Name for the End Point's Physical Port.";
+          }
         }
       }
     }
