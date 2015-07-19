@@ -130,8 +130,10 @@ module mef-cfm {
           description "The interface status cannot be determined for some reason.";
       }
       enum dormant {
-          description "The interface is not in a state to passpackets but is in 
-                       a pending state, waitingfor some external event.";
+          description "The interface is not in a state to pass
+packets but is in 
+                       a pending state, waiting
+for some external event.";
       }
       enum not-present {
           description "Some component of the interface is missing.";
@@ -1158,14 +1160,16 @@ module mef-cfm {
             description "No format specified.";
         }
         enum domain-name {
-            description "Domain Name like string, globally uniquetext string 
+            description "Domain Name like string, globally unique
+text string 
                          derived from a DNS name.";
         }
         enum mac-address-and-uint {
             description "MAC address + 2-octet (unsigned) integer.";
         }
         enum character-string {
-            description "RFC2579 DisplayString, except that thecharacter 
+            description "RFC2579 DisplayString, except that the
+character 
                          codes 0-31 (decimal) are not used.";
         }
       }
@@ -1263,7 +1267,8 @@ module mef-cfm {
               description "Specifies the Primary VLAN ID.";
           } 
           enum character-string {
-              description "RFC2579 DisplayString, except that thecharacter 
+              description "RFC2579 DisplayString, except that the
+character 
                          codes 0-31 (decimal) are not used.";
           }
           enum uint16 {
@@ -1522,7 +1527,8 @@ module mef-cfm {
               enum reset {
                   description "No defect has been present since the
                                fng-reset-time timer expired, or since 
-                               the state machinewas last reset.";
+                               the state machine
+was last reset.";
               }
               enum defect {
                   description "A defect is present, but not for a long enough 
@@ -1530,16 +1536,19 @@ module mef-cfm {
               }
               enum report-defect {
                   description "A momentary state during which the defect is 
-                               reported by sending afault-alarm notification,
+                               reported by sending a
+fault-alarm notification,
                                if that action is enabled.";
               } 
               enum defect-reported {
-                  description "A defect is present, and some defecthas been 
+                  description "A defect is present, and some defect
+has been 
                                reported.";
               }
               enum defect-clearing {
                   description "No defect is present, but the fng-reset-time timer
-                               hasnot yet expired.";
+                               has
+not yet expired.";
               }
             }
             default reset;
