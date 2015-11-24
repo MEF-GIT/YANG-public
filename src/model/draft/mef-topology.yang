@@ -154,8 +154,6 @@ module mef-topology {
             description
               "The Phy Name for the End Point's Physical Port.";
           }
-          description
-        	  "List of physical network connections";
         }
         container endpoint-2 {
           description
