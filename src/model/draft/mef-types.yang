@@ -1261,6 +1261,9 @@ module mef-types {
 	    description "Core Router";
 	  }
 	 }	
+	description
+		"The role of the device. Is it a Customer Edge,
+		 Aggregation Router or a Core Router";
   }  
 
 }
