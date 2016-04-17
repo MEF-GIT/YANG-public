@@ -1,5 +1,5 @@
 module mef-topology {
-  namespace "http://metroethernetforum.org/ns/yang/mef-topology";
+  namespace "urn:mef:yang:mef-topology";
   prefix mef-topology;
 
   import mef-types {
@@ -71,6 +71,12 @@ module mef-topology {
      of Ethernet over Transport and Metro Ethernet 
      Network(EoT/MEN)' March 2007";
 
+  revision 2016-04-01 {
+    description
+     "Added Operational Status output for interface " +
+     "maximum data rate";
+  }
+
   revision 2015-05-26 {
     description
       "Formal Project Review Draft 1.";
@@ -112,6 +118,21 @@ module mef-topology {
                 "1000BASE-PX-D and 1000BASE-PX-U.";
               reference "[MEF10.3] Section 9.2 [R60].";
             }
+            container status {
+              config false;
+              leaf speed {
+                type uint64;
+                default 0;
+                units "bits-per-second";
+                description
+                "The operational status value indicating " +
+                "the maximum data rate of the interface in " +
+                "bits-per-second.";
+              }
+              description
+                "The operational status information available " +
+                "for this interface.";
+            }
           }
         }
         leaf role {
@@ -135,7 +156,7 @@ module mef-topology {
         leaf name {
           type mef-types:identifier45;
           description
-        	  "The name of the connection.";
+            "The name of the connection.";
         }
         container endpoint-1 {
           description
@@ -174,7 +195,7 @@ module mef-topology {
           }
         }
         description
-        	"List of physical network connections";
+          "List of physical network connections";
       }
     }
   }

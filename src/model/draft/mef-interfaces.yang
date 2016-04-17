@@ -1,5 +1,5 @@
 module mef-interfaces {
-  namespace "http://metroethernetforum.org/ns/yang/mef-interfaces";
+  namespace "urn:mef:yang:mef-interfaces";
   prefix mef-interfaces;
 
   import ietf-yang-types {
