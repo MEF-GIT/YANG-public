@@ -1,5 +1,5 @@
 module mef-global {
-  namespace "http://metroethernetforum.org/ns/yang/mef-global";
+  namespace "urn:mef:yang:mef-global";
   prefix mef-global;
 
   import ietf-yang-types {

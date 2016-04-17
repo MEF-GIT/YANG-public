@@ -1,5 +1,5 @@
 module mef-services {
-  namespace "http://metroethernetforum.org/ns/yang/mef-services";
+  namespace "urn:mef:yang:mef-services";
   prefix mef-services;
 
   import ietf-yang-types {
