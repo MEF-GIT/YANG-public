@@ -540,7 +540,7 @@ module mef-types {
     reference "[MEF10.3] Section 8.8 and Section 11.";
   }
 
-  typedef evc-type {
+  typedef connection-type {
     type enumeration {
       enum "point-to-point" {
         description
@@ -631,7 +631,7 @@ module mef-types {
       "delivery types.";
   }
 
-  typedef uni-resiliency-type {
+  typedef link-aggregation-type {
     type enumeration {
       enum "none" {
         description
@@ -654,7 +654,7 @@ module mef-types {
       "specific UNI.";
   }
 
-  typedef svc-frame-format-type {
+  typedef frame-format-type {
     type enumeration {
       enum "no-tag" {
         description

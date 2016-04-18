@@ -130,7 +130,7 @@ module mef-interfaces {
           error-message "If the CENs list has been populated, " +
           		"a UNI must be configured for a single CEN.";
           description
-            "[MEF103] [R57] A UNI must be dedicated to a " +
+            "[MEF10.3] [R57] A UNI must be dedicated to a " +
             "single CEN. This must statement is effectively " +
             "a 'mandatory true' when the Global CENs list " +
             "is being used.";
@@ -232,7 +232,7 @@ module mef-interfaces {
                 reference "[MEF6.2] Section 8.2.2. [MEF20] [R80]. " +
                 		"[MEF7.3] Section 10.2.2.";
               }
-              leaf sync-mode-enabled {
+              leaf sync-mode {
                 type boolean;
                 must ".='false' or (.='true' and " +
                 		"../clock-accuracy)" {
@@ -537,7 +537,7 @@ module mef-interfaces {
           description
             "This group is related to the MEF 7.3 External " +
             "Network Interface";
-          leaf oper-state-enabled {
+          leaf operational-state {
             type boolean;
             default "false";
             config false;
@@ -571,8 +571,8 @@ module mef-interfaces {
               "physical layer.";
             reference "[MEF15]. [MEF7.3] Section 10.1.1.";
           }
-          leaf svc-frame-format {
-            type mef-types:svc-frame-format-type;
+          leaf frame-format {
+            type mef-types:frame-format-type;
             default "ctag";
             config false;
             description
@@ -631,7 +631,7 @@ module mef-interfaces {
             "has been populated.";
           reference "[MEF10.3] Section 7.";
         }
-        leaf admin-state-enabled {
+        leaf admin-state {
           type boolean;
           default "true";
           description
@@ -645,33 +645,33 @@ module mef-interfaces {
             "MAC Address.";
           reference "[MEF15]. [MEF7.3] Section 10.1.1.";
         }
-        leaf uni-resiliency {
-          type mef-types:uni-resiliency-type;
+        leaf link-aggregation {
+          type mef-types:link-aggregation-type;
           must "(. != 'none') or ((. = 'none') and " +
           		"(../physical-layers/number-of-links = 1))" {
-            error-message "If uni-resiliency is 'none', " +
+            error-message "If link-aggregation is 'none', " +
             		"number-of-links must be 1.";
             description
-              "If uni-resiliency is 'none', number-of-links " +
+              "If link-aggregation is 'none', number-of-links " +
               "must be 1.";
           }
           must "(. != 'dual-link-aggregation') or " +
           		"((. = 'dual-link-aggregation') and " +
           		"(../physical-layers/number-of-links = 2))" {
-            error-message "If uni-resiliency is " +
+            error-message "If link-aggregation is " +
             		"'dual-link-aggregation', " +
             		"number-of-links must be 2.";
             description
-              "If uni-resiliency is 'dual-link-aggregation', " +
+              "If link-aggregation is 'dual-link-aggregation', " +
               "number-of-links must be 2.";
           }
           must "(. != 'other') or " +
           		"((. = 'other') and " +
           		"(../physical-layers/number-of-links > 2))" {
-            error-message "If uni-resiliency is 'other', " +
+            error-message "If link-aggregation is 'other', " +
             		"number-of-links must be 3 or greater.";
             description
-              "If uni-resiliency is 'other', number-of-links " +
+              "If link-aggregation is 'other', number-of-links " +
               "must be 3 or greater.";
           }
           default "none";
@@ -690,7 +690,7 @@ module mef-interfaces {
           		"Section 8.2.2 and MEF 22.1: [D2]. " +
           		"[MEF7.3] Section 10.2.2.";
         }
-        leaf svc-mux-enabled {
+        leaf service-multiplexing-enabled {
           type boolean;
           default "false";
           description
@@ -718,22 +718,22 @@ module mef-interfaces {
             "When all-to-one-bundling-enabled = true, all " +
             "CE-VLAN IDs MUST map to a single EVC at the " +
             "UNI. This also means that the UNI cannot " +
-            "have svc-mux-enabled = true. When " +
+            "have service-multiplexing-enabled = true. When " +
             "all-to-one-bundling-enabled = true, " +
             "all other UNIs in the EVC associating this UNI " +
             "must have all-to-one-bundling-enabled = true. " +
             "If this values is true, the value of " +
-            "ce-vlan-id-for-untagged-and-priority is not " +
+            "untagged-and-priority-tagged-ce-vlan-id is not " +
             "applicable.";
           reference "[MEF10.3] Section 9.13, Table 12 " +
           		"(5 valid combinations), [R82], [R83]. " +
           		"[MEF7.3] Section 10.2.2.";
         }
-        leaf ce-vlan-id-for-untagged-and-priority {
+        leaf untagged-and-priority-tagged-ce-vlan-id {
           type mef-types:vlan-id-type;
           default "1";
           description
-            "The ce-vlan-id-for-untagged-and-priority is " +
+            "The untagged-and-priority-tagged-ce-vlan-id is " +
             "equivalent to the Layer 2 PVID (Port VLAN ID) " +
             "with the Q-BRIDGE-MIB option for frame admitance set " +
             "to admitAll. With AdmitAll set, all Untagged and " +
@@ -743,7 +743,7 @@ module mef-interfaces {
           reference "[MEF10.3] Section 9.9, [R73], [R74], " +
           		"[R75]. [MEF7.3] Section 10.2.2.";
         }
-        leaf max-evc-count {
+        leaf max-num-of-evcs {
           type uint32 {
             range "1..max";
           }
@@ -857,7 +857,7 @@ module mef-interfaces {
           		"[MEF6.2] Section 8.2.2, [R1]. " +
           		"[MEF45] Section 8.1.";
         }
-        leaf l2cp-peering-profile {
+        leaf l2cp-peering {
           type leafref {
             path "/mef-global:mef-global/mef-global:profiles/" +
             		"mef-global:l2cp-peering/mef-global:" +

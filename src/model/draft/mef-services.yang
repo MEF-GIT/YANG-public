@@ -110,8 +110,8 @@ module mef-services {
             "The EVC Performance SLS Exclusions and Inclusions " +
             "List cannot both be configured for an EVC.";
         }
-        must "(evc-type != 'rooted-multipoint') or " +
-        		"((evc-type = 'rooted-multipoint') and " +
+        must "(connection-type != 'rooted-multipoint') or " +
+        		"((connection-type = 'rooted-multipoint') and " +
         		"not(sls-uni-exclusions) )" {
           error-message "If EVC Type is Rooted-Multipoint, " +
           		"sls-uni-inclusions must be used instead of " +
@@ -129,7 +129,7 @@ module mef-services {
             "Configuration and Status.";
           list uni {
             must "not(evc-uni-ce-vlans/evc-uni-ce-vlan[2]) or " +
-            		"../../preserve-ce-vlan-id = 'true'" {
+            		"../../ce-vlan-id-preservation = 'true'" {
               error-message "When more than one CE-VLAN-ID is " +
               		"mapped to an EVC at a UNI, the EVC must have " +
               		"CE-VLAN ID Preservation Enabled.";
@@ -756,7 +756,7 @@ module mef-services {
               description
                 "EVC Per UNI: This status group is related to " +
                 "the MEF 7.3 Service Endpoint";
-              leaf oper-state-enabled {
+              leaf operational-state {
                 type boolean;
                 default "false";
                 config false;
@@ -796,7 +796,7 @@ module mef-services {
               reference "[MEF10.3] [R4], [R5], [R10], [R11], " +
               		"[R12]. [MEF7.3] Section 12.2.2.";
             }
-            leaf admin-state-enabled {
+            leaf admin-state {
               type boolean;
               default "true";
               description
@@ -812,7 +812,7 @@ module mef-services {
               reference "[MEF10.3] Section 10.3. " +
               		"[MEF7.3] Section 12.1.2.";
             }
-            leaf data-svc-frm-cos {
+            leaf data-cos-identifier {
               type leafref {
                 path "/mef-global:mef-global/mef-global:profiles/" +
                 		"mef-global:cos/mef-global:cos-profile/" +
@@ -867,7 +867,7 @@ module mef-services {
               reference "[MEF10.3] Section 8.8, Section 10.2. " +
               		"[MEF7.3] Section 12.1.2.";
             }
-            leaf l2cp-svc-frm-cos {
+            leaf l2cp-cos-identifier {
               type leafref {
                 path "/mef-global:mef-global/mef-global:" +
                 		"profiles/mef-global:l2cp-cos/mef-global:" +
@@ -879,14 +879,14 @@ module mef-services {
               reference "[MEF10.3] Section 8.8, Section 10.2. " +
               		"[MEF7.3] Section 12.1.2.";
             }
-            leaf soam-svc-frm-cos {
+            leaf soam-cos-identifier {
               type leafref {
                 path "/mef-global:mef-global/mef-global:profiles/" +
                 		"mef-global:cos/mef-global:cos-profile/" +
                 		"mef-global:id";
               }
-              must "(not(.) and not(../data-svc-frm-cos)) or " +
-              		"(. = ../data-svc-frm-cos)" {
+              must "(not(.) and not(../data-cos-identifier)) or " +
+              		"(. = ../data-cos-identifier)" {
                 error-message "For a given EVC at a given UNI, " +
                 		"the basis for the Class of Service " +
                 		"Identifier for ingress SOAM Service " +
@@ -902,7 +902,7 @@ module mef-services {
                 "EVC Per UNI: Ingress SOAM Service Frames.";
               reference "[MEF7.3] Section 12.1.2.";
             }
-            leaf data-svc-frm-eec {
+            leaf data-eec-identifier {
               type leafref {
                 path "/mef-global:mef-global/mef-global:profiles/" +
                 		"mef-global:eec/mef-global:eec-profile/" +
@@ -956,7 +956,7 @@ module mef-services {
               reference "[MEF10.3] Section 10.4. " +
               		"[MEF7.3] Section 12.1.2.";
             }
-            leaf l2cp-svc-frm-eec {
+            leaf l2cp-eec-identifier {
               type leafref {
                 path "/mef-global:mef-global/mef-global:profiles/" +
                 		"mef-global:l2cp-eec/mef-global:" +
@@ -968,14 +968,14 @@ module mef-services {
               reference "[MEF10.3] Section 10.4. " +
               		"[MEF7.3] Section 12.1.2.";
             }
-            leaf soam-svc-frm-eec {
+            leaf soam-eec-identifier {
               type leafref {
                 path "/mef-global:mef-global/mef-global:" +
                 		"profiles/mef-global:eec/mef-global:" +
                 		"eec-profile/mef-global:id";
               }
-              must "(not(.) and not(../data-svc-frm-eec)) or " +
-              		"(. = ../data-svc-frm-eec)" {
+              must "(not(.) and not(../data-eec-identifier)) or " +
+              		"(. = ../data-eec-identifier)" {
                 error-message "For a given EVC at a given UNI, " +
                 		"the basis for the Egress Equivalence " +
                 		"Class Identifier for egress SOAM " +
@@ -1031,7 +1031,7 @@ module mef-services {
               reference "[MEF10.3] Section 10.7. " +
               		"[MEF7.3] Section 12.1.2.";
             }
-            leaf src-mac-addr-limit-enabled {
+            leaf source-mac-address-limit-enabled {
               type boolean;
               default "false";
               description
@@ -1042,7 +1042,7 @@ module mef-services {
               reference "[MEF10.3] Section 10.9. " +
               		"[MEF7.3] Section 12.1.2.";
             }
-            leaf src-mac-addr-limit {
+            leaf source-mac-address-limit {
               type uint32 {
                 range "1..max";
               }
@@ -1052,7 +1052,7 @@ module mef-services {
                 "Limit Enabled is true.";
               reference "[MEF10.3] Section 10.9.";
             }
-            leaf src-mac-addr-limit-interval {
+            leaf source-mac-address-limit-interval {
               type yang:timeticks;
               default "0";
               description
@@ -1096,7 +1096,7 @@ module mef-services {
           description
             "This status group is related to the MEF 7.3 Virtual " +
             "Connection";
-          leaf oper-state-enabled {
+          leaf operational-state {
             type boolean;
             default "false";
             config false;
@@ -1153,8 +1153,8 @@ module mef-services {
                 "The two UNI IDs for a given inclusion " +
                 "cannot be the same.";
             }
-            must "(../../evc-type != 'rooted-multipoint') or " +
-            		"((../../evc-type = 'rooted-multipoint') " +
+            must "(../../connection-type != 'rooted-multipoint') or " +
+            		"((../../connection-type = 'rooted-multipoint') " +
             		"and " +
             		"not((../../unis/uni[uni-id = " +
             		"current()/uni-id1]/role = 'leaf') and " +
@@ -1181,7 +1181,7 @@ module mef-services {
                 path "/mef-global:mef-global/mef-global:slss/" +
                 		"mef-global:sls" +
                 		"[mef-global:sls-id = current()/../../../" +
-                		"evc-performance-sls]" +
+                		"carrier-ethernet-sls]" +
                 		"/mef-global:perf-objs/mef-global:" +
                 		"perf-obj/mef-global:pm-type";
               }
@@ -1194,7 +1194,7 @@ module mef-services {
                 path "/mef-global:mef-global/mef-global:slss/" +
                 		"mef-global:sls" +
                 		"[mef-global:sls-id = current()/../../../" +
-                		"evc-performance-sls]" +
+                		"carrier-ethernet-sls]" +
                 		"/mef-global:perf-objs/mef-global:perf-obj" +
                 		"[mef-global:pm-type = current()/../" +
                 		"pm-type]" +
@@ -1256,7 +1256,7 @@ module mef-services {
                 path "/mef-global:mef-global/mef-global:" +
                 		"slss/mef-global:sls" +
                 		"[mef-global:sls-id = current()/../../../" +
-                		"evc-performance-sls]" +
+                		"carrier-ethernet-sls]" +
                 		"/mef-global:perf-objs/mef-global:" +
                 		"perf-obj/mef-global:pm-type";
               }
@@ -1269,7 +1269,7 @@ module mef-services {
                 path "/mef-global:mef-global/mef-global:slss/" +
                 		"mef-global:sls" +
                 		"[mef-global:sls-id = current()/../../../" +
-                		"evc-performance-sls]" +
+                		"carrier-ethernet-sls]" +
                 		"/mef-global:perf-objs/mef-global:perf-obj" +
                 		"[mef-global:pm-type = current()/../" +
                 		"pm-type]" +
@@ -1318,8 +1318,8 @@ module mef-services {
             "EVC Operational Status.";
           reference "[MEF16] Section 5.3.";
         }
-        leaf evc-type {
-          type mef-types:evc-type;
+        leaf connection-type {
+          type mef-types:connection-type;
           must "(. != 'point-to-point') or " +
           		"((. = 'point-to-point') and " +
           		"(count(../unis/uni[role = 'leaf']) = 0))" {
@@ -1360,7 +1360,7 @@ module mef-services {
           must "(. != 'multipoint-to-multipoint') or " +
           		"((. = 'multipoint-to-multipoint') and " +
           		"(count(../unis/uni) > 1) and " +
-          		"(count(../unis/uni) <= ../max-uni-count))" {
+          		"(count(../unis/uni) <= ../max-num-of-evc-end-point))" {
             error-message "If EVC Type is " +
             		"Multipoint-to-Multipoint, " +
             		"there must be 2 or more UNI configured " +
@@ -1373,7 +1373,7 @@ module mef-services {
           must "(. != 'rooted-multipoint') or " +
           		"((. = 'rooted-multipoint') and " +
           		"(count(../unis/uni) > 1) and " +
-          		"(count(../unis/uni) <= ../max-uni-count))" {
+          		"(count(../unis/uni) <= ../max-num-of-evc-end-point))" {
             error-message "If EVC Type is Rooted-Multipoint, " +
             		"there must be 2 or more UNI configured for the EVC.";
             description
@@ -1382,32 +1382,32 @@ module mef-services {
           }
           must "(. != 'point-to-point') or " +
           		"((. = 'point-to-point') and " +
-          		"(../max-uni-count = 2))" {
+          		"(../max-num-of-evc-end-point = 2))" {
             error-message "If EVC Type is Point-to-Point, " +
-            		"the value of max-uni-count must be 2.";
+            		"the value of max-num-of-evc-end-point must be 2.";
             description
               "If EVC Type is Point-to-Point, the value of " +
-              "max-uni-count must be 2.";
+              "max-num-of-evc-end-point must be 2.";
           }
           must "(. != 'multipoint-to-multipoint') or " +
           		"((. = 'multipoint-to-multipoint') and " +
-          		"(../max-uni-count > 2))" {
+          		"(../max-num-of-evc-end-point > 2))" {
             error-message "If EVC Type is " +
             		"Multipoint-to-Multipoint, the value of " +
-            		"max-uni-count must be at least 3.";
+            		"max-num-of-evc-end-point must be at least 3.";
             description
               "If EVC Type is Multipoint-to-Multipoint, the " +
-              "value of max-uni-count must be at least 3.";
+              "value of max-num-of-evc-end-point must be at least 3.";
           }
           must "(. != 'rooted-multipoint') or " +
           		"((. = 'rooted-multipoint') and " +
-          		"(../max-uni-count > 2))" {
+          		"(../max-num-of-evc-end-point > 2))" {
             error-message "If EVC Type is Rooted-Multipoint, " +
-            		"the value of max-uni-count must be at " +
+            		"the value of max-num-of-evc-end-point must be at " +
             		"least 3.";
             description
               "If EVC Type is Rooted-Multipoint, the value " +
-              "of max-uni-count must be at least 3.";
+              "of max-num-of-evc-end-point must be at least 3.";
           }
           mandatory true;
           description
@@ -1418,7 +1418,7 @@ module mef-services {
           		"[R10], [R11], [R12], [R13] and [R14]. " +
           		"[MEF7.3] Section 12.2.2.";
         }
-        leaf admin-state-enabled {
+        leaf admin-state {
           type boolean;
           default "true";
           description
@@ -1439,28 +1439,28 @@ module mef-services {
             "EVC: Related to CE4Cloud Information Model.";
           reference "[MEF7.3] Section 11.1.1.";
         }
-        leaf max-uni-count {
+        leaf max-num-of-evc-end-point {
           type uint32 {
             range "2..max";
           }
           must "(. > 2) or ((. = 2) and " +
-          		"(../evc-type = 'point-to-point'))" {
+          		"(../connection-type = 'point-to-point'))" {
             error-message "If EVC Type is Point-to-Point, the " +
-            		"max-uni-count value must be 2.";
+            		"max-num-of-evc-end-point value must be 2.";
             description
-              "If EVC Type is Point-to-Point, the max-uni-count " +
+              "If EVC Type is Point-to-Point, the max-num-of-evc-end-point " +
               "value must be 2.";
           }
           must "(. = 2) or ((. > 2) and " +
-          		"((../evc-type = 'multipoint-to-multipoint') or " +
-          		"(../evc-type = 'rooted-multipoint')))" {
+          		"((../connection-type = 'multipoint-to-multipoint') or " +
+          		"(../connection-type = 'rooted-multipoint')))" {
             error-message "If EVC Type is " +
             		"Multipoint-to-Multipoint or " +
-            		"Rooted-Multipoint, the max-uni-count value " +
+            		"Rooted-Multipoint, the max-num-of-evc-end-point value " +
             		"must be at least 3.";
             description
               "If EVC Type is Multipoint-to-Multipoint or " +
-              "Rooted-Multipoint, the max-uni-count value " +
+              "Rooted-Multipoint, the max-num-of-evc-end-point value " +
               "must be at least 3.";
           }
           default "2";
@@ -1468,11 +1468,11 @@ module mef-services {
             "EVC:The Maximum Number of UNIs this EVC can be " +
             "configured for (Default 2).If EVC Type is " +
             "Multipoint-to-Multipoint or Rooted-Multipoint, " +
-            "the max-uni-count value must be at least 3. " +
+            "the max-num-of-evc-end-point value must be at least 3. " +
             "This value must be 2 for point-to-point mode.";
           reference "[MEF10.3] [R14]. [MEF7.3] Section 12.2.2.";
         }
-        leaf preserve-ce-vlan-id {
+        leaf ce-vlan-id-preservation {
           type boolean;
           default "false";
           description
@@ -1483,7 +1483,7 @@ module mef-services {
           		"Section 9.10.2, Section 9.12, [R81], Figure 20. " +
           		"[MEF7.3] Section 12.2.2.";
         }
-        leaf cos-preserve-ce-vlan-id {
+        leaf ce-vlan-pcp-preservation {
           type boolean;
           default "false";
           description
@@ -1491,7 +1491,15 @@ module mef-services {
           reference "[MEF10.3] Section 8.6.2, [R26]. " +
           		"[MEF7.3] Section 12.2.2.";
         }
-        leaf evc-performance-sls {
+        leaf ce-vlan-dei-preservation {
+          type boolean;
+          default "false";
+          description
+            "EVC: Preserve CE-VLAN ID for DEI.";
+          reference "[MEF10.3] Section 8.6.2, [R26]. " +
+          		"[MEF7.3] Section 12.2.2.";
+        }
+        leaf carrier-ethernet-sls {
           type leafref {
             path "/mef-global:mef-global/mef-global:slss/" +
             		"mef-global:sls/mef-global:sls-id";
@@ -1505,7 +1513,7 @@ module mef-services {
           reference "[MEF10.3] Section 8.8, Section 10. " +
           		"[MEF7.3] Section 12.2.2.";
         }
-        leaf unicast-svc-frm-delivery {
+        leaf unicast-frame-delivery {
           type mef-types:data-svc-frame-delivery-type;
           default "unconditional";
           description
@@ -1514,7 +1522,7 @@ module mef-services {
           reference "[MEF10.3] Section 8.5.2,[R16], [R17], " +
           		"Section 8.8, Section 11. [MEF7.3] Section 12.2.2.";
         }
-        leaf multicast-svc-frm-delivery {
+        leaf multicast-frame-delivery {
           type mef-types:data-svc-frame-delivery-type;
           default "unconditional";
           description
@@ -1523,7 +1531,7 @@ module mef-services {
           reference "[MEF10.3] Section 8.5.2, [R16], [R18], " +
           		"Section 8.8, Section 11. [MEF7.3] Section 12.2.2.";
         }
-        leaf broadcast-svc-frm-delivery {
+        leaf broadcast-frame-delivery {
           type mef-types:data-svc-frame-delivery-type;
           default "unconditional";
           description
@@ -1583,7 +1591,7 @@ module mef-services {
         		"mef-services:evc/mef-services:unis/mef-services:" +
         		"uni/mef-services:uni-id]" +
         		"[mef-interfaces:uni-id/../mef-interfaces:" +
-        		"svc-mux-enabled = 'true']) = 0))" {
+        		"service-multiplexing-enabled = 'true']) = 0))" {
           error-message "For EPL, Service Multiplexing must be " +
           		"disabled for all UNIs in the EVC UNI List.";
           description
@@ -1625,7 +1633,7 @@ module mef-services {
         		"mef-services:evc/mef-services:unis/mef-services:" +
         		"uni/mef-services:uni-id]" +
         		"[mef-interfaces:uni-id/../mef-interfaces:" +
-        		"max-evc-count != 1]) = 0))" {
+        		"max-num-of-evcs != 1]) = 0))" {
           error-message "For EPL, Max EVC Count must be 1 for " +
           		"all UNIs in the EVC UNI List.";
           description
@@ -1645,54 +1653,54 @@ module mef-services {
         }
         must "(. != 'epl') or ((. = 'epl') and " +
         		"(count(../evc/unis/uni" +
-        		"[src-mac-addr-limit-enabled = 'true']) = 0) )" {
+        		"[source-mac-address-limit-enabled = 'true']) = 0) )" {
           error-message "For EPL, Source MAC Address Limit must " +
           		"be disabled.";
           description
             "For EPL, Source MAC Address Limit must be disabled.";
         }
         must "(. != 'epl') or ((. = 'epl') and " +
-        		"(../evc/evc-type = 'point-to-point'))" {
+        		"(../evc/connection-type = 'point-to-point'))" {
           error-message "For EPL, EVC Type must be Point-to-Point.";
           description
             "For EPL, EVC Type must be Point-to-Point.";
         }
         must "(. != 'epl') or ((. = 'epl') and " +
-        		"(../evc/unicast-svc-frm-delivery = " +
+        		"(../evc/unicast-frame-delivery = " +
         		"'unconditional'))" {
-          error-message "For EPL, unicast-svc-frm-delivery " +
+          error-message "For EPL, unicast-frame-delivery " +
           		"must be unconditional.";
           description
-            "For EPL, unicast-svc-frm-delivery must be " +
+            "For EPL, unicast-frame-delivery must be " +
             "unconditional.";
         }
         must "(. != 'epl') or ((. = 'epl') and " +
-        		"(../evc/multicast-svc-frm-delivery = " +
+        		"(../evc/multicast-frame-delivery = " +
         		"'unconditional'))" {
-          error-message "For EPL, multicast-svc-frm-delivery " +
+          error-message "For EPL, multicast-frame-delivery " +
           		"must be unconditional.";
           description
-            "For EPL, multicast-svc-frm-delivery must be " +
+            "For EPL, multicast-frame-delivery must be " +
             "unconditional.";
         }
         must "(. != 'epl') or ((. = 'epl') and " +
-        		"(../evc/broadcast-svc-frm-delivery = " +
+        		"(../evc/broadcast-frame-delivery = " +
         		"'unconditional'))" {
-          error-message "For EPL, broadcast-svc-frm-delivery " +
+          error-message "For EPL, broadcast-frame-delivery " +
           		"must be unconditional.";
           description
-            "For EPL, broadcast-svc-frm-delivery must be " +
+            "For EPL, broadcast-frame-delivery must be " +
             "unconditional.";
         }
         must "(. != 'epl') or ((. = 'epl') and " +
-        		"(../evc/preserve-ce-vlan-id = 'true'))" {
+        		"(../evc/ce-vlan-id-preservation = 'true'))" {
           error-message "For EPL, CE-VLAN ID Preservation " +
           		"must be enabled.";
           description
             "For EPL, CE-VLAN ID Preservation must be enabled.";
         }
         must "(. != 'epl') or ((. = 'epl') and " +
-        		"(../evc/cos-preserve-ce-vlan-id = 'true'))" {
+        		"(../evc/ce-vlan-pcp-preservation = 'true'))" {
           error-message "For EPL, CE-VLAN ID CoS Preservation " +
           		"must be enabled.";
           description
@@ -1713,14 +1721,14 @@ module mef-services {
             "all UNIs in the EVC UNI List.";
         }
         must "(. != 'evpl') or ((. = 'evpl') and " +
-        		"((../evc/unicast-svc-frm-delivery != " +
+        		"((../evc/unicast-frame-delivery != " +
         		"'unconditional') or " +
-        		"(../evc/multicast-svc-frm-delivery != " +
+        		"(../evc/multicast-frame-delivery != " +
         		"'unconditional') or " +
-        		"(../evc/broadcast-svc-frm-delivery != " +
+        		"(../evc/broadcast-frame-delivery != " +
         		"'unconditional') or " +
         		"count(../evc/unis/uni" +
-        		"[src-mac-addr-limit-enabled = 'true']) = 0))" {
+        		"[source-mac-address-limit-enabled = 'true']) = 0))" {
           error-message "For EVPL, Source MAC Address Limit must " +
           		"be disabled for all UNIs in the EVC per " +
           		"UNI List if all 3 -svc-frm-delivery values " +
@@ -1731,7 +1739,7 @@ module mef-services {
             "3 -svc-frm-delivery values are unconditional.";
         }
         must "(. != 'evpl') or ((. = 'evpl') and " +
-        		"(../evc/evc-type = 'point-to-point'))" {
+        		"(../evc/connection-type = 'point-to-point'))" {
           error-message "For EVPL, EVC Type must be Point-to-Point.";
           description
             "For EVPL, EVC Type must be Point-to-Point.";
@@ -1743,7 +1751,7 @@ module mef-services {
         		"mef-services:evc/mef-services:unis/mef-services:" +
         		"uni/mef-services:uni-id]" +
         		"[mef-interfaces:uni-id/../mef-interfaces:" +
-        		"svc-mux-enabled = 'true']) = 0))" {
+        		"service-multiplexing-enabled = 'true']) = 0))" {
           error-message "For EP-LAN, Service Multiplexing must " +
           		"be disabled for all UNIs in the EVC UNI List.";
           description
@@ -1786,7 +1794,7 @@ module mef-services {
         		"mef-services:evc/mef-services:unis/" +
         		"mef-services:uni/mef-services:uni-id]" +
         		"[mef-interfaces:uni-id/../mef-interfaces:" +
-        		"max-evc-count != 1]) = 0))" {
+        		"max-num-of-evcs != 1]) = 0))" {
           error-message "For EP-LAN, Max EVC Count must be 1 " +
           		"for all UNIs in the EVC UNI List.";
           description
@@ -1794,7 +1802,7 @@ module mef-services {
             "the EVC UNI List.";
         }
         must "(. != 'eplan') or ((. = 'eplan') and " +
-        		"(../evc/evc-type = 'multipoint-to-multipoint'))" {
+        		"(../evc/connection-type = 'multipoint-to-multipoint'))" {
           error-message "For EP-LAN, EVC Type must be " +
           		"Multipoint-to-Multipoint.";
           description
@@ -1802,14 +1810,14 @@ module mef-services {
             "Multipoint-to-Multipoint.";
         }
         must "(. != 'eplan') or ((. = 'eplan') and " +
-        		"(../evc/preserve-ce-vlan-id = 'true'))" {
+        		"(../evc/ce-vlan-id-preservation = 'true'))" {
           error-message "For EP-LAN, CE-VLAN ID Preservation " +
           		"must be enabled.";
           description
             "For EP-LAN, CE-VLAN ID Preservation must be enabled.";
         }
         must "(. != 'eplan') or ((. = 'eplan') and " +
-        		"(../evc/cos-preserve-ce-vlan-id = 'true'))" {
+        		"(../evc/ce-vlan-pcp-preservation = 'true'))" {
           error-message "For EP-LAN, CE-VLAN ID CoS Preservation " +
           		"must be enabled.";
           description
@@ -1817,7 +1825,7 @@ module mef-services {
             "enabled.";
         }
         must "(. != 'evplan') or ((. = 'evplan') and " +
-        		"(../evc/evc-type = 'multipoint-to-multipoint'))" {
+        		"(../evc/connection-type = 'multipoint-to-multipoint'))" {
           error-message "For EVP-LAN, EVC Type must be " +
           		"Multipoint-to-Multipoint.";
           description
@@ -1845,7 +1853,7 @@ module mef-services {
         		"mef-services:evc/mef-services:unis/mef-services:" +
         		"uni/mef-services:uni-id]" +
         		"[mef-interfaces:uni-id/../mef-interfaces:" +
-        		"svc-mux-enabled = 'true']) = 0))" {
+        		"service-multiplexing-enabled = 'true']) = 0))" {
           error-message "For EP-TREE, Service Multiplexing " +
           		"must be disabled for all UNIs in the " +
           		"EVC UNI List.";
@@ -1888,7 +1896,7 @@ module mef-services {
         		"mef-services:evc/mef-services:unis/" +
         		"mef-services:uni/mef-services:uni-id]" +
         		"[mef-interfaces:uni-id/../mef-interfaces:" +
-        		"max-evc-count != 1]) = 0))" {
+        		"max-num-of-evcs != 1]) = 0))" {
           error-message "For EP-TREE, Max EVC Count must be 1 " +
           		"for all UNIs in the EVC UNI List.";
           description
@@ -1896,21 +1904,21 @@ module mef-services {
             "in the EVC UNI List.";
         }
         must "(. != 'eptree') or ((. = 'eptree') and " +
-        		"(../evc/evc-type = 'rooted-multipoint'))" {
+        		"(../evc/connection-type = 'rooted-multipoint'))" {
           error-message "For EP-TREE, EVC Type must be " +
           		"Rooted-Multipoint.";
           description
             "For EP-TREE, EVC Type must be Rooted-Multipoint.";
         }
         must "(. != 'eptree') or ((. = 'eptree') and " +
-        		"(../evc/preserve-ce-vlan-id = 'true'))" {
+        		"(../evc/ce-vlan-id-preservation = 'true'))" {
           error-message "For EP-TREE, CE-VLAN ID Preservation " +
           		"must be enabled.";
           description
             "For EP-TREE, CE-VLAN ID Preservation must be enabled.";
         }
         must "(. != 'eptree') or ((. = 'eptree') and " +
-        		"(../evc/cos-preserve-ce-vlan-id = 'true'))" {
+        		"(../evc/ce-vlan-pcp-preservation = 'true'))" {
           error-message "For EP-TREE, CE-VLAN ID " +
           		"CoS Preservation must be enabled.";
           description
@@ -1932,7 +1940,7 @@ module mef-services {
             "for all UNIs in the EVC UNI List.";
         }
         must "(. != 'evptree') or ((. = 'evptree') and " +
-        		"(../evc/evc-type = 'rooted-multipoint'))" {
+        		"(../evc/connection-type = 'rooted-multipoint'))" {
           error-message "For EVP-TREE, EVC Type must be " +
           		"Rooted-Multipoint.";
           description
