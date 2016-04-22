@@ -1,0 +1,694 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           xmlns:yin="urn:ietf:params:xml:schema:yang:yin:1"
+           targetNamespace="http://metroethernetforum.org/ns/yang/mef-interfaces"
+           xmlns="http://metroethernetforum.org/ns/yang/mef-interfaces"
+           elementFormDefault="qualified"
+           attributeFormDefault="unqualified"
+           version="2015-05-26"
+           xml:lang="en"
+          xmlns:p0="urn:ietf:params:xml:ns:yang:ietf-inet-types"
+          xmlns:mef-types="http://metroethernetforum.org/ns/yang/mef-types"
+          xmlns:mef-interfaces="http://metroethernetforum.org/ns/yang/mef-interfaces"
+          xmlns:mef-topology="http://metroethernetforum.org/ns/yang/mef-topology"
+          xmlns:yang="urn:ietf:params:xml:ns:yang:ietf-yang-types"
+          xmlns:mef-global="http://metroethernetforum.org/ns/yang/mef-global">
+
+  <xs:import namespace="urn:ietf:params:xml:ns:yang:ietf-yang-types"
+             schemaLocation="ietf-yang-types.xsd"/>
+  <xs:import namespace="http://metroethernetforum.org/ns/yang/mef-types"
+             schemaLocation="mef-types.xsd"/>
+  <xs:import namespace="http://metroethernetforum.org/ns/yang/mef-global"
+             schemaLocation="mef-global.xsd"/>
+  <xs:import namespace="http://metroethernetforum.org/ns/yang/mef-topology"
+             schemaLocation="mef-topology.xsd"/>
+  <xs:import namespace="urn:ietf:params:xml:ns:yang:ietf-inet-types"
+             schemaLocation="ietf-inet-types.xsd"/>
+
+  <xs:annotation>
+    <xs:documentation>
+      This schema was generated from the YANG module mef-interfaces
+
+      The schema describes an instance document consisting
+      of the entire configuration data store, operational
+      data, rpc operations, and notifications.
+      This schema can thus NOT be used as-is to
+      validate NETCONF PDUs.
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:annotation>
+    <xs:documentation>
+      This module implements the UNI functionality specified 
+      in MEF 10.3, MEF 6.2, and MEF 7.2.
+
+      Reference Overview: 
+      A number of base documents have been used to create 
+      the MEF Interfaces YANG Module. The following are the 
+      abbreviations for the baseline documents:
+      [RFC 6991] refers to IETF RFC 6991 'Common YANG Data Types',
+      2013-07-15  
+      [RFC 6643] refers to IETF RFC 6643 'Translation of Structure
+      of Management Information
+      Version 2 (SMIv2) MIB Modules to YANG Modules', 2011-11-25  
+      [802.1AB] refers to 'Station and Media Access Control
+      Connectivity Discovery', IEEE 802.1AB-2009, September 2009
+      [802.1q] refers to IEEE 802.1Q-2011 'IEEE Standard for Local
+      and metropolitan area networks --Media Access Control (MAC)
+      Bridges and Virtual Bridged Local Area Networks, August 2011
+      [802-2001] refers to 'IEEE Standard for Local and Metropolitan
+      Area Networks: Overview and Architecture', IEEE 802-2001,
+      February 2002
+      [MEF10.3] refers to MEF 10.3 
+      'Ethernet Services Attributes Phase 3', October 2013
+      [MEF6.2] refers to MEF 6.2 
+      'EVC Ethernet Services Defintions Phase 3', August 2014
+      [MEF40] refers to MEF 40 
+      'UNI and EVC Definition of Managed Objects', April 2013
+      [MEF45] refers to MEF 45 'Multi-CEN L2CP', August 2014
+      [MEF7.2] refers to MEF 7.2 
+      'Carrier Ethernet Management Information Model', April 2013
+      [MEF7.3] refers to MEF 7.3 
+      'Carrier Ethernet Management Information Model',
+      Working Draft #1 2015
+      [RFC 2737] refers to IETF RFC 2737 'Entity MIB (Version 2)',
+      December 1999
+      [RFC 2863] refers to IETF RFC 2863 'The Interfaces Group MIB',
+      June 2000
+      [RFC 3419] refers to IETF RFC 3419 
+      'Textual Conventions for Transport Addresses', December 2002
+      [Y.1731] refers to ITU-T Y.1731 
+      'OAM functions and mechanisms for Ethernet based networks',
+      July 2011
+      [Q.840.1] refers to ITU-T Q.840.1 
+      'Requirements and analysis for NMS-EMS management interface
+      of Ethernet over Transport and Metro Ethernet 
+      Network(EoT/MEN)' March 2007
+    </xs:documentation>
+  </xs:annotation>
+
+  <xs:element name="mef-interfaces">
+    <xs:annotation>
+      <xs:documentation>
+        MEF Interfaces
+      </xs:documentation>
+    </xs:annotation>
+    <xs:complexType>
+      <xs:sequence>
+        <xs:element name="unis" minOccurs="0">
+          <xs:annotation>
+            <xs:documentation>
+              User Network Interface(UNI).
+            </xs:documentation>
+          </xs:annotation>
+          <xs:complexType>
+            <xs:sequence>
+              <xs:element name="uni" minOccurs="0" maxOccurs="unbounded">
+                <xs:annotation>
+                  <xs:documentation>
+                    MEF UNI List.
+                  </xs:documentation>
+                </xs:annotation>
+                <xs:complexType>
+                  <xs:sequence>
+                    <xs:element name="uni-id"  type="mef-types:identifier45">
+                      <xs:annotation>
+                        <xs:documentation>
+                           The UNI IDs must be be unique within a specific CEN.
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="physical-layers" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>
+                          The Physical Layer MUST operate in a full duplex mode. It is not configurable.
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="links" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation>
+                                The Physical Layer for each physical link implementing the UNI MUST be one of the PHYs listed in IEEE Std 802.3–2012 but excluding 1000BASE-PX-D and 1000BASE-PX-U.
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="link" minOccurs="0" maxOccurs="unbounded">
+                                  <xs:annotation>
+                                    <xs:documentation>
+                                      A list of all the physical ports associated with this Link Layer.
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="device">
+                                        <xs:annotation>
+                                          <xs:documentation>
+                                            The Physical Layer for each physical link implementing the UNI MUST be one of the PHYs listed in IEEE Std 802.3–2012 but excluding 1000BASE-PX-D and 1000BASE-PX-U.
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                        <xs:simpleType>
+                                          <xs:restriction base="mef-types:identifier45">
+                                          </xs:restriction>
+                                        </xs:simpleType>
+                                      </xs:element>
+                                      <xs:element name="interface">
+                                        <xs:annotation>
+                                          <xs:documentation>
+                                            The Physical Layer for each physical link implementing the UNI MUST be one of the PHYs listed in IEEE Std 802.3–2012 but excluding 1000BASE-PX-D and 1000BASE-PX-U.
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                        <xs:simpleType>
+                                          <xs:restriction base="mef-types:identifier45">
+                                          </xs:restriction>
+                                        </xs:simpleType>
+                                      </xs:element>
+                                      <xs:element name="ieee8023-phy" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>
+                                            The Physical Layer for each physical link implementing the UNI MUST be one of the PHYs listed in IEEE Std 802.3–2012 but excluding 1000BASE-PX-D and 1000BASE-PX-U.
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                        <xs:simpleType>
+                                          <xs:restriction base="xs:QName">
+                                          </xs:restriction>
+                                        </xs:simpleType>
+                                      </xs:element>
+                                      <xs:element name="connection-speed" minOccurs="0"  type="mef-types:ext-if-physical-layer-type">
+                                        <xs:annotation>
+                                          <xs:documentation>
+                                            Physical Layer Connection Speed (Max Data Rate).
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="phy-auto-neg" minOccurs="0"  type="mef-types:auto-negotiation-type">
+                                        <xs:annotation>
+                                          <xs:documentation>
+                                            Auto-Negotiation ON/OFF/Auto.
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="sync-mode-enabled" minOccurs="0"  type="xs:boolean">
+                                        <xs:annotation>
+                                          <xs:documentation>
+                                            Enabled or Disabled for each physical link implementing the UNI.
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                      </xs:element>
+                                      <xs:element name="clock-accuracy" minOccurs="0">
+                                        <xs:annotation>
+                                          <xs:documentation>
+                                            ESMC:Ethernet Equipment Slave Clock Accuracy in PPM. IEEE 802.3 standard specifies that Ethernet clock accuracy is to be less than or equal to +- 4.6 PPM.
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                        <xs:simpleType>
+                                          <xs:restriction base="xs:decimal">
+                                            <xs:fractionDigits value="3"/>
+                                          </xs:restriction>
+                                        </xs:simpleType>
+                                      </xs:element>
+                                      <xs:any minOccurs="0" maxOccurs="unbounded"
+                                              namespace="##other" processContents="lax"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                </xs:element>
+                                <xs:any minOccurs="0" maxOccurs="unbounded"
+                                        namespace="##other" processContents="lax"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                            <xs:key name="key_links_physical-layers_uni_unis_mef-interfaces_link">
+                              <xs:selector xpath="mef-interfaces:link"/>
+                              <xs:field xpath="mef-interfaces:device"/>
+                              <xs:field xpath="mef-interfaces:interface"/>
+                            </xs:key>
+                          </xs:element>
+                          <xs:element name="number-of-links" minOccurs="0">
+                            <xs:annotation>
+                              <xs:documentation>
+                                The number of links configured in the links list.
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:simpleType>
+                              <xs:restriction base="xs:unsignedInt">
+                                <xs:minInclusive value="1"/>
+                              </xs:restriction>
+                            </xs:simpleType>
+                          </xs:element>
+                          <xs:any minOccurs="0" maxOccurs="unbounded"
+                                  namespace="##other" processContents="lax"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="ce-vlans" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>
+                          Each Device (and by extension UNIs) MUST have list of the CE-VLAN ID including mappings to configured EVCs if assigned. This list of ce-vlans is a complete list of all VLANs associated with this UNI. At the Service Module level, there are two lists: This one and the list of CE-VLAN IDs associated with the EVC's UNI List as part of the MEF Service Definition. 
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="ce-vlan" minOccurs="0" maxOccurs="unbounded">
+                            <xs:annotation>
+                              <xs:documentation>
+                                A list of all EC-VLANs allowed ingres or egress on the UNI. This is the UNI-specific CE-VLAN ID listing as part of the Service Level CE-VLAN ID / EVC Map.
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="vid"  type="mef-types:vlan-id-type">
+                                  <xs:annotation>
+                                    <xs:documentation>
+                                      The Customer Edge VLAN ID is equivalent to a Static VLAN allowed on that port (ie. Port is not Forbidden). The association with the EVC is part of the EVC configuration.
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:any minOccurs="0" maxOccurs="unbounded"
+                                        namespace="##other" processContents="lax"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:any minOccurs="0" maxOccurs="unbounded"
+                                  namespace="##other" processContents="lax"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                      <xs:key name="key_ce-vlans_uni_unis_mef-interfaces_ce-vlan">
+                        <xs:selector xpath="mef-interfaces:ce-vlan"/>
+                        <xs:field xpath="mef-interfaces:vid"/>
+                      </xs:key>
+                    </xs:element>
+                    <xs:element name="ingress-envelopes" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>
+                          UNI Bandwidth Profile Flow Envelopes.
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="envelope" minOccurs="0" maxOccurs="unbounded">
+                            <xs:annotation>
+                              <xs:documentation>
+                                UNI Bandwidth Profile Flow Envelope List.
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="env-id"  type="mef-types:identifier45">
+                                  <xs:annotation>
+                                    <xs:documentation>
+                                      This attribute identifies the Envelope of Bandwidth Profile Parameters.
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="bwp-flows" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation>
+                                      UNI Bandwidth Profile Flows per Envelope.
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="bwp-flow" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                          <xs:documentation>
+                                            UNI Bandwidth Profile Flow List per Envelope. The order of entries in the list is user controlled. The first element of the list has the lowest priority and the last element will have the highest priority.
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="bw-profile">
+                                              <xs:annotation>
+                                                <xs:documentation>
+                                                  If no Ingress Bandwidth Profile per UNI has been defined (ie. 'No'), then the behavior has been defined at the Service Level of the configuration.
+                                                </xs:documentation>
+                                              </xs:annotation>
+                                              <xs:simpleType>
+                                                <xs:restriction base="mef-types:identifier45">
+                                                </xs:restriction>
+                                              </xs:simpleType>
+                                            </xs:element>
+                                            <xs:any minOccurs="0" maxOccurs="unbounded"
+                                                    namespace="##other" processContents="lax"/>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:any minOccurs="0" maxOccurs="unbounded"
+                                              namespace="##other" processContents="lax"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                  <xs:key name="key_bwp-flows_envelope_ingress-envelopes_uni_unis_mef-interfaces_bwp-flow">
+                                    <xs:selector xpath="mef-interfaces:bwp-flow"/>
+                                    <xs:field xpath="mef-interfaces:bw-profile"/>
+                                  </xs:key>
+                                </xs:element>
+                                <xs:element name="coupling-enabled" minOccurs="0"  type="xs:boolean">
+                                  <xs:annotation>
+                                    <xs:documentation>
+                                      The Envelope Coupling Flag (CF) attribute.
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:any minOccurs="0" maxOccurs="unbounded"
+                                        namespace="##other" processContents="lax"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:any minOccurs="0" maxOccurs="unbounded"
+                                  namespace="##other" processContents="lax"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                      <xs:key name="key_ingress-envelopes_uni_unis_mef-interfaces_envelope">
+                        <xs:selector xpath="mef-interfaces:envelope"/>
+                        <xs:field xpath="mef-interfaces:env-id"/>
+                      </xs:key>
+                    </xs:element>
+                    <xs:element name="egress-envelopes" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>
+                          UNI Bandwidth Profile Flow Envelopes.
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="envelope" minOccurs="0" maxOccurs="unbounded">
+                            <xs:annotation>
+                              <xs:documentation>
+                                UNI Bandwidth Profile Flow Envelope List.
+                              </xs:documentation>
+                            </xs:annotation>
+                            <xs:complexType>
+                              <xs:sequence>
+                                <xs:element name="env-id"  type="mef-types:identifier45">
+                                  <xs:annotation>
+                                    <xs:documentation>
+                                      This attribute identifies the Envelope of Bandwidth Profile Parameters.
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:element name="bwp-flows" minOccurs="0">
+                                  <xs:annotation>
+                                    <xs:documentation>
+                                      UNI Bandwidth Profile Flows per Envelope.
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                  <xs:complexType>
+                                    <xs:sequence>
+                                      <xs:element name="bwp-flow" minOccurs="0" maxOccurs="unbounded">
+                                        <xs:annotation>
+                                          <xs:documentation>
+                                            UNI Bandwidth Profile Flow List per Envelope. The order of entries in the list is user controlled. The first element of the list has the lowest priority and the last element will have the highest priority.
+                                          </xs:documentation>
+                                        </xs:annotation>
+                                        <xs:complexType>
+                                          <xs:sequence>
+                                            <xs:element name="bw-profile">
+                                              <xs:annotation>
+                                                <xs:documentation>
+                                                  UNI Bandwidth Profile Flow per Envelope.
+                                                </xs:documentation>
+                                              </xs:annotation>
+                                              <xs:simpleType>
+                                                <xs:restriction base="mef-types:identifier45">
+                                                </xs:restriction>
+                                              </xs:simpleType>
+                                            </xs:element>
+                                            <xs:any minOccurs="0" maxOccurs="unbounded"
+                                                    namespace="##other" processContents="lax"/>
+                                          </xs:sequence>
+                                        </xs:complexType>
+                                      </xs:element>
+                                      <xs:any minOccurs="0" maxOccurs="unbounded"
+                                              namespace="##other" processContents="lax"/>
+                                    </xs:sequence>
+                                  </xs:complexType>
+                                  <xs:key name="key_bwp-flows_envelope_egress-envelopes_uni_unis_mef-interfaces_bwp-flow">
+                                    <xs:selector xpath="mef-interfaces:bwp-flow"/>
+                                    <xs:field xpath="mef-interfaces:bw-profile"/>
+                                  </xs:key>
+                                </xs:element>
+                                <xs:element name="coupling-enabled" minOccurs="0"  type="xs:boolean">
+                                  <xs:annotation>
+                                    <xs:documentation>
+                                      The Envelope Coupling Flag (CF) attribute.
+                                    </xs:documentation>
+                                  </xs:annotation>
+                                </xs:element>
+                                <xs:any minOccurs="0" maxOccurs="unbounded"
+                                        namespace="##other" processContents="lax"/>
+                              </xs:sequence>
+                            </xs:complexType>
+                          </xs:element>
+                          <xs:any minOccurs="0" maxOccurs="unbounded"
+                                  namespace="##other" processContents="lax"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                      <xs:key name="key_egress-envelopes_uni_unis_mef-interfaces_envelope">
+                        <xs:selector xpath="mef-interfaces:envelope"/>
+                        <xs:field xpath="mef-interfaces:env-id"/>
+                      </xs:key>
+                    </xs:element>
+                    <xs:element name="status" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>
+                          This group is related to the MEF 7.3 External Network Interface
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:complexType>
+                        <xs:sequence>
+                          <xs:element name="oper-state-enabled" minOccurs="0"  type="xs:boolean">
+                            <xs:annotation>
+                              <xs:documentation>
+                                Operational Status of the Link as Enabled/Disabled.
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="available-status" minOccurs="0"  type="mef-types:ext-if-availability-type">
+                            <xs:annotation>
+                              <xs:documentation>
+                                Availability Status of the Link.
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="physical-layer" minOccurs="0"  type="mef-types:ext-if-physical-layer-type">
+                            <xs:annotation>
+                              <xs:documentation>
+                                Physical Layer Connection Speed.
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="number-of-links" minOccurs="0"  type="xs:unsignedInt">
+                            <xs:annotation>
+                              <xs:documentation>
+                                A count of the number of physical links in this physical layer.
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:element name="svc-frame-format" minOccurs="0"  type="mef-types:svc-frame-format-type">
+                            <xs:annotation>
+                              <xs:documentation>
+                                The format must be that of a MAC Frame specified in IEEE Std 802.3-2012 Clause 3.
+                              </xs:documentation>
+                            </xs:annotation>
+                          </xs:element>
+                          <xs:any minOccurs="0" maxOccurs="unbounded"
+                                  namespace="##other" processContents="lax"/>
+                        </xs:sequence>
+                      </xs:complexType>
+                    </xs:element>
+                    <xs:element name="cen-id" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>
+                          A CEN is defined as a network from a Service Provider (SP). The CEN ID must be unique for a specific Service Provider.
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="mef-types:cen-type">
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="uni-type" minOccurs="0"  type="mef-types:uni-mode-type">
+                      <xs:annotation>
+                        <xs:documentation>
+                           The UNI Type must be one of {UNI, VUNI}.
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="subscriber" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>
+                          A UNI MUST be dedicated to a single Subscriber. This value can only be configured if the '/mef-global/subscribers/subscriber' list has been populated.
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="mef-types:subscriber-type">
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="admin-state-enabled" minOccurs="0"  type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>
+                          Locked/Unlocked is inconsistent with Oper Status and will be confusing.
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="mac-address" minOccurs="0"  type="yang:mac-address">
+                      <xs:annotation>
+                        <xs:documentation>
+                          MAC Address.
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="uni-resiliency" minOccurs="0"  type="mef-types:uni-resiliency-type">
+                      <xs:annotation>
+                        <xs:documentation>
+                          UNI Resiliency.
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="max-svc-frame-size" minOccurs="0"  type="mef-types:max-svc-frame-size-type">
+                      <xs:annotation>
+                        <xs:documentation>
+                          This attribute describes the maximum service frame size for the UNI.
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="svc-mux-enabled" minOccurs="0"  type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>
+                          Service Multiplexing Enable - Enable if to support multiple EVCs per UNI.
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="bundling-enabled" minOccurs="0"  type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>
+                          When a UNI has Bundling Enabled, it MUST be able to support more than one CE-VLAN ID mapping to a particular EVC at the UNI.  When more than one CE-VLAN-ID is mapped to an EVC at a UNI, the EVC have CE-VLAN ID Preservation enabled
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="all-to-one-bundling-enabled" minOccurs="0"  type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>
+                          When all-to-one-bundling-enabled = true, all CE-VLAN IDs MUST map to a single EVC at the UNI. This also means that the UNI cannot have svc-mux-enabled = true. When all-to-one-bundling-enabled = true, all other UNIs in the EVC associating this UNI must have all-to-one-bundling-enabled = true. If this values is true, the value of ce-vlan-id-for-untagged-and-priority is not applicable.
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="ce-vlan-id-for-untagged-and-priority" minOccurs="0"  type="mef-types:vlan-id-type">
+                      <xs:annotation>
+                        <xs:documentation>
+                          The ce-vlan-id-for-untagged-and-priority is equivalent to the Layer 2 PVID (Port VLAN ID) with the Q-BRIDGE-MIB option for frame admitance set to admitAll. With AdmitAll set, all Untagged and Priority Tagged Service Frames are treated with the CE-VLAN-ID tag on ingress. It is not applicable if All in One Bundling is enabled.
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="max-evc-count" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>
+                          The Maximum Number of EVCs that can be supported by this UNI (Default 1).
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="xs:unsignedInt">
+                          <xs:minInclusive value="1"/>
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="token-share-enabled" minOccurs="0"  type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>
+                          Token Share Enabled/Disabled is used to indicate whether a given UNI is capable of sharing tokens across Bandwidth Profile Flows in an envelope.
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="ingress-bw-profile-per-uni" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>
+                          Ingress Bandwidth Profile for this UNI.
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="mef-types:identifier45">
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="egress-bw-profile-per-uni" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>
+                          Egress Bandwidth Profile Flow for this UNI.
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="mef-types:identifier45">
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="link-oam-enabled" minOccurs="0"  type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>
+                          Link OAM Enabled/Disabled.
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="uni-meg-enabled" minOccurs="0"  type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>
+                          Enables / Disables the Maintenance Entity Group (MEG).
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="elmi-enabled" minOccurs="0"  type="xs:boolean">
+                      <xs:annotation>
+                        <xs:documentation>
+                          Ethernet Local Management Interface(ELMI) Enabled / Disabled.
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="elmi-profile" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>
+                          The ELMI Profile is only applicable when ELMI is enabled. The E-LMI protocol is based on ITU-T Q.933, X.36 and other relevant recommendations as well as Frame Relay Local Management Interface (FR-LMI) Implementation Agreement document defined by the Frame Relay Forum and related ITU-T recommendations.
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="mef-types:identifier45">
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:element name="l2cp-address-set" minOccurs="0"  type="mef-types:l2cp-address-set-type">
+                      <xs:annotation>
+                        <xs:documentation>
+                          The L2CP Address Set Service Attribute specifies the subset of the Bridge Reserved Addresses that are filtered (i.e. L2CP Frames with this destination address are Peered or Discarded but not Passed) at a L2CP Decision Point.
+                        </xs:documentation>
+                      </xs:annotation>
+                    </xs:element>
+                    <xs:element name="l2cp-peering-profile" minOccurs="0">
+                      <xs:annotation>
+                        <xs:documentation>
+                          L2CP Peering Profile for this UNI. This profile may contain groups of L2CP Destination MAC Addresses and protocols to be peered at the UNI (as opposed to being passed or discarded).
+                        </xs:documentation>
+                      </xs:annotation>
+                      <xs:simpleType>
+                        <xs:restriction base="mef-types:identifier45">
+                        </xs:restriction>
+                      </xs:simpleType>
+                    </xs:element>
+                    <xs:any minOccurs="0" maxOccurs="unbounded"
+                            namespace="##other" processContents="lax"/>
+                  </xs:sequence>
+                </xs:complexType>
+              </xs:element>
+              <xs:any minOccurs="0" maxOccurs="unbounded"
+                      namespace="##other" processContents="lax"/>
+            </xs:sequence>
+          </xs:complexType>
+          <xs:key name="key_unis_mef-interfaces_uni">
+            <xs:selector xpath="mef-interfaces:uni"/>
+            <xs:field xpath="mef-interfaces:uni-id"/>
+          </xs:key>
+        </xs:element>
+        <xs:any minOccurs="0" maxOccurs="unbounded"
+                namespace="##other" processContents="lax"/>
+      </xs:sequence>
+    </xs:complexType>
+  </xs:element>
+
+</xs:schema>

@@ -1,0 +1,7 @@
+<get-schema xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+<identifier>ietf-inet-types</identifier>
+<format>yang</format>
+</get-schema>
+
+
+

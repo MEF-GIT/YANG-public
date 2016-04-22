@@ -1,0 +1,89 @@
+{
+"data": {
+  "mef-interfaces:mef-interfaces": {
+    "unis": {
+    	"uni": [
+    	    {
+    		    "uni-id": "MMPOP1-ce0-Slot0-Port3",
+    		    "admin-state-enabled": false,
+    		    "max-svc-frame-size": 1670
+          },
+          {
+            "uni-id": "MMPOP1-ce1-Slot1-Port3",
+            "admin-state-enabled": false,
+            "max-svc-frame-size": 1679
+           },
+           {
+               "uni-id": "MMPOP1-ce2-Slot2-Port3",
+               "admin-state-enabled": false,
+               "max-svc-frame-size": 1679
+           }
+      ]
+    }
+  },
+  "mef-services:mef-services": {
+	   "mef-service": [
+	    {	  
+	    "svc-id": 56789,
+	    "evc": {
+	      "unis": {
+	        "uni": [
+	          {
+	            "uni-id": "MMPOP1-ce0-Slot0-Port3",
+	            "admin-state-enabled": false
+	          },
+	          {
+	            "uni-id": "MMPOP1-ce1-Slot1-Port3",
+	            "admin-state-enabled": false
+	          }
+	        ]
+	      },
+	      "admin-state-enabled": false,
+	      "max-svc-frame-size": 1670
+	    },
+	    "user-label": "Deep Dish Pizza Tunnel"
+	  },
+	    {	  
+		    "svc-id": 56790,
+		    "evc": {
+		      "unis": {
+		        "uni": [
+		          {
+		            "uni-id": "MMPOP1-ce0-Slot0-Port3",
+		            "admin-state-enabled": false
+		          },
+		          {
+		            "uni-id": "MMPOP1-ce2-Slot2-Port3",
+		            "admin-state-enabled": false
+		          }
+		        ]
+		      },
+		      "admin-state-enabled": false,
+		      "max-svc-frame-size": 1670
+		    },
+		    "user-label": "Deep Dish Pizza Tunnel"
+		  },
+		    {	  
+			    "svc-id": 56799,
+			    "evc": {
+			      "unis": {
+			        "uni": [
+			          {
+			            "uni-id": "MMPOP1-ce0-Slot0-Port3",
+			            "admin-state-enabled": false
+			          },
+			          {
+			            "uni-id": "MMPOP1-ce1-Slot1-Port3",
+			            "admin-state-enabled": false
+			          }
+			        ]
+			      },
+			      "admin-state-enabled": false,
+			      "max-svc-frame-size": 1670
+			    },
+			    "user-label": "Deep Dish Pizza Tunnel"
+			  }
+	 ]
+  }
+ }
+}

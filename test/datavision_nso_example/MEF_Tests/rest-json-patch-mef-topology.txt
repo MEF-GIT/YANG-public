@@ -1,0 +1,197 @@
+{
+"data": {
+	"mef-topology:mef-topology": {
+	    "devices": {
+	      "device": [
+	        {
+	          "dev-id": "ce0",
+	          "interfaces": {
+	            "interface": [
+	              {
+	                "phy": "GigabitEthernet0/1",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              },
+	              {
+	                "phy": "GigabitEthernet0/2",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              },
+	              {
+	                "phy": "GigabitEthernet0/3",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              },
+	              {
+	                "phy": "GigabitEthernet0/4",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              }
+	            ]
+	          }
+	        },
+	        {
+	          "dev-id": "ce1",
+	          "interfaces": {
+	            "interface": [
+	              {
+	                "phy": "GigabitEthernet0/1",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              },
+	              {
+	                "phy": "GigabitEthernet0/2",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              },
+	              {
+	                "phy": "GigabitEthernet0/3",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              },
+	              {
+	                "phy": "GigabitEthernet0/4",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              }
+	            ]
+	          }
+	        },
+	        {
+	          "dev-id": "ce2",
+	          "interfaces": {
+	            "interface": [
+	              {
+	                "phy": "GigabitEthernet0/1",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              },
+	              {
+	                "phy": "GigabitEthernet0/2",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              },
+	              {
+	                "phy": "GigabitEthernet0/3",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              }
+	            ]
+	          }
+	        },
+	        {
+	          "dev-id": "ce3",
+	          "interfaces": {
+	            "interface": [
+	              {
+	                "phy": "GigabitEthernet0/3",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              },
+	              {
+	                "phy": "GigabitEthernet0/4",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              }
+	            ]
+	          }
+	        },
+	        {
+	          "dev-id": "ce4",
+	          "interfaces": {
+	            "interface": [
+	              {
+	                "phy": "GigabitEthernet0/3",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              },
+	              {
+	                "phy": "GigabitEthernet0/4",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              }
+	            ]
+	          }
+	        },
+	        {
+	          "dev-id": "ce5",
+	          "interfaces": {
+	            "interface": [
+	              {
+	                "phy": "GigabitEthernet0/1",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              },
+	              {
+	                "phy": "GigabitEthernet0/2",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              },
+	              {
+	                "phy": "GigabitEthernet0/3",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              },
+	              {
+	                "phy": "GigabitEthernet0/4",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              }
+	            ]
+	          }
+	        },
+	        {
+	          "dev-id": "ce6",
+	          "interfaces": {
+	            "interface": [
+	              {
+	                "phy": "GigabitEthernet0/1",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              },
+	              {
+	                "phy": "GigabitEthernet0/2",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              },
+	              {
+	                "phy": "GigabitEthernet0/3",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              },
+	              {
+	                "phy": "GigabitEthernet0/4",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              }
+	            ]
+	          }
+	        },
+	        {
+	          "dev-id": "ce7",
+	          "interfaces": {
+	            "interface": [
+	              {
+	                "phy": "GigabitEthernet0/1",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              },
+	              {
+	                "phy": "GigabitEthernet0/2",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              },
+	              {
+	                "phy": "GigabitEthernet0/3",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              },
+	              {
+	                "phy": "GigabitEthernet0/4",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              }
+	            ]
+	          }
+	        },
+	        {
+	          "dev-id": "ce8",
+	          "interfaces": {
+	            "interface": [
+	              {
+	                "phy": "GigabitEthernet0/1",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              },
+	              {
+	                "phy": "GigabitEthernet0/2",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              },
+	              {
+	                "phy": "GigabitEthernet0/3",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              },
+	              {
+	                "phy": "GigabitEthernet0/4",
+	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+	              }
+	            ]
+	          }
+	        }
+	      ]
+	    }
+	  }
+ }
+}

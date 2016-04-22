@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <capabilities>
+    <capability>urn:ietf:params:netconf:base:1.0</capability>
+  </capabilities>
+</hello>
+]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc message-id="172" xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+<get-schema xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-monitoring">
+<identifier>ietf-inet-types</identifier>
+<format>yang</format>
+</get-schema>
+</rpc>
+]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2">
+  <close-session/>
+</rpc>
+
+
+

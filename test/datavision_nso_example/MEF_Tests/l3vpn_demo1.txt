@@ -1,0 +1,33 @@
+config
+!
+devices sync-from
+!
+! Populate the L3 VPN part of this example
+vpn l3vpn ford
+as-number 65200
+endpoint branch-office1
+ ce-device    ce3
+ ce-interface GigabitEthernet0/3
+ ip-network   192.168.2.0/24
+ bandwidth    5500000
+!
+endpoint branch-office2
+ ce-device    ce5
+ ce-interface GigabitEthernet0/6
+ ip-network   192.168.7.0/24
+ bandwidth    1500000
+!
+endpoint main-office
+ ce-device    ce2
+ ce-interface GigabitEthernet0/1
+ ip-network   192.168.1.0/24
+ bandwidth    1000000
+!
+top
+!
+commit dry-run outformat native
+!
+commit
+!
+exit
+
