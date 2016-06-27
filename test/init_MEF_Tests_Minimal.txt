@@ -87,22 +87,6 @@ mef-topology devices device ce10 interfaces interface fe-4-1 ieee8023-phy ieee80
 !
 mef-topology devices device ce10 interfaces interface fe-4-2 ieee8023-phy ieee8023-100BASE-TX
 !
-mef-topology devices device rst_ogr1 role ce interfaces interface GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
-!
-mef-topology devices device rst_ogr1 interfaces interface GigabitEthernet0/2 ieee8023-phy ieee8023-1000BASE-SX
-!
-mef-topology devices device rst_ogr1 interfaces interface GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
-!
-mef-topology devices device rst_ogr1 interfaces interface GigabitEthernet0/4 ieee8023-phy ieee8023-1000BASE-SX
-!
-mef-topology devices device hkg_ogr1 role ce interfaces interface GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
-!
-mef-topology devices device hkg_ogr1 interfaces interface GigabitEthernet0/2 ieee8023-phy ieee8023-1000BASE-SX
-!
-mef-topology devices device hkg_ogr1 interfaces interface GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
-!
-mef-topology devices device hkg_ogr1 interfaces interface GigabitEthernet0/4 ieee8023-phy ieee8023-1000BASE-SX
-!
 mef-topology devices device var05.frf02_0 role pe interfaces interface GigabitEthernet1/0/0 ieee8023-phy ieee8023-1000BASE-X
 mef-topology devices device var05.frf02_0 interfaces interface GigabitEthernet1/0/1 ieee8023-phy ieee8023-1000BASE-X
 mef-topology devices device var05.frf02_0 interfaces interface GigabitEthernet1/0/2 ieee8023-phy ieee8023-1000BASE-X
@@ -483,24 +467,35 @@ mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon de
 mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test1 one-way-frame-delay-pm pm-percentile 95.0 pm-objective 400
 mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test2 one-way-frame-loss-ratio-pm pm-objective 490
 mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test3 one-way-availability-pm pm-objective 92
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test5 one-way-frame-delay-range pm-percentile 98.0 pm-objective 150
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test6 one-way-mean-frame-delay-pm pm-objective 300
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test7 one-way-high-loss-interval-pm  pm-objective 220
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test8 one-way-consecutive-high-loss-interval-pm consecutive-number-p 9 pm-objective 257
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test9 one-way-composite-pm cpi-threshold-u 90.6 frame-loss-indicator true frame-delay-indicator true ifdv-indicator true one-way-fd-threshold 42 one-way-ifdv-threshold 55 pm-objective 300
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_GA_Test one-way-group-availability-pm min-number-of-if-to-be-available 1 pm-objective 300
 !
-!mef-global slss sls SLS_Example pm-entries pm-time-interval 1292000
-!mef-global slss sls SLS_Example pm-entries pm-entry one-way-frame-delay-performance H cos-name H fd-perf-obj 200 fd-pp 99.90
-!mef-global slss sls SLS_Example pm-entries pm-entry one-way-frame-delay-performance M cos-name M fd-perf-obj 300 fd-pp 99.00
-!mef-global slss sls SLS_Example pm-entries pm-entry one-way-frame-delay-performance L cos-name L fd-perf-obj 400 fd-pp 95.00
-!mef-global slss sls SLS_Example pm-entries pm-entry one-way-frame-delay-range-performance H cos-name H fd-range-perf-obj 150 fd-range-pp 98.00
-!mef-global slss sls SLS_Example pm-entries pm-entry one-way-mean-frame-delay-performance H cos-name H fd-mean-perf-obj 300
-!mef-global slss sls SLS_Example pm-entries pm-entry one-way-inter-frame-delay-variation-performance H cos-name H ifdv-pp 99.90 ifdv-perf-obj 250 ifdv-pair-interval 1
-!mef-global slss sls SLS_Example pm-entries pm-entry one-way-frame-loss-ratio-performance H cos-name H flr-perf-obj 290
-!mef-global slss sls SLS_Example pm-entries pm-entry one-way-frame-loss-ratio-performance M cos-name M flr-perf-obj 390
-!mef-global slss sls SLS_Example pm-entries pm-entry one-way-frame-loss-ratio-performance L cos-name L flr-perf-obj 490
-!mef-global slss sls SLS_Example pm-entries pm-entry one-way-availability-performance H cos-name H avail-pp 96.00
-!mef-global slss sls SLS_Example pm-entries pm-entry one-way-availability-performance M cos-name M avail-pp 94.00
-!mef-global slss sls SLS_Example pm-entries pm-entry one-way-availability-performance L cos-name L avail-pp 92.00
-!mef-global slss sls SLS_Example pm-entries pm-entry one-way-resiliency-performance-hli H cos-name H hli-perf-obj 220
-!mef-global slss sls SLS_Example pm-entries pm-entry one-way-resiliency-performance-chli H cos-name H chli-consecutive-small-time-intervals 9 chli-perf-obj 257
-!mef-global slss sls SLS_Example pm-entries pm-entry one-way-group-availability-performance H cos-name H gp-avail-pp 95.00 min-uni-pairs-avail 1
-!mef-global slss sls SLS_Example pm-entries pm-time-interval-increment 1 unavail-flr-threshold-pp 50.00 consecutive-small-time-intervals 10
+mef-global slss sls SLS_Example time-interval 1292000 start-time 201606281200Z
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry H delta-t 1 threshold-c 50.0 consecutive-interval-n 10
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test1 one-way-frame-delay-pm pm-percentile 99.9 pm-objective 200
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test2 one-way-frame-loss-ratio-pm pm-objective 290
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test3 one-way-inter-frame-delay-variation-pm pm-percentile 99.9 frame-pair-separation 1 pm-objective 250
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test4 one-way-availability-pm pm-objective 96
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test5 one-way-frame-delay-range pm-percentile 98.0 pm-objective 150
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test6 one-way-mean-frame-delay-pm pm-objective 300
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test7 one-way-high-loss-interval-pm  pm-objective 220
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test8 one-way-consecutive-high-loss-interval-pm consecutive-number-p 9 pm-objective 257
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test9 one-way-composite-pm cpi-threshold-u 90.6 frame-loss-indicator true frame-delay-indicator true ifdv-indicator true one-way-fd-threshold 42 one-way-ifdv-threshold 55 pm-objective 300
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_GA_Test one-way-group-availability-pm min-number-of-if-to-be-available 1 pm-objective 300
+!
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry M delta-t 1 threshold-c 50.0 consecutive-interval-n 10
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry M pm-entries pm-entry SLS_M_Test1 one-way-frame-delay-pm pm-percentile 99.0 pm-objective 300
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry M pm-entries pm-entry SLS_M_Test2 one-way-frame-loss-ratio-pm pm-objective 390
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry M pm-entries pm-entry SLS_M_Test3 one-way-availability-pm pm-objective 94
+!
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry L delta-t 1 threshold-c 50.0 consecutive-interval-n 10
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry L pm-entries pm-entry SLS_L_Test1 one-way-frame-delay-pm pm-percentile 95.0 pm-objective 400
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry L pm-entries pm-entry SLS_L_Test2 one-way-frame-loss-ratio-pm pm-objective 490
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry L pm-entries pm-entry SLS_L_Test3 one-way-availability-pm pm-objective 92
 !
 commit
 !
@@ -1146,7 +1141,7 @@ mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 ingress-bw-profile-per-uni high1-
 !
 mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 egress-bw-profile-per-uni high1-bwp-uni
 !
-mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 l2cp-address-set option2-blind-ctb2 l2cp-peering L2CP_Peering_Profile1
+mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 l2cp-address-set option2-blind-ctb2 l2cp-peering L2CP_Peering_Profile1
 !
 mef-services mef-service EVC-0001898-ACME-MEGAMART user-label Denver-ChicagoTunnel svc-type epl connection-type point-to-point admin-state false max-num-of-evc-end-point 2 ce-vlan-id-preservation true ce-vlan-pcp-preservation true 
 !
@@ -1576,7 +1571,13 @@ mef-services mef-service EVC-0001944-ACME-MEGAMART carrier-ethernet-sls sls-id M
 !
 mef-services mef-service EVC-0001944-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Argon pm-entries pm-entry SLS_Argon_Test2
 !
-mef-services mef-service EVC-0001944-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Neon pm-entries pm-entry SLS_Neon_Test2
+mef-services mef-service EVC-0001944-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Neon pm-entries pm-entry SLS_Neon_GA_Test sets-of-end-point-pairs set-of-end-point-pairs 1 sls-uni-inclusions end-point-pair MMPOP1-ce5-Slot5-Port3 MMPOP1-ce6-Slot6-Port3
+!
+mef-services mef-service EVC-0001944-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Neon pm-entries pm-entry SLS_Neon_GA_Test sets-of-end-point-pairs set-of-end-point-pairs 1 sls-uni-inclusions end-point-pair MMPOP1-ce6-Slot6-Port3 MMPOP1-ce5-Slot5-Port3
+!
+mef-services mef-service EVC-0001944-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Neon pm-entries pm-entry SLS_Neon_GA_Test sets-of-end-point-pairs set-of-end-point-pairs 2 sls-uni-inclusions end-point-pair MMPOP1-ce7-Slot7-Port3 MMPOP1-ce8-Slot8-Port3
+!
+mef-services mef-service EVC-0001944-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Neon pm-entries pm-entry SLS_Neon_GA_Test sets-of-end-point-pairs set-of-end-point-pairs 2 sls-uni-inclusions end-point-pair MMPOP1-ce8-Slot8-Port3 MMPOP1-ce7-Slot7-Port3
 !
 commit
 !
@@ -1711,6 +1712,84 @@ commit
 !
 top
 !
+! OTHER Use Case 1: This is just to show the other enumeration works as expected. I still set connection-type as point-to-point in this case
+mef-interfaces unis uni MMPOP1-ce0-Slot0-Port2 admin-state false max-svc-frame-size 1600 max-num-of-evcs 1 all-to-one-bundling-enabled true token-share-enabled true
+!
+mef-interfaces unis uni MMPOP1-ce0-Slot0-Port2 physical-layers links link ce0 GigabitEthernet0/2 ieee8023-phy ieee8023-1000BASE-SX
+!
+mef-interfaces unis uni MMPOP1-ce0-Slot0-Port2 ce-vlans ce-vlan 8
+!
+mef-interfaces unis uni MMPOP1-ce0-Slot0-Port2 ce-vlans ce-vlan 800
+!
+mef-interfaces unis uni MMPOP1-ce0-Slot0-Port2 ce-vlans ce-vlan 801
+!
+mef-interfaces unis uni MMPOP1-ce0-Slot0-Port2 ce-vlans ce-vlan 802
+!
+mef-interfaces unis uni MMPOP1-ce0-Slot0-Port2 ingress-bw-profile-per-uni high1-bwp-uni
+!
+mef-interfaces unis uni MMPOP1-ce0-Slot0-Port2 egress-bw-profile-per-uni high1-bwp-uni
+!
+mef-interfaces unis uni MMPOP1-ce0-Slot0-Port2 elmi-enabled true elmi-profile elmi-test1
+!
+mef-interfaces unis uni MMPOP1-ce0-Slot0-Port2 l2cp-address-set option2-blind-ctb2 l2cp-peering L2CP_Peering_Profile1
+!
+mef-interfaces unis uni MMPOP1-ce2-Slot0-Port3 admin-state false max-svc-frame-size 1600 max-num-of-evcs 1 all-to-one-bundling-enabled true
+!
+mef-interfaces unis uni MMPOP1-ce2-Slot0-Port3 physical-layers links link ce2 GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
+!
+mef-interfaces unis uni MMPOP1-ce2-Slot0-Port3 ce-vlans ce-vlan 8
+!
+mef-interfaces unis uni MMPOP1-ce2-Slot0-Port3 ce-vlans ce-vlan 800
+!
+mef-interfaces unis uni MMPOP1-ce2-Slot0-Port3 ce-vlans ce-vlan 801
+!
+mef-interfaces unis uni MMPOP1-ce2-Slot0-Port3 ce-vlans ce-vlan 802
+!
+mef-interfaces unis uni MMPOP1-ce2-Slot0-Port3 ingress-bw-profile-per-uni high1-bwp-uni
+!
+mef-interfaces unis uni MMPOP1-ce2-Slot0-Port3 egress-bw-profile-per-uni high1-bwp-uni
+!
+mef-interfaces unis uni MMPOP1-ce2-Slot0-Port3 l2cp-address-set option2-blind-ctb2 l2cp-peering L2CP_Peering_Profile1
+!
+mef-services mef-service EVC-0009898-ACME-MEGAMART user-label Toronto-NewarkTunnel svc-type other connection-type point-to-point admin-state false max-num-of-evc-end-point 2 ce-vlan-id-preservation true ce-vlan-pcp-preservation true 
+!
+mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port2 role root admin-state false source-mac-address-limit-enabled false evc-uni-ce-vlans evc-uni-ce-vlan 800
+!
+mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port2 evc-uni-ce-vlans evc-uni-ce-vlan 801
+!
+mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port2 evc-uni-ce-vlans evc-uni-ce-vlan 802
+!
+mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port2 data-cos-identifier MEF103_Table23 l2cp-cos-identifier MEF103_Table3PlusCoS soam-cos-identifier MEF103_Table23 color-identifier dscp
+!
+mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port2 data-eec-identifier MEF103_Table23 l2cp-eec-identifier MEF103_Table3PlusEEC soam-eec-identifier MEF103_Table23 color-identifier dscp
+!
+mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot0-Port3 role root admin-state false source-mac-address-limit-enabled false evc-uni-ce-vlans evc-uni-ce-vlan 800
+!
+mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot0-Port3 evc-uni-ce-vlans evc-uni-ce-vlan 801
+!
+mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot0-Port3 evc-uni-ce-vlans evc-uni-ce-vlan 802
+!
+mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot0-Port3 data-cos-identifier MEF103_Table23 l2cp-cos-identifier MEF103_Table3PlusCoS soam-cos-identifier MEF103_Table23 color-identifier dscp
+!
+mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot0-Port3 data-eec-identifier MEF103_Table23 l2cp-eec-identifier MEF103_Table3PlusEEC soam-eec-identifier MEF103_Table23 color-identifier dscp
+!
+mef-services mef-service EVC-0009898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce0-Slot0-Port2 MMPOP1-ce2-Slot0-Port3
+!
+mef-services mef-service EVC-0009898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce2-Slot0-Port3 MMPOP1-ce0-Slot0-Port2
+!
+mef-services mef-service EVC-0009898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Argon pm-entries pm-entry SLS_Argon_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce0-Slot0-Port2 MMPOP1-ce2-Slot0-Port3
+!
+mef-services mef-service EVC-0009898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Argon pm-entries pm-entry SLS_Argon_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce2-Slot0-Port3 MMPOP1-ce0-Slot0-Port2
+!
+mef-services mef-service EVC-0009898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Neon pm-entries pm-entry SLS_Neon_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce0-Slot0-Port2 MMPOP1-ce2-Slot0-Port3
+!
+mef-services mef-service EVC-0009898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Neon pm-entries pm-entry SLS_Neon_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce2-Slot0-Port3 MMPOP1-ce0-Slot0-Port2
+!
+commit
+!
+top
+!
+
 show full-configuration mef-topology
 !
 top
