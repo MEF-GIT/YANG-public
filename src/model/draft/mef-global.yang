@@ -222,146 +222,65 @@ module mef-global {
         }
       }
     }
-    container svc-providers {
-      presence "Use non-default Service Providers";
-      description
-        "Global Service Providers List.";
-      list svc-provider {
-        key "sp-id";
-        description
-          "Service Provider Identifier.";
-        leaf sp-id {
-          type mef-types:svc-provider-type;
-          description
-            "The Service Provider ID identifies a unique SP that " +
-            "contains multiple CENs.";
-          reference "[MEF10.3] Section 7.";
-        }
-      }
-    }
-    container cens {
-      presence "Use non-default CEN";
-      description
-        "Global CENs List.";
-      list cen {
-        must "(not(/mef-global/svc-providers) and " +
-        		"not(./sp-id)) or " +
-        		"(/mef-global/svc-providers and ./sp-id)" {
-          error-message "If the Service Providers list has been " +
-          		"populated, a Service Provider ID must be " +
-          		"configured for a CEN.";
-          description
-            "A CEN sees a single Service Provider. This must " +
-            "statement is effectively a 'mandatory true' when " +
-            "the Global Service Providers list is being used.";
-        }
-        key "cen-id";
-        description
-          "List of CENs.";
-        leaf cen-id {
-          type mef-types:cen-type;
-          description
-            "The CEN ID identifies a specific Carrier Ethernet " +
-            "Network belong to a Service Provider.";
-          reference "[MEF10.3] Section 7. The CEN ID must be " +
-          		"unique for this Service Provider.";
-        }
-        leaf sp-id {
-          when "/mef-global:mef-global/mef-global:svc-providers" {
-            description
-              "Service Provider Identifier associated with " +
-              "this CEN.";
-          }
-          type leafref {
-            path "/mef-global:mef-global/mef-global:" +
-            		"svc-providers/mef-global:svc-provider/" +
-            		"mef-global:sp-id";
-          }
-          description
-            "The Service Provider ID must be globally unique " +
-            "as all CENs and Subscribers must be supported " +
-            "by a specific Service Provider(SP). A SP can " +
-            "support multiple CENs.";
-          reference "[MEF10.3] Section 7.";
-        }
-      }
-    }
+    
     container slss {
-      presence "Use non-default SLS";
+      //presence "Use non-default SLS";
       description
         "The technical specification of the service level being " +
         "offered by the Service Provider to the Subscriber is " +
         "defined to be the Service Level Specification (SLS).";
       list sls {
-        must "(not(/mef-global/svc-providers) and " +
-        		"not(./sp-id)) or " +
-        		"(/mef-global/svc-providers and ./sp-id)" {
-          error-message "If the Service Providers list has been " +
-          		"populated, a Service Provider ID must be " +
-          		"configured for an SLS.";
-          description
-            "An SLS sees a single Service Provider. This must " +
-            "statement is effectively a 'mandatory true' when " +
-            "the Global Service Providers list is being used.";
-        }
         key "sls-id";
         description
           "Global Service Level Specification(SLS) List.";
-        container perf-objs {
-          description
-            "Performance Objectives for this SLS.";
-          leaf pm-time-interval {
+        leaf sls-id {
+            type mef-types:sls-type;
+            description
+              "The SLS ID identifies a specific Service Level " +
+              "Specification offered by a Service Provider.";
+            reference "[MEF10.3] Section 8.8. The SLS ID must " +
+            		"be unique for this Service Provider.";
+          }        
+        leaf time-interval {
             type uint64;
             units "seconds";
             mandatory true;
             description
-              "Performance Metric(PM): Time Interval.";
+              "Performance Metric(PM): Time Interval (seconds).";
           }
-          leaf pm-time-interval-increment {
-            when "(count(../perf-obj[pm-type = " +
-            		"'one-way-resiliency-performance-hli']) > 0) " +
-            		"or (count(../perf-obj" +
-            		"[pm-type = " +
-            		"'one-way-resiliency-performance-chli']) > 0)" +
-            		" or (count(../perf-obj" +
-            		"[pm-type = " +
-            		"'one-way-availability-performance']) > 0) " +
-            		"or (count(../perf-obj[pm-type = " +
-            		"'one-way-multiple-evc-group-availability-" +
-            		"performance']) > 0) or " +
-            		"(count(../perf-obj[pm-type = " +
-            		"'one-way-group-availability-" +
-            		"performance']) > 0)" {
+        leaf start-time {
+              type string {
+            	  length "min..255";
+              }
+              mandatory true;
               description
-                "This PM Metric only applies to specific " +
-                "Performance Objective Types.";
+                "Performance Metric(PM): Start DateTime for Time Intervals (YYYYMMDDHHHHZ)";
+          }        
+        
+        container pm-cos-name-entries {
+          description
+            "Performance Metrics for this SLS.";
+
+          list pm-cos-name-entry {
+        	  key "cos-name";
+          
+            leaf cos-name {
+              type leafref {
+                path "/mef-global:mef-global/profiles/" +
+                		"cos-names/cos-name/name";
+              }
+              description
+                "CoS Name Identifier.";
             }
+          
+          leaf delta-t {
             type uint64;
             units "ms";
             mandatory true;
             description
               "A time interval much smaller than pm-time-interval.";
           }
-          leaf unavail-flr-threshold-pp {
-            when "(count(../perf-obj[pm-type = " +
-            		"'one-way-resiliency-performance-hli']) > 0) " +
-            		"or " +
-            		"(count(../perf-obj[pm-type = " +
-            		"'one-way-resiliency-performance-chli']) > 0) " +
-            		"or " +
-            		"(count(../perf-obj[pm-type = " +
-            		"'one-way-availability-performance']) > 0) " +
-            		"or " +
-            		"(count(../perf-obj[pm-type = " +
-            		"'one-way-multiple-evc-group-availability-" +
-            		"performance']) > 0) or " +
-            		"(count(../perf-obj[pm-type = " +
-            		"'one-way-group-availability-" +
-            		"performance']) > 0)" {
-              description
-                "This PM Metric only applies to specific " +
-                "Performance Objective Types.";
-            }
+          leaf threshold-c {
             type mef-types:simple-percent;
             units "percent";
             mandatory true;
@@ -369,381 +288,241 @@ module mef-global {
               "Unavailability frame loss ratio threshold " +
               "expressed in percentage.";
           }
-          leaf consecutive-small-time-intervals {
-            when "(count(../perf-obj[pm-type = " +
-            		"'one-way-availability-performance']) > 0) or " +
-            		"(count(../perf-obj[pm-type = " +
-            		"'one-way-multiple-evc-group-availability-" +
-            		"performance']) > 0) or " +
-            		"(count(../perf-obj[pm-type = " +
-            		"'one-way-group-availability-" +
-            		"performance']) > 0)" {
-              description
-                "This PM Metric only applies to specific " +
-                "Performance Objective Types.";
-            }
+          leaf consecutive-interval-n {
             type uint64;
             mandatory true;
             description
               "Number of consecutive small time intervals " +
               "to assess.";
           }
-          list perf-obj {
-            key "pm-type pm-id";
-            unique "pm-type cos-name fd-pp fd-range-pp " +
-            		"fd-perf-obj fd-range-perf-obj " +
-            		"fd-mean-perf-obj ifdv-pp ifdv-pair-interval " +
-            		"ifdv-perf-obj flr-perf-obj avail-pp " +
-            		"hli-perf-obj " +
-            		"chli-consecutive-small-time-intervals " +
-            		"chli-perf-obj min-uni-pairs-avail gp-avail-pp";
+          
+          container pm-entries {
+              description
+                "Performance Metrics for this SLS.";          
+          
+          list pm-entry {        	  
+            key "pm-entry-id";
             description
               "For any given SLS, performance objectives related " +
               "to the Performance Metrics may or may not be " +
               "specified. No functionally duplicated " +
               "Performance Objectives are allowed.";
-            leaf pm-type {
-              type mef-types:performance-metric-type;
-              description
-                "Performance Metric Type.";
-              reference "[MEF10.3] Section 8.8.";
-            }
-            leaf pm-id {
+            leaf pm-entry-id {
               type mef-types:identifier45;
               description
                 "This is a friendly name for specific " +
                 "performance profile.";
             }
-            leaf cos-name {
-              type leafref {
-                path "/mef-global:mef-global/profiles/" +
-                		"cos-names/cos-name/name";
+            
+            choice one-way-performance {
+            case fd {
+                container one-way-frame-delay-pm {
+                	  presence "Frame Delay Configured";             
+              leaf pm-percentile {
+                  type mef-types:simple-percent;
+                  units "percent";
+                  mandatory true;
+                  description
+                    "Frame Delay Performance Percentile.";
+                }
+              leaf pm-objective {
+                  type uint64;
+                  units "ms";
+                  mandatory true;
+                  description
+                    "Frame Delay Performance Objective.";
+                }
               }
-              mandatory true;
-              description
-                "CoS Name Identifier.";
             }
-            leaf fd-pp {
-              when "(../pm-type = 'one-way-frame-delay-" +
-              		"performance')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
+            case mfd {
+                container one-way-mean-frame-delay-pm {
+                	  presence "Mean FD Configured";              
+              leaf pm-objective {
+                  type uint64;
+                  units "ms";
+                  mandatory true;
+                  description
+                    "Frame Delay Mean Performance Objective.";
+                }
               }
-              type mef-types:simple-percent;
-              units "percent";
-              mandatory true;
-              description
-                "Frame Delay Performance Percentile.";
             }
-            leaf fd-range-pp {
-              when "(../pm-type = 'one-way-frame-delay-range-" +
-              		"performance')" {
+            case fdr {
+                container one-way-frame-delay-range-pm {
+                	  presence "FDR Configured";             
+              leaf pm-percentile {
+                  type mef-types:simple-percent;
+                  units "percent";
+                  mandatory true;
+                  description
+                    "Frame Delay Range Performance Percentile.";
+                }            
+              leaf pm-objective {
+                type uint64;
+                units "ms";
+                mandatory true;
                 description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
+                  "Frame Delay Range Performance Objective.";
               }
-              type mef-types:simple-percent;
-              units "percent";
-              mandatory true;
-              description
-                "Frame Delay Range Performance Percentile.";
+                }
             }
-            leaf fd-perf-obj {
-              when "(../pm-type = 'one-way-frame-delay-" +
-              		"performance')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
+            case ifdv {
+                container one-way-inter-frame-delay-variation-pm {
+                	  presence "IFDV Configured";             
+              leaf pm-percentile {
+                  type mef-types:simple-percent;
+                  units "percent";
+                  mandatory true;
+                  description
+                    "Inter-Frame Delay Variation Performance " +
+                    "Percentile.";
+                }
+                leaf frame-pair-separation {
+                  type uint64;
+                  units "ms";
+                  mandatory true;
+                  description
+                    "Inter-Frame Delay Variation Performance " +
+                    "Separation / Pair Interval.";
+                }
+                leaf pm-objective {
+                  type uint64;
+                  units "ms";
+                  mandatory true;
+                  description
+                    "Inter-Frame Delay Variation Performance Objective.";
+                }
+                }
+            }      
+            case flr {
+                container one-way-frame-loss-ratio-pm {
+                	  presence "one-way-frame-loss-ratio-pm Configured";              
+              leaf pm-objective {
+                  type uint64;
+                  units "ms";
+                  mandatory true;
+                  description
+                    "Frame Loss Ratio Performance Objective.";
+                }
               }
-              type uint64;
-              units "ms";
-              mandatory true;
-              description
-                "Frame Delay Performance Objective.";
             }
-            leaf fd-range-perf-obj {
-              when "(../pm-type = 'one-way-frame-delay-range-" +
-              		"performance')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type uint64;
-              units "ms";
-              mandatory true;
-              description
-                "Frame Delay Range Performance Objective.";
+            case availability {
+                container one-way-availability-pm {
+                	  presence "Availability Configured";              
+                      leaf pm-objective {
+                          type uint64;
+                          mandatory true;
+                          description
+                            "Availability Performance Metric Objective";
+                        }
+                }
             }
-            leaf fd-mean-perf-obj {
-              when "(../pm-type = 'one-way-mean-frame-delay-" +
-              		"performance')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type uint64;
-              units "ms";
-              mandatory true;
-              description
-                "Frame Delay Mean Performance Objective.";
+            case hli {
+                container one-way-high-loss-interval-pm {
+                	  presence "HLI Configured";              
+              leaf pm-objective {
+                  type uint64;
+                  mandatory true;
+                  description
+                    "HLI Performance Objective expressed as an integer.";
+                }
+                }
             }
-            leaf ifdv-pp {
-              when "(../pm-type = 'one-way-inter-frame-delay-" +
-              		"variation-performance')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type mef-types:simple-percent;
-              units "percent";
-              mandatory true;
-              description
-                "Inter-Frame Delay Variation Performance " +
-                "Percentile.";
+            case chli {
+                container one-way-consecutive-high-loss-interval-pm {
+                	  presence "CHLI Configured";              
+              leaf consecutive-number-p {
+                  type uint64;
+                  must "not(../../../../consecutive-interval-n) " +
+                  		"or " +
+                  		"(. < ../../../../consecutive-interval-n)" {
+                    error-message "The value of chli-consecutive-" +
+                    		"small-time-intervals must be less " +
+                    		"than consecutive-small-time-intervals " +
+                    		"(where p < n) if both are defined.";
+                    description
+                      "The value of chli-consecutive-small-time-" +
+                      "intervals must be less than consecutive-" +
+                      "small-time-intervals (where p < n) if " +
+                      "both are defined.";
+                  }
+                  mandatory true;
+                  description
+                    "Number of consecutive small time intervals " +
+                    "for assessing CHLI.";
+                  reference "[MEF10.3] Table 10.";
+                }
+                leaf pm-objective {
+                  type uint64;
+                  mandatory true;
+                  description
+                    "Consecutive HLI Performance Objective " +
+                    "expressed as an integer.";
+                }
+                }
             }
-            leaf ifdv-pair-interval {
-              when "(../pm-type = 'one-way-inter-frame-delay-" +
-              		"variation-performance')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
+            case cpm {
+                container one-way-composite-pm {
+              	  presence "one-way-composite-pm Configured";
+              leaf cpi-threshold-u {
+            	  type mef-types:simple-percent;
+                  units "percent";
+                  mandatory true; 
               }
-              type mef-types:simple-percent;
-              units "ms";
-              mandatory true;
-              description
-                "Inter-Frame Delay Variation Performance " +
-                "Separation / Pair Interval.";
+              leaf frame-loss-indicator {
+            	  type boolean;
+                  mandatory true; 
+              }
+              leaf frame-delay-indicator {
+            	  type boolean;
+                  mandatory true; 
+              }
+              leaf ifdv-indicator {
+            	  type boolean;
+                  mandatory true; 
+              }
+              leaf one-way-fd-threshold {
+            	  type uint64;
+                  mandatory true; 
+              }             
+              leaf one-way-ifdv-threshold {
+            	  type uint64;
+                  mandatory true; 
+              }
+              leaf pm-objective {
+                  type uint64;
+                  mandatory true;
+                  description
+                    "Composite Performance Metric Objective";
+                }
+                }
             }
-            leaf ifdv-perf-obj {
-              when "(../pm-type = 'one-way-inter-frame-delay-" +
-              		"variation-performance')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
+            case group-avail {
+              container one-way-group-availability-pm {
+            	  presence "Group Availability Configured";
+                leaf min-number-of-if-to-be-available {
+                  type uint64;
+                  mandatory true;
+                  description
+                    "Minimum number of ordered UNI pairs that are " +
+                    "to be available in the EVC.";
+                }
+                leaf pm-objective {
+                  type uint64;
+                  mandatory true;
+                  description
+                    "Group Availability Performance Objective " +
+                    "expressed as a percentage.";
+                }
               }
-              type uint64;
-              units "ms";
-              mandatory true;
-              description
-                "Inter-Frame Delay Variation Performance Objective.";
             }
-            leaf flr-perf-obj {
-              when "(../pm-type = 'one-way-frame-loss-ratio-" +
-              		"performance')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type uint64;
-              units "ms";
-              mandatory true;
-              description
-                "Frame Loss Ratio Performance Objective.";
-            }
-            leaf avail-pp {
-              when "(../pm-type = 'one-way-availability-" +
-              		"performance')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type mef-types:simple-percent;
-              units "percent";
-              mandatory true;
-              description
-                "Availability Performance Objective expressed " +
-                "as a percentage.";
-            }
-            leaf hli-perf-obj {
-              when "(../pm-type = 'one-way-resiliency-" +
-              		"performance-hli')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type uint64;
-              mandatory true;
-              description
-                "HLI Performance Objective expressed as an integer.";
-            }
-            leaf chli-consecutive-small-time-intervals {
-              when "(../pm-type = 'one-way-resiliency-" +
-              		"performance-chli')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type uint64;
-              must "not(../../consecutive-small-time-intervals) " +
-              		"or " +
-              		"(. < ../../consecutive-small-time-" +
-              		"intervals)" {
-                error-message "The value of chli-consecutive-" +
-                		"small-time-intervals must be less " +
-                		"than consecutive-small-time-intervals " +
-                		"(where p < n) if both are defined.";
-                description
-                  "The value of chli-consecutive-small-time-" +
-                  "intervals must be less than consecutive-" +
-                  "small-time-intervals (where p < n) if " +
-                  "both are defined.";
-              }
-              mandatory true;
-              description
-                "Number of consecutive small time intervals " +
-                "for assessing CHLI.";
-              reference "[MEF10.3] Table 10.";
-            }
-            leaf chli-perf-obj {
-              when "(../pm-type = 'one-way-resiliency-" +
-              		"performance-chli')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type uint64;
-              mandatory true;
-              description
-                "Consecutive HLI Performance Objective " +
-                "expressed as an integer.";
-            }
-            leaf min-uni-pairs-avail {
-              when "(../pm-type = 'one-way-multiple-evc-group-" +
-              		"availability-performance') or " +
-              		"(../pm-type = 'one-way-group-availability-" +
-              		"performance')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type uint64;
-              mandatory true;
-              description
-                "Minimum number of ordered UNI pairs that are " +
-                "to be available in the EVC.";
-            }
-            leaf gp-avail-pp {
-              when "(../pm-type = 'one-way-multiple-evc-group-" +
-              		"availability-performance') or " +
-              		"(../pm-type = 'one-way-group-availability-" +
-              		"performance')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type mef-types:simple-percent;
-              units "percent";
-              mandatory true;
-              description
-                "Group Availability Performance Objective " +
-                "expressed as a percentage.";
-            }
-          }
-        }
-        leaf sls-id {
-          type mef-types:cen-type;
-          description
-            "The SLS ID identifies a specific Service Level " +
-            "Specification offered by a Service Provider.";
-          reference "[MEF10.3] Section 8.8. The SLS ID must " +
-          		"be unique for this Service Provider.";
-        }
-        leaf sp-id {
-          when "/mef-global:mef-global/mef-global:svc-" +
-          		"providers" {
-            description
-              "Service Provider Identifier associated " +
-              "with this SLS.";
-          }
-          type leafref {
-            path "/mef-global:mef-global/mef-global:" +
-            		"svc-providers/mef-global:svc-provider/" +
-            		"mef-global:sp-id";
-          }
-          description
-            "The Service Provider ID must be globally unique " +
-            "as all Subscriber SLSs must be supported by " +
-            "a specific Service Provider(SP). A SP can " +
-            "support multiple SLSs.";
-          reference "[MEF10.3] Section 7.";
-        }
+          } //choice          
+          }//pm-entry
+        } //pm-entries
+          } // pm-cos-entry
+        } //pm-cos-name-entries
       }
     }
-    container subscribers {
-      presence "Use non-default Subscribers.";
-      description
-        "Subscribers List (Global).";
-      list subscriber {
-        must "(not(/mef-global/svc-providers) and not(./sp-id)) " +
-        		"or " +
-        		"(/mef-global/svc-providers and ./sp-id)" {
-          error-message "If the Service Providers list has been " +
-          		"populated, a Service Provider ID must be " +
-          		"configured for a Subscriber.";
-          description
-            "A Subscriber sees a single Service Provider. " +
-            "This must statement is effectively a " +
-            "'mandatory true' when the Global Service " +
-            "Providers list is being used.";
-        }
-        must "(not(/mef-global/cens) and not(./cen-id)) or " +
-        		"(/mef-global/cens and ./cen-id)" {
-          error-message "If the CENs list has been populated, " +
-          		"a CEN ID must be configured for a Subscriber.";
-          description
-            "[MEF103] A Subscriber sees a single CEN from a " +
-            "SP. This must statement is effectively a " +
-            "'mandatory true' when the Global CENs list " +
-            "is being used.";
-        }
-        key "sub-id";
-        description
-          "Global Subscriber List.";
-        leaf sub-id {
-          type mef-types:subscriber-type;
-          description
-            "The Subscriber ID identifies a unique Subscriber to " +
-            "this CEN. Note that you can have the same " +
-            "Subscriber as part of multiple Service Providers.";
-          reference "[MEF10.3] Section 7";
-        }
-        leaf sp-id {
-          when "/mef-global:mef-global/mef-global:svc-providers" {
-            description
-              "Only configure when the Global Service Providers " +
-              "list has been populated.";
-          }
-          type leafref {
-            path "/mef-global:mef-global/mef-global:" +
-            		"svc-providers/mef-global:" +
-            		"svc-provider/mef-global:sp-id";
-          }
-          description
-            "The Service Provider ID must be globally unique " +
-            "as all CENs and Subscribers must be supported by " +
-            "a specific Service Provider(SP). A SP can " +
-            "support multiple CENs.";
-          reference "[MEF10.3] Section 7.";
-        }
-        leaf cen-id {
-          when "/mef-global:mef-global/mef-global:cens" {
-            description
-              "Only configure when the Global CENs list " +
-              "has been populated.";
-          }
-          type leafref {
-            path "/mef-global:mef-global/mef-global:cens/" +
-            		"mef-global:cen/mef-global:cen-id";
-          }
-          description
-            "A CEN is defined as a network from a " +
-            "Service Provider (SP). ";
-          reference "[MEF10.3] Section 7.";
-        }
-      }
-    }
+    
     container profiles {
       presence "Use to confirm whether ANY profiles have " +
       		"been configured";

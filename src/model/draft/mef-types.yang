@@ -59,6 +59,13 @@ module mef-types {
      of Ethernet over Transport and Metro Ethernet 
      Network(EoT/MEN)' March 2007";
 
+  revision 2016-05-27 {
+    	    description
+    	      "Added role for CGN Routers and updated some descriptions";
+    	    reference "EVC Ethernet Services Definitions YANG Modules 
+    	    	      (MEF XX), TBD";
+  }
+
   revision 2016-04-17 {
     description
       "First set of updates to better align with
@@ -359,15 +366,6 @@ module mef-types {
     reference "[MEF 10.3] Section 8.9 and Section 9.7.";
   }
 
-  typedef retail-svc-id-type {
-    type uint32;
-    description
-      "General ID used by higher level applications that " +
-      "connect Subscribers information and SLA's with " +
-      "configured Ethernet Services.";
-    reference "[MEF10.3].";
-  }
-
   typedef svc-provider-type {
     type identifier45;
     description
@@ -382,6 +380,13 @@ module mef-types {
     reference "[MEF10.3].";
   }
 
+  typedef sls-type {
+	    type identifier45;
+	    description
+	      "SLS Type";
+	    reference "[MEF10.3].";
+	  }
+  
   typedef subscriber-type {
     type identifier45;
     description
@@ -500,47 +505,47 @@ module mef-types {
 
   typedef performance-metric-type {
     type enumeration {
-      enum "one-way-frame-delay-performance" {
+      enum "one-way-frame-delay-pm" {
         description
-          "One-way Frame Delay Performance.";
+          "One-way Frame Delay PM";
       }
-      enum "one-way-frame-delay-range-performance" {
+      enum "one-way-frame-delay-range-pm" {
         description
-          "One-way Frame Delay Range Performance.";
+          "One-way Frame Delay Range PM";
       }
-      enum "one-way-mean-frame-delay-performance" {
+      enum "one-way-mean-frame-delay-pm" {
         description
-          "One-way Mean Frame Delay Performance.";
+          "One-way Mean Frame Delay PM";
       }
-      enum "one-way-inter-frame-delay-variation-performance" {
+      enum "one-way-inter-frame-delay-variation-pm" {
         description
-          "One-way Inter-Frame Delay Variation Performance.";
+          "One-way Inter-Frame Delay Variation PM";
       }
-      enum "one-way-frame-loss-ratio-performance" {
+      enum "one-way-frame-loss-ratio-pm" {
         description
-          "One-way Frame Loss Ratio Performance.";
+          "One-way Frame Loss Ratio PM";
       }
-      enum "one-way-availability-performance" {
+      enum "one-way-availability-pm" {
         description
-          "One-way Availability Performance.";
+          "One-way Availability PM";
       }
-      enum "one-way-resiliency-performance-hli" {
+      enum "one-way-high-loss-interval-pm" {
         description
           "One-way Resiliency Performance expressed as High " +
           "Loss Intervals.";
       }
-      enum "one-way-resiliency-performance-chli" {
+      enum "one-way-consecutive-high-loss-interval-pm" {
         description
-          "One-way Resiliency Performance expressed as " +
+          "One-way Resiliency PM expressed as " +
           "Consecutive High Loss Intervals.";
       }
-      enum "one-way-group-availability-performance" {
+      enum "one-way-group-availability-pm" {
         description
-          "One-way Group Availability Performance.";
+          "One-way Group Availability PM";
       }
-      enum "one-way-multiple-evc-group-availability-performance" {
+      enum "one-way-composite-pm" {
         description
-          "One-way Multiple EVC Group Availability Performance.";
+          "One-way Multiple EVC Group Availability PM";
       }
     }
     description
@@ -1263,11 +1268,14 @@ module mef-types {
 	    description "Customer Edge(CE) Access Device";
 	  }
 	  enum "pe" {
-	    description "Aggregation Router";
+	    description "Provider Edge(PE) (AKA Aggregation) Router";
 	  }
 	  enum "p" {
-	    description "Core Router";
+	    description "Provider Core Router";
 	  }
+	  enum "cgn" {
+		    description "Customer Gateway Natting Router";
+		  }
 	}
     description
 	    "The role of the device. Is it a Customer Edge, " +
