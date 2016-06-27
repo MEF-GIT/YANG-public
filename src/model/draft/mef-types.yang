@@ -354,7 +354,14 @@ module mef-types {
       "specification not disallowing it.";
     reference "[MEF10.3] [R8], [R9]. [RFC2579]. [RFC854].";
   }
-
+  typedef identifier90 {
+	    type string {
+	      length "min..90";
+	    }
+	    description
+	      "This type definition is intended for use with status strings.";
+	    reference "[MEF10.3] [R8], [R9]. [RFC2579]. [RFC854].";
+	  }
   typedef max-svc-frame-size-type {
     type uint32 {
       range "1522..16384";
@@ -1117,6 +1124,10 @@ module mef-types {
         description
           "Ethernet Virtual Private Tree Service (EVP-Tree) " +
           "Rooted-Multipoint EVC, bundling and/or multiplexing";
+      }
+      enum "other" {
+    	  description
+    	    "Use Other MEF Service if one of the existing enumerations does not apply";
       }
     }
     description
