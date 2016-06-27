@@ -80,11 +80,10 @@ module mef-topology {
   }
 
   revision 2016-04-01 {
-    description
-     "Added Operational Status output for interface " +
-     "maximum data rate";
-  }
-
+   	    description
+   	      "Added Operational Status output for interface maximum data rate";
+  }  
+     
   revision 2015-05-26 {
     description
       "Formal Project Review Draft 1.";
@@ -130,12 +129,12 @@ module mef-topology {
               config false;
               leaf speed {
                 type uint64;
-                default 0;
                 units "bits-per-second";
+                default 0;
                 description
                 "The operational status value indicating " +
                 "the maximum data rate of the interface in " +
-                "bits-per-second.";
+                "bits-per-second.";               
               }
               description
                 "The operational status information available " +

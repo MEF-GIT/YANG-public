@@ -116,33 +116,6 @@ module mef-interfaces {
             "then there cannot be any other Egress Bandwidth " +
             "Profiles at that UNI.";
         }
-        must "(not(/mef-global:mef-global/mef-global:" +
-        		"subscribers) and " +
-        		"not(./subscriber)) or " +
-        		"(/mef-global:mef-global/mef-global:" +
-        		"subscribers and " +
-        		"./subscriber)" {
-          error-message "If the Subscribers list has been " +
-          		"populated, a UNI must be configured for " +
-          		"a single Subscriber.";
-          description
-            "[MEF103] [R1] A UNI must be dedicated to a single " +
-            "Subscriber. This must statement is effectively " +
-            "a 'mandatory true' when the Global Subscribers " +
-            "list is being used.";
-        }
-        must "(not(/mef-global:mef-global/mef-global:cens) and " +
-        		"not(./cen-id)) or " +
-        		"(/mef-global:mef-global/mef-global:cens and " +
-        		"./cen-id)" {
-          error-message "If the CENs list has been populated, " +
-          		"a UNI must be configured for a single CEN.";
-          description
-            "[MEF10.3] [R57] A UNI must be dedicated to a " +
-            "single CEN. This must statement is effectively " +
-            "a 'mandatory true' when the Global CENs list " +
-            "is being used.";
-        }
         key "uni-id";
         description
           "MEF UNI List.";
@@ -590,22 +563,6 @@ module mef-interfaces {
             		"[MEF7.2]. [MEF7.3] Section 10.1.1.";
           }
         }
-        leaf cen-id {
-          when "/mef-global:mef-global/mef-global:cens" {
-            description
-              "Only configure when the Global CENs list " +
-              "has been populated.";
-          }
-          type leafref {
-            path "/mef-global:mef-global/mef-global:cens/" +
-            		"mef-global:cen/mef-global:cen-id";
-          }
-          description
-            "A CEN is defined as a network from a Service " +
-            "Provider (SP). The CEN ID must be unique for " +
-            "a specific Service Provider.";
-          reference "[MEF10.3] Section 7.";
-        }
         leaf uni-id {
           type mef-types:identifier45;
           description
@@ -620,24 +577,6 @@ module mef-interfaces {
             " The UNI Type must be one of {UNI, VUNI}.";
           reference "[MEF10.3] Section 9.1, [R1], [R57], [R58], " +
           		"[R59]. [MEF7.3] Section 10.2.2.";
-        }
-        leaf subscriber {
-          when "/mef-global:mef-global/mef-global:subscribers" {
-            description
-              "UNI Subscriber Attribute is only configurable " +
-              "when multiple Global Subscribers have been " +
-              "configured.";
-          }
-          type leafref {
-            path "/mef-global:mef-global/mef-global:subscribers/" +
-            		"mef-global:subscriber/mef-global:sub-id";
-          }
-          description
-            "A UNI MUST be dedicated to a single Subscriber. " +
-            "This value can only be configured if the " +
-            "'/mef-global/subscribers/subscriber' list " +
-            "has been populated.";
-          reference "[MEF10.3] Section 7.";
         }
         leaf admin-state {
           type boolean;
