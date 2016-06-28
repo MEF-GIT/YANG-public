@@ -1,15 +1,15 @@
 module mef-topology {
-  namespace "urn:mef:yang:mef-topology";
+  namespace "urn:mef:mef:mef-topology";
   prefix mef-topology;
 
   import mef-types {
     prefix mef-types;
   }
 
-  organization "Metro Ethernet Forum";
+  organization "MEF Forum";
   contact
-    "Web URL: http://metroethernetforum.org/ \\
-     E-mail:  mibs@metroethernetforum.org \\
+    "Web URL: http://mef.net/ \\
+     E-mail:  namespace@mef.net \\
      Postal:  Metro Ethernet Forum \\
               6033 W. Century Boulevard, Suite 1107 \\
               Los Angeles, CA 90045 \\

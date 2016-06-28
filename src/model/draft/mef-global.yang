@@ -1,5 +1,5 @@
 module mef-global {
-  namespace "urn:mef:yang:mef-global";
+  namespace "urn:mef:xid:mef-global";
   prefix mef-global;
 
   import ietf-yang-types {
@@ -12,11 +12,11 @@ module mef-global {
     prefix mef-types;
   }
 
-  organization "Metro Ethernet Forum";
+  organization "MEF Forum";
   contact
-    "Web URL: http://metroethernetforum.org/
-     E-mail:  mibs@metroethernetforum.org
-     Postal:  Metro Ethernet Forum
+    "Web URL: http://mef.net/
+     E-mail:  namespace@mef.net
+     Postal:  MEF Forum
               6033 W. Century Boulevard, Suite 1107
               Los Angeles, CA 90045
               U.S.A.
