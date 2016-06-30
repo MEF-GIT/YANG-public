@@ -886,6 +886,15 @@ module mef-global {
               "This attribute identifies the label of a " +
               "Egress Equivance Class (EEC) instance.";
           }
+          
+          leaf l2cp-eec-id {
+              type leafref {
+                  path "/mef-global:mef-global/profiles/" +
+                  		"l2cp-eec/l2cp-profile/id";
+                }
+        	  description "L2CP Profile Identifier";
+          }
+          
           choice eec-id {
             description
               "EEC Identifier.";
@@ -1084,6 +1093,15 @@ module mef-global {
               "This attribute identifies the label of a " +
               "Class of Service (CoS) instance.";
           }
+          
+          leaf l2cp-cos-id {
+              type leafref {
+                  path "/mef-global:mef-global/profiles/" +
+                  		"l2cp-cos/l2cp-profile/id";
+                }
+        	  description "L2CP Profile Identifier";
+          }
+          
           choice cos-id {
             description
               "CoS identifier.";
