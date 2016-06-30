@@ -113,7 +113,7 @@ module mef-services {
             "EVC Per Universal Network Interface(UNI) " +
             "Configuration and Status.";
           list end-point {
-            must "not(evc-uni-ce-vlans/evc-uni-ce-vlan[2]) or " +
+            must "not(evc-end-point-ce-vlans/evc-end-point-ce-vlan[2]) or " +
             		"../../ce-vlan-id-preservation = 'true'" {
               error-message "When more than one CE-VLAN-ID is " +
               		"mapped to an EVC at a UNI, the EVC must have " +
@@ -135,7 +135,7 @@ module mef-services {
             		"mef-services:uni-id]" +
             		"[mef-interfaces:uni-id/../mef-interfaces:" +
             		"all-to-one-bundling-enabled = 'true']) or " +
-            		"not(evc-uni-ce-vlans/evc-uni-ce-vlan[2])" {
+            		"not(evc-end-point-ce-vlans/evc-end-point-ce-vlan[2])" {
               error-message "If both Bundling and All-to-One " +
               		"Bundling are disabled for a UNI, only one " +
               		"CE VLAN ID can be configured for a specific " +
@@ -257,10 +257,10 @@ module mef-services {
               "be used by 0 or more EVCs.";
             reference "[MEF10.3] Section 8.3. " +
             		"[MEF7.3] Section 12.2.2.";
-            container evc-uni-ce-vlans {
+            container evc-end-point-ce-vlans {
               description
                 "EVC Per UNI CE-VLAN IDs.";
-              list evc-uni-ce-vlan {
+              list evc-end-point-ce-vlan {
                 key "vid";
                 description
                   "A list of the CE-VLAN IDs mapped to this UNI " +
@@ -280,9 +280,9 @@ module mef-services {
                     		"mef-interfaces:vid";
                   }
                   must "not(current()/../../" +
-                  		"evc-uni-ce-vlan[2]) or " +
-                  		"(count(../../../../end-point/evc-uni-ce-vlans/" +
-                  		"evc-uni-ce-vlan" +
+                  		"evc-end-point-ce-vlan[2]) or " +
+                  		"(count(../../../../end-point/evc-end-point-ce-vlans/" +
+                  		"evc-end-point-ce-vlan" +
                   		"[vid = current()]) = " +
                   		"count(../../../../end-point))" {
                     error-message "If more than one CE-VLAN ID " +
@@ -481,20 +481,7 @@ module mef-services {
               reference "[MEF10.3] Section 10.3. " +
               		"[MEF7.3] Section 12.1.2.";
             }
-            leaf elastic-enabled {
-                type boolean;
-                default "true";
-                description
-                  "EVC: Elastic Enabled/Disabled.";
-                reference "[MEF7.3] Section 11.1.1.";
-              }
-              leaf elastic-service {
-                type mef-types:identifier45;
-                description
-                  "EVC: Related to CE4Cloud Information Model.";
-                reference "[MEF7.3] Section 11.1.1.";
-              }
-            leaf data-cos-identifier {
+            leaf cos-identifier {
               type leafref {
                 path "/mef-global:mef-global/mef-global:profiles/" +
                 		"mef-global:cos/mef-global:cos-profile/" +
@@ -549,42 +536,7 @@ module mef-services {
               reference "[MEF10.3] Section 8.8, Section 10.2. " +
               		"[MEF7.3] Section 12.1.2.";
             }
-            leaf l2cp-cos-identifier {
-              type leafref {
-                path "/mef-global:mef-global/mef-global:" +
-                		"profiles/mef-global:l2cp-cos/mef-global:" +
-                		"l2cp-profile/mef-global:id";
-              }
-              description
-                "EVC Per UNI: Ingress Layer 2 Control Protocol " +
-                "Processing.";
-              reference "[MEF10.3] Section 8.8, Section 10.2. " +
-              		"[MEF7.3] Section 12.1.2.";
-            }
-            leaf soam-cos-identifier {
-              type leafref {
-                path "/mef-global:mef-global/mef-global:profiles/" +
-                		"mef-global:cos/mef-global:cos-profile/" +
-                		"mef-global:id";
-              }
-              must "(not(.) and not(../data-cos-identifier)) or " +
-              		"(. = ../data-cos-identifier)" {
-                error-message "For a given EVC at a given UNI, " +
-                		"the basis for the Class of Service " +
-                		"Identifier for ingress SOAM Service " +
-                		"Frames must be the same as that for " +
-                		"ingress Data Service Frames.";
-                description
-                  "For a given EVC at a given UNI, the basis " +
-                  "for the Class of Service Identifier for " +
-                  "ingress SOAM Service Frames must be the " +
-                  "same as that for ingress Data Service Frames.";
-              }
-              description
-                "EVC Per UNI: Ingress SOAM Service Frames.";
-              reference "[MEF7.3] Section 12.1.2.";
-            }
-            leaf data-eec-identifier {
+            leaf eec-identifier {
               type leafref {
                 path "/mef-global:mef-global/mef-global:profiles/" +
                 		"mef-global:eec/mef-global:eec-profile/" +
@@ -635,43 +587,6 @@ module mef-services {
               }
               description
                 "EVC Per UNI: Egress Data Service Frame Processing.";
-              reference "[MEF10.3] Section 10.4. " +
-              		"[MEF7.3] Section 12.1.2.";
-            }
-            leaf l2cp-eec-identifier {
-              type leafref {
-                path "/mef-global:mef-global/mef-global:profiles/" +
-                		"mef-global:l2cp-eec/mef-global:" +
-                		"l2cp-profile/mef-global:id";
-              }
-              description
-                "EVC Per UNI: Egress Layer 2 Control Protocol " +
-                "Processing.";
-              reference "[MEF10.3] Section 10.4. " +
-              		"[MEF7.3] Section 12.1.2.";
-            }
-            leaf soam-eec-identifier {
-              type leafref {
-                path "/mef-global:mef-global/mef-global:" +
-                		"profiles/mef-global:eec/mef-global:" +
-                		"eec-profile/mef-global:id";
-              }
-              must "(not(.) and not(../data-eec-identifier)) or " +
-              		"(. = ../data-eec-identifier)" {
-                error-message "For a given EVC at a given UNI, " +
-                		"the basis for the Egress Equivalence " +
-                		"Class Identifier for egress SOAM " +
-                		"Service Frames must be the same as " +
-                		"that for egress Data Service Frames.";
-                description
-                  "For a given EVC at a given UNI, the basis " +
-                  "for the Egress Equivalence Class Identifier " +
-                  "for egress SOAM Service Frames must be " +
-                  "the same as that for egress Data " +
-                  "Service Frames.";
-              }
-              description
-                "EVC Per UNI: Egress SOAM Service Frames.";
               reference "[MEF10.3] Section 10.4. " +
               		"[MEF7.3] Section 12.1.2.";
             }
@@ -734,7 +649,7 @@ module mef-services {
                 "Limit Enabled is true.";
               reference "[MEF10.3] Section 10.9.";
             }
-            leaf source-mac-address-limit-interval {
+            leaf source-mac-address-limit-time-interval {
               type yang:timeticks;
               default "0";
               description
@@ -751,12 +666,6 @@ module mef-services {
               reference "[MEF10.3] Section 10.10. " +
               		"[MEF7.3] Section 12.1.2.";
             }
-            leaf test-meg {
-              type mef-types:identifier45;
-              description
-                "EVC Per UNI: Test MEG Identifier.";
-              reference "[MEF7.3] Section 12.1.2.";
-            }
             leaf subscriber-meg-mip-enabled {
               type boolean;
               default "false";
@@ -765,12 +674,6 @@ module mef-services {
                 "Enabled / Disabled.";
               reference "[MEF10.3] Section 10.11. " +
               		"[MEF7.3] Section 12.1.2.";
-            }
-            leaf subscriber-meg-mip {
-              type mef-types:identifier45;
-              description
-                "EVC Per UNI: Subscriber MEG MIP Identifier.";
-              reference "[MEF7.3] Section 12.1.2.";
             }
           }
         }

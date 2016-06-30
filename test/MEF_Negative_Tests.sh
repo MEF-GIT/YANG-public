@@ -38,7 +38,7 @@ config
 !
 mef-interfaces unis uni MMPOP1-ce8-Slot8-Port1 admin-state false max-svc-frame-size 1600 max-num-of-evcs 1 all-to-one-bundling-enabled true physical-layers links link ce8 GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
 mef-interfaces unis uni MMPOP1-ce8-Slot8-Port1  ce-vlans ce-vlan 1
-mef-services mef-service EVC-0001901-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port1 role root evc-uni-ce-vlans evc-uni-ce-vlan 1
+mef-services mef-service EVC-0001901-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port1 role root evc-end-point-ce-vlans evc-end-point-ce-vlan 1
 commit
 end no-confirm
 exit
@@ -73,7 +73,7 @@ config
 !
 mef-interfaces unis uni MMPOP1-ce8-Slot8-Port1 admin-state false max-svc-frame-size 1600 max-num-of-evcs 1 all-to-one-bundling-enabled true physical-layers links link ce8 GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
 mef-interfaces unis uni MMPOP1-ce8-Slot8-Port1  ce-vlans ce-vlan 1
-mef-services mef-service EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port1 role leaf source-mac-address-limit-enabled true evc-uni-ce-vlans evc-uni-ce-vlan 1 
+mef-services mef-service EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port1 role leaf source-mac-address-limit-enabled true evc-end-point-ce-vlans evc-end-point-ce-vlan 1 
 commit
 end no-confirm
 exit
@@ -375,8 +375,8 @@ fi
 { ncs_cli -u admin -C << EOF;
 config
 mef-interfaces unis uni MMPOP1-ce0-Slot0-Port3 ce-vlans ce-vlan 1
-mef-services mef-service EVC-0001900-ACME-MEGAMART ce-vlan-id-preservation true end-points end-point MMPOP1-ce0-Slot0-Port3 evc-uni-ce-vlans evc-uni-ce-vlan 1
-mef-services mef-service EVC-0001900-ACME-MEGAMART ce-vlan-id-preservation true end-points end-point MMPOP1-ce2-Slot2-Port3 evc-uni-ce-vlans evc-uni-ce-vlan 1
+mef-services mef-service EVC-0001900-ACME-MEGAMART ce-vlan-id-preservation true end-points end-point MMPOP1-ce0-Slot0-Port3 evc-end-point-ce-vlans evc-end-point-ce-vlan 1
+mef-services mef-service EVC-0001900-ACME-MEGAMART ce-vlan-id-preservation true end-points end-point MMPOP1-ce2-Slot2-Port3 evc-end-point-ce-vlans evc-end-point-ce-vlan 1
 commit
 end no-confirm
 exit
@@ -392,7 +392,7 @@ fi
 { ncs_cli -u admin -C << EOF;
 config
 mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 ce-vlans ce-vlan 103
-mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 evc-uni-ce-vlans evc-uni-ce-vlan 103
+mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 evc-end-point-ce-vlans evc-end-point-ce-vlan 103
 commit
 end no-confirm
 exit
@@ -408,8 +408,8 @@ fi
 { ncs_cli -u admin -C << EOF;
 config
 mef-services mef-service EVC-1101898-ACME-MEGAMART user-label NegativeTunnel svc-type epl connection-type point-to-point max-num-of-evc-end-point 2 ce-vlan-id-preservation true ce-vlan-pcp-preservation true
-mef-services mef-service EVC-1101898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 role root source-mac-address-limit-enabled false evc-uni-ce-vlans evc-uni-ce-vlan 100
-mef-services mef-service EVC-1101898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 role root source-mac-address-limit-enabled false evc-uni-ce-vlans evc-uni-ce-vlan 100
+mef-services mef-service EVC-1101898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 role root source-mac-address-limit-enabled false evc-end-point-ce-vlans evc-end-point-ce-vlan 100
+mef-services mef-service EVC-1101898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 role root source-mac-address-limit-enabled false evc-end-point-ce-vlans evc-end-point-ce-vlan 100
 commit
 end no-confirm
 exit
@@ -436,25 +436,10 @@ else
    echo 'Test MEF 10.3 [R88]: PASS';
 fi
 
-# Test for MEF 10.3 [R100].  This test should fail to commit with "For a given EVC at a given UNI, the basis for the Class of Service Identifier for ingress SOAM Service Frames must be the same as that for ingress Data Service Frames.".
-{ ncs_cli -u admin -C << EOF;
-config
-mef-services mef-service EVC-0001899-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 data-cos-identifier MEF103_Table13
-commit
-end no-confirm
-exit
-EOF
-} | grep 'Aborted:.*SOAM Service Frames must be the same as that for ingress Data Service Frames.'
-if [ $? != 0 ]; then
-   echo 'Test MEF 10.3 [R100]: FAIL - commit did not fail or did not fail as expected'; exit 1;
-else
-   echo 'Test MEF 10.3 [R100]: PASS';
-fi
-
 # Test for MEF 10.3 [R111A].  This test should fail to commit with "When the Class of Service Identifier is based on PCP for a given EVC at a given UNI, the Color Identifier must be based on either DEI or PCP.".
 { ncs_cli -u admin -C << EOF;
 config
-mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 data-cos-identifier MEF103_Table13 soam-cos-identifier MEF103_Table13
+mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 cos-identifier MEF103_Table13
 commit
 end no-confirm
 exit
@@ -469,7 +454,7 @@ fi
 # Test for MEF 10.3 [R111B].  This test should fail to commit with "When the Egress Equivalence Class Identifier is based on PCP for a given EVC at a given UNI, the Color Identifier must be based on either DEI or PCP.".
 { ncs_cli -u admin -C << EOF;
 config
-mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 data-eec-identifier MEF62_ApdxA soam-eec-identifier MEF62_ApdxA
+mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 eec-identifier MEF62_ApdxA
 commit
 end no-confirm
 exit
@@ -484,7 +469,7 @@ fi
 # Test for MEF 10.3 [R112A].  This test should fail to commit with "When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, the Color Identifier must be based DSCP.".
 { ncs_cli -u admin -C << EOF;
 config
-mef-services mef-service EVC-0001899-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port3 data-cos-identifier MEF103_Table23 soam-cos-identifier MEF103_Table23
+mef-services mef-service EVC-0001899-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port3 cos-identifier MEF103_Table23
 commit
 end no-confirm
 exit
@@ -499,7 +484,7 @@ fi
 # Test for MEF 10.3 [R112B].  This test should fail to commit with "When the Egress Equivalence Class Identifier is based on DSCP for a given EVC at a given UNI, the Color Identifier must be based on DSCP.".
 { ncs_cli -u admin -C << EOF;
 config
-mef-services mef-service EVC-0001899-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port3 data-eec-identifier MEF103_Table23 soam-eec-identifier MEF103_Table23
+mef-services mef-service EVC-0001899-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port3 eec-identifier MEF103_Table23
 commit
 end no-confirm
 exit
@@ -509,21 +494,6 @@ if [ $? != 0 ]; then
    echo 'Test MEF 10.3 [R112B]: FAIL - commit did not fail or did not fail as expected'; exit 1;
 else
    echo 'Test MEF 10.3 [R112B]: PASS';
-fi
-
-# Test for MEF 10.3 [R122].  This test should fail to commit with "For a given EVC at a given UNI, the basis for the Egress Equivalence Class Identifier for egress SOAM Service Frames must be the same as that for egress Data Service Frames.".
-{ ncs_cli -u admin -C << EOF;
-config
-mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 soam-eec-identifier MEF62_ApdxA
-commit
-end no-confirm
-exit
-EOF
-} | grep 'Aborted:.*SOAM Service Frames must be the same as that for egress Data Service Frames.'
-if [ $? != 0 ]; then
-   echo 'Test MEF 10.3 [R122]: FAIL - commit did not fail or did not fail as expected'; exit 1;
-else
-   echo 'Test MEF 10.3 [R122]: PASS';
 fi
 
 # Test for MEF 10.3 [R140]. Character Restriction Tests are TBD.
@@ -873,10 +843,10 @@ fi
 # Test for MEF 6.2 [R29].  This test should fail to commit with "For EPL, CE-VLAN ID Preservation must be enabled.".
 { ncs_cli -u admin -C << EOF;
 config
-no mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 evc-uni-ce-vlans evc-uni-ce-vlan 101
-no mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 evc-uni-ce-vlans evc-uni-ce-vlan 102
-no mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 evc-uni-ce-vlans evc-uni-ce-vlan 101
-no mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 evc-uni-ce-vlans evc-uni-ce-vlan 102
+no mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 evc-end-point-ce-vlans evc-end-point-ce-vlan 101
+no mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 evc-end-point-ce-vlans evc-end-point-ce-vlan 102
+no mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 evc-end-point-ce-vlans evc-end-point-ce-vlan 101
+no mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 evc-end-point-ce-vlans evc-end-point-ce-vlan 102
 mef-services mef-service EVC-0001898-ACME-MEGAMART ce-vlan-id-preservation false
 commit
 end no-confirm
@@ -1070,7 +1040,7 @@ echo "\nMEF 6.2 EVP-LAN Testing\n";
 # Test for MEF 6.2 [R41].  This test should fail to commit with "For EVP-LAN, All-to-One Bundling must be disabled for all UNIs in the EVC UNI List.".
 { ncs_cli -u admin -C << EOF;
 config
-no mef-services mef-service EVC-0002947-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 evc-uni-ce-vlans evc-uni-ce-vlan 153
+no mef-services mef-service EVC-0002947-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 evc-end-point-ce-vlans evc-end-point-ce-vlan 153
 no mef-services mef-service EVC-0002947-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3
 no mef-interfaces unis uni MMPOP1-ce7-Slot7-Port3 ce-vlans ce-vlan 153
 mef-interfaces unis uni MMPOP1-ce7-Slot7-Port3 all-to-one-bundling-enabled true
