@@ -1145,21 +1145,21 @@ mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 l2cp-address-set option2-blind-ct
 !
 mef-services mef-service EVC-0001898-ACME-MEGAMART user-label Denver-ChicagoTunnel svc-type epl connection-type point-to-point admin-state false max-num-of-evc-end-point 2 ce-vlan-id-preservation true ce-vlan-pcp-preservation true 
 !
-mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 role root admin-state false source-mac-address-limit-enabled false evc-end-point-ce-vlans evc-end-point-ce-vlan 100
+mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 role root admin-state false source-mac-address-limit-enabled false ce-vlans ce-vlan 100
 !
-mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 evc-end-point-ce-vlans evc-end-point-ce-vlan 101
+mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 ce-vlans ce-vlan 101
 !
-mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 evc-end-point-ce-vlans evc-end-point-ce-vlan 102
+mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 ce-vlans ce-vlan 102
 !
 mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 cos-identifier MEF103_Table23 color-identifier dscp
 !
 mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 eec-identifier MEF103_Table23 color-identifier dscp
 !
-mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 role root admin-state false source-mac-address-limit-enabled false evc-end-point-ce-vlans evc-end-point-ce-vlan 100
+mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 role root admin-state false source-mac-address-limit-enabled false ce-vlans ce-vlan 100
 !
-mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 evc-end-point-ce-vlans evc-end-point-ce-vlan 101
+mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 ce-vlans ce-vlan 101
 !
-mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 evc-end-point-ce-vlans evc-end-point-ce-vlan 102
+mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 ce-vlans ce-vlan 102
 !
 mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 cos-identifier MEF103_Table23 color-identifier dscp
 !
@@ -1248,7 +1248,7 @@ mef-interfaces unis uni MMPOP1-ce2-Slot2-Port3 l2cp-address-set aware-cta l2cp-p
 !
 mef-services mef-service EVC-0001899-ACME-MEGAMART user-label EVPL_UseCase1_EVC-0001899-ACME-MEGAMART svc-type evpl connection-type point-to-point admin-state false ce-vlan-id-preservation true carrier-ethernet-sls sls-id MEF103_Table25
 !
-mef-services mef-service EVC-0001899-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 role root admin-state false source-mac-address-limit-enabled false evc-end-point-ce-vlans evc-end-point-ce-vlan 22
+mef-services mef-service EVC-0001899-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 role root admin-state false source-mac-address-limit-enabled false ce-vlans ce-vlan 22
 !
 mef-services mef-service EVC-0001899-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 ingress-bw-profile-per-evc ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART
 !
@@ -1258,7 +1258,7 @@ mef-services mef-service EVC-0001899-ACME-MEGAMART end-points end-point MMPOP1-c
 !
 mef-services mef-service EVC-0001899-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 eec-identifier MEF103_Table23 color-identifier dscp
 !
-mef-services mef-service EVC-0001899-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port3 role root admin-state false source-mac-address-limit-enabled false evc-end-point-ce-vlans evc-end-point-ce-vlan 22
+mef-services mef-service EVC-0001899-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port3 role root admin-state false source-mac-address-limit-enabled false ce-vlans ce-vlan 22
 !
 mef-services mef-service EVC-0001899-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port3 ingress-bw-profile-per-evc ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART
 !
@@ -1270,7 +1270,7 @@ mef-services mef-service EVC-0001899-ACME-MEGAMART end-points end-point MMPOP1-c
 !
 mef-services mef-service EVC-0001900-ACME-MEGAMART user-label EVPL_UseCase1_EVC-0001900-ACME-MEGAMART  svc-type evpl connection-type point-to-point admin-state false ce-vlan-id-preservation true  carrier-ethernet-sls sls-id MEF103_Table25
 !
-mef-services mef-service EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 role root admin-state false source-mac-address-limit-enabled false evc-end-point-ce-vlans evc-end-point-ce-vlan 33
+mef-services mef-service EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 role root admin-state false source-mac-address-limit-enabled false ce-vlans ce-vlan 33
 !
 mef-services mef-service EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 ingress-bw-profile-per-evc ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART
 !
@@ -1280,7 +1280,7 @@ mef-services mef-service EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-c
 !
 mef-services mef-service EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 eec-identifier MEF103_Table23 color-identifier dscp
 !
-mef-services mef-service EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot2-Port3 role root admin-state false source-mac-address-limit-enabled false evc-end-point-ce-vlans evc-end-point-ce-vlan 33
+mef-services mef-service EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot2-Port3 role root admin-state false source-mac-address-limit-enabled false ce-vlans ce-vlan 33
 !
 mef-services mef-service EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot2-Port3 ingress-bw-profile-per-evc ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART
 !
@@ -1294,7 +1294,7 @@ mef-services mef-service EVC-0001899-ACME-MEGAMART carrier-ethernet-sls sls-id M
 !
 mef-services mef-service EVC-0001343-ACME-MEGAMART user-label EVPL_UseCase1_EVC-0001343-ACME-MEGAMART  svc-type evpl connection-type point-to-point admin-state false ce-vlan-id-preservation false
 !
-mef-services mef-service EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 role root admin-state false source-mac-address-limit-enabled false evc-end-point-ce-vlans evc-end-point-ce-vlan 1343
+mef-services mef-service EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 role root admin-state false source-mac-address-limit-enabled false ce-vlans ce-vlan 1343
 !
 mef-services mef-service EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 ingress-bw-profile-per-evc ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART
 !
@@ -1304,7 +1304,7 @@ mef-services mef-service EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-c
 !
 mef-services mef-service EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 eec-identifier MEF103_Table23 color-identifier dscp
 !
-mef-services mef-service EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port3 role root admin-state false source-mac-address-limit-enabled false evc-end-point-ce-vlans evc-end-point-ce-vlan 17
+mef-services mef-service EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port3 role root admin-state false source-mac-address-limit-enabled false ce-vlans ce-vlan 17
 !
 mef-services mef-service EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port3 ingress-bw-profile-per-evc ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART
 !
@@ -1356,11 +1356,11 @@ mef-interfaces unis uni MMPOP1-ce7-Slot7-Port1 l2cp-address-set blind-ctb l2cp-p
 !
 mef-services mef-service EVC-0001901-ACME-MEGAMART user-label EPLAN_UseCase1_EVC-0001901-ACME-MEGAMART svc-type eplan connection-type multipoint-to-multipoint admin-state false max-num-of-evc-end-point 3 unicast-frame-delivery conditional ce-vlan-id-preservation true ce-vlan-pcp-preservation true
 !
-mef-services mef-service EVC-0001901-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port1 role root admin-state false source-mac-address-limit-enabled true evc-end-point-ce-vlans evc-end-point-ce-vlan 1
+mef-services mef-service EVC-0001901-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port1 role root admin-state false source-mac-address-limit-enabled true ce-vlans ce-vlan 1
 !
-mef-services mef-service EVC-0001901-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port1 role root admin-state false source-mac-address-limit-enabled true evc-end-point-ce-vlans evc-end-point-ce-vlan 1
+mef-services mef-service EVC-0001901-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port1 role root admin-state false source-mac-address-limit-enabled true ce-vlans ce-vlan 1
 !
-mef-services mef-service EVC-0001901-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port1 role root admin-state false source-mac-address-limit-enabled true evc-end-point-ce-vlans evc-end-point-ce-vlan 1
+mef-services mef-service EVC-0001901-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port1 role root admin-state false source-mac-address-limit-enabled true ce-vlans ce-vlan 1
 !
 mef-services mef-service EVC-0001901-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test3
 !
@@ -1479,15 +1479,15 @@ mef-interfaces unis uni MMPOP1-ce8-Slot8-Port3 l2cp-address-set aware-cta l2cp-p
 !
 mef-services mef-service EVC-0001944-ACME-MEGAMART user-label EVPLAN_UseCase1_EVC-0001944-ACME-MEGAMART svc-type evplan connection-type multipoint-to-multipoint admin-state false max-num-of-evc-end-point 4 ce-vlan-id-preservation true unicast-frame-delivery conditional
 !
-mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 role root admin-state false source-mac-address-limit-enabled true evc-end-point-ce-vlans evc-end-point-ce-vlan 53
+mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 role root admin-state false source-mac-address-limit-enabled true ce-vlans ce-vlan 53
 !
-mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 evc-end-point-ce-vlans evc-end-point-ce-vlan 54
+mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 ce-vlans ce-vlan 54
 !
-mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 evc-end-point-ce-vlans evc-end-point-ce-vlan 63
+mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 ce-vlans ce-vlan 63
 !
-mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 evc-end-point-ce-vlans evc-end-point-ce-vlan 73
+mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 ce-vlans ce-vlan 73
 !
-mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 evc-end-point-ce-vlans evc-end-point-ce-vlan 83
+mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 ce-vlans ce-vlan 83
 !
 mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 ingress-bwp-flows-per-cos coupling-enabled false bwp-flow-per-cos Neon bw-profile ienv_EVPLAN_UNI553_EVC-0001944_Neon
 !
@@ -1501,15 +1501,15 @@ mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-c
 !
 mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec EEC-Krypton bw-profile eenv_EVPLAN_UNI553_EVC-0001944_Krypton
 !
-mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port3 role root admin-state false source-mac-address-limit-enabled true evc-end-point-ce-vlans evc-end-point-ce-vlan 53
+mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port3 role root admin-state false source-mac-address-limit-enabled true ce-vlans ce-vlan 53
 !
-mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port3 evc-end-point-ce-vlans evc-end-point-ce-vlan 54
+mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port3 ce-vlans ce-vlan 54
 !
-mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port3 evc-end-point-ce-vlans evc-end-point-ce-vlan 63
+mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port3 ce-vlans ce-vlan 63
 !
-mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port3 evc-end-point-ce-vlans evc-end-point-ce-vlan 73
+mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port3 ce-vlans ce-vlan 73
 !
-mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port3 evc-end-point-ce-vlans evc-end-point-ce-vlan 83
+mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port3 ce-vlans ce-vlan 83
 !
 mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port3 ingress-bwp-flows-per-cos coupling-enabled false bwp-flow-per-cos Neon bw-profile ienv_EVPLAN_UNI663_EVC-0001944_Neon
 !
@@ -1523,15 +1523,15 @@ mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-c
 !
 mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec EEC-Krypton bw-profile eenv_EVPLAN_UNI663_EVC-0001944_Krypton
 !
-mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 role root admin-state false source-mac-address-limit-enabled true evc-end-point-ce-vlans evc-end-point-ce-vlan 53
+mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 role root admin-state false source-mac-address-limit-enabled true ce-vlans ce-vlan 53
 !
-mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 evc-end-point-ce-vlans evc-end-point-ce-vlan 54
+mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 ce-vlans ce-vlan 54
 !
-mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 evc-end-point-ce-vlans evc-end-point-ce-vlan 63
+mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 ce-vlans ce-vlan 63
 !
-mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 evc-end-point-ce-vlans evc-end-point-ce-vlan 73
+mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 ce-vlans ce-vlan 73
 !
-mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 evc-end-point-ce-vlans evc-end-point-ce-vlan 83
+mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 ce-vlans ce-vlan 83
 !
 mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 ingress-bwp-flows-per-cos coupling-enabled false bwp-flow-per-cos Neon bw-profile ienv_EVPLAN_UNI773_EVC-0001944_Neon
 !
@@ -1545,15 +1545,15 @@ mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-c
 !
 mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec EEC-Krypton bw-profile eenv_EVPLAN_UNI773_EVC-0001944_Krypton
 !
-mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port3 role root admin-state false source-mac-address-limit-enabled true evc-end-point-ce-vlans evc-end-point-ce-vlan 53
+mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port3 role root admin-state false source-mac-address-limit-enabled true ce-vlans ce-vlan 53
 !
-mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port3 evc-end-point-ce-vlans evc-end-point-ce-vlan 54
+mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port3 ce-vlans ce-vlan 54
 !
-mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port3 evc-end-point-ce-vlans evc-end-point-ce-vlan 63
+mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port3 ce-vlans ce-vlan 63
 !
-mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port3 evc-end-point-ce-vlans evc-end-point-ce-vlan 73
+mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port3 ce-vlans ce-vlan 73
 !
-mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port3 evc-end-point-ce-vlans evc-end-point-ce-vlan 83
+mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port3 ce-vlans ce-vlan 83
 !
 mef-services mef-service EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port3 ingress-bwp-flows-per-cos coupling-enabled false bwp-flow-per-cos Neon bw-profile ienv_EVPLAN_UNI883_EVC-0001944_Neon
 !
@@ -1619,25 +1619,25 @@ mef-interfaces unis uni MMPOP1-ce8-Slot8-Port2 egress-envelopes envelope eenv_EP
 !
 mef-services mef-service EVC-0001911-ACME-MEGAMART user-label EPTREE_UseCase1_EVC-0001911-ACME-MEGAMART svc-type eptree connection-type rooted-multipoint admin-state false max-num-of-evc-end-point 4 unicast-frame-delivery conditional ce-vlan-id-preservation true ce-vlan-pcp-preservation true
 !
-mef-services mef-service EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port2 role root admin-state false source-mac-address-limit-enabled true evc-end-point-ce-vlans evc-end-point-ce-vlan 1
+mef-services mef-service EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port2 role root admin-state false source-mac-address-limit-enabled true ce-vlans ce-vlan 1
 !
 mef-services mef-service EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port2 ingress-bwp-flows-per-cos coupling-enabled false bwp-flow-per-cos Krypton bw-profile ienv_EPTREE_UNI552_EVC-0001911_Krypton
 !
 mef-services mef-service EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port2 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Sophomore bw-profile eenv_EPTREE_UNI552_EVC-0001911_Sophomore
 !
-mef-services mef-service EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port2 role leaf admin-state false source-mac-address-limit-enabled true evc-end-point-ce-vlans evc-end-point-ce-vlan 1
+mef-services mef-service EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port2 role leaf admin-state false source-mac-address-limit-enabled true ce-vlans ce-vlan 1
 !
 mef-services mef-service EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port2 ingress-bwp-flows-per-cos coupling-enabled false bwp-flow-per-cos Krypton bw-profile ienv_EPTREE_UNI662_EVC-0001911_Krypton
 !
 mef-services mef-service EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port2 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Sophomore bw-profile eenv_EPTREE_UNI662_EVC-0001911_Sophomore
 !
-mef-services mef-service EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port2 role leaf admin-state false source-mac-address-limit-enabled true evc-end-point-ce-vlans evc-end-point-ce-vlan 1
+mef-services mef-service EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port2 role leaf admin-state false source-mac-address-limit-enabled true ce-vlans ce-vlan 1
 !
 mef-services mef-service EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port2 ingress-bwp-flows-per-cos coupling-enabled false bwp-flow-per-cos Krypton bw-profile ienv_EPTREE_UNI772_EVC-0001911_Krypton
 !
 mef-services mef-service EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port2 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Sophomore bw-profile eenv_EPTREE_UNI772_EVC-0001911_Sophomore
 !
-mef-services mef-service EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port2 role leaf admin-state false source-mac-address-limit-enabled true evc-end-point-ce-vlans evc-end-point-ce-vlan 1
+mef-services mef-service EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port2 role leaf admin-state false source-mac-address-limit-enabled true ce-vlans ce-vlan 1
 !
 mef-services mef-service EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port2 ingress-bwp-flows-per-cos coupling-enabled false bwp-flow-per-cos Krypton bw-profile ienv_EPTREE_UNI882_EVC-0001911_Krypton
 !
@@ -1688,13 +1688,13 @@ mef-interfaces unis uni MMPOP1-ce8-Slot8-Port3 l2cp-address-set aware-cta l2cp-p
 !
 mef-services mef-service EVC-0002947-ACME-MEGAMART user-label EVPTREE_UseCase1_EVC-0002947-ACME-MEGAMART svc-type evptree connection-type rooted-multipoint admin-state false max-num-of-evc-end-point 4 unicast-frame-delivery conditional
 !
-mef-services mef-service EVC-0002947-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port4 role root admin-state false source-mac-address-limit-enabled true evc-end-point-ce-vlans evc-end-point-ce-vlan 153
+mef-services mef-service EVC-0002947-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port4 role root admin-state false source-mac-address-limit-enabled true ce-vlans ce-vlan 153
 !
-mef-services mef-service EVC-0002947-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port3 role leaf admin-state false source-mac-address-limit-enabled true evc-end-point-ce-vlans evc-end-point-ce-vlan 153
+mef-services mef-service EVC-0002947-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port3 role leaf admin-state false source-mac-address-limit-enabled true ce-vlans ce-vlan 153
 !
-mef-services mef-service EVC-0002947-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 role leaf admin-state false source-mac-address-limit-enabled true evc-end-point-ce-vlans evc-end-point-ce-vlan 153
+mef-services mef-service EVC-0002947-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 role leaf admin-state false source-mac-address-limit-enabled true ce-vlans ce-vlan 153
 !
-mef-services mef-service EVC-0002947-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port3 role leaf admin-state false source-mac-address-limit-enabled true evc-end-point-ce-vlans evc-end-point-ce-vlan 153
+mef-services mef-service EVC-0002947-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port3 role leaf admin-state false source-mac-address-limit-enabled true ce-vlans ce-vlan 153
 !
 mef-services mef-service EVC-0002947-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce5-Slot5-Port4 MMPOP1-ce7-Slot7-Port3
 !
@@ -1753,21 +1753,21 @@ mef-interfaces unis uni MMPOP1-ce2-Slot0-Port3 l2cp-address-set option2-blind-ct
 !
 mef-services mef-service EVC-0009898-ACME-MEGAMART user-label Toronto-NewarkTunnel svc-type other connection-type point-to-point admin-state false max-num-of-evc-end-point 2 ce-vlan-id-preservation true ce-vlan-pcp-preservation true 
 !
-mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port2 role root admin-state false source-mac-address-limit-enabled false evc-end-point-ce-vlans evc-end-point-ce-vlan 800
+mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port2 role root admin-state false source-mac-address-limit-enabled false ce-vlans ce-vlan 800
 !
-mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port2 evc-end-point-ce-vlans evc-end-point-ce-vlan 801
+mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port2 ce-vlans ce-vlan 801
 !
-mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port2 evc-end-point-ce-vlans evc-end-point-ce-vlan 802
+mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port2 ce-vlans ce-vlan 802
 !
 mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port2 cos-identifier MEF103_Table23 color-identifier dscp
 !
 mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port2 eec-identifier MEF103_Table23 color-identifier dscp
 !
-mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot0-Port3 role root admin-state false source-mac-address-limit-enabled false evc-end-point-ce-vlans evc-end-point-ce-vlan 800
+mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot0-Port3 role root admin-state false source-mac-address-limit-enabled false ce-vlans ce-vlan 800
 !
-mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot0-Port3 evc-end-point-ce-vlans evc-end-point-ce-vlan 801
+mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot0-Port3 ce-vlans ce-vlan 801
 !
-mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot0-Port3 evc-end-point-ce-vlans evc-end-point-ce-vlan 802
+mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot0-Port3 ce-vlans ce-vlan 802
 !
 mef-services mef-service EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot0-Port3 cos-identifier MEF103_Table23 color-identifier dscp
 !
