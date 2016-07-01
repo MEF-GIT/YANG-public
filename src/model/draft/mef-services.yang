@@ -72,10 +72,10 @@ module mef-services {
       of Ethernet over Transport and Metro Ethernet 
       Network(EoT/MEN)' March 2007";
 
-  revision 2016-04-17 {
+  revision 2016-07-01 {
     description
-      "First set of updates to better align with
-       MEF Common Information Model names";
+      "Updated to better align with MEF 7.3 and
+       MEF Common Information Model attributes";
     reference "EVC Ethernet Services Definitions YANG Modules 
     	      (MEF XX), TBD";
   }
@@ -86,12 +86,6 @@ module mef-services {
     reference "EVC Ethernet Services Definitions YANG Modules " +
     		"(MEF XX), TBD";
   }
-
-  
-         	   
-
-  
- 
   
   container mef-services {
     description
@@ -113,7 +107,7 @@ module mef-services {
             "EVC Per Universal Network Interface(UNI) " +
             "Configuration and Status.";
           list end-point {
-            must "not(evc-end-point-ce-vlans/evc-end-point-ce-vlan[2]) or " +
+            must "not(ce-vlans/ce-vlan[2]) or " +
             		"../../ce-vlan-id-preservation = 'true'" {
               error-message "When more than one CE-VLAN-ID is " +
               		"mapped to an EVC at a UNI, the EVC must have " +
@@ -135,7 +129,7 @@ module mef-services {
             		"mef-services:uni-id]" +
             		"[mef-interfaces:uni-id/../mef-interfaces:" +
             		"all-to-one-bundling-enabled = 'true']) or " +
-            		"not(evc-end-point-ce-vlans/evc-end-point-ce-vlan[2])" {
+            		"not(ce-vlans/ce-vlan[2])" {
               error-message "If both Bundling and All-to-One " +
               		"Bundling are disabled for a UNI, only one " +
               		"CE VLAN ID can be configured for a specific " +
@@ -257,10 +251,10 @@ module mef-services {
               "be used by 0 or more EVCs.";
             reference "[MEF10.3] Section 8.3. " +
             		"[MEF7.3] Section 12.2.2.";
-            container evc-end-point-ce-vlans {
+            container ce-vlans {
               description
                 "EVC Per UNI CE-VLAN IDs.";
-              list evc-end-point-ce-vlan {
+              list ce-vlan {
                 key "vid";
                 description
                   "A list of the CE-VLAN IDs mapped to this UNI " +
@@ -280,9 +274,9 @@ module mef-services {
                     		"mef-interfaces:vid";
                   }
                   must "not(current()/../../" +
-                  		"evc-end-point-ce-vlan[2]) or " +
-                  		"(count(../../../../end-point/evc-end-point-ce-vlans/" +
-                  		"evc-end-point-ce-vlan" +
+                  		"ce-vlan[2]) or " +
+                  		"(count(../../../../end-point/ce-vlans/" +
+                  		"ce-vlan" +
                   		"[vid = current()]) = " +
                   		"count(../../../../end-point))" {
                     error-message "If more than one CE-VLAN ID " +

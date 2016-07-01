@@ -71,12 +71,12 @@ module mef-topology {
      of Ethernet over Transport and Metro Ethernet 
      Network(EoT/MEN)' March 2007";
 
-  revision 2016-04-17 {
-    description
-      "First set of updates to better align with
-       MEF Common Information Model names";
-    reference "EVC Ethernet Services Definitions YANG Modules 
-    	      (MEF XX), TBD";
+   revision 2016-07-01 {
+     description
+        	      "Updated to better align with MEF 7.3 and
+        	       MEF Common Information Model attributes";
+     reference "EVC Ethernet Services Definitions YANG Modules
+        	    	      (MEF XX), TBD";
   }
 
   revision 2016-04-01 {
