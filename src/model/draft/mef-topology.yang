@@ -5,7 +5,7 @@ module mef-topology {
   import mef-types {
     prefix mef-types;
   }
-
+ 
   organization "Metro Ethernet Forum";
   contact
     "Web URL: http://metroethernetforum.org/ \\
@@ -71,7 +71,7 @@ module mef-topology {
      of Ethernet over Transport and Metro Ethernet 
      Network(EoT/MEN)' March 2007";
 
-   revision 2016-07-01 {
+  revision 2016-07-01 {
      description
         	      "Updated to better align with MEF 7.3 and
         	       MEF Common Information Model attributes";
@@ -81,7 +81,8 @@ module mef-topology {
 
   revision 2016-04-01 {
    	    description
-   	      "Added Operational Status output for interface maximum data rate";
+   	      "Added Operational Status output for interface " +
+   	      "maximum data rate";
   }  
      
   revision 2015-05-26 {
@@ -129,8 +130,8 @@ module mef-topology {
               config false;
               leaf speed {
                 type uint64;
-                units "bits-per-second";
                 default 0;
+                units "bits-per-second";
                 description
                 "The operational status value indicating " +
                 "the maximum data rate of the interface in " +
@@ -143,7 +144,7 @@ module mef-topology {
           }
         }
         leaf role {
-          type mef-types:device-role;
+          type device-role;
           default "ce";
           description
             "The role of this device in the network.";
@@ -177,7 +178,8 @@ module mef-topology {
           }
           leaf interface {
         	type leafref {
-          	  path "../../../../devices/device[dev-id = current()/../device]/interfaces/interface/phy";
+          	  path "../../../../devices/device[dev-id = " +
+          	  		"current()/../device]/interfaces/interface/phy";
           	}
             description
               "The Phy Name for the End Point's Physical Port.";
@@ -195,7 +197,8 @@ module mef-topology {
           }
           leaf interface {
             type leafref {
-              path "../../../../devices/device[dev-id = current()/../device]/interfaces/interface/phy";
+              path "../../../../devices/device[dev-id = " +
+              		"current()/../device]/interfaces/interface/phy";
             }
             description
               "The Phy Name for the End Point's Physical Port.";
@@ -206,4 +209,26 @@ module mef-topology {
       }
     }
   }
+  typedef device-role {
+		type enumeration {
+		  enum "ce" {
+		    description "Customer Edge(CE) Access Device";
+		  }
+		  enum "pe" {
+		    description "Provider Edge(PE) (AKA Aggregation) Router";
+		  }
+		  enum "p" {
+		    description "Provider Core Router";
+		  }
+		  enum "cgn" {
+			    description "Customer Gateway Natting Router";
+			  }
+		  enum "switch" {
+			    description "Customer Endpoint to PE Switch";
+			  }
+		}
+	    description
+		    "The role of the device. Is it a Customer Edge, " +
+	        "Aggregation Router or a Core Router";
+	  }
 }
