@@ -5,7 +5,7 @@ module mef-services {
   import ietf-yang-types {
     prefix yang;
   }
-  import mef-types {
+  import mef-service-types {
     prefix mef-types;
   }
   import mef-global {
@@ -418,7 +418,6 @@ module mef-services {
             }
             leaf evc-end-point-id {
               type mef-types:identifier90;
-              default "";
               config false;
               description
                 "EVC Per UNI: This is 90 character long string " +

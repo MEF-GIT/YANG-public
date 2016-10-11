@@ -1,12 +1,12 @@
-module mef-types {
-  namespace "urn:mef:xid:mef-types";
-  prefix mef-types;
+module mef-service-types {
+  namespace "urn:mef:xid:mef-service-types";
+  prefix mef-service-types;
 
   organization "MEF Forum";
   contact
     "Web URL: http://mef.net/
      E-mail:  namespace@mef.net
-     Postal:  Metro Ethernet Forum
+     Postal:  MEF Forum
               6033 W. Century Boulevard, Suite 1107
               Los Angeles, CA 90045
               U.S.A. 
@@ -14,7 +14,8 @@ module mef-types {
      Fax:     +1 310-642-2808";
   description
     "This module defines the YANG Type Definitions and shared 
-     (templated) groupings of data elementsused by MEF YANG Modules.
+     (templated) groupings of data elements used by MEF Services
+	  YANG Modules.
      
      Reference Overview:
      A number of base documents have been used to create 
@@ -27,7 +28,7 @@ module mef-types {
      Version 2 (SMIv2) MIB Modules to YANG Modules', 2011-11-25  
      [802.1AB] refers to 'Station and Media Access Control
      Connectivity Discovery', IEEE 802.1AB-2009, September 2009
-     [802.1q] refers to IEEE 802.1Q-2011 'IEEE Standard for Local
+     [802.1Q] refers to IEEE 802.1Q-2014 'IEEE Standard for Local
      and metropolitan area networks --Media Access Control (MAC)
      Bridges and Virtual Bridged Local Area Networks, August 2011
      [802-2001] refers to 'IEEE Standard for Local and Metropolitan
@@ -40,8 +41,6 @@ module mef-types {
      [MEF40] refers to MEF 40 
      'UNI and EVC Definition of Managed Objects', April 2013
      [MEF45] refers to MEF 45 'Multi-CEN L2CP', August 2014
-     [MEF7.2] refers to MEF 7.2 
-     'Carrier Ethernet Management Information Model', April 2013
      [MEF7.3] refers to MEF 7.3 
      'Carrier Ethernet Management Information Model',
      Working Draft #1 2015
@@ -51,7 +50,6 @@ module mef-types {
      June 2000
      [RFC 3419] refers to IETF RFC 3419 
      'Textual Conventions for Transport Addresses', December 2002
-     [Y.1731] refers to ITU-T Y.1731 
      'OAM functions and mechanisms for Ethernet based networks',
      July 2011
      [Q.840.1] refers to ITU-T Q.840.1 
@@ -359,13 +357,20 @@ module mef-types {
   typedef identifier90 {
 	    type string {
 	      length "min..90";
+	      pattern "[ -~]+";
 	    }
 	    description
-	      "This type definition is intended for use with status strings.";
+	      "This type definition is intended for use EVC End Point ID." +
+	      "This type definition accepts any visible ASCII character " +
+	      "plus the <space> character.The string must be an RFC 2579 " +
+	      "Display String (RFC 854 ASCII 0.00-0.7f) but not contain " +
+	      "the characters 0.00 through 0.1f. It does not accept " +
+	      "the <delete> character (0.7f) despite the current MEF " +
+	      "specification not disallowing it.";
 	    reference "[MEF10.3] [R8], [R9]. [RFC2579]. [RFC854].";
 	  }
   typedef max-svc-frame-size-type {
-    type uint32 {
+    type uint16 {
       range "1522..16384";
     }
     units "bytes";
@@ -373,20 +378,6 @@ module mef-types {
       "Max Frame Size Type in bytes. Service Frames larger than " +
       "this size will be discarded.";
     reference "[MEF 10.3] Section 8.9 and Section 9.7.";
-  }
-
-  typedef svc-provider-type {
-    type identifier45;
-    description
-      "Service Provider Type";
-    reference "[MEF10.3].";
-  }
-
-  typedef cen-type {
-    type identifier45;
-    description
-      "CEN Type";
-    reference "[MEF10.3].";
   }
 
   typedef sls-type {
@@ -412,8 +403,8 @@ module mef-types {
 
   typedef simple-percent {
     type decimal64 {
-      fraction-digits 2;
-      range "0.00 .. 100.00";
+    	fraction-digits 2;
+    	range "0.00 .. 100.00";
     }
     description "Percent.";
   }
@@ -427,48 +418,7 @@ module mef-types {
       "12-bit  VLAN-ID used in the VLAN Tag header. The range " +
       "is defined by the REFERENCED specification. VLAN ID 0 is " +
       "used for VLAN Unaware Mode.";
-    reference "IEEE Std 802.1Q 2003 Edition, Virtual Bridged " +
-    		"Local Area Networks.";
-  }
-
-  typedef vlan-id-or-none-type {
-    type uint32 {
-      range "0..4094";
-    }
-    description
-      "The VLAN-ID that uniquely identifies a VLAN.  This is the " +
-      "12-bit VLAN-ID used in the VLAN Tag header. The range is " +
-      "defined by the REFERENCED specification. VLAN ID 0 is " +
-      "used for VLAN Unaware (ie. None) Mode";
-    reference "IEEE Std 802.1Q 2003 Edition, Virtual Bridged " +
-    		"Local Area Networks.";
-  }
-
-  typedef vlan-id-or-all-type {
-    type uint32 {
-      range "1..4095";
-    }
-    description
-      "The VLAN-ID that uniquely identifies a VLAN.  This is the " +
-      "12-bit  VLAN-ID used in the VLAN Tag header. The range " +
-      "is defined by the REFERENCED specification. VLAN ID 4095 " +
-      "is used for VLAN Any Mode";
-    reference "IEEE Std 802.1Q 2003 Edition, Virtual Bridged " +
-    		"Local Area Networks.";
-  }
-
-  typedef vlan-id-any-none-type {
-    type uint32 {
-      range "0..4095";
-    }
-    description
-      "The VLAN-ID that uniquely identifies a VLAN.  This is the " +
-      "12-bit VLAN-ID used in the VLAN Tag header. The range " +
-      "is defined by the REFERENCED specification. This " +
-      "typedef is for use with Operational Status information " +
-      "where VLAN ID 0 may be used for VLAN Unaware Mode and " +
-      "use of 4095 is Reserved / None.";
-    reference "IEEE Std 802.1Q 2003 Edition, Virtual Bridged " +
+    reference "IEEE Std 802.1Q-2014, Virtual Bridged " +
     		"Local Area Networks.";
   }
 
@@ -479,37 +429,6 @@ module mef-types {
     description
       "An 802.1Q user priority value.";
     reference "IEEE 802.1Q";
-  }
-
-  typedef entity-admin-state-type {
-    type enumeration {
-      enum "unknown" {
-        description
-          "Unknown";
-      }
-      enum "locked" {
-        description
-          "Locked";
-      }
-      enum "shutting-down" {
-        description
-          "Shutting Down";
-      }
-      enum "unlocked" {
-        description
-          "Unlocked";
-      }
-    }
-    description
-      "Represents the various possible administrative states. " +
-      "A value of 'locked' means the resource is " +
-      "administratively prohibited from use.  A value of " +
-      "'shuttingDown' means that usage is administratively " +
-      "limited to current instances of use.A value of " +
-      "'unlocked' means the resource is not administratively " +
-      "prohibited from use.A value of 'unknown' means that " +
-      "this resource is unable to report administrative state.";
-    reference "ENTITY-STATE-TC-MIB";
   }
 
   typedef performance-metric-type {
@@ -554,7 +473,7 @@ module mef-types {
       }
       enum "one-way-composite-pm" {
         description
-          "One-way Multiple EVC Group Availability PM";
+          "One-way Composite PM";
       }
     }
     description
@@ -580,30 +499,6 @@ module mef-types {
     description
       "EVC Type";
     reference "[MEF10.3] Section 8.1.";
-  }
-
-  typedef evc-status-type {
-    type enumeration {
-      enum "new" {
-        description
-          "New.";
-      }
-      enum "active" {
-        description
-          "Active.";
-      }
-      enum "inactive" {
-        description
-          "Inactive (Not Active).";
-      }
-      enum "partially-active" {
-        description
-          "PartiallyActive.";
-      }
-    }
-    description
-      "EVC Status Type";
-    reference "[MEF16] Section 5.3.";
   }
 
   typedef evc-uni-role-type {
@@ -676,60 +571,14 @@ module mef-types {
       "specific UNI.";
   }
 
-  typedef frame-format-type {
+  typedef evc-cos-identifier-field-type {
     type enumeration {
-      enum "no-tag" {
+      enum "end-point" {
         description
-          "No-tag indicates that all data on the interface is " +
-          "as untagged data.";
-      }
-      enum "ctag" {
-        description
-          "Ctag indicates that tagged data is associated with " +
-          "CE-VLAN ID or a C-TAG.";
-      }
-      enum "stag" {
-        description
-          "Stag indicates that tagged data is associated with " +
-          "a provider tag or S-TAG.";
-      }
-      enum "stag-ctag" {
-        description
-          "Stag-ctag indicates that service traffic identified " +
-          "with both an S-TAG (outer tag) and a C-TAG (inner tag).";
-      }
-    }
-    description
-      "The format must be that of a MAC Frame specified in " +
-      "IEEE Std 802.3-2012 Clause 3.";
-    reference "[MEF10.3] Section 9.6. [MEF15]. [MEF7.2]. " +
-    		"[MEF7.3] Section 10.1.1. MEF-UNI-EVC-MIB.yang.";
-  }
-
-  typedef uni-mode-type {
-    type enumeration {
-      enum "uni" {
-        description
-          "UNI Mode.";
-      }
-      enum "vuni" {
-        description
-          "VUNI Mode.";
-      }
-    }
-    description
-      "This setting is used to configure a UNI as either a " +
-      "UNI or a VUNI";
-    reference "[MEF7.3] Section 10.2.2.";
-  }
-
-  typedef evc-cos-identifier-type {
-    type enumeration {
-      enum "evc" {
-        description
-          "The EVC ID, depends on the CE-VLAN ID / EVC Mapping " +
-          "at the UNI, will be used to map Service Frames to " +
-          "CoS Names/Labels.";
+          "When Class of Service Identifier is based on EVC, " +
+          "all ingress Data Service Frames mapped to " +
+          "the EVC MUST map to the same Class of Service Name " +
+          "at the given UNI.";
         reference "MEF 10.3 Section 10.2.1.1 for " +
         		"Data Service Frames.";
       }
@@ -1171,8 +1020,8 @@ module mef-types {
       "IfOperstatus. Values for availability status " +
       "include: inTest, failed, powerOff, degraded, " +
       "notInstalled.";
-    reference "[ITU-T X.731]. [MEF7.3] Section 10.1.1, " +
-    		"[MEF15], [MEF7.2] Appendix II.";
+    reference "[ITU-T X.731]. [MEF7.3], " +
+    		"[MEF15].";
   }
 
   typedef virt-cx-availability-type {
@@ -1205,8 +1054,8 @@ module mef-types {
     "May be mapped to RFC 2863, The Interfaces Group MIB " +
     "IfOperstatus. Values for availability status include: inTest," +
     " failed, powerOff, degraded, notInstalled.";
-    reference "[ITU-T X.731]. [MEF7.3] Section 10.1.1, " +
-    		"[MEF15], [MEF7.2] Appendix II.";
+    reference "[ITU-T X.731]. [MEF7.3], " +
+    		"[MEF15].";
   }
 
   typedef svc-endpoint-availability-type {
@@ -1239,8 +1088,8 @@ module mef-types {
     "May be mapped to RFC 2863. The Interfaces Group MIB " +
     "IfOperstatus. Values for availability status include: " +
     "inTest, failed, powerOff, degraded, notInstalled.";
-    reference "[ITU-T X.731]. [MEF7.3] Section 10.1.1, " +
-    		"[MEF15], [MEF7.2] Appendix II.";
+    reference "[ITU-T X.731]. [MEF7.3], " +
+    		"[MEF15], [MEF7.3] Appendix II.";
   }
 
   typedef ext-if-physical-layer-type {
@@ -1272,7 +1121,7 @@ module mef-types {
     }
     description
       "The maximum theoretical bandwidth for the phy.";
-    reference "MEF 7.3 Section 10.1.1, MEF 6.2, MEF 10.3, MEF 26.1";
+    reference "MEF 7.3, MEF 6.2, MEF 10.3, MEF 26.1";
   }
 
   typedef device-role {

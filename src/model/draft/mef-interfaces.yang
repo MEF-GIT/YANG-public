@@ -5,7 +5,7 @@ module mef-interfaces {
   import ietf-yang-types {
     prefix yang;
   }
-  import mef-types {
+  import mef-service-types {
     prefix mef-types;
   }
   import mef-global {
@@ -552,29 +552,11 @@ module mef-interfaces {
               "physical layer.";
             reference "[MEF15]. [MEF7.3] Section 10.1.1.";
           }
-          leaf frame-format {
-            type mef-types:frame-format-type;
-            default "ctag";
-            config false;
-            description
-              "The format must be that of a MAC Frame specified " +
-              "in IEEE Std 802.3-2012 Clause 3.";
-            reference "[MEF10.3] Section 9.6. [MEF15]. " +
-            		"[MEF7.2]. [MEF7.3] Section 10.1.1.";
-          }
         }
         leaf uni-id {
           type mef-types:identifier45;
           description
             " The UNI IDs must be be unique within a specific CEN.";
-          reference "[MEF10.3] Section 9.1, [R1], [R57], [R58], " +
-          		"[R59]. [MEF7.3] Section 10.2.2.";
-        }
-        leaf uni-type {
-          type mef-types:uni-mode-type;
-          default "uni";
-          description
-            " The UNI Type must be one of {UNI, VUNI}.";
           reference "[MEF10.3] Section 9.1, [R1], [R57], [R58], " +
           		"[R59]. [MEF7.3] Section 10.2.2.";
         }

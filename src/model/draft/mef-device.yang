@@ -2,23 +2,8 @@ module mef-device {
   namespace "urn:mef:xid:mef-device";
   prefix mef-device;
 
-  import ietf-yang-types {
-    prefix yang;
-  }
-  import mef-types {
-    prefix mef-types;
-  }
-  import iana-if-type {
-    prefix ianaift;
-  }
   import ietf-interfaces {
     prefix if;
-  }
-  import iana-crypt-hash {
-    prefix ianach;
-  }
-  import ietf-system {
-    prefix sys;
   }
 
   organization "MEF Forum";

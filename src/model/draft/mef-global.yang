@@ -8,7 +8,7 @@ module mef-global {
   import ietf-inet-types {
     prefix inet;
   }
-  import mef-types {
+  import mef-service-types {
     prefix mef-types;
   }
 
