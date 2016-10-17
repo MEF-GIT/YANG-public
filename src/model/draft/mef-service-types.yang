@@ -600,51 +600,81 @@ module mef-service-types {
 
   typedef evc-eec-identifier-type {
     type enumeration {
-      enum "pcp" {
+      enum "cos" {
         description
+<<<<<<< Upstream, based on origin/master
           "The Priority Code Point(PCP) value within the " +
           "CE-VLAN Tag will be used to map Service Frames " +
           "to EEC Names/Labels.";
         reference "MEF 10.3 Section 10.2.1.2: Priority Code " +
         		"Point (PCP) Field in the Customer VLAN Tag " +
         		"in a Tagged Service Frame.";
+=======
+          "The CE-VLAN CoS used to map Service Frames " +
+          "to Egress Equivalance Class.";
+        reference "MEF 10.3 Section 10.4.1.1: Egress Equivalance " +
+        		"Class Identifier Based on CE-VLAN CoS.";
+>>>>>>> 2ca60b4 Updating develop branch
       }
       enum "dscp" {
         description
           "The Differentiated Services Code Point(DSCP) value " +
           "from the IP Packet's IP Header Differentiated " +
           "Services Group, associated with the Service Frame, " +
+<<<<<<< Upstream, based on origin/master
           "will be used to map Service Frames to EEC Names/Labels.";
         reference "MEF 10.3 Section 10.2.1.3: AKA Internet " +
         		"Protocol. For a Data Service Frame carrying " +
         		"an IPv4 or and IPv6 packet.";
+=======
+          "will be used to map Service Frames to Egress Equivalance. " +
+          "Class.";
+        reference "MEF 10.3 Section 10.4.1.2: Egress " +
+        		"Equivalance Class Identifier Based on Internet " +
+        		"Protocol.";
+>>>>>>> 2ca60b4 Updating develop branch
       }
     }
     description
-      "[MEF10.3] Section 10.2.1.";
+      "[MEF10.3] Section 10.4.1.";
   }
 
-  typedef cos-color-identifier-type {
+  typedef color-identifier-type {
     type enumeration {
       enum "evc" {
         description
+<<<<<<< Upstream, based on origin/master
           "The EVC ID, depends on the CE-VLAN ID / EVC Mapping " +
           "at the UNI, will be used to map Service Frames to " +
           "CoS Colors.";
         reference "MEF 10.3 Section 10.2.1.1 for Data " +
         		"Service Frames.";
+=======
+          "All Service Frames mapped to the EVC have " +
+          "the same color.";
+        reference "MEF 10.3 Section 10.3.1: Color " +
+        		"Identifier Based on EVC.";
+>>>>>>> 2ca60b4 Updating develop branch
       }
-      enum "pcp" {
+      enum "cos" {
         description
+<<<<<<< Upstream, based on origin/master
           "The Priority Code Point(PCP) value within the " +
           "CE-VLAN Tag will be used to map Service Frames " +
           "to CoS Colors.";
         reference "MEF 10.3 Section 10.2.1.2: Priority Code " +
         		"Point (PCP) Field in the Customer VLAN Tag " +
         		"in a Tagged Service Frame. ";
+=======
+          "When the Color Identifier is based on CE-VLAN" +
+          "CoS.";
+        reference "MEF 10.3 Section 10.3.3: Color Identifier" +
+                  "Based on CE-VLAN CoS";
+>>>>>>> 2ca60b4 Updating develop branch
       }
       enum "dei" {
         description
+          "When the Color Identifier is based on CE-VLAN" +
           "Drop Eligible Indicator(DEI) field of the CE-VLAN Tag.";
       }
       enum "dscp" {
