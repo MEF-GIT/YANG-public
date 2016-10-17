@@ -19,7 +19,7 @@ module mef-device {
   description
     "This module implements the Network Equipment (NE) side 
      EVC and UNI functionality specified 
-     in MEF 10.3, MEF 6.2, and MEF 7.2.
+     in MEF 10.3, MEF 6.2, and MEF 7.3.
      
      Reference Overview: 
      A number of base documents have been used to create 
