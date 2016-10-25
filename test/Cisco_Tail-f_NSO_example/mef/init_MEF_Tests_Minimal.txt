@@ -1,10 +1,10 @@
 config
 !
-devices sync-from
+!devices sync-from
 !
 ! EPL Use Case 1
 mef-topology devices device ce0 role ce interfaces interface GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
-!
+! EPL Use Case 2
 mef-topology devices device ce0 interfaces interface GigabitEthernet0/2 ieee8023-phy ieee8023-1000BASE-SX
 ! EVPL Use Case 1
 mef-topology devices device ce0 interfaces interface GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
@@ -24,7 +24,7 @@ mef-topology devices device ce1 interfaces interface GigabitEthernet0/4 ieee8023
 mef-topology devices device ce2 role ce interfaces interface GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
 ! c2 link to pe0
 mef-topology devices device ce2 interfaces interface GigabitEthernet0/2 ieee8023-phy ieee8023-1000BASE-SX
-! EVPL Use Case 1
+! EVPL Use Case 1 and EPL Use Case 2
 mef-topology devices device ce2 interfaces interface GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
 !
 mef-topology devices device ce3 role ce interfaces interface GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
