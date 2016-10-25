@@ -1,0 +1,19 @@
+#!/bin/bash
+
+DIR=$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )
+
+PATH="$PATH:$DIR/bin"
+
+# go to base mpls-vpn-pccw dir
+
+cd "$DIR/.."
+
+test_name="$1"
+test_dir="test/$test_name"
+
+#set -x;
+devices=$(get-devices-from-test $(cat "$test_dir/tests"))
+
+for device in $devices; do
+    get-config $device > $test_dir/out/$device-before
+done;

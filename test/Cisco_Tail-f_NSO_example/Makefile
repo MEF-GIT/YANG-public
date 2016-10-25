@@ -80,3 +80,7 @@ reset:
 
 cli:
 	ncs_cli -u admin
+
+test:
+	test/run_tests.sh
+

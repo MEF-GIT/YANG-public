@@ -1,0 +1,8 @@
+config
+no mpls-vpn
+no netdev-local
+no mef-services
+no mef-interfaces
+no mef-global
+no mef-topology
+commit
