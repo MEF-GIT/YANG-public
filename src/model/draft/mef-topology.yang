@@ -1,5 +1,5 @@
 module mef-topology {
-  namespace "urn:mef:mef:mef-topology";
+  namespace "urn:mef:xid:mef-topology";
   prefix mef-topology;
 
   import mef-service-types {

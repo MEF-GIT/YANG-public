@@ -12,7 +12,7 @@
       <running/>
     </target>
     <config>
-    <mef-global xmlns="urn:mef:yang:mef-global"  xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <mef-global xmlns="urn:mef:xid:mef-global"  xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
       <svc-providers>
         <svc-provider annotation="Service Providers">
           <sp-id>Acme</sp-id>

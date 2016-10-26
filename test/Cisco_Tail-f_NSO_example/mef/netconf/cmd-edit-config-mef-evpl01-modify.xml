@@ -12,7 +12,7 @@
       <running/>
     </target>
     <config>
-    <mef-interfaces xmlns="urn:mef:yang:mef-interfaces" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <mef-interfaces xmlns="urn:mef:xid:mef-interfaces" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
     <unis>
       <uni>
         <uni-id>CYPOP1-ce4-Slot4-Port3</uni-id>
@@ -39,7 +39,7 @@
     </uni>
     </unis>
     </mef-interfaces>
-    <mef-services xmlns="urn:mef:yang:mef-services">
+    <mef-services xmlns="urn:mef:xid:mef-services">
       <mef-service>
         <evc-id>EVC-0001899-ACME-MEGAMART</evc-id>
        <end-points>

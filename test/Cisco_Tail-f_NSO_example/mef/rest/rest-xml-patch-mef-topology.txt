@@ -1,24 +1,24 @@
 <data xmlns:y="http://tail-f.com/ns/rest">
-    <mef-topology xmlns="urn:mef:yang:mef-topology" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <mef-topology xmlns="urn:mef:xid:mef-topology" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
     <devices>
       <device>
         <dev-id>ce0</dev-id>
         <interfaces>
           <interface>
             <phy>GigabitEthernet0/1</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EPL Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EPL Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
           <interface>
             <phy>GigabitEthernet0/2</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
           <interface>
             <phy>GigabitEthernet0/3</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVPL Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EVPL Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
           <interface>
             <phy>GigabitEthernet0/4</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
         </interfaces>
       </device>
@@ -27,19 +27,19 @@
         <interfaces>
           <interface>
             <phy>GigabitEthernet0/1</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EPL Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EPL Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
           <interface>
             <phy>GigabitEthernet0/2</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
           <interface>
             <phy>GigabitEthernet0/3</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVPL Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EVPL Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
           <interface>
             <phy>GigabitEthernet0/4</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
         </interfaces>
       </device>
@@ -48,15 +48,15 @@
         <interfaces>
           <interface>
             <phy>GigabitEthernet0/1</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
           <interface>
             <phy>GigabitEthernet0/2</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
           <interface>
             <phy>GigabitEthernet0/3</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVPL Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EVPL Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
         </interfaces>
       </device>
@@ -65,11 +65,11 @@
         <interfaces>
           <interface>
             <phy>GigabitEthernet0/3</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
           <interface>
             <phy>GigabitEthernet0/4</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
         </interfaces>
       </device>
@@ -78,11 +78,11 @@
         <interfaces>
           <interface>
             <phy>GigabitEthernet0/3</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
           <interface>
             <phy>GigabitEthernet0/4</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
         </interfaces>
       </device>
@@ -91,19 +91,19 @@
         <interfaces>
           <interface>
             <phy>GigabitEthernet0/1</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EP-LAN Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EP-LAN Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
           <interface>
             <phy>GigabitEthernet0/2</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EP-TREE Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
           <interface>
             <phy>GigabitEthernet0/3</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVP-LAN Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EVP-LAN Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
           <interface>
             <phy>GigabitEthernet0/4</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EVP-TREE Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
         </interfaces>
       </device>
@@ -112,19 +112,19 @@
         <interfaces>
           <interface>
             <phy>GigabitEthernet0/1</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EP-LAN Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EP-LAN Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
           <interface>
             <phy>GigabitEthernet0/2</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EP-TREE Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
           <interface>
             <phy>GigabitEthernet0/3</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVP-LAN Use Case 1 and EVP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EVP-LAN Use Case 1 and EVP-TREE Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
           <interface>
             <phy>GigabitEthernet0/4</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
         </interfaces>
       </device>
@@ -133,19 +133,19 @@
         <interfaces>
           <interface>
             <phy>GigabitEthernet0/1</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EP-LAN Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EP-LAN Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
           <interface>
             <phy>GigabitEthernet0/2</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EP-TREE Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
           <interface>
             <phy>GigabitEthernet0/3</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVP-LAN Use Case 1 and EVP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EVP-LAN Use Case 1 and EVP-TREE Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
           <interface>
             <phy>GigabitEthernet0/4</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
         </interfaces>
       </device>
@@ -154,19 +154,19 @@
         <interfaces>
           <interface>
             <phy>GigabitEthernet0/1</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="Used for Negative Tests">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="Used for Negative Tests">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
           <interface>
             <phy>GigabitEthernet0/2</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EP-TREE Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
           <interface>
             <phy>GigabitEthernet0/3</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVP-LAN Use Case 1 and EVP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EVP-LAN Use Case 1 and EVP-TREE Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
           <interface>
             <phy>GigabitEthernet0/4</phy>
-            <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
           </interface>
         </interfaces>
       </device>

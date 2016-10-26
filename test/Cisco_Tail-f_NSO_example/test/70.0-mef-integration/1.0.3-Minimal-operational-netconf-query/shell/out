@@ -2,7 +2,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1">
   <data xmlns:wd="urn:ietf:params:xml:ns:netconf:default:1.0">
-    <mef-global xmlns="urn:mef:yang:mef-global">
+    <mef-global xmlns="urn:mef:xid:mef-global">
       <slss>
         <sls>
           <sls-id>MEF103_Table25</sls-id>
@@ -2592,7 +2592,7 @@
         </cos>
       </profiles>
     </mef-global>
-    <mef-interfaces xmlns="urn:mef:yang:mef-interfaces">
+    <mef-interfaces xmlns="urn:mef:xid:mef-interfaces">
       <unis>
         <uni>
           <uni-id>CYPOP1-ce3-Slot3-Port3</uni-id>
@@ -2601,7 +2601,7 @@
               <link>
                 <device>ce3</device>
                 <interface>GigabitEthernet0/3</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -2610,7 +2610,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -2633,7 +2632,7 @@
               <link>
                 <device>ce3</device>
                 <interface>GigabitEthernet0/4</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -2642,7 +2641,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -2666,7 +2664,7 @@
               <link>
                 <device>ce4</device>
                 <interface>GigabitEthernet0/3</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -2745,7 +2743,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -2768,7 +2765,7 @@
               <link>
                 <device>ce4</device>
                 <interface>GigabitEthernet0/4</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -2777,7 +2774,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -2800,7 +2796,7 @@
               <link>
                 <device>ce0</device>
                 <interface>GigabitEthernet0/1</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -2823,7 +2819,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state annotation="EPL Use Case 1:">false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -2850,7 +2845,7 @@
               <link>
                 <device>ce0</device>
                 <interface>GigabitEthernet0/2</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -2873,7 +2868,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state annotation="OTHER Use Case 1: This is just to show the other enumeration works as expected. I still set connection-type as point-to-point in this case">false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -2900,7 +2894,7 @@
               <link>
                 <device>ce0</device>
                 <interface>GigabitEthernet0/3</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -2978,7 +2972,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state annotation="EVPL Use Case 1:">false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -3003,7 +2996,7 @@
               <link>
                 <device>ce1</device>
                 <interface>GigabitEthernet0/1</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -3026,7 +3019,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -3052,7 +3044,7 @@
               <link>
                 <device>ce1</device>
                 <interface>GigabitEthernet0/2</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -3061,7 +3053,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -3084,7 +3075,7 @@
               <link>
                 <device>ce1</device>
                 <interface>GigabitEthernet0/3</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -3159,7 +3150,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -3183,7 +3173,7 @@
               <link>
                 <device>ce2</device>
                 <interface>GigabitEthernet0/3</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -3206,7 +3196,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -3232,7 +3221,7 @@
               <link>
                 <device>ce2</device>
                 <interface>GigabitEthernet0/1</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -3299,7 +3288,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -3322,7 +3310,7 @@
               <link>
                 <device>ce2</device>
                 <interface>GigabitEthernet0/2</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -3331,7 +3319,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -3354,7 +3341,7 @@
               <link>
                 <device>ce2</device>
                 <interface>GigabitEthernet0/3</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -3429,7 +3416,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -3453,7 +3439,7 @@
               <link>
                 <device>ce3</device>
                 <interface>GigabitEthernet0/3</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -3462,7 +3448,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -3485,7 +3470,7 @@
               <link>
                 <device>ce3</device>
                 <interface>GigabitEthernet0/4</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -3494,7 +3479,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -3517,7 +3501,7 @@
               <link>
                 <device>ce4</device>
                 <interface>GigabitEthernet0/3</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -3526,7 +3510,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -3549,7 +3532,7 @@
               <link>
                 <device>ce4</device>
                 <interface>GigabitEthernet0/4</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -3558,7 +3541,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -3581,7 +3563,7 @@
               <link>
                 <device>ce5</device>
                 <interface>GigabitEthernet0/1</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -3595,7 +3577,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state annotation="EP-LAN Use Case 1:">false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -3622,7 +3603,7 @@
               <link>
                 <device>ce5</device>
                 <interface>GigabitEthernet0/2</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -3658,7 +3639,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state annotation="EP-TREE Use Case 1:">false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -3682,7 +3662,7 @@
               <link>
                 <device>ce5</device>
                 <interface>GigabitEthernet0/3</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -3766,7 +3746,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state annotation="EVP-LAN Use Case 1:">false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -3791,7 +3770,7 @@
               <link>
                 <device>ce5</device>
                 <interface>GigabitEthernet0/4</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -3805,7 +3784,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state annotation="EVP-TREE Use Case 1: Note untagged-and-priority-tagged-ce-vlan-id vids dont go into the map if they are not mapped to an EVC so I have set them randomly">false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -3830,7 +3808,7 @@
               <link>
                 <device>ce6</device>
                 <interface>GigabitEthernet0/1</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -3844,7 +3822,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -3870,7 +3847,7 @@
               <link>
                 <device>ce6</device>
                 <interface>GigabitEthernet0/2</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -3906,7 +3883,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -3929,7 +3905,7 @@
               <link>
                 <device>ce6</device>
                 <interface>GigabitEthernet0/3</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -4016,7 +3992,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -4040,7 +4015,7 @@
               <link>
                 <device>ce7</device>
                 <interface>GigabitEthernet0/1</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -4054,7 +4029,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -4080,7 +4054,7 @@
               <link>
                 <device>ce7</device>
                 <interface>GigabitEthernet0/2</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -4116,7 +4090,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -4139,7 +4112,7 @@
               <link>
                 <device>ce7</device>
                 <interface>GigabitEthernet0/3</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -4226,7 +4199,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -4250,7 +4222,7 @@
               <link>
                 <device>ce8</device>
                 <interface>GigabitEthernet0/2</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -4286,7 +4258,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -4309,7 +4280,7 @@
               <link>
                 <device>ce8</device>
                 <interface>GigabitEthernet0/3</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -4396,7 +4367,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -4415,7 +4385,7 @@
         </uni>
       </unis>
     </mef-interfaces>
-    <mef-services xmlns="urn:mef:yang:mef-services">
+    <mef-services xmlns="urn:mef:xid:mef-services">
       <mef-service>
         <evc-id>EVC-0001343-ACME-MEGAMART</evc-id>
         <end-points>
@@ -4428,7 +4398,6 @@
             </ce-vlans>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>root</role>
             <admin-state>false</admin-state>
@@ -4451,7 +4420,6 @@
             </ce-vlans>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>root</role>
             <admin-state>false</admin-state>
@@ -4520,7 +4488,6 @@
             </ce-vlans>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>root</role>
             <admin-state>false</admin-state>
@@ -4547,7 +4514,6 @@
             </ce-vlans>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>root</role>
             <admin-state>false</admin-state>
@@ -4652,7 +4618,6 @@
             </ce-vlans>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>root</role>
             <admin-state>false</admin-state>
@@ -4675,7 +4640,6 @@
             </ce-vlans>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>root</role>
             <admin-state>false</admin-state>
@@ -4738,7 +4702,6 @@
             </ce-vlans>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>root</role>
             <admin-state>false</admin-state>
@@ -4761,7 +4724,6 @@
             </ce-vlans>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>root</role>
             <admin-state>false</admin-state>
@@ -4806,7 +4768,6 @@
             </ce-vlans>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>root</role>
             <admin-state>false</admin-state>
@@ -4824,7 +4785,6 @@
             </ce-vlans>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>root</role>
             <admin-state>false</admin-state>
@@ -4842,7 +4802,6 @@
             </ce-vlans>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>root</role>
             <admin-state>false</admin-state>
@@ -4914,7 +4873,6 @@
             </egress-bwp-flows-per-eec>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>root</role>
             <admin-state>false</admin-state>
@@ -4946,7 +4904,6 @@
             </egress-bwp-flows-per-eec>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>leaf</role>
             <admin-state>false</admin-state>
@@ -4978,7 +4935,6 @@
             </egress-bwp-flows-per-eec>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>leaf</role>
             <admin-state>false</admin-state>
@@ -5010,7 +4966,6 @@
             </egress-bwp-flows-per-eec>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>leaf</role>
             <admin-state>false</admin-state>
@@ -5154,7 +5109,6 @@
             </egress-bwp-flows-per-eec>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>root</role>
             <admin-state>false</admin-state>
@@ -5214,7 +5168,6 @@
             </egress-bwp-flows-per-eec>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>root</role>
             <admin-state>false</admin-state>
@@ -5274,7 +5227,6 @@
             </egress-bwp-flows-per-eec>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>root</role>
             <admin-state>false</admin-state>
@@ -5334,7 +5286,6 @@
             </egress-bwp-flows-per-eec>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>root</role>
             <admin-state>false</admin-state>
@@ -5428,7 +5379,6 @@
             </ce-vlans>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>root</role>
             <admin-state>false</admin-state>
@@ -5446,7 +5396,6 @@
             </ce-vlans>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>leaf</role>
             <admin-state>false</admin-state>
@@ -5464,7 +5413,6 @@
             </ce-vlans>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>leaf</role>
             <admin-state>false</admin-state>
@@ -5482,7 +5430,6 @@
             </ce-vlans>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>leaf</role>
             <admin-state>false</admin-state>
@@ -5566,7 +5513,6 @@
             </ce-vlans>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>root</role>
             <admin-state>false</admin-state>
@@ -5593,7 +5539,6 @@
             </ce-vlans>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>root</role>
             <admin-state>false</admin-state>
@@ -5687,77 +5632,77 @@
         <user-label>Toronto-NewarkTunnel</user-label>
       </mef-service>
     </mef-services>
-    <mef-topology xmlns="urn:mef:yang:mef-topology">
+    <mef-topology xmlns="urn:mef:xid:mef-topology">
       <devices>
         <device>
           <dev-id>CSR-1_0</dev-id>
           <interfaces>
             <interface>
               <phy>GigabitEthernet1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet10</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet4</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet5</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet6</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet7</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet8</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet9</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
@@ -5770,70 +5715,70 @@
           <interfaces>
             <interface>
               <phy>GigabitEthernet1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet10</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet4</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet5</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet6</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet7</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet8</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet9</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
@@ -5846,70 +5791,70 @@
           <interfaces>
             <interface>
               <phy>GigabitEthernet1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet10</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet4</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet5</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet6</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet7</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet8</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet9</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
@@ -5922,70 +5867,70 @@
           <interfaces>
             <interface>
               <phy>GigabitEthernet1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet10</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet4</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet5</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet6</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet7</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet8</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet9</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
@@ -5998,28 +5943,28 @@
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EPL Use Case 2">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EPL Use Case 2">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVPL Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EVPL Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/4</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="c0 link to pe0">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="c0 link to pe0">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
@@ -6038,28 +5983,28 @@
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVPL Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EVPL Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/4</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="c1 link to pe0">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="c1 link to pe0">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
@@ -6072,28 +6017,28 @@
           <interfaces>
             <interface>
               <phy>fe-3-1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-TX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-100BASE-TX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>fe-3-2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-TX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-100BASE-TX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>fe-4-1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-TX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-100BASE-TX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>fe-4-2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-TX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-100BASE-TX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
@@ -6106,21 +6051,21 @@
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="c2 link to pe0">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="c2 link to pe0">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVPL Use Case 1 and EPL Use Case 2">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EVPL Use Case 1 and EPL Use Case 2">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
@@ -6133,14 +6078,14 @@
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/4</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="c3 link to pe1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="c3 link to pe1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
@@ -6153,14 +6098,14 @@
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/4</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="c4 link to pe2">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="c4 link to pe2">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
@@ -6173,42 +6118,42 @@
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EP-TREE Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVP-LAN Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EVP-LAN Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/4</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EVP-TREE Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/5</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="c5 link to pe2">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="c5 link to pe2">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/6</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
@@ -6221,28 +6166,28 @@
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EP-TREE Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVP-LAN Use Case 1 and EVP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EVP-LAN Use Case 1 and EVP-TREE Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/4</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="c6 link to pe3">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="c6 link to pe3">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
@@ -6255,28 +6200,28 @@
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EP-TREE Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVP-LAN Use Case 1 and EVP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EVP-LAN Use Case 1 and EVP-TREE Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/4</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="c7 link to pe3">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="c7 link to pe3">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
@@ -6289,28 +6234,28 @@
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EP-TREE Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVP-LAN Use Case 1 and EVP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EVP-LAN Use Case 1 and EVP-TREE Use Case 1">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/4</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="C8 link to pe3">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="C8 link to pe3">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
@@ -6323,28 +6268,28 @@
           <interfaces>
             <interface>
               <phy>fe-3-1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-TX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-100BASE-TX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>fe-3-2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-TX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-100BASE-TX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>fe-4-1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-TX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-100BASE-TX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>fe-4-2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-TX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-100BASE-TX</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
@@ -6357,28 +6302,28 @@
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/4</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
@@ -6391,28 +6336,28 @@
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/4</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
@@ -6425,196 +6370,196 @@
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/0/1/0</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/1/1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/1/10</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/1/11</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/1/12</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/1/13</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/1/14</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/1/15</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/1/16</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/1/17</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/1/18</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/1/19</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/1/2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/1/3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/1/4</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/1/5</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/1/6</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/1/7</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/1/8</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/1/9</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>TenGigE0/0/0/0</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-10GBASE-L</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-10GBASE-L</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>TenGigE0/0/0/1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-10GBASE-L</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-10GBASE-L</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>TenGigE0/0/0/2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-10GBASE-L</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-10GBASE-L</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>TenGigE0/0/0/3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-10GBASE-L</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-10GBASE-L</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>TenGigE0/0/2/0</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-10GBASE-L</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-10GBASE-L</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>TenGigE0/0/2/1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-10GBASE-L</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-10GBASE-L</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>TenGigE0/0/2/2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-10GBASE-L</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-10GBASE-L</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>TenGigE0/0/2/3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-10GBASE-L</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-10GBASE-L</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
@@ -6627,168 +6572,168 @@
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/0/0/0</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/10</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/11</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/12</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/13</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/14</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/15</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/16</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/17</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/18</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/19</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/4</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/5</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/6</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/7</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/8</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/9</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>TenGigE0/0/2/0</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-10GBASE-L</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-10GBASE-L</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>TenGigE0/0/2/1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-10GBASE-L</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-10GBASE-L</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>TenGigE0/0/2/2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-10GBASE-L</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-10GBASE-L</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>TenGigE0/0/2/3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-10GBASE-L</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-10GBASE-L</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
@@ -6801,168 +6746,168 @@
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/0/0/0</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/10</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/11</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/12</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/13</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/14</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/15</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/16</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/17</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/18</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/19</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/4</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/5</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/6</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/7</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/8</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/9</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>TenGigE0/0/2/0</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-10GBASE-L</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-10GBASE-L</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>TenGigE0/0/2/1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-10GBASE-L</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-10GBASE-L</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>TenGigE0/0/2/2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-10GBASE-L</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-10GBASE-L</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>TenGigE0/0/2/3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-10GBASE-L</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-10GBASE-L</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
@@ -7221,35 +7166,35 @@
           <interfaces>
             <interface>
               <phy>GigabitEthernet0</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>TenGigabitEthernet0/0/0</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-10GBASE-L</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-10GBASE-L</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>TenGigabitEthernet0/1/0</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-10GBASE-L</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-10GBASE-L</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>TenGigabitEthernet1/0/0</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-10GBASE-L</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-10GBASE-L</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>TenGigabitEthernet1/1/0</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-10GBASE-L</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-10GBASE-L</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
@@ -7262,133 +7207,133 @@
           <interfaces>
             <interface>
               <phy>FastEthernet0/1/0</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-T</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-100BASE-T</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>FastEthernet0/1/1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-T</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-100BASE-T</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>FastEthernet0/1/2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-T</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-100BASE-T</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>FastEthernet0/1/3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-T</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-100BASE-T</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>FastEthernet0/1/4</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-T</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-100BASE-T</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>FastEthernet0/1/5</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-T</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-100BASE-T</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>FastEthernet0/1/6</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-T</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-100BASE-T</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>FastEthernet0/1/7</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-T</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-100BASE-T</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/2/0</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/2/1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/2/2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/2/3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/2/4</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/2/5</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/2/6</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/2/7</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>TenGigabitEthernet0/0/0</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-10GBASE-L</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-10GBASE-L</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>TenGigabitEthernet1/0/0</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-10GBASE-L</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-10GBASE-L</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
@@ -7401,63 +7346,63 @@
           <interfaces>
             <interface>
               <phy>GigabitEthernet0</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet1/0/0</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet1/0/1</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet1/0/2</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet1/0/3</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet1/0/4</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet1/0/5</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet1/0/6</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet1/0/7</phy>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
                 <speed>0</speed>
               </status>
@@ -7684,7 +7629,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1">
   <data xmlns:wd="urn:ietf:params:xml:ns:netconf:default:1.0">
-    <mef-interfaces xmlns="urn:mef:yang:mef-interfaces">
+    <mef-interfaces xmlns="urn:mef:xid:mef-interfaces">
       <unis>
         <uni>
           <uni-id>MMPOP1-ce0-Slot0-Port1</uni-id>
@@ -7693,7 +7638,7 @@
               <link>
                 <device>ce0</device>
                 <interface>GigabitEthernet0/1</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -7716,7 +7661,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state annotation="EPL Use Case 1:">false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -7743,7 +7687,7 @@
               <link>
                 <device>ce1</device>
                 <interface>GigabitEthernet0/1</interface>
-                <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+                <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
                 <sync-mode wd:default="true">false</sync-mode>
               </link>
             </links>
@@ -7766,7 +7710,6 @@
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
-            <frame-format>ctag</frame-format>
           </status>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
@@ -7787,7 +7730,7 @@
         </uni>
       </unis>
     </mef-interfaces>
-    <mef-services xmlns="urn:mef:yang:mef-services">
+    <mef-services xmlns="urn:mef:xid:mef-services">
       <mef-service>
         <evc-id>EVC-0001898-ACME-MEGAMART</evc-id>
         <end-points>
@@ -7806,7 +7749,6 @@
             </ce-vlans>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>root</role>
             <admin-state>false</admin-state>
@@ -7833,7 +7775,6 @@
             </ce-vlans>
             <status>
               <operational-state>false</operational-state>
-              <evc-end-point-id/>
             </status>
             <role>root</role>
             <admin-state>false</admin-state>

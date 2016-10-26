@@ -40,7 +40,7 @@
  			<candidate/>  
 		</target>  
  		<config>  
- 	           <mef-services xmlns="urn:mef:yang:mef-services" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">  
+ 	           <mef-services xmlns="urn:mef:xid:mef-services" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">  
                        <mef-service>
                          <svc-id>12345</svc-id>
                          <user-label>EVC-12345-Confirmed</user-label>

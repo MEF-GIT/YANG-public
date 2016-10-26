@@ -12,7 +12,7 @@
       <running/>
     </target>
     <config>
-    <mef-interfaces xmlns="urn:mef:yang:mef-interfaces"  xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <mef-interfaces xmlns="urn:mef:xid:mef-interfaces"  xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
     <unis>
       <uni>
         <uni-id>MMPOP1-ce0-Slot0-Port3</uni-id>
@@ -21,7 +21,7 @@
             <link>
               <device>ce0</device>
               <interface>GigabitEthernet0/3</interface>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-types="urn:mef:xid:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
             </link>
           </links>
         </physical-layers>
@@ -113,7 +113,7 @@
             <link>
               <device>ce1</device>
               <interface>GigabitEthernet0/3</interface>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-types="urn:mef:xid:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
             </link>
           </links>
         </physical-layers>
@@ -200,7 +200,7 @@
             <link>
               <device>ce2</device>
               <interface>GigabitEthernet0/3</interface>
-              <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+              <ieee8023-phy xmlns:mef-types="urn:mef:xid:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
             </link>
           </links>
         </physical-layers>
@@ -282,7 +282,7 @@
       </uni>
     </unis>
   </mef-interfaces>
-  <mef-services xmlns="urn:mef:yang:mef-services">
+  <mef-services xmlns="urn:mef:xid:mef-services">
     <mef-service>
       <svc-id>56789</svc-id>
       <evc>

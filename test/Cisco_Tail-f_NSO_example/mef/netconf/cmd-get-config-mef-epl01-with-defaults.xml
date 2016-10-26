@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:mef-topology="urn:mef:yang:mef-topology" xmlns:mef-global="urn:mef:yang:mef-global" xmlns:mef-interfaces="urn:mef:yang:mef-interfaces" xmlns:mef-services="urn:mef:yang:mef-services">
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:mef-topology="urn:mef:xid:mef-topology" xmlns:mef-global="urn:mef:xid:mef-global" xmlns:mef-interfaces="urn:mef:xid:mef-interfaces" xmlns:mef-services="urn:mef:xid:mef-services">
   <capabilities>
     <capability>urn:ietf:params:netconf:base:1.0</capability>
   </capabilities>
@@ -12,7 +12,7 @@
            <running/>
          </source>
           <filter>
-          <mef-interfaces xmlns="urn:mef:yang:mef-interfaces">
+          <mef-interfaces xmlns="urn:mef:xid:mef-interfaces">
             <unis>
               <uni>
                 <uni-id>MMPOP1-ce0-Slot0-Port1</uni-id>
@@ -22,7 +22,7 @@
               </uni>
             </unis>
           </mef-interfaces>          
-          <mef-services xmlns="urn:mef:yang:mef-services">
+          <mef-services xmlns="urn:mef:xid:mef-services">
              <mef-service>
                 <evc-id>EVC-0001898-ACME-MEGAMART</evc-id>
              </mef-service>

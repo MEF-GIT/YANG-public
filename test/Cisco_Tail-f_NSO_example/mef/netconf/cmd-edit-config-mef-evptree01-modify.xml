@@ -12,7 +12,7 @@
       <running/>
     </target>
     <config>
-    <mef-interfaces xmlns="urn:mef:yang:mef-interfaces">
+    <mef-interfaces xmlns="urn:mef:xid:mef-interfaces">
     <unis>
     <uni>
       <uni-id>MMPOP1-ce5-Slot5-Port4</uni-id>
@@ -29,7 +29,7 @@
     </uni>      
   </unis>
     </mef-interfaces>
-    <mef-services xmlns="urn:mef:yang:mef-services">
+    <mef-services xmlns="urn:mef:xid:mef-services">
       <mef-service>
          <evc-id>EVC-0002947-ACME-MEGAMART</evc-id>
          <end-points>

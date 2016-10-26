@@ -12,7 +12,7 @@
       <running/>
     </target>
     <config>
-    <mef-global xmlns="urn:mef:yang:mef-global"
+    <mef-global xmlns="urn:mef:xid:mef-global"
       xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
       <profiles>
       <ingress-bwp-flows>

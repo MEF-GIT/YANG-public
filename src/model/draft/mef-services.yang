@@ -409,7 +409,6 @@ module mef-services {
             }
             leaf evc-end-point-id {
               type mef-types:identifier90;
-              default "";
               config false;
               description
                 "EVC Per UNI: This is 90 character long string " +

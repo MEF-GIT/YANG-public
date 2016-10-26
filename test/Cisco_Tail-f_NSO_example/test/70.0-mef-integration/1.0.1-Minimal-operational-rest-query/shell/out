@@ -8,70 +8,70 @@
             "interface": [
               {
                 "phy": "GigabitEthernet1",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet10",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet2",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet3",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet4",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet5",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet6",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet7",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet8",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet9",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
@@ -86,70 +86,70 @@
             "interface": [
               {
                 "phy": "GigabitEthernet1",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet10",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet2",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet3",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet4",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet5",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet6",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet7",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet8",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet9",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
@@ -164,70 +164,70 @@
             "interface": [
               {
                 "phy": "GigabitEthernet1",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet10",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet2",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet3",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet4",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet5",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet6",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet7",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet8",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet9",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
@@ -242,70 +242,70 @@
             "interface": [
               {
                 "phy": "GigabitEthernet1",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet10",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet2",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet3",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet4",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet5",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet6",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet7",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet8",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet9",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
@@ -320,14 +320,14 @@
             "interface": [
               {
                 "phy": "GigabitEthernet0/1",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/2",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EPL Use Case 2"},
                 "status": {
                   "speed": 0
@@ -335,7 +335,7 @@
               },
               {
                 "phy": "GigabitEthernet0/3",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EVPL Use Case 1"},
                 "status": {
                   "speed": 0
@@ -343,7 +343,7 @@
               },
               {
                 "phy": "GigabitEthernet0/4",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "c0 link to pe0"},
                 "status": {
                   "speed": 0
@@ -366,21 +366,21 @@
             "interface": [
               {
                 "phy": "GigabitEthernet0/1",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/2",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/3",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EVPL Use Case 1"},
                 "status": {
                   "speed": 0
@@ -388,7 +388,7 @@
               },
               {
                 "phy": "GigabitEthernet0/4",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "c1 link to pe0"},
                 "status": {
                   "speed": 0
@@ -405,28 +405,28 @@
             "interface": [
               {
                 "phy": "fe-3-1",
-                "ieee8023-phy": "mef-types:ieee8023-100BASE-TX",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "fe-3-2",
-                "ieee8023-phy": "mef-types:ieee8023-100BASE-TX",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "fe-4-1",
-                "ieee8023-phy": "mef-types:ieee8023-100BASE-TX",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "fe-4-2",
-                "ieee8023-phy": "mef-types:ieee8023-100BASE-TX",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX",
                 "status": {
                   "speed": 0
                 }
@@ -442,14 +442,14 @@
             "interface": [
               {
                 "phy": "GigabitEthernet0/1",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/2",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "c2 link to pe0"},
                 "status": {
                   "speed": 0
@@ -457,7 +457,7 @@
               },
               {
                 "phy": "GigabitEthernet0/3",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EVPL Use Case 1 and EPL Use Case 2"},
                 "status": {
                   "speed": 0
@@ -473,14 +473,14 @@
             "interface": [
               {
                 "phy": "GigabitEthernet0/3",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/4",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "c3 link to pe1"},
                 "status": {
                   "speed": 0
@@ -496,14 +496,14 @@
             "interface": [
               {
                 "phy": "GigabitEthernet0/3",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/4",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "c4 link to pe2"},
                 "status": {
                   "speed": 0
@@ -519,14 +519,14 @@
             "interface": [
               {
                 "phy": "GigabitEthernet0/1",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/2",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EP-TREE Use Case 1"},
                 "status": {
                   "speed": 0
@@ -534,7 +534,7 @@
               },
               {
                 "phy": "GigabitEthernet0/3",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EVP-LAN Use Case 1"},
                 "status": {
                   "speed": 0
@@ -542,7 +542,7 @@
               },
               {
                 "phy": "GigabitEthernet0/4",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EVP-TREE Use Case 1"},
                 "status": {
                   "speed": 0
@@ -550,7 +550,7 @@
               },
               {
                 "phy": "GigabitEthernet0/5",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "c5 link to pe2"},
                 "status": {
                   "speed": 0
@@ -558,7 +558,7 @@
               },
               {
                 "phy": "GigabitEthernet0/6",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "status": {
                   "speed": 0
                 }
@@ -574,14 +574,14 @@
             "interface": [
               {
                 "phy": "GigabitEthernet0/1",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/2",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EP-TREE Use Case 1"},
                 "status": {
                   "speed": 0
@@ -589,7 +589,7 @@
               },
               {
                 "phy": "GigabitEthernet0/3",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EVP-LAN Use Case 1 and EVP-TREE Use Case 1"},
                 "status": {
                   "speed": 0
@@ -597,7 +597,7 @@
               },
               {
                 "phy": "GigabitEthernet0/4",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "c6 link to pe3"},
                 "status": {
                   "speed": 0
@@ -614,14 +614,14 @@
             "interface": [
               {
                 "phy": "GigabitEthernet0/1",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/2",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EP-TREE Use Case 1"},
                 "status": {
                   "speed": 0
@@ -629,7 +629,7 @@
               },
               {
                 "phy": "GigabitEthernet0/3",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EVP-LAN Use Case 1 and EVP-TREE Use Case 1"},
                 "status": {
                   "speed": 0
@@ -637,7 +637,7 @@
               },
               {
                 "phy": "GigabitEthernet0/4",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "c7 link to pe3"},
                 "status": {
                   "speed": 0
@@ -654,14 +654,14 @@
             "interface": [
               {
                 "phy": "GigabitEthernet0/1",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/2",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EP-TREE Use Case 1"},
                 "status": {
                   "speed": 0
@@ -669,7 +669,7 @@
               },
               {
                 "phy": "GigabitEthernet0/3",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EVP-LAN Use Case 1 and EVP-TREE Use Case 1"},
                 "status": {
                   "speed": 0
@@ -677,7 +677,7 @@
               },
               {
                 "phy": "GigabitEthernet0/4",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "C8 link to pe3"},
                 "status": {
                   "speed": 0
@@ -694,28 +694,28 @@
             "interface": [
               {
                 "phy": "fe-3-1",
-                "ieee8023-phy": "mef-types:ieee8023-100BASE-TX",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "fe-3-2",
-                "ieee8023-phy": "mef-types:ieee8023-100BASE-TX",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "fe-4-1",
-                "ieee8023-phy": "mef-types:ieee8023-100BASE-TX",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "fe-4-2",
-                "ieee8023-phy": "mef-types:ieee8023-100BASE-TX",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX",
                 "status": {
                   "speed": 0
                 }
@@ -731,28 +731,28 @@
             "interface": [
               {
                 "phy": "GigabitEthernet0/1",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/2",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/3",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/4",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
@@ -767,28 +767,28 @@
             "interface": [
               {
                 "phy": "GigabitEthernet0/1",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/2",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/3",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/4",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
@@ -803,196 +803,196 @@
             "interface": [
               {
                 "phy": "GigabitEthernet0/0/1/0",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/1/1",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/1/10",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/1/11",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/1/12",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/1/13",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/1/14",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/1/15",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/1/16",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/1/17",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/1/18",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/1/19",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/1/2",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/1/3",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/1/4",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/1/5",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/1/6",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/1/7",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/1/8",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/1/9",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "TenGigE0/0/0/0",
-                "ieee8023-phy": "mef-types:ieee8023-10GBASE-L",
+                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "TenGigE0/0/0/1",
-                "ieee8023-phy": "mef-types:ieee8023-10GBASE-L",
+                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "TenGigE0/0/0/2",
-                "ieee8023-phy": "mef-types:ieee8023-10GBASE-L",
+                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "TenGigE0/0/0/3",
-                "ieee8023-phy": "mef-types:ieee8023-10GBASE-L",
+                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "TenGigE0/0/2/0",
-                "ieee8023-phy": "mef-types:ieee8023-10GBASE-L",
+                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "TenGigE0/0/2/1",
-                "ieee8023-phy": "mef-types:ieee8023-10GBASE-L",
+                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "TenGigE0/0/2/2",
-                "ieee8023-phy": "mef-types:ieee8023-10GBASE-L",
+                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "TenGigE0/0/2/3",
-                "ieee8023-phy": "mef-types:ieee8023-10GBASE-L",
+                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L",
                 "status": {
                   "speed": 0
                 }
@@ -1007,168 +1007,168 @@
             "interface": [
               {
                 "phy": "GigabitEthernet0/0/0/0",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/1",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/10",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/11",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/12",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/13",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/14",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/15",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/16",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/17",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/18",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/19",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/2",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/3",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/4",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/5",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/6",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/7",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/8",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/9",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "TenGigE0/0/2/0",
-                "ieee8023-phy": "mef-types:ieee8023-10GBASE-L",
+                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "TenGigE0/0/2/1",
-                "ieee8023-phy": "mef-types:ieee8023-10GBASE-L",
+                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "TenGigE0/0/2/2",
-                "ieee8023-phy": "mef-types:ieee8023-10GBASE-L",
+                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "TenGigE0/0/2/3",
-                "ieee8023-phy": "mef-types:ieee8023-10GBASE-L",
+                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L",
                 "status": {
                   "speed": 0
                 }
@@ -1183,168 +1183,168 @@
             "interface": [
               {
                 "phy": "GigabitEthernet0/0/0/0",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/1",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/10",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/11",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/12",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/13",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/14",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/15",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/16",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/17",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/18",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/19",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/2",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/3",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/4",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/5",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/6",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/7",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/8",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/0/0/9",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "TenGigE0/0/2/0",
-                "ieee8023-phy": "mef-types:ieee8023-10GBASE-L",
+                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "TenGigE0/0/2/1",
-                "ieee8023-phy": "mef-types:ieee8023-10GBASE-L",
+                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "TenGigE0/0/2/2",
-                "ieee8023-phy": "mef-types:ieee8023-10GBASE-L",
+                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "TenGigE0/0/2/3",
-                "ieee8023-phy": "mef-types:ieee8023-10GBASE-L",
+                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L",
                 "status": {
                   "speed": 0
                 }
@@ -1621,35 +1621,35 @@
             "interface": [
               {
                 "phy": "GigabitEthernet0",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "TenGigabitEthernet0/0/0",
-                "ieee8023-phy": "mef-types:ieee8023-10GBASE-L",
+                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "TenGigabitEthernet0/1/0",
-                "ieee8023-phy": "mef-types:ieee8023-10GBASE-L",
+                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "TenGigabitEthernet1/0/0",
-                "ieee8023-phy": "mef-types:ieee8023-10GBASE-L",
+                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "TenGigabitEthernet1/1/0",
-                "ieee8023-phy": "mef-types:ieee8023-10GBASE-L",
+                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L",
                 "status": {
                   "speed": 0
                 }
@@ -1664,133 +1664,133 @@
             "interface": [
               {
                 "phy": "FastEthernet0/1/0",
-                "ieee8023-phy": "mef-types:ieee8023-100BASE-T",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-T",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "FastEthernet0/1/1",
-                "ieee8023-phy": "mef-types:ieee8023-100BASE-T",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-T",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "FastEthernet0/1/2",
-                "ieee8023-phy": "mef-types:ieee8023-100BASE-T",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-T",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "FastEthernet0/1/3",
-                "ieee8023-phy": "mef-types:ieee8023-100BASE-T",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-T",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "FastEthernet0/1/4",
-                "ieee8023-phy": "mef-types:ieee8023-100BASE-T",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-T",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "FastEthernet0/1/5",
-                "ieee8023-phy": "mef-types:ieee8023-100BASE-T",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-T",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "FastEthernet0/1/6",
-                "ieee8023-phy": "mef-types:ieee8023-100BASE-T",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-T",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "FastEthernet0/1/7",
-                "ieee8023-phy": "mef-types:ieee8023-100BASE-T",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-T",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/2/0",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/2/1",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/2/2",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/2/3",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/2/4",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/2/5",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/2/6",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet0/2/7",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "TenGigabitEthernet0/0/0",
-                "ieee8023-phy": "mef-types:ieee8023-10GBASE-L",
+                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "TenGigabitEthernet1/0/0",
-                "ieee8023-phy": "mef-types:ieee8023-10GBASE-L",
+                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L",
                 "status": {
                   "speed": 0
                 }
@@ -1805,63 +1805,63 @@
             "interface": [
               {
                 "phy": "GigabitEthernet0",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet1/0/0",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet1/0/1",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet1/0/2",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet1/0/3",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet1/0/4",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet1/0/5",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet1/0/6",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
               },
               {
                 "phy": "GigabitEthernet1/0/7",
-                "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
@@ -4688,15 +4688,14 @@
                 {
                   "device": "ce3",
                   "interface": "GigabitEthernet0/3",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "max-svc-frame-size": 1600,
@@ -4710,15 +4709,14 @@
                 {
                   "device": "ce3",
                   "interface": "GigabitEthernet0/4",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "max-svc-frame-size": 1600,
@@ -4734,7 +4732,7 @@
                 {
                   "device": "ce4",
                   "interface": "GigabitEthernet0/3",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
@@ -4823,8 +4821,7 @@
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "max-svc-frame-size": 1600,
@@ -4839,15 +4836,14 @@
                 {
                   "device": "ce4",
                   "interface": "GigabitEthernet0/4",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "max-svc-frame-size": 1600,
@@ -4861,7 +4857,7 @@
                 {
                   "device": "ce0",
                   "interface": "GigabitEthernet0/1",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
@@ -4884,8 +4880,7 @@
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "@admin-state": {"annotation": "EPL Use Case 1:"},
@@ -4908,7 +4903,7 @@
                 {
                   "device": "ce0",
                   "interface": "GigabitEthernet0/2",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
@@ -4931,8 +4926,7 @@
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "@admin-state": {"annotation": "OTHER Use Case 1: This is just to show the other enumeration works as expected. I still set connection-type as point-to-point in this case"},
@@ -4955,7 +4949,7 @@
                 {
                   "device": "ce0",
                   "interface": "GigabitEthernet0/3",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
@@ -5049,8 +5043,7 @@
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "@admin-state": {"annotation": "EVPL Use Case 1:"},
@@ -5070,7 +5063,7 @@
                 {
                   "device": "ce1",
                   "interface": "GigabitEthernet0/1",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
@@ -5093,8 +5086,7 @@
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "max-svc-frame-size": 1600,
@@ -5113,15 +5105,14 @@
                 {
                   "device": "ce1",
                   "interface": "GigabitEthernet0/2",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "max-svc-frame-size": 1600,
@@ -5135,7 +5126,7 @@
                 {
                   "device": "ce1",
                   "interface": "GigabitEthernet0/3",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
@@ -5226,8 +5217,7 @@
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "service-multiplexing-enabled": true,
@@ -5244,7 +5234,7 @@
                 {
                   "device": "ce2",
                   "interface": "GigabitEthernet0/3",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
@@ -5267,8 +5257,7 @@
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "max-svc-frame-size": 1600,
@@ -5287,7 +5276,7 @@
                 {
                   "device": "ce2",
                   "interface": "GigabitEthernet0/1",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
@@ -5362,8 +5351,7 @@
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "max-svc-frame-size": 1600,
@@ -5378,15 +5366,14 @@
                 {
                   "device": "ce2",
                   "interface": "GigabitEthernet0/2",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "max-svc-frame-size": 1600,
@@ -5400,7 +5387,7 @@
                 {
                   "device": "ce2",
                   "interface": "GigabitEthernet0/3",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
@@ -5491,8 +5478,7 @@
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "service-multiplexing-enabled": false,
@@ -5509,15 +5495,14 @@
                 {
                   "device": "ce3",
                   "interface": "GigabitEthernet0/3",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "max-svc-frame-size": 1600,
@@ -5531,15 +5516,14 @@
                 {
                   "device": "ce3",
                   "interface": "GigabitEthernet0/4",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "max-svc-frame-size": 1600,
@@ -5553,15 +5537,14 @@
                 {
                   "device": "ce4",
                   "interface": "GigabitEthernet0/3",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "max-svc-frame-size": 1600,
@@ -5575,15 +5558,14 @@
                 {
                   "device": "ce4",
                   "interface": "GigabitEthernet0/4",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "max-svc-frame-size": 1600,
@@ -5597,7 +5579,7 @@
                 {
                   "device": "ce5",
                   "interface": "GigabitEthernet0/1",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
@@ -5611,8 +5593,7 @@
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "@admin-state": {"annotation": "EP-LAN Use Case 1:"},
@@ -5633,7 +5614,7 @@
                 {
                   "device": "ce5",
                   "interface": "GigabitEthernet0/2",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
@@ -5677,8 +5658,7 @@
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "@admin-state": {"annotation": "EP-TREE Use Case 1:"},
@@ -5696,7 +5676,7 @@
                 {
                   "device": "ce5",
                   "interface": "GigabitEthernet0/3",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
@@ -5796,8 +5776,7 @@
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "@admin-state": {"annotation": "EVP-LAN Use Case 1:"},
@@ -5819,7 +5798,7 @@
                 {
                   "device": "ce5",
                   "interface": "GigabitEthernet0/4",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
@@ -5833,8 +5812,7 @@
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "@admin-state": {"annotation": "EVP-TREE Use Case 1: Note untagged-and-priority-tagged-ce-vlan-id vids dont go into the map if they are not mapped to an EVC so I have set them randomly"},
@@ -5855,7 +5833,7 @@
                 {
                   "device": "ce6",
                   "interface": "GigabitEthernet0/1",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
@@ -5869,8 +5847,7 @@
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "all-to-one-bundling-enabled": true,
@@ -5888,7 +5865,7 @@
                 {
                   "device": "ce6",
                   "interface": "GigabitEthernet0/2",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
@@ -5932,8 +5909,7 @@
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "max-svc-frame-size": 1600,
@@ -5948,7 +5924,7 @@
                 {
                   "device": "ce6",
                   "interface": "GigabitEthernet0/3",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
@@ -6051,8 +6027,7 @@
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "max-svc-frame-size": 1600,
@@ -6071,7 +6046,7 @@
                 {
                   "device": "ce7",
                   "interface": "GigabitEthernet0/1",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
@@ -6085,8 +6060,7 @@
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "all-to-one-bundling-enabled": true,
@@ -6104,7 +6078,7 @@
                 {
                   "device": "ce7",
                   "interface": "GigabitEthernet0/2",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
@@ -6148,8 +6122,7 @@
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "max-svc-frame-size": 1600,
@@ -6164,7 +6137,7 @@
                 {
                   "device": "ce7",
                   "interface": "GigabitEthernet0/3",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
@@ -6267,8 +6240,7 @@
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "max-svc-frame-size": 1600,
@@ -6287,7 +6259,7 @@
                 {
                   "device": "ce8",
                   "interface": "GigabitEthernet0/2",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
@@ -6331,8 +6303,7 @@
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "max-svc-frame-size": 1600,
@@ -6347,7 +6318,7 @@
                 {
                   "device": "ce8",
                   "interface": "GigabitEthernet0/3",
-                  "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+                  "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
                 }
               ]
             }
@@ -6450,8 +6421,7 @@
           },
           "status": {
             "operational-state": false,
-            "number-of-links": 0,
-            "frame-format": "ctag"
+            "number-of-links": 0
           },
           "admin-state": false,
           "max-svc-frame-size": 1600,
@@ -6483,8 +6453,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "root",
               "admin-state": false,
@@ -6505,8 +6474,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "root",
               "admin-state": false,
@@ -6575,8 +6543,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "root",
               "admin-state": false,
@@ -6601,8 +6568,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "root",
               "admin-state": false,
@@ -6717,8 +6683,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "root",
               "admin-state": false,
@@ -6739,8 +6704,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "root",
               "admin-state": false,
@@ -6803,8 +6767,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "root",
               "admin-state": false,
@@ -6825,8 +6788,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "root",
               "admin-state": false,
@@ -6865,8 +6827,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "root",
               "admin-state": false,
@@ -6882,8 +6843,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "root",
               "admin-state": false,
@@ -6899,8 +6859,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "root",
               "admin-state": false,
@@ -6979,8 +6938,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "root",
               "admin-state": false,
@@ -7014,8 +6972,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "leaf",
               "admin-state": false,
@@ -7049,8 +7006,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "leaf",
               "admin-state": false,
@@ -7084,8 +7040,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "leaf",
               "admin-state": false,
@@ -7244,8 +7199,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "root",
               "admin-state": false,
@@ -7307,8 +7261,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "root",
               "admin-state": false,
@@ -7370,8 +7323,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "root",
               "admin-state": false,
@@ -7433,8 +7385,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "root",
               "admin-state": false,
@@ -7538,8 +7489,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "root",
               "admin-state": false,
@@ -7555,8 +7505,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "leaf",
               "admin-state": false,
@@ -7572,8 +7521,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "leaf",
               "admin-state": false,
@@ -7589,8 +7537,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "leaf",
               "admin-state": false,
@@ -7675,8 +7622,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "root",
               "admin-state": false,
@@ -7701,8 +7647,7 @@
                 ]
               },
               "status": {
-                "operational-state": false,
-                "evc-end-point-id": ""
+                "operational-state": false
               },
               "role": "root",
               "admin-state": false,

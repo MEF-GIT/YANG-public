@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:mef-topology="urn:mef:yang:mef-topology" xmlns:mef-global="urn:mef:yang:mef-global" xmlns:mef-interfaces="urn:mef:yang:mef-interfaces" xmlns:mef-services="urn:mef:yang:mef-services">
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:mef-topology="urn:mef:xid:mef-topology" xmlns:mef-global="urn:mef:xid:mef-global" xmlns:mef-interfaces="urn:mef:xid:mef-interfaces" xmlns:mef-services="urn:mef:xid:mef-services">
   <capabilities>
     <capability>urn:ietf:params:netconf:base:1.0</capability>
   </capabilities>
@@ -12,10 +12,10 @@
            <running/>
          </source>
           <filter>
-          	<mef-global xmlns="urn:mef:yang:mef-global"></mef-global>
-          	<mef-topology xmlns="urn:mef:yang:mef-topology"></mef-topology>
-          	<mef-interfaces xmlns="urn:mef:yang:mef-interfaces"></mef-interfaces>
-          	<mef-services xmlns="urn:mef:yang:mef-services"></mef-services></filter></get-config>
+          	<mef-global xmlns="urn:mef:xid:mef-global"></mef-global>
+          	<mef-topology xmlns="urn:mef:xid:mef-topology"></mef-topology>
+          	<mef-interfaces xmlns="urn:mef:xid:mef-interfaces"></mef-interfaces>
+          	<mef-services xmlns="urn:mef:xid:mef-services"></mef-services></filter></get-config>
   </rpc>
 ]]>]]>
 <?xml version="1.0" encoding="UTF-8"?>

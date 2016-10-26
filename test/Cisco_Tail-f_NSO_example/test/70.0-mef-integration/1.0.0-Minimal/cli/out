@@ -4163,57 +4163,48 @@ mef-services mef-service EVC-0009898-ACME-MEGAMART
  svc-type                 other
  user-label               Toronto-NewarkTunnel
 !
-                                     NUMBER          
-                        OPERATIONAL  OF      FRAME   
-UNI ID                  STATE        LINKS   FORMAT  
------------------------------------------------------
-CYPOP1-ce3-Slot3-Port3  false        0       ctag    
-CYPOP1-ce3-Slot3-Port4  false        0       ctag    
-CYPOP1-ce4-Slot4-Port3  false        0       ctag    
-CYPOP1-ce4-Slot4-Port4  false        0       ctag    
-MMPOP1-ce0-Slot0-Port1  false        0       ctag    
-MMPOP1-ce0-Slot0-Port2  false        0       ctag    
-MMPOP1-ce0-Slot0-Port3  false        0       ctag    
-MMPOP1-ce1-Slot1-Port1  false        0       ctag    
-MMPOP1-ce1-Slot1-Port2  false        0       ctag    
-MMPOP1-ce1-Slot1-Port3  false        0       ctag    
-MMPOP1-ce2-Slot0-Port3  false        0       ctag    
-MMPOP1-ce2-Slot2-Port1  false        0       ctag    
-MMPOP1-ce2-Slot2-Port2  false        0       ctag    
-MMPOP1-ce2-Slot2-Port3  false        0       ctag    
-MMPOP1-ce3-Slot3-Port3  false        0       ctag    
-MMPOP1-ce3-Slot3-Port4  false        0       ctag    
-MMPOP1-ce4-Slot4-Port3  false        0       ctag    
-MMPOP1-ce4-Slot4-Port4  false        0       ctag    
-MMPOP1-ce5-Slot5-Port1  false        0       ctag    
-MMPOP1-ce5-Slot5-Port2  false        0       ctag    
-MMPOP1-ce5-Slot5-Port3  false        0       ctag    
-MMPOP1-ce5-Slot5-Port4  false        0       ctag    
-MMPOP1-ce6-Slot6-Port1  false        0       ctag    
-MMPOP1-ce6-Slot6-Port2  false        0       ctag    
-MMPOP1-ce6-Slot6-Port3  false        0       ctag    
-MMPOP1-ce7-Slot7-Port1  false        0       ctag    
-MMPOP1-ce7-Slot7-Port2  false        0       ctag    
-MMPOP1-ce7-Slot7-Port3  false        0       ctag    
-MMPOP1-ce8-Slot8-Port2  false        0       ctag    
-MMPOP1-ce8-Slot8-Port3  false        0       ctag    
+                                     NUMBER  
+                        OPERATIONAL  OF      
+UNI ID                  STATE        LINKS   
+---------------------------------------------
+CYPOP1-ce3-Slot3-Port3  false        0       
+CYPOP1-ce3-Slot3-Port4  false        0       
+CYPOP1-ce4-Slot4-Port3  false        0       
+CYPOP1-ce4-Slot4-Port4  false        0       
+MMPOP1-ce0-Slot0-Port1  false        0       
+MMPOP1-ce0-Slot0-Port2  false        0       
+MMPOP1-ce0-Slot0-Port3  false        0       
+MMPOP1-ce1-Slot1-Port1  false        0       
+MMPOP1-ce1-Slot1-Port2  false        0       
+MMPOP1-ce1-Slot1-Port3  false        0       
+MMPOP1-ce2-Slot0-Port3  false        0       
+MMPOP1-ce2-Slot2-Port1  false        0       
+MMPOP1-ce2-Slot2-Port2  false        0       
+MMPOP1-ce2-Slot2-Port3  false        0       
+MMPOP1-ce3-Slot3-Port3  false        0       
+MMPOP1-ce3-Slot3-Port4  false        0       
+MMPOP1-ce4-Slot4-Port3  false        0       
+MMPOP1-ce4-Slot4-Port4  false        0       
+MMPOP1-ce5-Slot5-Port1  false        0       
+MMPOP1-ce5-Slot5-Port2  false        0       
+MMPOP1-ce5-Slot5-Port3  false        0       
+MMPOP1-ce5-Slot5-Port4  false        0       
+MMPOP1-ce6-Slot6-Port1  false        0       
+MMPOP1-ce6-Slot6-Port2  false        0       
+MMPOP1-ce6-Slot6-Port3  false        0       
+MMPOP1-ce7-Slot7-Port1  false        0       
+MMPOP1-ce7-Slot7-Port2  false        0       
+MMPOP1-ce7-Slot7-Port3  false        0       
+MMPOP1-ce8-Slot8-Port2  false        0       
+MMPOP1-ce8-Slot8-Port3  false        0       
 
                                      EVC    
                                      END    
                         OPERATIONAL  POINT  
 UNI ID                  STATE        ID     
 --------------------------------------------
-MMPOP1-ce0-Slot0-Port3  false               
-MMPOP1-ce1-Slot1-Port3  false               
-
- status operational-state false
-                                     EVC    
-                                     END    
-                        OPERATIONAL  POINT  
-UNI ID                  STATE        ID     
---------------------------------------------
-MMPOP1-ce0-Slot0-Port1  false               
-MMPOP1-ce1-Slot1-Port1  false               
+MMPOP1-ce0-Slot0-Port3  false        -      
+MMPOP1-ce1-Slot1-Port3  false        -      
 
  status operational-state false
                                      EVC    
@@ -4221,8 +4212,8 @@ MMPOP1-ce1-Slot1-Port1  false
                         OPERATIONAL  POINT  
 UNI ID                  STATE        ID     
 --------------------------------------------
-MMPOP1-ce0-Slot0-Port3  false               
-MMPOP1-ce1-Slot1-Port3  false               
+MMPOP1-ce0-Slot0-Port1  false        -      
+MMPOP1-ce1-Slot1-Port1  false        -      
 
  status operational-state false
                                      EVC    
@@ -4230,8 +4221,8 @@ MMPOP1-ce1-Slot1-Port3  false
                         OPERATIONAL  POINT  
 UNI ID                  STATE        ID     
 --------------------------------------------
-MMPOP1-ce0-Slot0-Port3  false               
-MMPOP1-ce2-Slot2-Port3  false               
+MMPOP1-ce0-Slot0-Port3  false        -      
+MMPOP1-ce1-Slot1-Port3  false        -      
 
  status operational-state false
                                      EVC    
@@ -4239,9 +4230,8 @@ MMPOP1-ce2-Slot2-Port3  false
                         OPERATIONAL  POINT  
 UNI ID                  STATE        ID     
 --------------------------------------------
-MMPOP1-ce5-Slot5-Port1  false               
-MMPOP1-ce6-Slot6-Port1  false               
-MMPOP1-ce7-Slot7-Port1  false               
+MMPOP1-ce0-Slot0-Port3  false        -      
+MMPOP1-ce2-Slot2-Port3  false        -      
 
  status operational-state false
                                      EVC    
@@ -4249,10 +4239,9 @@ MMPOP1-ce7-Slot7-Port1  false
                         OPERATIONAL  POINT  
 UNI ID                  STATE        ID     
 --------------------------------------------
-MMPOP1-ce5-Slot5-Port2  false               
-MMPOP1-ce6-Slot6-Port2  false               
-MMPOP1-ce7-Slot7-Port2  false               
-MMPOP1-ce8-Slot8-Port2  false               
+MMPOP1-ce5-Slot5-Port1  false        -      
+MMPOP1-ce6-Slot6-Port1  false        -      
+MMPOP1-ce7-Slot7-Port1  false        -      
 
  status operational-state false
                                      EVC    
@@ -4260,10 +4249,10 @@ MMPOP1-ce8-Slot8-Port2  false
                         OPERATIONAL  POINT  
 UNI ID                  STATE        ID     
 --------------------------------------------
-MMPOP1-ce5-Slot5-Port3  false               
-MMPOP1-ce6-Slot6-Port3  false               
-MMPOP1-ce7-Slot7-Port3  false               
-MMPOP1-ce8-Slot8-Port3  false               
+MMPOP1-ce5-Slot5-Port2  false        -      
+MMPOP1-ce6-Slot6-Port2  false        -      
+MMPOP1-ce7-Slot7-Port2  false        -      
+MMPOP1-ce8-Slot8-Port2  false        -      
 
  status operational-state false
                                      EVC    
@@ -4271,10 +4260,10 @@ MMPOP1-ce8-Slot8-Port3  false
                         OPERATIONAL  POINT  
 UNI ID                  STATE        ID     
 --------------------------------------------
-MMPOP1-ce5-Slot5-Port4  false               
-MMPOP1-ce6-Slot6-Port3  false               
-MMPOP1-ce7-Slot7-Port3  false               
-MMPOP1-ce8-Slot8-Port3  false               
+MMPOP1-ce5-Slot5-Port3  false        -      
+MMPOP1-ce6-Slot6-Port3  false        -      
+MMPOP1-ce7-Slot7-Port3  false        -      
+MMPOP1-ce8-Slot8-Port3  false        -      
 
  status operational-state false
                                      EVC    
@@ -4282,7 +4271,18 @@ MMPOP1-ce8-Slot8-Port3  false
                         OPERATIONAL  POINT  
 UNI ID                  STATE        ID     
 --------------------------------------------
-MMPOP1-ce0-Slot0-Port2  false               
-MMPOP1-ce2-Slot0-Port3  false               
+MMPOP1-ce5-Slot5-Port4  false        -      
+MMPOP1-ce6-Slot6-Port3  false        -      
+MMPOP1-ce7-Slot7-Port3  false        -      
+MMPOP1-ce8-Slot8-Port3  false        -      
+
+ status operational-state false
+                                     EVC    
+                                     END    
+                        OPERATIONAL  POINT  
+UNI ID                  STATE        ID     
+--------------------------------------------
+MMPOP1-ce0-Slot0-Port2  false        -      
+MMPOP1-ce2-Slot0-Port3  false        -      
 
  status operational-state false
