@@ -397,8 +397,8 @@ module mef-service-types {
 
   typedef simple-percent {
     type decimal64 {
-    	fraction-digits 2;
-    	range "0.00 .. 100.00";
+      fraction-digits 2;
+      range "0.00 .. 100.00";
     }
     description "Percent.";
   }
@@ -423,6 +423,26 @@ module mef-service-types {
     description
       "An 802.1Q user priority value.";
     reference "IEEE 802.1Q";
+  }
+
+  typedef entity-admin-state-type {
+    type enumeration {
+      enum "locked" {
+        description
+          "Locked";
+      }
+      enum "unlocked" {
+        description
+          "Unlocked";
+      }
+    }
+    description
+      "Represents the various possible administrative states. " +
+      "A value of 'locked' means the resource is " +
+      "administratively prohibited from use. A value of " +
+      "'unlocked' means the resource is not administratively " +
+      "prohibited from use.";
+    reference "ENTITY-STATE-TC-MIB";
   }
 
   typedef performance-metric-type {
@@ -563,14 +583,33 @@ module mef-service-types {
       "specific UNI.";
   }
 
-  typedef evc-cos-identifier-field-type {
+  typedef frame-format-type {
     type enumeration {
-      enum "end-point" {
+      enum "no-tag" {
         description
-          "When Class of Service Identifier is based on EVC, " +
-          "all ingress Data Service Frames mapped to " +
-          "the EVC MUST map to the same Class of Service Name " +
-          "at the given UNI.";
+          "No-tag indicates that all data on the interface is " +
+          "as untagged data.";
+      }
+      enum "ctag" {
+        description
+          "Ctag indicates that tagged data is associated with " +
+          "CE-VLAN ID or a C-TAG.";
+      }
+    }
+    description
+      "The format must be that of a MAC Frame specified in " +
+      "IEEE Std 802.3-2012 Clause 3.";
+    reference "[MEF10.3] Section 9.6. [MEF15]. [MEF7.2]. " +
+    		"[MEF7.3] Section 10.1.1. MEF-UNI-EVC-MIB.yang.";
+  }
+
+  typedef evc-cos-identifier-type {
+    type enumeration {
+      enum "evc" {
+        description
+          "The EVC ID, depends on the CE-VLAN ID / EVC Mapping " +
+          "at the UNI, will be used to map Service Frames to " +
+          "CoS Names/Labels.";
         reference "MEF 10.3 Section 10.2.1.1 for " +
         		"Data Service Frames.";
       }
@@ -600,7 +639,7 @@ module mef-service-types {
 
   typedef evc-eec-identifier-type {
     type enumeration {
-      enum "cos" {
+      enum "pcp" {
         description
 <<<<<<< Upstream, based on origin/master
           "The Priority Code Point(PCP) value within the " +
@@ -639,7 +678,7 @@ module mef-service-types {
       "[MEF10.3] Section 10.4.1.";
   }
 
-  typedef color-identifier-type {
+  typedef cos-color-identifier-type {
     type enumeration {
       enum "evc" {
         description
@@ -656,7 +695,7 @@ module mef-service-types {
         		"Identifier Based on EVC.";
 >>>>>>> 2ca60b4 Updating develop branch
       }
-      enum "cos" {
+      enum "pcp" {
         description
 <<<<<<< Upstream, based on origin/master
           "The Priority Code Point(PCP) value within the " +
@@ -937,4 +976,8 @@ module mef-service-types {
     description
       "This object indicates the specific Ethernet service type.";
   }
+<<<<<<< Upstream, based on origin/master
+=======
+
+>>>>>>> fe8befe First pass at merging my development changes into the new develop branch.
 }

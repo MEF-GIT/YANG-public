@@ -51,6 +51,8 @@ module mef-topology {
      [MEF40] refers to MEF 40 
      'UNI and EVC Definition of Managed Objects', April 2013
      [MEF45] refers to MEF 45 'Multi-CEN L2CP', August 2014
+     [MEF7.2] refers to MEF 7.2 
+     'Carrier Ethernet Management Information Model', April 2013
      [MEF7.3] refers to MEF 7.3 
      'Carrier Ethernet Management Information Model',
      Working Draft #1 2015
