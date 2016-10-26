@@ -11,6 +11,8 @@ NETWORK = create-network cisco-ios 9 ce \
 
 NETSIM_DIR = netsim
 
+.PHONY: test settest
+
 all: build-all $(NETSIM_DIR)
 
 build-all:
@@ -80,3 +82,10 @@ reset:
 
 cli:
 	ncs_cli -u admin
+
+test:
+	test/run_tests.sh
+
+settest:
+	test/run_tests.sh --set-out
+
