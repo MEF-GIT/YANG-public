@@ -194,23 +194,6 @@ module mef-interfaces {
                   "excluding 1000BASE-PX-D and 1000BASE-PX-U.";
                 reference "[MEF10.3] Section 9.2 [R60]";
               }
-              leaf connection-speed {
-                type mef-types:ext-if-physical-layer-type;
-                units "bits-per-second";
-                default "1G";
-                description
-                  "Physical Layer Connection Speed (Max Data Rate).";
-                reference "[MEF10.3] Section 9.2. [MEF6.2] " +
-                		"Section 8.2.2. [MEF20] [R80].";
-              }
-              leaf phy-auto-neg {
-                type mef-types:auto-negotiation-type;
-                default "on";
-                description
-                  "Auto-Negotiation ON/OFF/Auto.";
-                reference "[MEF6.2] Section 8.2.2. [MEF20] [R80]. " +
-                		"[MEF7.3] Section 10.2.2.";
-              }
               leaf sync-mode {
                 type boolean;
                 must ".='false' or (.='true' and " +
@@ -525,22 +508,6 @@ module mef-interfaces {
               "Enabled/Disabled.";
             reference "[MEF15]. [MEF7.3] Section 10.1.1.";
           }
-          leaf available-status {
-            type mef-types:ext-if-availability-type;
-            default "not-installed";
-            config false;
-            description
-              "Availability Status of the Link.";
-            reference "[MEF15]. [MEF7.3] Section 10.1.1.";
-          }
-          leaf physical-layer {
-            type mef-types:ext-if-physical-layer-type;
-            default "1G";
-            config false;
-            description
-              "Physical Layer Connection Speed.";
-            reference "[MEF15]. [MEF7.3] Section 10.1.1.";
-          }
           leaf number-of-links {
             type uint32;
             default "0";
@@ -772,7 +739,7 @@ module mef-interfaces {
         }
         leaf l2cp-address-set {
           type mef-types:l2cp-address-set-type;
-          default "aware-cta";
+          default "cta";
           description
             "The L2CP Address Set Service Attribute specifies " +
             "the subset of the Bridge Reserved Addresses " +

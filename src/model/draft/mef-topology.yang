@@ -52,6 +52,8 @@ module mef-topology {
      [MEF40] refers to MEF 40 
      'UNI and EVC Definition of Managed Objects', April 2013
      [MEF45] refers to MEF 45 'Multi-CEN L2CP', August 2014
+     [MEF7.2] refers to MEF 7.2 
+     'Carrier Ethernet Management Information Model', April 2013
      [MEF7.3] refers to MEF 7.3 
      'Carrier Ethernet Management Information Model',
      Working Draft #1 2015
@@ -141,7 +143,7 @@ module mef-topology {
           }
         }
         leaf role {
-          type mef-types:device-role;
+          type device-role;
           default "ce";
           description
             "The role of this device in the network.";
@@ -175,7 +177,8 @@ module mef-topology {
           }
           leaf interface {
         	type leafref {
-          	  path "../../../../devices/device[dev-id = current()/../device]/interfaces/interface/phy";
+          	  path "../../../../devices/device[dev-id = " +
+          	  		"current()/../device]/interfaces/interface/phy";
           	}
             description
               "The Phy Name for the End Point's Physical Port.";
@@ -193,7 +196,8 @@ module mef-topology {
           }
           leaf interface {
             type leafref {
-              path "../../../../devices/device[dev-id = current()/../device]/interfaces/interface/phy";
+              path "../../../../devices/device[dev-id = " +
+              		"current()/../device]/interfaces/interface/phy";
             }
             description
               "The Phy Name for the End Point's Physical Port.";
@@ -204,4 +208,26 @@ module mef-topology {
       }
     }
   }
+  typedef device-role {
+		type enumeration {
+		  enum "ce" {
+		    description "Customer Edge(CE) Access Device";
+		  }
+		  enum "pe" {
+		    description "Provider Edge(PE) (AKA Aggregation) Router";
+		  }
+		  enum "p" {
+		    description "Provider Core Router";
+		  }
+		  enum "cgn" {
+			    description "Customer Gateway Natting Router";
+			  }
+		  enum "switch" {
+			    description "Customer Endpoint to PE Switch";
+			  }
+		}
+	    description
+		    "The role of the device. Is it a Customer Edge, " +
+	        "Aggregation Router or a Core Router";
+	  }
 }
