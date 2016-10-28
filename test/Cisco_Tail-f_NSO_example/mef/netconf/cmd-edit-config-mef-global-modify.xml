@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <capabilities>
+    <capability>urn:ietf:params:netconf:base:1.0</capability>
+  </capabilities>
+</hello>
+]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1">
+ <edit-config>
+    <target>
+      <running/>
+    </target>
+    <config>
+    <mef-global xmlns="urn:mef:yang:mef-global"
+      xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+      <profiles>
+      <ingress-bwp-flows>
+        <bwp-flow>
+          <bw-profile>chicago-bwp-evc</bw-profile>
+          <user-label>Windy City Ingress BWP for EVC</user-label>
+          <cir>300000</cir>
+        </bwp-flow>
+        </ingress-bwp-flows>
+        <l2cp-cos>
+          <l2cp-profile>
+            <id>MEF103_Table3PlusCoS</id>
+            <l2cps>
+              <l2cp>
+                <dest-mac-addr>01:80:C2:00:00:01</dest-mac-addr>
+                <peering-proto-name>802.3 MAC Control Pause</peering-proto-name>
+                <subtype nc:operation="create">00:02</subtype>
+              </l2cp>
+            </l2cps>
+          </l2cp-profile>
+        </l2cp-cos>
+        <l2cp-peering nc:operation="replace">
+          <l2cp-profile>
+            <id>L2CP_Peering_Profile1</id>
+            <l2cps>
+              <l2cp>
+                <dest-mac-addr>01:80:c2:00:00:03</dest-mac-addr>
+                <peering-proto-name>Port Authentication REPLACED</peering-proto-name>
+                <protocol>llc</protocol>
+                <protocol-id>88:8e</protocol-id>
+              </l2cp>
+              <l2cp>
+                <dest-mac-addr>01:80:c2:00:00:07</dest-mac-addr>
+                <peering-proto-name>E-LMI REPLACED</peering-proto-name>
+                <protocol>ethertype</protocol>
+                <protocol-id>88:ef</protocol-id>
+              </l2cp>
+              <l2cp>
+                <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
+                <peering-proto-name>LLDP REPLACED</peering-proto-name>
+                <protocol>llc</protocol>
+                <protocol-id>88:cd</protocol-id>
+              </l2cp>
+            </l2cps>
+            <user-label>L2CP Peering Profile #1 REPLACED</user-label>
+          </l2cp-profile>
+        </l2cp-peering>
+        <cos>
+          <cos-profile>
+            <id>MEF103_Table14</id>
+            <cos-pcp>
+              <pcp  nc:operation="delete">
+                <pcp-value>5</pcp-value>
+              </pcp>
+            </cos-pcp>
+          </cos-profile>
+        </cos>  
+      </profiles>
+    </mef-global>
+   </config>
+  </edit-config>
+  </rpc>
+]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2">
+  <close-session/>
+</rpc>

@@ -1,0 +1,7 @@
+.project
+.settings
+.cproject
+*.1
+*.idx
+*.siz
+

@@ -49,7 +49,8 @@ module mef-service-types {
      [RFC 2863] refers to IETF RFC 2863 'The Interfaces Group MIB',
      June 2000
      [RFC 3419] refers to IETF RFC 3419 
-     'Textual Conventions for Transport Addresses', December 2002
+     'Textual Conventions for Transport Addresses', 2015
+     [G.8013] refers to ITU-T G.8013 
      'OAM functions and mechanisms for Ethernet based networks',
      July 2011
      [Q.840.1] refers to ITU-T Q.840.1 
@@ -386,13 +387,6 @@ module mef-service-types {
 	      "SLS Type";
 	    reference "[MEF10.3].";
 	  }
-  
-  typedef subscriber-type {
-    type identifier45;
-    description
-      "Subscriber Type";
-    reference "[MEF10.3].";
-  }
 
   typedef evc-id-type {
     type identifier45;
@@ -422,7 +416,7 @@ module mef-service-types {
     		"Local Area Networks.";
   }
 
-  typedef ieee-8021-priority {
+  typedef ieee8021p-priority-type {
     type uint8 {
       range "0..7";
     }
@@ -459,13 +453,11 @@ module mef-service-types {
       }
       enum "one-way-high-loss-interval-pm" {
         description
-          "One-way Resiliency Performance expressed as High " +
-          "Loss Intervals.";
+          "One-way High Loss Interval PM";
       }
       enum "one-way-consecutive-high-loss-interval-pm" {
         description
-          "One-way Resiliency PM expressed as " +
-          "Consecutive High Loss Intervals.";
+          "One-way Consecutive High Loss Interval PM";
       }
       enum "one-way-group-availability-pm" {
         description
@@ -612,7 +604,7 @@ module mef-service-types {
         description
           "The Priority Code Point(PCP) value within the " +
           "CE-VLAN Tag will be used to map Service Frames " +
-          "to CoS Names/Labels.";
+          "to EEC Names/Labels.";
         reference "MEF 10.3 Section 10.2.1.2: Priority Code " +
         		"Point (PCP) Field in the Customer VLAN Tag " +
         		"in a Tagged Service Frame.";
@@ -622,7 +614,7 @@ module mef-service-types {
           "The Differentiated Services Code Point(DSCP) value " +
           "from the IP Packet's IP Header Differentiated " +
           "Services Group, associated with the Service Frame, " +
-          "will be used to map Service Frames to CoS Names/Labels.";
+          "will be used to map Service Frames to EEC Names/Labels.";
         reference "MEF 10.3 Section 10.2.1.3: AKA Internet " +
         		"Protocol. For a Data Service Frame carrying " +
         		"an IPv4 or and IPv6 packet.";
@@ -638,7 +630,7 @@ module mef-service-types {
         description
           "The EVC ID, depends on the CE-VLAN ID / EVC Mapping " +
           "at the UNI, will be used to map Service Frames to " +
-          "CoS Names/Labels.";
+          "CoS Colors.";
         reference "MEF 10.3 Section 10.2.1.1 for Data " +
         		"Service Frames.";
       }
@@ -646,7 +638,7 @@ module mef-service-types {
         description
           "The Priority Code Point(PCP) value within the " +
           "CE-VLAN Tag will be used to map Service Frames " +
-          "to CoS Names/Labels.";
+          "to CoS Colors.";
         reference "MEF 10.3 Section 10.2.1.2: Priority Code " +
         		"Point (PCP) Field in the Customer VLAN Tag " +
         		"in a Tagged Service Frame. ";
@@ -661,7 +653,7 @@ module mef-service-types {
           "from the IP Packet's IP Header Differentiated " +
           "Services Group, associated with the Service " +
           "Frame, will be used to map Service Frames to " +
-          "CoS Names/Labels.";
+          "CoS Colors.";
         reference "MEF 10.3 Section 10.2.1.3: AKA Internet " +
         		"Protocol. For a Data Service Frame carrying " +
         		"an IPv4 or and IPv6 packet.";
@@ -672,7 +664,7 @@ module mef-service-types {
     reference "[MEF23.1].";
   }
 
-  typedef cos-color-type {
+  typedef frame-color-type {
     type enumeration {
       enum "green" {
         description
@@ -692,7 +684,8 @@ module mef-service-types {
     type uint32;
     description
       "Bandwidth Profile Committed Information Rate in " +
-      "Kilobits Per Second.";
+      "Bits Per Second.";
+    units "bps";
     reference "[MEF10.3] [R143], [R144].";
   }
 
@@ -700,6 +693,7 @@ module mef-service-types {
     type uint32;
     description
       "Bandwidth Profile Committed Burst Size in Bytes.";
+    units "bytes";
     reference "[MEF10.3] [R145].";
   }
 
@@ -707,7 +701,8 @@ module mef-service-types {
     type uint32;
     description
       "Bandwidth Profile Excess Information Rate in " +
-      "Kilobits Per Second.";
+      "Bits Per Second.";
+    units "bps";
     reference "[MEF10.3] [R146], [R147].";
   }
 
@@ -715,6 +710,7 @@ module mef-service-types {
     type uint32 {
       range "0 .. 10000000";
     }
+    units "bytes";
     description
       "Excess Burst Size (EBS) in bytes: This parameter limits " +
       "the maximum number of bytes available for a burst " +
@@ -722,15 +718,6 @@ module mef-service-types {
       "will be declared Yellow by the Bandwidth Profile. " +
       "If this value is 0, then no limit is assumed.";
     reference "[MEF10.3] [R146], [R147].";
-  }
-
-  typedef elmi-polling-counter-type {
-    type uint16 {
-      range "1 .. max";
-    }
-    description
-      "ELMI Polling Counter.";
-    reference "[MEF16] Section 5.6.1.";
   }
 
   typedef elmi-status-error-threshold-type {
@@ -761,7 +748,7 @@ module mef-service-types {
     }
     description
       "The type used for a timer started after tranmitting " +
-      "a Status Message. If a Status Enquiry is recieved before " +
+      "a Status Message. If a Status Enquiry is received before " +
       "this timer expires, record the error.";
     reference "[MEF16] Section 5.6.1.";
   }
@@ -786,66 +773,12 @@ module mef-service-types {
   }
 
   typedef bwp-coupling-flag-type {
-    type enumeration {
-      enum "yellow-eir-only" {
-        description
-          "When CF is set to \"yellow-eir-only\", the volume of " +
-          "the yellow service frames admitted to the network " +
-          "cannot exceed EIR.";
-      }
-      enum "yellow-eir-plus-cir" {
-        description
-          "When CF is set to \"yellow-eir-plus-cir\", the " +
-          "volume of the yellow service frames admitted to " +
-          "the network is bounded by CIR + EIR depending on " +
-          "volume of the offered green Service Frames.";
-      }
-    }
+    type boolean;
     description
       "The Bandwidth Profile parameter that determines whether " +
       "or not overflow tokens not used for Service Frames " +
       "declared Green can be used as Yellow tokens.";
     reference "[MEF10.3] Section 12.1. [MEF23.1] Section 8.1.";
-  }
-
-  typedef auto-negotiation-type {
-    type enumeration {
-      enum "on" {
-        description
-          "Phy Auto-negotiation Enabled.";
-      }
-      enum "off" {
-        description
-          "Phy Auto-negotiation Disabled.";
-      }
-    }
-    description
-      "Phy Auto-negotiation Enabled/Disabled.";
-    reference "[MEF20].";
-  }
-
-  typedef service-entity-type {
-    type enumeration {
-      enum "evc" {
-        description
-          "EVC.";
-      }
-      enum "tunnel-1" {
-        description
-          "Tunnel Type 1.";
-      }
-      enum "tunnel-2" {
-        description
-          "Tunnel Type 2.";
-      }
-      enum "ovc" {
-        description
-          "OVC.";
-      }
-    }
-    description
-      "MEF Service Entity Type.";
-    reference "[MEF12.2] Section 7.3, Table 3.";
   }
 
   typedef l2cp-handling-type {
@@ -866,7 +799,7 @@ module mef-service-types {
           "the External Interface where the L2CP Decision Point " +
           "is located, or propagated to the L2CP Decision " +
           "Points located at all other External Interfaces " +
-          "associated by the EVC or OVC.";
+          "associated by the EVC.";
       }
       enum "peer" {
         description
@@ -883,7 +816,7 @@ module mef-service-types {
 
   typedef l2cp-address-set-type {
     type enumeration {
-      enum "aware-cta" {
+      enum "cta" {
         description
           "C-VLAN Tag Aware (CTA), for VLAN-based services where" +
           " the CE-VLAN ID is used to map a frame to a service.";
@@ -933,16 +866,6 @@ module mef-service-types {
     reference "[MEF45] Section 7.";
   }
 
-  typedef ieee8021p-priority-type {
-    type uint8 {
-      range "0 .. 7";
-    }
-    description
-      "IEEE 802.1p VLAN Header Class of Service field. Used for " +
-      "Priority Code Point(PCP) configurations.";
-    reference "[MEF10.3] Section 10.2.1.";
-  }
-
   typedef mef-service-type {
     type enumeration {
       enum "epl" {
@@ -984,164 +907,4 @@ module mef-service-types {
     description
       "This object indicates the specific Ethernet service type.";
   }
-
-  typedef ext-if-availability-type {
-    type enumeration {
-      enum "in-test" {
-        description
-          "In-test is equivalent to the IETF RFC 2883 " +
-          "ifOperStatus 'testing' state.";
-      }
-      enum "failed" {
-        description
-          "Failed is to be interpretted along with " +
-          "Operational State.";
-      }
-      enum "power-off" {
-        description
-          "Power-off indicates the phy is down.";
-      }
-      enum "degraded" {
-        description
-          "Degraded is to be interpretted along with " +
-          "Operational State..";
-      }
-      enum "not-installed" {
-        description
-          "Not-installed is equivalent to the " +
-          "IETF RFC 2883 ifOperStatus 'notPresent' state.";
-      }
-    }
-    description
-      "Availability of the Physical Interface. The " +
-      "availability status type indicates that the Phy " +
-      "is functioning properly.  May  be  mapped  to  " +
-      "RFC  2863,  The Interfaces  Group  MIB  " +
-      "IfOperstatus. Values for availability status " +
-      "include: inTest, failed, powerOff, degraded, " +
-      "notInstalled.";
-    reference "[ITU-T X.731]. [MEF7.3], " +
-    		"[MEF15].";
-  }
-
-  typedef virt-cx-availability-type {
-    type enumeration {
-        enum "in-test" {
-            description
-              "In-test is equivalent to the " +
-              "IETF RFC 2883 ifOperStatus 'testing' state.";
-          }
-          enum "failed" {
-            description
-              "Failed is to be interpretted along " +
-              "with Operational State.";
-          }
-          enum "degraded" {
-            description
-              "Degraded is to be interpretted along " +
-              "with Operational State..";
-          }
-          enum "not-installed" {
-            description
-              "Not-installed is equivalent to the " +
-              "IETF RFC 2883 ifOperStatus 'notPresent' state.";
-          }
-    }
-    description
-    "Availability of the Virtual Connection. The " +
-    "availability status type indicates that the " +
-    "Virtual Connection is functioning properly. " +
-    "May be mapped to RFC 2863, The Interfaces Group MIB " +
-    "IfOperstatus. Values for availability status include: inTest," +
-    " failed, powerOff, degraded, notInstalled.";
-    reference "[ITU-T X.731]. [MEF7.3], " +
-    		"[MEF15].";
-  }
-
-  typedef svc-endpoint-availability-type {
-    type enumeration {
-        enum "in-test" {
-            description
-              "In-test is equivalent to the " +
-              "IETF RFC 2883 ifOperStatus 'testing' state.";
-          }
-          enum "failed" {
-            description
-              "Failed is to be interpretted along " +
-              "with Operational State.";
-          }
-          enum "degraded" {
-            description
-              "Degraded is to be interpretted along " +
-              "with Operational State..";
-          }
-          enum "not-installed" {
-            description
-              "Not-installed is equivalent to the " +
-              "IETF RFC 2883 ifOperStatus 'notPresent' state.";
-          }
-    }
-    description
-    "Availability of the Service Endpoint. The " +
-    "availability status type indicates that the " +
-    "Service Endpoint is functioning properly. " +
-    "May be mapped to RFC 2863. The Interfaces Group MIB " +
-    "IfOperstatus. Values for availability status include: " +
-    "inTest, failed, powerOff, degraded, notInstalled.";
-    reference "[ITU-T X.731]. [MEF7.3], " +
-    		"[MEF15], [MEF7.3] Appendix II.";
-  }
-
-  typedef ext-if-physical-layer-type {
-    type enumeration {
-      enum "10M" {
-        description
-          "10M bits-per-second.";
-      }
-      enum "100M" {
-        description
-          "100M bits-per-second.";
-      }
-      enum "1G" {
-        description
-          "1G bits-per-second.";
-      }
-      enum "10G" {
-        description
-          "10G bits-per-second.";
-      }
-      enum "40G" {
-        description
-          "40G bits-per-second.";
-      }
-      enum "100G" {
-        description
-          "100G bits-per-second.";
-      }
-    }
-    description
-      "The maximum theoretical bandwidth for the phy.";
-    reference "MEF 7.3, MEF 6.2, MEF 10.3, MEF 26.1";
-  }
-
-  typedef device-role {
-	type enumeration {
-	  enum "ce" {
-	    description "Customer Edge(CE) Access Device";
-	  }
-	  enum "pe" {
-	    description "Provider Edge(PE) (AKA Aggregation) Router";
-	  }
-	  enum "p" {
-	    description "Provider Core Router";
-	  }
-	  enum "cgn" {
-		    description "Customer Gateway Natting Router";
-		  }
-	}
-    description
-	    "The role of the device. Is it a Customer Edge, " +
-        "Aggregation Router or a Core Router";
-  }  
-
 }

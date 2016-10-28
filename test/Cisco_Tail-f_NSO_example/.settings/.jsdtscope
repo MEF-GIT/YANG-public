@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry excluding="sn/model/|sn/|sn/form/" kind="src" path="packages/l3vpnui/webui"/>
+	<classpathentry excluding="model/|form/" kind="src" path="packages/l3vpnui/webui/sn"/>
+	<classpathentry kind="src" path="packages/l3vpnui/webui/sn/form"/>
+	<classpathentry kind="src" path="packages/l3vpnui/webui/sn/model"/>
+	<classpathentry excluding="sn/|sn/model/|sn/form/" kind="src" path="state/packages-in-use.cur/1/l3vpnui/webui"/>
+	<classpathentry excluding="model/|form/" kind="src" path="state/packages-in-use.cur/1/l3vpnui/webui/sn"/>
+	<classpathentry kind="src" path="state/packages-in-use.cur/1/l3vpnui/webui/sn/form"/>
+	<classpathentry kind="src" path="state/packages-in-use.cur/1/l3vpnui/webui/sn/model"/>
+	<classpathentry excluding="sn/model/|sn/form/|sn/" kind="src" path="state/packages-in-use/1/l3vpnui/webui"/>
+	<classpathentry excluding="model/|form/" kind="src" path="state/packages-in-use/1/l3vpnui/webui/sn"/>
+	<classpathentry kind="src" path="state/packages-in-use/1/l3vpnui/webui/sn/form"/>
+	<classpathentry kind="src" path="state/packages-in-use/1/l3vpnui/webui/sn/model"/>
+	<classpathentry kind="con" path="org.eclipse.wst.jsdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="output" path=""/>
+</classpath>

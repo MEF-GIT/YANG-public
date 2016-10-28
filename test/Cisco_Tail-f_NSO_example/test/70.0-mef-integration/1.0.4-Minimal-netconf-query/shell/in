@@ -1,0 +1,34 @@
+#!/bin/sh
+
+NCUSER=admin
+NCPASSWD=admin
+NCHOST=localhost
+NCPORT=2022
+
+# echo Common GET Config ALLs -- Takes too long
+#echo ... cmd-get-config-all.xml
+#netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 -s pretty ../common/netconf/cmd-get-config-all.xml
+
+echo MEF GET Config ALLs
+echo ... cmd-get-config-mef-all.xml
+netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 -s pretty ../mef/netconf/cmd-get-config-mef-all.xml
+echo ... cmd-get-config-mef-all-with-defaults.xml
+netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 -s pretty ../mef/netconf/cmd-get-config-mef-all-with-defaults.xml
+echo ... cmd-get-config-mef-topology-with-defaults.xml
+netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 -s pretty ../mef/netconf/cmd-get-config-mef-topology-with-defaults.xml
+echo ... cmd-get-config-mef-global-with-defaults.xml
+netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 -s pretty ../mef/netconf/cmd-get-config-mef-global-with-defaults.xml
+echo ... cmd-get-config-mef-epl01-with-defaults.xml
+netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 -s pretty ../mef/netconf/cmd-get-config-mef-epl01-with-defaults.xml
+echo ... cmd-get-config-mef-eplan01-with-defaults.xml
+netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 -s pretty ../mef/netconf/cmd-get-config-mef-eplan01-with-defaults.xml
+echo ... cmd-get-config-mef-eptree01-with-defaults.xml
+netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 -s pretty ../mef/netconf/cmd-get-config-mef-eptree01-with-defaults.xml
+echo ... cmd-get-config-mef-evpl01-with-defaults.xml
+netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 -s pretty ../mef/netconf/cmd-get-config-mef-evpl01-with-defaults.xml
+echo ... cmd-get-config-mef-evplan01-with-defaults.xml
+netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 -s pretty ../mef/netconf/cmd-get-config-mef-evplan01-with-defaults.xml
+echo ... cmd-get-config-mef-evptree01-with-defaults.xml
+netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 -s pretty ../mef/netconf/cmd-get-config-mef-evptree01-with-defaults.xml
+#echo ... cmd-get-config-epl01-candidate.xml -- We disable candidate access via NSO Northbound
+#netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 -s pretty ../mef/netconf/cmd-get-config-epl01-candidate.xml

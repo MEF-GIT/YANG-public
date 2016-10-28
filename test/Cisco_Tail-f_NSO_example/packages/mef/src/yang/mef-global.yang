@@ -78,15 +78,16 @@ module mef-global {
     description
       "First set of updates to better align with
        MEF Common Information Model names";
-    reference "EVC Ethernet Services Definitions YANG Modules 
-    	      (MEF XX), TBD";
+    reference
+      "EVC Ethernet Services Definitions YANG Modules 
+       (MEF XX), TBD";
   }
-     
   revision 2015-05-26 {
     description
       "Formal Project Review Draft 1.";
-    reference "EVC Ethernet Services Definitions YANG Modules 
-    		(MEF XX), TBD";
+    reference
+      "EVC Ethernet Services Definitions YANG Modules 
+       (MEF XX), TBD";
   }
 
   container mef-global {
@@ -110,18 +111,18 @@ module mef-global {
         leaf user-label {
           type mef-types:identifier45;
           description
-            "This attribute is a friendly name for this specific " +
-            "Bandwidth Profile.";
+            "This attribute is a friendly name for this " +
+            "specific Bandwidth Profile.";
         }
         leaf cir {
           type mef-types:bwp-cir-type;
           units "kbits-per-sec";
           default "0";
           description
-            "This attribute identifies the Committed Information " +
-            "Rate (CIR) in Kilobits per second for one " +
-            "direction of an ETH EVC. If the value is 0, then " +
-            "no guarantee is assumed.";
+            "This attribute identifies the Committed " +
+            "Information Rate (CIR) in Kilobits per second " +
+            "for one direction of an ETH EVC. If the value is 0," +
+            " then no guarantee is assumed.";
         }
         leaf cir-max {
           type mef-types:bwp-cir-type;
@@ -141,22 +142,22 @@ module mef-global {
             "This attribute identifies the Committed Burst Size " +
             "(CBS) in bytes for one direction of an ETH EVC. " +
             "This parameter limits the maximum number of bytes " +
-            "available for a burst of Service Frames sent at " +
-            "the UNI line rate that will be declared Green " +
-            "by the Bandwidth Profile. If this value is 0, " +
-            "then no limit is assumed.";
+            "available for a burst of Service Frames sent at the " +
+            "UNI line rate that will be declared Green by the " +
+            "Bandwidth Profile. If this value is 0, then no limit " +
+            "is assumed.";
         }
         leaf eir {
           type mef-types:bwp-eir-type;
           units "kbits-per-sec";
           default "0";
           description
-            "This attribute identifies the Excess Information " +
-            "Rate (EIR) in Kilobits per second for one " +
-            "direction of an ETH EVC. This parameter limits the " +
-            "average rate in bits per second of Service Frames " +
-            "that will be declared Yellow by the Bandwidth " +
-            "Profile. If this value is 0, then no limit is assumed.";
+            "This attribute identifies the Excess Information Rate" +
+            " (EIR) in Kilobits per second for one direction of " +
+            "an ETH EVC. This parameter limits the average rate " +
+            "in bits per second of Service Frames that will be " +
+            "declared Yellow by the Bandwidth Profile. If this " +
+            "value is 0, then no limit is assumed.";
         }
         leaf eir-max {
           type mef-types:bwp-eir-type;
@@ -164,11 +165,11 @@ module mef-global {
           default "0";
           description
             "This attribute identifies the Maximum Excess " +
-            "Information Rate (EIR) in Kilobits per second for " +
-            "one direction of an ETH EVC. This parameter " +
-            "limits the rate of tokens added to the excess " +
-            "token bucket. If this value is 0, then no " +
-            "limit is assumed.";
+            "Information Rate (EIR) in Kilobits per second" +
+            " for one direction of an ETH EVC. This parameter" +
+            " limits the rate of tokens added to the excess " +
+            "token bucket. If this value is 0, then no limit " +
+            "is assumed.";
         }
         leaf ebs {
           type mef-types:bwp-ebs-type;
@@ -176,571 +177,390 @@ module mef-global {
           default "0";
           description
             "This attribute identifies the Excess Burst Size " +
-            "(EBS) in bytes for one direction of an ETH EVC. " +
-            "This parameter limits the maximum number of " +
+            "(EBS) in bytes for one direction of an ETH EVC." +
+            " This parameter limits the maximum number of " +
             "bytes available for a burst of Service Frames " +
-            "sent at the UNI line rate that will be " +
-            "declared Yellow by the Bandwidth Profile. " +
-            "If this value is 0, then no limit is assumed.";
+            "sent at the UNI line rate that will be declared " +
+            "Yellow by the Bandwidth Profile. If this value " +
+            "is 0, then no limit is assumed.";
         }
         leaf coupling-enabled {
           type boolean;
           default "false";
           description
             "The Per Bandwidth Profile Coupling Flag (CF) " +
-            "attribute. This parameter determines whether " +
-            "or not overflow tokens not used for Service " +
-            "Frames declared Green can be used as Yellow tokens.";
+            "attribute. " +
+            "This parameter determines whether or not overflow " +
+            "tokens not used for Service Frames declared Green " +
+            "can be used as Yellow tokens.";
           reference "[MEF10.3] Section 12.1 [R149].";
         }
         leaf color-mode {
           type mef-types:bwp-color-mode-type;
           default "color-blind";
           description
-            "This attribute describes the color mode (CM) to " +
-            "be applied as 'color-blind mode' or " +
-            "'color-aware mode'.";
+            "This attribute describes the color mode (CM) to be " +
+            "applied as 'color-blind mode' or 'color-aware mode'.";
           reference "[MEF10.3] Section 10.3, [R151].";
         }
         leaf coupling-flag {
           type mef-types:bwp-coupling-flag-type;
-          default "yellow-eir-only";
+          default "false";
           description
-            "The optional coupling flag (CF) attribute, " +
-            "describes if yellow frames will be admitted " +
-            "if unused bandwidth is available. When CF is " +
-            "set to \"yellow-eir-only\", the volume of the " +
-            "yellow service frames admitted to the network " +
-            "cannot exceed EIR. When CF is set " +
-            "to \"yellow-eir-plus-cir\", the volume of the " +
-            "yellow service frames admitted to the network is " +
-            "bounded by CIR + EIR depending on volume of the " +
-            "offered green Service Frames. In both cases the " +
-            "burst size of the yellow service frames " +
-            "admitted to the network is bounded by EBS.";
+            "The optional coupling flag (CF) attribute, describes " +
+            "if yellow frames will be admitted if unused bandwidth" +
+            " is available. When CF is set to false (\"yellow-eir-only\")," +
+            " the volume of the yellow service frames admitted to" +
+            " the network cannot exceed EIR. When CF is set to " +
+            "\"yellow-eir-plus-cir\", the volume of the yellow " +
+            "service frames admitted to the network is bounded " +
+            "by CIR + EIR depending on volume of the offered " +
+            "green Service Frames. In both cases the burst " +
+            "size of the yellow service frames admitted to the " +
+            "network is bounded by EBS.";
           reference "[MEF23.1] Section 8.1.";
         }
       }
     }
-    container svc-providers {
-      presence "Use non-default Service Providers";
-      description
-        "Global Service Providers List.";
-      list svc-provider {
-        key "sp-id";
-        description
-          "Service Provider Identifier.";
-        leaf sp-id {
-          type mef-types:svc-provider-type;
-          description
-            "The Service Provider ID identifies a unique SP that " +
-            "contains multiple CENs.";
-          reference "[MEF10.3] Section 7.";
-        }
-      }
-    }
-    container cens {
-      presence "Use non-default CEN";
-      description
-        "Global CENs List.";
-      list cen {
-        must "(not(/mef-global/svc-providers) and " +
-        		"not(./sp-id)) or " +
-        		"(/mef-global/svc-providers and ./sp-id)" {
-          error-message "If the Service Providers list has been " +
-          		"populated, a Service Provider ID must be " +
-          		"configured for a CEN.";
-          description
-            "A CEN sees a single Service Provider. This must " +
-            "statement is effectively a 'mandatory true' when " +
-            "the Global Service Providers list is being used.";
-        }
-        key "cen-id";
-        description
-          "List of CENs.";
-        leaf cen-id {
-          type mef-types:cen-type;
-          description
-            "The CEN ID identifies a specific Carrier Ethernet " +
-            "Network belong to a Service Provider.";
-          reference "[MEF10.3] Section 7. The CEN ID must be " +
-          		"unique for this Service Provider.";
-        }
-        leaf sp-id {
-          when "/mef-global:mef-global/mef-global:svc-providers" {
-            description
-              "Service Provider Identifier associated with " +
-              "this CEN.";
-          }
-          type leafref {
-            path "/mef-global:mef-global/mef-global:" +
-            		"svc-providers/mef-global:svc-provider/" +
-            		"mef-global:sp-id";
-          }
-          description
-            "The Service Provider ID must be globally unique " +
-            "as all CENs and Subscribers must be supported " +
-            "by a specific Service Provider(SP). A SP can " +
-            "support multiple CENs.";
-          reference "[MEF10.3] Section 7.";
-        }
-      }
-    }
     container slss {
-      presence "Use non-default SLS";
       description
         "The technical specification of the service level being " +
         "offered by the Service Provider to the Subscriber is " +
         "defined to be the Service Level Specification (SLS).";
       list sls {
-        must "(not(/mef-global/svc-providers) and " +
-        		"not(./sp-id)) or " +
-        		"(/mef-global/svc-providers and ./sp-id)" {
-          error-message "If the Service Providers list has been " +
-          		"populated, a Service Provider ID must be " +
-          		"configured for an SLS.";
-          description
-            "An SLS sees a single Service Provider. This must " +
-            "statement is effectively a 'mandatory true' when " +
-            "the Global Service Providers list is being used.";
-        }
         key "sls-id";
         description
           "Global Service Level Specification(SLS) List.";
-        container perf-objs {
-          description
-            "Performance Objectives for this SLS.";
-          leaf pm-time-interval {
-            type uint64;
-            units "seconds";
-            mandatory true;
-            description
-              "Performance Metric(PM): Time Interval.";
-          }
-          leaf pm-time-interval-increment {
-            when "(count(../perf-obj[pm-type = " +
-            		"'one-way-resiliency-performance-hli']) > 0) " +
-            		"or (count(../perf-obj" +
-            		"[pm-type = " +
-            		"'one-way-resiliency-performance-chli']) > 0)" +
-            		" or (count(../perf-obj" +
-            		"[pm-type = " +
-            		"'one-way-availability-performance']) > 0) " +
-            		"or (count(../perf-obj[pm-type = " +
-            		"'one-way-multiple-evc-group-availability-" +
-            		"performance']) > 0) or " +
-            		"(count(../perf-obj[pm-type = " +
-            		"'one-way-group-availability-" +
-            		"performance']) > 0)" {
-              description
-                "This PM Metric only applies to specific " +
-                "Performance Objective Types.";
-            }
-            type uint64;
-            units "ms";
-            mandatory true;
-            description
-              "A time interval much smaller than pm-time-interval.";
-          }
-          leaf unavail-flr-threshold-pp {
-            when "(count(../perf-obj[pm-type = " +
-            		"'one-way-resiliency-performance-hli']) > 0) " +
-            		"or " +
-            		"(count(../perf-obj[pm-type = " +
-            		"'one-way-resiliency-performance-chli']) > 0) " +
-            		"or " +
-            		"(count(../perf-obj[pm-type = " +
-            		"'one-way-availability-performance']) > 0) " +
-            		"or " +
-            		"(count(../perf-obj[pm-type = " +
-            		"'one-way-multiple-evc-group-availability-" +
-            		"performance']) > 0) or " +
-            		"(count(../perf-obj[pm-type = " +
-            		"'one-way-group-availability-" +
-            		"performance']) > 0)" {
-              description
-                "This PM Metric only applies to specific " +
-                "Performance Objective Types.";
-            }
-            type mef-types:simple-percent;
-            units "percent";
-            mandatory true;
-            description
-              "Unavailability frame loss ratio threshold " +
-              "expressed in percentage.";
-          }
-          leaf consecutive-small-time-intervals {
-            when "(count(../perf-obj[pm-type = " +
-            		"'one-way-availability-performance']) > 0) or " +
-            		"(count(../perf-obj[pm-type = " +
-            		"'one-way-multiple-evc-group-availability-" +
-            		"performance']) > 0) or " +
-            		"(count(../perf-obj[pm-type = " +
-            		"'one-way-group-availability-" +
-            		"performance']) > 0)" {
-              description
-                "This PM Metric only applies to specific " +
-                "Performance Objective Types.";
-            }
-            type uint64;
-            mandatory true;
-            description
-              "Number of consecutive small time intervals " +
-              "to assess.";
-          }
-          list perf-obj {
-            key "pm-type pm-id";
-            unique "pm-type cos-name fd-pp fd-range-pp " +
-            		"fd-perf-obj fd-range-perf-obj " +
-            		"fd-mean-perf-obj ifdv-pp ifdv-pair-interval " +
-            		"ifdv-perf-obj flr-perf-obj avail-pp " +
-            		"hli-perf-obj " +
-            		"chli-consecutive-small-time-intervals " +
-            		"chli-perf-obj min-uni-pairs-avail gp-avail-pp";
-            description
-              "For any given SLS, performance objectives related " +
-              "to the Performance Metrics may or may not be " +
-              "specified. No functionally duplicated " +
-              "Performance Objectives are allowed.";
-            leaf pm-type {
-              type mef-types:performance-metric-type;
-              description
-                "Performance Metric Type.";
-              reference "[MEF10.3] Section 8.8.";
-            }
-            leaf pm-id {
-              type mef-types:identifier45;
-              description
-                "This is a friendly name for specific " +
-                "performance profile.";
-            }
-            leaf cos-name {
-              type leafref {
-                path "/mef-global:mef-global/profiles/" +
-                		"cos-names/cos-name/name";
-              }
-              mandatory true;
-              description
-                "CoS Name Identifier.";
-            }
-            leaf fd-pp {
-              when "(../pm-type = 'one-way-frame-delay-" +
-              		"performance')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type mef-types:simple-percent;
-              units "percent";
-              mandatory true;
-              description
-                "Frame Delay Performance Percentile.";
-            }
-            leaf fd-range-pp {
-              when "(../pm-type = 'one-way-frame-delay-range-" +
-              		"performance')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type mef-types:simple-percent;
-              units "percent";
-              mandatory true;
-              description
-                "Frame Delay Range Performance Percentile.";
-            }
-            leaf fd-perf-obj {
-              when "(../pm-type = 'one-way-frame-delay-" +
-              		"performance')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type uint64;
-              units "ms";
-              mandatory true;
-              description
-                "Frame Delay Performance Objective.";
-            }
-            leaf fd-range-perf-obj {
-              when "(../pm-type = 'one-way-frame-delay-range-" +
-              		"performance')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type uint64;
-              units "ms";
-              mandatory true;
-              description
-                "Frame Delay Range Performance Objective.";
-            }
-            leaf fd-mean-perf-obj {
-              when "(../pm-type = 'one-way-mean-frame-delay-" +
-              		"performance')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type uint64;
-              units "ms";
-              mandatory true;
-              description
-                "Frame Delay Mean Performance Objective.";
-            }
-            leaf ifdv-pp {
-              when "(../pm-type = 'one-way-inter-frame-delay-" +
-              		"variation-performance')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type mef-types:simple-percent;
-              units "percent";
-              mandatory true;
-              description
-                "Inter-Frame Delay Variation Performance " +
-                "Percentile.";
-            }
-            leaf ifdv-pair-interval {
-              when "(../pm-type = 'one-way-inter-frame-delay-" +
-              		"variation-performance')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type mef-types:simple-percent;
-              units "ms";
-              mandatory true;
-              description
-                "Inter-Frame Delay Variation Performance " +
-                "Separation / Pair Interval.";
-            }
-            leaf ifdv-perf-obj {
-              when "(../pm-type = 'one-way-inter-frame-delay-" +
-              		"variation-performance')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type uint64;
-              units "ms";
-              mandatory true;
-              description
-                "Inter-Frame Delay Variation Performance Objective.";
-            }
-            leaf flr-perf-obj {
-              when "(../pm-type = 'one-way-frame-loss-ratio-" +
-              		"performance')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type uint64;
-              units "ms";
-              mandatory true;
-              description
-                "Frame Loss Ratio Performance Objective.";
-            }
-            leaf avail-pp {
-              when "(../pm-type = 'one-way-availability-" +
-              		"performance')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type mef-types:simple-percent;
-              units "percent";
-              mandatory true;
-              description
-                "Availability Performance Objective expressed " +
-                "as a percentage.";
-            }
-            leaf hli-perf-obj {
-              when "(../pm-type = 'one-way-resiliency-" +
-              		"performance-hli')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type uint64;
-              mandatory true;
-              description
-                "HLI Performance Objective expressed as an integer.";
-            }
-            leaf chli-consecutive-small-time-intervals {
-              when "(../pm-type = 'one-way-resiliency-" +
-              		"performance-chli')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type uint64;
-              must "not(../../consecutive-small-time-intervals) " +
-              		"or " +
-              		"(. < ../../consecutive-small-time-" +
-              		"intervals)" {
-                error-message "The value of chli-consecutive-" +
-                		"small-time-intervals must be less " +
-                		"than consecutive-small-time-intervals " +
-                		"(where p < n) if both are defined.";
-                description
-                  "The value of chli-consecutive-small-time-" +
-                  "intervals must be less than consecutive-" +
-                  "small-time-intervals (where p < n) if " +
-                  "both are defined.";
-              }
-              mandatory true;
-              description
-                "Number of consecutive small time intervals " +
-                "for assessing CHLI.";
-              reference "[MEF10.3] Table 10.";
-            }
-            leaf chli-perf-obj {
-              when "(../pm-type = 'one-way-resiliency-" +
-              		"performance-chli')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type uint64;
-              mandatory true;
-              description
-                "Consecutive HLI Performance Objective " +
-                "expressed as an integer.";
-            }
-            leaf min-uni-pairs-avail {
-              when "(../pm-type = 'one-way-multiple-evc-group-" +
-              		"availability-performance') or " +
-              		"(../pm-type = 'one-way-group-availability-" +
-              		"performance')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type uint64;
-              mandatory true;
-              description
-                "Minimum number of ordered UNI pairs that are " +
-                "to be available in the EVC.";
-            }
-            leaf gp-avail-pp {
-              when "(../pm-type = 'one-way-multiple-evc-group-" +
-              		"availability-performance') or " +
-              		"(../pm-type = 'one-way-group-availability-" +
-              		"performance')" {
-                description
-                  "This PM Metric only applies to specific " +
-                  "Performance Objective Types.";
-              }
-              type mef-types:simple-percent;
-              units "percent";
-              mandatory true;
-              description
-                "Group Availability Performance Objective " +
-                "expressed as a percentage.";
-            }
-          }
-        }
         leaf sls-id {
-          type mef-types:cen-type;
+          type mef-types:sls-type;
           description
             "The SLS ID identifies a specific Service Level " +
             "Specification offered by a Service Provider.";
           reference "[MEF10.3] Section 8.8. The SLS ID must " +
           		"be unique for this Service Provider.";
         }
-        leaf sp-id {
-          when "/mef-global:mef-global/mef-global:svc-" +
-          		"providers" {
+        leaf time-interval {
+          type uint64;
+          units "seconds";
+          mandatory true;
+          description
+            "Performance Metric(PM): Time Interval (seconds).";
+        }
+        leaf start-time {
+          type string {
+            length "min..255";
+          }
+          mandatory true;
+          description
+            "Performance Metric(PM): Start DateTime for " +
+            "Time Intervals (YYYYMMDDHHHHZ)";
+        }
+        container pm-cos-name-entries {
+          description
+            "Performance Metrics for this SLS.";
+          list pm-cos-name-entry {
+            key "cos-name";
             description
-              "Service Provider Identifier associated " +
-              "with this SLS.";
+              "List of Performance Metrics based SLS entries " +
+              "by Class of Service Names";
+            leaf cos-name {
+              type leafref {
+                path "/mef-global:mef-global/profiles/cos-names" +
+                		"/cos-name/name";
+              }
+              description
+                "CoS Name Identifier.";
+            }
+            leaf delta-t {
+              type uint64;
+              units "ms";
+              mandatory true;
+              description
+                "A time interval much smaller than " +
+                "pm-time-interval.";
+            }
+            leaf threshold-c {
+              type mef-types:simple-percent;
+              units "percent";
+              mandatory true;
+              description
+                "Unavailability frame loss ratio threshold " +
+                "expressed in percentage.";
+            }
+            leaf consecutive-interval-n {
+              type uint64;
+              mandatory true;
+              description
+                "Number of consecutive small time intervals " +
+                "to assess.";
+            }
+            container pm-entries {
+              description
+                "Performance Metrics for this SLS.";
+              list pm-entry {
+                key "pm-entry-id";
+                description
+                  "For any given SLS, performance objectives " +
+                  "related to the Performance Metrics may or " +
+                  "may not be specified. No functionally " +
+                  "duplicated Performance Objectives are allowed.";
+                leaf pm-entry-id {
+                  type mef-types:identifier45;
+                  description
+                    "This is a friendly name for specific " +
+                    "performance profile.";
+                }
+                choice one-way-performance {
+                  description
+                    "Choice of different One-Way Performance " +
+                    "Objectives";
+                  case fd {
+                    container one-way-frame-delay-pm {
+                      presence "Frame Delay Configured";
+                      description
+                      "one-way-frame-delay-pm";
+                      leaf pm-percentile {
+                        type mef-types:simple-percent;
+                        units "percent";
+                        mandatory true;
+                        description
+                          "Frame Delay Performance Percentile.";
+                      }
+                      leaf pm-objective {
+                        type uint64;
+                        units "ms";
+                        mandatory true;
+                        description
+                          "Frame Delay Performance Objective.";
+                      }
+                    }
+                  }
+                  case mfd {
+                    container one-way-mean-frame-delay-pm {
+                      presence "Mean FD Configured";
+                      description
+                      "one-way-mean-frame-delay-pm";
+                      leaf pm-objective {
+                        type uint64;
+                        units "ms";
+                        mandatory true;
+                        description
+                          "Frame Delay Mean Performance Objective.";
+                      }
+                    }
+                  }
+                  case fdr {
+                    container one-way-frame-delay-range-pm {
+                      presence "FDR Configured";
+                      description
+                      "one-way-frame-delay-range-pm";
+                      leaf pm-percentile {
+                        type mef-types:simple-percent;
+                        units "percent";
+                        mandatory true;
+                        description
+                          "Frame Delay Range Performance " +
+                          "Percentile.";
+                      }
+                      leaf pm-objective {
+                        type uint64;
+                        units "ms";
+                        mandatory true;
+                        description
+                          "Frame Delay Range Performance " +
+                          "Objective.";
+                      }
+                    }
+                  }
+                  case ifdv {
+                   container one-way-inter-frame-delay-variation-pm {
+                      presence "IFDV Configured";
+                      description
+                      "one-way-inter-frame-delay-variation-pm";
+                      leaf pm-percentile {
+                        type mef-types:simple-percent;
+                        units "percent";
+                        mandatory true;
+                        description
+                          "Inter-Frame Delay Variation" +
+                          "Performance Percentile.";
+                      }
+                      leaf frame-pair-separation {
+                        type uint64;
+                        units "ms";
+                        mandatory true;
+                        description
+                          "Inter-Frame Delay Variation" +
+                          "Performance Separation / Pair Interval.";
+                      }
+                      leaf pm-objective {
+                        type uint64;
+                        units "ms";
+                        mandatory true;
+                        description
+                          "Inter-Frame Delay Variation " +
+                          "Performance Objective.";
+                      }
+                    }
+                  }
+                  case flr {
+                    container one-way-frame-loss-ratio-pm {
+                      presence "one-way-frame-loss-ratio-pm " +
+                      		"Configured";
+                      description
+                      "one-way-frame-loss-ratio-pm";
+                      leaf pm-objective {
+                        type uint64;
+                        units "ms";
+                        mandatory true;
+                        description
+                          "Frame Loss Ratio Performance " +
+                          "Objective.";
+                      }
+                    }
+                  }
+                  case availability {
+                    container one-way-availability-pm {
+                      presence "Availability Configured";
+                      description
+                      "one-way-availability-pm";
+                      leaf pm-objective {
+                        type uint64;
+                        mandatory true;
+                        description
+                          "Availability Performance Metric " +
+                          "Objective";
+                      }
+                    }
+                  }
+                  case hli {
+                    container one-way-high-loss-interval-pm {
+                      presence "HLI Configured";
+                      description
+                      "one-way-high-loss-interval-pm";
+                      leaf pm-objective {
+                        type uint64;
+                        mandatory true;
+                        description
+                          "HLI Performance Objective expressed " +
+                          "as an integer.";
+                      }
+                    }
+                  }
+                  case chli {
+                container one-way-consecutive-high-loss-interval-pm {
+                      presence "CHLI Configured";
+                      description
+                      "one-way-consecutive-high-loss-interval-pm";
+                      leaf consecutive-number-p {
+                        type uint64;
+                        must "not(../../../../" +
+                        		"consecutive-interval-n) " +
+                        		"or (. < ../../../../" +
+                        		"consecutive-interval-n)" {
+                          error-message "The value of " +
+                          		"chli-consecutive-small-" +
+                          		"time-intervals " +
+                          		"must be less than " +
+                          		"consecutive-small-time-" +
+                          		"intervals " +
+                          		"(where p < n) if both are defined.";
+                          description
+                            "The value of " +
+                            "chli-consecutive-small-time-" +
+                            "intervals must be less than " +
+                            "consecutive-small-time-intervals " +
+                            "(where p < n) if both are defined.";
+                        }
+                        mandatory true;
+                        description
+                          "Number of consecutive small time " +
+                          "intervals for assessing CHLI.";
+                        reference "[MEF10.3] Table 10.";
+                      }
+                      leaf pm-objective {
+                        type uint64;
+                        mandatory true;
+                        description
+                          "Consecutive HLI Performance " +
+                          "Objective expressed as an integer.";
+                      }
+                    }
+                  }
+                  case cpm {
+                    container one-way-composite-pm {
+                      presence "one-way-composite-pm Configured";
+                      description
+                        "one-way-composite-pm";
+                      leaf cpi-threshold-u {
+                        type mef-types:simple-percent;
+                        units "percent";
+                        mandatory true;
+                        description
+                        "cpi-threshold-u";
+                      }
+                      leaf frame-loss-indicator {
+                        type boolean;
+                        mandatory true;
+                        description
+                        "frame-loss-indicator";
+                      }
+                      leaf frame-delay-indicator {
+                        type boolean;
+                        mandatory true;
+                        description
+                        "frame-delay-indicator";
+                      }
+                      leaf ifdv-indicator {
+                        type boolean;
+                        mandatory true;
+                        description
+                        "ifdv-indicator";
+                      }
+                      leaf one-way-fd-threshold {
+                        type uint64;
+                        mandatory true;
+                        description
+                        "one-way-fd-threshold";
+                      }
+                      leaf one-way-ifdv-threshold {
+                        type uint64;
+                        mandatory true;
+                        description
+                          "one-way-ifdv-threshold";
+                      }
+                      leaf pm-objective {
+                        type uint64;
+                        mandatory true;
+                        description
+                          "Composite Performance Metric Objective";
+                      }
+                    }
+                  }
+                  case group-avail {
+                    container one-way-group-availability-pm {
+                      presence "Group Availability Configured";
+                      description "one-way-group-availability-pm";
+                      leaf min-number-of-if-to-be-available {
+                        type uint64;
+                        mandatory true;
+                        description
+                          "Minimum number of ordered UNI pairs " +
+                          "that are to be available in the EVC.";
+                      }
+                      leaf pm-objective {
+                        type uint64;
+                        mandatory true;
+                        description
+                          "Group Availability Performance " +
+                          "Objective expressed as a percentage.";
+                      }
+                    }
+                  }
+                }
+              }
+            }
           }
-          type leafref {
-            path "/mef-global:mef-global/mef-global:" +
-            		"svc-providers/mef-global:svc-provider/" +
-            		"mef-global:sp-id";
-          }
-          description
-            "The Service Provider ID must be globally unique " +
-            "as all Subscriber SLSs must be supported by " +
-            "a specific Service Provider(SP). A SP can " +
-            "support multiple SLSs.";
-          reference "[MEF10.3] Section 7.";
-        }
-      }
-    }
-    container subscribers {
-      presence "Use non-default Subscribers.";
-      description
-        "Subscribers List (Global).";
-      list subscriber {
-        must "(not(/mef-global/svc-providers) and not(./sp-id)) " +
-        		"or " +
-        		"(/mef-global/svc-providers and ./sp-id)" {
-          error-message "If the Service Providers list has been " +
-          		"populated, a Service Provider ID must be " +
-          		"configured for a Subscriber.";
-          description
-            "A Subscriber sees a single Service Provider. " +
-            "This must statement is effectively a " +
-            "'mandatory true' when the Global Service " +
-            "Providers list is being used.";
-        }
-        must "(not(/mef-global/cens) and not(./cen-id)) or " +
-        		"(/mef-global/cens and ./cen-id)" {
-          error-message "If the CENs list has been populated, " +
-          		"a CEN ID must be configured for a Subscriber.";
-          description
-            "[MEF103] A Subscriber sees a single CEN from a " +
-            "SP. This must statement is effectively a " +
-            "'mandatory true' when the Global CENs list " +
-            "is being used.";
-        }
-        key "sub-id";
-        description
-          "Global Subscriber List.";
-        leaf sub-id {
-          type mef-types:subscriber-type;
-          description
-            "The Subscriber ID identifies a unique Subscriber to " +
-            "this CEN. Note that you can have the same " +
-            "Subscriber as part of multiple Service Providers.";
-          reference "[MEF10.3] Section 7";
-        }
-        leaf sp-id {
-          when "/mef-global:mef-global/mef-global:svc-providers" {
-            description
-              "Only configure when the Global Service Providers " +
-              "list has been populated.";
-          }
-          type leafref {
-            path "/mef-global:mef-global/mef-global:" +
-            		"svc-providers/mef-global:" +
-            		"svc-provider/mef-global:sp-id";
-          }
-          description
-            "The Service Provider ID must be globally unique " +
-            "as all CENs and Subscribers must be supported by " +
-            "a specific Service Provider(SP). A SP can " +
-            "support multiple CENs.";
-          reference "[MEF10.3] Section 7.";
-        }
-        leaf cen-id {
-          when "/mef-global:mef-global/mef-global:cens" {
-            description
-              "Only configure when the Global CENs list " +
-              "has been populated.";
-          }
-          type leafref {
-            path "/mef-global:mef-global/mef-global:cens/" +
-            		"mef-global:cen/mef-global:cen-id";
-          }
-          description
-            "A CEN is defined as a network from a " +
-            "Service Provider (SP). ";
-          reference "[MEF10.3] Section 7.";
         }
       }
     }
@@ -751,8 +571,8 @@ module mef-global {
         "Global Profiles.";
       container cos-names {
         description
-          "CoS Names (AKA CoS Labels) agreed to between " +
-          "the Service Provider and the Subscribers.";
+          "CoS Names (AKA CoS Labels) agreed to between the " +
+          "Service Provider and the Subscribers.";
         list cos-name {
           key "name";
           description
@@ -791,8 +611,8 @@ module mef-global {
       }
       container l2cp-cos {
         description
-          "Ingress Layer 2 Control Protocol (L2CP) " +
-          "Configuration with CoS Names.";
+          "Ingress Layer 2 Control Protocol (L2CP) Configuration" +
+          " with CoS Names.";
         list l2cp-profile {
           key "id";
           description
@@ -817,93 +637,6 @@ module mef-global {
               leaf peering-proto-name {
                 type mef-types:identifier45;
                 description
-                  "This attribute is a friendly name for " +
-                  "the Protocol to be Peered. It is optional.";
-              }
-              leaf protocol {
-                type mef-types:l2cp-peering-protocol-type;
-                default "ethertype";
-                description
-                  "The Protocol is one of Ethertype, LLC, or Other.";
-              }
-              leaf protocol-id {
-                type yang:hex-string;
-                description
-                  "The Protocol Identifier is the protocol " +
-                  "specific value associated with the " +
-                  "protocol in a colon separated list of " +
-                  "hex values (ie. 88:EE or 82).";
-              }
-              leaf cos-name {
-                type leafref {
-                  path "/mef-global:mef-global/profiles/" +
-                  		"cos-names/cos-name/name";
-                }
-                description
-                  "This attribute identifies the name of " +
-                  "a class of service (CoS).";
-              }
-              leaf handling {
-                type mef-types:l2cp-handling-type;
-                description
-                  "The handling selection indicates whether " +
-                  "the L2CP Service Frames identified by " +
-                  "this list entry should be passed, " +
-                  "discarded, or peered.";
-                reference "[MEF45] Section 8.5.";
-              }
-              leaf-list subtype {
-                type yang:hex-string;
-                max-elements "255";
-                description
-                  "L2CP Subtype for this Destination " +
-                  "MAC's Protocol ID.";
-              }
-            }
-          }
-          leaf id {
-            type mef-types:identifier45;
-            description
-              "The L2CP ID identifies a specific profile for " +
-              "Layer 2 Control Processing.";
-            reference "[MEF10.3] Section 8.5.";
-          }
-          leaf user-label {
-            type mef-types:identifier45;
-            description
-              "This attribute is a friendly name for the " +
-              "specific L2CP profile.";
-          }
-        }
-      }
-      container l2cp-eec {
-        description
-          "Egress Layer 2 Control Protocol (L2CP) Configuration " +
-          "with EEC Names.";
-        list l2cp-profile {
-          key "id";
-          description
-            "A list of global profiles for Layer 2 Control " +
-            "Processing.";
-          reference "[MEF10.3] Section 8.5.";
-          container l2cps {
-            description
-              "Layer 2 Control Protocol (L2CP) Profiles for " +
-              "Egress Equivalence Classes.";
-            list l2cp {
-              key "dest-mac-addr peering-proto-name";
-              description
-                "L2CP Destination MAC Address.";
-              reference "[MEF10.3] Section 8.5.";
-              leaf dest-mac-addr {
-                type yang:mac-address;
-                description
-                  "The Destination MAC Address for the " +
-                  "Layer 2 Control Protocol.";
-              }
-              leaf peering-proto-name {
-                type mef-types:identifier45;
-                description
                   "This attribute is a friendly name for the " +
                   "Protocol to be Peered. It is optional.";
               }
@@ -911,33 +644,33 @@ module mef-global {
                 type mef-types:l2cp-peering-protocol-type;
                 default "ethertype";
                 description
-                  "The Protocol is one of Ethertype, LLC, or Other.";
+                  "The Protocol is one of Ethertype, LLC, " +
+                  "or Other.";
               }
               leaf protocol-id {
                 type yang:hex-string;
                 description
                   "The Protocol Identifier is the protocol " +
-                  "specific " +
-                  "value associated with the protocol in a " +
-                  "colon separated list of hex values " +
+                  "specific value associated with the protocol " +
+                  "in a colon separated list of hex values " +
                   "(ie. 88:EE or 82).";
               }
-              leaf eec-name {
+              leaf cos-name {
                 type leafref {
-                  path "/mef-global:mef-global/profiles/" +
-                  		"eec-names/eec-name/name";
+                  path "/mef-global:mef-global/profiles/cos-names" +
+                  		"/cos-name/name";
                 }
                 description
                   "This attribute identifies the name of a " +
-                  "Egress Equivalence Class (EEC).";
+                  "class of service (CoS).";
               }
               leaf handling {
                 type mef-types:l2cp-handling-type;
                 description
-                  "The handling selection indicates whether " +
-                  "the L2CP Service Frames identified by this " +
-                  "list entry should be passed, discarded, " +
-                  "or peered.";
+                  "The handling selection indicates whether the " +
+                  "L2CP Service Frames identified by this list " +
+                  "entry should " +
+                  "be passed, discarded, or peered.";
                 reference "[MEF45] Section 8.5.";
               }
               leaf-list subtype {
@@ -964,20 +697,20 @@ module mef-global {
           }
         }
       }
-      container l2cp-peering {
+      container l2cp-eec {
         description
-          "Layer 2 Control Protocol (L2CP) Configuration " +
-          "for Peering Lists.";
+          "Egress Layer 2 Control Protocol (L2CP) " +
+          "Configuration with EEC Names.";
         list l2cp-profile {
           key "id";
           description
-            "A list of global profiles for " +
-            "Layer 2 Control Processing.";
+            "A list of global profiles for Layer 2 " +
+            "Control Processing.";
           reference "[MEF10.3] Section 8.5.";
           container l2cps {
             description
-              "Layer 2 Control Protocol (L2CP) Profiles for " +
-              "Peering.";
+              "Layer 2 Control Protocol (L2CP) Profiles " +
+              "or Egress Equivalence Classes.";
             list l2cp {
               key "dest-mac-addr peering-proto-name";
               description
@@ -994,6 +727,92 @@ module mef-global {
                 description
                   "This attribute is a friendly name for the " +
                   "Protocol to be Peered. It is optional.";
+              }
+              leaf protocol {
+                type mef-types:l2cp-peering-protocol-type;
+                default "ethertype";
+                description
+                  "The Protocol is one of Ethertype, LLC, or Other.";
+              }
+              leaf protocol-id {
+                type yang:hex-string;
+                description
+                  "The Protocol Identifier is the protocol " +
+                  "specific value associated with the protocol " +
+                  "in a colon separated list of hex values " +
+                  "(ie. 88:EE or 82).";
+              }
+              leaf eec-name {
+                type leafref {
+                  path "/mef-global:mef-global/profiles/eec-names" +
+                  		"/eec-name/name";
+                }
+                description
+                  "This attribute identifies the name of a " +
+                  "Egress Equivalence Class (EEC).";
+              }
+              leaf handling {
+                type mef-types:l2cp-handling-type;
+                description
+                  "The handling selection indicates whether the " +
+                  "L2CP Service Frames identified by this list " +
+                  "entry should be passed, discarded, or peered.";
+                reference "[MEF45] Section 8.5.";
+              }
+              leaf-list subtype {
+                type yang:hex-string;
+                max-elements "255";
+                description
+                  "L2CP Subtype for this Destination MAC's " +
+                  "Protocol ID.";
+              }
+            }
+          }
+          leaf id {
+            type mef-types:identifier45;
+            description
+              "The L2CP ID identifies a specific profile " +
+              "for Layer 2 Control Processing.";
+            reference "[MEF10.3] Section 8.5.";
+          }
+          leaf user-label {
+            type mef-types:identifier45;
+            description
+              "This attribute is a friendly name for " +
+              "the specific L2CP profile.";
+          }
+        }
+      }
+      container l2cp-peering {
+        description
+          "Layer 2 Control Protocol (L2CP) Configuration " +
+          "for Peering Lists.";
+        list l2cp-profile {
+          key "id";
+          description
+            "A list of global profiles for Layer 2 " +
+            "Control Processing.";
+          reference "[MEF10.3] Section 8.5.";
+          container l2cps {
+            description
+              "Layer 2 Control Protocol (L2CP) Profiles " +
+              "for Peering.";
+            list l2cp {
+              key "dest-mac-addr peering-proto-name";
+              description
+                "L2CP Destination MAC Address.";
+              reference "[MEF10.3] Section 8.5.";
+              leaf dest-mac-addr {
+                type yang:mac-address;
+                description
+                  "The Destination MAC Address for the " +
+                  "Layer 2 Control Protocol.";
+              }
+              leaf peering-proto-name {
+                type mef-types:identifier45;
+                description
+                  "This attribute is a friendly name for " +
+                  "the Protocol to be Peered. It is optional.";
               }
               leaf protocol {
                 type mef-types:l2cp-peering-protocol-type;
@@ -1051,16 +870,8 @@ module mef-global {
           leaf user-label {
             type mef-types:identifier45;
             description
-              "This attribute is a friendly name for the " +
-              "specific ELMI Category described within this " +
-              "profile.";
-          }
-          leaf polling-counter {
-            type mef-types:elmi-polling-counter-type;
-            default "360";
-            description
-              "Polling cycles between Full Status exchanges.";
-            reference "[MEF16] Section 5.6.1.";
+              "This attribute is a friendly name for the specific " +
+              "ELMI Category described within this profile.";
           }
           leaf status-error-threshold {
             type mef-types:elmi-status-error-threshold-type;
@@ -1075,8 +886,8 @@ module mef-global {
             default "10";
             description
               "The timer started after tranmitting a Status " +
-              "Enquiry. If the timer expires, record the error " +
-              "if a STATUS message not received and resend " +
+              "Enquiry. If the timer expires, record the error if" +
+              " a STATUS message not received and resend " +
               "Status Enquiry.";
             reference "[MEF16] Section 5.6.1.";
           }
@@ -1084,10 +895,9 @@ module mef-global {
             type mef-types:elmi-polling-verification-timer-type;
             default "15";
             description
-              "The type used for a timer started after " +
-              "tranmitting a Status Message. If a Status " +
-              "Enquiry is recieved before this timer " +
-              "expires, record the error.";
+              "The type used for a timer started after tranmitting" +
+              " a Status Message. If a Status Enquiry is recieved" +
+              " before this timer expires, record the error.";
             reference "[MEF16] Section 5.6.1.";
           }
         }
@@ -1107,6 +917,14 @@ module mef-global {
               "This attribute identifies the label of a " +
               "Egress Equivance Class (EEC) instance.";
           }
+          leaf l2cp-eec-id {
+            type leafref {
+              path "/mef-global:mef-global/profiles/l2cp-eec" +
+              		"/l2cp-profile/id";
+            }
+            description
+              "L2CP Profile Identifier";
+          }
           choice eec-id {
             description
               "EEC Identifier.";
@@ -1121,16 +939,16 @@ module mef-global {
                     		"eec-names/eec-name/name";
                   }
                   description
-                    "Default value for EEC Name for PCP " +
-                    "when it has not been explicitly configured.";
+                    "Default value for EEC Name for PCP when it " +
+                    "has not been explicitly configured.";
                 }
                 leaf default-pcp-color {
-                  type mef-types:cos-color-type;
+                  type mef-types:frame-color-type;
                   default "green";
                   description
-                    "If the EEC ID = pcp, then this value " +
-                    "will be used as the default Color when " +
-                    "the PCP value does not have an explicitly " +
+                    "If the EEC ID = pcp, then this value will be " +
+                    "used as the default Color when the PCP " +
+                    "value does not have an explicitly " +
                     "configured Color.";
                   reference "MEF 10.3 Section 10.3";
                 }
@@ -1158,11 +976,11 @@ module mef-global {
                       		"eec-names/eec-name/name";
                     }
                     description
-                      "This attribute identifies the name of a " +
-                      "Egress Equivalence Class instance.";
+                      "This attribute identifies the name " +
+                      "of a Egress Equivalence Class instance.";
                   }
                   leaf color {
-                    type mef-types:cos-color-type;
+                    type mef-types:frame-color-type;
                     default "green";
                     description
                       "EVC Per UNI: The EEC Color for " +
@@ -1183,18 +1001,18 @@ module mef-global {
                     		"eec-names/eec-name/name";
                   }
                   description
-                    "Default value for EEC Name for DSCP IPv4 " +
-                    "Packets when it has not been " +
-                    "explicitly configured.";
+                    "Default value for EEC Name for DSCP " +
+                    "IPv4 Packets " +
+                    "when it has not been explicitly configured.";
                 }
                 leaf default-ipv4-color {
-                  type mef-types:cos-color-type;
+                  type mef-types:frame-color-type;
                   default "green";
                   description
-                    "If the EEC ID = dscp, then this value will " +
-                    "be used as the default Color when the " +
-                    "DSCP value for IPv4 does not have an " +
-                    "explicitly configured Color.";
+                    "If the EEC ID = dscp, then this value will be" +
+                    " used as the default Color when the DSCP " +
+                    "value for IPv4 does not have an explicitly " +
+                    "configured Color.";
                   reference "MEF 10.3 Section 10.3";
                 }
                 leaf default-ipv6-eec-name {
@@ -1208,13 +1026,13 @@ module mef-global {
                     "configured.";
                 }
                 leaf default-ipv6-color {
-                  type mef-types:cos-color-type;
+                  type mef-types:frame-color-type;
                   default "green";
                   description
-                    "If the EEC ID = dscp, then this value " +
-                    "will be used as the default Color " +
-                    "when the DSCP value for IPv6 does " +
-                    "not have an explicitly configured Color.";
+                    "If the EEC ID = dscp, then this value will " +
+                    "be used as the default Color when the DSCP " +
+                    "value for IPv6 does not have an explicitly " +
+                    "configured Color.";
                   reference "MEF 10.3 Section 10.3";
                 }
                 list ipv4-dscp {
@@ -1243,7 +1061,7 @@ module mef-global {
                       "of a Egress Equivalence Class instance.";
                   }
                   leaf color {
-                    type mef-types:cos-color-type;
+                    type mef-types:frame-color-type;
                     default "green";
                     description
                       "EVC Per UNI: The EEC Color for " +
@@ -1273,11 +1091,11 @@ module mef-global {
                       		"eec-names/eec-name/name";
                     }
                     description
-                      "This attribute identifies the name of a " +
-                      "Egress Equivalence Class instance.";
+                      "This attribute identifies the name " +
+                      "of a Egress Equivalence Class instance.";
                   }
                   leaf color {
-                    type mef-types:cos-color-type;
+                    type mef-types:frame-color-type;
                     default "green";
                     description
                       "EVC Per UNI: The EEC Color for " +
@@ -1296,14 +1114,22 @@ module mef-global {
         list cos-profile {
           key "id";
           description
-            "This attribute identifies the identifier of a " +
-            "Class of Service (CoS) instance.";
+            "This attribute identifies the identifier " +
+            "of a Class of Service (CoS) instance.";
           reference "[MEF6.2] Appendix A.";
           leaf id {
             type mef-types:identifier45;
             description
-              "This attribute identifies the label of a " +
-              "Class of Service (CoS) instance.";
+              "This attribute identifies the label of " +
+              "a Class of Service (CoS) instance.";
+          }
+          leaf l2cp-cos-id {
+            type leafref {
+              path "/mef-global:mef-global/profiles/" +
+              		"l2cp-cos/l2cp-profile/id";
+            }
+            description
+              "L2CP Profile Identifier";
           }
           choice cos-id {
             description
@@ -1319,11 +1145,11 @@ module mef-global {
                     		"cos-names/cos-name/name";
                   }
                   description
-                    "This attribute identifies the name of a " +
-                    "Class of Service (CoS) instance.";
+                    "This attribute identifies the name of " +
+                    "a Class of Service (CoS) instance.";
                 }
                 leaf default-evc-color {
-                  type mef-types:cos-color-type;
+                  type mef-types:frame-color-type;
                   default "green";
                   description
                     "If the CoS ID = evc, then all service " +
@@ -1343,11 +1169,11 @@ module mef-global {
                     		"cos-names/cos-name/name";
                   }
                   description
-                    "Default value for CoS Name for PCP when it " +
-                    "has not been explicitly configured.";
+                    "Default value for CoS Name for PCP when " +
+                    "it has not been explicitly configured.";
                 }
                 leaf default-pcp-color {
-                  type mef-types:cos-color-type;
+                  type mef-types:frame-color-type;
                   default "green";
                   description
                     "If the CoS ID = pcp, then this value will " +
@@ -1383,7 +1209,7 @@ module mef-global {
                       "a class of service (CoS) instance.";
                   }
                   leaf color {
-                    type mef-types:cos-color-type;
+                    type mef-types:frame-color-type;
                     default "green";
                     description
                       "EVC Per UNI: The CoS Color for " +
@@ -1404,18 +1230,18 @@ module mef-global {
                     		"cos-names/cos-name/name";
                   }
                   description
-                    "Default value for CoS Name for DSCP " +
-                    "IPv4 Packets when it has not been " +
-                    "explicitly configured.";
+                    "Default value for CoS Name for " +
+                    "DSCP IPv4 Packets when it has " +
+                    "not been explicitly configured.";
                 }
                 leaf default-ipv4-color {
-                  type mef-types:cos-color-type;
+                  type mef-types:frame-color-type;
                   default "green";
                   description
-                    "If the CoS ID = dscp, then this value " +
-                    "will be used as the default Color when " +
-                    "the DSCP value for IPv4 does not have " +
-                    "an explicitly configured Color.";
+                    "If the CoS ID = dscp, then this value will " +
+                    "be used as the default Color when the " +
+                    "DSCP value for IPv4 does not have an " +
+                    "explicitly configured Color.";
                   reference "MEF 10.3 Section 10.3";
                 }
                 leaf default-ipv6-cos-name {
@@ -1425,11 +1251,11 @@ module mef-global {
                   }
                   description
                     "Default value for CoS Name for DSCP " +
-                    "IPv6 Packets when it has not been " +
-                    "explicitly configured.";
+                    "IPv6 Packets when it has not been explicitly " +
+                    "configured.";
                 }
                 leaf default-ipv6-color {
-                  type mef-types:cos-color-type;
+                  type mef-types:frame-color-type;
                   default "green";
                   description
                     "If the CoS ID = dscp, then this value will " +
@@ -1460,11 +1286,11 @@ module mef-global {
                       		"cos-names/cos-name/name";
                     }
                     description
-                      "This attribute identifies the name of a " +
-                      "Class of Service (CoS) instance.";
+                      "This attribute identifies the name of " +
+                      "a Class of Service (CoS) instance.";
                   }
                   leaf color {
-                    type mef-types:cos-color-type;
+                    type mef-types:frame-color-type;
                     default "green";
                     description
                       "EVC Per UNI: The CoS Color for " +
@@ -1498,7 +1324,7 @@ module mef-global {
                       "Class of Service (CoS) instance.";
                   }
                   leaf color {
-                    type mef-types:cos-color-type;
+                    type mef-types:frame-color-type;
                     default "green";
                     description
                       "EVC Per UNI: The CoS Color for " +

@@ -205,11 +205,11 @@ module mef-global {
         }
         leaf coupling-flag {
           type mef-types:bwp-coupling-flag-type;
-          default "yellow-eir-only";
+          default "false";
           description
             "The optional coupling flag (CF) attribute, describes " +
             "if yellow frames will be admitted if unused bandwidth" +
-            " is available. When CF is set to \"yellow-eir-only\"," +
+            " is available. When CF is set to false (\"yellow-eir-only\")," +
             " the volume of the yellow service frames admitted to" +
             " the network cannot exceed EIR. When CF is set to " +
             "\"yellow-eir-plus-cir\", the volume of the yellow " +
@@ -873,13 +873,6 @@ module mef-global {
               "This attribute is a friendly name for the specific " +
               "ELMI Category described within this profile.";
           }
-          leaf polling-counter {
-            type mef-types:elmi-polling-counter-type;
-            default "360";
-            description
-              "Polling cycles between Full Status exchanges.";
-            reference "[MEF16] Section 5.6.1.";
-          }
           leaf status-error-threshold {
             type mef-types:elmi-status-error-threshold-type;
             default "4";
@@ -950,7 +943,7 @@ module mef-global {
                     "has not been explicitly configured.";
                 }
                 leaf default-pcp-color {
-                  type mef-types:cos-color-type;
+                  type mef-types:frame-color-type;
                   default "green";
                   description
                     "If the EEC ID = pcp, then this value will be " +
@@ -987,7 +980,7 @@ module mef-global {
                       "of a Egress Equivalence Class instance.";
                   }
                   leaf color {
-                    type mef-types:cos-color-type;
+                    type mef-types:frame-color-type;
                     default "green";
                     description
                       "EVC Per UNI: The EEC Color for " +
@@ -1013,7 +1006,7 @@ module mef-global {
                     "when it has not been explicitly configured.";
                 }
                 leaf default-ipv4-color {
-                  type mef-types:cos-color-type;
+                  type mef-types:frame-color-type;
                   default "green";
                   description
                     "If the EEC ID = dscp, then this value will be" +
@@ -1033,7 +1026,7 @@ module mef-global {
                     "configured.";
                 }
                 leaf default-ipv6-color {
-                  type mef-types:cos-color-type;
+                  type mef-types:frame-color-type;
                   default "green";
                   description
                     "If the EEC ID = dscp, then this value will " +
@@ -1068,7 +1061,7 @@ module mef-global {
                       "of a Egress Equivalence Class instance.";
                   }
                   leaf color {
-                    type mef-types:cos-color-type;
+                    type mef-types:frame-color-type;
                     default "green";
                     description
                       "EVC Per UNI: The EEC Color for " +
@@ -1102,7 +1095,7 @@ module mef-global {
                       "of a Egress Equivalence Class instance.";
                   }
                   leaf color {
-                    type mef-types:cos-color-type;
+                    type mef-types:frame-color-type;
                     default "green";
                     description
                       "EVC Per UNI: The EEC Color for " +
@@ -1156,7 +1149,7 @@ module mef-global {
                     "a Class of Service (CoS) instance.";
                 }
                 leaf default-evc-color {
-                  type mef-types:cos-color-type;
+                  type mef-types:frame-color-type;
                   default "green";
                   description
                     "If the CoS ID = evc, then all service " +
@@ -1180,7 +1173,7 @@ module mef-global {
                     "it has not been explicitly configured.";
                 }
                 leaf default-pcp-color {
-                  type mef-types:cos-color-type;
+                  type mef-types:frame-color-type;
                   default "green";
                   description
                     "If the CoS ID = pcp, then this value will " +
@@ -1216,7 +1209,7 @@ module mef-global {
                       "a class of service (CoS) instance.";
                   }
                   leaf color {
-                    type mef-types:cos-color-type;
+                    type mef-types:frame-color-type;
                     default "green";
                     description
                       "EVC Per UNI: The CoS Color for " +
@@ -1242,7 +1235,7 @@ module mef-global {
                     "not been explicitly configured.";
                 }
                 leaf default-ipv4-color {
-                  type mef-types:cos-color-type;
+                  type mef-types:frame-color-type;
                   default "green";
                   description
                     "If the CoS ID = dscp, then this value will " +
@@ -1262,7 +1255,7 @@ module mef-global {
                     "configured.";
                 }
                 leaf default-ipv6-color {
-                  type mef-types:cos-color-type;
+                  type mef-types:frame-color-type;
                   default "green";
                   description
                     "If the CoS ID = dscp, then this value will " +
@@ -1297,7 +1290,7 @@ module mef-global {
                       "a Class of Service (CoS) instance.";
                   }
                   leaf color {
-                    type mef-types:cos-color-type;
+                    type mef-types:frame-color-type;
                     default "green";
                     description
                       "EVC Per UNI: The CoS Color for " +
@@ -1331,7 +1324,7 @@ module mef-global {
                       "Class of Service (CoS) instance.";
                   }
                   leaf color {
-                    type mef-types:cos-color-type;
+                    type mef-types:frame-color-type;
                     default "green";
                     description
                       "EVC Per UNI: The CoS Color for " +
