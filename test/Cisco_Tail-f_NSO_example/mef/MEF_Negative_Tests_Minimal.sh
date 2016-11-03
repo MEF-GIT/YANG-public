@@ -282,34 +282,34 @@ fi
 # Test for MEF 10.3 [R59].  Character restriction testing is TBD.
 
 # Test for MEF 10.3 [R60A]. This test should fail to commit with "The Physical Layer for each physical link implementing the UNI cannot be 1000BASE-PX-D and 1000BASE-PX-U.".
-{ ncs_cli -u admin -C << EOF;
-config
-mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 physical-layers links link ce1 GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-PX-U
-commit
-end no-confirm
-exit
-EOF
-} | grep 'Aborted:.*1000BASE-PX-D and 1000BASE-PX-U.'
-if [ $? != 0 ]; then
-   echo 'Test 10.3 R60A: FAIL - commit did not fail or did not fail as expected'; exit 1;
-else
-   echo 'Test 10.3 R60A: PASS';
-fi
+#{ ncs_cli -u admin -C << EOF;
+#config
+#mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 physical-layers links link ce1 GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-PX-U
+#commit
+#end no-confirm
+#exit
+#EOF
+#} | grep 'Aborted:.*1000BASE-PX-D and 1000BASE-PX-U.'
+#if [ $? != 0 ]; then
+#   echo 'Test 10.3 R60A: FAIL - commit did not fail or did not fail as expected'; exit 1;
+#else
+#   echo 'Test 10.3 R60A: PASS';
+#fi
 
 # Test for MEF 10.3 [R60B]. This test should fail to commit with "The Physical Layer for each physical link implementing the UNI cannot be 1000BASE-PX-D and 1000BASE-PX-U.".
-{ ncs_cli -u admin -C << EOF;
-config
-mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 physical-layers links link ce1 GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-PX-D
-commit
-end no-confirm
-exit
-EOF
-} | grep 'Aborted:.*1000BASE-PX-D and 1000BASE-PX-U.'
-if [ $? != 0 ]; then
-   echo 'Test 10.3 R60B: FAIL - commit did not fail or did not fail as expected'; exit 1;
-else
-   echo 'Test 10.3 R60B: PASS';
-fi
+#{ ncs_cli -u admin -C << EOF;
+#config
+#mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 physical-layers links link ce1 GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-PX-D
+#commit
+#end no-confirm
+#exit
+#EOF
+#} | grep 'Aborted:.*1000BASE-PX-D and 1000BASE-PX-U.'
+#if [ $? != 0 ]; then
+#   echo 'Test 10.3 R60B: FAIL - commit did not fail or did not fail as expected'; exit 1;
+#else
+#   echo 'Test 10.3 R60B: PASS';
+#fi
 
 # Test for MEF 10.3 [R62]. This test should fail to commit with "The quality of the clock reference must be set if Synchronous Mode is enabled.".
 { ncs_cli -u admin -C << EOF;

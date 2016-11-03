@@ -2,7 +2,7 @@
 
 NCUSER=admin
 NCPASSWD=admin
-NCHOST=localhost
+NCHOST=96.86.165.79
 NCPORT=2022
 
 echo ... cmd-edit-config-mef-topology-modify.xml
