@@ -39,12 +39,6 @@ $(NETSIM_DIR): packages/cisco-ios packages/cisco-iosxr packages/juniper-junos
 	cp initial_data/iosxr.xml netsim/p/p1/cdb
 	cp initial_data/iosxr.xml netsim/p/p2/cdb
 	cp initial_data/iosxr.xml netsim/p/p3/cdb
-	cp initial_data/topology.xml ncs-cdb
-	cp initial_data/qos.xml ncs-cdb
-	cp initial_data/compliance.xml ncs-cdb
-	cp initial_data/static-map-pos.xml ncs-cdb
-	cp initial_data/template.xml ncs-cdb
-	cp initial_data/device-groups.xml ncs-cdb
 	cp initial_data/device-icons.xml ncs-cdb
 	ncs-netsim ncs-xml-init > ncs-cdb/netsim_devices_init.xml
 
@@ -68,6 +62,18 @@ clean:
 	rm -f packages/cisco-iosxr
 	rm -rf bin
 	rm -rf ncs-cdb/*.xml
+
+.PHONY: package-archives
+package-archives: all
+	mkdir -p package-archives
+	for package_name in $(PACKAGES); do \
+		cd packages/$${package_name}; \
+		package_version=$$(cat package-meta-data.xml | grep package-version | sed 's/.*<package-version>\(.*\)<\/package-version>/\1/g'); \
+		cd ..; \
+		tar -cz $${package_name} > ../package-archives/ncs-$$(ncs --version)-$${package_name}-$${package_version}.tar.gz; \
+		cd ..; \
+	done
+
 
 start:
 	ncs-netsim start
