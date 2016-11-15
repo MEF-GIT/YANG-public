@@ -14,8 +14,18 @@ module mef-services {
   import mef-interfaces {
     prefix mef-interfaces;
   }
+<<<<<<< Upstream, based on origin/master
 
   organization "Metro Ethernet Forum";
+=======
+  import tailf-common {
+      prefix tailf;
+  }
+  import tailf-ncs {
+    prefix ncs;
+  }
+  organization "MEF Forum";
+>>>>>>> 1739e12 Updated the test application to include the new mef-device(presto) NED developed at the MEF16 Hackathon. Updated test files.
   contact
     "Web URL: http://metroethernetforum.org/
      E-mail:  mibs@metroethernetforum.org
@@ -91,6 +101,23 @@ module mef-services {
     description
       "MEF Services for Ethernet Virtual Circuit(EVC) " +
       "Configuration and Status";
+/*    
+    tailf:action self-test {
+        tailf:actionpoint mef-services-self-test-point;
+        input {
+        }
+        output {
+          leaf success {
+            type boolean;
+            mandatory true;
+          }
+          leaf message {
+            type string;
+            mandatory true;
+          }
+        }
+      }
+*/    
     list mef-service {
       key "evc-id";
       description
@@ -103,6 +130,10 @@ module mef-services {
         reference "[MEF10.3] Section 8.2 [R7]. " +
         		"[MEF7.3] Section 11.1.1, Section 12.2.2.";
       }
+      
+//      uses ncs:service-data;
+//      ncs:servicepoint "mef-services-servicepoint";
+
       container end-points {
         description
           "EVC Per Universal Network Interface(UNI) Configuration " +

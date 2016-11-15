@@ -32,10 +32,6 @@ Aborted: 'mef-services mef-service EVC-0001911-ACME-MEGAMART carrier-ethernet-sl
 Test 10.3 R37B: PASS
 Aborted: 'mef-services mef-service EVC-0001911-ACME-MEGAMART connection-type' (value "rooted-multipoint"): If EVC Type is Rooted-Multipoint, one or more UNI Roles must be root.
 Test 10.3 R54: PASS
-Aborted: 'mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 physical-layers links link ce1 GigabitEthernet0/1 ieee8023-phy' (value "mef-types:ieee8023-1000BASE-PX-U"): The Physical Layer for each physical link implementing the UNI cannot be 1000BASE-PX-D and 1000BASE-PX-U.
-Test 10.3 R60A: PASS
-Aborted: 'mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 physical-layers links link ce1 GigabitEthernet0/1 ieee8023-phy' (value "mef-types:ieee8023-1000BASE-PX-D"): The Physical Layer for each physical link implementing the UNI cannot be 1000BASE-PX-D and 1000BASE-PX-U.
-Test 10.3 R60B: PASS
 Aborted: 'mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 physical-layers links link ce1 GigabitEthernet0/1 sync-mode' (value "true"): The quality of the clock reference must be set if Synchronous Mode is enabled.
 Test 10.3 R62: PASS
 Aborted: 'mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 link-aggregation' (value "none"): If link-aggregation is 'none', number-of-links must be 1.

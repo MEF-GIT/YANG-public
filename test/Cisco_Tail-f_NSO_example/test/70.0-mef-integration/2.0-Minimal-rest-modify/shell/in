@@ -1,10 +1,10 @@
 #!/bin/sh
 
 RESTCRED=admin:admin
-RESTURL=https
-NSOHOST=96.86.165.79
+RESTURL=http
+NSOHOST=localhost
 RESTPORT=10888
-RESTSEC=-k
+RESTSEC=
 
 # (REST-JSON is broken for NSO 4.1.1 for mef-topology as it uses identityref. This bug was fixed in NSO 4.1.1.1)
 echo REST/JSON examples for mef-topology 

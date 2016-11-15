@@ -4,6 +4,13 @@
       "device": [
         {
           "dev-id": "CSR-1_0",
+          "device-modifications": "",
+          "commit-queue": {
+            "operations": {
+              "clear": "/api/operational/mef-topology/devices/device/CSR-1_0/commit-queue/_operations/clear",
+              "purge": "/api/operational/mef-topology/devices/device/CSR-1_0/commit-queue/_operations/purge"
+            }
+          },
           "interfaces": {
             "interface": [
               {
@@ -82,6 +89,13 @@
         },
         {
           "dev-id": "CSR-2_0",
+          "device-modifications": "",
+          "commit-queue": {
+            "operations": {
+              "clear": "/api/operational/mef-topology/devices/device/CSR-2_0/commit-queue/_operations/clear",
+              "purge": "/api/operational/mef-topology/devices/device/CSR-2_0/commit-queue/_operations/purge"
+            }
+          },
           "interfaces": {
             "interface": [
               {
@@ -160,6 +174,13 @@
         },
         {
           "dev-id": "CSR-3_0",
+          "device-modifications": "",
+          "commit-queue": {
+            "operations": {
+              "clear": "/api/operational/mef-topology/devices/device/CSR-3_0/commit-queue/_operations/clear",
+              "purge": "/api/operational/mef-topology/devices/device/CSR-3_0/commit-queue/_operations/purge"
+            }
+          },
           "interfaces": {
             "interface": [
               {
@@ -238,6 +259,13 @@
         },
         {
           "dev-id": "CSR-4_0",
+          "device-modifications": "",
+          "commit-queue": {
+            "operations": {
+              "clear": "/api/operational/mef-topology/devices/device/CSR-4_0/commit-queue/_operations/clear",
+              "purge": "/api/operational/mef-topology/devices/device/CSR-4_0/commit-queue/_operations/purge"
+            }
+          },
           "interfaces": {
             "interface": [
               {
@@ -316,6 +344,13 @@
         },
         {
           "dev-id": "ce0",
+          "device-modifications": "",
+          "commit-queue": {
+            "operations": {
+              "clear": "/api/operational/mef-topology/devices/device/ce0/commit-queue/_operations/clear",
+              "purge": "/api/operational/mef-topology/devices/device/ce0/commit-queue/_operations/purge"
+            }
+          },
           "interfaces": {
             "interface": [
               {
@@ -362,6 +397,13 @@
         },
         {
           "dev-id": "ce1",
+          "device-modifications": "",
+          "commit-queue": {
+            "operations": {
+              "clear": "/api/operational/mef-topology/devices/device/ce1/commit-queue/_operations/clear",
+              "purge": "/api/operational/mef-topology/devices/device/ce1/commit-queue/_operations/purge"
+            }
+          },
           "interfaces": {
             "interface": [
               {
@@ -401,6 +443,13 @@
         },
         {
           "dev-id": "ce10",
+          "device-modifications": "",
+          "commit-queue": {
+            "operations": {
+              "clear": "/api/operational/mef-topology/devices/device/ce10/commit-queue/_operations/clear",
+              "purge": "/api/operational/mef-topology/devices/device/ce10/commit-queue/_operations/purge"
+            }
+          },
           "interfaces": {
             "interface": [
               {
@@ -438,6 +487,13 @@
         },
         {
           "dev-id": "ce2",
+          "device-modifications": "",
+          "commit-queue": {
+            "operations": {
+              "clear": "/api/operational/mef-topology/devices/device/ce2/commit-queue/_operations/clear",
+              "purge": "/api/operational/mef-topology/devices/device/ce2/commit-queue/_operations/purge"
+            }
+          },
           "interfaces": {
             "interface": [
               {
@@ -469,6 +525,13 @@
         },
         {
           "dev-id": "ce3",
+          "device-modifications": "",
+          "commit-queue": {
+            "operations": {
+              "clear": "/api/operational/mef-topology/devices/device/ce3/commit-queue/_operations/clear",
+              "purge": "/api/operational/mef-topology/devices/device/ce3/commit-queue/_operations/purge"
+            }
+          },
           "interfaces": {
             "interface": [
               {
@@ -492,6 +555,13 @@
         },
         {
           "dev-id": "ce4",
+          "device-modifications": "",
+          "commit-queue": {
+            "operations": {
+              "clear": "/api/operational/mef-topology/devices/device/ce4/commit-queue/_operations/clear",
+              "purge": "/api/operational/mef-topology/devices/device/ce4/commit-queue/_operations/purge"
+            }
+          },
           "interfaces": {
             "interface": [
               {
@@ -515,6 +585,13 @@
         },
         {
           "dev-id": "ce5",
+          "device-modifications": "",
+          "commit-queue": {
+            "operations": {
+              "clear": "/api/operational/mef-topology/devices/device/ce5/commit-queue/_operations/clear",
+              "purge": "/api/operational/mef-topology/devices/device/ce5/commit-queue/_operations/purge"
+            }
+          },
           "interfaces": {
             "interface": [
               {
@@ -570,6 +647,13 @@
         },
         {
           "dev-id": "ce6",
+          "device-modifications": "",
+          "commit-queue": {
+            "operations": {
+              "clear": "/api/operational/mef-topology/devices/device/ce6/commit-queue/_operations/clear",
+              "purge": "/api/operational/mef-topology/devices/device/ce6/commit-queue/_operations/purge"
+            }
+          },
           "interfaces": {
             "interface": [
               {
@@ -610,6 +694,13 @@
         },
         {
           "dev-id": "ce7",
+          "device-modifications": "",
+          "commit-queue": {
+            "operations": {
+              "clear": "/api/operational/mef-topology/devices/device/ce7/commit-queue/_operations/clear",
+              "purge": "/api/operational/mef-topology/devices/device/ce7/commit-queue/_operations/purge"
+            }
+          },
           "interfaces": {
             "interface": [
               {
@@ -650,6 +741,13 @@
         },
         {
           "dev-id": "ce8",
+          "device-modifications": "",
+          "commit-queue": {
+            "operations": {
+              "clear": "/api/operational/mef-topology/devices/device/ce8/commit-queue/_operations/clear",
+              "purge": "/api/operational/mef-topology/devices/device/ce8/commit-queue/_operations/purge"
+            }
+          },
           "interfaces": {
             "interface": [
               {
@@ -690,6 +788,13 @@
         },
         {
           "dev-id": "ce9",
+          "device-modifications": "",
+          "commit-queue": {
+            "operations": {
+              "clear": "/api/operational/mef-topology/devices/device/ce9/commit-queue/_operations/clear",
+              "purge": "/api/operational/mef-topology/devices/device/ce9/commit-queue/_operations/purge"
+            }
+          },
           "interfaces": {
             "interface": [
               {
@@ -726,6 +831,7 @@
           "@role": {"annotation": "c9 link to pe1"}
         },
         {
+<<<<<<< Upstream, based on origin/master
           "dev-id": "cr01",
           "interfaces": {
             "interface": [
@@ -1354,7 +1460,16 @@
           "role": "pe"
         },
         {
+=======
+>>>>>>> 1739e12 Updated the test application to include the new mef-device(presto) NED developed at the MEF16 Hackathon. Updated test files.
           "dev-id": "p0",
+          "device-modifications": "",
+          "commit-queue": {
+            "operations": {
+              "clear": "/api/operational/mef-topology/devices/device/p0/commit-queue/_operations/clear",
+              "purge": "/api/operational/mef-topology/devices/device/p0/commit-queue/_operations/purge"
+            }
+          },
           "interfaces": {
             "interface": [
               {
@@ -1387,6 +1502,13 @@
         },
         {
           "dev-id": "p1",
+          "device-modifications": "",
+          "commit-queue": {
+            "operations": {
+              "clear": "/api/operational/mef-topology/devices/device/p1/commit-queue/_operations/clear",
+              "purge": "/api/operational/mef-topology/devices/device/p1/commit-queue/_operations/purge"
+            }
+          },
           "interfaces": {
             "interface": [
               {
@@ -1419,6 +1541,13 @@
         },
         {
           "dev-id": "p2",
+          "device-modifications": "",
+          "commit-queue": {
+            "operations": {
+              "clear": "/api/operational/mef-topology/devices/device/p2/commit-queue/_operations/clear",
+              "purge": "/api/operational/mef-topology/devices/device/p2/commit-queue/_operations/purge"
+            }
+          },
           "interfaces": {
             "interface": [
               {
@@ -1451,6 +1580,13 @@
         },
         {
           "dev-id": "p3",
+          "device-modifications": "",
+          "commit-queue": {
+            "operations": {
+              "clear": "/api/operational/mef-topology/devices/device/p3/commit-queue/_operations/clear",
+              "purge": "/api/operational/mef-topology/devices/device/p3/commit-queue/_operations/purge"
+            }
+          },
           "interfaces": {
             "interface": [
               {
@@ -1483,6 +1619,13 @@
         },
         {
           "dev-id": "pe0",
+          "device-modifications": "",
+          "commit-queue": {
+            "operations": {
+              "clear": "/api/operational/mef-topology/devices/device/pe0/commit-queue/_operations/clear",
+              "purge": "/api/operational/mef-topology/devices/device/pe0/commit-queue/_operations/purge"
+            }
+          },
           "interfaces": {
             "interface": [
               {
@@ -1515,6 +1658,13 @@
         },
         {
           "dev-id": "pe1",
+          "device-modifications": "",
+          "commit-queue": {
+            "operations": {
+              "clear": "/api/operational/mef-topology/devices/device/pe1/commit-queue/_operations/clear",
+              "purge": "/api/operational/mef-topology/devices/device/pe1/commit-queue/_operations/purge"
+            }
+          },
           "interfaces": {
             "interface": [
               {
@@ -1547,6 +1697,13 @@
         },
         {
           "dev-id": "pe2",
+          "device-modifications": "",
+          "commit-queue": {
+            "operations": {
+              "clear": "/api/operational/mef-topology/devices/device/pe2/commit-queue/_operations/clear",
+              "purge": "/api/operational/mef-topology/devices/device/pe2/commit-queue/_operations/purge"
+            }
+          },
           "interfaces": {
             "interface": [
               {
@@ -1579,6 +1736,13 @@
         },
         {
           "dev-id": "pe3",
+          "device-modifications": "",
+          "commit-queue": {
+            "operations": {
+              "clear": "/api/operational/mef-topology/devices/device/pe3/commit-queue/_operations/clear",
+              "purge": "/api/operational/mef-topology/devices/device/pe3/commit-queue/_operations/purge"
+            }
+          },
           "interfaces": {
             "interface": [
               {
@@ -1607,6 +1771,7 @@
               },
               {
                 "phy": "GigabitEthernet0/0/0/5",
+<<<<<<< Upstream, based on origin/master
                 "status": {
                   "speed": 0
                 }
@@ -1862,6 +2027,8 @@
               {
                 "phy": "GigabitEthernet1/0/7",
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
+=======
+>>>>>>> 1739e12 Updated the test application to include the new mef-device(presto) NED developed at the MEF16 Hackathon. Updated test files.
                 "status": {
                   "speed": 0
                 }

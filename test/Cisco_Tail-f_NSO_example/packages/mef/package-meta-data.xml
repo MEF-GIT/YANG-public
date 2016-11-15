@@ -12,4 +12,9 @@
       <java-class-name>com.example.mef.mefRFS</java-class-name>
     </callback>
   </component>
-</ncs-package>
+  <component>
+    <name>interface-status</name>
+    <callback>
+      <java-class-name>com.example.mef.MefInterfaceStatus</java-class-name>
+    </callback>
+  </component></ncs-package>

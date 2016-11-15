@@ -5292,6 +5292,7 @@ MEF GET Config ALLs
           <role annotation="c9 link to pe1">ce</role>
         </device>
         <device>
+<<<<<<< Upstream, based on origin/master
           <dev-id>cr01</dev-id>
           <interfaces>
             <interface>
@@ -5658,6 +5659,8 @@ MEF GET Config ALLs
           <role>pe</role>
         </device>
         <device>
+=======
+>>>>>>> 1739e12 Updated the test application to include the new mef-device(presto) NED developed at the MEF16 Hackathon. Updated test files.
           <dev-id>p0</dev-id>
           <interfaces>
             <interface>
@@ -5800,6 +5803,7 @@ MEF GET Config ALLs
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/5</phy>
+<<<<<<< Upstream, based on origin/master
             </interface>
           </interfaces>
           <role>pe</role>
@@ -5950,6 +5954,8 @@ MEF GET Config ALLs
             <interface>
               <phy>GigabitEthernet1/0/7</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+=======
+>>>>>>> 1739e12 Updated the test application to include the new mef-device(presto) NED developed at the MEF16 Hackathon. Updated test files.
             </interface>
           </interfaces>
           <role>pe</role>
@@ -12001,6 +12007,7 @@ MEF GET Config ALLs
           <role annotation="c9 link to pe1">ce</role>
         </device>
         <device>
+<<<<<<< Upstream, based on origin/master
           <dev-id>cr01</dev-id>
           <interfaces>
             <interface>
@@ -12367,6 +12374,8 @@ MEF GET Config ALLs
           <role>pe</role>
         </device>
         <device>
+=======
+>>>>>>> 1739e12 Updated the test application to include the new mef-device(presto) NED developed at the MEF16 Hackathon. Updated test files.
           <dev-id>p0</dev-id>
           <interfaces>
             <interface>
@@ -12509,6 +12518,7 @@ MEF GET Config ALLs
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/5</phy>
+<<<<<<< Upstream, based on origin/master
             </interface>
           </interfaces>
           <role>pe</role>
@@ -12659,6 +12669,8 @@ MEF GET Config ALLs
             <interface>
               <phy>GigabitEthernet1/0/7</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+=======
+>>>>>>> 1739e12 Updated the test application to include the new mef-device(presto) NED developed at the MEF16 Hackathon. Updated test files.
             </interface>
           </interfaces>
           <role>pe</role>
@@ -13302,6 +13314,7 @@ MEF GET Config ALLs
           <role annotation="c9 link to pe1">ce</role>
         </device>
         <device>
+<<<<<<< Upstream, based on origin/master
           <dev-id>cr01</dev-id>
           <interfaces>
             <interface>
@@ -13668,6 +13681,8 @@ MEF GET Config ALLs
           <role>pe</role>
         </device>
         <device>
+=======
+>>>>>>> 1739e12 Updated the test application to include the new mef-device(presto) NED developed at the MEF16 Hackathon. Updated test files.
           <dev-id>p0</dev-id>
           <interfaces>
             <interface>
@@ -13810,6 +13825,7 @@ MEF GET Config ALLs
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/5</phy>
+<<<<<<< Upstream, based on origin/master
             </interface>
           </interfaces>
           <role>pe</role>
@@ -13960,6 +13976,8 @@ MEF GET Config ALLs
             <interface>
               <phy>GigabitEthernet1/0/7</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
+=======
+>>>>>>> 1739e12 Updated the test application to include the new mef-device(presto) NED developed at the MEF16 Hackathon. Updated test files.
             </interface>
           </interfaces>
           <role>pe</role>

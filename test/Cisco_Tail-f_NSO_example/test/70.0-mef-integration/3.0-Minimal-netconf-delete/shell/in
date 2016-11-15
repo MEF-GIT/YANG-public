@@ -2,7 +2,7 @@
 
 NCUSER=admin
 NCPASSWD=admin
-NCHOST=96.86.165.79
+NCHOST=localhost
 NCPORT=2022
 
 echo ... cmd-edit-config-mef-epl02-delete.xml

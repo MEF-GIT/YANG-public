@@ -1,0 +1,18 @@
+<ncs-package xmlns="http://tail-f.com/ns/ncs-packages">
+  <name>mef-device</name>
+  <package-version>1.0</package-version>
+  <description>Generated netconf package</description>
+  <ncs-min-version>2.2</ncs-min-version>
+  <required-package>
+    <name>mef</name>
+  </required-package>
+  <component>
+    <name>mef-device</name>
+    <ned>
+      <netconf/>
+      <device>
+        <vendor>MEF</vendor>
+      </device>
+    </ned>
+  </component>
+</ncs-package>

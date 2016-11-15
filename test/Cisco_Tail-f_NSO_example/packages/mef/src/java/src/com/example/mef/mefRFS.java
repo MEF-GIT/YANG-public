@@ -1,22 +1,24 @@
 package com.example.mef;
 
-import com.example.mef.namespaces.*;
-
-import java.net.InetAddress;
-import java.net.UnknownHostException;
 import java.util.Properties;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
 
-import com.tailf.conf.*;
-import com.tailf.navu.*;
-import com.tailf.ncs.ns.Ncs;
-import com.tailf.dp.*;
-import com.tailf.dp.annotations.*;
-import com.tailf.dp.proto.*;
-import com.tailf.dp.services.*;
+import com.tailf.conf.ConfBool;
+import com.tailf.conf.ConfBuf;
+import com.tailf.conf.ConfKey;
+import com.tailf.conf.ConfObject;
+import com.tailf.conf.ConfTag;
+import com.tailf.conf.ConfXMLParam;
+import com.tailf.conf.ConfXMLParamValue;
+import com.tailf.dp.DpActionTrans;
+import com.tailf.dp.DpCallbackException;
+import com.tailf.dp.annotations.ActionCallback;
+import com.tailf.dp.annotations.ServiceCallback;
+import com.tailf.dp.proto.ActionCBType;
+import com.tailf.dp.proto.ServiceCBType;
+import com.tailf.dp.services.ServiceContext;
+import com.tailf.navu.NavuContainer;
+import com.tailf.navu.NavuList;
+import com.tailf.navu.NavuNode;
 import com.tailf.ncs.template.Template;
 import com.tailf.ncs.template.TemplateVariables;
 
@@ -48,7 +50,7 @@ public class mefRFS {
      * @throws DpCallbackException
      */
 
-    @ServiceCallback(servicePoint="mef-evc-servicepoint",
+    @ServiceCallback(servicePoint="mef-topology-servicepoint",
         callType=ServiceCBType.CREATE)
     public Properties create(ServiceContext context,
                              NavuNode service,
@@ -76,8 +78,8 @@ public class mefRFS {
         }
 
 	try {
-            Template dummyTemplate = new Template(context,
-                "snmp-location-template"); //Just sets snmp location
+            Template mefPrestoNetworkTemplate = new Template(context,
+                "mef-presto-network"); 
 
             String servicePath = null;
             servicePath = service.getKeyPath();
@@ -97,9 +99,12 @@ public class mefRFS {
             //Get the list of all managed devices.
             NavuList managedDevices =
                 ncsRoot.container("devices").list("device");
-
+            
+            TemplateVariables topoVar = new TemplateVariables();
+            mefPrestoNetworkTemplate.apply(service, topoVar);
+            
             // iterate through all manage devices
-            for(NavuContainer deviceContainer : managedDevices.elements()){
+            //for(NavuContainer deviceContainer : managedDevices.elements()){
 
                 // here we have the opportunity to do something with the
                 // ConfIPv4 ip value from the service instance,
@@ -128,20 +133,20 @@ public class mefRFS {
          //       unit.leaf("enabled").set(new ConfBool(true));
          //       unit.leaf("unit").set(new ConfInt32(-57));
 
-               TemplateVariables vpnVar = new TemplateVariables();
-                vpnVar.putQuoted("PE",deviceContainer.leaf("device").
-                                            valueAsString());
-                vpnVar.putQuoted("LOCATION",deviceContainer.leaf("device").
-                                            valueAsString());
-               vpnVar.putQuoted("LOCATION",deviceContainer.leaf("device").
-                                            valueAsString());
-               vpnVar.putQuoted("LOCATION",deviceContainer.leaf("device").
-                                            valueAsString());
+            //   TemplateVariables vpnVar = new TemplateVariables();
+          //      vpnVar.putQuoted("PE",deviceContainer.leaf("device").
+           //                                 valueAsString());
+            //    vpnVar.putQuoted("LOCATION",deviceContainer.leaf("device").
+           //                                 valueAsString());
+           //    vpnVar.putQuoted("LOCATION",deviceContainer.leaf("device").
+           //                                 valueAsString());
+            //   vpnVar.putQuoted("LOCATION",deviceContainer.leaf("device").
+            //                                valueAsString());
 
-               dummyTemplate.apply(service, vpnVar);
+    
 
 
-            }
+           // }
         } catch (Exception e) {
             throw new DpCallbackException(e.getMessage(), e);
         }
@@ -152,14 +157,14 @@ public class mefRFS {
     /**
      * Init method for selftest action
      */
-    @ActionCallback(callPoint="mef-self-test", callType=ActionCBType.INIT)
+    @ActionCallback(callPoint="mef-test-point", callType=ActionCBType.INIT)
     public void init(DpActionTrans trans) throws DpCallbackException {
     }
 
     /**
      * Selftest action implementation for service
      */
-    @ActionCallback(callPoint="mef-self-test", callType=ActionCBType.ACTION)
+    @ActionCallback(callPoint="mef-topology-self-test-point", callType=ActionCBType.ACTION)
     public ConfXMLParam[] selftest(DpActionTrans trans, ConfTag name,
                                    ConfObject[] kp, ConfXMLParam[] params)
     throws DpCallbackException {
@@ -177,4 +182,5 @@ public class mefRFS {
             throw new DpCallbackException("self-test failed", e);
         }
     }
+
 }
