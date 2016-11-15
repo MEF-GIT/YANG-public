@@ -48,7 +48,15 @@
               }
             ]
           },
-          "role": "pe"
+          "role": "pe",
+          "operations": {
+            "check-sync": "/api/running/mef-topology/devices/device/CSR-1_0/_operations/check-sync",
+            "deep-check-sync": "/api/running/mef-topology/devices/device/CSR-1_0/_operations/deep-check-sync",
+            "re-deploy": "/api/running/mef-topology/devices/device/CSR-1_0/_operations/re-deploy",
+            "reactive-re-deploy": "/api/running/mef-topology/devices/device/CSR-1_0/_operations/reactive-re-deploy",
+            "get-modifications": "/api/running/mef-topology/devices/device/CSR-1_0/_operations/get-modifications",
+            "un-deploy": "/api/running/mef-topology/devices/device/CSR-1_0/_operations/un-deploy"
+          }
         },
         {
           "dev-id": "CSR-2_0",
@@ -96,7 +104,15 @@
               }
             ]
           },
-          "role": "pe"
+          "role": "pe",
+          "operations": {
+            "check-sync": "/api/running/mef-topology/devices/device/CSR-2_0/_operations/check-sync",
+            "deep-check-sync": "/api/running/mef-topology/devices/device/CSR-2_0/_operations/deep-check-sync",
+            "re-deploy": "/api/running/mef-topology/devices/device/CSR-2_0/_operations/re-deploy",
+            "reactive-re-deploy": "/api/running/mef-topology/devices/device/CSR-2_0/_operations/reactive-re-deploy",
+            "get-modifications": "/api/running/mef-topology/devices/device/CSR-2_0/_operations/get-modifications",
+            "un-deploy": "/api/running/mef-topology/devices/device/CSR-2_0/_operations/un-deploy"
+          }
         },
         {
           "dev-id": "CSR-3_0",
@@ -144,7 +160,15 @@
               }
             ]
           },
-          "role": "pe"
+          "role": "pe",
+          "operations": {
+            "check-sync": "/api/running/mef-topology/devices/device/CSR-3_0/_operations/check-sync",
+            "deep-check-sync": "/api/running/mef-topology/devices/device/CSR-3_0/_operations/deep-check-sync",
+            "re-deploy": "/api/running/mef-topology/devices/device/CSR-3_0/_operations/re-deploy",
+            "reactive-re-deploy": "/api/running/mef-topology/devices/device/CSR-3_0/_operations/reactive-re-deploy",
+            "get-modifications": "/api/running/mef-topology/devices/device/CSR-3_0/_operations/get-modifications",
+            "un-deploy": "/api/running/mef-topology/devices/device/CSR-3_0/_operations/un-deploy"
+          }
         },
         {
           "dev-id": "CSR-4_0",
@@ -192,7 +216,15 @@
               }
             ]
           },
-          "role": "pe"
+          "role": "pe",
+          "operations": {
+            "check-sync": "/api/running/mef-topology/devices/device/CSR-4_0/_operations/check-sync",
+            "deep-check-sync": "/api/running/mef-topology/devices/device/CSR-4_0/_operations/deep-check-sync",
+            "re-deploy": "/api/running/mef-topology/devices/device/CSR-4_0/_operations/re-deploy",
+            "reactive-re-deploy": "/api/running/mef-topology/devices/device/CSR-4_0/_operations/reactive-re-deploy",
+            "get-modifications": "/api/running/mef-topology/devices/device/CSR-4_0/_operations/get-modifications",
+            "un-deploy": "/api/running/mef-topology/devices/device/CSR-4_0/_operations/un-deploy"
+          }
         },
         {
           "dev-id": "ce0",
@@ -223,7 +255,15 @@
             ]
           },
           "role": "ce",
-          "@role": {"annotation": "EPL Use Case 1"}
+          "@role": {"annotation": "EPL Use Case 1"},
+          "operations": {
+            "check-sync": "/api/running/mef-topology/devices/device/ce0/_operations/check-sync",
+            "deep-check-sync": "/api/running/mef-topology/devices/device/ce0/_operations/deep-check-sync",
+            "re-deploy": "/api/running/mef-topology/devices/device/ce0/_operations/re-deploy",
+            "reactive-re-deploy": "/api/running/mef-topology/devices/device/ce0/_operations/reactive-re-deploy",
+            "get-modifications": "/api/running/mef-topology/devices/device/ce0/_operations/get-modifications",
+            "un-deploy": "/api/running/mef-topology/devices/device/ce0/_operations/un-deploy"
+          }
         },
         {
           "dev-id": "ce1",
@@ -250,7 +290,15 @@
             ]
           },
           "role": "ce",
-          "@role": {"annotation": "EPL Use Case 1"}
+          "@role": {"annotation": "EPL Use Case 1"},
+          "operations": {
+            "check-sync": "/api/running/mef-topology/devices/device/ce1/_operations/check-sync",
+            "deep-check-sync": "/api/running/mef-topology/devices/device/ce1/_operations/deep-check-sync",
+            "re-deploy": "/api/running/mef-topology/devices/device/ce1/_operations/re-deploy",
+            "reactive-re-deploy": "/api/running/mef-topology/devices/device/ce1/_operations/reactive-re-deploy",
+            "get-modifications": "/api/running/mef-topology/devices/device/ce1/_operations/get-modifications",
+            "un-deploy": "/api/running/mef-topology/devices/device/ce1/_operations/un-deploy"
+          }
         },
         {
           "dev-id": "ce10",
@@ -275,7 +323,15 @@
             ]
           },
           "role": "ce",
-          "@role": {"annotation": "c10 link to pe1"}
+          "@role": {"annotation": "c10 link to pe1"},
+          "operations": {
+            "check-sync": "/api/running/mef-topology/devices/device/ce10/_operations/check-sync",
+            "deep-check-sync": "/api/running/mef-topology/devices/device/ce10/_operations/deep-check-sync",
+            "re-deploy": "/api/running/mef-topology/devices/device/ce10/_operations/re-deploy",
+            "reactive-re-deploy": "/api/running/mef-topology/devices/device/ce10/_operations/reactive-re-deploy",
+            "get-modifications": "/api/running/mef-topology/devices/device/ce10/_operations/get-modifications",
+            "un-deploy": "/api/running/mef-topology/devices/device/ce10/_operations/un-deploy"
+          }
         },
         {
           "dev-id": "ce2",
@@ -297,7 +353,15 @@
               }
             ]
           },
-          "role": "ce"
+          "role": "ce",
+          "operations": {
+            "check-sync": "/api/running/mef-topology/devices/device/ce2/_operations/check-sync",
+            "deep-check-sync": "/api/running/mef-topology/devices/device/ce2/_operations/deep-check-sync",
+            "re-deploy": "/api/running/mef-topology/devices/device/ce2/_operations/re-deploy",
+            "reactive-re-deploy": "/api/running/mef-topology/devices/device/ce2/_operations/reactive-re-deploy",
+            "get-modifications": "/api/running/mef-topology/devices/device/ce2/_operations/get-modifications",
+            "un-deploy": "/api/running/mef-topology/devices/device/ce2/_operations/un-deploy"
+          }
         },
         {
           "dev-id": "ce3",
@@ -314,7 +378,15 @@
               }
             ]
           },
-          "role": "ce"
+          "role": "ce",
+          "operations": {
+            "check-sync": "/api/running/mef-topology/devices/device/ce3/_operations/check-sync",
+            "deep-check-sync": "/api/running/mef-topology/devices/device/ce3/_operations/deep-check-sync",
+            "re-deploy": "/api/running/mef-topology/devices/device/ce3/_operations/re-deploy",
+            "reactive-re-deploy": "/api/running/mef-topology/devices/device/ce3/_operations/reactive-re-deploy",
+            "get-modifications": "/api/running/mef-topology/devices/device/ce3/_operations/get-modifications",
+            "un-deploy": "/api/running/mef-topology/devices/device/ce3/_operations/un-deploy"
+          }
         },
         {
           "dev-id": "ce4",
@@ -331,7 +403,15 @@
               }
             ]
           },
-          "role": "ce"
+          "role": "ce",
+          "operations": {
+            "check-sync": "/api/running/mef-topology/devices/device/ce4/_operations/check-sync",
+            "deep-check-sync": "/api/running/mef-topology/devices/device/ce4/_operations/deep-check-sync",
+            "re-deploy": "/api/running/mef-topology/devices/device/ce4/_operations/re-deploy",
+            "reactive-re-deploy": "/api/running/mef-topology/devices/device/ce4/_operations/reactive-re-deploy",
+            "get-modifications": "/api/running/mef-topology/devices/device/ce4/_operations/get-modifications",
+            "un-deploy": "/api/running/mef-topology/devices/device/ce4/_operations/un-deploy"
+          }
         },
         {
           "dev-id": "ce5",
@@ -368,7 +448,15 @@
             ]
           },
           "role": "ce",
-          "@role": {"annotation": "EP-LAN Use Case 1"}
+          "@role": {"annotation": "EP-LAN Use Case 1"},
+          "operations": {
+            "check-sync": "/api/running/mef-topology/devices/device/ce5/_operations/check-sync",
+            "deep-check-sync": "/api/running/mef-topology/devices/device/ce5/_operations/deep-check-sync",
+            "re-deploy": "/api/running/mef-topology/devices/device/ce5/_operations/re-deploy",
+            "reactive-re-deploy": "/api/running/mef-topology/devices/device/ce5/_operations/reactive-re-deploy",
+            "get-modifications": "/api/running/mef-topology/devices/device/ce5/_operations/get-modifications",
+            "un-deploy": "/api/running/mef-topology/devices/device/ce5/_operations/un-deploy"
+          }
         },
         {
           "dev-id": "ce6",
@@ -396,7 +484,15 @@
             ]
           },
           "role": "ce",
-          "@role": {"annotation": "EP-LAN Use Case 1"}
+          "@role": {"annotation": "EP-LAN Use Case 1"},
+          "operations": {
+            "check-sync": "/api/running/mef-topology/devices/device/ce6/_operations/check-sync",
+            "deep-check-sync": "/api/running/mef-topology/devices/device/ce6/_operations/deep-check-sync",
+            "re-deploy": "/api/running/mef-topology/devices/device/ce6/_operations/re-deploy",
+            "reactive-re-deploy": "/api/running/mef-topology/devices/device/ce6/_operations/reactive-re-deploy",
+            "get-modifications": "/api/running/mef-topology/devices/device/ce6/_operations/get-modifications",
+            "un-deploy": "/api/running/mef-topology/devices/device/ce6/_operations/un-deploy"
+          }
         },
         {
           "dev-id": "ce7",
@@ -424,7 +520,15 @@
             ]
           },
           "role": "ce",
-          "@role": {"annotation": "EP-LAN Use Case 1"}
+          "@role": {"annotation": "EP-LAN Use Case 1"},
+          "operations": {
+            "check-sync": "/api/running/mef-topology/devices/device/ce7/_operations/check-sync",
+            "deep-check-sync": "/api/running/mef-topology/devices/device/ce7/_operations/deep-check-sync",
+            "re-deploy": "/api/running/mef-topology/devices/device/ce7/_operations/re-deploy",
+            "reactive-re-deploy": "/api/running/mef-topology/devices/device/ce7/_operations/reactive-re-deploy",
+            "get-modifications": "/api/running/mef-topology/devices/device/ce7/_operations/get-modifications",
+            "un-deploy": "/api/running/mef-topology/devices/device/ce7/_operations/un-deploy"
+          }
         },
         {
           "dev-id": "ce8",
@@ -452,7 +556,15 @@
             ]
           },
           "role": "ce",
-          "@role": {"annotation": "Used for Negative Tests"}
+          "@role": {"annotation": "Used for Negative Tests"},
+          "operations": {
+            "check-sync": "/api/running/mef-topology/devices/device/ce8/_operations/check-sync",
+            "deep-check-sync": "/api/running/mef-topology/devices/device/ce8/_operations/deep-check-sync",
+            "re-deploy": "/api/running/mef-topology/devices/device/ce8/_operations/re-deploy",
+            "reactive-re-deploy": "/api/running/mef-topology/devices/device/ce8/_operations/reactive-re-deploy",
+            "get-modifications": "/api/running/mef-topology/devices/device/ce8/_operations/get-modifications",
+            "un-deploy": "/api/running/mef-topology/devices/device/ce8/_operations/un-deploy"
+          }
         },
         {
           "dev-id": "ce9",
@@ -477,383 +589,15 @@
             ]
           },
           "role": "ce",
-          "@role": {"annotation": "c9 link to pe1"}
-        },
-        {
-          "dev-id": "cr01",
-          "interfaces": {
-            "interface": [
-              {
-                "phy": "GigabitEthernet0/1",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/2",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/3",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/4",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              }
-            ]
-          },
-          "role": "p"
-        },
-        {
-          "dev-id": "cr02",
-          "interfaces": {
-            "interface": [
-              {
-                "phy": "GigabitEthernet0/1",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/2",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/3",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/4",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              }
-            ]
-          },
-          "role": "p"
-        },
-        {
-          "dev-id": "dcvar01.hkg08_0",
-          "interfaces": {
-            "interface": [
-              {
-                "phy": "GigabitEthernet0/0/1/0",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/1/1",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/1/10",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/1/11",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/1/12",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/1/13",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/1/14",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/1/15",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/1/16",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/1/17",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/1/18",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/1/19",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/1/2",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/1/3",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/1/4",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/1/5",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/1/6",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/1/7",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/1/8",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/1/9",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "TenGigE0/0/0/0",
-                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L"
-              },
-              {
-                "phy": "TenGigE0/0/0/1",
-                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L"
-              },
-              {
-                "phy": "TenGigE0/0/0/2",
-                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L"
-              },
-              {
-                "phy": "TenGigE0/0/0/3",
-                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L"
-              },
-              {
-                "phy": "TenGigE0/0/2/0",
-                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L"
-              },
-              {
-                "phy": "TenGigE0/0/2/1",
-                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L"
-              },
-              {
-                "phy": "TenGigE0/0/2/2",
-                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L"
-              },
-              {
-                "phy": "TenGigE0/0/2/3",
-                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L"
-              }
-            ]
-          },
-          "role": "pe"
-        },
-        {
-          "dev-id": "dcvar01.rst01_0",
-          "interfaces": {
-            "interface": [
-              {
-                "phy": "GigabitEthernet0/0/0/0",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/1",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/10",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/11",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/12",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/13",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/14",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/15",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/16",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/17",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/18",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/19",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/2",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/3",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/4",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/5",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/6",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/7",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/8",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/9",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "TenGigE0/0/2/0",
-                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L"
-              },
-              {
-                "phy": "TenGigE0/0/2/1",
-                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L"
-              },
-              {
-                "phy": "TenGigE0/0/2/2",
-                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L"
-              },
-              {
-                "phy": "TenGigE0/0/2/3",
-                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L"
-              }
-            ]
-          },
-          "role": "pe"
-        },
-        {
-          "dev-id": "dcvar02.rst01_0",
-          "interfaces": {
-            "interface": [
-              {
-                "phy": "GigabitEthernet0/0/0/0",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/1",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/10",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/11",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/12",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/13",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/14",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/15",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/16",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/17",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/18",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/19",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/2",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/3",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/4",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/5",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/6",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/7",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/8",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/0/0/9",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "TenGigE0/0/2/0",
-                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L"
-              },
-              {
-                "phy": "TenGigE0/0/2/1",
-                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L"
-              },
-              {
-                "phy": "TenGigE0/0/2/2",
-                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L"
-              },
-              {
-                "phy": "TenGigE0/0/2/3",
-                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L"
-              }
-            ]
-          },
-          "role": "pe"
+          "@role": {"annotation": "c9 link to pe1"},
+          "operations": {
+            "check-sync": "/api/running/mef-topology/devices/device/ce9/_operations/check-sync",
+            "deep-check-sync": "/api/running/mef-topology/devices/device/ce9/_operations/deep-check-sync",
+            "re-deploy": "/api/running/mef-topology/devices/device/ce9/_operations/re-deploy",
+            "reactive-re-deploy": "/api/running/mef-topology/devices/device/ce9/_operations/reactive-re-deploy",
+            "get-modifications": "/api/running/mef-topology/devices/device/ce9/_operations/get-modifications",
+            "un-deploy": "/api/running/mef-topology/devices/device/ce9/_operations/un-deploy"
+          }
         },
         {
           "dev-id": "p0",
@@ -873,7 +617,15 @@
               }
             ]
           },
-          "role": "p"
+          "role": "p",
+          "operations": {
+            "check-sync": "/api/running/mef-topology/devices/device/p0/_operations/check-sync",
+            "deep-check-sync": "/api/running/mef-topology/devices/device/p0/_operations/deep-check-sync",
+            "re-deploy": "/api/running/mef-topology/devices/device/p0/_operations/re-deploy",
+            "reactive-re-deploy": "/api/running/mef-topology/devices/device/p0/_operations/reactive-re-deploy",
+            "get-modifications": "/api/running/mef-topology/devices/device/p0/_operations/get-modifications",
+            "un-deploy": "/api/running/mef-topology/devices/device/p0/_operations/un-deploy"
+          }
         },
         {
           "dev-id": "p1",
@@ -893,7 +645,15 @@
               }
             ]
           },
-          "role": "p"
+          "role": "p",
+          "operations": {
+            "check-sync": "/api/running/mef-topology/devices/device/p1/_operations/check-sync",
+            "deep-check-sync": "/api/running/mef-topology/devices/device/p1/_operations/deep-check-sync",
+            "re-deploy": "/api/running/mef-topology/devices/device/p1/_operations/re-deploy",
+            "reactive-re-deploy": "/api/running/mef-topology/devices/device/p1/_operations/reactive-re-deploy",
+            "get-modifications": "/api/running/mef-topology/devices/device/p1/_operations/get-modifications",
+            "un-deploy": "/api/running/mef-topology/devices/device/p1/_operations/un-deploy"
+          }
         },
         {
           "dev-id": "p2",
@@ -913,7 +673,15 @@
               }
             ]
           },
-          "role": "p"
+          "role": "p",
+          "operations": {
+            "check-sync": "/api/running/mef-topology/devices/device/p2/_operations/check-sync",
+            "deep-check-sync": "/api/running/mef-topology/devices/device/p2/_operations/deep-check-sync",
+            "re-deploy": "/api/running/mef-topology/devices/device/p2/_operations/re-deploy",
+            "reactive-re-deploy": "/api/running/mef-topology/devices/device/p2/_operations/reactive-re-deploy",
+            "get-modifications": "/api/running/mef-topology/devices/device/p2/_operations/get-modifications",
+            "un-deploy": "/api/running/mef-topology/devices/device/p2/_operations/un-deploy"
+          }
         },
         {
           "dev-id": "p3",
@@ -933,7 +701,15 @@
               }
             ]
           },
-          "role": "p"
+          "role": "p",
+          "operations": {
+            "check-sync": "/api/running/mef-topology/devices/device/p3/_operations/check-sync",
+            "deep-check-sync": "/api/running/mef-topology/devices/device/p3/_operations/deep-check-sync",
+            "re-deploy": "/api/running/mef-topology/devices/device/p3/_operations/re-deploy",
+            "reactive-re-deploy": "/api/running/mef-topology/devices/device/p3/_operations/reactive-re-deploy",
+            "get-modifications": "/api/running/mef-topology/devices/device/p3/_operations/get-modifications",
+            "un-deploy": "/api/running/mef-topology/devices/device/p3/_operations/un-deploy"
+          }
         },
         {
           "dev-id": "pe0",
@@ -953,7 +729,15 @@
               }
             ]
           },
-          "role": "pe"
+          "role": "pe",
+          "operations": {
+            "check-sync": "/api/running/mef-topology/devices/device/pe0/_operations/check-sync",
+            "deep-check-sync": "/api/running/mef-topology/devices/device/pe0/_operations/deep-check-sync",
+            "re-deploy": "/api/running/mef-topology/devices/device/pe0/_operations/re-deploy",
+            "reactive-re-deploy": "/api/running/mef-topology/devices/device/pe0/_operations/reactive-re-deploy",
+            "get-modifications": "/api/running/mef-topology/devices/device/pe0/_operations/get-modifications",
+            "un-deploy": "/api/running/mef-topology/devices/device/pe0/_operations/un-deploy"
+          }
         },
         {
           "dev-id": "pe1",
@@ -973,7 +757,15 @@
               }
             ]
           },
-          "role": "pe"
+          "role": "pe",
+          "operations": {
+            "check-sync": "/api/running/mef-topology/devices/device/pe1/_operations/check-sync",
+            "deep-check-sync": "/api/running/mef-topology/devices/device/pe1/_operations/deep-check-sync",
+            "re-deploy": "/api/running/mef-topology/devices/device/pe1/_operations/re-deploy",
+            "reactive-re-deploy": "/api/running/mef-topology/devices/device/pe1/_operations/reactive-re-deploy",
+            "get-modifications": "/api/running/mef-topology/devices/device/pe1/_operations/get-modifications",
+            "un-deploy": "/api/running/mef-topology/devices/device/pe1/_operations/un-deploy"
+          }
         },
         {
           "dev-id": "pe2",
@@ -993,7 +785,15 @@
               }
             ]
           },
-          "role": "pe"
+          "role": "pe",
+          "operations": {
+            "check-sync": "/api/running/mef-topology/devices/device/pe2/_operations/check-sync",
+            "deep-check-sync": "/api/running/mef-topology/devices/device/pe2/_operations/deep-check-sync",
+            "re-deploy": "/api/running/mef-topology/devices/device/pe2/_operations/re-deploy",
+            "reactive-re-deploy": "/api/running/mef-topology/devices/device/pe2/_operations/reactive-re-deploy",
+            "get-modifications": "/api/running/mef-topology/devices/device/pe2/_operations/get-modifications",
+            "un-deploy": "/api/running/mef-topology/devices/device/pe2/_operations/un-deploy"
+          }
         },
         {
           "dev-id": "pe3",
@@ -1016,163 +816,15 @@
               }
             ]
           },
-          "role": "pe"
-        },
-        {
-          "dev-id": "var01.hkg08_0",
-          "interfaces": {
-            "interface": [
-              {
-                "phy": "GigabitEthernet0",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "TenGigabitEthernet0/0/0",
-                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L"
-              },
-              {
-                "phy": "TenGigabitEthernet0/1/0",
-                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L"
-              },
-              {
-                "phy": "TenGigabitEthernet1/0/0",
-                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L"
-              },
-              {
-                "phy": "TenGigabitEthernet1/1/0",
-                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L"
-              }
-            ]
-          },
-          "role": "pe"
-        },
-        {
-          "dev-id": "var02.rst01_0",
-          "interfaces": {
-            "interface": [
-              {
-                "phy": "FastEthernet0/1/0",
-                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-T"
-              },
-              {
-                "phy": "FastEthernet0/1/1",
-                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-T"
-              },
-              {
-                "phy": "FastEthernet0/1/2",
-                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-T"
-              },
-              {
-                "phy": "FastEthernet0/1/3",
-                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-T"
-              },
-              {
-                "phy": "FastEthernet0/1/4",
-                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-T"
-              },
-              {
-                "phy": "FastEthernet0/1/5",
-                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-T"
-              },
-              {
-                "phy": "FastEthernet0/1/6",
-                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-T"
-              },
-              {
-                "phy": "FastEthernet0/1/7",
-                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-T"
-              },
-              {
-                "phy": "GigabitEthernet0",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/2/0",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/2/1",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/2/2",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/2/3",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/2/4",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/2/5",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/2/6",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet0/2/7",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "TenGigabitEthernet0/0/0",
-                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L"
-              },
-              {
-                "phy": "TenGigabitEthernet1/0/0",
-                "ieee8023-phy": "mef-service-types:ieee8023-10GBASE-L"
-              }
-            ]
-          },
-          "role": "pe"
-        },
-        {
-          "dev-id": "var05.frf02_0",
-          "interfaces": {
-            "interface": [
-              {
-                "phy": "GigabitEthernet0",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet1/0/0",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet1/0/1",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet1/0/2",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet1/0/3",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet1/0/4",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet1/0/5",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet1/0/6",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              },
-              {
-                "phy": "GigabitEthernet1/0/7",
-                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
-              }
-            ]
-          },
-          "role": "pe"
+          "role": "pe",
+          "operations": {
+            "check-sync": "/api/running/mef-topology/devices/device/pe3/_operations/check-sync",
+            "deep-check-sync": "/api/running/mef-topology/devices/device/pe3/_operations/deep-check-sync",
+            "re-deploy": "/api/running/mef-topology/devices/device/pe3/_operations/re-deploy",
+            "reactive-re-deploy": "/api/running/mef-topology/devices/device/pe3/_operations/reactive-re-deploy",
+            "get-modifications": "/api/running/mef-topology/devices/device/pe3/_operations/get-modifications",
+            "un-deploy": "/api/running/mef-topology/devices/device/pe3/_operations/un-deploy"
+          }
         }
       ]
     },
@@ -1388,6 +1040,9 @@
           }
         }
       ]
+    },
+    "operations": {
+      "self-test": "/api/running/mef-topology/_operations/self-test"
     }
   }
 }

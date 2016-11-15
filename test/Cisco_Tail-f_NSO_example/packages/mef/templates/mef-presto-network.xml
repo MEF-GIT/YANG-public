@@ -1,0 +1,31 @@
+<config-template xmlns="http://tail-f.com/ns/config/1.0">
+  <devices xmlns="http://tail-f.com/ns/ncs">
+  <device>
+    <!-- need to specify by xpath so that context is updated correctly -->
+    <name>{dev-id}</name>
+      <config>
+  <network xmlns="urn:ietf:params:xml:ns:yang:ietf-network">
+    <network-id>mef16_net</network-id>
+    <node>
+      <node-id>{dev-id}</node-id>
+      <termination-point xmlns="urn:ietf:params:xml:ns:yang:ietf-network-topology">
+        <tp-id>{interfaces/interface/phy}</tp-id>
+        <direction xmlns="urn:onf:params:xml:ns:yang:TapiTopology">bidirectional</direction>
+      </termination-point>
+      <transfer-capacity xmlns="urn:onf:params:xml:ns:yang:TapiTopology">
+        <total-potential-capacity>
+          <total-size>10</total-size>
+        </total-potential-capacity>
+      </transfer-capacity>
+      <layer-protocol-name xmlns="urn:onf:params:xml:ns:yang:TapiTopology">eth</layer-protocol-name>
+    </node>
+  </network>
+    </config>
+  </device>
+  </devices>
+</config-template>
+
+
+
+
+

@@ -1,12 +1,19 @@
 # The order of packages is significant as there are dependencies between
 # the packages. Typically generated namespaces are used by other packages.
-PACKAGES = l3vpn l3vpnui mef
+PACKAGES = l3vpn l3vpnui mef mef-device
 
 # The create-network argument to ncs-netsim
 NETWORK = create-network cisco-ios 9 ce \
+          	  create-network ./packages/cisco-ios 2 ce \
+          	  create-network ./packages/cisco-ios 2 ce \
 		  create-network cisco-iosxr 2 pe \
 		  create-network juniper-junos 1 pe \
 		  create-network cisco-iosxr 1 pe \
+          	  create-network ./packages/cisco-ios 1 CSR-1_ \
+          	  create-network ./packages/cisco-ios 1 CSR-2_ \
+          	  create-network ./packages/cisco-ios 1 CSR-3_ \
+          	  create-network ./packages/cisco-ios 1 CSR-4_ \
+		  create-network ./packages/mef-device 2 mef-device_ \
 		  create-network cisco-iosxr 4 p
 
 NETSIM_DIR = netsim
@@ -15,8 +22,8 @@ NETSIM_DIR = netsim
 
 all: build-all $(NETSIM_DIR)
 
+#	cp ../../src/model/draft/mef*.yang ./packages/mef/src/yang
 build-all:
-	cp ../../src/model/draft/mef*.yang ./packages/mef/src/yang
 	for i in $(PACKAGES); do \
 		$(MAKE) -C packages/$${i}/src all || exit 1; \
 	done

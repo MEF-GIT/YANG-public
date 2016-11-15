@@ -1,6 +1,6 @@
 config
 !
-!devices sync-from
+devices sync-from
 !
 ! EPL Use Case 1
 mef-topology devices device ce0 role ce interfaces interface GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
@@ -87,121 +87,6 @@ mef-topology devices device ce10 interfaces interface fe-4-1 ieee8023-phy ieee80
 !
 mef-topology devices device ce10 interfaces interface fe-4-2 ieee8023-phy ieee8023-100BASE-TX
 !
-mef-topology devices device var05.frf02_0 role pe interfaces interface GigabitEthernet1/0/0 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device var05.frf02_0 interfaces interface GigabitEthernet1/0/1 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device var05.frf02_0 interfaces interface GigabitEthernet1/0/2 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device var05.frf02_0 interfaces interface GigabitEthernet1/0/3 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device var05.frf02_0 interfaces interface GigabitEthernet1/0/4 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device var05.frf02_0 interfaces interface GigabitEthernet1/0/5 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device var05.frf02_0 interfaces interface GigabitEthernet1/0/6 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device var05.frf02_0 interfaces interface GigabitEthernet1/0/7 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device var05.frf02_0 interfaces interface GigabitEthernet0 ieee8023-phy ieee8023-1000BASE-X
-!
-mef-topology devices device var02.rst01_0 role pe interfaces interface TenGigabitEthernet0/0/0 ieee8023-phy ieee8023-10GBASE-L
-mef-topology devices device var02.rst01_0 interfaces interface TenGigabitEthernet1/0/0 ieee8023-phy ieee8023-10GBASE-L
-mef-topology devices device var02.rst01_0 interfaces interface FastEthernet0/1/0 ieee8023-phy ieee8023-100BASE-T
-mef-topology devices device var02.rst01_0 interfaces interface FastEthernet0/1/1 ieee8023-phy ieee8023-100BASE-T
-mef-topology devices device var02.rst01_0 interfaces interface FastEthernet0/1/2 ieee8023-phy ieee8023-100BASE-T
-mef-topology devices device var02.rst01_0 interfaces interface FastEthernet0/1/3 ieee8023-phy ieee8023-100BASE-T
-mef-topology devices device var02.rst01_0 interfaces interface FastEthernet0/1/4 ieee8023-phy ieee8023-100BASE-T
-mef-topology devices device var02.rst01_0 interfaces interface FastEthernet0/1/5 ieee8023-phy ieee8023-100BASE-T
-mef-topology devices device var02.rst01_0 interfaces interface FastEthernet0/1/6 ieee8023-phy ieee8023-100BASE-T
-mef-topology devices device var02.rst01_0 interfaces interface FastEthernet0/1/7 ieee8023-phy ieee8023-100BASE-T
-mef-topology devices device var02.rst01_0 interfaces interface GigabitEthernet0/2/0 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device var02.rst01_0 interfaces interface GigabitEthernet0/2/1 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device var02.rst01_0 interfaces interface GigabitEthernet0/2/2 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device var02.rst01_0 interfaces interface GigabitEthernet0/2/3 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device var02.rst01_0 interfaces interface GigabitEthernet0/2/4 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device var02.rst01_0 interfaces interface GigabitEthernet0/2/5 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device var02.rst01_0 interfaces interface GigabitEthernet0/2/6 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device var02.rst01_0 interfaces interface GigabitEthernet0/2/7 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device var02.rst01_0 interfaces interface GigabitEthernet0 ieee8023-phy ieee8023-1000BASE-X
-!
-mef-topology devices device var01.hkg08_0 role pe interfaces interface TenGigabitEthernet0/0/0 ieee8023-phy ieee8023-10GBASE-L
-mef-topology devices device var01.hkg08_0 interfaces interface TenGigabitEthernet0/1/0 ieee8023-phy ieee8023-10GBASE-L
-mef-topology devices device var01.hkg08_0 interfaces interface TenGigabitEthernet1/0/0 ieee8023-phy ieee8023-10GBASE-L
-mef-topology devices device var01.hkg08_0 interfaces interface TenGigabitEthernet1/1/0 ieee8023-phy ieee8023-10GBASE-L
-mef-topology devices device var01.hkg08_0 interfaces interface GigabitEthernet0 ieee8023-phy ieee8023-1000BASE-X
-!
-mef-topology devices device dcvar01.hkg08_0 role pe interfaces interface GigabitEthernet0/0/1/0 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.hkg08_0 interfaces interface GigabitEthernet0/0/1/1 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.hkg08_0 interfaces interface GigabitEthernet0/0/1/2 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.hkg08_0 interfaces interface GigabitEthernet0/0/1/3 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.hkg08_0 interfaces interface GigabitEthernet0/0/1/4 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.hkg08_0 interfaces interface GigabitEthernet0/0/1/5 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.hkg08_0 interfaces interface GigabitEthernet0/0/1/6 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.hkg08_0 interfaces interface GigabitEthernet0/0/1/7 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.hkg08_0 interfaces interface GigabitEthernet0/0/1/8 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.hkg08_0 interfaces interface GigabitEthernet0/0/1/9 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.hkg08_0 interfaces interface GigabitEthernet0/0/1/10 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.hkg08_0 interfaces interface GigabitEthernet0/0/1/11 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.hkg08_0 interfaces interface GigabitEthernet0/0/1/12 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.hkg08_0 interfaces interface GigabitEthernet0/0/1/13 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.hkg08_0 interfaces interface GigabitEthernet0/0/1/14 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.hkg08_0 interfaces interface GigabitEthernet0/0/1/15 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.hkg08_0 interfaces interface GigabitEthernet0/0/1/16 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.hkg08_0 interfaces interface GigabitEthernet0/0/1/17 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.hkg08_0 interfaces interface GigabitEthernet0/0/1/18 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.hkg08_0 interfaces interface GigabitEthernet0/0/1/19 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.hkg08_0 interfaces interface TenGigE0/0/0/0 ieee8023-phy ieee8023-10GBASE-L
-mef-topology devices device dcvar01.hkg08_0 interfaces interface TenGigE0/0/0/1 ieee8023-phy ieee8023-10GBASE-L
-mef-topology devices device dcvar01.hkg08_0 interfaces interface TenGigE0/0/0/2 ieee8023-phy ieee8023-10GBASE-L
-mef-topology devices device dcvar01.hkg08_0 interfaces interface TenGigE0/0/0/3 ieee8023-phy ieee8023-10GBASE-L
-mef-topology devices device dcvar01.hkg08_0 interfaces interface TenGigE0/0/2/0 ieee8023-phy ieee8023-10GBASE-L
-mef-topology devices device dcvar01.hkg08_0 interfaces interface TenGigE0/0/2/1 ieee8023-phy ieee8023-10GBASE-L
-mef-topology devices device dcvar01.hkg08_0 interfaces interface TenGigE0/0/2/2 ieee8023-phy ieee8023-10GBASE-L
-mef-topology devices device dcvar01.hkg08_0 interfaces interface TenGigE0/0/2/3 ieee8023-phy ieee8023-10GBASE-L
-!
-mef-topology devices device dcvar01.rst01_0 role pe interfaces interface GigabitEthernet0/0/0/0 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.rst01_0 interfaces interface GigabitEthernet0/0/0/1 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.rst01_0 interfaces interface GigabitEthernet0/0/0/2 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.rst01_0 interfaces interface GigabitEthernet0/0/0/3 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.rst01_0 interfaces interface GigabitEthernet0/0/0/4 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.rst01_0 interfaces interface GigabitEthernet0/0/0/5 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.rst01_0 interfaces interface GigabitEthernet0/0/0/6 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.rst01_0 interfaces interface GigabitEthernet0/0/0/7 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.rst01_0 interfaces interface GigabitEthernet0/0/0/8 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.rst01_0 interfaces interface GigabitEthernet0/0/0/9 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.rst01_0 interfaces interface GigabitEthernet0/0/0/10 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.rst01_0 interfaces interface GigabitEthernet0/0/0/11 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.rst01_0 interfaces interface GigabitEthernet0/0/0/12 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.rst01_0 interfaces interface GigabitEthernet0/0/0/13 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.rst01_0 interfaces interface GigabitEthernet0/0/0/14 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.rst01_0 interfaces interface GigabitEthernet0/0/0/15 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.rst01_0 interfaces interface GigabitEthernet0/0/0/16 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.rst01_0 interfaces interface GigabitEthernet0/0/0/17 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.rst01_0 interfaces interface GigabitEthernet0/0/0/18 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.rst01_0 interfaces interface GigabitEthernet0/0/0/19 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar01.rst01_0 interfaces interface TenGigE0/0/2/0 ieee8023-phy ieee8023-10GBASE-L
-mef-topology devices device dcvar01.rst01_0 interfaces interface TenGigE0/0/2/1 ieee8023-phy ieee8023-10GBASE-L
-mef-topology devices device dcvar01.rst01_0 interfaces interface TenGigE0/0/2/2 ieee8023-phy ieee8023-10GBASE-L
-mef-topology devices device dcvar01.rst01_0 interfaces interface TenGigE0/0/2/3 ieee8023-phy ieee8023-10GBASE-L
-!
-mef-topology devices device dcvar02.rst01_0 role pe interfaces interface GigabitEthernet0/0/0/0 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar02.rst01_0 interfaces interface GigabitEthernet0/0/0/1 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar02.rst01_0 interfaces interface GigabitEthernet0/0/0/2 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar02.rst01_0 interfaces interface GigabitEthernet0/0/0/3 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar02.rst01_0 interfaces interface GigabitEthernet0/0/0/4 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar02.rst01_0 interfaces interface GigabitEthernet0/0/0/5 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar02.rst01_0 interfaces interface GigabitEthernet0/0/0/6 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar02.rst01_0 interfaces interface GigabitEthernet0/0/0/7 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar02.rst01_0 interfaces interface GigabitEthernet0/0/0/8 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar02.rst01_0 interfaces interface GigabitEthernet0/0/0/9 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar02.rst01_0 interfaces interface GigabitEthernet0/0/0/10 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar02.rst01_0 interfaces interface GigabitEthernet0/0/0/11 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar02.rst01_0 interfaces interface GigabitEthernet0/0/0/12 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar02.rst01_0 interfaces interface GigabitEthernet0/0/0/13 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar02.rst01_0 interfaces interface GigabitEthernet0/0/0/14 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar02.rst01_0 interfaces interface GigabitEthernet0/0/0/15 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar02.rst01_0 interfaces interface GigabitEthernet0/0/0/16 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar02.rst01_0 interfaces interface GigabitEthernet0/0/0/17 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar02.rst01_0 interfaces interface GigabitEthernet0/0/0/18 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar02.rst01_0 interfaces interface GigabitEthernet0/0/0/19 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device dcvar02.rst01_0 interfaces interface TenGigE0/0/2/0 ieee8023-phy ieee8023-10GBASE-L
-mef-topology devices device dcvar02.rst01_0 interfaces interface TenGigE0/0/2/1 ieee8023-phy ieee8023-10GBASE-L
-mef-topology devices device dcvar02.rst01_0 interfaces interface TenGigE0/0/2/2 ieee8023-phy ieee8023-10GBASE-L
-mef-topology devices device dcvar02.rst01_0 interfaces interface TenGigE0/0/2/3 ieee8023-phy ieee8023-10GBASE-L
-!
 mef-topology devices device CSR-1_0 role pe interfaces interface GigabitEthernet1 ieee8023-phy ieee8023-1000BASE-X
 mef-topology devices device CSR-1_0 interfaces interface GigabitEthernet2 ieee8023-phy ieee8023-1000BASE-X
 mef-topology devices device CSR-1_0 interfaces interface GigabitEthernet3 ieee8023-phy ieee8023-1000BASE-X
@@ -246,14 +131,6 @@ mef-topology devices device CSR-4_0 interfaces interface GigabitEthernet8 ieee80
 mef-topology devices device CSR-4_0 interfaces interface GigabitEthernet9 ieee8023-phy ieee8023-1000BASE-X
 mef-topology devices device CSR-4_0 interfaces interface GigabitEthernet10 ieee8023-phy ieee8023-1000BASE-X
 !
-mef-topology devices device cr01 role p interfaces interface GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device cr01 interfaces interface GigabitEthernet0/2 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device cr01 interfaces interface GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device cr01 interfaces interface GigabitEthernet0/4 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device cr02 role p interfaces interface GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device cr02 interfaces interface GigabitEthernet0/2 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device cr02 interfaces interface GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-X
-mef-topology devices device cr02 interfaces interface GigabitEthernet0/4 ieee8023-phy ieee8023-1000BASE-X
 mef-topology devices device pe0 role pe interfaces interface GigabitEthernet0/0/0/1
 mef-topology devices device pe0 interfaces interface GigabitEthernet0/0/0/2
 mef-topology devices device pe0 interfaces interface GigabitEthernet0/0/0/3

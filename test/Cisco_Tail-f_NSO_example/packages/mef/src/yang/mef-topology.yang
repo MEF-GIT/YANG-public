@@ -1,11 +1,16 @@
 module mef-topology {
   namespace "urn:mef:xid:mef-topology";
   prefix mef-topology;
-
-  import mef-service-types {
-    prefix mef-types;
+  
+  import tailf-common {
+	  prefix tailf;
   }
-
+  import tailf-ncs {
+    prefix ncs;
+  }
+  import mef-service-types {
+	    prefix mef-types;
+  }
   organization "MEF Forum";
   contact
     "Web URL: http://mef.net/ \\
@@ -94,6 +99,23 @@ module mef-topology {
   container mef-topology {
     description
       "MEF Topology";
+    
+    tailf:action self-test {
+        tailf:actionpoint mef-topology-self-test-point;
+        input {
+        }
+        output {
+          leaf success {
+            type boolean;
+            mandatory true;
+          }
+          leaf message {
+            type string;
+            mandatory true;
+          }
+        }
+      }    
+    
     container devices {
       description
         "Network Devices in the CEN.";
@@ -101,6 +123,15 @@ module mef-topology {
         key "dev-id";
         description
           "Network Device List.";
+        leaf dev-id {
+            type mef-types:identifier45;
+            description
+              "Device Identifier.";
+          }
+        
+        uses ncs:service-data;
+        ncs:servicepoint "mef-topology-servicepoint";
+        
         container interfaces {
           description
             "Physical Ports/Interfaces associated with this " +
@@ -127,6 +158,7 @@ module mef-topology {
             }
             container status {
               config false;
+              tailf:callpoint interface-status;
               leaf speed {
                 type uint64;
                 units "bits-per-second";
@@ -147,11 +179,6 @@ module mef-topology {
           default "ce";
           description
             "The role of this device in the network.";
-        }
-        leaf dev-id {
-          type mef-types:identifier45;
-          description
-            "Device Identifier.";
         }
       }
     }

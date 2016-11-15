@@ -14,7 +14,12 @@ module mef-services {
   import mef-interfaces {
     prefix mef-interfaces;
   }
-
+  import tailf-common {
+      prefix tailf;
+  }
+  import tailf-ncs {
+    prefix ncs;
+  }
   organization "MEF Forum";
   contact
     "Web URL: http://mef.net/
@@ -91,6 +96,23 @@ module mef-services {
     description
       "MEF Services for Ethernet Virtual Circuit(EVC) " +
       "Configuration and Status";
+/*    
+    tailf:action self-test {
+        tailf:actionpoint mef-services-self-test-point;
+        input {
+        }
+        output {
+          leaf success {
+            type boolean;
+            mandatory true;
+          }
+          leaf message {
+            type string;
+            mandatory true;
+          }
+        }
+      }
+*/    
     list mef-service {
       key "evc-id";
       description
@@ -103,6 +125,10 @@ module mef-services {
         reference "[MEF10.3] Section 8.2 [R7]. " +
         		"[MEF7.3] Section 11.1.1, Section 12.2.2.";
       }
+      
+//      uses ncs:service-data;
+//      ncs:servicepoint "mef-services-servicepoint";
+
       container end-points {
         description
           "EVC Per Universal Network Interface(UNI) Configuration " +

@@ -1,0 +1,864 @@
+config
+!
+devices sync-from
+!
+!
+! device EPL Use Case 1
+mef-topology devices device mef-device_0 role ce interfaces interface GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
+! EPL Use Case 2
+mef-topology devices device mef-device_0 interfaces interface GigabitEthernet0/2 ieee8023-phy ieee8023-1000BASE-SX
+! EVPL Use Case 1
+mef-topology devices device mef-device_0 interfaces interface GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
+! c0 link to pe0
+mef-topology devices device mef-device_0 interfaces interface GigabitEthernet0/4 ieee8023-phy ieee8023-1000BASE-SX
+!
+mef-topology devices device mef-device_0 interfaces interface Loopback0
+! EPL Use Case 1
+mef-topology devices device mef-device_1 role ce interfaces interface GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
+!
+mef-topology devices device mef-device_1 interfaces interface GigabitEthernet0/2 ieee8023-phy ieee8023-1000BASE-SX
+! EVPL Use Case 1
+mef-topology devices device mef-device_1 interfaces interface GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
+! c1 link to pe0
+mef-topology devices device mef-device_0 interfaces interface GigabitEthernet0/4 ieee8023-phy ieee8023-1000BASE-SX
+!
+! Global CoS Names
+mef-global profiles cos-names cos-name Krypton;
+!
+mef-global profiles cos-names cos-name Argon;
+!
+mef-global profiles cos-names cos-name Neon;
+!
+mef-global profiles cos-names cos-name Platinum;
+!
+mef-global profiles cos-names cos-name Control;
+!
+mef-global profiles cos-names cos-name Gold;
+!
+mef-global profiles cos-names cos-name SilverPlus;
+!
+mef-global profiles cos-names cos-name Silver;
+!
+mef-global profiles cos-names cos-name BronzeEnhanced;
+!
+mef-global profiles cos-names cos-name BronzePlus;
+!
+mef-global profiles cos-names cos-name Bronze;
+!
+mef-global profiles cos-names cos-name H;
+!
+mef-global profiles cos-names cos-name M;
+!
+mef-global profiles cos-names cos-name L;
+!
+mef-global profiles cos-names cos-name Discard;
+!
+mef-global profiles cos-names cos-name Senior;
+!
+mef-global profiles cos-names cos-name Junior;
+!
+mef-global profiles cos-names cos-name Sophomore;
+!
+mef-global profiles cos-names cos-name Freshman;
+!
+mef-global profiles cos-names cos-name BUSINESS-CRITICAL;
+!
+mef-global profiles cos-names cos-name MISSION-CRITICAL;
+!
+mef-global profiles cos-names cos-name REALTIME;
+!
+mef-global profiles cos-names cos-name pccwg_gold;
+!
+mef-global profiles cos-names cos-name pccwg_silverplus;
+!
+mef-global profiles cos-names cos-name pccwg_silver;
+!
+mef-global profiles cos-names cos-name pccwg_bronze;
+!
+mef-global profiles cos-names cos-name control;
+!
+mef-global profiles cos-names cos-name gold;
+!
+mef-global profiles cos-names cos-name "silver+";
+!
+mef-global profiles cos-names cos-name silver;
+!
+mef-global profiles cos-names cos-name mpls-bronze;
+!
+! Global EEC Names
+mef-global profiles eec-names eec-name Senior;
+!
+mef-global profiles eec-names eec-name Junior;
+!
+mef-global profiles eec-names eec-name Sophomore;
+!
+mef-global profiles eec-names eec-name Freshman;
+!
+mef-global profiles eec-names eec-name EEC-Krypton;
+!
+mef-global profiles eec-names eec-name EEC-Argon;
+!
+mef-global profiles eec-names eec-name EEC-Neon;
+!
+mef-global profiles eec-names eec-name H;
+!
+mef-global profiles eec-names eec-name M;
+!
+mef-global profiles eec-names eec-name L;
+!
+mef-global profiles eec-names eec-name Discard;
+!
+mef-global profiles eec-names eec-name Platinum;
+!
+mef-global profiles eec-names eec-name Control;
+!
+mef-global profiles eec-names eec-name Gold;
+!
+mef-global profiles eec-names eec-name SilverPlus;
+!
+mef-global profiles eec-names eec-name Silver;
+!
+mef-global profiles eec-names eec-name BronzeEnhanced;
+!
+mef-global profiles eec-names eec-name BronzePlus;
+!
+mef-global profiles eec-names eec-name Bronze;
+!
+mef-global profiles eec-names eec-name pccwg_gold;
+!
+mef-global profiles eec-names eec-name pccwg_silverplus;
+!
+mef-global profiles eec-names eec-name pccwg_silver;
+!
+mef-global profiles eec-names eec-name pccwg_bronze;
+!
+mef-global profiles eec-names eec-name control;
+!
+mef-global profiles eec-names eec-name gold;
+!
+mef-global profiles eec-names eec-name "silver+";
+!
+mef-global profiles eec-names eec-name silver;
+!
+mef-global profiles eec-names eec-name mpls-bronze;
+!
+commit
+!
+top
+! Service Level Specifications
+mef-global slss sls MEF103_Table25 time-interval 2592000 start-time 201606181200Z
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Krypton delta-t 1 threshold-c 50.0 consecutive-interval-n 10
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 one-way-frame-delay-pm pm-percentile 99.9 pm-objective 200
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Krypton pm-entries pm-entry SLS_Krypton_Test2 one-way-frame-loss-ratio-pm pm-objective 290
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Krypton pm-entries pm-entry SLS_Krypton_Test3 one-way-inter-frame-delay-variation-pm pm-percentile 99.9 frame-pair-separation 1 pm-objective 250
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Krypton pm-entries pm-entry SLS_Krypton_Test4 one-way-availability-pm pm-objective 96
+!
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Argon delta-t 1 threshold-c 50.0 consecutive-interval-n 10
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Argon pm-entries pm-entry SLS_Argon_Test1 one-way-frame-delay-pm pm-percentile 99.0 pm-objective 300
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Argon pm-entries pm-entry SLS_Argon_Test2 one-way-frame-loss-ratio-pm pm-objective 390
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Argon pm-entries pm-entry SLS_Argon_Test3 one-way-availability-pm pm-objective 94
+!
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon delta-t 1 threshold-c 50.0 consecutive-interval-n 10
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test1 one-way-frame-delay-pm pm-percentile 95.0 pm-objective 400
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test2 one-way-frame-loss-ratio-pm pm-objective 490
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test3 one-way-availability-pm pm-objective 92
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test5 one-way-frame-delay-range pm-percentile 98.0 pm-objective 150
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test6 one-way-mean-frame-delay-pm pm-objective 300
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test7 one-way-high-loss-interval-pm  pm-objective 220
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test8 one-way-consecutive-high-loss-interval-pm consecutive-number-p 9 pm-objective 257
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test9 one-way-composite-pm cpi-threshold-u 90.6 frame-loss-indicator true frame-delay-indicator true ifdv-indicator true one-way-fd-threshold 42 one-way-ifdv-threshold 55 pm-objective 300
+mef-global slss sls MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_GA_Test one-way-group-availability-pm min-number-of-if-to-be-available 1 pm-objective 300
+!
+mef-global slss sls SLS_Example time-interval 1292000 start-time 201606281200Z
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry H delta-t 1 threshold-c 50.0 consecutive-interval-n 10
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test1 one-way-frame-delay-pm pm-percentile 99.9 pm-objective 200
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test2 one-way-frame-loss-ratio-pm pm-objective 290
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test3 one-way-inter-frame-delay-variation-pm pm-percentile 99.9 frame-pair-separation 1 pm-objective 250
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test4 one-way-availability-pm pm-objective 96
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test5 one-way-frame-delay-range pm-percentile 98.0 pm-objective 150
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test6 one-way-mean-frame-delay-pm pm-objective 300
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test7 one-way-high-loss-interval-pm  pm-objective 220
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test8 one-way-consecutive-high-loss-interval-pm consecutive-number-p 9 pm-objective 257
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test9 one-way-composite-pm cpi-threshold-u 90.6 frame-loss-indicator true frame-delay-indicator true ifdv-indicator true one-way-fd-threshold 42 one-way-ifdv-threshold 55 pm-objective 300
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_GA_Test one-way-group-availability-pm min-number-of-if-to-be-available 1 pm-objective 300
+!
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry M delta-t 1 threshold-c 50.0 consecutive-interval-n 10
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry M pm-entries pm-entry SLS_M_Test1 one-way-frame-delay-pm pm-percentile 99.0 pm-objective 300
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry M pm-entries pm-entry SLS_M_Test2 one-way-frame-loss-ratio-pm pm-objective 390
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry M pm-entries pm-entry SLS_M_Test3 one-way-availability-pm pm-objective 94
+!
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry L delta-t 1 threshold-c 50.0 consecutive-interval-n 10
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry L pm-entries pm-entry SLS_L_Test1 one-way-frame-delay-pm pm-percentile 95.0 pm-objective 400
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry L pm-entries pm-entry SLS_L_Test2 one-way-frame-loss-ratio-pm pm-objective 490
+mef-global slss sls SLS_Example pm-cos-name-entries pm-cos-name-entry L pm-entries pm-entry SLS_L_Test3 one-way-availability-pm pm-objective 92
+!
+commit
+!
+top
+! Global Ingress Bandwidth Profiles are Ordered-By User
+mef-global profiles ingress-bwp-flows bwp-flow low1-bwp-uni user-label low1-bwp-uni cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles ingress-bwp-flows bwp-flow medium1-bwp-uni user-label medium1-bwp-uni cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles ingress-bwp-flows bwp-flow high1-bwp-uni user-label high1-bwp-uni cir 20000 cir-max 20000 cbs 64000 eir 0 eir-max 50000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles ingress-bwp-flows bwp-flow low2-bwp-uni user-label low2-bwp-uni cir 400000 cbs 9000 eir 10000 ebs 10000  color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles ingress-bwp-flows bwp-flow medium2-bwp-uni user-label medium2-bwp-uni cir 2000000 cbs 10000 eir 10000 ebs 10000  color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles ingress-bwp-flows bwp-flow high2-bwp-uni user-label high2-bwp-uni cir 10000000 cbs 12000 eir 0 ebs 0  color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles ingress-bwp-flows bwp-flow high3-bwp-uni user-label high3-bwp-uni cir 20000 cir-max 20000 cbs 64000 eir 0 eir-max 50000 ebs 0 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles ingress-bwp-flows bwp-flow medium3-bwp-uni user-label medium3-bwp-uni cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 30000 ebs 0 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles ingress-bwp-flows bwp-flow low3-bwp-uni user-label low3-bwp-uni cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles ingress-bwp-flows bwp-flow chicago-bwp-uni user-label chicago-bwp-uni cir 10000000 cbs 12000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles ingress-bwp-flows bwp-flow denver-bwp-uni user-label denver-bwp-uni cir 2000000 cbs 10000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles ingress-bwp-flows bwp-flow chicago-bwp-evc user-label chicago-bwp-evc cir 400000 cbs 9000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles ingress-bwp-flows bwp-flow denver-bwp-evc user-label denver-bwp-evc cir 400000 cbs 9000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles ingress-bwp-flows bwp-flow itest-bwp1 user-label itest-bwp1 cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles ingress-bwp-flows bwp-flow itest-bwp2 user-label itest-bwp2 cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles ingress-bwp-flows bwp-flow INGRESS_BWP_100mbps user-label ingress-bwp100 cir 100000 cir-max 200000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles ingress-bwp-flows bwp-flow INGRESS_BWP_70mbps user-label ingress-bwp70 cir 70000 cir-max 200000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles ingress-bwp-flows bwp-flow INGRESS_BWP_2mbps user-label ingress-bwp2 cir 2000 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles ingress-bwp-flows bwp-flow INGRESS_BWP_200kbps user-label ingress-bwp200k cir 200 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles ingress-bwp-flows bwp-flow INGRESS_BWP_800kbps user-label ingress-bwp800k cir 800 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+! Global Egress Bandwidth Profiles are Ordered-By User
+mef-global profiles egress-bwp-flows bwp-flow low1-bwp-uni user-label low1-bwp-uni cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles egress-bwp-flows bwp-flow medium1-bwp-uni user-label medium1-bwp-uni cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 0 ebs 0 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles egress-bwp-flows bwp-flow high1-bwp-uni user-label high1-bwp-uni cir 20000 cir-max 20000 cbs 64000 eir 0 eir-max 50000 ebs 0 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles egress-bwp-flows bwp-flow low2-bwp-uni user-label low2-bwp-evc cir 400000 cbs 9000 eir 10000 ebs 10000  color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles egress-bwp-flows bwp-flow medium2-bwp-uni user-label medium2-bwp-uni cir 2000000 cbs 10000 eir 10000 ebs 10000  color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles egress-bwp-flows bwp-flow high2-bwp-uni user-label high2-bwp-uni cir 10000000 cbs 12000 eir 0 ebs 0  color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles egress-bwp-flows bwp-flow high3-bwp-uni user-label high3-bwp-uni cir 20000 cir-max 20000 cbs 64000 eir 0 eir-max 0 ebs 0 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles egress-bwp-flows bwp-flow medium3-bwp-uni user-label medium3-bwp-uni cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 0 ebs 0 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles egress-bwp-flows bwp-flow low3-bwp-uni user-label low3-bwp-uni cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 2000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles egress-bwp-flows bwp-flow chicago-bwp-uni user-label chicago-bwp-uni cir 10000000 cbs 12000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles egress-bwp-flows bwp-flow denver-bwp-uni user-label denver-bwp-uni cir 2000000 cbs 10000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles egress-bwp-flows bwp-flow chicago-bwp-evc user-label chicago-bwp-evc cir 400000 cbs 9000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles egress-bwp-flows bwp-flow denver-bwp-evc user-label denver-bwp-evc cir 400000 cbs 9000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles egress-bwp-flows bwp-flow etest-bwp1 user-label etest-bwp1 cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles egress-bwp-flows bwp-flow etest-bwp2 user-label etest-bwp2 cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles egress-bwp-flows bwp-flow EGRESS_BWP_100mbps user-label egress-bwp100 cir 100000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles egress-bwp-flows bwp-flow EGRESS_BWP_70mbps user-label egress-bwp70 cir 70000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles egress-bwp-flows bwp-flow EGRESS_BWP_2mbps user-label egress-bwp2 cir 2000 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles egress-bwp-flows bwp-flow EGRESS_BWP_200kbps user-label egress-bwp200k cir 200 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+mef-global profiles egress-bwp-flows bwp-flow EGRESS_BWP_800kbps user-label egress-bwp800k cir 800 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+!
+commit
+!
+top
+! Global CoS Profiles
+mef-global profiles cos cos-profile MEF62_ApdxA_CoS cos-evc default-evc-cos-name Krypton default-evc-color green
+!
+mef-global profiles cos cos-profile AcmePCP cos-pcp pcp 5 cos-name Krypton color green
+!
+mef-global profiles cos cos-profile AcmePCP cos-pcp pcp 3 cos-name Argon color green
+!
+mef-global profiles cos cos-profile AcmePCP cos-pcp pcp 1 cos-name Neon color yellow
+!
+mef-global profiles cos cos-profile AcmePCP cos-pcp pcp 7 discard-value true color green
+!
+mef-global profiles cos cos-profile AcmePCP cos-pcp pcp 6 discard-value true color green
+!
+mef-global profiles cos cos-profile AcmePCP cos-pcp pcp 4 discard-value true color green
+!
+mef-global profiles cos cos-profile AcmePCP cos-pcp pcp 2 discard-value true color yellow
+!
+mef-global profiles cos cos-profile AcmePCP cos-pcp pcp 0 discard-value true color yellow
+!
+mef-global profiles cos cos-profile AcmePCP cos-pcp default-pcp-cos-name Argon default-pcp-color green
+!
+mef-global profiles cos cos-profile MEF103_Table13 cos-pcp pcp 7 cos-name Gold color green
+!
+mef-global profiles cos cos-profile MEF103_Table13 cos-pcp pcp 6 cos-name Gold color green
+!
+mef-global profiles cos cos-profile MEF103_Table13 cos-pcp pcp 5 cos-name Gold color green
+!
+mef-global profiles cos cos-profile MEF103_Table13 cos-pcp pcp 4 cos-name Gold color green
+!
+mef-global profiles cos cos-profile MEF103_Table13 cos-pcp pcp 3 cos-name Silver color yellow
+!
+mef-global profiles cos cos-profile MEF103_Table13 cos-pcp pcp 2 discard-value true cos-name Discard
+!
+mef-global profiles cos cos-profile MEF103_Table13 cos-pcp pcp 1 discard-value true cos-name Discard
+!
+mef-global profiles cos cos-profile MEF103_Table13 cos-pcp pcp 0 cos-name Silver color green
+!
+mef-global profiles cos cos-profile MEF103_Table13 cos-pcp default-pcp-cos-name Gold default-pcp-color green
+!
+mef-global profiles cos cos-profile MEF103_Table14 cos-pcp pcp 7 cos-name Platinum color green
+!
+mef-global profiles cos cos-profile MEF103_Table14 cos-pcp pcp 6 cos-name Gold color green
+!
+mef-global profiles cos cos-profile MEF103_Table14 cos-pcp pcp 5 cos-name Gold color green
+!
+mef-global profiles cos cos-profile MEF103_Table14 cos-pcp pcp 4 cos-name Gold color green
+!
+mef-global profiles cos cos-profile MEF103_Table14 cos-pcp pcp 3 cos-name Gold color green
+!
+mef-global profiles cos cos-profile MEF103_Table14 cos-pcp pcp 2 cos-name Gold color yellow
+!
+mef-global profiles cos cos-profile MEF103_Table14 cos-pcp pcp 1 cos-name Gold color yellow
+!
+mef-global profiles cos cos-profile MEF103_Table14 cos-pcp pcp 0 cos-name Gold color yellow
+!
+mef-global profiles cos cos-profile MEF103_Table14 cos-pcp default-pcp-cos-name Gold default-pcp-color green
+!
+mef-global profiles cos cos-profile MEF231 cos-pcp pcp 7 cos-name H
+!
+mef-global profiles cos cos-profile MEF213 cos-pcp pcp 3 cos-name M
+!
+mef-global profiles cos cos-profile MEF213 cos-pcp default-pcp-cos-name L default-pcp-color green
+!
+mef-global profiles cos cos-profile MEF103_Figure25_BWP3 cos-pcp pcp 7
+!
+mef-global profiles cos cos-profile MEF103_Figure25_BWP3 cos-pcp pcp 6
+!
+mef-global profiles cos cos-profile MEF103_Figure25_BWP2 cos-pcp pcp 5
+!
+mef-global profiles cos cos-profile MEF103_Figure25_BWP2 cos-pcp pcp 4
+!
+mef-global profiles cos cos-profile MEF103_Figure25_BWP1 cos-pcp pcp 3
+!
+mef-global profiles cos cos-profile MEF103_Figure25_BWP1 cos-pcp pcp 2
+!
+mef-global profiles cos cos-profile MEF103_Figure25_BWP1 cos-pcp pcp 1
+!
+mef-global profiles cos cos-profile MEF103_Figure25_BWP1 cos-pcp pcp 0
+!
+mef-global profiles cos cos-profile MEF103_Table23 cos-dscp ipv4-dscp 11 discard-value false cos-name Sophomore color green
+!
+mef-global profiles cos cos-profile MEF103_Table23 cos-dscp ipv4-dscp 37 discard-value false cos-name Sophomore color green
+!
+mef-global profiles cos cos-profile MEF103_Table23 cos-dscp ipv4-dscp 45 discard-value false cos-name Sophomore color green
+!
+mef-global profiles cos cos-profile MEF103_Table23 cos-dscp ipv4-dscp 8 discard-value false cos-name Senior color green
+!
+mef-global profiles cos cos-profile MEF103_Table23 cos-dscp ipv4-dscp 10 discard-value false cos-name Senior color green
+!
+mef-global profiles cos cos-profile MEF103_Table23 cos-dscp ipv4-dscp 12 discard-value false cos-name Senior color green
+!
+mef-global profiles cos cos-profile MEF103_Table23 cos-dscp default-ipv4-cos-name L default-ipv4-color yellow
+!
+mef-global profiles cos cos-profile MEF103_Table23 cos-dscp ipv6-dscp 11 discard-value false cos-name Sophomore color green
+!
+mef-global profiles cos cos-profile MEF103_Table23 cos-dscp ipv6-dscp 37 discard-value false cos-name Sophomore color green
+!
+mef-global profiles cos cos-profile MEF103_Table23 cos-dscp ipv6-dscp 45 discard-value false cos-name Sophomore color green
+!
+mef-global profiles cos cos-profile MEF103_Table23 cos-dscp ipv6-dscp 38 discard-value false cos-name Freshman color yellow
+!
+mef-global profiles cos cos-profile MEF103_Table23 cos-dscp ipv6-dscp 63 discard-value false cos-name Freshman color yellow
+!
+mef-global profiles cos cos-profile MEF103_Table23 cos-dscp default-ipv6-cos-name Freshman default-ipv6-color yellow
+!
+mef-global profiles cos cos-profile COS_DSCP_1 cos-dscp ipv4-dscp 56 discard-value false cos-name pccwg_gold color green
+!
+mef-global profiles cos cos-profile COS_DSCP_1 cos-dscp ipv4-dscp 48 discard-value false cos-name pccwg_gold color green
+!
+mef-global profiles cos cos-profile COS_DSCP_1 cos-dscp ipv4-dscp 46 discard-value false cos-name pccwg_gold color green
+!
+mef-global profiles cos cos-profile COS_DSCP_1 cos-dscp ipv4-dscp 40 discard-value false cos-name pccwg_gold color green
+!
+mef-global profiles cos cos-profile COS_DSCP_1 cos-dscp ipv4-dscp 38 discard-value false cos-name pccwg_silverplus color green
+!
+mef-global profiles cos cos-profile COS_DSCP_1 cos-dscp ipv4-dscp 36 discard-value false cos-name pccwg_silverplus color green
+!
+mef-global profiles cos cos-profile COS_DSCP_1 cos-dscp ipv4-dscp 34 discard-value false cos-name pccwg_silverplus color green
+!
+mef-global profiles cos cos-profile COS_DSCP_1 cos-dscp ipv4-dscp 32 discard-value false cos-name pccwg_silverplus color green
+!
+mef-global profiles cos cos-profile COS_DSCP_1 cos-dscp ipv4-dscp 30 discard-value false cos-name pccwg_silver color green
+!
+mef-global profiles cos cos-profile COS_DSCP_1 cos-dscp ipv4-dscp 28 discard-value false cos-name pccwg_silver color green
+!
+mef-global profiles cos cos-profile COS_DSCP_1 cos-dscp ipv4-dscp 26 discard-value false cos-name pccwg_silver color green
+!
+mef-global profiles cos cos-profile COS_DSCP_1 cos-dscp ipv4-dscp 24 discard-value false cos-name pccwg_bronze color green
+!
+mef-global profiles cos cos-profile COS_DSCP_1 cos-dscp ipv4-dscp 22 discard-value false cos-name pccwg_bronze color green
+!
+mef-global profiles cos cos-profile COS_DSCP_1 cos-dscp ipv4-dscp 20 discard-value false cos-name pccwg_bronze color green
+!
+mef-global profiles cos cos-profile COS_DSCP_1 cos-dscp ipv4-dscp 18 discard-value false cos-name pccwg_bronze color green
+!
+mef-global profiles cos cos-profile COS_DSCP_1 cos-dscp ipv4-dscp 16 discard-value false cos-name pccwg_bronze color green
+!
+mef-global profiles cos cos-profile COS_DSCP_1 cos-dscp ipv4-dscp 14 discard-value false cos-name pccwg_bronze color green
+!
+mef-global profiles cos cos-profile COS_DSCP_1 cos-dscp ipv4-dscp 12 discard-value false cos-name pccwg_bronze color green
+!
+mef-global profiles cos cos-profile COS_DSCP_1 cos-dscp ipv4-dscp 10 discard-value false cos-name pccwg_bronze color green
+!
+mef-global profiles cos cos-profile COS_DSCP_1 cos-dscp ipv4-dscp 8 discard-value false cos-name pccwg_bronze color green
+!
+mef-global profiles cos cos-profile COS_DSCP_1 cos-dscp ipv4-dscp 0 discard-value false cos-name pccwg_bronze color green
+!
+mef-global profiles cos cos-profile COS_DSCP_1 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv4-color yellow
+!
+mef-global profiles cos cos-profile COS_PCP_1 cos-pcp pcp 7 cos-name pccwg_bronze color yellow
+!
+mef-global profiles cos cos-profile COS_PCP_1 cos-pcp pcp 6 cos-name pccwg_bronze color yellow
+!
+mef-global profiles cos cos-profile COS_PCP_1 cos-pcp pcp 5 cos-name pccwg_gold color yellow
+!
+mef-global profiles cos cos-profile COS_PCP_1 cos-pcp pcp 4 cos-name pccwg_silverplus color green
+!
+mef-global profiles cos cos-profile COS_PCP_1 cos-pcp pcp 3 cos-name pccwg_silver color green
+!
+mef-global profiles cos cos-profile COS_PCP_1 cos-pcp pcp 0 cos-name pccwg_bronze color yellow
+!
+mef-global profiles cos cos-profile COS_PCP_1 cos-pcp default-pcp-cos-name pccwg_bronze default-pcp-color yellow
+!
+mef-global profiles cos cos-profile COS_DSCP_2 cos-dscp ipv4-dscp 56 discard-value false cos-name pccwg_gold color green
+!
+mef-global profiles cos cos-profile COS_DSCP_2 cos-dscp ipv4-dscp 48 discard-value false cos-name pccwg_gold color green
+!
+mef-global profiles cos cos-profile COS_DSCP_2 cos-dscp ipv4-dscp 46 discard-value false cos-name pccwg_gold color green
+!
+mef-global profiles cos cos-profile COS_DSCP_2 cos-dscp ipv4-dscp 40 discard-value false cos-name pccwg_gold color green
+!
+mef-global profiles cos cos-profile COS_DSCP_2 cos-dscp ipv4-dscp 38 discard-value false cos-name pccwg_silverplus color green
+!
+mef-global profiles cos cos-profile COS_DSCP_2 cos-dscp ipv4-dscp 36 discard-value false cos-name pccwg_silverplus color green
+!
+mef-global profiles cos cos-profile COS_DSCP_2 cos-dscp ipv4-dscp 34 discard-value false cos-name pccwg_silverplus color green
+!
+mef-global profiles cos cos-profile COS_DSCP_2 cos-dscp ipv4-dscp 32 discard-value false cos-name pccwg_silverplus color green
+!
+mef-global profiles cos cos-profile COS_DSCP_2 cos-dscp ipv4-dscp 30 discard-value false cos-name pccwg_silver color green
+!
+mef-global profiles cos cos-profile COS_DSCP_2 cos-dscp ipv4-dscp 28 discard-value false cos-name pccwg_silver color green
+!
+mef-global profiles cos cos-profile COS_DSCP_2 cos-dscp ipv4-dscp 26 discard-value false cos-name pccwg_silver color green
+!
+mef-global profiles cos cos-profile COS_DSCP_2 cos-dscp ipv4-dscp 24 discard-value false cos-name pccwg_bronze color green
+!
+mef-global profiles cos cos-profile COS_DSCP_2 cos-dscp ipv4-dscp 22 discard-value false cos-name pccwg_bronze color green
+!
+mef-global profiles cos cos-profile COS_DSCP_2 cos-dscp ipv4-dscp 20 discard-value false cos-name pccwg_bronze color green
+!
+mef-global profiles cos cos-profile COS_DSCP_2 cos-dscp ipv4-dscp 18 discard-value false cos-name pccwg_bronze color green
+!
+mef-global profiles cos cos-profile COS_DSCP_2 cos-dscp ipv4-dscp 16 discard-value false cos-name pccwg_bronze color green
+!
+mef-global profiles cos cos-profile COS_DSCP_2 cos-dscp ipv4-dscp 14 discard-value false cos-name pccwg_bronze color green
+!
+mef-global profiles cos cos-profile COS_DSCP_2 cos-dscp ipv4-dscp 12 discard-value false cos-name pccwg_bronze color green
+!
+mef-global profiles cos cos-profile COS_DSCP_2 cos-dscp ipv4-dscp 10 discard-value false cos-name pccwg_bronze color green
+!
+mef-global profiles cos cos-profile COS_DSCP_2 cos-dscp ipv4-dscp 8 discard-value false cos-name pccwg_bronze color green
+!
+mef-global profiles cos cos-profile COS_DSCP_2 cos-dscp ipv4-dscp 0 discard-value false cos-name pccwg_bronze color green
+!
+mef-global profiles cos cos-profile COS_DSCP_2 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv4-color yellow
+!
+mef-global profiles cos cos-profile COS_PCP_2 cos-pcp pcp 7 cos-name pccwg_gold color yellow
+!
+mef-global profiles cos cos-profile COS_PCP_2 cos-pcp pcp 6 cos-name pccwg_gold color yellow
+!
+mef-global profiles cos cos-profile COS_PCP_2 cos-pcp pcp 5 cos-name pccwg_gold color yellow
+!
+mef-global profiles cos cos-profile COS_PCP_2 cos-pcp pcp 4 cos-name pccwg_silverplus color green
+!
+mef-global profiles cos cos-profile COS_PCP_2 cos-pcp pcp 3 cos-name pccwg_silver color green
+!
+mef-global profiles cos cos-profile COS_PCP_2 cos-pcp pcp 0 cos-name pccwg_bronze color yellow
+!
+mef-global profiles cos cos-profile COS_PCP_2 cos-pcp default-pcp-cos-name pccwg_bronze default-pcp-color yellow
+!
+commit
+!
+top
+! Global EEC Profiles
+mef-global profiles eec eec-profile MEF103_Table23 eec-dscp ipv4-dscp 11 discard-value false eec-name Sophomore color green
+!
+mef-global profiles eec eec-profile MEF103_Table23 eec-dscp ipv4-dscp 37 discard-value false eec-name Sophomore color green
+!
+mef-global profiles eec eec-profile MEF103_Table23 eec-dscp ipv4-dscp 45 discard-value false eec-name Sophomore color green
+!
+mef-global profiles eec eec-profile MEF103_Table23 eec-dscp ipv4-dscp 8 discard-value false eec-name Senior color green
+!
+mef-global profiles eec eec-profile MEF103_Table23 eec-dscp ipv4-dscp 10 discard-value false eec-name Senior color green
+!
+mef-global profiles eec eec-profile MEF103_Table23 eec-dscp ipv4-dscp 12 discard-value false eec-name Senior color green
+!
+mef-global profiles eec eec-profile MEF103_Table23 eec-dscp default-ipv4-eec-name Freshman default-ipv4-color green
+!
+mef-global profiles eec eec-profile MEF103_Table23 eec-dscp ipv6-dscp 11 discard-value false eec-name Sophomore color green
+!
+mef-global profiles eec eec-profile MEF103_Table23 eec-dscp ipv6-dscp 37 discard-value false eec-name Sophomore color green
+!
+mef-global profiles eec eec-profile MEF103_Table23 eec-dscp ipv6-dscp 45 discard-value false eec-name Sophomore color green
+!
+mef-global profiles eec eec-profile MEF103_Table23 eec-dscp ipv6-dscp 38 discard-value false eec-name Junior color yellow
+!
+mef-global profiles eec eec-profile MEF103_Table23 eec-dscp ipv6-dscp 63 discard-value false eec-name Junior color yellow
+!
+mef-global profiles eec eec-profile MEF103_Table23 eec-dscp default-ipv6-eec-name Freshman default-ipv6-color green
+!
+mef-global profiles eec eec-profile MEF62_ApdxA eec-pcp pcp 5 eec-name EEC-Krypton color green
+!
+mef-global profiles eec eec-profile MEF62_ApdxA eec-pcp pcp 3 eec-name EEC-Argon color green
+!
+mef-global profiles eec eec-profile MEF62_ApdxA eec-pcp pcp 1 eec-name EEC-Neon color yellow
+!
+mef-global profiles eec eec-profile MEF62_ApdxA eec-pcp default-pcp-eec-name EEC-Neon default-pcp-color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_1 eec-dscp ipv4-dscp 56 discard-value false eec-name pccwg_gold color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_1 eec-dscp ipv4-dscp 48 discard-value false eec-name pccwg_gold color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_1 eec-dscp ipv4-dscp 46 discard-value false eec-name pccwg_gold color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_1 eec-dscp ipv4-dscp 40 discard-value false eec-name pccwg_gold color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_1 eec-dscp ipv4-dscp 38 discard-value false eec-name pccwg_silverplus color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_1 eec-dscp ipv4-dscp 36 discard-value false eec-name pccwg_silverplus color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_1 eec-dscp ipv4-dscp 34 discard-value false eec-name pccwg_silverplus color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_1 eec-dscp ipv4-dscp 32 discard-value false eec-name pccwg_silverplus color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_1 eec-dscp ipv4-dscp 30 discard-value false eec-name pccwg_silver color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_1 eec-dscp ipv4-dscp 28 discard-value false eec-name pccwg_silver color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_1 eec-dscp ipv4-dscp 26 discard-value false eec-name pccwg_silver color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_1 eec-dscp ipv4-dscp 24 discard-value false eec-name pccwg_bronze color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_1 eec-dscp ipv4-dscp 22 discard-value false eec-name pccwg_bronze color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_1 eec-dscp ipv4-dscp 20 discard-value false eec-name pccwg_bronze color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_1 eec-dscp ipv4-dscp 18 discard-value false eec-name pccwg_bronze color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_1 eec-dscp ipv4-dscp 16 discard-value false eec-name pccwg_bronze color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_1 eec-dscp ipv4-dscp 14 discard-value false eec-name pccwg_bronze color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_1 eec-dscp ipv4-dscp 12 discard-value false eec-name pccwg_bronze color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_1 eec-dscp ipv4-dscp 10 discard-value false eec-name pccwg_bronze color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_1 eec-dscp ipv4-dscp 8 discard-value false eec-name pccwg_bronze color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_1 eec-dscp ipv4-dscp 0 discard-value false eec-name pccwg_bronze color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_1 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv4-color yellow
+!
+mef-global profiles eec eec-profile EEC_PCP_1 eec-pcp pcp 7 eec-name pccwg_bronze color yellow
+!
+mef-global profiles eec eec-profile EEC_PCP_1 eec-pcp pcp 6 eec-name pccwg_bronze color yellow
+!
+mef-global profiles eec eec-profile EEC_PCP_1 eec-pcp pcp 5 eec-name pccwg_gold color yellow
+!
+mef-global profiles eec eec-profile EEC_PCP_1 eec-pcp pcp 4 eec-name pccwg_silverplus color green
+!
+mef-global profiles eec eec-profile EEC_PCP_1 eec-pcp pcp 3 eec-name pccwg_silver color green
+!
+mef-global profiles eec eec-profile EEC_PCP_1 eec-pcp pcp 0 eec-name pccwg_bronze color yellow
+!
+mef-global profiles eec eec-profile EEC_PCP_1 eec-pcp default-pcp-eec-name pccwg_bronze default-pcp-color yellow
+!
+mef-global profiles eec eec-profile EEC_DSCP_2 eec-dscp ipv4-dscp 56 discard-value false eec-name pccwg_gold color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_2 eec-dscp ipv4-dscp 48 discard-value false eec-name pccwg_gold color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_2 eec-dscp ipv4-dscp 46 discard-value false eec-name pccwg_gold color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_2 eec-dscp ipv4-dscp 40 discard-value false eec-name pccwg_gold color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_2 eec-dscp ipv4-dscp 38 discard-value false eec-name pccwg_gold color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_2 eec-dscp ipv4-dscp 36 discard-value false eec-name pccwg_silverplus color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_2 eec-dscp ipv4-dscp 34 discard-value false eec-name pccwg_silverplus color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_2 eec-dscp ipv4-dscp 32 discard-value false eec-name pccwg_silverplus color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_2 eec-dscp ipv4-dscp 30 discard-value false eec-name pccwg_silver color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_2 eec-dscp ipv4-dscp 28 discard-value false eec-name pccwg_silver color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_2 eec-dscp ipv4-dscp 26 discard-value false eec-name pccwg_silver color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_2 eec-dscp ipv4-dscp 24 discard-value false eec-name pccwg_bronze color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_2 eec-dscp ipv4-dscp 22 discard-value false eec-name pccwg_bronze color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_2 eec-dscp ipv4-dscp 20 discard-value false eec-name pccwg_bronze color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_2 eec-dscp ipv4-dscp 18 discard-value false eec-name pccwg_bronze color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_2 eec-dscp ipv4-dscp 16 discard-value false eec-name pccwg_bronze color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_2 eec-dscp ipv4-dscp 14 discard-value false eec-name pccwg_bronze color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_2 eec-dscp ipv4-dscp 12 discard-value false eec-name pccwg_bronze color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_2 eec-dscp ipv4-dscp 10 discard-value false eec-name pccwg_bronze color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_2 eec-dscp ipv4-dscp 8 discard-value false eec-name pccwg_bronze color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_2 eec-dscp ipv4-dscp 0 discard-value false eec-name pccwg_bronze color green
+!
+mef-global profiles eec eec-profile EEC_DSCP_2 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv4-color yellow
+!
+mef-global profiles eec eec-profile EEC_PCP_2 eec-pcp pcp 7 eec-name pccwg_gold color yellow
+!
+mef-global profiles eec eec-profile EEC_PCP_2 eec-pcp pcp 6 eec-name pccwg_gold color yellow
+!
+mef-global profiles eec eec-profile EEC_PCP_2 eec-pcp pcp 5 eec-name pccwg_gold color yellow
+!
+mef-global profiles eec eec-profile EEC_PCP_2 eec-pcp pcp 4 eec-name pccwg_silverplus color green
+!
+mef-global profiles eec eec-profile EEC_PCP_2 eec-pcp pcp 3 eec-name pccwg_silver color green
+!
+mef-global profiles eec eec-profile EEC_PCP_2 eec-pcp pcp 0 eec-name pccwg_bronze color yellow
+!
+mef-global profiles eec eec-profile EEC_PCP_2 eec-pcp default-pcp-eec-name pccwg_bronze default-pcp-color yellow
+!
+commit
+!
+top
+!
+mef-global profiles elmi elmi-profile elmi-test1 user-label elmi-test1 status-error-threshold 7 polling-timer 22 polling-verification-timer 23
+mef-global profiles elmi elmi-profile elmi-test2 user-label elmi-test2 status-error-threshold 6 polling-timer 20 polling-verification-timer 21
+!
+mef-global profiles elmi elmi-profile pccwg-elmi-test1 user-label elmi-test1 status-error-threshold 7 polling-timer 22 polling-verification-timer 23
+mef-global profiles elmi elmi-profile pccwg-elmi-test2 user-label elmi-test2 status-error-threshold 6 polling-timer 20 polling-verification-timer 21
+!
+commit
+!
+top
+!
+mef-global profiles l2cp-cos l2cp-profile MEF103_Table3PlusCoS user-label "Ingress L2CP Profile with CoS Names"
+mef-global profiles l2cp-cos l2cp-profile MEF103_Table3PlusCoS l2cps l2cp 01:80:C2:00:00:00 "STP/RSTP/MSTP" protocol llc protocol-id 42 cos-name Krypton handling pass
+mef-global profiles l2cp-cos l2cp-profile MEF103_Table3PlusCoS l2cps l2cp 01:80:C2:00:00:01 "802.3 MAC Control Pause" protocol ethertype protocol-id 88:08 subtype 00:01 cos-name Krypton handling discard
+mef-global profiles l2cp-cos l2cp-profile MEF103_Table3PlusCoS l2cps l2cp 01:80:C2:00:00:02 "Link OAM" protocol ethertype protocol-id 88:09 subtype 03 cos-name Krypton handling pass
+mef-global profiles l2cp-cos l2cp-profile MEF103_Table3PlusCoS l2cps l2cp 01:80:C2:00:00:02 "ESMC" protocol ethertype protocol-id 88:09 subtype 0A cos-name Krypton handling pass
+mef-global profiles l2cp-cos l2cp-profile MEF103_Table3PlusCoS l2cps l2cp 01:80:C2:00:00:03 "Port Authentication" protocol ethertype protocol-id 88:8E cos-name Krypton handling peer
+mef-global profiles l2cp-cos l2cp-profile MEF103_Table3PlusCoS l2cps l2cp 01:80:C2:00:00:07 "E-LMI" protocol ethertype protocol-id 88:EE cos-name Krypton handling peer
+mef-global profiles l2cp-cos l2cp-profile MEF103_Table3PlusCoS l2cps l2cp 01:80:C2:00:00:0E "LLDP" protocol ethertype protocol-id 88:CC cos-name Krypton handling peer
+mef-global profiles l2cp-cos l2cp-profile MEF103_Table3PlusCoS l2cps l2cp 01:80:C2:00:00:0E "PTP Peer Delay" protocol ethertype protocol-id 88:F7 cos-name Krypton handling peer
+mef-global profiles l2cp-cos l2cp-profile MEF103_Table3PlusCoS l2cps l2cp 01:80:C2:00:00:3F "Example of SOAM Service Frame" protocol ethertype protocol-id 89:02 cos-name Neon handling peer
+mef-global profiles l2cp-cos l2cp-profile MEF103_Table3PlusCoS l2cps l2cp 01:80:C2:00:00:32 "Example3 of a custom MAC" protocol ethertype cos-name Neon handling pass
+!
+mef-global profiles l2cp-eec l2cp-profile MEF103_Table3PlusEEC user-label "Egress L2CP Profile with EEC Names"
+mef-global profiles l2cp-eec l2cp-profile MEF103_Table3PlusEEC l2cps l2cp 01:80:C2:00:00:00 "STP/RSTP/MSTP" protocol llc protocol-id 42 eec-name EEC-Krypton handling pass
+mef-global profiles l2cp-eec l2cp-profile MEF103_Table3PlusEEC l2cps l2cp 01:80:C2:00:00:01 "802.3 MAC Control Pause" protocol ethertype protocol-id 88:08 subtype 00:01 eec-name EEC-Krypton handling discard
+mef-global profiles l2cp-eec l2cp-profile MEF103_Table3PlusEEC l2cps l2cp 01:80:C2:00:00:02 "Link OAM" protocol ethertype protocol-id 88:09 subtype 03 eec-name EEC-Krypton handling pass
+mef-global profiles l2cp-eec l2cp-profile MEF103_Table3PlusEEC l2cps l2cp 01:80:C2:00:00:02 "ESMC" protocol ethertype protocol-id 88:09 subtype 0A eec-name EEC-Krypton handling pass
+mef-global profiles l2cp-eec l2cp-profile MEF103_Table3PlusEEC l2cps l2cp 01:80:C2:00:00:03 "Port Authentication" protocol ethertype protocol-id 88:8E eec-name EEC-Krypton handling peer
+mef-global profiles l2cp-eec l2cp-profile MEF103_Table3PlusEEC l2cps l2cp 01:80:C2:00:00:07 "E-LMI" protocol ethertype protocol-id 88:EE eec-name EEC-Krypton handling peer
+mef-global profiles l2cp-eec l2cp-profile MEF103_Table3PlusEEC l2cps l2cp 01:80:C2:00:00:0E "LLDP" protocol ethertype protocol-id 88:CC eec-name EEC-Krypton handling peer
+mef-global profiles l2cp-eec l2cp-profile MEF103_Table3PlusEEC l2cps l2cp 01:80:C2:00:00:0E "PTP Peer Delay" protocol ethertype protocol-id 88:F7 eec-name EEC-Krypton handling peer
+mef-global profiles l2cp-eec l2cp-profile MEF103_Table3PlusEEC l2cps l2cp 01:80:C2:00:00:3F "Example of SOAM Service Frame" protocol ethertype protocol-id 89:02 eec-name EEC-Neon handling peer
+mef-global profiles l2cp-eec l2cp-profile MEF103_Table3PlusEEC l2cps l2cp 01:80:C2:00:00:32 "Example3 of a custom MAC" protocol ethertype eec-name EEC-Neon handling pass
+!
+mef-global profiles l2cp-peering l2cp-profile L2CP_Peering_Profile1 user-label "L2CP Peering Profile #1"
+mef-global profiles l2cp-peering l2cp-profile L2CP_Peering_Profile1 l2cps l2cp 01:80:C2:00:00:03 "Port Authentication" protocol ethertype protocol-id 88:8E
+mef-global profiles l2cp-peering l2cp-profile L2CP_Peering_Profile1 l2cps l2cp 01:80:C2:00:00:07 "E-LMI" protocol ethertype protocol-id 88:EE
+mef-global profiles l2cp-peering l2cp-profile L2CP_Peering_Profile1 l2cps l2cp 01:80:C2:00:00:0E "LLDP" protocol ethertype protocol-id 88:CC
+mef-global profiles l2cp-peering l2cp-profile L2CP_Peering_Profile1 l2cps l2cp 01:80:C2:00:00:0E "PTP Peer Delay" protocol ethertype protocol-id 88:F7
+mef-global profiles l2cp-peering l2cp-profile L2CP_Peering_Profile1 l2cps l2cp 01:80:C2:00:00:3F "Example of SOAM Service Frame" protocol ethertype protocol-id 89:02
+!
+mef-global profiles l2cp-cos l2cp-profile PCCWG_L2CP_CoS user-label "Ingress L2CP Profile with CoS Names"
+mef-global profiles l2cp-cos l2cp-profile PCCWG_L2CP_CoS l2cps l2cp 01:80:C2:00:00:00 "STP/RSTP/MSTP" protocol llc protocol-id 42 cos-name pccwg_gold handling pass
+mef-global profiles l2cp-cos l2cp-profile PCCWG_L2CP_CoS l2cps l2cp 01:80:C2:00:00:01 "802.3 MAC Control Pause" protocol ethertype protocol-id 88:08 subtype 00:01 cos-name pccwg_gold handling discard
+mef-global profiles l2cp-cos l2cp-profile PCCWG_L2CP_CoS l2cps l2cp 01:80:C2:00:00:02 "Link OAM" protocol ethertype protocol-id 88:09 subtype 03 cos-name pccwg_gold handling pass
+mef-global profiles l2cp-cos l2cp-profile PCCWG_L2CP_CoS l2cps l2cp 01:80:C2:00:00:02 "ESMC" protocol ethertype protocol-id 88:09 subtype 0A cos-name pccwg_gold handling pass
+mef-global profiles l2cp-cos l2cp-profile PCCWG_L2CP_CoS l2cps l2cp 01:80:C2:00:00:03 "Port Authentication" protocol ethertype protocol-id 88:8E cos-name pccwg_gold handling peer
+mef-global profiles l2cp-cos l2cp-profile PCCWG_L2CP_CoS l2cps l2cp 01:80:C2:00:00:07 "E-LMI" protocol ethertype protocol-id 88:EE cos-name pccwg_gold handling peer
+mef-global profiles l2cp-cos l2cp-profile PCCWG_L2CP_CoS l2cps l2cp 01:80:C2:00:00:0E "LLDP" protocol ethertype protocol-id 88:CC cos-name pccwg_gold handling peer
+mef-global profiles l2cp-cos l2cp-profile PCCWG_L2CP_CoS l2cps l2cp 01:80:C2:00:00:0E "PTP Peer Delay" protocol ethertype protocol-id 88:F7 cos-name pccwg_gold handling peer
+mef-global profiles l2cp-cos l2cp-profile PCCWG_L2CP_CoS l2cps l2cp 01:80:C2:00:00:3F "Example of SOAM Service Frame" protocol ethertype protocol-id 89:02 cos-name pccwg_bronze handling peer
+mef-global profiles l2cp-cos l2cp-profile PCCWG_L2CP_CoS l2cps l2cp 01:80:C2:00:00:32 "Example3 of a custom MAC" protocol ethertype cos-name pccwg_bronze handling pass
+!
+mef-global profiles l2cp-eec l2cp-profile PCCWG_L2CP_EEC user-label "Egress L2CP Profile with EEC Names"
+mef-global profiles l2cp-eec l2cp-profile PCCWG_L2CP_EEC l2cps l2cp 01:80:C2:00:00:00 "STP/RSTP/MSTP" protocol llc protocol-id 42 eec-name pccwg_gold handling pass
+mef-global profiles l2cp-eec l2cp-profile PCCWG_L2CP_EEC l2cps l2cp 01:80:C2:00:00:01 "802.3 MAC Control Pause" protocol ethertype protocol-id 88:08 subtype 00:01 eec-name pccwg_gold handling discard
+mef-global profiles l2cp-eec l2cp-profile PCCWG_L2CP_EEC l2cps l2cp 01:80:C2:00:00:02 "Link OAM" protocol ethertype protocol-id 88:09 subtype 03 eec-name pccwg_gold handling pass
+mef-global profiles l2cp-eec l2cp-profile PCCWG_L2CP_EEC l2cps l2cp 01:80:C2:00:00:02 "ESMC" protocol ethertype protocol-id 88:09 subtype 0A eec-name pccwg_gold handling pass
+mef-global profiles l2cp-eec l2cp-profile PCCWG_L2CP_EEC l2cps l2cp 01:80:C2:00:00:03 "Port Authentication" protocol ethertype protocol-id 88:8E eec-name pccwg_gold handling peer
+mef-global profiles l2cp-eec l2cp-profile PCCWG_L2CP_EEC l2cps l2cp 01:80:C2:00:00:07 "E-LMI" protocol ethertype protocol-id 88:EE eec-name pccwg_gold handling peer
+mef-global profiles l2cp-eec l2cp-profile PCCWG_L2CP_EEC l2cps l2cp 01:80:C2:00:00:0E "LLDP" protocol ethertype protocol-id 88:CC eec-name pccwg_gold handling peer
+mef-global profiles l2cp-eec l2cp-profile PCCWG_L2CP_EEC l2cps l2cp 01:80:C2:00:00:0E "PTP Peer Delay" protocol ethertype protocol-id 88:F7 eec-name pccwg_gold handling peer
+mef-global profiles l2cp-eec l2cp-profile PCCWG_L2CP_EEC l2cps l2cp 01:80:C2:00:00:3F "Example of SOAM Service Frame" protocol ethertype protocol-id 89:02 eec-name pccwg_bronze handling peer
+mef-global profiles l2cp-eec l2cp-profile PCCWG_L2CP_EEC l2cps l2cp 01:80:C2:00:00:32 "Example3 of a custom MAC" protocol ethertype eec-name pccwg_bronze handling pass
+!
+mef-global profiles l2cp-peering l2cp-profile PCCWG_L2CP_Peering_Profile1 user-label "L2CP Peering Profile #1"
+mef-global profiles l2cp-peering l2cp-profile PCCWG_L2CP_Peering_Profile1 l2cps l2cp 01:80:C2:00:00:03 "Port Authentication" protocol ethertype protocol-id 88:8E
+mef-global profiles l2cp-peering l2cp-profile PCCWG_L2CP_Peering_Profile1 l2cps l2cp 01:80:C2:00:00:07 "E-LMI" protocol ethertype protocol-id 88:EE
+mef-global profiles l2cp-peering l2cp-profile PCCWG_L2CP_Peering_Profile1 l2cps l2cp 01:80:C2:00:00:0E "LLDP" protocol ethertype protocol-id 88:CC
+mef-global profiles l2cp-peering l2cp-profile PCCWG_L2CP_Peering_Profile1 l2cps l2cp 01:80:C2:00:00:0E "PTP Peer Delay" protocol ethertype protocol-id 88:F7
+mef-global profiles l2cp-peering l2cp-profile PCCWG_L2CP_Peering_Profile1 l2cps l2cp 01:80:C2:00:00:3F "Example of SOAM Service Frame" protocol ethertype protocol-id 89:02
+!
+commit
+!
+top
+! EPL Use Case 1:
+mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 admin-state false max-svc-frame-size 1600 max-num-of-evcs 1 all-to-one-bundling-enabled true token-share-enabled true
+!
+mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 physical-layers links link mef-device_0 GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
+!
+mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 ce-vlans ce-vlan 1
+!
+mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 ce-vlans ce-vlan 100
+!
+mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 ce-vlans ce-vlan 101
+!
+mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 ce-vlans ce-vlan 102
+!
+mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 ingress-bw-profile-per-uni high1-bwp-uni
+!
+mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 egress-bw-profile-per-uni high1-bwp-uni
+!
+mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 elmi-enabled true elmi-profile elmi-test1
+!
+mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 l2cp-address-set option2-blind-ctb2 l2cp-peering L2CP_Peering_Profile1
+!
+mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 admin-state false max-svc-frame-size 1600 max-num-of-evcs 1 all-to-one-bundling-enabled true
+!
+mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 physical-layers links link mef-device_1 GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
+!
+mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 ce-vlans ce-vlan 1
+!
+mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 ce-vlans ce-vlan 100
+!
+mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 ce-vlans ce-vlan 101
+!
+mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 ce-vlans ce-vlan 102
+!
+mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 ingress-bw-profile-per-uni high1-bwp-uni
+!
+mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 egress-bw-profile-per-uni high1-bwp-uni
+!
+mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 l2cp-address-set option2-blind-ctb2 l2cp-peering L2CP_Peering_Profile1
+!
+mef-services mef-service EVC-0001898-ACME-MEGAMART user-label Denver-ChicagoTunnel svc-type epl connection-type point-to-point admin-state false max-num-of-evc-end-point 2 ce-vlan-id-preservation true ce-vlan-pcp-preservation true 
+!
+mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 role root admin-state false source-mac-address-limit-enabled false ce-vlans ce-vlan 100
+!
+mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 ce-vlans ce-vlan 101
+!
+mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 ce-vlans ce-vlan 102
+!
+mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 cos-identifier MEF103_Table23 color-identifier dscp
+!
+mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 eec-identifier MEF103_Table23 color-identifier dscp
+!
+mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 role root admin-state false source-mac-address-limit-enabled false ce-vlans ce-vlan 100
+!
+mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 ce-vlans ce-vlan 101
+!
+mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 ce-vlans ce-vlan 102
+!
+mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 cos-identifier MEF103_Table23 color-identifier dscp
+!
+mef-services mef-service EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 eec-identifier MEF103_Table23 color-identifier dscp
+!
+mef-services mef-service EVC-0001898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce0-Slot0-Port1 MMPOP1-ce1-Slot1-Port1
+!
+mef-services mef-service EVC-0001898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce1-Slot1-Port1 MMPOP1-ce0-Slot0-Port1
+!
+mef-services mef-service EVC-0001898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Argon pm-entries pm-entry SLS_Argon_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce0-Slot0-Port1 MMPOP1-ce1-Slot1-Port1
+!
+mef-services mef-service EVC-0001898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Argon pm-entries pm-entry SLS_Argon_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce1-Slot1-Port1 MMPOP1-ce0-Slot0-Port1
+!
+mef-services mef-service EVC-0001898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Neon pm-entries pm-entry SLS_Neon_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce0-Slot0-Port1 MMPOP1-ce1-Slot1-Port1
+!
+mef-services mef-service EVC-0001898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Neon pm-entries pm-entry SLS_Neon_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce1-Slot1-Port1 MMPOP1-ce0-Slot0-Port1
+!
+top
+!
+commit dry-run | debug template mef-device-network
+commit dry-run outformat native
+!
+commit
+!
+top
+!
+show full-configuration mef-topology
+!
+top
+!
+show full-configuration mef-global
+!
+top
+!
+show full-configuration mef-interfaces
+!
+top
+!
+show full-configuration mef-services
+!
+top
+!
+exit
+!
+show mef-interfaces
+!
+show mef-services
+!
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
