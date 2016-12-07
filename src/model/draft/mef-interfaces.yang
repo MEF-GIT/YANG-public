@@ -540,7 +540,7 @@ module mef-interfaces {
           reference "[MEF15]. [MEF7.3] Section 10.1.1.";
         }
         leaf link-aggregation {
-          type mef-types:link-aggregation-type;
+          type mef-types:interface-resiliency-type;
           must "(. != 'none') or ((. = 'none') and " +
           		"(../physical-layers/number-of-links = 1))" {
             error-message "If link-aggregation is 'none', " +
