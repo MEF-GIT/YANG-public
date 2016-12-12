@@ -1,6 +1,6 @@
 config
 !
-!devices sync-from
+devices sync-from
 !
 ! EPL Use Case 1
 mef-topology devices device ce0 role ce interfaces interface GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX

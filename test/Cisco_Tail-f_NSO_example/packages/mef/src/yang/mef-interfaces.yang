@@ -99,7 +99,7 @@ module mef-interfaces {
           		"Profile, then there cannot be any other Ingress " +
           		"Bandwidth Profiles at that UNI.";
           description
-            "If there is a per UNI Ingress Bandwidth Profile, " +
+            "MEF 10.3 [O8A] If there is a per UNI Ingress Bandwidth Profile, " +
             "then there cannot be any other Ingress Bandwidth " +
             "Profiles at that UNI.";
         }
@@ -110,7 +110,7 @@ module mef-interfaces {
           		"Profile, then there cannot be any other Egress " +
           		"Bandwidth Profiles at that UNI.";
           description
-            "If there is a per UNI Egress Bandwidth Profile, " +
+            "MEF 10.3 [O9A] If there is a per UNI Egress Bandwidth Profile, " +
             "then there cannot be any other Egress Bandwidth " +
             "Profiles at that UNI.";
         }
@@ -202,7 +202,7 @@ module mef-interfaces {
                   		"reference must be set if Synchronous " +
                   		"Mode is enabled.";
                   description
-                    "The quality of the clock reference must " +
+                    "MEF 10.3 [R62] The quality of the clock reference must " +
                     "be set if Synchronous Mode is enabled.";
                 }
                 default "false";
@@ -328,7 +328,7 @@ module mef-interfaces {
                     		"Disabled MUST have exactly one " +
                     		"Bandwidth Profile Flow per envelope.";
                     description
-                      "A UNI with Token Share Disabled MUST " +
+                      "MEF 6.2 [R3A] A UNI with Token Share Disabled MUST " +
                       "have exactly one Bandwidth Profile Flow " +
                       "per envelope.";
                   }
@@ -344,13 +344,13 @@ module mef-interfaces {
                     		"for all Bandwidth Profile Flows " +
                     		"mapped to the Envelope.";
                     description
-                      "If an Ingress Envelope's Coupling Flag is " +
+                      "MEF 10.3 [R150B] If an Ingress Envelope's Coupling Flag is " +
                       "Enabled, then the Coupling Flags must " +
                       "be disabled for all Bandwidth Profile " +
                       "Flows mapped to the Envelope.";
                   }
                   description
-                    "If no Ingress Bandwidth Profile per UNI " +
+                    "MEF 10.3 [R150B] If no Ingress Bandwidth Profile per UNI " +
                     "has been defined (ie. 'No'), then the " +
                     "behavior has been defined at the Service " +
                     "Level of the configuration.";
@@ -378,7 +378,7 @@ module mef-interfaces {
                 		"Flow is mapped to an envelope, Envelope " +
                 		"Coupling must be Disabled.";
                 description
-                  "When only one Bandwidth Profile Flow is " +
+                  "MEF 10.3 [R142A] When only one Bandwidth Profile Flow is " +
                   "mapped to an envelope, Envelope " +
                   "Coupling must be Disabled.";
               }
@@ -439,7 +439,7 @@ module mef-interfaces {
                     		"Disabled must have exactly one " +
                     		"Bandwidth Profile Flow per envelope.";
                     description
-                      "A UNI with Token Share Disabled must have " +
+                      "MEF 6.2 [R3B] A UNI with Token Share Disabled must have " +
                       "exactly one Bandwidth Profile Flow per " +
                       "envelope.";
                   }
@@ -455,7 +455,7 @@ module mef-interfaces {
                     		"for all Bandwidth Profile Flows " +
                     		"mapped to the Envelope.";
                     description
-                      "If an Egress Envelope's Coupling Flag " +
+                      "MEF 10.3 [R150A] If an Egress Envelope's Coupling Flag " +
                       "is Enabled, then the Coupling Flags must " +
                       "be disabled for all Bandwidth Profile " +
                       "Flows mapped to the Envelope.";
@@ -484,7 +484,7 @@ module mef-interfaces {
                 		"Flow is mapped to an envelope, " +
                 		"Envelope Coupling must be Disabled.";
                 description
-                  "When only one Bandwidth Profile Flow is " +
+                  "MEF 10.3 [R142B] When only one Bandwidth Profile Flow is " +
                   "mapped to an envelope, Envelope Coupling " +
                   "must be Disabled.";
               }
@@ -540,13 +540,13 @@ module mef-interfaces {
           reference "[MEF15]. [MEF7.3] Section 10.1.1.";
         }
         leaf link-aggregation {
-          type mef-types:link-aggregation-type;
+          type mef-types:interface-resiliency-type;
           must "(. != 'none') or ((. = 'none') and " +
           		"(../physical-layers/number-of-links = 1))" {
             error-message "If link-aggregation is 'none', " +
             		"number-of-links must be 1.";
             description
-              "If link-aggregation is 'none', number-of-links " +
+              "MEF 10.3 [R64] If link-aggregation is 'none', number-of-links " +
               "must be 1.";
           }
           must "(. != 'dual-link-aggregation') or " +
@@ -556,7 +556,7 @@ module mef-interfaces {
             		"'dual-link-aggregation', " +
             		"number-of-links must be 2.";
             description
-              "If link-aggregation is 'dual-link-aggregation', " +
+              "MEF 10.3 [R65] If link-aggregation is 'dual-link-aggregation', " +
               "number-of-links must be 2.";
           }
           must "(. != 'other') or " +
@@ -565,7 +565,7 @@ module mef-interfaces {
             error-message "If link-aggregation is 'other', " +
             		"number-of-links must be 3 or greater.";
             description
-              "If link-aggregation is 'other', number-of-links " +
+              "MEF 10.3 [R67] If link-aggregation is 'other', number-of-links " +
               "must be 3 or greater.";
           }
           default "none";
@@ -708,7 +708,7 @@ module mef-interfaces {
             error-message "ELMI Profile must be set if " +
             		"ELMI is Enabled.";
             description
-              "Ethernet Local Management Interface(ELMI) " +
+              "MEF 10.3 [R88] Ethernet Local Management Interface(ELMI) " +
               "Profile ID must be set if ELMI is Enabled.";
           }
           default "false";

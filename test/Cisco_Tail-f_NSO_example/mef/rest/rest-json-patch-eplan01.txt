@@ -171,7 +171,6 @@
 	    },
 	    "sp-id": "Acme",
 	    "svc-type": "eplan",
-	    "user-label": "EPLAN_UseCase1_13591"
 	  }
       ]
     }

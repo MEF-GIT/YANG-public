@@ -20,7 +20,6 @@
         </uni>
       </unis> 
     </evc>
-    <user-label>NORAD Deep Dish Pizza Tunnel</user-label>
     </mef-service>
  </mef-services>  
 </data>

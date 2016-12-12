@@ -359,7 +359,6 @@
       </evc>
       <sp-id>Acme</sp-id>
       <svc-type>eptree</svc-type>
-      <user-label>EPTREE_UseCase1_57913</user-label>
     </mef-service>
   </mef-services>
   </config>

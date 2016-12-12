@@ -429,7 +429,6 @@
 	    	    },
 	    	    "sp-id": "Acme",
 	    	    "svc-type": "eptree",
-	    	    "user-label": "EPTREE_UseCase1_57913"
 	  }
 	 ]
   }

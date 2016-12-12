@@ -3903,9 +3903,9 @@ MEF GET Config ALLs
         </carrier-ethernet-sls>
         <connection-type>point-to-point</connection-type>
         <admin-state>false</admin-state>
+        <max-num-of-evc-end-point>2</max-num-of-evc-end-point>
         <ce-vlan-id-preservation>false</ce-vlan-id-preservation>
         <svc-type>evpl</svc-type>
-        <user-label>EVPL_UseCase1_EVC-0001343-ACME-MEGAMART</user-label>
       </mef-service>
       <mef-service>
         <evc-id>EVC-0001898-ACME-MEGAMART</evc-id>
@@ -4022,7 +4022,6 @@ MEF GET Config ALLs
         <ce-vlan-id-preservation>true</ce-vlan-id-preservation>
         <ce-vlan-pcp-preservation>true</ce-vlan-pcp-preservation>
         <svc-type>epl</svc-type>
-        <user-label>Denver-ChicagoTunnel</user-label>
       </mef-service>
       <mef-service>
         <evc-id>EVC-0001899-ACME-MEGAMART</evc-id>
@@ -4083,9 +4082,9 @@ MEF GET Config ALLs
         </carrier-ethernet-sls>
         <connection-type>point-to-point</connection-type>
         <admin-state>false</admin-state>
+        <max-num-of-evc-end-point>2</max-num-of-evc-end-point>
         <ce-vlan-id-preservation>true</ce-vlan-id-preservation>
         <svc-type>evpl</svc-type>
-        <user-label>EVPL_UseCase1_EVC-0001899-ACME-MEGAMART</user-label>
       </mef-service>
       <mef-service>
         <evc-id>EVC-0001900-ACME-MEGAMART</evc-id>
@@ -4128,9 +4127,9 @@ MEF GET Config ALLs
         </carrier-ethernet-sls>
         <connection-type>point-to-point</connection-type>
         <admin-state>false</admin-state>
+        <max-num-of-evc-end-point>2</max-num-of-evc-end-point>
         <ce-vlan-id-preservation>true</ce-vlan-id-preservation>
         <svc-type>evpl</svc-type>
-        <user-label>EVPL_UseCase1_EVC-0001900-ACME-MEGAMART</user-label>
       </mef-service>
       <mef-service>
         <evc-id>EVC-0001901-ACME-MEGAMART</evc-id>
@@ -4144,6 +4143,9 @@ MEF GET Config ALLs
             </ce-vlans>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
           <end-point>
@@ -4155,6 +4157,9 @@ MEF GET Config ALLs
             </ce-vlans>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
           <end-point>
@@ -4166,6 +4171,9 @@ MEF GET Config ALLs
             </ce-vlans>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
         </end-points>
@@ -4197,7 +4205,6 @@ MEF GET Config ALLs
         <ce-vlan-pcp-preservation>true</ce-vlan-pcp-preservation>
         <unicast-frame-delivery>conditional</unicast-frame-delivery>
         <svc-type>eplan</svc-type>
-        <user-label>EPLAN_UseCase1_EVC-0001901-ACME-MEGAMART</user-label>
       </mef-service>
       <mef-service>
         <evc-id>EVC-0001911-ACME-MEGAMART</evc-id>
@@ -4225,6 +4232,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
           <end-point>
@@ -4250,6 +4260,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>leaf</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
           <end-point>
@@ -4275,6 +4288,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>leaf</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
           <end-point>
@@ -4300,6 +4316,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>leaf</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
         </end-points>
@@ -4375,7 +4394,6 @@ MEF GET Config ALLs
         <ce-vlan-pcp-preservation>true</ce-vlan-pcp-preservation>
         <unicast-frame-delivery>conditional</unicast-frame-delivery>
         <svc-type>eptree</svc-type>
-        <user-label>EPTREE_UseCase1_EVC-0001911-ACME-MEGAMART</user-label>
       </mef-service>
       <mef-service>
         <evc-id>EVC-0001944-ACME-MEGAMART</evc-id>
@@ -4431,6 +4449,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
           <end-point>
@@ -4484,6 +4505,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
           <end-point>
@@ -4537,6 +4561,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
           <end-point>
@@ -4590,6 +4617,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
         </end-points>
@@ -4656,7 +4686,6 @@ MEF GET Config ALLs
         <ce-vlan-id-preservation>true</ce-vlan-id-preservation>
         <unicast-frame-delivery>conditional</unicast-frame-delivery>
         <svc-type>evplan</svc-type>
-        <user-label>EVPLAN_UseCase1_EVC-0001944-ACME-MEGAMART</user-label>
       </mef-service>
       <mef-service>
         <evc-id>EVC-0002947-ACME-MEGAMART</evc-id>
@@ -4670,6 +4699,9 @@ MEF GET Config ALLs
             </ce-vlans>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
           <end-point>
@@ -4681,6 +4713,9 @@ MEF GET Config ALLs
             </ce-vlans>
             <role>leaf</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
           <end-point>
@@ -4692,6 +4727,9 @@ MEF GET Config ALLs
             </ce-vlans>
             <role>leaf</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
           <end-point>
@@ -4703,6 +4741,9 @@ MEF GET Config ALLs
             </ce-vlans>
             <role>leaf</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
         </end-points>
@@ -4752,7 +4793,6 @@ MEF GET Config ALLs
         <max-num-of-evc-end-point>4</max-num-of-evc-end-point>
         <unicast-frame-delivery>conditional</unicast-frame-delivery>
         <svc-type>evptree</svc-type>
-        <user-label>EVPTREE_UseCase1_EVC-0002947-ACME-MEGAMART</user-label>
       </mef-service>
       <mef-service>
         <evc-id>EVC-0009898-ACME-MEGAMART</evc-id>
@@ -4869,7 +4909,6 @@ MEF GET Config ALLs
         <ce-vlan-id-preservation>true</ce-vlan-id-preservation>
         <ce-vlan-pcp-preservation>true</ce-vlan-pcp-preservation>
         <svc-type>other</svc-type>
-        <user-label>Toronto-NewarkTunnel</user-label>
       </mef-service>
     </mef-services>
     <mef-topology xmlns="urn:mef:xid:mef-topology">
@@ -9986,7 +10025,7 @@ MEF GET Config ALLs
         </carrier-ethernet-sls>
         <connection-type>point-to-point</connection-type>
         <admin-state>false</admin-state>
-        <max-num-of-evc-end-point wd:default="true">2</max-num-of-evc-end-point>
+        <max-num-of-evc-end-point>2</max-num-of-evc-end-point>
         <ce-vlan-id-preservation>false</ce-vlan-id-preservation>
         <ce-vlan-pcp-preservation wd:default="true">false</ce-vlan-pcp-preservation>
         <ce-vlan-dei-preservation wd:default="true">false</ce-vlan-dei-preservation>
@@ -9994,7 +10033,6 @@ MEF GET Config ALLs
         <multicast-frame-delivery wd:default="true">unconditional</multicast-frame-delivery>
         <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
         <svc-type>evpl</svc-type>
-        <user-label>EVPL_UseCase1_EVC-0001343-ACME-MEGAMART</user-label>
       </mef-service>
       <mef-service>
         <evc-id>EVC-0001898-ACME-MEGAMART</evc-id>
@@ -10121,7 +10159,6 @@ MEF GET Config ALLs
         <multicast-frame-delivery wd:default="true">unconditional</multicast-frame-delivery>
         <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
         <svc-type>epl</svc-type>
-        <user-label>Denver-ChicagoTunnel</user-label>
       </mef-service>
       <mef-service>
         <evc-id>EVC-0001899-ACME-MEGAMART</evc-id>
@@ -10188,7 +10225,7 @@ MEF GET Config ALLs
         </carrier-ethernet-sls>
         <connection-type>point-to-point</connection-type>
         <admin-state>false</admin-state>
-        <max-num-of-evc-end-point wd:default="true">2</max-num-of-evc-end-point>
+        <max-num-of-evc-end-point>2</max-num-of-evc-end-point>
         <ce-vlan-id-preservation>true</ce-vlan-id-preservation>
         <ce-vlan-pcp-preservation wd:default="true">false</ce-vlan-pcp-preservation>
         <ce-vlan-dei-preservation wd:default="true">false</ce-vlan-dei-preservation>
@@ -10196,7 +10233,6 @@ MEF GET Config ALLs
         <multicast-frame-delivery wd:default="true">unconditional</multicast-frame-delivery>
         <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
         <svc-type>evpl</svc-type>
-        <user-label>EVPL_UseCase1_EVC-0001899-ACME-MEGAMART</user-label>
       </mef-service>
       <mef-service>
         <evc-id>EVC-0001900-ACME-MEGAMART</evc-id>
@@ -10245,7 +10281,7 @@ MEF GET Config ALLs
         </carrier-ethernet-sls>
         <connection-type>point-to-point</connection-type>
         <admin-state>false</admin-state>
-        <max-num-of-evc-end-point wd:default="true">2</max-num-of-evc-end-point>
+        <max-num-of-evc-end-point>2</max-num-of-evc-end-point>
         <ce-vlan-id-preservation>true</ce-vlan-id-preservation>
         <ce-vlan-pcp-preservation wd:default="true">false</ce-vlan-pcp-preservation>
         <ce-vlan-dei-preservation wd:default="true">false</ce-vlan-dei-preservation>
@@ -10253,7 +10289,6 @@ MEF GET Config ALLs
         <multicast-frame-delivery wd:default="true">unconditional</multicast-frame-delivery>
         <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
         <svc-type>evpl</svc-type>
-        <user-label>EVPL_UseCase1_EVC-0001900-ACME-MEGAMART</user-label>
       </mef-service>
       <mef-service>
         <evc-id>EVC-0001901-ACME-MEGAMART</evc-id>
@@ -10267,6 +10302,9 @@ MEF GET Config ALLs
             </ce-vlans>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
             <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
             <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -10281,6 +10319,9 @@ MEF GET Config ALLs
             </ce-vlans>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
             <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
             <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -10295,6 +10336,9 @@ MEF GET Config ALLs
             </ce-vlans>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
             <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
             <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -10332,7 +10376,6 @@ MEF GET Config ALLs
         <multicast-frame-delivery wd:default="true">unconditional</multicast-frame-delivery>
         <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
         <svc-type>eplan</svc-type>
-        <user-label>EPLAN_UseCase1_EVC-0001901-ACME-MEGAMART</user-label>
       </mef-service>
       <mef-service>
         <evc-id>EVC-0001911-ACME-MEGAMART</evc-id>
@@ -10360,6 +10403,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
             <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
             <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -10388,6 +10434,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>leaf</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
             <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
             <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -10416,6 +10465,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>leaf</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
             <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
             <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -10444,6 +10496,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>leaf</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
             <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
             <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -10525,7 +10580,6 @@ MEF GET Config ALLs
         <multicast-frame-delivery wd:default="true">unconditional</multicast-frame-delivery>
         <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
         <svc-type>eptree</svc-type>
-        <user-label>EPTREE_UseCase1_EVC-0001911-ACME-MEGAMART</user-label>
       </mef-service>
       <mef-service>
         <evc-id>EVC-0001944-ACME-MEGAMART</evc-id>
@@ -10581,6 +10635,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
             <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
             <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -10637,6 +10694,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
             <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
             <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -10693,6 +10753,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
             <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
             <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -10749,6 +10812,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
             <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
             <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -10822,7 +10888,6 @@ MEF GET Config ALLs
         <multicast-frame-delivery wd:default="true">unconditional</multicast-frame-delivery>
         <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
         <svc-type>evplan</svc-type>
-        <user-label>EVPLAN_UseCase1_EVC-0001944-ACME-MEGAMART</user-label>
       </mef-service>
       <mef-service>
         <evc-id>EVC-0002947-ACME-MEGAMART</evc-id>
@@ -10836,6 +10901,9 @@ MEF GET Config ALLs
             </ce-vlans>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
             <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
             <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -10850,6 +10918,9 @@ MEF GET Config ALLs
             </ce-vlans>
             <role>leaf</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
             <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
             <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -10864,6 +10935,9 @@ MEF GET Config ALLs
             </ce-vlans>
             <role>leaf</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
             <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
             <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -10878,6 +10952,9 @@ MEF GET Config ALLs
             </ce-vlans>
             <role>leaf</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
             <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
             <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -10935,7 +11012,6 @@ MEF GET Config ALLs
         <multicast-frame-delivery wd:default="true">unconditional</multicast-frame-delivery>
         <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
         <svc-type>evptree</svc-type>
-        <user-label>EVPTREE_UseCase1_EVC-0002947-ACME-MEGAMART</user-label>
       </mef-service>
       <mef-service>
         <evc-id>EVC-0009898-ACME-MEGAMART</evc-id>
@@ -11062,7 +11138,6 @@ MEF GET Config ALLs
         <multicast-frame-delivery wd:default="true">unconditional</multicast-frame-delivery>
         <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
         <svc-type>other</svc-type>
-        <user-label>Toronto-NewarkTunnel</user-label>
       </mef-service>
     </mef-services>
     <mef-topology xmlns="urn:mef:xid:mef-topology">
@@ -15320,7 +15395,6 @@ MEF GET Config ALLs
         <ce-vlan-id-preservation>true</ce-vlan-id-preservation>
         <ce-vlan-pcp-preservation>true</ce-vlan-pcp-preservation>
         <svc-type>epl</svc-type>
-        <user-label>Denver-ChicagoTunnel</user-label>
       </mef-service>
     </mef-services>
   </data>
@@ -15420,6 +15494,9 @@ MEF GET Config ALLs
             </ce-vlans>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
           <end-point>
@@ -15431,6 +15508,9 @@ MEF GET Config ALLs
             </ce-vlans>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
           <end-point>
@@ -15442,6 +15522,9 @@ MEF GET Config ALLs
             </ce-vlans>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
         </end-points>
@@ -15473,7 +15556,6 @@ MEF GET Config ALLs
         <ce-vlan-pcp-preservation>true</ce-vlan-pcp-preservation>
         <unicast-frame-delivery>conditional</unicast-frame-delivery>
         <svc-type>eplan</svc-type>
-        <user-label>EPLAN_UseCase1_EVC-0001901-ACME-MEGAMART</user-label>
       </mef-service>
     </mef-services>
   </data>
@@ -15687,6 +15769,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
           <end-point>
@@ -15712,6 +15797,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>leaf</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
           <end-point>
@@ -15737,6 +15825,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>leaf</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
           <end-point>
@@ -15762,6 +15853,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>leaf</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
         </end-points>
@@ -15837,7 +15931,6 @@ MEF GET Config ALLs
         <ce-vlan-pcp-preservation>true</ce-vlan-pcp-preservation>
         <unicast-frame-delivery>conditional</unicast-frame-delivery>
         <svc-type>eptree</svc-type>
-        <user-label>EPTREE_UseCase1_EVC-0001911-ACME-MEGAMART</user-label>
       </mef-service>
     </mef-services>
   </data>
@@ -16167,9 +16260,9 @@ MEF GET Config ALLs
         </carrier-ethernet-sls>
         <connection-type>point-to-point</connection-type>
         <admin-state>false</admin-state>
+        <max-num-of-evc-end-point>2</max-num-of-evc-end-point>
         <ce-vlan-id-preservation>true</ce-vlan-id-preservation>
         <svc-type>evpl</svc-type>
-        <user-label>EVPL_UseCase1_EVC-0001899-ACME-MEGAMART</user-label>
       </mef-service>
       <mef-service>
         <evc-id>EVC-0001900-ACME-MEGAMART</evc-id>
@@ -16212,9 +16305,9 @@ MEF GET Config ALLs
         </carrier-ethernet-sls>
         <connection-type>point-to-point</connection-type>
         <admin-state>false</admin-state>
+        <max-num-of-evc-end-point>2</max-num-of-evc-end-point>
         <ce-vlan-id-preservation>true</ce-vlan-id-preservation>
         <svc-type>evpl</svc-type>
-        <user-label>EVPL_UseCase1_EVC-0001900-ACME-MEGAMART</user-label>
       </mef-service>
       <mef-service>
         <evc-id>EVC-0001343-ACME-MEGAMART</evc-id>
@@ -16275,9 +16368,9 @@ MEF GET Config ALLs
         </carrier-ethernet-sls>
         <connection-type>point-to-point</connection-type>
         <admin-state>false</admin-state>
+        <max-num-of-evc-end-point>2</max-num-of-evc-end-point>
         <ce-vlan-id-preservation>false</ce-vlan-id-preservation>
         <svc-type>evpl</svc-type>
-        <user-label>EVPL_UseCase1_EVC-0001343-ACME-MEGAMART</user-label>
       </mef-service>
     </mef-services>
   </data>
@@ -16736,6 +16829,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
           <end-point>
@@ -16789,6 +16885,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
           <end-point>
@@ -16842,6 +16941,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
           <end-point>
@@ -16895,6 +16997,9 @@ MEF GET Config ALLs
             </egress-bwp-flows-per-eec>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
         </end-points>
@@ -16961,7 +17066,6 @@ MEF GET Config ALLs
         <ce-vlan-id-preservation>true</ce-vlan-id-preservation>
         <unicast-frame-delivery>conditional</unicast-frame-delivery>
         <svc-type>evplan</svc-type>
-        <user-label>EVPLAN_UseCase1_EVC-0001944-ACME-MEGAMART</user-label>
       </mef-service>
     </mef-services>
   </data>
@@ -17307,6 +17411,9 @@ MEF GET Config ALLs
             </ce-vlans>
             <role>root</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
           <end-point>
@@ -17318,6 +17425,9 @@ MEF GET Config ALLs
             </ce-vlans>
             <role>leaf</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
           <end-point>
@@ -17329,6 +17439,9 @@ MEF GET Config ALLs
             </ce-vlans>
             <role>leaf</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
           <end-point>
@@ -17340,6 +17453,9 @@ MEF GET Config ALLs
             </ce-vlans>
             <role>leaf</role>
             <admin-state>false</admin-state>
+            <color-identifier>dscp</color-identifier>
+            <cos-identifier>MEF103_Table23</cos-identifier>
+            <eec-identifier>MEF103_Table23</eec-identifier>
             <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
           </end-point>
         </end-points>
@@ -17389,7 +17505,6 @@ MEF GET Config ALLs
         <max-num-of-evc-end-point>4</max-num-of-evc-end-point>
         <unicast-frame-delivery>conditional</unicast-frame-delivery>
         <svc-type>evptree</svc-type>
-        <user-label>EVPTREE_UseCase1_EVC-0002947-ACME-MEGAMART</user-label>
       </mef-service>
     </mef-services>
   </data>

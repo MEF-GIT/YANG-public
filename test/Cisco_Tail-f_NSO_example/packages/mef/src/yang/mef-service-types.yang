@@ -412,8 +412,7 @@ module mef-service-types {
       "12-bit  VLAN-ID used in the VLAN Tag header. The range " +
       "is defined by the REFERENCED specification. VLAN ID 0 is " +
       "used for VLAN Unaware Mode.";
-    reference "IEEE Std 802.1Q-2014, Virtual Bridged " +
-    		"Local Area Networks.";
+    reference "[802.1Q]";
   }
 
   typedef ieee8021p-priority-type {
@@ -422,27 +421,7 @@ module mef-service-types {
     }
     description
       "An 802.1Q user priority value.";
-    reference "IEEE 802.1Q";
-  }
-
-  typedef entity-admin-state-type {
-    type enumeration {
-      enum "locked" {
-        description
-          "Locked";
-      }
-      enum "unlocked" {
-        description
-          "Unlocked";
-      }
-    }
-    description
-      "Represents the various possible administrative states. " +
-      "A value of 'locked' means the resource is " +
-      "administratively prohibited from use. A value of " +
-      "'unlocked' means the resource is not administratively " +
-      "prohibited from use.";
-    reference "ENTITY-STATE-TC-MIB";
+    reference "[802.1Q]";
   }
 
   typedef performance-metric-type {
@@ -560,7 +539,7 @@ module mef-service-types {
       "delivery types.";
   }
 
-  typedef link-aggregation-type {
+  typedef interface-resiliency-type {
     type enumeration {
       enum "none" {
         description
@@ -583,27 +562,7 @@ module mef-service-types {
       "specific UNI.";
   }
 
-  typedef frame-format-type {
-    type enumeration {
-      enum "no-tag" {
-        description
-          "No-tag indicates that all data on the interface is " +
-          "as untagged data.";
-      }
-      enum "ctag" {
-        description
-          "Ctag indicates that tagged data is associated with " +
-          "CE-VLAN ID or a C-TAG.";
-      }
-    }
-    description
-      "The format must be that of a MAC Frame specified in " +
-      "IEEE Std 802.3-2012 Clause 3.";
-    reference "[MEF10.3] Section 9.6. [MEF15]. [MEF7.2]. " +
-    		"[MEF7.3] Section 10.1.1. MEF-UNI-EVC-MIB.yang.";
-  }
-
-  typedef evc-cos-identifier-type {
+  typedef evc-cos-identifier-field-type {
     type enumeration {
       enum "evc" {
         description
@@ -662,7 +621,7 @@ module mef-service-types {
       "[MEF10.3] Section 10.4.1.";
   }
 
-  typedef cos-color-identifier-type {
+  typedef evc-color-identifier-type {
     type enumeration {
       enum "evc" {
         description
@@ -688,19 +647,18 @@ module mef-service-types {
           "The Differentiated Services Code Point(DSCP) value " +
           "from the IP Packet's IP Header Differentiated " +
           "Services Group, associated with the Service " +
-          "Frame, will be used to map Service Frames to " +
-          "CoS Colors.";
+          "Frame";
         reference "MEF 10.3 Section 10.2.1.3: AKA Internet " +
         		"Protocol. For a Data Service Frame carrying " +
         		"an IPv4 or and IPv6 packet.";
       }
     }
     description
-      "CoS Color Identification Type.";
+      "Color Identification Type.";
     reference "[MEF23.1].";
   }
 
-  typedef frame-color-type {
+  typedef color-type {
     type enumeration {
       enum "green" {
         description
@@ -716,44 +674,21 @@ module mef-service-types {
     reference "[MEF23.1].";
   }
 
-  typedef bwp-cir-type {
+  typedef bwp-ir-type {
     type uint32;
     description
-      "Bandwidth Profile Committed Information Rate in " +
+      "Bandwidth Profile Information Rate in " +
       "Bits Per Second.";
     units "bps";
     reference "[MEF10.3] [R143], [R144].";
   }
 
-  typedef bwp-cbs-type {
+  typedef bwp-bs-type {
     type uint32;
     description
-      "Bandwidth Profile Committed Burst Size in Bytes.";
+      "Bandwidth Profile Burst Size in Bytes.";
     units "bytes";
     reference "[MEF10.3] [R145].";
-  }
-
-  typedef bwp-eir-type {
-    type uint32;
-    description
-      "Bandwidth Profile Excess Information Rate in " +
-      "Bits Per Second.";
-    units "bps";
-    reference "[MEF10.3] [R146], [R147].";
-  }
-
-  typedef bwp-ebs-type {
-    type uint32 {
-      range "0 .. 10000000";
-    }
-    units "bytes";
-    description
-      "Excess Burst Size (EBS) in bytes: This parameter limits " +
-      "the maximum number of bytes available for a burst " +
-      "of Service Frames sent at the UNI line rate that " +
-      "will be declared Yellow by the Bandwidth Profile. " +
-      "If this value is 0, then no limit is assumed.";
-    reference "[MEF10.3] [R146], [R147].";
   }
 
   typedef elmi-status-error-threshold-type {
@@ -818,37 +753,37 @@ module mef-service-types {
   }
 
   typedef l2cp-handling-type {
-    type enumeration {
-      enum "discard" {
-        description
-          "Discard - An action taken at a L2CP Decision Point " +
+	type enumeration {
+	  enum "discard" {
+	    description
+	      "Discard - An action taken at a L2CP Decision Point " +
           "where a L2CP frame is neither delivered to a protocol " +
           "entity, nor delivered to the External Interface " +
           "where the L2CP Decision Point is located, nor " +
           "propagated to L2CP Decision Points at other " +
           "External Interfaces.";
-      }
-      enum "pass" {
-        description
-          "Pass(Tunnel) - An action taken at a L2CP Decision " +
-          "Point where a L2CP frame is either delivered to " +
-          "the External Interface where the L2CP Decision Point " +
-          "is located, or propagated to the L2CP Decision " +
-          "Points located at all other External Interfaces " +
-          "associated by the EVC.";
-      }
-      enum "peer" {
-        description
-          "Peer - An action taken at a L2CP Decision Point " +
-          "where a L2CP frame is delivered to a protocol " +
-          "entity determined by the Protocol Identifier " +
-          "in the L2CP Frame.";
-      }
-    }
-    description
-      "L2CP Service Frame handling option.";
-    reference "[MEF45] Table 8.";
-  }
+     }
+     enum "pass" {
+       description
+         "Pass(Tunnel) - An action taken at a L2CP Decision " +
+         "Point where a L2CP frame is either delivered to " +
+         "the External Interface where the L2CP Decision Point " +
+         "is located, or propagated to the L2CP Decision " +
+         "Points located at all other External Interfaces " +
+         "associated by the EVC.";
+     }
+     enum "peer" {
+       description
+         "Peer - An action taken at a L2CP Decision Point " +
+         "where a L2CP frame is delivered to a protocol " +
+         "entity determined by the Protocol Identifier " +
+         "in the L2CP Frame.";
+     }
+   }
+   description
+     "L2CP Service Frame handling option.";
+   reference "[MEF45] Table 8.";
+ }
 
   typedef l2cp-address-set-type {
     type enumeration {
@@ -880,7 +815,7 @@ module mef-service-types {
     		"[MEF45] Section 8.1.";
   }
 
-  typedef l2cp-peering-protocol-type {
+  typedef l2cp-peering-protocol-field-type {
     type enumeration {
       enum "ethertype" {
         description
@@ -943,5 +878,4 @@ module mef-service-types {
     description
       "This object indicates the specific Ethernet service type.";
   }
-
 }

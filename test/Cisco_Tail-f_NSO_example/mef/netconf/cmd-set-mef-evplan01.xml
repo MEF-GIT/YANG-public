@@ -703,7 +703,6 @@
       </evc>
       <sp-id>Acme</sp-id>
       <svc-type>evplan</svc-type>
-      <user-label>EVPLAN_UseCase1_13800</user-label>
     </mef-service>
   </mef-services>
    </config>
