@@ -495,6 +495,7 @@ module mef-services {
                 "based on DSCP for a given EVC at a given " +
                 "UNI, the Color Identifier must be based DSCP.";
             }
+            mandatory true;
             description
               "EVC Per UNI: Ingress Data Service Frame " +
               "CoS Profile.";
@@ -545,6 +546,7 @@ module mef-services {
                 "is based on DSCP for a given EVC at a given " +
                 "UNI, the Color Identifier must be based DSCP.";
             }
+            mandatory true;
             description
               "EVC Per UNI: Egress Data Service Frame " +
               "Processing.";
@@ -649,7 +651,6 @@ module mef-services {
         }
       }
       container carrier-ethernet-sls {
-        presence "carrier-ethernet-sls";
         description
           "Carrier Ethernet Service Level " +
           "Specification";
@@ -669,7 +670,6 @@ module mef-services {
           		"[MEF7.3] Section 12.2.2.";
         }
         container cos-entries {
-          presence "cos-entries";
           description
             "SLS Inclusions by CoS: For this EVC, the " +
             "following CoS Names/Labels are applicable.";
@@ -692,7 +692,6 @@ module mef-services {
                 "used for EVC Performance.";
             }
             container pm-entries {
-              presence "pm-entries";
               description
                 "Performance Metrics List";
               list pm-entry {
@@ -732,7 +731,7 @@ module mef-services {
                   		"one-way-group-availability-pm)" {
                  	 description
               	       "Only visible when " +
-              	       "one-way-group-availability-pm is not " +
+              	       "one-way-group-availability-pm is " +
               	       "being configured.";  
                   }
                   description
@@ -770,11 +769,11 @@ module mef-services {
                     leaf index {
                       type uint32;
                       description
-                        "An index value to identify this pair " +
-                        "of end-points";
+                        "An index value to identify this set " +
+                        "of end-point pairs";
                     }
                     container sls-uni-inclusions {
-                      presence "EVC: Defines the EVC Flow " +
+                      presence "EVC: Defines the EVC End " +
                       		"Points (UNI) Pairs that must " +
                       		"conform to the EVC's SLS " +
                       		"Performance Metrics.";
@@ -1232,14 +1231,15 @@ module mef-services {
           		"max-num-of-evc-end-point value " +
           		"must be at least 3.";
           description
-            "MEF 10.3 [R14] and MEF 6.2 [R54] If EVC Type is Multipoint-to-Multipoint or " +
+            "MEF 10.3 [R14] and MEF 6.2 [R54] If EVC Type is " +
+            "Multipoint-to-Multipoint or " +
             "Rooted-Multipoint, the " +
             "max-num-of-evc-end-point value must be at least 3.";
         }
-        default "2";
+        mandatory true;
         description
           "EVC:The Maximum Number of UNIs this EVC can " +
-          "be configured for (Default 2).If EVC Type is " +
+          "be configured for. If EVC Type is " +
           "Multipoint-to-Multipoint or Rooted-Multipoint, " +
           "the max-num-of-evc-end-point value must be " +
           "at least 3. This value must be 2 for " +
@@ -1250,10 +1250,7 @@ module mef-services {
         type boolean;
         default "false";
         description
-          "EVC:An EVC with more than one " +
-          "CE-VLAN ID mapping to it must have the same " +
-          "list of CE-VLAN IDs mapping to the EVC at " +
-          "each UNI in the EVC.";
+          "EVC: Preserve CE-VLAN ID.";
         reference "[MEF10.3] Section 8.6.1, " +
         		"[R24] [R25], Section 9.10.2, " +
         		"Section 9.12, [R81], Figure 20. " +
@@ -1263,7 +1260,8 @@ module mef-services {
         type boolean;
         default "false";
         description
-          "EVC: Preserve CE-VLAN ID for CoS.";
+          "EVC: Enables CE-VLAN PCP (CoS) preservation " +
+          "for the EVC, as described in MEF 10.3 section 8.6.2).";
         reference "[MEF10.3] Section 8.6.2, [R26]. " +
         		"[MEF7.3] Section 12.2.2.";
       }
@@ -1271,7 +1269,12 @@ module mef-services {
         type boolean;
         default "false";
         description
-          "EVC: Preserve CE-VLAN ID for DEI.";
+          "EVC: Enables CE-VLAN DEI preservation for the EVC. " +
+          "When this is enabled, if a C-tagged ingress " +
+          "Service frame results in a C-tagged egress " +
+          "Service frame, the DEI bit in the egress frame " +
+          "has the same value as the DEI bit in the " +
+          "ingress frame.";
         reference "[MEF10.3] Section 8.6.2, [R26]. " +
         		"[MEF7.3] Section 12.2.2.";
       }
@@ -1664,14 +1667,9 @@ module mef-services {
           description
             "MEF 6.2 [R52] For EVP-TREE, EVC Type must be Rooted-Multipoint.";
         }
+        default "other";
         description
           "The MEF Service Type.";
-      }
-      leaf user-label {
-        type mef-types:identifier45;
-        description
-          "This MEF user label is set by the user to a value " +
-          "that is easier to identify than the Service ID.";
       }
     }
   }
