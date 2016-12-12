@@ -715,7 +715,6 @@
 	    	    },
 	    	    "sp-id": "Acme",
 	    	    "svc-type": "evplan",
-	    	    "user-label": "EVPLAN_UseCase1_13800"
 	  }
 	 ]
   }

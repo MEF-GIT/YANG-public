@@ -158,7 +158,6 @@
       </evc>
       <sp-id>Acme</sp-id>
       <svc-type>eplan</svc-type>
-      <user-label>EPLAN_UseCase1_13591</user-label>
     </mef-service>
     </mef-services>
    </config>

@@ -65,8 +65,7 @@
         "connection-type": "point-to-point",
         "admin-state": false,
         "ce-vlan-id-preservation": false,
-        "svc-type": "evpl",
-        "user-label": "EVPL Deep Dish Pizza Tunnel"
+        "svc-type": "evpl"
         }
      ]
    }   

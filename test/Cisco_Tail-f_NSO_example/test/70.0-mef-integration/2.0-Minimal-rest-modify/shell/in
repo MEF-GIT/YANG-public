@@ -7,11 +7,11 @@ RESTPORT=10888
 RESTSEC=
 
 # (REST-JSON is broken for NSO 4.1.1 for mef-topology as it uses identityref. This bug was fixed in NSO 4.1.1.1)
-echo REST/JSON examples for mef-topology 
-echo ... rest-json-patch-mef-topology.txt
-curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-json-patch-mef-topology.txt $RESTURL://$NSOHOST:$RESTPORT/api/running -H "Content-Type: application/vnd.yang.data+json"
-echo ... rest-json-patch-mef-topology-modify.txt
-curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-json-patch-mef-topology-modify.txt $RESTURL://$NSOHOST:$RESTPORT/api/running -H "Content-Type: application/vnd.yang.data+json"
+#echo REST/JSON examples for mef-topology 
+#echo ... rest-json-patch-mef-topology.txt
+#curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-json-patch-mef-topology.txt $RESTURL://$NSOHOST:$RESTPORT/api/running -H "Content-#Type: application/vnd.yang.data+json"
+#echo ... rest-json-patch-mef-topology-modify.txt
+#curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-json-patch-mef-topology-modify.txt $RESTURL://$NSOHOST:$RESTPORT/api/running -H #"Content-Type: application/vnd.yang.data+json"
 echo REST/JSON examples for mef-global
 echo ... rest-json-patch-mef-global-modify.txt
 curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-json-patch-mef-global-modify.txt $RESTURL://$NSOHOST:$RESTPORT/api/running -H "Content-Type: application/vnd.yang.data+json"

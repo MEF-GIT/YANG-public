@@ -447,7 +447,6 @@
       </evc>
       <sp-id>Acme</sp-id>
       <svc-type>evptree</svc-type>
-      <user-label>EVPTREE_UseCase1_23802</user-label>
     </mef-service>
   </mef-services>
    </config>

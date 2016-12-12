@@ -6718,9 +6718,9 @@
         },
         "connection-type": "point-to-point",
         "admin-state": false,
+        "max-num-of-evc-end-point": 2,
         "ce-vlan-id-preservation": false,
-        "svc-type": "evpl",
-        "user-label": "EVPL_UseCase1_EVC-0001343-ACME-MEGAMART"
+        "svc-type": "evpl"
       },
       {
         "evc-id": "EVC-0001898-ACME-MEGAMART",
@@ -6867,8 +6867,7 @@
         "max-num-of-evc-end-point": 2,
         "ce-vlan-id-preservation": true,
         "ce-vlan-pcp-preservation": true,
-        "svc-type": "epl",
-        "user-label": "Denver-ChicagoTunnel"
+        "svc-type": "epl"
       },
       {
         "evc-id": "EVC-0001899-ACME-MEGAMART",
@@ -6952,9 +6951,9 @@
         },
         "connection-type": "point-to-point",
         "admin-state": false,
+        "max-num-of-evc-end-point": 2,
         "ce-vlan-id-preservation": true,
-        "svc-type": "evpl",
-        "user-label": "EVPL_UseCase1_EVC-0001899-ACME-MEGAMART"
+        "svc-type": "evpl"
       },
       {
         "evc-id": "EVC-0001900-ACME-MEGAMART",
@@ -7014,9 +7013,9 @@
         },
         "connection-type": "point-to-point",
         "admin-state": false,
+        "max-num-of-evc-end-point": 2,
         "ce-vlan-id-preservation": true,
-        "svc-type": "evpl",
-        "user-label": "EVPL_UseCase1_EVC-0001900-ACME-MEGAMART"
+        "svc-type": "evpl"
       },
       {
         "evc-id": "EVC-0001901-ACME-MEGAMART",
@@ -7037,6 +7036,9 @@
               },
               "role": "root",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             },
             {
@@ -7054,6 +7056,9 @@
               },
               "role": "root",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             },
             {
@@ -7071,6 +7076,9 @@
               },
               "role": "root",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             }
           ]
@@ -7111,8 +7119,7 @@
         "ce-vlan-id-preservation": true,
         "ce-vlan-pcp-preservation": true,
         "unicast-frame-delivery": "conditional",
-        "svc-type": "eplan",
-        "user-label": "EPLAN_UseCase1_EVC-0001901-ACME-MEGAMART"
+        "svc-type": "eplan"
       },
       {
         "evc-id": "EVC-0001911-ACME-MEGAMART",
@@ -7151,6 +7158,9 @@
               },
               "role": "root",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             },
             {
@@ -7186,6 +7196,9 @@
               },
               "role": "leaf",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             },
             {
@@ -7221,6 +7234,9 @@
               },
               "role": "leaf",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             },
             {
@@ -7256,6 +7272,9 @@
               },
               "role": "leaf",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             }
           ]
@@ -7348,8 +7367,7 @@
         "ce-vlan-id-preservation": true,
         "ce-vlan-pcp-preservation": true,
         "unicast-frame-delivery": "conditional",
-        "svc-type": "eptree",
-        "user-label": "EPTREE_UseCase1_EVC-0001911-ACME-MEGAMART"
+        "svc-type": "eptree"
       },
       {
         "evc-id": "EVC-0001944-ACME-MEGAMART",
@@ -7416,6 +7434,9 @@
               },
               "role": "root",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             },
             {
@@ -7479,6 +7500,9 @@
               },
               "role": "root",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             },
             {
@@ -7542,6 +7566,9 @@
               },
               "role": "root",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             },
             {
@@ -7605,6 +7632,9 @@
               },
               "role": "root",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             }
           ]
@@ -7688,8 +7718,7 @@
         "max-num-of-evc-end-point": 4,
         "ce-vlan-id-preservation": true,
         "unicast-frame-delivery": "conditional",
-        "svc-type": "evplan",
-        "user-label": "EVPLAN_UseCase1_EVC-0001944-ACME-MEGAMART"
+        "svc-type": "evplan"
       },
       {
         "evc-id": "EVC-0002947-ACME-MEGAMART",
@@ -7710,6 +7739,9 @@
               },
               "role": "root",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             },
             {
@@ -7727,6 +7759,9 @@
               },
               "role": "leaf",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             },
             {
@@ -7744,6 +7779,9 @@
               },
               "role": "leaf",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             },
             {
@@ -7761,6 +7799,9 @@
               },
               "role": "leaf",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             }
           ]
@@ -7819,8 +7860,7 @@
         "admin-state": false,
         "max-num-of-evc-end-point": 4,
         "unicast-frame-delivery": "conditional",
-        "svc-type": "evptree",
-        "user-label": "EVPTREE_UseCase1_EVC-0002947-ACME-MEGAMART"
+        "svc-type": "evptree"
       },
       {
         "evc-id": "EVC-0009898-ACME-MEGAMART",
@@ -7967,8 +8007,7 @@
         "max-num-of-evc-end-point": 2,
         "ce-vlan-id-preservation": true,
         "ce-vlan-pcp-preservation": true,
-        "svc-type": "other",
-        "user-label": "Toronto-NewarkTunnel"
+        "svc-type": "other"
       }
     ]
   }

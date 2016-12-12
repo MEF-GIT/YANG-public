@@ -274,7 +274,6 @@
   </evc>
   <sp-id>Acme</sp-id>
   <svc-type>epl</svc-type>
-  <user-label>Denver-ChicagoTunnel</user-label>
 </mef-service>
 </mef-services> 
 </data>

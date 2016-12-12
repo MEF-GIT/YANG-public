@@ -40,7 +40,6 @@
             <uni-id>MMPOP1-ce7-Slot7-Port1</uni-id>        
           </end-point>            
           </end-points> 
-         <user-label>Secondary Tunnel</user-label>
         </mef-service>
      </mef-services>              
    </config>

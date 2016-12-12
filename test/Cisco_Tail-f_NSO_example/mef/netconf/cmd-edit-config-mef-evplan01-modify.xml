@@ -46,7 +46,6 @@
             <uni-id>MMPOP1-ce8-Slot8-Port3</uni-id>
             </end-point>
           </end-points> 
-         <user-label>Secondary Tunnel</user-label>
         </mef-service>
      </mef-services>              
    </config>

@@ -71,8 +71,7 @@
         "max-num-of-evc-end-point": 2,
         "ce-vlan-id-preservation": true,
         "ce-vlan-pcp-preservation": true,
-        "svc-type": "epl",
-        "user-label": "EPL Deep Dish Pizza Tunnel"
+        "svc-type": "epl"
         }
       ] 
  }

@@ -296,7 +296,6 @@
 	    },
 	    "sp-id": "Acme",
 	    "svc-type": "epl",
-	    "user-label": "Denver-ChicagoTunnel"
 	  }
 	 ]
   }

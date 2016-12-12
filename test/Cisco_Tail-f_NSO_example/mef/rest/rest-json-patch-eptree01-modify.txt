@@ -239,8 +239,7 @@
         "ce-vlan-id-preservation": true,
         "ce-vlan-pcp-preservation": true,
         "unicast-frame-delivery": "conditional",
-        "svc-type": "eptree",
-        "user-label": "EPTREE Deep Dish Pizza Tunnel"
+        "svc-type": "eptree"
 	  }
 	 ]
   }

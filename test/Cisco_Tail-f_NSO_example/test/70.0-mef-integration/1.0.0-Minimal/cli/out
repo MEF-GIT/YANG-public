@@ -3334,11 +3334,11 @@ mef-services mef-service EVC-0001343-ACME-MEGAMART
    !
   !
  !
- connection-type         point-to-point
- admin-state             false
- ce-vlan-id-preservation false
- svc-type                evpl
- user-label              EVPL_UseCase1_EVC-0001343-ACME-MEGAMART
+ connection-type          point-to-point
+ admin-state              false
+ max-num-of-evc-end-point 2
+ ce-vlan-id-preservation  false
+ svc-type                 evpl
 !
 mef-services mef-service EVC-0001898-ACME-MEGAMART
  end-points end-point MMPOP1-ce0-Slot0-Port1
@@ -3400,7 +3400,6 @@ mef-services mef-service EVC-0001898-ACME-MEGAMART
  ce-vlan-id-preservation  true
  ce-vlan-pcp-preservation true
  svc-type                 epl
- user-label               Denver-ChicagoTunnel
 !
 mef-services mef-service EVC-0001899-ACME-MEGAMART
  end-points end-point MMPOP1-ce0-Slot0-Port3
@@ -3434,11 +3433,11 @@ mef-services mef-service EVC-0001899-ACME-MEGAMART
    !
   !
  !
- connection-type         point-to-point
- admin-state             false
- ce-vlan-id-preservation true
- svc-type                evpl
- user-label              EVPL_UseCase1_EVC-0001899-ACME-MEGAMART
+ connection-type          point-to-point
+ admin-state              false
+ max-num-of-evc-end-point 2
+ ce-vlan-id-preservation  true
+ svc-type                 evpl
 !
 mef-services mef-service EVC-0001900-ACME-MEGAMART
  end-points end-point MMPOP1-ce0-Slot0-Port3
@@ -3466,11 +3465,11 @@ mef-services mef-service EVC-0001900-ACME-MEGAMART
   source-mac-address-limit-enabled false
  !
  carrier-ethernet-sls sls-id MEF103_Table25
- connection-type         point-to-point
- admin-state             false
- ce-vlan-id-preservation true
- svc-type                evpl
- user-label              EVPL_UseCase1_EVC-0001900-ACME-MEGAMART
+ connection-type          point-to-point
+ admin-state              false
+ max-num-of-evc-end-point 2
+ ce-vlan-id-preservation  true
+ svc-type                 evpl
 !
 mef-services mef-service EVC-0001901-ACME-MEGAMART
  end-points end-point MMPOP1-ce5-Slot5-Port1
@@ -3478,6 +3477,9 @@ mef-services mef-service EVC-0001901-ACME-MEGAMART
   !
   role                             root
   admin-state                      false
+  color-identifier                 dscp
+  cos-identifier                   MEF103_Table23
+  eec-identifier                   MEF103_Table23
   source-mac-address-limit-enabled true
  !
  end-points end-point MMPOP1-ce6-Slot6-Port1
@@ -3485,6 +3487,9 @@ mef-services mef-service EVC-0001901-ACME-MEGAMART
   !
   role                             root
   admin-state                      false
+  color-identifier                 dscp
+  cos-identifier                   MEF103_Table23
+  eec-identifier                   MEF103_Table23
   source-mac-address-limit-enabled true
  !
  end-points end-point MMPOP1-ce7-Slot7-Port1
@@ -3492,6 +3497,9 @@ mef-services mef-service EVC-0001901-ACME-MEGAMART
   !
   role                             root
   admin-state                      false
+  color-identifier                 dscp
+  cos-identifier                   MEF103_Table23
+  eec-identifier                   MEF103_Table23
   source-mac-address-limit-enabled true
  !
  carrier-ethernet-sls sls-id MEF103_Table25
@@ -3510,7 +3518,6 @@ mef-services mef-service EVC-0001901-ACME-MEGAMART
  ce-vlan-pcp-preservation true
  unicast-frame-delivery   conditional
  svc-type                 eplan
- user-label               EPLAN_UseCase1_EVC-0001901-ACME-MEGAMART
 !
 mef-services mef-service EVC-0001911-ACME-MEGAMART
  end-points end-point MMPOP1-ce5-Slot5-Port2
@@ -3526,6 +3533,9 @@ mef-services mef-service EVC-0001911-ACME-MEGAMART
   !
   role                             root
   admin-state                      false
+  color-identifier                 dscp
+  cos-identifier                   MEF103_Table23
+  eec-identifier                   MEF103_Table23
   source-mac-address-limit-enabled true
  !
  end-points end-point MMPOP1-ce6-Slot6-Port2
@@ -3541,6 +3551,9 @@ mef-services mef-service EVC-0001911-ACME-MEGAMART
   !
   role                             leaf
   admin-state                      false
+  color-identifier                 dscp
+  cos-identifier                   MEF103_Table23
+  eec-identifier                   MEF103_Table23
   source-mac-address-limit-enabled true
  !
  end-points end-point MMPOP1-ce7-Slot7-Port2
@@ -3556,6 +3569,9 @@ mef-services mef-service EVC-0001911-ACME-MEGAMART
   !
   role                             leaf
   admin-state                      false
+  color-identifier                 dscp
+  cos-identifier                   MEF103_Table23
+  eec-identifier                   MEF103_Table23
   source-mac-address-limit-enabled true
  !
  end-points end-point MMPOP1-ce8-Slot8-Port2
@@ -3571,6 +3587,9 @@ mef-services mef-service EVC-0001911-ACME-MEGAMART
   !
   role                             leaf
   admin-state                      false
+  color-identifier                 dscp
+  cos-identifier                   MEF103_Table23
+  eec-identifier                   MEF103_Table23
   source-mac-address-limit-enabled true
  !
  carrier-ethernet-sls sls-id MEF103_Table25
@@ -3605,7 +3624,6 @@ mef-services mef-service EVC-0001911-ACME-MEGAMART
  ce-vlan-pcp-preservation true
  unicast-frame-delivery   conditional
  svc-type                 eptree
- user-label               EPTREE_UseCase1_EVC-0001911-ACME-MEGAMART
 !
 mef-services mef-service EVC-0001944-ACME-MEGAMART
  end-points end-point MMPOP1-ce5-Slot5-Port3
@@ -3641,6 +3659,9 @@ mef-services mef-service EVC-0001944-ACME-MEGAMART
   !
   role                             root
   admin-state                      false
+  color-identifier                 dscp
+  cos-identifier                   MEF103_Table23
+  eec-identifier                   MEF103_Table23
   source-mac-address-limit-enabled true
  !
  end-points end-point MMPOP1-ce6-Slot6-Port3
@@ -3676,6 +3697,9 @@ mef-services mef-service EVC-0001944-ACME-MEGAMART
   !
   role                             root
   admin-state                      false
+  color-identifier                 dscp
+  cos-identifier                   MEF103_Table23
+  eec-identifier                   MEF103_Table23
   source-mac-address-limit-enabled true
  !
  end-points end-point MMPOP1-ce7-Slot7-Port3
@@ -3711,6 +3735,9 @@ mef-services mef-service EVC-0001944-ACME-MEGAMART
   !
   role                             root
   admin-state                      false
+  color-identifier                 dscp
+  cos-identifier                   MEF103_Table23
+  eec-identifier                   MEF103_Table23
   source-mac-address-limit-enabled true
  !
  end-points end-point MMPOP1-ce8-Slot8-Port3
@@ -3746,6 +3773,9 @@ mef-services mef-service EVC-0001944-ACME-MEGAMART
   !
   role                             root
   admin-state                      false
+  color-identifier                 dscp
+  cos-identifier                   MEF103_Table23
+  eec-identifier                   MEF103_Table23
   source-mac-address-limit-enabled true
  !
  carrier-ethernet-sls sls-id MEF103_Table25
@@ -3779,7 +3809,6 @@ mef-services mef-service EVC-0001944-ACME-MEGAMART
  ce-vlan-id-preservation  true
  unicast-frame-delivery   conditional
  svc-type                 evplan
- user-label               EVPLAN_UseCase1_EVC-0001944-ACME-MEGAMART
 !
 mef-services mef-service EVC-0002947-ACME-MEGAMART
  end-points end-point MMPOP1-ce5-Slot5-Port4
@@ -3787,6 +3816,9 @@ mef-services mef-service EVC-0002947-ACME-MEGAMART
   !
   role                             root
   admin-state                      false
+  color-identifier                 dscp
+  cos-identifier                   MEF103_Table23
+  eec-identifier                   MEF103_Table23
   source-mac-address-limit-enabled true
  !
  end-points end-point MMPOP1-ce6-Slot6-Port3
@@ -3794,6 +3826,9 @@ mef-services mef-service EVC-0002947-ACME-MEGAMART
   !
   role                             leaf
   admin-state                      false
+  color-identifier                 dscp
+  cos-identifier                   MEF103_Table23
+  eec-identifier                   MEF103_Table23
   source-mac-address-limit-enabled true
  !
  end-points end-point MMPOP1-ce7-Slot7-Port3
@@ -3801,6 +3836,9 @@ mef-services mef-service EVC-0002947-ACME-MEGAMART
   !
   role                             leaf
   admin-state                      false
+  color-identifier                 dscp
+  cos-identifier                   MEF103_Table23
+  eec-identifier                   MEF103_Table23
   source-mac-address-limit-enabled true
  !
  end-points end-point MMPOP1-ce8-Slot8-Port3
@@ -3808,6 +3846,9 @@ mef-services mef-service EVC-0002947-ACME-MEGAMART
   !
   role                             leaf
   admin-state                      false
+  color-identifier                 dscp
+  cos-identifier                   MEF103_Table23
+  eec-identifier                   MEF103_Table23
   source-mac-address-limit-enabled true
  !
  carrier-ethernet-sls sls-id MEF103_Table25
@@ -3832,7 +3873,6 @@ mef-services mef-service EVC-0002947-ACME-MEGAMART
  max-num-of-evc-end-point 4
  unicast-frame-delivery   conditional
  svc-type                 evptree
- user-label               EVPTREE_UseCase1_EVC-0002947-ACME-MEGAMART
 !
 mef-services mef-service EVC-0009898-ACME-MEGAMART
  end-points end-point MMPOP1-ce0-Slot0-Port2
@@ -3894,7 +3934,6 @@ mef-services mef-service EVC-0009898-ACME-MEGAMART
  ce-vlan-id-preservation  true
  ce-vlan-pcp-preservation true
  svc-type                 other
- user-label               Toronto-NewarkTunnel
 !
                                      NUMBER          
                         OPERATIONAL  OF      FRAME   

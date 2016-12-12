@@ -337,7 +337,6 @@
       </evc>
       <sp-id>Acme</sp-id>
       <svc-type>evpl</svc-type>
-      <user-label>EVPL_UseCase1_56789</user-label>
     </mef-service>
     <mef-service>
       <svc-id>56790</svc-id>
@@ -393,7 +392,6 @@
       </evc>
       <sp-id>Acme</sp-id>
       <svc-type>evpl</svc-type>
-      <user-label>EVPL_UseCase1_56790</user-label>
     </mef-service>
     <mef-service>
       <svc-id>56799</svc-id>
@@ -462,7 +460,6 @@
       </evc>
       <sp-id>Acme</sp-id>
       <svc-type>evpl</svc-type>
-      <user-label>EVPL_UseCase1_56799</user-label>
     </mef-service>
    </mef-services>
    </config>

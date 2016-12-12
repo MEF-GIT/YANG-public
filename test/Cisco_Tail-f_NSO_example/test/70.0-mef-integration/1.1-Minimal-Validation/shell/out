@@ -79,7 +79,7 @@ Aborted: 'mef-interfaces unis uni MMPOP1-ce0-Slot0-Port3 ingress-envelopes envel
 Test MEF 6.2 [R3A]: PASS
 Aborted: 'mef-interfaces unis uni MMPOP1-ce0-Slot0-Port3 egress-envelopes envelope eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART bwp-flows bwp-flow high1-bwp-uni bw-profile' (value "high1-bwp-uni"): A UNI with Token Share Disabled must have exactly one Bandwidth Profile Flow per envelope.
 Test MEF 6.2 [R3B]: PASS
-Aborted: 'mef-services mef-service EVC-0002947-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port4' : If no Ingress Bandwidth Profiles are specied for this UNI (BW Profile Per UNI, BWP Flows Per CoS, nor BW Profile Per EVC), then the UNI Ingress Envelopes list must be empty.
+Aborted: 'mef-services mef-service EVC-0002947-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port4' : If no Ingress Bandwidth Profiles are specified for this UNI (BW Profile Per UNI, BWP Flows Per CoS, nor BW Profile Per EVC), then the UNI Ingress Envelopes list must be empty.
 Test MEF 6.2 [R4A]: PASS
 Aborted: 'mef-services mef-service EVC-0002947-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port4' : If no Egress Bandwidth Profiles are specied for this UNI (BW Profile Per UNI, BWP Flows Per EEC, nor BW Profile Per EVC), then the UNI Egress Envelopes list must be empty.
 Test MEF 6.2 [R4B]: PASS

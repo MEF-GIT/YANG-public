@@ -133,8 +133,7 @@
         "admin-state": false,
         "max-num-of-evc-end-point": 4,
         "unicast-frame-delivery": "conditional",
-        "svc-type": "evptree",
-        "user-label": "EVPTREE Deep Dish Pizza Tunnel"
+        "svc-type": "evptree"
 	  }
 	 ]
   }

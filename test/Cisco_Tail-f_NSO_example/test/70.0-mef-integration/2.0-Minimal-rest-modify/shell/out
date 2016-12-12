@@ -1,6 +1,3 @@
-REST/JSON examples for mef-topology
-... rest-json-patch-mef-topology.txt
-... rest-json-patch-mef-topology-modify.txt
 REST/JSON examples for mef-global
 ... rest-json-patch-mef-global-modify.txt
 REST/JSON examples for mef-services
@@ -5920,9 +5917,9 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
         },
         "connection-type": "point-to-point",
         "admin-state": false,
+        "max-num-of-evc-end-point": 2,
         "ce-vlan-id-preservation": false,
-        "svc-type": "evpl",
-        "user-label": "EVPL Deep Dish Pizza Tunnel"
+        "svc-type": "evpl"
       },
       {
         "evc-id": "EVC-0001898-ACME-MEGAMART",
@@ -6058,8 +6055,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
         "max-num-of-evc-end-point": 2,
         "ce-vlan-id-preservation": true,
         "ce-vlan-pcp-preservation": true,
-        "svc-type": "epl",
-        "user-label": "EPL Deep Dish Pizza Tunnel"
+        "svc-type": "epl"
       },
       {
         "evc-id": "EVC-0001899-ACME-MEGAMART",
@@ -6132,9 +6128,9 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
         },
         "connection-type": "point-to-point",
         "admin-state": false,
+        "max-num-of-evc-end-point": 2,
         "ce-vlan-id-preservation": true,
-        "svc-type": "evpl",
-        "user-label": "EVPL_UseCase1_EVC-0001899-ACME-MEGAMART"
+        "svc-type": "evpl"
       },
       {
         "evc-id": "EVC-0001900-ACME-MEGAMART",
@@ -6183,9 +6179,9 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
         },
         "connection-type": "point-to-point",
         "admin-state": false,
+        "max-num-of-evc-end-point": 2,
         "ce-vlan-id-preservation": true,
-        "svc-type": "evpl",
-        "user-label": "EVPL_UseCase1_EVC-0001900-ACME-MEGAMART"
+        "svc-type": "evpl"
       },
       {
         "evc-id": "EVC-0001901-ACME-MEGAMART",
@@ -6202,6 +6198,9 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               },
               "role": "root",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             },
             {
@@ -6215,6 +6214,9 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               },
               "role": "root",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             },
             {
@@ -6228,6 +6230,9 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               },
               "role": "root",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             }
           ]
@@ -6265,8 +6270,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
         "ce-vlan-id-preservation": true,
         "ce-vlan-pcp-preservation": true,
         "unicast-frame-delivery": "conditional",
-        "svc-type": "eplan",
-        "user-label": "EPLAN Deep Dish Pizza Tunnel"
+        "svc-type": "eplan"
       },
       {
         "evc-id": "EVC-0001911-ACME-MEGAMART",
@@ -6301,6 +6305,9 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               },
               "role": "root",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             },
             {
@@ -6332,6 +6339,9 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               },
               "role": "leaf",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             },
             {
@@ -6363,6 +6373,9 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               },
               "role": "leaf",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             },
             {
@@ -6394,6 +6407,9 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               },
               "role": "leaf",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             }
           ]
@@ -6483,8 +6499,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
         "ce-vlan-id-preservation": true,
         "ce-vlan-pcp-preservation": true,
         "unicast-frame-delivery": "conditional",
-        "svc-type": "eptree",
-        "user-label": "EPTREE Deep Dish Pizza Tunnel"
+        "svc-type": "eptree"
       },
       {
         "evc-id": "EVC-0001944-ACME-MEGAMART",
@@ -6547,6 +6562,9 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               },
               "role": "root",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             },
             {
@@ -6606,6 +6624,9 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               },
               "role": "root",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             },
             {
@@ -6665,6 +6686,9 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               },
               "role": "root",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             },
             {
@@ -6724,6 +6748,9 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               },
               "role": "root",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             }
           ]
@@ -6804,8 +6831,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
         "max-num-of-evc-end-point": 4,
         "ce-vlan-id-preservation": true,
         "unicast-frame-delivery": "conditional",
-        "svc-type": "evplan",
-        "user-label": "EVPLAN Deep Dish Pizza Tunnel"
+        "svc-type": "evplan"
       },
       {
         "evc-id": "EVC-0002947-ACME-MEGAMART",
@@ -6822,6 +6848,9 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               },
               "role": "root",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             },
             {
@@ -6835,6 +6864,9 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               },
               "role": "leaf",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             },
             {
@@ -6848,6 +6880,9 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               },
               "role": "leaf",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             },
             {
@@ -6861,6 +6896,9 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               },
               "role": "leaf",
               "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23",
               "source-mac-address-limit-enabled": true
             }
           ]
@@ -6916,8 +6954,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
         "admin-state": false,
         "max-num-of-evc-end-point": 4,
         "unicast-frame-delivery": "conditional",
-        "svc-type": "evptree",
-        "user-label": "EVPTREE Deep Dish Pizza Tunnel"
+        "svc-type": "evptree"
       },
       {
         "evc-id": "EVC-0009898-ACME-MEGAMART",
@@ -7053,8 +7090,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
         "max-num-of-evc-end-point": 2,
         "ce-vlan-id-preservation": true,
         "ce-vlan-pcp-preservation": true,
-        "svc-type": "other",
-        "user-label": "Toronto-NewarkTunnel"
+        "svc-type": "other"
       }
     ]
   }

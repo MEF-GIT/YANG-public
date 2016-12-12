@@ -342,8 +342,7 @@
         "max-num-of-evc-end-point": 4,
         "ce-vlan-id-preservation": true,
         "unicast-frame-delivery": "conditional",
-        "svc-type": "evplan",
-        "user-label": "EVPLAN Deep Dish Pizza Tunnel"
+        "svc-type": "evplan"
 	  }
 	 ]
   }

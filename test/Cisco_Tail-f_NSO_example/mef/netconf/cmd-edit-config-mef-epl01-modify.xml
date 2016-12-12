@@ -28,7 +28,6 @@
               <uni-id>MMPOP1-ce0-Slot0-Port1</uni-id>        
             </end-point>
           </end-points> 
-        <user-label>NORAD Deep Dish Pizza Tunnel</user-label>
         </mef-service>
      </mef-services>              
    </config>
