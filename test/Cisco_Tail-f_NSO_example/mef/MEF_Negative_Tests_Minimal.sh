@@ -38,7 +38,7 @@ config
 !
 mef-interfaces unis uni MMPOP1-ce8-Slot8-Port1 admin-state false max-svc-frame-size 1600 max-num-of-evcs 1 all-to-one-bundling-enabled true physical-layers links link ce8 GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
 mef-interfaces unis uni MMPOP1-ce8-Slot8-Port1  ce-vlans ce-vlan 1
-mef-services mef-service EVC-0001901-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port1 role root ce-vlans ce-vlan 1
+mef-services mef-service EVC-0001901-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port1 role root cos-identifier MEF103_Table23 color-identifier dscp eec-identifier MEF103_Table23 ce-vlans ce-vlan 1
 commit
 end no-confirm
 exit
@@ -73,7 +73,7 @@ config
 !
 mef-interfaces unis uni MMPOP1-ce8-Slot8-Port1 admin-state false max-svc-frame-size 1600 max-num-of-evcs 1 all-to-one-bundling-enabled true physical-layers links link ce8 GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
 mef-interfaces unis uni MMPOP1-ce8-Slot8-Port1  ce-vlans ce-vlan 1
-mef-services mef-service EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port1 role leaf source-mac-address-limit-enabled true ce-vlans ce-vlan 1 
+mef-services mef-service EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port1 role leaf cos-identifier MEF103_Table23 color-identifier dscp eec-identifier MEF103_Table23 source-mac-address-limit-enabled true ce-vlans ce-vlan 1 
 commit
 end no-confirm
 exit
@@ -407,9 +407,9 @@ fi
 # Test for MEF 10.3 [R82].  This test should fail to commit with "If All-to-One Bundling is enabled for any UNI in an EVC, all CE-VLAN IDs mapped to any EVC for that UNI must map to the same EVC ID.".
 { ncs_cli -u admin -C << EOF;
 config
-mef-services mef-service EVC-1101898-ACME-MEGAMART user-label NegativeTunnel svc-type epl connection-type point-to-point max-num-of-evc-end-point 2 ce-vlan-id-preservation true ce-vlan-pcp-preservation true
-mef-services mef-service EVC-1101898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 role root source-mac-address-limit-enabled false ce-vlans ce-vlan 100
-mef-services mef-service EVC-1101898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 role root source-mac-address-limit-enabled false ce-vlans ce-vlan 100
+mef-services mef-service EVC-1101898-ACME-MEGAMART svc-type epl connection-type point-to-point max-num-of-evc-end-point 2 ce-vlan-id-preservation true ce-vlan-pcp-preservation true
+mef-services mef-service EVC-1101898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 role root cos-identifier MEF103_Table23 color-identifier dscp eec-identifier MEF103_Table23 source-mac-address-limit-enabled false ce-vlans ce-vlan 100
+mef-services mef-service EVC-1101898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 role root cos-identifier MEF103_Table23 color-identifier dscp eec-identifier MEF103_Table23 source-mac-address-limit-enabled false ce-vlans ce-vlan 100
 commit
 end no-confirm
 exit
