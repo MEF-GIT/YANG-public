@@ -469,10 +469,9 @@
             <name>silver+</name>
           </eec-name>
         </eec-names>
-        <ingress-bwp-flows>
-          <bwp-flow>
-            <bw-profile>INGRESS_BWP_100mbps</bw-profile>
-            <user-label>ingress-bwp100</user-label>
+        <ingress-bwp-flows-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>INGRESS_BWP_100mbps</bwp-flow-parameter-set-id>
             <cir>100000</cir>
             <cir-max>200000</cir-max>
             <cbs>12800</cbs>
@@ -482,10 +481,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>INGRESS_BWP_200kbps</bw-profile>
-            <user-label>ingress-bwp200k</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>INGRESS_BWP_200kbps</bwp-flow-parameter-set-id>
             <cir>200</cir>
             <cir-max>4000</cir-max>
             <cbs>32000</cbs>
@@ -495,10 +493,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>INGRESS_BWP_2mbps</bw-profile>
-            <user-label>ingress-bwp2</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>INGRESS_BWP_2mbps</bwp-flow-parameter-set-id>
             <cir>2000</cir>
             <cir-max>4000</cir-max>
             <cbs>32000</cbs>
@@ -508,10 +505,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>INGRESS_BWP_70mbps</bw-profile>
-            <user-label>ingress-bwp70</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>INGRESS_BWP_70mbps</bwp-flow-parameter-set-id>
             <cir>70000</cir>
             <cir-max>200000</cir-max>
             <cbs>12800</cbs>
@@ -521,10 +517,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>INGRESS_BWP_800kbps</bw-profile>
-            <user-label>ingress-bwp800k</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>INGRESS_BWP_800kbps</bwp-flow-parameter-set-id>
             <cir>800</cir>
             <cir-max>4000</cir-max>
             <cbs>32000</cbs>
@@ -534,10 +529,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>chicago-bwp-evc</bw-profile>
-            <user-label>chicago-bwp-evc</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>chicago-bwp-evc</bwp-flow-parameter-set-id>
             <cir>400000</cir>
             <cir-max wd:default="true">0</cir-max>
             <cbs>9000</cbs>
@@ -547,10 +541,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>chicago-bwp-uni</bw-profile>
-            <user-label>chicago-bwp-uni</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>chicago-bwp-uni</bwp-flow-parameter-set-id>
             <cir>10000000</cir>
             <cir-max wd:default="true">0</cir-max>
             <cbs>12000</cbs>
@@ -560,10 +553,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>denver-bwp-evc</bw-profile>
-            <user-label>denver-bwp-evc</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>denver-bwp-evc</bwp-flow-parameter-set-id>
             <cir>400000</cir>
             <cir-max wd:default="true">0</cir-max>
             <cbs>9000</cbs>
@@ -573,10 +565,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>denver-bwp-uni</bw-profile>
-            <user-label>denver-bwp-uni</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>denver-bwp-uni</bwp-flow-parameter-set-id>
             <cir>2000000</cir>
             <cir-max wd:default="true">0</cir-max>
             <cbs>10000</cbs>
@@ -586,10 +577,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>high1-bwp-uni</bw-profile>
-            <user-label>high1-bwp-uni</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>high1-bwp-uni</bwp-flow-parameter-set-id>
             <cir>20000</cir>
             <cir-max>20000</cir-max>
             <cbs>64000</cbs>
@@ -599,10 +589,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>high2-bwp-uni</bw-profile>
-            <user-label>high2-bwp-uni</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>high2-bwp-uni</bwp-flow-parameter-set-id>
             <cir>10000000</cir>
             <cir-max wd:default="true">0</cir-max>
             <cbs>12000</cbs>
@@ -612,10 +601,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>high3-bwp-uni</bw-profile>
-            <user-label>high3-bwp-uni</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>high3-bwp-uni</bwp-flow-parameter-set-id>
             <cir>20000</cir>
             <cir-max>20000</cir-max>
             <cbs>64000</cbs>
@@ -625,10 +613,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>itest-bwp1</bw-profile>
-            <user-label>itest-bwp1</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>itest-bwp1</bwp-flow-parameter-set-id>
             <cir>5000</cir>
             <cir-max>20000</cir-max>
             <cbs>12800</cbs>
@@ -638,10 +625,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>itest-bwp2</bw-profile>
-            <user-label>itest-bwp2</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>itest-bwp2</bwp-flow-parameter-set-id>
             <cir>14000</cir>
             <cir-max>20000</cir-max>
             <cbs>32000</cbs>
@@ -651,11 +637,10 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>low1-bwp-uni</bw-profile>
-            <user-label annotation="Global Ingress Bandwidth Profiles are Ordered-By User">low1-bwp-uni</user-label>
-            <cir>5000</cir>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>low1-bwp-uni</bwp-flow-parameter-set-id>
+            <cir annotation="Global Ingress Bandwidth Profiles are Ordered-By User">5000</cir>
             <cir-max>20000</cir-max>
             <cbs>12800</cbs>
             <eir>50000</eir>
@@ -664,10 +649,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>low2-bwp-uni</bw-profile>
-            <user-label>low2-bwp-uni</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>low2-bwp-uni</bwp-flow-parameter-set-id>
             <cir>400000</cir>
             <cir-max wd:default="true">0</cir-max>
             <cbs>9000</cbs>
@@ -677,10 +661,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>low3-bwp-uni</bw-profile>
-            <user-label>low3-bwp-uni</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>low3-bwp-uni</bwp-flow-parameter-set-id>
             <cir>5000</cir>
             <cir-max>20000</cir-max>
             <cbs>12800</cbs>
@@ -690,10 +673,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>medium1-bwp-uni</bw-profile>
-            <user-label>medium1-bwp-uni</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>medium1-bwp-uni</bwp-flow-parameter-set-id>
             <cir>14000</cir>
             <cir-max>20000</cir-max>
             <cbs>32000</cbs>
@@ -703,10 +685,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>medium2-bwp-uni</bw-profile>
-            <user-label>medium2-bwp-uni</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>medium2-bwp-uni</bwp-flow-parameter-set-id>
             <cir>2000000</cir>
             <cir-max wd:default="true">0</cir-max>
             <cbs>10000</cbs>
@@ -716,10 +697,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>medium3-bwp-uni</bw-profile>
-            <user-label>medium3-bwp-uni</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>medium3-bwp-uni</bwp-flow-parameter-set-id>
             <cir>14000</cir>
             <cir-max>20000</cir-max>
             <cbs>32000</cbs>
@@ -729,12 +709,11 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-        </ingress-bwp-flows>
-        <egress-bwp-flows>
-          <bwp-flow>
-            <bw-profile>EGRESS_BWP_100mbps</bw-profile>
-            <user-label>egress-bwp100</user-label>
+          </bwp-flow-parameter-set>
+        </ingress-bwp-flows-parameter-set>
+        <egress-bwp-flows-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>EGRESS_BWP_100mbps</bwp-flow-parameter-set-id>
             <cir>100000</cir>
             <cir-max>20000</cir-max>
             <cbs>12800</cbs>
@@ -744,10 +723,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>EGRESS_BWP_200kbps</bw-profile>
-            <user-label>egress-bwp200k</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>EGRESS_BWP_200kbps</bwp-flow-parameter-set-id>
             <cir>200</cir>
             <cir-max>4000</cir-max>
             <cbs>32000</cbs>
@@ -757,10 +735,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>EGRESS_BWP_2mbps</bw-profile>
-            <user-label>egress-bwp2</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>EGRESS_BWP_2mbps</bwp-flow-parameter-set-id>
             <cir>2000</cir>
             <cir-max>4000</cir-max>
             <cbs>32000</cbs>
@@ -770,10 +747,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>EGRESS_BWP_70mbps</bw-profile>
-            <user-label>egress-bwp70</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>EGRESS_BWP_70mbps</bwp-flow-parameter-set-id>
             <cir>70000</cir>
             <cir-max>20000</cir-max>
             <cbs>12800</cbs>
@@ -783,10 +759,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>EGRESS_BWP_800kbps</bw-profile>
-            <user-label>egress-bwp800k</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>EGRESS_BWP_800kbps</bwp-flow-parameter-set-id>
             <cir>800</cir>
             <cir-max>4000</cir-max>
             <cbs>32000</cbs>
@@ -796,10 +771,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>chicago-bwp-evc</bw-profile>
-            <user-label>chicago-bwp-evc</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>chicago-bwp-evc</bwp-flow-parameter-set-id>
             <cir>400000</cir>
             <cir-max wd:default="true">0</cir-max>
             <cbs>9000</cbs>
@@ -809,10 +783,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>chicago-bwp-uni</bw-profile>
-            <user-label>chicago-bwp-uni</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>chicago-bwp-uni</bwp-flow-parameter-set-id>
             <cir>10000000</cir>
             <cir-max wd:default="true">0</cir-max>
             <cbs>12000</cbs>
@@ -822,10 +795,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>denver-bwp-evc</bw-profile>
-            <user-label>denver-bwp-evc</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>denver-bwp-evc</bwp-flow-parameter-set-id>
             <cir>400000</cir>
             <cir-max wd:default="true">0</cir-max>
             <cbs>9000</cbs>
@@ -835,10 +807,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>denver-bwp-uni</bw-profile>
-            <user-label>denver-bwp-uni</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>denver-bwp-uni</bwp-flow-parameter-set-id>
             <cir>2000000</cir>
             <cir-max wd:default="true">0</cir-max>
             <cbs>10000</cbs>
@@ -848,10 +819,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>etest-bwp1</bw-profile>
-            <user-label>etest-bwp1</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>etest-bwp1</bwp-flow-parameter-set-id>
             <cir>5000</cir>
             <cir-max>20000</cir-max>
             <cbs>12800</cbs>
@@ -861,10 +831,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>etest-bwp2</bw-profile>
-            <user-label>etest-bwp2</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>etest-bwp2</bwp-flow-parameter-set-id>
             <cir>14000</cir>
             <cir-max>20000</cir-max>
             <cbs>32000</cbs>
@@ -874,10 +843,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>high1-bwp-uni</bw-profile>
-            <user-label>high1-bwp-uni</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>high1-bwp-uni</bwp-flow-parameter-set-id>
             <cir>20000</cir>
             <cir-max>20000</cir-max>
             <cbs>64000</cbs>
@@ -887,10 +855,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>high2-bwp-uni</bw-profile>
-            <user-label>high2-bwp-uni</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>high2-bwp-uni</bwp-flow-parameter-set-id>
             <cir>10000000</cir>
             <cir-max wd:default="true">0</cir-max>
             <cbs>12000</cbs>
@@ -900,10 +867,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>high3-bwp-uni</bw-profile>
-            <user-label>high3-bwp-uni</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>high3-bwp-uni</bwp-flow-parameter-set-id>
             <cir>20000</cir>
             <cir-max>20000</cir-max>
             <cbs>64000</cbs>
@@ -913,11 +879,10 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>low1-bwp-uni</bw-profile>
-            <user-label annotation="Global Egress Bandwidth Profiles are Ordered-By User">low1-bwp-uni</user-label>
-            <cir>5000</cir>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>low1-bwp-uni</bwp-flow-parameter-set-id>
+            <cir annotation="Global Egress Bandwidth Profiles are Ordered-By User">5000</cir>
             <cir-max>20000</cir-max>
             <cbs>12800</cbs>
             <eir>50000</eir>
@@ -926,10 +891,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>low2-bwp-uni</bw-profile>
-            <user-label>low2-bwp-evc</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>low2-bwp-uni</bwp-flow-parameter-set-id>
             <cir>400000</cir>
             <cir-max wd:default="true">0</cir-max>
             <cbs>9000</cbs>
@@ -939,10 +903,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>low3-bwp-uni</bw-profile>
-            <user-label>low3-bwp-uni</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>low3-bwp-uni</bwp-flow-parameter-set-id>
             <cir>5000</cir>
             <cir-max>20000</cir-max>
             <cbs>12800</cbs>
@@ -952,10 +915,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>medium1-bwp-uni</bw-profile>
-            <user-label>medium1-bwp-uni</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>medium1-bwp-uni</bwp-flow-parameter-set-id>
             <cir>14000</cir>
             <cir-max>20000</cir-max>
             <cbs>32000</cbs>
@@ -965,10 +927,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>medium2-bwp-uni</bw-profile>
-            <user-label>medium2-bwp-uni</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>medium2-bwp-uni</bwp-flow-parameter-set-id>
             <cir>2000000</cir>
             <cir-max wd:default="true">0</cir-max>
             <cbs>10000</cbs>
@@ -978,10 +939,9 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-          <bwp-flow>
-            <bw-profile>medium3-bwp-uni</bw-profile>
-            <user-label>medium3-bwp-uni</user-label>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>medium3-bwp-uni</bwp-flow-parameter-set-id>
             <cir>14000</cir>
             <cir-max>20000</cir-max>
             <cbs>32000</cbs>
@@ -991,8 +951,8 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
-          </bwp-flow>
-        </egress-bwp-flows>
+          </bwp-flow-parameter-set>
+        </egress-bwp-flows-parameter-set>
         <l2cp-cos>
           <l2cp-profile>
             <id>MEF103_Table3PlusCoS</id>

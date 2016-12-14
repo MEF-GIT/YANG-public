@@ -2747,11 +2747,10 @@
           }
         ]
       },
-      "ingress-bwp-flows": {
-        "bwp-flow": [
+      "ingress-bwp-flows-parameter-set": {
+        "bwp-flow-parameter-set": [
           {
-            "bw-profile": "INGRESS_BWP_100mbps",
-            "user-label": "ingress-bwp100",
+            "bwp-flow-parameter-set-id": "INGRESS_BWP_100mbps",
             "cir": 100000,
             "cir-max": 200000,
             "cbs": 12800,
@@ -2763,8 +2762,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "INGRESS_BWP_200kbps",
-            "user-label": "ingress-bwp200k",
+            "bwp-flow-parameter-set-id": "INGRESS_BWP_200kbps",
             "cir": 200,
             "cir-max": 4000,
             "cbs": 32000,
@@ -2776,8 +2774,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "INGRESS_BWP_2mbps",
-            "user-label": "ingress-bwp2",
+            "bwp-flow-parameter-set-id": "INGRESS_BWP_2mbps",
             "cir": 2000,
             "cir-max": 4000,
             "cbs": 32000,
@@ -2789,8 +2786,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "INGRESS_BWP_70mbps",
-            "user-label": "ingress-bwp70",
+            "bwp-flow-parameter-set-id": "INGRESS_BWP_70mbps",
             "cir": 70000,
             "cir-max": 200000,
             "cbs": 12800,
@@ -2802,8 +2798,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "INGRESS_BWP_800kbps",
-            "user-label": "ingress-bwp800k",
+            "bwp-flow-parameter-set-id": "INGRESS_BWP_800kbps",
             "cir": 800,
             "cir-max": 4000,
             "cbs": 32000,
@@ -2815,8 +2810,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "chicago-bwp-evc",
-            "user-label": "chicago-bwp-evc",
+            "bwp-flow-parameter-set-id": "chicago-bwp-evc",
             "cir": 400000,
             "cbs": 9000,
             "eir": 10000,
@@ -2826,8 +2820,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "chicago-bwp-uni",
-            "user-label": "chicago-bwp-uni",
+            "bwp-flow-parameter-set-id": "chicago-bwp-uni",
             "cir": 10000000,
             "cbs": 12000,
             "eir": 10000,
@@ -2837,8 +2830,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "denver-bwp-evc",
-            "user-label": "denver-bwp-evc",
+            "bwp-flow-parameter-set-id": "denver-bwp-evc",
             "cir": 400000,
             "cbs": 9000,
             "eir": 10000,
@@ -2848,8 +2840,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "denver-bwp-uni",
-            "user-label": "denver-bwp-uni",
+            "bwp-flow-parameter-set-id": "denver-bwp-uni",
             "cir": 2000000,
             "cbs": 10000,
             "eir": 10000,
@@ -2859,8 +2850,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "high1-bwp-uni",
-            "user-label": "high1-bwp-uni",
+            "bwp-flow-parameter-set-id": "high1-bwp-uni",
             "cir": 20000,
             "cir-max": 20000,
             "cbs": 64000,
@@ -2872,8 +2862,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "high2-bwp-uni",
-            "user-label": "high2-bwp-uni",
+            "bwp-flow-parameter-set-id": "high2-bwp-uni",
             "cir": 10000000,
             "cbs": 12000,
             "eir": 0,
@@ -2883,8 +2872,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "high3-bwp-uni",
-            "user-label": "high3-bwp-uni",
+            "bwp-flow-parameter-set-id": "high3-bwp-uni",
             "cir": 20000,
             "cir-max": 20000,
             "cbs": 64000,
@@ -2896,8 +2884,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "itest-bwp1",
-            "user-label": "itest-bwp1",
+            "bwp-flow-parameter-set-id": "itest-bwp1",
             "cir": 5000,
             "cir-max": 20000,
             "cbs": 12800,
@@ -2909,8 +2896,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "itest-bwp2",
-            "user-label": "itest-bwp2",
+            "bwp-flow-parameter-set-id": "itest-bwp2",
             "cir": 14000,
             "cir-max": 20000,
             "cbs": 32000,
@@ -2922,10 +2908,9 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "low1-bwp-uni",
-            "user-label": "low1-bwp-uni",
-            "@user-label": {"annotation": "Global Ingress Bandwidth Profiles are Ordered-By User"},
+            "bwp-flow-parameter-set-id": "low1-bwp-uni",
             "cir": 5000,
+            "@cir": {"annotation": "Global Ingress Bandwidth Profiles are Ordered-By User"},
             "cir-max": 20000,
             "cbs": 12800,
             "eir": 50000,
@@ -2936,8 +2921,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "low2-bwp-uni",
-            "user-label": "low2-bwp-uni",
+            "bwp-flow-parameter-set-id": "low2-bwp-uni",
             "cir": 400000,
             "cbs": 9000,
             "eir": 10000,
@@ -2947,8 +2931,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "low3-bwp-uni",
-            "user-label": "low3-bwp-uni",
+            "bwp-flow-parameter-set-id": "low3-bwp-uni",
             "cir": 5000,
             "cir-max": 20000,
             "cbs": 12800,
@@ -2960,8 +2943,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "medium1-bwp-uni",
-            "user-label": "medium1-bwp-uni",
+            "bwp-flow-parameter-set-id": "medium1-bwp-uni",
             "cir": 14000,
             "cir-max": 20000,
             "cbs": 32000,
@@ -2973,8 +2955,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "medium2-bwp-uni",
-            "user-label": "medium2-bwp-uni",
+            "bwp-flow-parameter-set-id": "medium2-bwp-uni",
             "cir": 2000000,
             "cbs": 10000,
             "eir": 10000,
@@ -2984,8 +2965,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "medium3-bwp-uni",
-            "user-label": "medium3-bwp-uni",
+            "bwp-flow-parameter-set-id": "medium3-bwp-uni",
             "cir": 14000,
             "cir-max": 20000,
             "cbs": 32000,
@@ -2998,11 +2978,10 @@
           }
         ]
       },
-      "egress-bwp-flows": {
-        "bwp-flow": [
+      "egress-bwp-flows-parameter-set": {
+        "bwp-flow-parameter-set": [
           {
-            "bw-profile": "EGRESS_BWP_100mbps",
-            "user-label": "egress-bwp100",
+            "bwp-flow-parameter-set-id": "EGRESS_BWP_100mbps",
             "cir": 100000,
             "cir-max": 20000,
             "cbs": 12800,
@@ -3014,8 +2993,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "EGRESS_BWP_200kbps",
-            "user-label": "egress-bwp200k",
+            "bwp-flow-parameter-set-id": "EGRESS_BWP_200kbps",
             "cir": 200,
             "cir-max": 4000,
             "cbs": 32000,
@@ -3027,8 +3005,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "EGRESS_BWP_2mbps",
-            "user-label": "egress-bwp2",
+            "bwp-flow-parameter-set-id": "EGRESS_BWP_2mbps",
             "cir": 2000,
             "cir-max": 4000,
             "cbs": 32000,
@@ -3040,8 +3017,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "EGRESS_BWP_70mbps",
-            "user-label": "egress-bwp70",
+            "bwp-flow-parameter-set-id": "EGRESS_BWP_70mbps",
             "cir": 70000,
             "cir-max": 20000,
             "cbs": 12800,
@@ -3053,8 +3029,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "EGRESS_BWP_800kbps",
-            "user-label": "egress-bwp800k",
+            "bwp-flow-parameter-set-id": "EGRESS_BWP_800kbps",
             "cir": 800,
             "cir-max": 4000,
             "cbs": 32000,
@@ -3066,8 +3041,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "chicago-bwp-evc",
-            "user-label": "chicago-bwp-evc",
+            "bwp-flow-parameter-set-id": "chicago-bwp-evc",
             "cir": 400000,
             "cbs": 9000,
             "eir": 10000,
@@ -3077,8 +3051,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "chicago-bwp-uni",
-            "user-label": "chicago-bwp-uni",
+            "bwp-flow-parameter-set-id": "chicago-bwp-uni",
             "cir": 10000000,
             "cbs": 12000,
             "eir": 10000,
@@ -3088,8 +3061,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "denver-bwp-evc",
-            "user-label": "denver-bwp-evc",
+            "bwp-flow-parameter-set-id": "denver-bwp-evc",
             "cir": 400000,
             "cbs": 9000,
             "eir": 10000,
@@ -3099,8 +3071,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "denver-bwp-uni",
-            "user-label": "denver-bwp-uni",
+            "bwp-flow-parameter-set-id": "denver-bwp-uni",
             "cir": 2000000,
             "cbs": 10000,
             "eir": 10000,
@@ -3110,8 +3081,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "etest-bwp1",
-            "user-label": "etest-bwp1",
+            "bwp-flow-parameter-set-id": "etest-bwp1",
             "cir": 5000,
             "cir-max": 20000,
             "cbs": 12800,
@@ -3123,8 +3093,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "etest-bwp2",
-            "user-label": "etest-bwp2",
+            "bwp-flow-parameter-set-id": "etest-bwp2",
             "cir": 14000,
             "cir-max": 20000,
             "cbs": 32000,
@@ -3136,8 +3105,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "high1-bwp-uni",
-            "user-label": "high1-bwp-uni",
+            "bwp-flow-parameter-set-id": "high1-bwp-uni",
             "cir": 20000,
             "cir-max": 20000,
             "cbs": 64000,
@@ -3149,8 +3117,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "high2-bwp-uni",
-            "user-label": "high2-bwp-uni",
+            "bwp-flow-parameter-set-id": "high2-bwp-uni",
             "cir": 10000000,
             "cbs": 12000,
             "eir": 0,
@@ -3160,8 +3127,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "high3-bwp-uni",
-            "user-label": "high3-bwp-uni",
+            "bwp-flow-parameter-set-id": "high3-bwp-uni",
             "cir": 20000,
             "cir-max": 20000,
             "cbs": 64000,
@@ -3173,10 +3139,9 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "low1-bwp-uni",
-            "user-label": "low1-bwp-uni",
-            "@user-label": {"annotation": "Global Egress Bandwidth Profiles are Ordered-By User"},
+            "bwp-flow-parameter-set-id": "low1-bwp-uni",
             "cir": 5000,
+            "@cir": {"annotation": "Global Egress Bandwidth Profiles are Ordered-By User"},
             "cir-max": 20000,
             "cbs": 12800,
             "eir": 50000,
@@ -3187,8 +3152,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "low2-bwp-uni",
-            "user-label": "low2-bwp-evc",
+            "bwp-flow-parameter-set-id": "low2-bwp-uni",
             "cir": 400000,
             "cbs": 9000,
             "eir": 10000,
@@ -3198,8 +3162,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "low3-bwp-uni",
-            "user-label": "low3-bwp-uni",
+            "bwp-flow-parameter-set-id": "low3-bwp-uni",
             "cir": 5000,
             "cir-max": 20000,
             "cbs": 12800,
@@ -3211,8 +3174,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "medium1-bwp-uni",
-            "user-label": "medium1-bwp-uni",
+            "bwp-flow-parameter-set-id": "medium1-bwp-uni",
             "cir": 14000,
             "cir-max": 20000,
             "cbs": 32000,
@@ -3224,8 +3186,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "medium2-bwp-uni",
-            "user-label": "medium2-bwp-uni",
+            "bwp-flow-parameter-set-id": "medium2-bwp-uni",
             "cir": 2000000,
             "cbs": 10000,
             "eir": 10000,
@@ -3235,8 +3196,7 @@
             "coupling-flag": false
           },
           {
-            "bw-profile": "medium3-bwp-uni",
-            "user-label": "medium3-bwp-uni",
+            "bwp-flow-parameter-set-id": "medium3-bwp-uni",
             "cir": 14000,
             "cir-max": 20000,
             "cbs": 32000,

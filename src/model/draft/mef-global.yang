@@ -92,25 +92,19 @@ module mef-global {
     description
       "MEF Global Profiles";
 
-    grouping bwp-flows-group {
+    grouping bwp-flows-parameter-set-group {
       description
         "Bandwidth Profile Flows Group.";
-      list bwp-flow {
-        key "bw-profile";
+      list bwp-flow-parameter-set {
+        key "bwp-flow-parameter-set-id";
         description
           "Bandwidth Profiles.";
         reference "[MEF10.3] Section 9.14, 12.2.";
-        leaf bw-profile {
+        leaf bwp-flow-parameter-set-id {
           type mef-types:identifier45;
           description
             "Bandwidth Profile Identifier.";
           reference "[MEF10.3] Section 9.14, 12.2.";
-        }
-        leaf user-label {
-          type mef-types:identifier45;
-          description
-            "This attribute is a friendly name for this " +
-            "specific Bandwidth Profile.";
         }
         leaf cir {
           type mef-types:bwp-ir-type;
@@ -119,7 +113,7 @@ module mef-global {
           description
             "This attribute identifies the Committed " +
             "Information Rate (CIR) in Kilobits per second " +
-            "for one direction of an ETH EVC. If the value is 0," +
+            "for one BWP flow. If the value is 0," +
             " then no guarantee is assumed.";
         }
         leaf cir-max {
@@ -138,7 +132,7 @@ module mef-global {
           default "0";
           description
             "This attribute identifies the Committed Burst Size " +
-            "(CBS) in bytes for one direction of an ETH EVC. " +
+            "(CBS) in bytes for one BWP flow. " +
             "This parameter limits the maximum number of bytes " +
             "available for a burst of Service Frames sent at the " +
             "UNI line rate that will be declared Green by the " +
@@ -151,8 +145,8 @@ module mef-global {
           default "0";
           description
             "This attribute identifies the Excess Information Rate" +
-            " (EIR) in Kilobits per second for one direction of " +
-            "an ETH EVC. This parameter limits the average rate " +
+            " (EIR) in Kilobits per second for one BWP flow. " +
+            " This parameter limits the average rate " +
             "in bits per second of Service Frames that will be " +
             "declared Yellow by the Bandwidth Profile. If this " +
             "value is 0, then no limit is assumed.";
@@ -164,7 +158,7 @@ module mef-global {
           description
             "This attribute identifies the Maximum Excess " +
             "Information Rate (EIR) in Kilobits per second" +
-            " for one direction of an ETH EVC. This parameter" +
+            " for one BWP flow. This parameter" +
             " limits the rate of tokens added to the excess " +
             "token bucket. If this value is 0, then no limit " +
             "is assumed.";
@@ -175,7 +169,7 @@ module mef-global {
           default "0";
           description
             "This attribute identifies the Excess Burst Size " +
-            "(EBS) in bytes for one direction of an ETH EVC." +
+            "(EBS) in bytes for one BWP flow." +
             " This parameter limits the maximum number of " +
             "bytes available for a burst of Service Frames " +
             "sent at the UNI line rate that will be declared " +
@@ -597,15 +591,15 @@ module mef-global {
           }
         }
       }
-      container ingress-bwp-flows {
+      container ingress-bwp-flows-parameter-set {
         description
           "Ingress Bandwidth Profile Flows.";
-        uses bwp-flows-group;
+        uses bwp-flows-parameter-set-group;
       }
-      container egress-bwp-flows {
+      container egress-bwp-flows-parameter-set {
         description
           "Egress Bandwidth Profile Flows.";
-        uses bwp-flows-group;
+        uses bwp-flows-parameter-set-group;
       }
       container l2cp-cos {
         description

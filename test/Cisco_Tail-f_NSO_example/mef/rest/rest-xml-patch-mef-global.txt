@@ -318,10 +318,9 @@
             <name>Sophomore</name>
           </eec-name>
         </eec-names>
-        <ingress-bwp-flows>
+        <ingress-bwp-flows-parameter-set>
           <bwp-flow>
             <bw-profile>chicago-bwp-evc</bw-profile>
-            <user-label>chicago-bwp-evc</user-label>
             <cir>400000</cir>
             <cbs>9000</cbs>
             <eir>10000</eir>
@@ -331,8 +330,7 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>chicago-bwp-uni</bw-profile>
-            <user-label>chicago-bwp-uni</user-label>
-            <cir>10000000</cir>
+             <cir>10000000</cir>
             <cbs>12000</cbs>
             <eir>10000</eir>
             <ebs>10000</ebs>
@@ -341,7 +339,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>denver-bwp-evc</bw-profile>
-            <user-label>denver-bwp-evc</user-label>
             <cir>400000</cir>
             <cbs>9000</cbs>
             <eir>10000</eir>
@@ -351,7 +348,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>denver-bwp-uni</bw-profile>
-            <user-label>denver-bwp-uni</user-label>
             <cir>2000000</cir>
             <cbs>10000</cbs>
             <eir>10000</eir>
@@ -361,7 +357,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>high1-bwp-uni</bw-profile>
-            <user-label>high1-bwp-uni</user-label>
             <cir>20000</cir>
             <cir-max>20000</cir-max>
             <cbs>64000</cbs>
@@ -373,7 +368,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>high2-bwp-uni</bw-profile>
-            <user-label>high2-bwp-uni</user-label>
             <cir>10000000</cir>
             <cbs>12000</cbs>
             <eir>0</eir>
@@ -383,7 +377,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>high3-bwp-uni</bw-profile>
-            <user-label>high3-bwp-uni</user-label>
             <cir>20000</cir>
             <cir-max>20000</cir-max>
             <cbs>64000</cbs>
@@ -395,7 +388,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>itest-bwp1</bw-profile>
-            <user-label>itest-bwp1</user-label>
             <cir>5000</cir>
             <cir-max>20000</cir-max>
             <cbs>12800</cbs>
@@ -407,7 +399,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>itest-bwp2</bw-profile>
-            <user-label>itest-bwp2</user-label>
             <cir>14000</cir>
             <cir-max>20000</cir-max>
             <cbs>32000</cbs>
@@ -419,7 +410,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>low1-bwp-uni</bw-profile>
-            <user-label annotation="Global Ingress Bandwidth Profiles are Ordered-By User">low1-bwp-uni</user-label>
             <cir>5000</cir>
             <cir-max>20000</cir-max>
             <cbs>12800</cbs>
@@ -431,7 +421,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>low2-bwp-uni</bw-profile>
-            <user-label>low2-bwp-uni</user-label>
             <cir>400000</cir>
             <cbs>9000</cbs>
             <eir>10000</eir>
@@ -441,7 +430,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>low3-bwp-uni</bw-profile>
-            <user-label>low3-bwp-uni</user-label>
             <cir>5000</cir>
             <cir-max>20000</cir-max>
             <cbs>12800</cbs>
@@ -453,7 +441,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>medium1-bwp-uni</bw-profile>
-            <user-label>medium1-bwp-uni</user-label>
             <cir>14000</cir>
             <cir-max>20000</cir-max>
             <cbs>32000</cbs>
@@ -465,7 +452,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>medium2-bwp-uni</bw-profile>
-            <user-label>medium2-bwp-uni</user-label>
             <cir>2000000</cir>
             <cbs>10000</cbs>
             <eir>10000</eir>
@@ -475,7 +461,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>medium3-bwp-uni</bw-profile>
-            <user-label>medium3-bwp-uni</user-label>
             <cir>14000</cir>
             <cir-max>20000</cir-max>
             <cbs>32000</cbs>
@@ -485,11 +470,10 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
           </bwp-flow>
-        </ingress-bwp-flows>
-        <egress-bwp-flows>
+        </ingress-bwp-flows-parameter-set>
+        <egress-bwp-flows-parameter-set>
           <bwp-flow>
             <bw-profile>chicago-bwp-evc</bw-profile>
-            <user-label>chicago-bwp-evc</user-label>
             <cir>400000</cir>
             <cbs>9000</cbs>
             <eir>10000</eir>
@@ -499,7 +483,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>chicago-bwp-uni</bw-profile>
-            <user-label>chicago-bwp-uni</user-label>
             <cir>10000000</cir>
             <cbs>12000</cbs>
             <eir>10000</eir>
@@ -509,7 +492,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>denver-bwp-evc</bw-profile>
-            <user-label>denver-bwp-evc</user-label>
             <cir>400000</cir>
             <cbs>9000</cbs>
             <eir>10000</eir>
@@ -519,7 +501,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>denver-bwp-uni</bw-profile>
-            <user-label>denver-bwp-uni</user-label>
             <cir>2000000</cir>
             <cbs>10000</cbs>
             <eir>10000</eir>
@@ -529,7 +510,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>etest-bwp1</bw-profile>
-            <user-label>etest-bwp1</user-label>
             <cir>5000</cir>
             <cir-max>20000</cir-max>
             <cbs>12800</cbs>
@@ -541,7 +521,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>etest-bwp2</bw-profile>
-            <user-label>etest-bwp2</user-label>
             <cir>14000</cir>
             <cir-max>20000</cir-max>
             <cbs>32000</cbs>
@@ -553,7 +532,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>high1-bwp-uni</bw-profile>
-            <user-label>high1-bwp-uni</user-label>
             <cir>20000</cir>
             <cir-max>20000</cir-max>
             <cbs>64000</cbs>
@@ -565,7 +543,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>high2-bwp-uni</bw-profile>
-            <user-label>high2-bwp-uni</user-label>
             <cir>10000000</cir>
             <cbs>12000</cbs>
             <eir>0</eir>
@@ -575,7 +552,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>high3-bwp-uni</bw-profile>
-            <user-label>high3-bwp-uni</user-label>
             <cir>20000</cir>
             <cir-max>20000</cir-max>
             <cbs>64000</cbs>
@@ -587,7 +563,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>low1-bwp-uni</bw-profile>
-            <user-label annotation="Global Egress Bandwidth Profiles are Ordered-By User">low1-bwp-uni</user-label>
             <cir>5000</cir>
             <cir-max>20000</cir-max>
             <cbs>12800</cbs>
@@ -599,7 +574,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>low2-bwp-uni</bw-profile>
-            <user-label>low2-bwp-evc</user-label>
             <cir>400000</cir>
             <cbs>9000</cbs>
             <eir>10000</eir>
@@ -609,7 +583,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>low3-bwp-uni</bw-profile>
-            <user-label>low3-bwp-uni</user-label>
             <cir>5000</cir>
             <cir-max>20000</cir-max>
             <cbs>12800</cbs>
@@ -621,7 +594,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>medium1-bwp-uni</bw-profile>
-            <user-label>medium1-bwp-uni</user-label>
             <cir>14000</cir>
             <cir-max>20000</cir-max>
             <cbs>32000</cbs>
@@ -633,7 +605,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>medium2-bwp-uni</bw-profile>
-            <user-label>medium2-bwp-uni</user-label>
             <cir>2000000</cir>
             <cbs>10000</cbs>
             <eir>10000</eir>
@@ -643,7 +614,6 @@
           </bwp-flow>
           <bwp-flow>
             <bw-profile>medium3-bwp-uni</bw-profile>
-            <user-label>medium3-bwp-uni</user-label>
             <cir>14000</cir>
             <cir-max>20000</cir-max>
             <cbs>32000</cbs>
@@ -653,7 +623,7 @@
             <coupling-enabled>false</coupling-enabled>
             <color-mode>color-blind</color-mode>
           </bwp-flow>
-        </egress-bwp-flows>
+        </egress-bwp-flows-parameter-set>
         <l2cp-cos>
           <l2cp-profile>
             <id>MEF103_Table3PlusCoS</id>

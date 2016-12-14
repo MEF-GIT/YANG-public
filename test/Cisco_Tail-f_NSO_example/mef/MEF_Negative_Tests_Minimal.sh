@@ -532,7 +532,7 @@ fi
 config
 mef-interfaces unis uni MMPOP1-ce2-Slot2-Port1 token-share-enabled true
 mef-interfaces unis uni MMPOP1-ce2-Slot2-Port1 egress-envelopes envelope eMM_EPL_Medium coupling-enabled true bwp-flows bwp-flow high2-bwp-uni
-mef-global profiles egress-bwp-flows bwp-flow high2-bwp-uni coupling-enabled true
+mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set high2-bwp-uni coupling-enabled true
 commit
 end no-confirm
 exit
@@ -549,7 +549,7 @@ fi
 config
 mef-interfaces unis uni MMPOP1-ce2-Slot2-Port1 token-share-enabled true
 mef-interfaces unis uni MMPOP1-ce2-Slot2-Port1 ingress-envelopes envelope MM_EPL_Medium coupling-enabled true bwp-flows bwp-flow high1-bwp-uni
-mef-global profiles ingress-bwp-flows bwp-flow high1-bwp-uni coupling-enabled true
+mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set high1-bwp-uni coupling-enabled true
 commit
 end no-confirm
 exit

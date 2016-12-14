@@ -488,11 +488,10 @@
           }
         ]
       },
-      "ingress-bwp-flows": {
-        "bwp-flow": [
+      "ingress-bwp-flows-parameter-set": {
+        "bwp-flow-parameter-set": [
           {
             "bw-profile": "INGRESS_BWP_100mbps",
-            "user-label": "ingress-bwp100",
             "cir": 100000,
             "cir-max": 200000,
             "cbs": 12800,
@@ -505,7 +504,6 @@
           },
           {
             "bw-profile": "INGRESS_BWP_200kbps",
-            "user-label": "ingress-bwp200k",
             "cir": 200,
             "cir-max": 4000,
             "cbs": 32000,
@@ -518,7 +516,6 @@
           },
           {
             "bw-profile": "INGRESS_BWP_2mbps",
-            "user-label": "ingress-bwp2",
             "cir": 2000,
             "cir-max": 4000,
             "cbs": 32000,
@@ -531,7 +528,6 @@
           },
           {
             "bw-profile": "INGRESS_BWP_70mbps",
-            "user-label": "ingress-bwp70",
             "cir": 70000,
             "cir-max": 200000,
             "cbs": 12800,
@@ -544,7 +540,6 @@
           },
           {
             "bw-profile": "INGRESS_BWP_800kbps",
-            "user-label": "ingress-bwp800k",
             "cir": 800,
             "cir-max": 4000,
             "cbs": 32000,
@@ -557,7 +552,6 @@
           },
           {
             "bw-profile": "chicago-bwp-evc",
-            "user-label": "chicago-bwp-evc",
             "cir": 400000,
             "cbs": 9000,
             "eir": 10000,
@@ -568,7 +562,6 @@
           },
           {
             "bw-profile": "chicago-bwp-uni",
-            "user-label": "chicago-bwp-uni",
             "cir": 10000000,
             "cbs": 12000,
             "eir": 10000,
@@ -579,7 +572,6 @@
           },
           {
             "bw-profile": "denver-bwp-evc",
-            "user-label": "denver-bwp-evc",
             "cir": 400000,
             "cbs": 9000,
             "eir": 10000,
@@ -590,7 +582,6 @@
           },
           {
             "bw-profile": "denver-bwp-uni",
-            "user-label": "denver-bwp-uni",
             "cir": 2000000,
             "cbs": 10000,
             "eir": 10000,
@@ -601,7 +592,6 @@
           },
           {
             "bw-profile": "high1-bwp-uni",
-            "user-label": "high1-bwp-uni",
             "cir": 20000,
             "cir-max": 20000,
             "cbs": 64000,
@@ -614,7 +604,6 @@
           },
           {
             "bw-profile": "high2-bwp-uni",
-            "user-label": "high2-bwp-uni",
             "cir": 10000000,
             "cbs": 12000,
             "eir": 0,
@@ -625,7 +614,6 @@
           },
           {
             "bw-profile": "high3-bwp-uni",
-            "user-label": "high3-bwp-uni",
             "cir": 20000,
             "cir-max": 20000,
             "cbs": 64000,
@@ -638,7 +626,6 @@
           },
           {
             "bw-profile": "itest-bwp1",
-            "user-label": "itest-bwp1",
             "cir": 5000,
             "cir-max": 20000,
             "cbs": 12800,
@@ -651,7 +638,6 @@
           },
           {
             "bw-profile": "itest-bwp2",
-            "user-label": "itest-bwp2",
             "cir": 14000,
             "cir-max": 20000,
             "cbs": 32000,
@@ -664,7 +650,6 @@
           },
           {
             "bw-profile": "low1-bwp-uni",
-            "user-label": "low1-bwp-uni",
             "cir": 5000,
             "cir-max": 20000,
             "cbs": 12800,
@@ -677,7 +662,6 @@
           },
           {
             "bw-profile": "low2-bwp-uni",
-            "user-label": "low2-bwp-uni",
             "cir": 400000,
             "cbs": 9000,
             "eir": 10000,
@@ -688,7 +672,6 @@
           },
           {
             "bw-profile": "low3-bwp-uni",
-            "user-label": "low3-bwp-uni",
             "cir": 5000,
             "cir-max": 20000,
             "cbs": 12800,
@@ -701,7 +684,6 @@
           },
           {
             "bw-profile": "medium1-bwp-uni",
-            "user-label": "medium1-bwp-uni",
             "cir": 14000,
             "cir-max": 20000,
             "cbs": 32000,
@@ -714,7 +696,6 @@
           },
           {
             "bw-profile": "medium2-bwp-uni",
-            "user-label": "medium2-bwp-uni",
             "cir": 2000000,
             "cbs": 10000,
             "eir": 10000,
@@ -725,7 +706,6 @@
           },
           {
             "bw-profile": "medium3-bwp-uni",
-            "user-label": "medium3-bwp-uni",
             "cir": 14000,
             "cir-max": 20000,
             "cbs": 32000,
@@ -738,11 +718,10 @@
           }
         ]
       },
-      "egress-bwp-flows": {
-        "bwp-flow": [
+      "egress-bwp-flows-parameter-set": {
+        "bwp-flow-parameter-set": [
           {
             "bw-profile": "EGRESS_BWP_100mbps",
-            "user-label": "egress-bwp100",
             "cir": 100000,
             "cir-max": 20000,
             "cbs": 12800,
@@ -755,7 +734,6 @@
           },
           {
             "bw-profile": "EGRESS_BWP_200kbps",
-            "user-label": "egress-bwp200k",
             "cir": 200,
             "cir-max": 4000,
             "cbs": 32000,
@@ -768,7 +746,6 @@
           },
           {
             "bw-profile": "EGRESS_BWP_2mbps",
-            "user-label": "egress-bwp2",
             "cir": 2000,
             "cir-max": 4000,
             "cbs": 32000,
@@ -781,7 +758,6 @@
           },
           {
             "bw-profile": "EGRESS_BWP_70mbps",
-            "user-label": "egress-bwp70",
             "cir": 70000,
             "cir-max": 20000,
             "cbs": 12800,
@@ -794,7 +770,6 @@
           },
           {
             "bw-profile": "EGRESS_BWP_800kbps",
-            "user-label": "egress-bwp800k",
             "cir": 800,
             "cir-max": 4000,
             "cbs": 32000,
@@ -807,7 +782,6 @@
           },
           {
             "bw-profile": "chicago-bwp-evc",
-            "user-label": "chicago-bwp-evc",
             "cir": 400000,
             "cbs": 9000,
             "eir": 10000,
@@ -818,7 +792,6 @@
           },
           {
             "bw-profile": "chicago-bwp-uni",
-            "user-label": "chicago-bwp-uni",
             "cir": 10000000,
             "cbs": 12000,
             "eir": 10000,
@@ -829,7 +802,6 @@
           },
           {
             "bw-profile": "denver-bwp-evc",
-            "user-label": "denver-bwp-evc",
             "cir": 400000,
             "cbs": 9000,
             "eir": 10000,
@@ -840,7 +812,6 @@
           },
           {
             "bw-profile": "denver-bwp-uni",
-            "user-label": "denver-bwp-uni",
             "cir": 2000000,
             "cbs": 10000,
             "eir": 10000,
@@ -851,7 +822,6 @@
           },
           {
             "bw-profile": "etest-bwp1",
-            "user-label": "etest-bwp1",
             "cir": 5000,
             "cir-max": 20000,
             "cbs": 12800,
@@ -864,7 +834,6 @@
           },
           {
             "bw-profile": "etest-bwp2",
-            "user-label": "etest-bwp2",
             "cir": 14000,
             "cir-max": 20000,
             "cbs": 32000,
@@ -877,7 +846,6 @@
           },
           {
             "bw-profile": "high1-bwp-uni",
-            "user-label": "high1-bwp-uni",
             "cir": 20000,
             "cir-max": 20000,
             "cbs": 64000,
@@ -890,7 +858,6 @@
           },
           {
             "bw-profile": "high2-bwp-uni",
-            "user-label": "high2-bwp-uni",
             "cir": 10000000,
             "cbs": 12000,
             "eir": 0,
@@ -901,7 +868,6 @@
           },
           {
             "bw-profile": "high3-bwp-uni",
-            "user-label": "high3-bwp-uni",
             "cir": 20000,
             "cir-max": 20000,
             "cbs": 64000,
@@ -914,7 +880,6 @@
           },
           {
             "bw-profile": "low1-bwp-uni",
-            "user-label": "low1-bwp-uni",
             "cir": 5000,
             "cir-max": 20000,
             "cbs": 12800,
@@ -927,7 +892,6 @@
           },
           {
             "bw-profile": "low2-bwp-uni",
-            "user-label": "low2-bwp-evc",
             "cir": 400000,
             "cbs": 9000,
             "eir": 10000,
@@ -938,7 +902,6 @@
           },
           {
             "bw-profile": "low3-bwp-uni",
-            "user-label": "low3-bwp-uni",
             "cir": 5000,
             "cir-max": 20000,
             "cbs": 12800,
@@ -951,7 +914,6 @@
           },
           {
             "bw-profile": "medium1-bwp-uni",
-            "user-label": "medium1-bwp-uni",
             "cir": 14000,
             "cir-max": 20000,
             "cbs": 32000,
@@ -964,7 +926,6 @@
           },
           {
             "bw-profile": "medium2-bwp-uni",
-            "user-label": "medium2-bwp-uni",
             "cir": 2000000,
             "cbs": 10000,
             "eir": 10000,
@@ -975,7 +936,6 @@
           },
           {
             "bw-profile": "medium3-bwp-uni",
-            "user-label": "medium3-bwp-uni",
             "cir": 14000,
             "cir-max": 20000,
             "cbs": 32000,
