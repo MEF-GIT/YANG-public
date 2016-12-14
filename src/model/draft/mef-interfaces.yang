@@ -19,7 +19,7 @@ module mef-interfaces {
   contact
     "Web URL: http://mef.net/
      E-mail:  namespace@mef.net
-     Postal:  Metro Ethernet Forum
+     Postal:  MEF Forum
               6033 W. Century Boulevard, Suite 1107
               Los Angeles, CA 90045
               U.S.A.
@@ -27,7 +27,7 @@ module mef-interfaces {
      Fax:     +1 310-642-2808";
   description
     "This module implements the UNI functionality specified 
-     in MEF 10.3, MEF 6.2, and MEF 7.2.
+     in MEF 10.3 and MEF 6.2.
      
      Reference Overview: 
      A number of base documents have been used to create 
@@ -120,11 +120,9 @@ module mef-interfaces {
         reference "[MEF6.2] Section 8.2.2.";
         container physical-layers {
           description
-            "The Physical Layer MUST operate in a full duplex " +
-            "mode. It is not configurable.";
+            "Physical Layer configuration";
           reference "[MEF10.3] Section 9.2, [R61], [R62]";
           container links {
-            presence "A UNI must have links.";
             description
               "The Physical Layer for each physical link " +
               "implementing the UNI MUST be one of the " +
@@ -132,13 +130,7 @@ module mef-interfaces {
               "excluding 1000BASE-PX-D and 1000BASE-PX-U.";
             reference "[MEF10.3] Section 9.2 [R60]";
             list link {
-              must "count(.) >= 1" {
-                error-message "A UNI must have at least one " +
-                		"physical link configured.";
-                description
-                  "A UNI must have at least one physical link " +
-                  "configured.";
-              }
+              min-elements 1;
               key "device interface";
               description
                 "A list of all the physical ports associated " +
@@ -260,7 +252,7 @@ module mef-interfaces {
           list ce-vlan {
             key "vid";
             description
-              "A list of all EC-VLANs allowed ingres or egress " +
+              "A list of all CE-VLANs allowed ingres or egress " +
               "on the UNI. This is the UNI-specific CE-VLAN ID " +
               "listing as part of the Service Level " +
               "CE-VLAN ID / EVC Map.";
@@ -286,7 +278,7 @@ module mef-interfaces {
           		"[MEF6.2] Section 8.2.1: [R3]. " +
           		"[MEF7.3] Section 10.2.2.";
           list envelope {
-            key "env-id";
+            key "envelope-id";
             description
               "UNI Bandwidth Profile Flow Envelope List.";
             reference "[MEF10.3] Section 9.15, Section 12.1. " +
@@ -362,7 +354,7 @@ module mef-interfaces {
                 }
               }
             }
-            leaf env-id {
+            leaf envelope-id {
               type mef-types:identifier45;
               description
                 "This attribute identifies the Envelope of " +
@@ -397,7 +389,7 @@ module mef-interfaces {
           		"[MEF6.2] Section 8.2.1: [R3]. " +
           		"[MEF7.3] Section 10.2.2.";
           list envelope {
-            key "env-id";
+            key "envelope-id";
             description
               "UNI Bandwidth Profile Flow Envelope List.";
             reference "[MEF10.3] Section 9.15, Section 12.1. " +
@@ -468,7 +460,7 @@ module mef-interfaces {
                 }
               }
             }
-            leaf env-id {
+            leaf envelope-id {
               type mef-types:identifier45;
               description
                 "This attribute identifies the Envelope of " +
@@ -490,7 +482,7 @@ module mef-interfaces {
               }
               default "false";
               description
-                "The Envelope Coupling Flag (CF) attribute.";
+                "The Envelope Coupling Flag (CF0) attribute.";
               reference "[MEF10.3] Section 12.1.";
             }
           }
@@ -576,7 +568,7 @@ module mef-interfaces {
         }
         leaf max-svc-frame-size {
           type mef-types:max-svc-frame-size-type;
-          default "1600";
+          mandatory true;
           description
             "This attribute describes the maximum service frame " +
             "size for the UNI.";
@@ -623,16 +615,11 @@ module mef-interfaces {
           		"(5 valid combinations), [R82], [R83]. " +
           		"[MEF7.3] Section 10.2.2.";
         }
-        leaf untagged-and-priority-tagged-ce-vlan-id {
+        leaf default-ce-vlan-id {
           type mef-types:vlan-id-type;
           default "1";
           description
-            "The untagged-and-priority-tagged-ce-vlan-id is " +
-            "equivalent to the Layer 2 PVID (Port VLAN ID) " +
-            "with the Q-BRIDGE-MIB option for frame admitance set " +
-            "to admitAll. With AdmitAll set, all Untagged and " +
-            "Priority Tagged Service Frames are treated with " +
-            "the CE-VLAN-ID tag on ingress. It is not applicable " +
+            "The default ce-vlan-id is not applicable " +
             "if All in One Bundling is enabled.";
           reference "[MEF10.3] Section 9.9, [R73], [R74], " +
           		"[R75]. [MEF7.3] Section 10.2.2.";

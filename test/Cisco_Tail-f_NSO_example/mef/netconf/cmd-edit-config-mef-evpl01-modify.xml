@@ -18,7 +18,7 @@
         <uni-id>CYPOP1-ce4-Slot4-Port3</uni-id>
         <egress-envelopes>
            <envelope>
-             <env-id>eMM_EPL2</env-id>
+             <envelope-id>eMM_EPL2</envelope-id>
              <bwp-flows>
                <bwp-flow nc:operation="create" insert="after" key="[bw-profile='high2-bwp-uni']">
                   <bw-profile >medium2-bwp-uni</bw-profile>

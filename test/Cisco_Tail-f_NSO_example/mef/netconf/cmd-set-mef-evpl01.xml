@@ -38,7 +38,7 @@
         </ce-vlans>
         <ingress-envelopes>
           <envelope>
-            <env-id>ienv_EVPL_UNI003_56789</env-id>
+            <envelope-id>ienv_EVPL_UNI003_56789</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>low1-bwp-uni</bw-profile>
@@ -47,7 +47,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>ienv_EVPL_UNI003_56790</env-id>
+            <envelope-id>ienv_EVPL_UNI003_56790</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>medium1-bwp-uni</bw-profile>
@@ -56,7 +56,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>ienv_EVPL_UNI003_56799</env-id>
+            <envelope-id>ienv_EVPL_UNI003_56799</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>high1-bwp-uni</bw-profile>
@@ -67,7 +67,7 @@
         </ingress-envelopes>
         <egress-envelopes>
           <envelope>
-            <env-id>eenv_EVPL_UNI003_56789</env-id>
+            <envelope-id>eenv_EVPL_UNI003_56789</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>low1-bwp-uni</bw-profile>
@@ -76,7 +76,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>eenv_EVPL_UNI003_56790</env-id>
+            <envelope-id>eenv_EVPL_UNI003_56790</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>medium1-bwp-uni</bw-profile>
@@ -85,7 +85,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>eenv_EVPL_UNI003_56799</env-id>
+            <envelope-id>eenv_EVPL_UNI003_56799</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>high1-bwp-uni</bw-profile>
@@ -127,7 +127,7 @@
         </ce-vlans>
         <ingress-envelopes>
           <envelope>
-            <env-id>ienv_EVPL_UNI113_56789</env-id>
+            <envelope-id>ienv_EVPL_UNI113_56789</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>low2-bwp-uni</bw-profile>
@@ -136,7 +136,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>ienv_EVPL_UNI113_56790</env-id>
+            <envelope-id>ienv_EVPL_UNI113_56790</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>medium2-bwp-uni</bw-profile>
@@ -145,7 +145,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>ienv_EVPL_UNI113_56799</env-id>
+            <envelope-id>ienv_EVPL_UNI113_56799</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>high2-bwp-uni</bw-profile>
@@ -156,7 +156,7 @@
         </ingress-envelopes>
         <egress-envelopes>
           <envelope>
-            <env-id>eenv_EVPL_UNI113_56789</env-id>
+            <envelope-id>eenv_EVPL_UNI113_56789</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>low2-bwp-uni</bw-profile>
@@ -165,7 +165,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>eenv_EVPL_UNI113_56790</env-id>
+            <envelope-id>eenv_EVPL_UNI113_56790</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>medium2-bwp-uni</bw-profile>
@@ -174,7 +174,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>eenv_EVPL_UNI113_56799</env-id>
+            <envelope-id>eenv_EVPL_UNI113_56799</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>high2-bwp-uni</bw-profile>
@@ -214,7 +214,7 @@
         </ce-vlans>
         <ingress-envelopes>
           <envelope>
-            <env-id>ienv_EVPL_UNI223_56789</env-id>
+            <envelope-id>ienv_EVPL_UNI223_56789</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>low3-bwp-uni</bw-profile>
@@ -223,7 +223,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>ienv_EVPL_UNI223_56790</env-id>
+            <envelope-id>ienv_EVPL_UNI223_56790</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>medium3-bwp-uni</bw-profile>
@@ -232,7 +232,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>ienv_EVPL_UNI223_56799</env-id>
+            <envelope-id>ienv_EVPL_UNI223_56799</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>high3-bwp-uni</bw-profile>
@@ -243,7 +243,7 @@
         </ingress-envelopes>
         <egress-envelopes>
           <envelope>
-            <env-id>eenv_EVPL_UNI223_56789</env-id>
+            <envelope-id>eenv_EVPL_UNI223_56789</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>low3-bwp-uni</bw-profile>
@@ -252,7 +252,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>eenv_EVPL_UNI223_56790</env-id>
+            <envelope-id>eenv_EVPL_UNI223_56790</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>medium3-bwp-uni</bw-profile>
@@ -261,7 +261,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>eenv_EVPL_UNI223_56799</env-id>
+            <envelope-id>eenv_EVPL_UNI223_56799</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>high3-bwp-uni</bw-profile>

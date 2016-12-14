@@ -325,7 +325,7 @@ module mef-services {
                   		"current()/../../../uni-id]/" +
                   		"mef-interfaces:ingress-envelopes/" +
                   		"mef-interfaces:envelope/mef-interfaces:" +
-                  		"env-id";
+                  		"envelope-id";
                 }
                 mandatory true;
                 description
@@ -379,7 +379,7 @@ module mef-services {
                   		"/mef-interfaces:" +
                   		"egress-envelopes/" +
                   		"mef-interfaces:envelope/" +
-                  		"mef-interfaces:env-id";
+                  		"mef-interfaces:envelope-id";
                 }
                 mandatory true;
                 description
@@ -560,7 +560,7 @@ module mef-services {
               		"[mef-interfaces:uni-id = current()/../" +
               		"uni-id]/mef-interfaces:ingress-envelopes" +
               		"/mef-interfaces:envelope/" +
-              		"mef-interfaces:env-id";
+              		"mef-interfaces:envelope-id";
             }
             description
               "EVC Per UNI: Ingress Bandwidth Profile " +
@@ -577,7 +577,7 @@ module mef-services {
               		"uni[mef-interfaces:uni-id = " +
               		"current()/../uni-id]/mef-interfaces:" +
               		"egress-envelopes/mef-interfaces:" +
-              		"envelope/mef-interfaces:env-id";
+              		"envelope/mef-interfaces:envelope-id";
             }
             description
               "EVC Per UNI: Egress Bandwidth Profile Envelope " +

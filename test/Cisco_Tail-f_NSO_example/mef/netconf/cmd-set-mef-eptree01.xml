@@ -32,7 +32,7 @@
         </ce-vlans>
         <ingress-envelopes>
           <envelope>
-            <env-id>ienv_EPTREE_UNI552_57913_Krypton</env-id>
+            <envelope-id>ienv_EPTREE_UNI552_57913_Krypton</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>itest-bwp1</bw-profile>
@@ -43,7 +43,7 @@
         </ingress-envelopes>
         <egress-envelopes>
           <envelope>
-            <env-id>eenv_EPTREE_UNI552_57913_Sophomore</env-id>
+            <envelope-id>eenv_EPTREE_UNI552_57913_Sophomore</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>etest-bwp1</bw-profile>
@@ -79,7 +79,7 @@
         </ce-vlans>
         <ingress-envelopes>
           <envelope>
-            <env-id>ienv_EPTREE_UNI662_57913_Krypton</env-id>
+            <envelope-id>ienv_EPTREE_UNI662_57913_Krypton</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>itest-bwp2</bw-profile>
@@ -90,7 +90,7 @@
         </ingress-envelopes>
         <egress-envelopes>
           <envelope>
-            <env-id>eenv_EPTREE_UNI662_57913_Sophomore</env-id>
+            <envelope-id>eenv_EPTREE_UNI662_57913_Sophomore</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>etest-bwp2</bw-profile>
@@ -124,7 +124,7 @@
         </ce-vlans>
         <ingress-envelopes>
           <envelope>
-            <env-id>ienv_EPTREE_UNI772_57913_Krypton</env-id>
+            <envelope-id>ienv_EPTREE_UNI772_57913_Krypton</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>itest-bwp1</bw-profile>
@@ -135,7 +135,7 @@
         </ingress-envelopes>
         <egress-envelopes>
           <envelope>
-            <env-id>eenv_EPTREE_UNI772_57913_Sophomore</env-id>
+            <envelope-id>eenv_EPTREE_UNI772_57913_Sophomore</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>etest-bwp1</bw-profile>
@@ -169,7 +169,7 @@
         </ce-vlans>
         <ingress-envelopes>
           <envelope>
-            <env-id>ienv_EPTREE_UNI882_57913_Krypton</env-id>
+            <envelope-id>ienv_EPTREE_UNI882_57913_Krypton</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>itest-bwp2</bw-profile>
@@ -180,7 +180,7 @@
         </ingress-envelopes>
         <egress-envelopes>
           <envelope>
-            <env-id>eenv_EPTREE_UNI882_57913_Sophomore</env-id>
+            <envelope-id>eenv_EPTREE_UNI882_57913_Sophomore</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>etest-bwp2</bw-profile>

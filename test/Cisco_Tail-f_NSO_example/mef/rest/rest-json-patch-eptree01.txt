@@ -26,7 +26,7 @@
     	        "ingress-envelopes": {
     	          "envelope": [
     	            {
-    	              "env-id": "ienv_EPTREE_UNI552_57913_Krypton",
+    	              "envelope-id": "ienv_EPTREE_UNI552_57913_Krypton",
     	              "bwp-flows": {
     	                "bwp-flow": [
     	                  {
@@ -41,7 +41,7 @@
     	        "egress-envelopes": {
     	          "envelope": [
     	            {
-    	              "env-id": "eenv_EPTREE_UNI552_57913_Sophomore",
+    	              "envelope-id": "eenv_EPTREE_UNI552_57913_Sophomore",
     	              "bwp-flows": {
     	                "bwp-flow": [
     	                  {
@@ -85,7 +85,7 @@
         	    "ingress-envelopes": {
         	      "envelope": [
         	        {
-        	          "env-id": "ienv_EPTREE_UNI662_57913_Krypton",
+        	          "envelope-id": "ienv_EPTREE_UNI662_57913_Krypton",
         	          "bwp-flows": {
         	            "bwp-flow": [
         	              {
@@ -100,7 +100,7 @@
         	    "egress-envelopes": {
         	      "envelope": [
         	        {
-        	          "env-id": "eenv_EPTREE_UNI662_57913_Sophomore",
+        	          "envelope-id": "eenv_EPTREE_UNI662_57913_Sophomore",
         	          "bwp-flows": {
         	            "bwp-flow": [
         	              {
@@ -143,7 +143,7 @@
         	    "ingress-envelopes": {
         	      "envelope": [
         	        {
-        	          "env-id": "ienv_EPTREE_UNI772_57913_Krypton",
+        	          "envelope-id": "ienv_EPTREE_UNI772_57913_Krypton",
         	          "bwp-flows": {
         	            "bwp-flow": [
         	              {
@@ -158,7 +158,7 @@
         	    "egress-envelopes": {
         	      "envelope": [
         	        {
-        	          "env-id": "eenv_EPTREE_UNI772_57913_Sophomore",
+        	          "envelope-id": "eenv_EPTREE_UNI772_57913_Sophomore",
         	          "bwp-flows": {
         	            "bwp-flow": [
         	              {
@@ -200,7 +200,7 @@
             	    "ingress-envelopes": {
             	      "envelope": [
             	        {
-            	          "env-id": "ienv_EPTREE_UNI882_57913_Krypton",
+            	          "envelope-id": "ienv_EPTREE_UNI882_57913_Krypton",
             	          "bwp-flows": {
             	            "bwp-flow": [
             	              {
@@ -215,7 +215,7 @@
             	    "egress-envelopes": {
             	      "envelope": [
             	        {
-            	          "env-id": "eenv_EPTREE_UNI882_57913_Sophomore",
+            	          "envelope-id": "eenv_EPTREE_UNI882_57913_Sophomore",
             	          "bwp-flows": {
             	            "bwp-flow": [
             	              {
