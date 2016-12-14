@@ -19,11 +19,11 @@
       </sls>
       </slss>
       <profiles>
-        <ingress-bwp-flows>
-          <bwp-flow nc:operation="delete">
-            <bw-profile>low1-bwp-uni</bw-profile>
-          </bwp-flow>          
-        </ingress-bwp-flows>
+        <ingress-bwp-flows-parameter-set>
+          <bwp-flow-parameter-set nc:operation="delete">
+            <bwp-flow-parameter-set-id>low1-bwp-uni</bwp-flow-parameter-set-id>
+          </bwp-flow-parameter-set>          
+        </ingress-bwp-flows-parameter-set>
       </profiles>
     </mef-global>
    </config>

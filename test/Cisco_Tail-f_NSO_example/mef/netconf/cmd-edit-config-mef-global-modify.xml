@@ -15,13 +15,12 @@
     <mef-global xmlns="urn:mef:xid:mef-global"
       xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
       <profiles>
-      <ingress-bwp-flows>
-        <bwp-flow>
-          <bw-profile>chicago-bwp-evc</bw-profile>
-          <user-label>Windy City Ingress BWP for EVC</user-label>
+      <ingress-bwp-flows-parameter-set>
+        <bwp-flow-parameter-set>
+          <bwp-flow-parameter-set-id>chicago-bwp-evc</bwp-flow-parameter-set-id>
           <cir>300000</cir>
-        </bwp-flow>
-        </ingress-bwp-flows>
+        </bwp-flow-parameter-set>
+        </ingress-bwp-flows-parameter-set>
         <l2cp-cos>
           <l2cp-profile>
             <id>MEF103_Table3PlusCoS</id>

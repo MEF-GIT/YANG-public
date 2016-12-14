@@ -932,8 +932,7 @@ mef-global profiles eec-names eec-name silver
 !
 mef-global profiles eec-names eec-name silver+
 !
-mef-global profiles ingress-bwp-flows bwp-flow INGRESS_BWP_100mbps
- user-label       ingress-bwp100
+mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set INGRESS_BWP_100mbps
  cir              100000
  cir-max          200000
  cbs              12800
@@ -944,8 +943,7 @@ mef-global profiles ingress-bwp-flows bwp-flow INGRESS_BWP_100mbps
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles ingress-bwp-flows bwp-flow INGRESS_BWP_200kbps
- user-label       ingress-bwp200k
+mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set INGRESS_BWP_200kbps
  cir              200
  cir-max          4000
  cbs              32000
@@ -956,8 +954,7 @@ mef-global profiles ingress-bwp-flows bwp-flow INGRESS_BWP_200kbps
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles ingress-bwp-flows bwp-flow INGRESS_BWP_2mbps
- user-label       ingress-bwp2
+mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set INGRESS_BWP_2mbps
  cir              2000
  cir-max          4000
  cbs              32000
@@ -968,8 +965,7 @@ mef-global profiles ingress-bwp-flows bwp-flow INGRESS_BWP_2mbps
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles ingress-bwp-flows bwp-flow INGRESS_BWP_70mbps
- user-label       ingress-bwp70
+mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set INGRESS_BWP_70mbps
  cir              70000
  cir-max          200000
  cbs              12800
@@ -980,8 +976,7 @@ mef-global profiles ingress-bwp-flows bwp-flow INGRESS_BWP_70mbps
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles ingress-bwp-flows bwp-flow INGRESS_BWP_800kbps
- user-label       ingress-bwp800k
+mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set INGRESS_BWP_800kbps
  cir              800
  cir-max          4000
  cbs              32000
@@ -992,8 +987,7 @@ mef-global profiles ingress-bwp-flows bwp-flow INGRESS_BWP_800kbps
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles ingress-bwp-flows bwp-flow chicago-bwp-evc
- user-label       chicago-bwp-evc
+mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set chicago-bwp-evc
  cir              400000
  cbs              9000
  eir              10000
@@ -1002,8 +996,7 @@ mef-global profiles ingress-bwp-flows bwp-flow chicago-bwp-evc
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles ingress-bwp-flows bwp-flow chicago-bwp-uni
- user-label       chicago-bwp-uni
+mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set chicago-bwp-uni
  cir              10000000
  cbs              12000
  eir              10000
@@ -1012,8 +1005,7 @@ mef-global profiles ingress-bwp-flows bwp-flow chicago-bwp-uni
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles ingress-bwp-flows bwp-flow denver-bwp-evc
- user-label       denver-bwp-evc
+mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set denver-bwp-evc
  cir              400000
  cbs              9000
  eir              10000
@@ -1022,8 +1014,7 @@ mef-global profiles ingress-bwp-flows bwp-flow denver-bwp-evc
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles ingress-bwp-flows bwp-flow denver-bwp-uni
- user-label       denver-bwp-uni
+mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set denver-bwp-uni
  cir              2000000
  cbs              10000
  eir              10000
@@ -1032,8 +1023,7 @@ mef-global profiles ingress-bwp-flows bwp-flow denver-bwp-uni
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles ingress-bwp-flows bwp-flow high1-bwp-uni
- user-label       high1-bwp-uni
+mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set high1-bwp-uni
  cir              20000
  cir-max          20000
  cbs              64000
@@ -1044,8 +1034,7 @@ mef-global profiles ingress-bwp-flows bwp-flow high1-bwp-uni
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles ingress-bwp-flows bwp-flow high2-bwp-uni
- user-label       high2-bwp-uni
+mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set high2-bwp-uni
  cir              10000000
  cbs              12000
  eir              0
@@ -1054,8 +1043,7 @@ mef-global profiles ingress-bwp-flows bwp-flow high2-bwp-uni
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles ingress-bwp-flows bwp-flow high3-bwp-uni
- user-label       high3-bwp-uni
+mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set high3-bwp-uni
  cir              20000
  cir-max          20000
  cbs              64000
@@ -1066,8 +1054,7 @@ mef-global profiles ingress-bwp-flows bwp-flow high3-bwp-uni
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles ingress-bwp-flows bwp-flow itest-bwp1
- user-label       itest-bwp1
+mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set itest-bwp1
  cir              5000
  cir-max          20000
  cbs              12800
@@ -1078,8 +1065,7 @@ mef-global profiles ingress-bwp-flows bwp-flow itest-bwp1
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles ingress-bwp-flows bwp-flow itest-bwp2
- user-label       itest-bwp2
+mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set itest-bwp2
  cir              14000
  cir-max          20000
  cbs              32000
@@ -1090,9 +1076,8 @@ mef-global profiles ingress-bwp-flows bwp-flow itest-bwp2
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles ingress-bwp-flows bwp-flow low1-bwp-uni
+mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set low1-bwp-uni
  /* Global Ingress Bandwidth Profiles are Ordered-By User */
- user-label       low1-bwp-uni
  cir              5000
  cir-max          20000
  cbs              12800
@@ -1103,8 +1088,7 @@ mef-global profiles ingress-bwp-flows bwp-flow low1-bwp-uni
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles ingress-bwp-flows bwp-flow low2-bwp-uni
- user-label       low2-bwp-uni
+mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set low2-bwp-uni
  cir              400000
  cbs              9000
  eir              10000
@@ -1113,8 +1097,7 @@ mef-global profiles ingress-bwp-flows bwp-flow low2-bwp-uni
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles ingress-bwp-flows bwp-flow low3-bwp-uni
- user-label       low3-bwp-uni
+mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set low3-bwp-uni
  cir              5000
  cir-max          20000
  cbs              12800
@@ -1125,8 +1108,7 @@ mef-global profiles ingress-bwp-flows bwp-flow low3-bwp-uni
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles ingress-bwp-flows bwp-flow medium1-bwp-uni
- user-label       medium1-bwp-uni
+mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set medium1-bwp-uni
  cir              14000
  cir-max          20000
  cbs              32000
@@ -1137,8 +1119,7 @@ mef-global profiles ingress-bwp-flows bwp-flow medium1-bwp-uni
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles ingress-bwp-flows bwp-flow medium2-bwp-uni
- user-label       medium2-bwp-uni
+mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set medium2-bwp-uni
  cir              2000000
  cbs              10000
  eir              10000
@@ -1147,8 +1128,7 @@ mef-global profiles ingress-bwp-flows bwp-flow medium2-bwp-uni
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles ingress-bwp-flows bwp-flow medium3-bwp-uni
- user-label       medium3-bwp-uni
+mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set medium3-bwp-uni
  cir              14000
  cir-max          20000
  cbs              32000
@@ -1159,8 +1139,7 @@ mef-global profiles ingress-bwp-flows bwp-flow medium3-bwp-uni
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles egress-bwp-flows bwp-flow EGRESS_BWP_100mbps
- user-label       egress-bwp100
+mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set EGRESS_BWP_100mbps
  cir              100000
  cir-max          20000
  cbs              12800
@@ -1171,8 +1150,7 @@ mef-global profiles egress-bwp-flows bwp-flow EGRESS_BWP_100mbps
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles egress-bwp-flows bwp-flow EGRESS_BWP_200kbps
- user-label       egress-bwp200k
+mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set EGRESS_BWP_200kbps
  cir              200
  cir-max          4000
  cbs              32000
@@ -1183,8 +1161,7 @@ mef-global profiles egress-bwp-flows bwp-flow EGRESS_BWP_200kbps
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles egress-bwp-flows bwp-flow EGRESS_BWP_2mbps
- user-label       egress-bwp2
+mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set EGRESS_BWP_2mbps
  cir              2000
  cir-max          4000
  cbs              32000
@@ -1195,8 +1172,7 @@ mef-global profiles egress-bwp-flows bwp-flow EGRESS_BWP_2mbps
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles egress-bwp-flows bwp-flow EGRESS_BWP_70mbps
- user-label       egress-bwp70
+mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set EGRESS_BWP_70mbps
  cir              70000
  cir-max          20000
  cbs              12800
@@ -1207,8 +1183,7 @@ mef-global profiles egress-bwp-flows bwp-flow EGRESS_BWP_70mbps
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles egress-bwp-flows bwp-flow EGRESS_BWP_800kbps
- user-label       egress-bwp800k
+mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set EGRESS_BWP_800kbps
  cir              800
  cir-max          4000
  cbs              32000
@@ -1219,8 +1194,7 @@ mef-global profiles egress-bwp-flows bwp-flow EGRESS_BWP_800kbps
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles egress-bwp-flows bwp-flow chicago-bwp-evc
- user-label       chicago-bwp-evc
+mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set chicago-bwp-evc
  cir              400000
  cbs              9000
  eir              10000
@@ -1229,8 +1203,7 @@ mef-global profiles egress-bwp-flows bwp-flow chicago-bwp-evc
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles egress-bwp-flows bwp-flow chicago-bwp-uni
- user-label       chicago-bwp-uni
+mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set chicago-bwp-uni
  cir              10000000
  cbs              12000
  eir              10000
@@ -1239,8 +1212,7 @@ mef-global profiles egress-bwp-flows bwp-flow chicago-bwp-uni
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles egress-bwp-flows bwp-flow denver-bwp-evc
- user-label       denver-bwp-evc
+mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set denver-bwp-evc
  cir              400000
  cbs              9000
  eir              10000
@@ -1249,8 +1221,7 @@ mef-global profiles egress-bwp-flows bwp-flow denver-bwp-evc
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles egress-bwp-flows bwp-flow denver-bwp-uni
- user-label       denver-bwp-uni
+mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set denver-bwp-uni
  cir              2000000
  cbs              10000
  eir              10000
@@ -1259,8 +1230,7 @@ mef-global profiles egress-bwp-flows bwp-flow denver-bwp-uni
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles egress-bwp-flows bwp-flow etest-bwp1
- user-label       etest-bwp1
+mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set etest-bwp1
  cir              5000
  cir-max          20000
  cbs              12800
@@ -1271,8 +1241,7 @@ mef-global profiles egress-bwp-flows bwp-flow etest-bwp1
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles egress-bwp-flows bwp-flow etest-bwp2
- user-label       etest-bwp2
+mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set etest-bwp2
  cir              14000
  cir-max          20000
  cbs              32000
@@ -1283,8 +1252,7 @@ mef-global profiles egress-bwp-flows bwp-flow etest-bwp2
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles egress-bwp-flows bwp-flow high1-bwp-uni
- user-label       high1-bwp-uni
+mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set high1-bwp-uni
  cir              20000
  cir-max          20000
  cbs              64000
@@ -1295,8 +1263,7 @@ mef-global profiles egress-bwp-flows bwp-flow high1-bwp-uni
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles egress-bwp-flows bwp-flow high2-bwp-uni
- user-label       high2-bwp-uni
+mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set high2-bwp-uni
  cir              10000000
  cbs              12000
  eir              0
@@ -1305,8 +1272,7 @@ mef-global profiles egress-bwp-flows bwp-flow high2-bwp-uni
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles egress-bwp-flows bwp-flow high3-bwp-uni
- user-label       high3-bwp-uni
+mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set high3-bwp-uni
  cir              20000
  cir-max          20000
  cbs              64000
@@ -1317,9 +1283,8 @@ mef-global profiles egress-bwp-flows bwp-flow high3-bwp-uni
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles egress-bwp-flows bwp-flow low1-bwp-uni
+mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set low1-bwp-uni
  /* Global Egress Bandwidth Profiles are Ordered-By User */
- user-label       low1-bwp-uni
  cir              5000
  cir-max          20000
  cbs              12800
@@ -1330,8 +1295,7 @@ mef-global profiles egress-bwp-flows bwp-flow low1-bwp-uni
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles egress-bwp-flows bwp-flow low2-bwp-uni
- user-label       low2-bwp-evc
+mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set low2-bwp-uni
  cir              400000
  cbs              9000
  eir              10000
@@ -1340,8 +1304,7 @@ mef-global profiles egress-bwp-flows bwp-flow low2-bwp-uni
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles egress-bwp-flows bwp-flow low3-bwp-uni
- user-label       low3-bwp-uni
+mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set low3-bwp-uni
  cir              5000
  cir-max          20000
  cbs              12800
@@ -1352,8 +1315,7 @@ mef-global profiles egress-bwp-flows bwp-flow low3-bwp-uni
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles egress-bwp-flows bwp-flow medium1-bwp-uni
- user-label       medium1-bwp-uni
+mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set medium1-bwp-uni
  cir              14000
  cir-max          20000
  cbs              32000
@@ -1364,8 +1326,7 @@ mef-global profiles egress-bwp-flows bwp-flow medium1-bwp-uni
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles egress-bwp-flows bwp-flow medium2-bwp-uni
- user-label       medium2-bwp-uni
+mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set medium2-bwp-uni
  cir              2000000
  cbs              10000
  eir              10000
@@ -1374,8 +1335,7 @@ mef-global profiles egress-bwp-flows bwp-flow medium2-bwp-uni
  color-mode       color-blind
  coupling-flag    false
 !
-mef-global profiles egress-bwp-flows bwp-flow medium3-bwp-uni
- user-label       medium3-bwp-uni
+mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set medium3-bwp-uni
  cir              14000
  cir-max          20000
  cbs              32000

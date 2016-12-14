@@ -2,10 +2,10 @@
 "data": {
  "mef-global:mef-global": {
     "profiles": {
-    	"ingress-bwp-flows": {
-            "bwp-flow": [
+    	"ingress-bwp-flows-parameter-set": {
+            "bwp-flow-parameter-set": [
               {
-                "bw-profile": "chicago-bwp-evc",
+                "bwp-flow-parameter-set-id": "chicago-bwp-evc",
                 "cir": 400700,
                 "cbs": 9070,
                 "eir": 10700,
