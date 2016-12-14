@@ -32,7 +32,7 @@
     	        "ingress-envelopes": {
     	          "envelope": [
     	            {
-    	              "env-id": "ienv_EVPL_UNI003_56789",
+    	              "envelope-id": "ienv_EVPL_UNI003_56789",
     	              "bwp-flows": {
     	                "bwp-flow": [
     	                  {
@@ -43,7 +43,7 @@
     	              "coupling-enabled": false
     	            },
     	            {
-    	              "env-id": "ienv_EVPL_UNI003_56790",
+    	              "envelope-id": "ienv_EVPL_UNI003_56790",
     	              "bwp-flows": {
     	                "bwp-flow": [
     	                  {
@@ -54,7 +54,7 @@
     	              "coupling-enabled": false
     	            },
     	            {
-    	              "env-id": "ienv_EVPL_UNI003_56799",
+    	              "envelope-id": "ienv_EVPL_UNI003_56799",
     	              "bwp-flows": {
     	                "bwp-flow": [
     	                  {
@@ -69,7 +69,7 @@
     	        "egress-envelopes": {
     	          "envelope": [
     	            {
-    	              "env-id": "eenv_EVPL_UNI003_56789",
+    	              "envelope-id": "eenv_EVPL_UNI003_56789",
     	              "bwp-flows": {
     	                "bwp-flow": [
     	                  {
@@ -80,7 +80,7 @@
     	              "coupling-enabled": false
     	            },
     	            {
-    	              "env-id": "eenv_EVPL_UNI003_56790",
+    	              "envelope-id": "eenv_EVPL_UNI003_56790",
     	              "bwp-flows": {
     	                "bwp-flow": [
     	                  {
@@ -91,7 +91,7 @@
     	              "coupling-enabled": false
     	            },
     	            {
-    	              "env-id": "eenv_EVPL_UNI003_56799",
+    	              "envelope-id": "eenv_EVPL_UNI003_56799",
     	              "bwp-flows": {
     	                "bwp-flow": [
     	                  {
@@ -141,7 +141,7 @@
         	    "ingress-envelopes": {
         	      "envelope": [
         	        {
-        	          "env-id": "ienv_EVPL_UNI113_56789",
+        	          "envelope-id": "ienv_EVPL_UNI113_56789",
         	          "bwp-flows": {
         	            "bwp-flow": [
         	              {
@@ -152,7 +152,7 @@
         	          "coupling-enabled": false
         	        },
         	        {
-        	          "env-id": "ienv_EVPL_UNI113_56790",
+        	          "envelope-id": "ienv_EVPL_UNI113_56790",
         	          "bwp-flows": {
         	            "bwp-flow": [
         	              {
@@ -163,7 +163,7 @@
         	          "coupling-enabled": false
         	        },
         	        {
-        	          "env-id": "ienv_EVPL_UNI113_56799",
+        	          "envelope-id": "ienv_EVPL_UNI113_56799",
         	          "bwp-flows": {
         	            "bwp-flow": [
         	              {
@@ -178,7 +178,7 @@
         	    "egress-envelopes": {
         	      "envelope": [
         	        {
-        	          "env-id": "eenv_EVPL_UNI113_56789",
+        	          "envelope-id": "eenv_EVPL_UNI113_56789",
         	          "bwp-flows": {
         	            "bwp-flow": [
         	              {
@@ -189,7 +189,7 @@
         	          "coupling-enabled": false
         	        },
         	        {
-        	          "env-id": "eenv_EVPL_UNI113_56790",
+        	          "envelope-id": "eenv_EVPL_UNI113_56790",
         	          "bwp-flows": {
         	            "bwp-flow": [
         	              {
@@ -200,7 +200,7 @@
         	          "coupling-enabled": false
         	        },
         	        {
-        	          "env-id": "eenv_EVPL_UNI113_56799",
+        	          "envelope-id": "eenv_EVPL_UNI113_56799",
         	          "bwp-flows": {
         	            "bwp-flow": [
         	              {
@@ -249,7 +249,7 @@
         	    "ingress-envelopes": {
         	      "envelope": [
         	        {
-        	          "env-id": "ienv_EVPL_UNI223_56789",
+        	          "envelope-id": "ienv_EVPL_UNI223_56789",
         	          "bwp-flows": {
         	            "bwp-flow": [
         	              {
@@ -260,7 +260,7 @@
         	          "coupling-enabled": false
         	        },
         	        {
-        	          "env-id": "ienv_EVPL_UNI223_56790",
+        	          "envelope-id": "ienv_EVPL_UNI223_56790",
         	          "bwp-flows": {
         	            "bwp-flow": [
         	              {
@@ -271,7 +271,7 @@
         	          "coupling-enabled": false
         	        },
         	        {
-        	          "env-id": "ienv_EVPL_UNI223_56799",
+        	          "envelope-id": "ienv_EVPL_UNI223_56799",
         	          "bwp-flows": {
         	            "bwp-flow": [
         	              {
@@ -286,7 +286,7 @@
         	    "egress-envelopes": {
         	      "envelope": [
         	        {
-        	          "env-id": "eenv_EVPL_UNI223_56789",
+        	          "envelope-id": "eenv_EVPL_UNI223_56789",
         	          "bwp-flows": {
         	            "bwp-flow": [
         	              {
@@ -297,7 +297,7 @@
         	          "coupling-enabled": false
         	        },
         	        {
-        	          "env-id": "eenv_EVPL_UNI223_56790",
+        	          "envelope-id": "eenv_EVPL_UNI223_56790",
         	          "bwp-flows": {
         	            "bwp-flow": [
         	              {
@@ -308,7 +308,7 @@
         	          "coupling-enabled": false
         	        },
         	        {
-        	          "env-id": "eenv_EVPL_UNI223_56799",
+        	          "envelope-id": "eenv_EVPL_UNI223_56799",
         	          "bwp-flows": {
         	            "bwp-flow": [
         	              {

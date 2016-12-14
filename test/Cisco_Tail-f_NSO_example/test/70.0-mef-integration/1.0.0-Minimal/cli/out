@@ -2707,15 +2707,16 @@ mef-interfaces unis uni MMPOP1-ce0-Slot0-Port3
   !
   coupling-enabled false
  !
+ admin-state                  false
  /* EVPL Use Case 1: */
- admin-state                             false
- service-multiplexing-enabled            true
- untagged-and-priority-tagged-ce-vlan-id 22
- max-num-of-evcs                         2
- elmi-enabled                            true
- elmi-profile                            elmi-test2
- l2cp-address-set                        cta
- l2cp-peering                            L2CP_Peering_Profile1
+ max-svc-frame-size           1600
+ service-multiplexing-enabled true
+ default-ce-vlan-id           22
+ max-num-of-evcs              2
+ elmi-enabled                 true
+ elmi-profile                 elmi-test2
+ l2cp-address-set             cta
+ l2cp-peering                 L2CP_Peering_Profile1
 !
 mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1
  physical-layers links link ce1 GigabitEthernet0/1
@@ -2784,12 +2785,13 @@ mef-interfaces unis uni MMPOP1-ce1-Slot1-Port3
   !
   coupling-enabled false
  !
- admin-state                             false
- service-multiplexing-enabled            true
- untagged-and-priority-tagged-ce-vlan-id 17
- max-num-of-evcs                         1
- l2cp-address-set                        cta
- l2cp-peering                            L2CP_Peering_Profile1
+ admin-state                  false
+ max-svc-frame-size           1600
+ service-multiplexing-enabled true
+ default-ce-vlan-id           17
+ max-num-of-evcs              1
+ l2cp-address-set             cta
+ l2cp-peering                 L2CP_Peering_Profile1
 !
 mef-interfaces unis uni MMPOP1-ce2-Slot0-Port3
  physical-layers links link ce2 GigabitEthernet0/3
@@ -2891,12 +2893,13 @@ mef-interfaces unis uni MMPOP1-ce2-Slot2-Port3
   !
   coupling-enabled false
  !
- admin-state                             false
- service-multiplexing-enabled            false
- untagged-and-priority-tagged-ce-vlan-id 1
- max-num-of-evcs                         1
- l2cp-address-set                        cta
- l2cp-peering                            L2CP_Peering_Profile1
+ admin-state                  false
+ max-svc-frame-size           1600
+ service-multiplexing-enabled false
+ default-ce-vlan-id           1
+ max-num-of-evcs              1
+ l2cp-address-set             cta
+ l2cp-peering                 L2CP_Peering_Profile1
 !
 mef-interfaces unis uni MMPOP1-ce3-Slot3-Port3
  physical-layers links link ce3 GigabitEthernet0/3
@@ -2936,8 +2939,9 @@ mef-interfaces unis uni MMPOP1-ce5-Slot5-Port1
  !
  ce-vlans ce-vlan 1
  !
- /* EP-LAN Use Case 1: */
  admin-state                 false
+ /* EP-LAN Use Case 1: */
+ max-svc-frame-size          1600
  all-to-one-bundling-enabled true
  max-num-of-evcs             1
  ingress-bw-profile-per-uni  medium1-bwp-uni
@@ -3016,16 +3020,16 @@ mef-interfaces unis uni MMPOP1-ce5-Slot5-Port3
   coupling-enabled false
  !
  /* EVP-LAN Use Case 1: */
- admin-state                             false
- max-svc-frame-size                      1600
- service-multiplexing-enabled            true
- bundling-enabled                        true
- untagged-and-priority-tagged-ce-vlan-id 53
- max-num-of-evcs                         1
- elmi-enabled                            true
- elmi-profile                            elmi-test2
- l2cp-address-set                        cta
- l2cp-peering                            L2CP_Peering_Profile1
+ admin-state                  false
+ max-svc-frame-size           1600
+ service-multiplexing-enabled true
+ bundling-enabled             true
+ default-ce-vlan-id           53
+ max-num-of-evcs              1
+ elmi-enabled                 true
+ elmi-profile                 elmi-test2
+ l2cp-address-set             cta
+ l2cp-peering                 L2CP_Peering_Profile1
 !
 mef-interfaces unis uni MMPOP1-ce5-Slot5-Port4
  physical-layers links link ce5 GigabitEthernet0/4
@@ -3033,18 +3037,17 @@ mef-interfaces unis uni MMPOP1-ce5-Slot5-Port4
  !
  ce-vlans ce-vlan 153
  !
- /* EVP-TREE Use Case 1: Note untagged-and-priority-tagged-ce-vlan-id vids */
- /* dont go into the map if they are not mapped to an EVC so I have set them */
- /* randomly */
- admin-state                             false
- max-svc-frame-size                      1600
- service-multiplexing-enabled            true
- untagged-and-priority-tagged-ce-vlan-id 153
- max-num-of-evcs                         1
- elmi-enabled                            false
- elmi-profile                            elmi-test1
- l2cp-address-set                        cta
- l2cp-peering                            L2CP_Peering_Profile1
+ /* EVP-TREE Use Case 1: Note default-ce-vlan-id vids dont go into the map */
+ /* if they are not mapped to an EVC so I have set them randomly */
+ admin-state                  false
+ max-svc-frame-size           1600
+ service-multiplexing-enabled true
+ default-ce-vlan-id           153
+ max-num-of-evcs              1
+ elmi-enabled                 false
+ elmi-profile                 elmi-test1
+ l2cp-address-set             cta
+ l2cp-peering                 L2CP_Peering_Profile1
 !
 mef-interfaces unis uni MMPOP1-ce6-Slot6-Port1
  physical-layers links link ce6 GigabitEthernet0/1
@@ -3053,6 +3056,7 @@ mef-interfaces unis uni MMPOP1-ce6-Slot6-Port1
  ce-vlans ce-vlan 1
  !
  admin-state                 false
+ max-svc-frame-size          1600
  all-to-one-bundling-enabled true
  max-num-of-evcs             1
  ingress-bw-profile-per-uni  low1-bwp-uni
@@ -3127,14 +3131,14 @@ mef-interfaces unis uni MMPOP1-ce6-Slot6-Port3
   !
   coupling-enabled false
  !
- admin-state                             false
- max-svc-frame-size                      1600
- service-multiplexing-enabled            true
- bundling-enabled                        true
- untagged-and-priority-tagged-ce-vlan-id 1053
- max-num-of-evcs                         2
- l2cp-address-set                        cta
- l2cp-peering                            L2CP_Peering_Profile1
+ admin-state                  false
+ max-svc-frame-size           1600
+ service-multiplexing-enabled true
+ bundling-enabled             true
+ default-ce-vlan-id           1053
+ max-num-of-evcs              2
+ l2cp-address-set             cta
+ l2cp-peering                 L2CP_Peering_Profile1
 !
 mef-interfaces unis uni MMPOP1-ce7-Slot7-Port1
  physical-layers links link ce7 GigabitEthernet0/1
@@ -3143,6 +3147,7 @@ mef-interfaces unis uni MMPOP1-ce7-Slot7-Port1
  ce-vlans ce-vlan 1
  !
  admin-state                 false
+ max-svc-frame-size          1600
  all-to-one-bundling-enabled true
  max-num-of-evcs             1
  ingress-bw-profile-per-uni  high1-bwp-uni
@@ -3217,14 +3222,14 @@ mef-interfaces unis uni MMPOP1-ce7-Slot7-Port3
   !
   coupling-enabled false
  !
- admin-state                             false
- max-svc-frame-size                      1600
- service-multiplexing-enabled            true
- bundling-enabled                        true
- untagged-and-priority-tagged-ce-vlan-id 1503
- max-num-of-evcs                         2
- l2cp-address-set                        cta
- l2cp-peering                            L2CP_Peering_Profile1
+ admin-state                  false
+ max-svc-frame-size           1600
+ service-multiplexing-enabled true
+ bundling-enabled             true
+ default-ce-vlan-id           1503
+ max-num-of-evcs              2
+ l2cp-address-set             cta
+ l2cp-peering                 L2CP_Peering_Profile1
 !
 mef-interfaces unis uni MMPOP1-ce8-Slot8-Port2
  physical-layers links link ce8 GigabitEthernet0/2
@@ -3293,14 +3298,14 @@ mef-interfaces unis uni MMPOP1-ce8-Slot8-Port3
   !
   coupling-enabled false
  !
- admin-state                             false
- max-svc-frame-size                      1600
- service-multiplexing-enabled            true
- bundling-enabled                        true
- untagged-and-priority-tagged-ce-vlan-id 1530
- max-num-of-evcs                         2
- l2cp-address-set                        cta
- l2cp-peering                            L2CP_Peering_Profile1
+ admin-state                  false
+ max-svc-frame-size           1600
+ service-multiplexing-enabled true
+ bundling-enabled             true
+ default-ce-vlan-id           1530
+ max-num-of-evcs              2
+ l2cp-address-set             cta
+ l2cp-peering                 L2CP_Peering_Profile1
 !
 mef-services mef-service EVC-0001343-ACME-MEGAMART
  end-points end-point MMPOP1-ce0-Slot0-Port3

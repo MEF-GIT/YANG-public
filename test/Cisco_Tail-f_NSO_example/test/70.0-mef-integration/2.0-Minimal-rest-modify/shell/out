@@ -3709,7 +3709,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "ingress-envelopes": {
             "envelope": [
               {
-                "env-id": "U3_EPL2_High1",
+                "envelope-id": "U3_EPL2_High1",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -3719,7 +3719,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 }
               },
               {
-                "env-id": "U3_EPL2_High2",
+                "envelope-id": "U3_EPL2_High2",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -3730,7 +3730,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 }
               },
               {
-                "env-id": "U3_EPL2_Low1",
+                "envelope-id": "U3_EPL2_Low1",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -3740,7 +3740,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 }
               },
               {
-                "env-id": "U3_EPL2_Low2",
+                "envelope-id": "U3_EPL2_Low2",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -3750,7 +3750,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 }
               },
               {
-                "env-id": "U3_EPL2_Medium1",
+                "envelope-id": "U3_EPL2_Medium1",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -3760,7 +3760,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 }
               },
               {
-                "env-id": "U3_EPL2_Medium2",
+                "envelope-id": "U3_EPL2_Medium2",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -3774,7 +3774,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "egress-envelopes": {
             "envelope": [
               {
-                "env-id": "eMM_EPL2",
+                "envelope-id": "eMM_EPL2",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -3923,7 +3923,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "ingress-envelopes": {
             "envelope": [
               {
-                "env-id": "ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART",
+                "envelope-id": "ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -3934,7 +3934,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART",
+                "envelope-id": "ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -3945,7 +3945,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART",
+                "envelope-id": "ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -3960,7 +3960,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "egress-envelopes": {
             "envelope": [
               {
-                "env-id": "eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART",
+                "envelope-id": "eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -3971,7 +3971,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART",
+                "envelope-id": "eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -3982,7 +3982,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART",
+                "envelope-id": "eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -3995,10 +3995,10 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "admin-state": false,
-          "@admin-state": {"annotation": "EVPL Use Case 1:"},
           "max-svc-frame-size": 1670,
+          "@max-svc-frame-size": {"annotation": "EVPL Use Case 1:"},
           "service-multiplexing-enabled": true,
-          "untagged-and-priority-tagged-ce-vlan-id": 22,
+          "default-ce-vlan-id": 22,
           "max-num-of-evcs": 2,
           "elmi-enabled": true,
           "elmi-profile": "elmi-test2",
@@ -4086,7 +4086,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "ingress-envelopes": {
             "envelope": [
               {
-                "env-id": "ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART",
+                "envelope-id": "ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4097,7 +4097,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART",
+                "envelope-id": "ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4108,7 +4108,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "ienv_EVPL_UNI113_EVC-0001900-ACME-MEGAMART",
+                "envelope-id": "ienv_EVPL_UNI113_EVC-0001900-ACME-MEGAMART",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4123,7 +4123,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "egress-envelopes": {
             "envelope": [
               {
-                "env-id": "eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART",
+                "envelope-id": "eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4134,7 +4134,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART",
+                "envelope-id": "eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4145,7 +4145,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "eenv_EVPL_UNI113_EVC-0001900-ACME-MEGAMART",
+                "envelope-id": "eenv_EVPL_UNI113_EVC-0001900-ACME-MEGAMART",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4160,7 +4160,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "admin-state": false,
           "max-svc-frame-size": 1679,
           "service-multiplexing-enabled": true,
-          "untagged-and-priority-tagged-ce-vlan-id": 17,
+          "default-ce-vlan-id": 17,
           "max-num-of-evcs": 1,
           "l2cp-address-set": "cta",
           "l2cp-peering": "L2CP_Peering_Profile1"
@@ -4219,7 +4219,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "ingress-envelopes": {
             "envelope": [
               {
-                "env-id": "MM_EPL_High",
+                "envelope-id": "MM_EPL_High",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4229,7 +4229,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 }
               },
               {
-                "env-id": "MM_EPL_Low",
+                "envelope-id": "MM_EPL_Low",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4239,7 +4239,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 }
               },
               {
-                "env-id": "MM_EPL_Medium",
+                "envelope-id": "MM_EPL_Medium",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4253,7 +4253,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "egress-envelopes": {
             "envelope": [
               {
-                "env-id": "eMM_EPL_High",
+                "envelope-id": "eMM_EPL_High",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4263,7 +4263,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 }
               },
               {
-                "env-id": "eMM_EPL_Low",
+                "envelope-id": "eMM_EPL_Low",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4273,7 +4273,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 }
               },
               {
-                "env-id": "eMM_EPL_Medium",
+                "envelope-id": "eMM_EPL_Medium",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4332,7 +4332,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "ingress-envelopes": {
             "envelope": [
               {
-                "env-id": "ienv_EVPL_UNI223_EVC-0001343-ACME-MEGAMART",
+                "envelope-id": "ienv_EVPL_UNI223_EVC-0001343-ACME-MEGAMART",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4343,7 +4343,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "ienv_EVPL_UNI223_EVC-0001899-ACME-MEGAMART",
+                "envelope-id": "ienv_EVPL_UNI223_EVC-0001899-ACME-MEGAMART",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4354,7 +4354,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART",
+                "envelope-id": "ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4369,7 +4369,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "egress-envelopes": {
             "envelope": [
               {
-                "env-id": "eenv_EVPL_UNI223_EVC-0001343-ACME-MEGAMART",
+                "envelope-id": "eenv_EVPL_UNI223_EVC-0001343-ACME-MEGAMART",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4380,7 +4380,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "eenv_EVPL_UNI223_EVC-0001899-ACME-MEGAMART",
+                "envelope-id": "eenv_EVPL_UNI223_EVC-0001899-ACME-MEGAMART",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4391,7 +4391,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART",
+                "envelope-id": "eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4406,7 +4406,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "admin-state": false,
           "max-svc-frame-size": 1679,
           "service-multiplexing-enabled": false,
-          "untagged-and-priority-tagged-ce-vlan-id": 1,
+          "default-ce-vlan-id": 1,
           "max-num-of-evcs": 1,
           "l2cp-address-set": "cta",
           "l2cp-peering": "L2CP_Peering_Profile1"
@@ -4500,8 +4500,8 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "admin-state": false,
-          "@admin-state": {"annotation": "EP-LAN Use Case 1:"},
           "max-svc-frame-size": 1670,
+          "@max-svc-frame-size": {"annotation": "EP-LAN Use Case 1:"},
           "all-to-one-bundling-enabled": true,
           "max-num-of-evcs": 1,
           "ingress-bw-profile-per-uni": "medium1-bwp-uni",
@@ -4534,7 +4534,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "ingress-envelopes": {
             "envelope": [
               {
-                "env-id": "ienv_EPTREE_UNI552_EVC-0001911_Krypton",
+                "envelope-id": "ienv_EPTREE_UNI552_EVC-0001911_Krypton",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4549,7 +4549,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "egress-envelopes": {
             "envelope": [
               {
-                "env-id": "eenv_EPTREE_UNI552_EVC-0001911_Sophomore",
+                "envelope-id": "eenv_EPTREE_UNI552_EVC-0001911_Sophomore",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4604,7 +4604,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "ingress-envelopes": {
             "envelope": [
               {
-                "env-id": "ienv_EVPLAN_UNI553_EVC-0001944_Argon",
+                "envelope-id": "ienv_EVPLAN_UNI553_EVC-0001944_Argon",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4615,7 +4615,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "ienv_EVPLAN_UNI553_EVC-0001944_Krypton",
+                "envelope-id": "ienv_EVPLAN_UNI553_EVC-0001944_Krypton",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4626,7 +4626,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "ienv_EVPLAN_UNI553_EVC-0001944_Neon",
+                "envelope-id": "ienv_EVPLAN_UNI553_EVC-0001944_Neon",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4641,7 +4641,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "egress-envelopes": {
             "envelope": [
               {
-                "env-id": "eenv_EVPLAN_UNI553_EVC-0001944_Argon",
+                "envelope-id": "eenv_EVPLAN_UNI553_EVC-0001944_Argon",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4652,7 +4652,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "eenv_EVPLAN_UNI553_EVC-0001944_Krypton",
+                "envelope-id": "eenv_EVPLAN_UNI553_EVC-0001944_Krypton",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4663,7 +4663,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "eenv_EVPLAN_UNI553_EVC-0001944_Neon",
+                "envelope-id": "eenv_EVPLAN_UNI553_EVC-0001944_Neon",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4680,7 +4680,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "max-svc-frame-size": 1670,
           "service-multiplexing-enabled": true,
           "bundling-enabled": true,
-          "untagged-and-priority-tagged-ce-vlan-id": 53,
+          "default-ce-vlan-id": 53,
           "max-num-of-evcs": 1,
           "elmi-enabled": true,
           "elmi-profile": "elmi-test2",
@@ -4708,10 +4708,10 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "admin-state": false,
-          "@admin-state": {"annotation": "EVP-TREE Use Case 1: Note untagged-and-priority-tagged-ce-vlan-id vids dont go into the map if they are not mapped to an EVC so I have set them randomly"},
+          "@admin-state": {"annotation": "EVP-TREE Use Case 1: Note default-ce-vlan-id vids dont go into the map if they are not mapped to an EVC so I have set them randomly"},
           "max-svc-frame-size": 1670,
           "service-multiplexing-enabled": true,
-          "untagged-and-priority-tagged-ce-vlan-id": 153,
+          "default-ce-vlan-id": 153,
           "max-num-of-evcs": 1,
           "elmi-enabled": false,
           "elmi-profile": "elmi-test1",
@@ -4770,7 +4770,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "ingress-envelopes": {
             "envelope": [
               {
-                "env-id": "ienv_EPTREE_UNI662_EVC-0001911_Krypton",
+                "envelope-id": "ienv_EPTREE_UNI662_EVC-0001911_Krypton",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4785,7 +4785,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "egress-envelopes": {
             "envelope": [
               {
-                "env-id": "eenv_EPTREE_UNI662_EVC-0001911_Sophomore",
+                "envelope-id": "eenv_EPTREE_UNI662_EVC-0001911_Sophomore",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4840,7 +4840,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "ingress-envelopes": {
             "envelope": [
               {
-                "env-id": "ienv_EVPLAN_UNI663_EVC-0001944_Argon",
+                "envelope-id": "ienv_EVPLAN_UNI663_EVC-0001944_Argon",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4851,7 +4851,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "ienv_EVPLAN_UNI663_EVC-0001944_Krypton",
+                "envelope-id": "ienv_EVPLAN_UNI663_EVC-0001944_Krypton",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4862,7 +4862,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "ienv_EVPLAN_UNI663_EVC-0001944_Neon",
+                "envelope-id": "ienv_EVPLAN_UNI663_EVC-0001944_Neon",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4877,7 +4877,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "egress-envelopes": {
             "envelope": [
               {
-                "env-id": "eenv_EVPLAN_UNI663_EVC-0001944_Argon",
+                "envelope-id": "eenv_EVPLAN_UNI663_EVC-0001944_Argon",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4888,7 +4888,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "eenv_EVPLAN_UNI663_EVC-0001944_Krypton",
+                "envelope-id": "eenv_EVPLAN_UNI663_EVC-0001944_Krypton",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4899,7 +4899,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "eenv_EVPLAN_UNI663_EVC-0001944_Neon",
+                "envelope-id": "eenv_EVPLAN_UNI663_EVC-0001944_Neon",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4915,7 +4915,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "max-svc-frame-size": 1679,
           "service-multiplexing-enabled": true,
           "bundling-enabled": true,
-          "untagged-and-priority-tagged-ce-vlan-id": 1053,
+          "default-ce-vlan-id": 1053,
           "max-num-of-evcs": 2,
           "l2cp-address-set": "cta",
           "l2cp-peering": "L2CP_Peering_Profile1"
@@ -4972,7 +4972,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "ingress-envelopes": {
             "envelope": [
               {
-                "env-id": "ienv_EPTREE_UNI772_EVC-0001911_Krypton",
+                "envelope-id": "ienv_EPTREE_UNI772_EVC-0001911_Krypton",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -4987,7 +4987,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "egress-envelopes": {
             "envelope": [
               {
-                "env-id": "eenv_EPTREE_UNI772_EVC-0001911_Sophomore",
+                "envelope-id": "eenv_EPTREE_UNI772_EVC-0001911_Sophomore",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -5042,7 +5042,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "ingress-envelopes": {
             "envelope": [
               {
-                "env-id": "ienv_EVPLAN_UNI773_EVC-0001944_Argon",
+                "envelope-id": "ienv_EVPLAN_UNI773_EVC-0001944_Argon",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -5053,7 +5053,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "ienv_EVPLAN_UNI773_EVC-0001944_Krypton",
+                "envelope-id": "ienv_EVPLAN_UNI773_EVC-0001944_Krypton",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -5064,7 +5064,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "ienv_EVPLAN_UNI773_EVC-0001944_Neon",
+                "envelope-id": "ienv_EVPLAN_UNI773_EVC-0001944_Neon",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -5079,7 +5079,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "egress-envelopes": {
             "envelope": [
               {
-                "env-id": "eenv_EVPLAN_UNI773_EVC-0001944_Argon",
+                "envelope-id": "eenv_EVPLAN_UNI773_EVC-0001944_Argon",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -5090,7 +5090,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "eenv_EVPLAN_UNI773_EVC-0001944_Krypton",
+                "envelope-id": "eenv_EVPLAN_UNI773_EVC-0001944_Krypton",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -5101,7 +5101,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "eenv_EVPLAN_UNI773_EVC-0001944_Neon",
+                "envelope-id": "eenv_EVPLAN_UNI773_EVC-0001944_Neon",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -5117,7 +5117,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "max-svc-frame-size": 1670,
           "service-multiplexing-enabled": true,
           "bundling-enabled": true,
-          "untagged-and-priority-tagged-ce-vlan-id": 1503,
+          "default-ce-vlan-id": 1503,
           "max-num-of-evcs": 2,
           "l2cp-address-set": "cta",
           "l2cp-peering": "L2CP_Peering_Profile1"
@@ -5145,7 +5145,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "ingress-envelopes": {
             "envelope": [
               {
-                "env-id": "ienv_EPTREE_UNI882_EVC-0001911_Krypton",
+                "envelope-id": "ienv_EPTREE_UNI882_EVC-0001911_Krypton",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -5160,7 +5160,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "egress-envelopes": {
             "envelope": [
               {
-                "env-id": "eenv_EPTREE_UNI882_EVC-0001911_Sophomore",
+                "envelope-id": "eenv_EPTREE_UNI882_EVC-0001911_Sophomore",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -5215,7 +5215,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "ingress-envelopes": {
             "envelope": [
               {
-                "env-id": "ienv_EVPLAN_UNI883_EVC-0001944_Argon",
+                "envelope-id": "ienv_EVPLAN_UNI883_EVC-0001944_Argon",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -5226,7 +5226,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "ienv_EVPLAN_UNI883_EVC-0001944_Krypton",
+                "envelope-id": "ienv_EVPLAN_UNI883_EVC-0001944_Krypton",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -5237,7 +5237,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "ienv_EVPLAN_UNI883_EVC-0001944_Neon",
+                "envelope-id": "ienv_EVPLAN_UNI883_EVC-0001944_Neon",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -5252,7 +5252,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "egress-envelopes": {
             "envelope": [
               {
-                "env-id": "eenv_EVPLAN_UNI883_EVC-0001944_Argon",
+                "envelope-id": "eenv_EVPLAN_UNI883_EVC-0001944_Argon",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -5263,7 +5263,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "eenv_EVPLAN_UNI883_EVC-0001944_Krypton",
+                "envelope-id": "eenv_EVPLAN_UNI883_EVC-0001944_Krypton",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -5274,7 +5274,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 "coupling-enabled": false
               },
               {
-                "env-id": "eenv_EVPLAN_UNI883_EVC-0001944_Neon",
+                "envelope-id": "eenv_EVPLAN_UNI883_EVC-0001944_Neon",
                 "bwp-flows": {
                   "bwp-flow": [
                     {
@@ -5290,7 +5290,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "max-svc-frame-size": 1679,
           "service-multiplexing-enabled": true,
           "bundling-enabled": true,
-          "untagged-and-priority-tagged-ce-vlan-id": 1530,
+          "default-ce-vlan-id": 1530,
           "max-num-of-evcs": 2,
           "l2cp-address-set": "cta",
           "l2cp-peering": "L2CP_Peering_Profile1"

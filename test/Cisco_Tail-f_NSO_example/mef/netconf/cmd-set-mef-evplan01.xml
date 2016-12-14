@@ -44,7 +44,7 @@
         </ce-vlans>
         <ingress-envelopes>
           <envelope>
-            <env-id>ienv_EVPLAN_UNI553_13800_Argon</env-id>
+            <envelope-id>ienv_EVPLAN_UNI553_13800_Argon</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>medium1-bwp-uni</bw-profile>
@@ -53,7 +53,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>ienv_EVPLAN_UNI553_13800_Krypton</env-id>
+            <envelope-id>ienv_EVPLAN_UNI553_13800_Krypton</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>high1-bwp-uni</bw-profile>
@@ -62,7 +62,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>ienv_EVPLAN_UNI553_13800_Neon</env-id>
+            <envelope-id>ienv_EVPLAN_UNI553_13800_Neon</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>low1-bwp-uni</bw-profile>
@@ -73,7 +73,7 @@
         </ingress-envelopes>
         <egress-envelopes>
           <envelope>
-            <env-id>eenv_EVPLAN_UNI553_13800_Argon</env-id>
+            <envelope-id>eenv_EVPLAN_UNI553_13800_Argon</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>medium2-bwp-uni</bw-profile>
@@ -82,7 +82,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>eenv_EVPLAN_UNI553_13800_Krypton</env-id>
+            <envelope-id>eenv_EVPLAN_UNI553_13800_Krypton</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>high2-bwp-uni</bw-profile>
@@ -91,7 +91,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>eenv_EVPLAN_UNI553_13800_Neon</env-id>
+            <envelope-id>eenv_EVPLAN_UNI553_13800_Neon</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>low2-bwp-uni</bw-profile>
@@ -146,7 +146,7 @@
         </ce-vlans>
         <ingress-envelopes>
           <envelope>
-            <env-id>ienv_EVPLAN_UNI663_13800_Argon</env-id>
+            <envelope-id>ienv_EVPLAN_UNI663_13800_Argon</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>medium1-bwp-uni</bw-profile>
@@ -155,7 +155,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>ienv_EVPLAN_UNI663_13800_Krypton</env-id>
+            <envelope-id>ienv_EVPLAN_UNI663_13800_Krypton</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>high1-bwp-uni</bw-profile>
@@ -164,7 +164,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>ienv_EVPLAN_UNI663_13800_Neon</env-id>
+            <envelope-id>ienv_EVPLAN_UNI663_13800_Neon</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>low1-bwp-uni</bw-profile>
@@ -175,7 +175,7 @@
         </ingress-envelopes>
         <egress-envelopes>
           <envelope>
-            <env-id>eenv_EVPLAN_UNI663_13800_Argon</env-id>
+            <envelope-id>eenv_EVPLAN_UNI663_13800_Argon</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>medium2-bwp-uni</bw-profile>
@@ -184,7 +184,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>eenv_EVPLAN_UNI663_13800_Krypton</env-id>
+            <envelope-id>eenv_EVPLAN_UNI663_13800_Krypton</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>high2-bwp-uni</bw-profile>
@@ -193,7 +193,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>eenv_EVPLAN_UNI663_13800_Neon</env-id>
+            <envelope-id>eenv_EVPLAN_UNI663_13800_Neon</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>low2-bwp-uni</bw-profile>
@@ -246,7 +246,7 @@
         </ce-vlans>
         <ingress-envelopes>
           <envelope>
-            <env-id>ienv_EVPLAN_UNI773_13800_Argon</env-id>
+            <envelope-id>ienv_EVPLAN_UNI773_13800_Argon</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>medium1-bwp-uni</bw-profile>
@@ -255,7 +255,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>ienv_EVPLAN_UNI773_13800_Krypton</env-id>
+            <envelope-id>ienv_EVPLAN_UNI773_13800_Krypton</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>high1-bwp-uni</bw-profile>
@@ -264,7 +264,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>ienv_EVPLAN_UNI773_13800_Neon</env-id>
+            <envelope-id>ienv_EVPLAN_UNI773_13800_Neon</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>low1-bwp-uni</bw-profile>
@@ -275,7 +275,7 @@
         </ingress-envelopes>
         <egress-envelopes>
           <envelope>
-            <env-id>eenv_EVPLAN_UNI773_13800_Argon</env-id>
+            <envelope-id>eenv_EVPLAN_UNI773_13800_Argon</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>medium2-bwp-uni</bw-profile>
@@ -284,7 +284,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>eenv_EVPLAN_UNI773_13800_Krypton</env-id>
+            <envelope-id>eenv_EVPLAN_UNI773_13800_Krypton</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>high2-bwp-uni</bw-profile>
@@ -293,7 +293,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>eenv_EVPLAN_UNI773_13800_Neon</env-id>
+            <envelope-id>eenv_EVPLAN_UNI773_13800_Neon</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>low2-bwp-uni</bw-profile>
@@ -346,7 +346,7 @@
         </ce-vlans>
         <ingress-envelopes>
           <envelope>
-            <env-id>ienv_EVPLAN_UNI883_13800_Argon</env-id>
+            <envelope-id>ienv_EVPLAN_UNI883_13800_Argon</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>medium1-bwp-uni</bw-profile>
@@ -355,7 +355,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>ienv_EVPLAN_UNI883_13800_Krypton</env-id>
+            <envelope-id>ienv_EVPLAN_UNI883_13800_Krypton</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>high1-bwp-uni</bw-profile>
@@ -364,7 +364,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>ienv_EVPLAN_UNI883_13800_Neon</env-id>
+            <envelope-id>ienv_EVPLAN_UNI883_13800_Neon</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>low1-bwp-uni</bw-profile>
@@ -375,7 +375,7 @@
         </ingress-envelopes>
         <egress-envelopes>
           <envelope>
-            <env-id>eenv_EVPLAN_UNI883_13800_Argon</env-id>
+            <envelope-id>eenv_EVPLAN_UNI883_13800_Argon</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>medium2-bwp-uni</bw-profile>
@@ -384,7 +384,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>eenv_EVPLAN_UNI883_13800_Krypton</env-id>
+            <envelope-id>eenv_EVPLAN_UNI883_13800_Krypton</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>high2-bwp-uni</bw-profile>
@@ -393,7 +393,7 @@
             <coupling-enabled>false</coupling-enabled>
           </envelope>
           <envelope>
-            <env-id>eenv_EVPLAN_UNI883_13800_Neon</env-id>
+            <envelope-id>eenv_EVPLAN_UNI883_13800_Neon</envelope-id>
             <bwp-flows>
               <bwp-flow>
                 <bw-profile>low2-bwp-uni</bw-profile>

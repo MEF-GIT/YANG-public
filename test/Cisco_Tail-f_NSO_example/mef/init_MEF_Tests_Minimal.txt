@@ -1059,7 +1059,7 @@ commit
 top
 !
 ! EVPL Use Case 1:
-mef-interfaces unis uni MMPOP1-ce0-Slot0-Port3 admin-state false max-num-of-evcs 2 service-multiplexing-enabled true untagged-and-priority-tagged-ce-vlan-id 22 physical-layers links link ce0 GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
+mef-interfaces unis uni MMPOP1-ce0-Slot0-Port3 max-svc-frame-size 1600 admin-state false max-num-of-evcs 2 service-multiplexing-enabled true default-ce-vlan-id 22 physical-layers links link ce0 GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
 !
 mef-interfaces unis uni MMPOP1-ce0-Slot0-Port3 ce-vlans ce-vlan 22
 !
@@ -1083,7 +1083,7 @@ mef-interfaces unis uni MMPOP1-ce0-Slot0-Port3 elmi-enabled true elmi-profile el
 !
 mef-interfaces unis uni MMPOP1-ce0-Slot0-Port3 l2cp-address-set cta l2cp-peering L2CP_Peering_Profile1
 !
-mef-interfaces unis uni MMPOP1-ce1-Slot1-Port3 admin-state false max-num-of-evcs 1 service-multiplexing-enabled true untagged-and-priority-tagged-ce-vlan-id 17 physical-layers links link ce1 GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
+mef-interfaces unis uni MMPOP1-ce1-Slot1-Port3  max-svc-frame-size 1600 admin-state false max-num-of-evcs 1 service-multiplexing-enabled true default-ce-vlan-id 17 physical-layers links link ce1 GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
 !
 mef-interfaces unis uni MMPOP1-ce1-Slot1-Port3 ce-vlans ce-vlan 17
 !
@@ -1103,7 +1103,7 @@ mef-interfaces unis uni MMPOP1-ce1-Slot1-Port3 egress-envelopes envelope eenv_EV
 !
 mef-interfaces unis uni MMPOP1-ce1-Slot1-Port3 l2cp-address-set cta l2cp-peering L2CP_Peering_Profile1
 !
-mef-interfaces unis uni MMPOP1-ce2-Slot2-Port3 admin-state false max-num-of-evcs 1 service-multiplexing-enabled false untagged-and-priority-tagged-ce-vlan-id 1 physical-layers links link ce2 GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
+mef-interfaces unis uni MMPOP1-ce2-Slot2-Port3  max-svc-frame-size 1600 admin-state false max-num-of-evcs 1 service-multiplexing-enabled false default-ce-vlan-id 1 physical-layers links link ce2 GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
 !
 mef-interfaces unis uni MMPOP1-ce2-Slot2-Port3 ce-vlans ce-vlan 1
 !
@@ -1199,7 +1199,7 @@ top
 !
 
 ! EP-LAN Use Case 1:
-mef-interfaces unis uni MMPOP1-ce5-Slot5-Port1 admin-state false max-num-of-evcs 1 all-to-one-bundling-enabled true physical-layers links link ce5 GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
+mef-interfaces unis uni MMPOP1-ce5-Slot5-Port1  max-svc-frame-size 1600 admin-state false max-num-of-evcs 1 all-to-one-bundling-enabled true physical-layers links link ce5 GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
 !
 mef-interfaces unis uni MMPOP1-ce5-Slot5-Port1 ce-vlans ce-vlan 1
 !
@@ -1211,7 +1211,7 @@ mef-interfaces unis uni MMPOP1-ce5-Slot5-Port1 elmi-enabled true elmi-profile el
 !
 mef-interfaces unis uni MMPOP1-ce5-Slot5-Port1 l2cp-address-set blind-ctb l2cp-peering L2CP_Peering_Profile1
 !
-mef-interfaces unis uni MMPOP1-ce6-Slot6-Port1 admin-state false max-num-of-evcs 1 all-to-one-bundling-enabled true physical-layers links link ce6 GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
+mef-interfaces unis uni MMPOP1-ce6-Slot6-Port1  max-svc-frame-size 1600 admin-state false max-num-of-evcs 1 all-to-one-bundling-enabled true physical-layers links link ce6 GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
 !
 mef-interfaces unis uni MMPOP1-ce6-Slot6-Port1 ce-vlans ce-vlan 1
 !
@@ -1221,7 +1221,7 @@ mef-interfaces unis uni MMPOP1-ce6-Slot6-Port1 egress-bw-profile-per-uni low2-bw
 !
 mef-interfaces unis uni MMPOP1-ce6-Slot6-Port1 l2cp-address-set blind-ctb l2cp-peering L2CP_Peering_Profile1
 !
-mef-interfaces unis uni MMPOP1-ce7-Slot7-Port1 admin-state false max-num-of-evcs 1 all-to-one-bundling-enabled true physical-layers links link ce7 GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
+mef-interfaces unis uni MMPOP1-ce7-Slot7-Port1  max-svc-frame-size 1600 admin-state false max-num-of-evcs 1 all-to-one-bundling-enabled true physical-layers links link ce7 GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
 !
 mef-interfaces unis uni MMPOP1-ce7-Slot7-Port1 ce-vlans ce-vlan 1
 !
@@ -1248,7 +1248,7 @@ commit
 top
 !
 ! EVP-LAN Use Case 1:
-mef-interfaces unis uni MMPOP1-ce5-Slot5-Port3 admin-state false max-svc-frame-size 1600 max-num-of-evcs 1 service-multiplexing-enabled true bundling-enabled true untagged-and-priority-tagged-ce-vlan-id 53 physical-layers links link ce5 GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
+mef-interfaces unis uni MMPOP1-ce5-Slot5-Port3 admin-state false max-svc-frame-size 1600 max-num-of-evcs 1 service-multiplexing-enabled true bundling-enabled true default-ce-vlan-id 53 physical-layers links link ce5 GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
 !
 mef-interfaces unis uni MMPOP1-ce5-Slot5-Port3 ce-vlans ce-vlan 53
 !
@@ -1276,7 +1276,7 @@ mef-interfaces unis uni MMPOP1-ce5-Slot5-Port3 elmi-enabled true elmi-profile el
 !
 mef-interfaces unis uni MMPOP1-ce5-Slot5-Port3 l2cp-address-set cta l2cp-peering L2CP_Peering_Profile1
 !
-mef-interfaces unis uni MMPOP1-ce6-Slot6-Port3 admin-state false max-svc-frame-size 1600 max-num-of-evcs 1 service-multiplexing-enabled false bundling-enabled true untagged-and-priority-tagged-ce-vlan-id 63 physical-layers links link ce6 GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
+mef-interfaces unis uni MMPOP1-ce6-Slot6-Port3 admin-state false max-svc-frame-size 1600 max-num-of-evcs 1 service-multiplexing-enabled false bundling-enabled true default-ce-vlan-id 63 physical-layers links link ce6 GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
 !
 mef-interfaces unis uni MMPOP1-ce6-Slot6-Port3 ce-vlans ce-vlan 53
 !
@@ -1302,7 +1302,7 @@ mef-interfaces unis uni MMPOP1-ce6-Slot6-Port3 egress-envelopes envelope eenv_EV
 !
 mef-interfaces unis uni MMPOP1-ce6-Slot6-Port3 l2cp-address-set cta l2cp-peering L2CP_Peering_Profile1
 !
-mef-interfaces unis uni MMPOP1-ce7-Slot7-Port3 admin-state false max-svc-frame-size 1600 max-num-of-evcs 1 service-multiplexing-enabled true bundling-enabled true untagged-and-priority-tagged-ce-vlan-id 73 physical-layers links link ce7 GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
+mef-interfaces unis uni MMPOP1-ce7-Slot7-Port3 admin-state false max-svc-frame-size 1600 max-num-of-evcs 1 service-multiplexing-enabled true bundling-enabled true default-ce-vlan-id 73 physical-layers links link ce7 GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
 !
 mef-interfaces unis uni MMPOP1-ce7-Slot7-Port3 ce-vlans ce-vlan 53
 !
@@ -1328,7 +1328,7 @@ mef-interfaces unis uni MMPOP1-ce7-Slot7-Port3 egress-envelopes envelope eenv_EV
 !
 mef-interfaces unis uni MMPOP1-ce7-Slot7-Port3 l2cp-address-set cta l2cp-peering L2CP_Peering_Profile1
 !
-mef-interfaces unis uni MMPOP1-ce8-Slot8-Port3 admin-state false max-svc-frame-size 1600 max-num-of-evcs 1 service-multiplexing-enabled true bundling-enabled true untagged-and-priority-tagged-ce-vlan-id 83 physical-layers links link ce8 GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
+mef-interfaces unis uni MMPOP1-ce8-Slot8-Port3 admin-state false max-svc-frame-size 1600 max-num-of-evcs 1 service-multiplexing-enabled true bundling-enabled true default-ce-vlan-id 83 physical-layers links link ce8 GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
 !
 mef-interfaces unis uni MMPOP1-ce8-Slot8-Port3 ce-vlans ce-vlan 53
 !
@@ -1536,8 +1536,8 @@ commit
 !
 top
 !
-! EVP-TREE Use Case 1: Note untagged-and-priority-tagged-ce-vlan-id vids dont go into the map if they are not mapped to an EVC so I have set them randomly
-mef-interfaces unis uni MMPOP1-ce5-Slot5-Port4 admin-state false max-svc-frame-size 1600 max-num-of-evcs 1 service-multiplexing-enabled true untagged-and-priority-tagged-ce-vlan-id 153 physical-layers links link ce5 GigabitEthernet0/4 ieee8023-phy ieee8023-1000BASE-SX
+! EVP-TREE Use Case 1: Note default-ce-vlan-id vids dont go into the map if they are not mapped to an EVC so I have set them randomly
+mef-interfaces unis uni MMPOP1-ce5-Slot5-Port4 admin-state false max-svc-frame-size 1600 max-num-of-evcs 1 service-multiplexing-enabled true default-ce-vlan-id 153 physical-layers links link ce5 GigabitEthernet0/4 ieee8023-phy ieee8023-1000BASE-SX
 !
 mef-interfaces unis uni MMPOP1-ce5-Slot5-Port4 ce-vlans ce-vlan 153
 !
@@ -1545,19 +1545,19 @@ mef-interfaces unis uni MMPOP1-ce5-Slot5-Port4 elmi-enabled false elmi-profile e
 !
 mef-interfaces unis uni MMPOP1-ce5-Slot5-Port4 l2cp-address-set cta l2cp-peering L2CP_Peering_Profile1
 !
-mef-interfaces unis uni MMPOP1-ce6-Slot6-Port3 admin-state false max-svc-frame-size 1600 max-num-of-evcs 2 service-multiplexing-enabled true untagged-and-priority-tagged-ce-vlan-id 1053 physical-layers links link ce6 GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
+mef-interfaces unis uni MMPOP1-ce6-Slot6-Port3 admin-state false max-svc-frame-size 1600 max-num-of-evcs 2 service-multiplexing-enabled true default-ce-vlan-id 1053 physical-layers links link ce6 GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
 !
 mef-interfaces unis uni MMPOP1-ce6-Slot6-Port3 ce-vlans ce-vlan 153
 !
 mef-interfaces unis uni MMPOP1-ce6-Slot6-Port3 l2cp-address-set cta l2cp-peering L2CP_Peering_Profile1
 !
-mef-interfaces unis uni MMPOP1-ce7-Slot7-Port3 admin-state false max-svc-frame-size 1600 max-num-of-evcs 2 service-multiplexing-enabled true untagged-and-priority-tagged-ce-vlan-id 1503 physical-layers links link ce7 GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
+mef-interfaces unis uni MMPOP1-ce7-Slot7-Port3 admin-state false max-svc-frame-size 1600 max-num-of-evcs 2 service-multiplexing-enabled true default-ce-vlan-id 1503 physical-layers links link ce7 GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
 !
 mef-interfaces unis uni MMPOP1-ce7-Slot7-Port3 ce-vlans ce-vlan 153
 !
 mef-interfaces unis uni MMPOP1-ce7-Slot7-Port3 l2cp-address-set cta l2cp-peering L2CP_Peering_Profile1
 !
-mef-interfaces unis uni MMPOP1-ce8-Slot8-Port3 admin-state false max-svc-frame-size 1600 max-num-of-evcs 2 service-multiplexing-enabled true untagged-and-priority-tagged-ce-vlan-id 1530 physical-layers links link ce8 GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
+mef-interfaces unis uni MMPOP1-ce8-Slot8-Port3 admin-state false max-svc-frame-size 1600 max-num-of-evcs 2 service-multiplexing-enabled true default-ce-vlan-id 1530 physical-layers links link ce8 GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
 !
 mef-interfaces unis uni MMPOP1-ce8-Slot8-Port3 ce-vlans ce-vlan 153
 !

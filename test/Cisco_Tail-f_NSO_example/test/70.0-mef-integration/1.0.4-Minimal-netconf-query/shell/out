@@ -2538,7 +2538,7 @@ MEF GET Config ALLs
           </physical-layers>
           <ingress-envelopes>
             <envelope>
-              <env-id>U3_EPL2_High1</env-id>
+              <envelope-id>U3_EPL2_High1</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -2546,7 +2546,7 @@ MEF GET Config ALLs
               </bwp-flows>
             </envelope>
             <envelope>
-              <env-id>U3_EPL2_High2</env-id>
+              <envelope-id>U3_EPL2_High2</envelope-id>
               <bwp-flows>
                 <bwp-flow annotation="Next one was commented out">
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -2554,7 +2554,7 @@ MEF GET Config ALLs
               </bwp-flows>
             </envelope>
             <envelope>
-              <env-id>U3_EPL2_Low1</env-id>
+              <envelope-id>U3_EPL2_Low1</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -2562,7 +2562,7 @@ MEF GET Config ALLs
               </bwp-flows>
             </envelope>
             <envelope>
-              <env-id>U3_EPL2_Low2</env-id>
+              <envelope-id>U3_EPL2_Low2</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -2570,7 +2570,7 @@ MEF GET Config ALLs
               </bwp-flows>
             </envelope>
             <envelope>
-              <env-id>U3_EPL2_Medium1</env-id>
+              <envelope-id>U3_EPL2_Medium1</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -2578,7 +2578,7 @@ MEF GET Config ALLs
               </bwp-flows>
             </envelope>
             <envelope>
-              <env-id>U3_EPL2_Medium2</env-id>
+              <envelope-id>U3_EPL2_Medium2</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -2588,7 +2588,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eMM_EPL2</env-id>
+              <envelope-id>eMM_EPL2</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -2717,7 +2717,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -2726,7 +2726,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -2735,7 +2735,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -2746,7 +2746,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -2755,7 +2755,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -2764,7 +2764,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -2773,9 +2773,10 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
           </egress-envelopes>
-          <admin-state annotation="EVPL Use Case 1:">false</admin-state>
+          <admin-state>false</admin-state>
+          <max-svc-frame-size annotation="EVPL Use Case 1:">1600</max-svc-frame-size>
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>22</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>22</default-ce-vlan-id>
           <max-num-of-evcs>2</max-num-of-evcs>
           <elmi-enabled>true</elmi-enabled>
           <elmi-profile>elmi-test2</elmi-profile>
@@ -2852,7 +2853,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -2861,7 +2862,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -2870,7 +2871,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPL_UNI113_EVC-0001900-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI113_EVC-0001900-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -2881,7 +2882,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -2890,7 +2891,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -2899,7 +2900,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPL_UNI113_EVC-0001900-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI113_EVC-0001900-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -2909,8 +2910,9 @@ MEF GET Config ALLs
             </envelope>
           </egress-envelopes>
           <admin-state>false</admin-state>
+          <max-svc-frame-size>1600</max-svc-frame-size>
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>17</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>17</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <l2cp-address-set>cta</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
@@ -2962,7 +2964,7 @@ MEF GET Config ALLs
           </physical-layers>
           <ingress-envelopes>
             <envelope>
-              <env-id>MM_EPL_High</env-id>
+              <envelope-id>MM_EPL_High</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -2970,7 +2972,7 @@ MEF GET Config ALLs
               </bwp-flows>
             </envelope>
             <envelope>
-              <env-id>MM_EPL_Low</env-id>
+              <envelope-id>MM_EPL_Low</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -2978,7 +2980,7 @@ MEF GET Config ALLs
               </bwp-flows>
             </envelope>
             <envelope>
-              <env-id>MM_EPL_Medium</env-id>
+              <envelope-id>MM_EPL_Medium</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -2988,7 +2990,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eMM_EPL_High</env-id>
+              <envelope-id>eMM_EPL_High</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -2996,7 +2998,7 @@ MEF GET Config ALLs
               </bwp-flows>
             </envelope>
             <envelope>
-              <env-id>eMM_EPL_Low</env-id>
+              <envelope-id>eMM_EPL_Low</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -3004,7 +3006,7 @@ MEF GET Config ALLs
               </bwp-flows>
             </envelope>
             <envelope>
-              <env-id>eMM_EPL_Medium</env-id>
+              <envelope-id>eMM_EPL_Medium</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -3053,7 +3055,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPL_UNI223_EVC-0001343-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI223_EVC-0001343-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high3-bwp-uni</bw-profile>
@@ -3062,7 +3064,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPL_UNI223_EVC-0001899-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI223_EVC-0001899-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low3-bwp-uni</bw-profile>
@@ -3071,7 +3073,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium3-bwp-uni</bw-profile>
@@ -3082,7 +3084,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPL_UNI223_EVC-0001343-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI223_EVC-0001343-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high3-bwp-uni</bw-profile>
@@ -3091,7 +3093,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPL_UNI223_EVC-0001899-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI223_EVC-0001899-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low3-bwp-uni</bw-profile>
@@ -3100,7 +3102,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium3-bwp-uni</bw-profile>
@@ -3110,8 +3112,9 @@ MEF GET Config ALLs
             </envelope>
           </egress-envelopes>
           <admin-state>false</admin-state>
+          <max-svc-frame-size>1600</max-svc-frame-size>
           <service-multiplexing-enabled>false</service-multiplexing-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <l2cp-address-set>cta</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
@@ -3192,7 +3195,8 @@ MEF GET Config ALLs
               <vid>1</vid>
             </ce-vlan>
           </ce-vlans>
-          <admin-state annotation="EP-LAN Use Case 1:">false</admin-state>
+          <admin-state>false</admin-state>
+          <max-svc-frame-size annotation="EP-LAN Use Case 1:">1600</max-svc-frame-size>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
           <max-num-of-evcs>1</max-num-of-evcs>
           <ingress-bw-profile-per-uni>medium1-bwp-uni</ingress-bw-profile-per-uni>
@@ -3220,7 +3224,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EPTREE_UNI552_EVC-0001911_Krypton</env-id>
+              <envelope-id>ienv_EPTREE_UNI552_EVC-0001911_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>itest-bwp1</bw-profile>
@@ -3231,7 +3235,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EPTREE_UNI552_EVC-0001911_Sophomore</env-id>
+              <envelope-id>eenv_EPTREE_UNI552_EVC-0001911_Sophomore</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>etest-bwp1</bw-profile>
@@ -3277,7 +3281,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI553_EVC-0001944_Argon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI553_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -3286,7 +3290,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI553_EVC-0001944_Krypton</env-id>
+              <envelope-id>ienv_EVPLAN_UNI553_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -3295,7 +3299,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI553_EVC-0001944_Neon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI553_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -3306,7 +3310,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI553_EVC-0001944_Argon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI553_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -3315,7 +3319,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI553_EVC-0001944_Krypton</env-id>
+              <envelope-id>eenv_EVPLAN_UNI553_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -3324,7 +3328,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI553_EVC-0001944_Neon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI553_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -3337,7 +3341,7 @@ MEF GET Config ALLs
           <max-svc-frame-size>1600</max-svc-frame-size>
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
           <bundling-enabled>true</bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>53</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>53</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <elmi-enabled>true</elmi-enabled>
           <elmi-profile>elmi-test2</elmi-profile>
@@ -3360,10 +3364,10 @@ MEF GET Config ALLs
               <vid>153</vid>
             </ce-vlan>
           </ce-vlans>
-          <admin-state annotation="EVP-TREE Use Case 1: Note untagged-and-priority-tagged-ce-vlan-id vids dont go into the map if they are not mapped to an EVC so I have set them randomly">false</admin-state>
+          <admin-state annotation="EVP-TREE Use Case 1: Note default-ce-vlan-id vids dont go into the map if they are not mapped to an EVC so I have set them randomly">false</admin-state>
           <max-svc-frame-size>1600</max-svc-frame-size>
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>153</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>153</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <elmi-enabled>false</elmi-enabled>
           <elmi-profile>elmi-test1</elmi-profile>
@@ -3387,6 +3391,7 @@ MEF GET Config ALLs
             </ce-vlan>
           </ce-vlans>
           <admin-state>false</admin-state>
+          <max-svc-frame-size>1600</max-svc-frame-size>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
           <max-num-of-evcs>1</max-num-of-evcs>
           <ingress-bw-profile-per-uni>low1-bwp-uni</ingress-bw-profile-per-uni>
@@ -3412,7 +3417,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EPTREE_UNI662_EVC-0001911_Krypton</env-id>
+              <envelope-id>ienv_EPTREE_UNI662_EVC-0001911_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>itest-bwp2</bw-profile>
@@ -3423,7 +3428,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EPTREE_UNI662_EVC-0001911_Sophomore</env-id>
+              <envelope-id>eenv_EPTREE_UNI662_EVC-0001911_Sophomore</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>etest-bwp2</bw-profile>
@@ -3470,7 +3475,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI663_EVC-0001944_Argon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI663_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -3479,7 +3484,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI663_EVC-0001944_Krypton</env-id>
+              <envelope-id>ienv_EVPLAN_UNI663_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -3488,7 +3493,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI663_EVC-0001944_Neon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI663_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -3499,7 +3504,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI663_EVC-0001944_Argon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI663_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -3508,7 +3513,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI663_EVC-0001944_Krypton</env-id>
+              <envelope-id>eenv_EVPLAN_UNI663_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -3517,7 +3522,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI663_EVC-0001944_Neon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI663_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -3530,7 +3535,7 @@ MEF GET Config ALLs
           <max-svc-frame-size>1600</max-svc-frame-size>
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
           <bundling-enabled>true</bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>1053</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>1053</default-ce-vlan-id>
           <max-num-of-evcs>2</max-num-of-evcs>
           <l2cp-address-set>cta</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
@@ -3552,6 +3557,7 @@ MEF GET Config ALLs
             </ce-vlan>
           </ce-vlans>
           <admin-state>false</admin-state>
+          <max-svc-frame-size>1600</max-svc-frame-size>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
           <max-num-of-evcs>1</max-num-of-evcs>
           <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
@@ -3577,7 +3583,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EPTREE_UNI772_EVC-0001911_Krypton</env-id>
+              <envelope-id>ienv_EPTREE_UNI772_EVC-0001911_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>itest-bwp1</bw-profile>
@@ -3588,7 +3594,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EPTREE_UNI772_EVC-0001911_Sophomore</env-id>
+              <envelope-id>eenv_EPTREE_UNI772_EVC-0001911_Sophomore</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>etest-bwp1</bw-profile>
@@ -3635,7 +3641,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI773_EVC-0001944_Argon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI773_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -3644,7 +3650,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI773_EVC-0001944_Krypton</env-id>
+              <envelope-id>ienv_EVPLAN_UNI773_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -3653,7 +3659,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI773_EVC-0001944_Neon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI773_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -3664,7 +3670,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI773_EVC-0001944_Argon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI773_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -3673,7 +3679,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI773_EVC-0001944_Krypton</env-id>
+              <envelope-id>eenv_EVPLAN_UNI773_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -3682,7 +3688,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI773_EVC-0001944_Neon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI773_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -3695,7 +3701,7 @@ MEF GET Config ALLs
           <max-svc-frame-size>1600</max-svc-frame-size>
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
           <bundling-enabled>true</bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>1503</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>1503</default-ce-vlan-id>
           <max-num-of-evcs>2</max-num-of-evcs>
           <l2cp-address-set>cta</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
@@ -3718,7 +3724,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EPTREE_UNI882_EVC-0001911_Krypton</env-id>
+              <envelope-id>ienv_EPTREE_UNI882_EVC-0001911_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>itest-bwp2</bw-profile>
@@ -3729,7 +3735,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EPTREE_UNI882_EVC-0001911_Sophomore</env-id>
+              <envelope-id>eenv_EPTREE_UNI882_EVC-0001911_Sophomore</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>etest-bwp2</bw-profile>
@@ -3776,7 +3782,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI883_EVC-0001944_Argon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI883_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -3785,7 +3791,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI883_EVC-0001944_Krypton</env-id>
+              <envelope-id>ienv_EVPLAN_UNI883_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -3794,7 +3800,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI883_EVC-0001944_Neon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI883_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -3805,7 +3811,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI883_EVC-0001944_Argon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI883_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -3814,7 +3820,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI883_EVC-0001944_Krypton</env-id>
+              <envelope-id>eenv_EVPLAN_UNI883_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -3823,7 +3829,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI883_EVC-0001944_Neon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI883_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -3836,7 +3842,7 @@ MEF GET Config ALLs
           <max-svc-frame-size>1600</max-svc-frame-size>
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
           <bundling-enabled>true</bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>1530</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>1530</default-ce-vlan-id>
           <max-num-of-evcs>2</max-num-of-evcs>
           <l2cp-address-set>cta</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
@@ -8307,7 +8313,7 @@ MEF GET Config ALLs
           <service-multiplexing-enabled wd:default="true">false</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled wd:default="true">false</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id wd:default="true">1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
@@ -8334,7 +8340,7 @@ MEF GET Config ALLs
           <service-multiplexing-enabled wd:default="true">false</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled wd:default="true">false</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id wd:default="true">1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
@@ -8358,7 +8364,7 @@ MEF GET Config ALLs
           </physical-layers>
           <ingress-envelopes>
             <envelope>
-              <env-id>U3_EPL2_High1</env-id>
+              <envelope-id>U3_EPL2_High1</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -8367,7 +8373,7 @@ MEF GET Config ALLs
               <coupling-enabled wd:default="true">false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>U3_EPL2_High2</env-id>
+              <envelope-id>U3_EPL2_High2</envelope-id>
               <bwp-flows>
                 <bwp-flow annotation="Next one was commented out">
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -8376,7 +8382,7 @@ MEF GET Config ALLs
               <coupling-enabled wd:default="true">false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>U3_EPL2_Low1</env-id>
+              <envelope-id>U3_EPL2_Low1</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -8385,7 +8391,7 @@ MEF GET Config ALLs
               <coupling-enabled wd:default="true">false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>U3_EPL2_Low2</env-id>
+              <envelope-id>U3_EPL2_Low2</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -8394,7 +8400,7 @@ MEF GET Config ALLs
               <coupling-enabled wd:default="true">false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>U3_EPL2_Medium1</env-id>
+              <envelope-id>U3_EPL2_Medium1</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -8403,7 +8409,7 @@ MEF GET Config ALLs
               <coupling-enabled wd:default="true">false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>U3_EPL2_Medium2</env-id>
+              <envelope-id>U3_EPL2_Medium2</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -8414,7 +8420,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eMM_EPL2</env-id>
+              <envelope-id>eMM_EPL2</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -8432,7 +8438,7 @@ MEF GET Config ALLs
           <service-multiplexing-enabled wd:default="true">false</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled wd:default="true">false</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id wd:default="true">1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled>true</token-share-enabled>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
@@ -8459,7 +8465,7 @@ MEF GET Config ALLs
           <service-multiplexing-enabled wd:default="true">false</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled wd:default="true">false</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id wd:default="true">1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
@@ -8500,7 +8506,7 @@ MEF GET Config ALLs
           <service-multiplexing-enabled wd:default="true">false</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id wd:default="true">1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled>true</token-share-enabled>
           <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
@@ -8545,7 +8551,7 @@ MEF GET Config ALLs
           <service-multiplexing-enabled wd:default="true">false</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id wd:default="true">1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled>true</token-share-enabled>
           <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
@@ -8583,7 +8589,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -8592,7 +8598,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -8601,7 +8607,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -8612,7 +8618,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -8621,7 +8627,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -8630,7 +8636,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -8639,13 +8645,13 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
           </egress-envelopes>
-          <admin-state annotation="EVPL Use Case 1:">false</admin-state>
+          <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
-          <max-svc-frame-size wd:default="true">1600</max-svc-frame-size>
+          <max-svc-frame-size annotation="EVPL Use Case 1:">1600</max-svc-frame-size>
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled wd:default="true">false</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>22</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>22</default-ce-vlan-id>
           <max-num-of-evcs>2</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
@@ -8688,7 +8694,7 @@ MEF GET Config ALLs
           <service-multiplexing-enabled wd:default="true">false</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id wd:default="true">1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
@@ -8718,7 +8724,7 @@ MEF GET Config ALLs
           <service-multiplexing-enabled wd:default="true">false</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled wd:default="true">false</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id wd:default="true">1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
@@ -8749,7 +8755,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -8758,7 +8764,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -8767,7 +8773,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPL_UNI113_EVC-0001900-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI113_EVC-0001900-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -8778,7 +8784,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -8787,7 +8793,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -8796,7 +8802,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPL_UNI113_EVC-0001900-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI113_EVC-0001900-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -8807,11 +8813,11 @@ MEF GET Config ALLs
           </egress-envelopes>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
-          <max-svc-frame-size wd:default="true">1600</max-svc-frame-size>
+          <max-svc-frame-size>1600</max-svc-frame-size>
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled wd:default="true">false</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>17</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>17</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
@@ -8853,7 +8859,7 @@ MEF GET Config ALLs
           <service-multiplexing-enabled wd:default="true">false</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id wd:default="true">1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
@@ -8879,7 +8885,7 @@ MEF GET Config ALLs
           </physical-layers>
           <ingress-envelopes>
             <envelope>
-              <env-id>MM_EPL_High</env-id>
+              <envelope-id>MM_EPL_High</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -8888,7 +8894,7 @@ MEF GET Config ALLs
               <coupling-enabled wd:default="true">false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>MM_EPL_Low</env-id>
+              <envelope-id>MM_EPL_Low</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -8897,7 +8903,7 @@ MEF GET Config ALLs
               <coupling-enabled wd:default="true">false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>MM_EPL_Medium</env-id>
+              <envelope-id>MM_EPL_Medium</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -8908,7 +8914,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eMM_EPL_High</env-id>
+              <envelope-id>eMM_EPL_High</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -8917,7 +8923,7 @@ MEF GET Config ALLs
               <coupling-enabled wd:default="true">false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eMM_EPL_Low</env-id>
+              <envelope-id>eMM_EPL_Low</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -8926,7 +8932,7 @@ MEF GET Config ALLs
               <coupling-enabled wd:default="true">false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eMM_EPL_Medium</env-id>
+              <envelope-id>eMM_EPL_Medium</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -8941,7 +8947,7 @@ MEF GET Config ALLs
           <service-multiplexing-enabled wd:default="true">false</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled wd:default="true">false</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id wd:default="true">1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled>false</token-share-enabled>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
@@ -8968,7 +8974,7 @@ MEF GET Config ALLs
           <service-multiplexing-enabled wd:default="true">false</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled wd:default="true">false</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id wd:default="true">1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
@@ -8999,7 +9005,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPL_UNI223_EVC-0001343-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI223_EVC-0001343-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high3-bwp-uni</bw-profile>
@@ -9008,7 +9014,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPL_UNI223_EVC-0001899-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI223_EVC-0001899-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low3-bwp-uni</bw-profile>
@@ -9017,7 +9023,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium3-bwp-uni</bw-profile>
@@ -9028,7 +9034,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPL_UNI223_EVC-0001343-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI223_EVC-0001343-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high3-bwp-uni</bw-profile>
@@ -9037,7 +9043,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPL_UNI223_EVC-0001899-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI223_EVC-0001899-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low3-bwp-uni</bw-profile>
@@ -9046,7 +9052,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium3-bwp-uni</bw-profile>
@@ -9057,11 +9063,11 @@ MEF GET Config ALLs
           </egress-envelopes>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
-          <max-svc-frame-size wd:default="true">1600</max-svc-frame-size>
+          <max-svc-frame-size>1600</max-svc-frame-size>
           <service-multiplexing-enabled>false</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled wd:default="true">false</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
@@ -9089,7 +9095,7 @@ MEF GET Config ALLs
           <service-multiplexing-enabled wd:default="true">false</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled wd:default="true">false</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id wd:default="true">1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
@@ -9116,7 +9122,7 @@ MEF GET Config ALLs
           <service-multiplexing-enabled wd:default="true">false</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled wd:default="true">false</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id wd:default="true">1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
@@ -9143,7 +9149,7 @@ MEF GET Config ALLs
           <service-multiplexing-enabled wd:default="true">false</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled wd:default="true">false</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id wd:default="true">1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
@@ -9170,7 +9176,7 @@ MEF GET Config ALLs
           <service-multiplexing-enabled wd:default="true">false</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled wd:default="true">false</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id wd:default="true">1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
@@ -9196,13 +9202,13 @@ MEF GET Config ALLs
               <vid>1</vid>
             </ce-vlan>
           </ce-vlans>
-          <admin-state annotation="EP-LAN Use Case 1:">false</admin-state>
+          <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
-          <max-svc-frame-size wd:default="true">1600</max-svc-frame-size>
+          <max-svc-frame-size annotation="EP-LAN Use Case 1:">1600</max-svc-frame-size>
           <service-multiplexing-enabled wd:default="true">false</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id wd:default="true">1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <ingress-bw-profile-per-uni>medium1-bwp-uni</ingress-bw-profile-per-uni>
@@ -9234,7 +9240,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EPTREE_UNI552_EVC-0001911_Krypton</env-id>
+              <envelope-id>ienv_EPTREE_UNI552_EVC-0001911_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>itest-bwp1</bw-profile>
@@ -9245,7 +9251,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EPTREE_UNI552_EVC-0001911_Sophomore</env-id>
+              <envelope-id>eenv_EPTREE_UNI552_EVC-0001911_Sophomore</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>etest-bwp1</bw-profile>
@@ -9260,7 +9266,7 @@ MEF GET Config ALLs
           <service-multiplexing-enabled wd:default="true">false</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id wd:default="true">1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
@@ -9301,7 +9307,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI553_EVC-0001944_Argon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI553_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -9310,7 +9316,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI553_EVC-0001944_Krypton</env-id>
+              <envelope-id>ienv_EVPLAN_UNI553_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -9319,7 +9325,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI553_EVC-0001944_Neon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI553_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -9330,7 +9336,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI553_EVC-0001944_Argon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI553_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -9339,7 +9345,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI553_EVC-0001944_Krypton</env-id>
+              <envelope-id>eenv_EVPLAN_UNI553_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -9348,7 +9354,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI553_EVC-0001944_Neon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI553_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -9363,7 +9369,7 @@ MEF GET Config ALLs
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
           <bundling-enabled>true</bundling-enabled>
           <all-to-one-bundling-enabled wd:default="true">false</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>53</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>53</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
@@ -9391,13 +9397,13 @@ MEF GET Config ALLs
               <vid>153</vid>
             </ce-vlan>
           </ce-vlans>
-          <admin-state annotation="EVP-TREE Use Case 1: Note untagged-and-priority-tagged-ce-vlan-id vids dont go into the map if they are not mapped to an EVC so I have set them randomly">false</admin-state>
+          <admin-state annotation="EVP-TREE Use Case 1: Note default-ce-vlan-id vids dont go into the map if they are not mapped to an EVC so I have set them randomly">false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
           <max-svc-frame-size>1600</max-svc-frame-size>
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled wd:default="true">false</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>153</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>153</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
@@ -9427,11 +9433,11 @@ MEF GET Config ALLs
           </ce-vlans>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
-          <max-svc-frame-size wd:default="true">1600</max-svc-frame-size>
+          <max-svc-frame-size>1600</max-svc-frame-size>
           <service-multiplexing-enabled wd:default="true">false</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id wd:default="true">1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <ingress-bw-profile-per-uni>low1-bwp-uni</ingress-bw-profile-per-uni>
@@ -9462,7 +9468,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EPTREE_UNI662_EVC-0001911_Krypton</env-id>
+              <envelope-id>ienv_EPTREE_UNI662_EVC-0001911_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>itest-bwp2</bw-profile>
@@ -9473,7 +9479,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EPTREE_UNI662_EVC-0001911_Sophomore</env-id>
+              <envelope-id>eenv_EPTREE_UNI662_EVC-0001911_Sophomore</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>etest-bwp2</bw-profile>
@@ -9488,7 +9494,7 @@ MEF GET Config ALLs
           <service-multiplexing-enabled wd:default="true">false</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id wd:default="true">1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
@@ -9531,7 +9537,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI663_EVC-0001944_Argon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI663_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -9540,7 +9546,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI663_EVC-0001944_Krypton</env-id>
+              <envelope-id>ienv_EVPLAN_UNI663_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -9549,7 +9555,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI663_EVC-0001944_Neon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI663_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -9560,7 +9566,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI663_EVC-0001944_Argon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI663_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -9569,7 +9575,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI663_EVC-0001944_Krypton</env-id>
+              <envelope-id>eenv_EVPLAN_UNI663_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -9578,7 +9584,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI663_EVC-0001944_Neon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI663_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -9593,7 +9599,7 @@ MEF GET Config ALLs
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
           <bundling-enabled>true</bundling-enabled>
           <all-to-one-bundling-enabled wd:default="true">false</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>1053</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>1053</default-ce-vlan-id>
           <max-num-of-evcs>2</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
@@ -9622,11 +9628,11 @@ MEF GET Config ALLs
           </ce-vlans>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
-          <max-svc-frame-size wd:default="true">1600</max-svc-frame-size>
+          <max-svc-frame-size>1600</max-svc-frame-size>
           <service-multiplexing-enabled wd:default="true">false</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id wd:default="true">1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
@@ -9657,7 +9663,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EPTREE_UNI772_EVC-0001911_Krypton</env-id>
+              <envelope-id>ienv_EPTREE_UNI772_EVC-0001911_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>itest-bwp1</bw-profile>
@@ -9668,7 +9674,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EPTREE_UNI772_EVC-0001911_Sophomore</env-id>
+              <envelope-id>eenv_EPTREE_UNI772_EVC-0001911_Sophomore</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>etest-bwp1</bw-profile>
@@ -9683,7 +9689,7 @@ MEF GET Config ALLs
           <service-multiplexing-enabled wd:default="true">false</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id wd:default="true">1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
@@ -9726,7 +9732,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI773_EVC-0001944_Argon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI773_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -9735,7 +9741,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI773_EVC-0001944_Krypton</env-id>
+              <envelope-id>ienv_EVPLAN_UNI773_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -9744,7 +9750,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI773_EVC-0001944_Neon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI773_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -9755,7 +9761,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI773_EVC-0001944_Argon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI773_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -9764,7 +9770,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI773_EVC-0001944_Krypton</env-id>
+              <envelope-id>eenv_EVPLAN_UNI773_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -9773,7 +9779,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI773_EVC-0001944_Neon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI773_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -9788,7 +9794,7 @@ MEF GET Config ALLs
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
           <bundling-enabled>true</bundling-enabled>
           <all-to-one-bundling-enabled wd:default="true">false</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>1503</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>1503</default-ce-vlan-id>
           <max-num-of-evcs>2</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
@@ -9817,7 +9823,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EPTREE_UNI882_EVC-0001911_Krypton</env-id>
+              <envelope-id>ienv_EPTREE_UNI882_EVC-0001911_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>itest-bwp2</bw-profile>
@@ -9828,7 +9834,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EPTREE_UNI882_EVC-0001911_Sophomore</env-id>
+              <envelope-id>eenv_EPTREE_UNI882_EVC-0001911_Sophomore</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>etest-bwp2</bw-profile>
@@ -9843,7 +9849,7 @@ MEF GET Config ALLs
           <service-multiplexing-enabled wd:default="true">false</service-multiplexing-enabled>
           <bundling-enabled wd:default="true">false</bundling-enabled>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id wd:default="true">1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
@@ -9886,7 +9892,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI883_EVC-0001944_Argon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI883_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -9895,7 +9901,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI883_EVC-0001944_Krypton</env-id>
+              <envelope-id>ienv_EVPLAN_UNI883_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -9904,7 +9910,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI883_EVC-0001944_Neon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI883_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -9915,7 +9921,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI883_EVC-0001944_Argon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI883_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -9924,7 +9930,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI883_EVC-0001944_Krypton</env-id>
+              <envelope-id>eenv_EVPLAN_UNI883_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -9933,7 +9939,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI883_EVC-0001944_Neon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI883_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -9948,7 +9954,7 @@ MEF GET Config ALLs
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
           <bundling-enabled>true</bundling-enabled>
           <all-to-one-bundling-enabled wd:default="true">false</all-to-one-bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>1530</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>1530</default-ce-vlan-id>
           <max-num-of-evcs>2</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
@@ -15421,7 +15427,8 @@ MEF GET Config ALLs
               <vid>1</vid>
             </ce-vlan>
           </ce-vlans>
-          <admin-state annotation="EP-LAN Use Case 1:">false</admin-state>
+          <admin-state>false</admin-state>
+          <max-svc-frame-size annotation="EP-LAN Use Case 1:">1600</max-svc-frame-size>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
           <max-num-of-evcs>1</max-num-of-evcs>
           <ingress-bw-profile-per-uni>medium1-bwp-uni</ingress-bw-profile-per-uni>
@@ -15448,6 +15455,7 @@ MEF GET Config ALLs
             </ce-vlan>
           </ce-vlans>
           <admin-state>false</admin-state>
+          <max-svc-frame-size>1600</max-svc-frame-size>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
           <max-num-of-evcs>1</max-num-of-evcs>
           <ingress-bw-profile-per-uni>low1-bwp-uni</ingress-bw-profile-per-uni>
@@ -15472,6 +15480,7 @@ MEF GET Config ALLs
             </ce-vlan>
           </ce-vlans>
           <admin-state>false</admin-state>
+          <max-svc-frame-size>1600</max-svc-frame-size>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
           <max-num-of-evcs>1</max-num-of-evcs>
           <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
@@ -15584,7 +15593,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EPTREE_UNI552_EVC-0001911_Krypton</env-id>
+              <envelope-id>ienv_EPTREE_UNI552_EVC-0001911_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>itest-bwp1</bw-profile>
@@ -15595,7 +15604,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EPTREE_UNI552_EVC-0001911_Sophomore</env-id>
+              <envelope-id>eenv_EPTREE_UNI552_EVC-0001911_Sophomore</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>etest-bwp1</bw-profile>
@@ -15629,7 +15638,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EPTREE_UNI662_EVC-0001911_Krypton</env-id>
+              <envelope-id>ienv_EPTREE_UNI662_EVC-0001911_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>itest-bwp2</bw-profile>
@@ -15640,7 +15649,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EPTREE_UNI662_EVC-0001911_Sophomore</env-id>
+              <envelope-id>eenv_EPTREE_UNI662_EVC-0001911_Sophomore</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>etest-bwp2</bw-profile>
@@ -15672,7 +15681,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EPTREE_UNI772_EVC-0001911_Krypton</env-id>
+              <envelope-id>ienv_EPTREE_UNI772_EVC-0001911_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>itest-bwp1</bw-profile>
@@ -15683,7 +15692,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EPTREE_UNI772_EVC-0001911_Sophomore</env-id>
+              <envelope-id>eenv_EPTREE_UNI772_EVC-0001911_Sophomore</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>etest-bwp1</bw-profile>
@@ -15715,7 +15724,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EPTREE_UNI882_EVC-0001911_Krypton</env-id>
+              <envelope-id>ienv_EPTREE_UNI882_EVC-0001911_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>itest-bwp2</bw-profile>
@@ -15726,7 +15735,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EPTREE_UNI882_EVC-0001911_Sophomore</env-id>
+              <envelope-id>eenv_EPTREE_UNI882_EVC-0001911_Sophomore</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>etest-bwp2</bw-profile>
@@ -15965,7 +15974,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -15974,7 +15983,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -15983,7 +15992,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -15994,7 +16003,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -16003,7 +16012,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -16012,7 +16021,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -16021,9 +16030,10 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
           </egress-envelopes>
-          <admin-state annotation="EVPL Use Case 1:">false</admin-state>
+          <admin-state>false</admin-state>
+          <max-svc-frame-size annotation="EVPL Use Case 1:">1600</max-svc-frame-size>
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>22</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>22</default-ce-vlan-id>
           <max-num-of-evcs>2</max-num-of-evcs>
           <elmi-enabled>true</elmi-enabled>
           <elmi-profile>elmi-test2</elmi-profile>
@@ -16051,7 +16061,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -16060,7 +16070,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -16069,7 +16079,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPL_UNI113_EVC-0001900-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI113_EVC-0001900-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -16080,7 +16090,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -16089,7 +16099,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -16098,7 +16108,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPL_UNI113_EVC-0001900-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI113_EVC-0001900-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -16108,8 +16118,9 @@ MEF GET Config ALLs
             </envelope>
           </egress-envelopes>
           <admin-state>false</admin-state>
+          <max-svc-frame-size>1600</max-svc-frame-size>
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>17</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>17</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <l2cp-address-set>cta</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
@@ -16135,7 +16146,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPL_UNI223_EVC-0001343-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI223_EVC-0001343-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high3-bwp-uni</bw-profile>
@@ -16144,7 +16155,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPL_UNI223_EVC-0001899-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI223_EVC-0001899-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low3-bwp-uni</bw-profile>
@@ -16153,7 +16164,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</env-id>
+              <envelope-id>ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium3-bwp-uni</bw-profile>
@@ -16164,7 +16175,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPL_UNI223_EVC-0001343-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI223_EVC-0001343-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high3-bwp-uni</bw-profile>
@@ -16173,7 +16184,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPL_UNI223_EVC-0001899-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI223_EVC-0001899-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low3-bwp-uni</bw-profile>
@@ -16182,7 +16193,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</env-id>
+              <envelope-id>eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium3-bwp-uni</bw-profile>
@@ -16192,8 +16203,9 @@ MEF GET Config ALLs
             </envelope>
           </egress-envelopes>
           <admin-state>false</admin-state>
+          <max-svc-frame-size>1600</max-svc-frame-size>
           <service-multiplexing-enabled>false</service-multiplexing-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>1</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <l2cp-address-set>cta</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
@@ -16411,7 +16423,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI553_EVC-0001944_Argon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI553_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -16420,7 +16432,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI553_EVC-0001944_Krypton</env-id>
+              <envelope-id>ienv_EVPLAN_UNI553_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -16429,7 +16441,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI553_EVC-0001944_Neon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI553_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -16440,7 +16452,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI553_EVC-0001944_Argon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI553_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -16449,7 +16461,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI553_EVC-0001944_Krypton</env-id>
+              <envelope-id>eenv_EVPLAN_UNI553_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -16458,7 +16470,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI553_EVC-0001944_Neon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI553_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -16471,7 +16483,7 @@ MEF GET Config ALLs
           <max-svc-frame-size>1600</max-svc-frame-size>
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
           <bundling-enabled>true</bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>53</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>53</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <elmi-enabled>true</elmi-enabled>
           <elmi-profile>elmi-test2</elmi-profile>
@@ -16511,7 +16523,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI663_EVC-0001944_Argon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI663_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -16520,7 +16532,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI663_EVC-0001944_Krypton</env-id>
+              <envelope-id>ienv_EVPLAN_UNI663_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -16529,7 +16541,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI663_EVC-0001944_Neon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI663_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -16540,7 +16552,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI663_EVC-0001944_Argon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI663_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -16549,7 +16561,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI663_EVC-0001944_Krypton</env-id>
+              <envelope-id>eenv_EVPLAN_UNI663_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -16558,7 +16570,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI663_EVC-0001944_Neon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI663_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -16571,7 +16583,7 @@ MEF GET Config ALLs
           <max-svc-frame-size>1600</max-svc-frame-size>
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
           <bundling-enabled>true</bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>1053</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>1053</default-ce-vlan-id>
           <max-num-of-evcs>2</max-num-of-evcs>
           <l2cp-address-set>cta</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
@@ -16609,7 +16621,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI773_EVC-0001944_Argon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI773_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -16618,7 +16630,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI773_EVC-0001944_Krypton</env-id>
+              <envelope-id>ienv_EVPLAN_UNI773_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -16627,7 +16639,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI773_EVC-0001944_Neon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI773_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -16638,7 +16650,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI773_EVC-0001944_Argon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI773_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -16647,7 +16659,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI773_EVC-0001944_Krypton</env-id>
+              <envelope-id>eenv_EVPLAN_UNI773_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -16656,7 +16668,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI773_EVC-0001944_Neon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI773_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -16669,7 +16681,7 @@ MEF GET Config ALLs
           <max-svc-frame-size>1600</max-svc-frame-size>
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
           <bundling-enabled>true</bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>1503</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>1503</default-ce-vlan-id>
           <max-num-of-evcs>2</max-num-of-evcs>
           <l2cp-address-set>cta</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
@@ -16707,7 +16719,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI883_EVC-0001944_Argon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI883_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -16716,7 +16728,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI883_EVC-0001944_Krypton</env-id>
+              <envelope-id>ienv_EVPLAN_UNI883_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -16725,7 +16737,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI883_EVC-0001944_Neon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI883_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -16736,7 +16748,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI883_EVC-0001944_Argon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI883_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -16745,7 +16757,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI883_EVC-0001944_Krypton</env-id>
+              <envelope-id>eenv_EVPLAN_UNI883_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -16754,7 +16766,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI883_EVC-0001944_Neon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI883_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -16767,7 +16779,7 @@ MEF GET Config ALLs
           <max-svc-frame-size>1600</max-svc-frame-size>
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
           <bundling-enabled>true</bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>1530</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>1530</default-ce-vlan-id>
           <max-num-of-evcs>2</max-num-of-evcs>
           <l2cp-address-set>cta</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
@@ -17092,10 +17104,10 @@ MEF GET Config ALLs
               <vid>153</vid>
             </ce-vlan>
           </ce-vlans>
-          <admin-state annotation="EVP-TREE Use Case 1: Note untagged-and-priority-tagged-ce-vlan-id vids dont go into the map if they are not mapped to an EVC so I have set them randomly">false</admin-state>
+          <admin-state annotation="EVP-TREE Use Case 1: Note default-ce-vlan-id vids dont go into the map if they are not mapped to an EVC so I have set them randomly">false</admin-state>
           <max-svc-frame-size>1600</max-svc-frame-size>
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>153</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>153</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <elmi-enabled>false</elmi-enabled>
           <elmi-profile>elmi-test1</elmi-profile>
@@ -17135,7 +17147,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI663_EVC-0001944_Argon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI663_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -17144,7 +17156,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI663_EVC-0001944_Krypton</env-id>
+              <envelope-id>ienv_EVPLAN_UNI663_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -17153,7 +17165,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI663_EVC-0001944_Neon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI663_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -17164,7 +17176,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI663_EVC-0001944_Argon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI663_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -17173,7 +17185,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI663_EVC-0001944_Krypton</env-id>
+              <envelope-id>eenv_EVPLAN_UNI663_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -17182,7 +17194,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI663_EVC-0001944_Neon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI663_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -17195,7 +17207,7 @@ MEF GET Config ALLs
           <max-svc-frame-size>1600</max-svc-frame-size>
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
           <bundling-enabled>true</bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>1053</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>1053</default-ce-vlan-id>
           <max-num-of-evcs>2</max-num-of-evcs>
           <l2cp-address-set>cta</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
@@ -17233,7 +17245,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI773_EVC-0001944_Argon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI773_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -17242,7 +17254,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI773_EVC-0001944_Krypton</env-id>
+              <envelope-id>ienv_EVPLAN_UNI773_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -17251,7 +17263,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI773_EVC-0001944_Neon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI773_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -17262,7 +17274,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI773_EVC-0001944_Argon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI773_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -17271,7 +17283,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI773_EVC-0001944_Krypton</env-id>
+              <envelope-id>eenv_EVPLAN_UNI773_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -17280,7 +17292,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI773_EVC-0001944_Neon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI773_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -17293,7 +17305,7 @@ MEF GET Config ALLs
           <max-svc-frame-size>1600</max-svc-frame-size>
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
           <bundling-enabled>true</bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>1503</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>1503</default-ce-vlan-id>
           <max-num-of-evcs>2</max-num-of-evcs>
           <l2cp-address-set>cta</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
@@ -17331,7 +17343,7 @@ MEF GET Config ALLs
           </ce-vlans>
           <ingress-envelopes>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI883_EVC-0001944_Argon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI883_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -17340,7 +17352,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI883_EVC-0001944_Krypton</env-id>
+              <envelope-id>ienv_EVPLAN_UNI883_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -17349,7 +17361,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>ienv_EVPLAN_UNI883_EVC-0001944_Neon</env-id>
+              <envelope-id>ienv_EVPLAN_UNI883_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -17360,7 +17372,7 @@ MEF GET Config ALLs
           </ingress-envelopes>
           <egress-envelopes>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI883_EVC-0001944_Argon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI883_EVC-0001944_Argon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>medium2-bwp-uni</bw-profile>
@@ -17369,7 +17381,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI883_EVC-0001944_Krypton</env-id>
+              <envelope-id>eenv_EVPLAN_UNI883_EVC-0001944_Krypton</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -17378,7 +17390,7 @@ MEF GET Config ALLs
               <coupling-enabled>false</coupling-enabled>
             </envelope>
             <envelope>
-              <env-id>eenv_EVPLAN_UNI883_EVC-0001944_Neon</env-id>
+              <envelope-id>eenv_EVPLAN_UNI883_EVC-0001944_Neon</envelope-id>
               <bwp-flows>
                 <bwp-flow>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -17391,7 +17403,7 @@ MEF GET Config ALLs
           <max-svc-frame-size>1600</max-svc-frame-size>
           <service-multiplexing-enabled>true</service-multiplexing-enabled>
           <bundling-enabled>true</bundling-enabled>
-          <untagged-and-priority-tagged-ce-vlan-id>1530</untagged-and-priority-tagged-ce-vlan-id>
+          <default-ce-vlan-id>1530</default-ce-vlan-id>
           <max-num-of-evcs>2</max-num-of-evcs>
           <l2cp-address-set>cta</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
