@@ -12,12 +12,18 @@
       <running/>
     </target>
     <config>
+<<<<<<< Upstream, based on origin/master
     <mef-global xmlns="urn:mef:yang:mef-global"  xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
       <slss>
       <sls nc:operation="delete">
+=======
+    <mef-global xmlns="urn:mef:xid:mef-global"  xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+      <sls-profiles>
+      <sls-profile nc:operation="delete">
+>>>>>>> 0888c2f Updates to mef-global for SLS and several other comments.
         <sls-id>SLS_Example</sls-id>
-      </sls>
-      </slss>
+      </sls-profile>
+      </sls-profiles>
       <profiles>
         <ingress-bwp-flows-parameter-set>
           <bwp-flow-parameter-set nc:operation="delete">

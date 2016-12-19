@@ -1,11 +1,10 @@
 {
   "mef-global:mef-global": {
-    "slss": {
-      "sls": [
+    "sls-profiless": {
+      "sls-profile": [
         {
           "sls-id": "MEF103_Table25",
           "time-interval": 2592000,
-          "start-time": "201606181200Z",
           "pm-cos-name-entries": {
             "pm-cos-name-entry": [
               {
@@ -25,13 +24,13 @@
                     {
                       "pm-entry-id": "SLS_Argon_Test2",
                       "one-way-frame-loss-ratio-pm": {
-                        "pm-objective": 390
+                        "pm-percentile": 39.0
                       }
                     },
                     {
                       "pm-entry-id": "SLS_Argon_Test3",
                       "one-way-availability-pm": {
-                        "pm-objective": 94
+                        "pm-percentile": 94.0
                       }
                     }
                   ]
@@ -54,7 +53,7 @@
                     {
                       "pm-entry-id": "SLS_Krypton_Test2",
                       "one-way-frame-loss-ratio-pm": {
-                        "pm-objective": 290
+                        "pm-percentile": 29.0
                       }
                     },
                     {
@@ -68,7 +67,7 @@
                     {
                       "pm-entry-id": "SLS_Krypton_Test4",
                       "one-way-availability-pm": {
-                        "pm-objective": 96
+                        "pm-percentile": 96
                       }
                     }
                   ]
@@ -84,7 +83,7 @@
                     {
                       "pm-entry-id": "SLS_Neon_GA_Test",
                       "one-way-group-availability-pm": {
-                        "min-number-of-if-to-be-available": 1,
+                        "min-number-of-uni-pair-sets": 1,
                         "pm-objective": 300
                       }
                     },
@@ -98,13 +97,13 @@
                     {
                       "pm-entry-id": "SLS_Neon_Test2",
                       "one-way-frame-loss-ratio-pm": {
-                        "pm-objective": 490
+                        "pm-percentile": 49.0
                       }
                     },
                     {
                       "pm-entry-id": "SLS_Neon_Test3",
                       "one-way-availability-pm": {
-                        "pm-objective": 92
+                        "pm-percentile": 92.0
                       }
                     },
                     {
@@ -154,7 +153,6 @@
         {
           "sls-id": "SLS_Example",
           "time-interval": 1292000,
-          "start-time": "201606281200Z",
           "pm-cos-name-entries": {
             "pm-cos-name-entry": [
               {
@@ -167,7 +165,7 @@
                     {
                       "pm-entry-id": "SLS_H_GA_Test",
                       "one-way-group-availability-pm": {
-                        "min-number-of-if-to-be-available": 1,
+                        "min-number-of-uni-pair-sets": 1,
                         "pm-objective": 300
                       }
                     },
@@ -181,7 +179,7 @@
                     {
                       "pm-entry-id": "SLS_H_Test2",
                       "one-way-frame-loss-ratio-pm": {
-                        "pm-objective": 290
+                        "pm-percentile": 29.0
                       }
                     },
                     {
@@ -195,7 +193,7 @@
                     {
                       "pm-entry-id": "SLS_H_Test4",
                       "one-way-availability-pm": {
-                        "pm-objective": 96
+                        "pm-percentile": 96.0
                       }
                     },
                     {

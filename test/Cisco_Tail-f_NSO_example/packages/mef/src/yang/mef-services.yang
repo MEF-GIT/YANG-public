@@ -676,8 +676,8 @@ module mef-services {
           "Specification";
         leaf sls-id {
           type leafref {
-            path "/mef-global:mef-global/mef-global:slss/" +
-            		"mef-global:sls/mef-global:sls-id";
+            path "/mef-global:mef-global/mef-global:sls-profiles/" +
+            		"mef-global:sls-profile/mef-global:sls-id";
           }
           description
             "EVC: EVC-specific performance objectives and " +
@@ -689,6 +689,14 @@ module mef-services {
           reference "[MEF10.3] Section 8.8, Section 10. " +
           		"[MEF7.3] Section 12.2.2.";
         }
+        leaf start-time {
+            type string {
+              length "min..255";
+            }
+            description
+              "Performance Metric(PM): Start DateTime for " +
+              "Time Intervals (YYYYMMDDHHHHZ). If not set, treat as start immediately.";
+          }
         container cos-entries {
           description
             "SLS Inclusions by CoS: For this EVC, the " +
@@ -699,8 +707,8 @@ module mef-services {
               "CoS Name.";
             leaf cos-name {
               type leafref {
-                path "/mef-global:mef-global/mef-global:slss" +
-                		"/mef-global:sls[mef-global:" +
+                path "/mef-global:mef-global/mef-global:sls-profiles" +
+                		"/mef-global:sls-profile[mef-global:" +
                 		"sls-id = current()/../../../sls-id]/" +
                 		"mef-global:pm-cos-name-entries/" +
                 		"mef-global:pm-cos-name-entry/" +
@@ -721,7 +729,7 @@ module mef-services {
                 leaf pm-entry-id {
                   type leafref {
                     path "/mef-global:mef-global/mef-global:" +
-                    		"slss/mef-global:sls[mef-global:" +
+                    		"sls-profiles/mef-global:sls-profile[mef-global:" +
                     		"sls-id = current()/../../../../" +
                     		"../sls-id]/mef-global:" +
                     		"pm-cos-name-entries/" +
@@ -737,8 +745,8 @@ module mef-services {
                     "Performance Metric Group Identifier";
                 }
                 container sets-of-end-point-pairs {
-                  when "(/mef-global:mef-global/mef-global:slss" +
-                  		"/mef-global:sls[mef-global:sls-id = " +
+                  when "(/mef-global:mef-global/mef-global:sls-profiles" +
+                  		"/mef-global:sls-profile[mef-global:sls-id = " +
                   		"current()/../../../../../sls-id]/" +
                   		"mef-global:pm-cos-name-entries/" +
                   		"mef-global:pm-cos-name-entry" +
@@ -936,7 +944,7 @@ module mef-services {
                 }
                 container end-point-pairs {
                   when "not(/mef-global:mef-global/mef-global:" +
-                  		"slss/mef-global:sls[mef-global:sls-id " +
+                  		"sls-profiles/mef-global:sls-profile[mef-global:sls-id " +
                   		"= current()/../../../../../sls-id]/" +
                   		"mef-global:pm-cos-name-entries/" +
                   		"mef-global:pm-cos-name-entry" +
