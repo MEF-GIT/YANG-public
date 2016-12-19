@@ -35,8 +35,8 @@
           <sp-id>Coyote</sp-id>
         </cen>
       </cens>
-      <slss>
-        <sls>
+      <sls-profiles>
+        <sls-profile>
           <sls-id>MEF103_Table25</sls-id>
           <perf-objs>
             <pm-time-interval annotation="Service Level Specifications">2592000</pm-time-interval>
@@ -110,8 +110,8 @@
             </perf-obj>
           </perf-objs>
           <sp-id>Acme</sp-id>
-        </sls>
-        <sls>
+        </sls-profile>
+        <sls-profile>
           <sls-id>SLS_Example</sls-id>
           <perf-objs>
             <pm-time-interval>1292000</pm-time-interval>
@@ -218,8 +218,8 @@
             </perf-obj>
           </perf-objs>
           <sp-id>Acme</sp-id>
-        </sls>
-      </slss>
+        </sls-profile>
+      </sls-profiles>
       <subscribers>
         <subscriber>
           <sub-id>GiantTiger</sub-id>

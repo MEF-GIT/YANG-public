@@ -13,11 +13,11 @@
     </target>
     <config>
     <mef-global xmlns="urn:mef:xid:mef-global"  xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
-      <slss>
-      <sls nc:operation="delete">
+      <sls-profiles>
+      <sls-profile nc:operation="delete">
         <sls-id>SLS_Example</sls-id>
-      </sls>
-      </slss>
+      </sls-profile>
+      </sls-profiles>
       <profiles>
         <ingress-bwp-flows-parameter-set>
           <bwp-flow-parameter-set nc:operation="delete">

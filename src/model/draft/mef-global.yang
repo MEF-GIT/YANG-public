@@ -214,12 +214,12 @@ module mef-global {
         }
       }
     }
-    container slss {
+    container sls-profiles {
       description
         "The technical specification of the service level being " +
         "offered by the Service Provider to the Subscriber is " +
         "defined to be the Service Level Specification (SLS).";
-      list sls {
+      list sls-profile {
         key "sls-id";
         description
           "Global Service Level Specification(SLS) List.";
@@ -237,15 +237,6 @@ module mef-global {
           mandatory true;
           description
             "Performance Metric(PM): Time Interval (seconds).";
-        }
-        leaf start-time {
-          type string {
-            length "min..255";
-          }
-          mandatory true;
-          description
-            "Performance Metric(PM): Start DateTime for " +
-            "Time Intervals (YYYYMMDDHHHHZ)";
         }
         container pm-cos-name-entries {
           description
@@ -302,13 +293,12 @@ module mef-global {
                     "This is a friendly name for specific " +
                     "performance profile.";
                 }
-                choice one-way-performance {
+                choice one-way-performance-metric {
                   description
                     "Choice of different One-Way Performance " +
                     "Objectives";
                   case fd {
                     container one-way-frame-delay-pm {
-                      presence "Frame Delay Configured";
                       description
                       "one-way-frame-delay-pm";
                       leaf pm-percentile {
@@ -329,7 +319,6 @@ module mef-global {
                   }
                   case mfd {
                     container one-way-mean-frame-delay-pm {
-                      presence "Mean FD Configured";
                       description
                       "one-way-mean-frame-delay-pm";
                       leaf pm-objective {
@@ -343,7 +332,6 @@ module mef-global {
                   }
                   case fdr {
                     container one-way-frame-delay-range-pm {
-                      presence "FDR Configured";
                       description
                       "one-way-frame-delay-range-pm";
                       leaf pm-percentile {
@@ -366,7 +354,6 @@ module mef-global {
                   }
                   case ifdv {
                    container one-way-inter-frame-delay-variation-pm {
-                      presence "IFDV Configured";
                       description
                       "one-way-inter-frame-delay-variation-pm";
                       leaf pm-percentile {
@@ -397,37 +384,34 @@ module mef-global {
                   }
                   case flr {
                     container one-way-frame-loss-ratio-pm {
-                      presence "one-way-frame-loss-ratio-pm " +
-                      		"Configured";
                       description
                       "one-way-frame-loss-ratio-pm";
-                      leaf pm-objective {
-                        type uint64;
-                        units "ms";
-                        mandatory true;
-                        description
-                          "Frame Loss Ratio Performance " +
-                          "Objective.";
-                      }
+                      leaf pm-percentile {
+                          type mef-types:simple-percent;
+                          units "percent";
+                          mandatory true;
+                           description
+                            "Frame Loss Ratio Performance " +
+                            "Objective (Percentile).";
+                        }
                     }
                   }
                   case availability {
                     container one-way-availability-pm {
-                      presence "Availability Configured";
                       description
                       "one-way-availability-pm";
-                      leaf pm-objective {
-                        type uint64;
-                        mandatory true;
-                        description
+                      leaf pm-percentile {
+                          type mef-types:simple-percent;
+                          units "percent";
+                          mandatory true;
+                          description
                           "Availability Performance Metric " +
-                          "Objective";
-                      }
+                          "Objective (Percentile)";
+                        }
                     }
                   }
                   case hli {
                     container one-way-high-loss-interval-pm {
-                      presence "HLI Configured";
                       description
                       "one-way-high-loss-interval-pm";
                       leaf pm-objective {
@@ -441,7 +425,6 @@ module mef-global {
                   }
                   case chli {
                 container one-way-consecutive-high-loss-interval-pm {
-                      presence "CHLI Configured";
                       description
                       "one-way-consecutive-high-loss-interval-pm";
                       leaf consecutive-number-p {
@@ -481,7 +464,6 @@ module mef-global {
                   }
                   case cpm {
                     container one-way-composite-pm {
-                      presence "one-way-composite-pm Configured";
                       description
                         "one-way-composite-pm";
                       leaf cpi-threshold-u {
@@ -531,14 +513,12 @@ module mef-global {
                   }
                   case group-avail {
                     container one-way-group-availability-pm {
-                      presence "Group Availability Configured";
                       description "one-way-group-availability-pm";
-                      leaf min-number-of-if-to-be-available {
+                      leaf min-number-of-uni-pair-sets {
                         type uint64;
                         mandatory true;
                         description
-                          "Minimum number of ordered UNI pairs " +
-                          "that are to be available in the EVC.";
+                          "Minimum number of sets of ordered UNI pairs.";
                       }
                       leaf pm-objective {
                         type uint64;
@@ -557,8 +537,6 @@ module mef-global {
       }
     }
     container profiles {
-      presence "Use to confirm whether ANY profiles have " +
-      		"been configured";
       description
         "Global Profiles.";
       container cos-names {
