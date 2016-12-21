@@ -110,17 +110,17 @@ module mef-global {
         }
         leaf cir {
           type mef-types:bwp-ir-type;
-          units "kbits-per-sec";
+          units "bits-per-sec";
           default "0";
           description
             "This attribute identifies the Committed " +
-            "Information Rate (CIR) in Kilobits per second " +
+            "Information Rate (CIR) in bits per second " +
             "for one BWP flow. If the value is 0," +
             " then no guarantee is assumed.";
         }
         leaf cir-max {
           type mef-types:bwp-ir-type;
-          units "kbits-per-sec";
+          units "bits-per-sec";
           default "0";
           description
             "This attribute identifies the Maximum Committed " +
@@ -143,11 +143,11 @@ module mef-global {
         }
         leaf eir {
           type mef-types:bwp-ir-type;
-          units "kbits-per-sec";
+          units "bits-per-sec";
           default "0";
           description
             "This attribute identifies the Excess Information Rate" +
-            " (EIR) in Kilobits per second for one BWP flow. " +
+            " (EIR) in bits per second for one BWP flow. " +
             " This parameter limits the average rate " +
             "in bits per second of Service Frames that will be " +
             "declared Yellow by the Bandwidth Profile. If this " +
@@ -155,11 +155,11 @@ module mef-global {
         }
         leaf eir-max {
           type mef-types:bwp-ir-type;
-          units "kbits-per-sec";
+          units "bits-per-sec";
           default "0";
           description
             "This attribute identifies the Maximum Excess " +
-            "Information Rate (EIR) in Kilobits per second" +
+            "Information Rate (EIR) in bits per second" +
             " for one BWP flow. This parameter" +
             " limits the rate of tokens added to the excess " +
             "token bucket. If this value is 0, then no limit " +
@@ -212,7 +212,7 @@ module mef-global {
             "green Service Frames. In both cases the burst " +
             "size of the yellow service frames admitted to the " +
             "network is bounded by EBS.";
-          reference "[MEF23.1] Section 8.1.";
+          reference "[MEF10.3] Section 12.1.";
         }
       }
     }
@@ -585,17 +585,17 @@ module mef-global {
         description
           "Ingress Layer 2 Control Protocol (L2CP) Configuration" +
           " with CoS Names.";
-        list l2cp-profile {
+        list profile {
           key "id";
           description
             "A list of global profiles for Layer 2 " +
             "Control Processing.";
           reference "[MEF10.3] Section 8.5.";
-          container l2cps {
+          container cos-maps {
             description
               "Layer 2 Control Protocol (L2CP) Profiles " +
               "for Classes of Service (CoS).";
-            list l2cp {
+            list cos-map {
               key "dest-mac-addr peering-proto-name";
               description
                 "L2CP Destination MAC Address.";
@@ -673,17 +673,17 @@ module mef-global {
         description
           "Egress Layer 2 Control Protocol (L2CP) " +
           "Configuration with EEC Names.";
-        list l2cp-profile {
+        list profile {
           key "id";
           description
             "A list of global profiles for Layer 2 " +
             "Control Processing.";
           reference "[MEF10.3] Section 8.5.";
-          container l2cps {
+          container eec-maps {
             description
               "Layer 2 Control Protocol (L2CP) Profiles " +
               "or Egress Equivalence Classes.";
-            list l2cp {
+            list eec-map {
               key "dest-mac-addr peering-proto-name";
               description
                 "L2CP Destination MAC Address.";
@@ -759,17 +759,17 @@ module mef-global {
         description
           "Layer 2 Control Protocol (L2CP) Configuration " +
           "for Peering Lists.";
-        list l2cp-profile {
+        list profile {
           key "id";
           description
             "A list of global profiles for Layer 2 " +
             "Control Processing.";
           reference "[MEF10.3] Section 8.5.";
-          container l2cps {
+          container peering-maps {
             description
               "Layer 2 Control Protocol (L2CP) Profiles " +
               "for Peering.";
-            list l2cp {
+            list peering-map {
               key "dest-mac-addr peering-proto-name";
               description
                 "L2CP Destination MAC Address.";
@@ -839,12 +839,6 @@ module mef-global {
               "Profile ID.";
             reference "[MEF10.3] [R88]. [MEF16].";
           }
-          leaf user-label {
-            type mef-types:identifier45;
-            description
-              "This attribute is a friendly name for the specific " +
-              "ELMI Category described within this profile.";
-          }
           leaf status-error-threshold {
             type mef-types:elmi-status-error-threshold-type;
             default "4";
@@ -856,6 +850,7 @@ module mef-global {
           leaf polling-timer {
             type mef-types:elmi-polling-timer-type;
             default "10";
+            units "seconds";
             description
               "The timer started after tranmitting a Status " +
               "Enquiry. If the timer expires, record the error if" +
@@ -866,6 +861,7 @@ module mef-global {
           leaf polling-verification-timer {
             type mef-types:elmi-polling-verification-timer-type;
             default "15";
+            units "seconds";
             description
               "The type used for a timer started after tranmitting" +
               " a Status Message. If a Status Enquiry is recieved" +
@@ -892,7 +888,7 @@ module mef-global {
           leaf l2cp-eec-id {
             type leafref {
               path "/mef-global:mef-global/profiles/l2cp-eec" +
-              		"/l2cp-profile/id";
+              		"/profile/id";
             }
             description
               "L2CP Profile Identifier";
@@ -1098,7 +1094,7 @@ module mef-global {
           leaf l2cp-cos-id {
             type leafref {
               path "/mef-global:mef-global/profiles/" +
-              		"l2cp-cos/l2cp-profile/id";
+              		"l2cp-cos/profile/id";
             }
             description
               "L2CP Profile Identifier";

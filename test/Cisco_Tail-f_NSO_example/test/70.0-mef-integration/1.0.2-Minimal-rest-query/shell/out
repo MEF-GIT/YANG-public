@@ -2540,11 +2540,11 @@
         ]
       },
       "l2cp-cos": {
-        "l2cp-profile": [
+        "profile": [
           {
             "id": "MEF103_Table3PlusCoS",
-            "l2cps": {
-              "l2cp": [
+            "cos-maps": {
+              "cos-map": [
                 {
                   "dest-mac-addr": "01:80:c2:00:00:00",
                   "peering-proto-name": "STP/RSTP/MSTP",
@@ -2633,8 +2633,8 @@
           },
           {
             "id": "PCCWG_L2CP_CoS",
-            "l2cps": {
-              "l2cp": [
+            "cos-maps": {
+              "cos-map": [
                 {
                   "dest-mac-addr": "01:80:c2:00:00:00",
                   "peering-proto-name": "STP/RSTP/MSTP",
@@ -2724,11 +2724,11 @@
         ]
       },
       "l2cp-eec": {
-        "l2cp-profile": [
+        "profile": [
           {
             "id": "MEF103_Table3PlusEEC",
-            "l2cps": {
-              "l2cp": [
+            "eec-maps": {
+              "eec-map": [
                 {
                   "dest-mac-addr": "01:80:c2:00:00:00",
                   "peering-proto-name": "STP/RSTP/MSTP",
@@ -2817,8 +2817,8 @@
           },
           {
             "id": "PCCWG_L2CP_EEC",
-            "l2cps": {
-              "l2cp": [
+            "eec-maps": {
+              "eec-map": [
                 {
                   "dest-mac-addr": "01:80:c2:00:00:00",
                   "peering-proto-name": "STP/RSTP/MSTP",
@@ -2908,11 +2908,11 @@
         ]
       },
       "l2cp-peering": {
-        "l2cp-profile": [
+        "profile": [
           {
             "id": "L2CP_Peering_Profile1",
-            "l2cps": {
-              "l2cp": [
+            "peering-maps": {
+              "peering-map": [
                 {
                   "dest-mac-addr": "01:80:c2:00:00:03",
                   "peering-proto-name": "Port Authentication",
@@ -2949,8 +2949,8 @@
           },
           {
             "id": "PCCWG_L2CP_Peering_Profile1",
-            "l2cps": {
-              "l2cp": [
+            "peering-maps": {
+              "peering-map": [
                 {
                   "dest-mac-addr": "01:80:c2:00:00:03",
                   "peering-proto-name": "Port Authentication",
@@ -2991,28 +2991,24 @@
         "elmi-profile": [
           {
             "id": "elmi-test1",
-            "user-label": "elmi-test1",
             "status-error-threshold": 7,
             "polling-timer": 22,
             "polling-verification-timer": 23
           },
           {
             "id": "elmi-test2",
-            "user-label": "elmi-test2",
             "status-error-threshold": 6,
             "polling-timer": 20,
             "polling-verification-timer": 21
           },
           {
             "id": "pccwg-elmi-test1",
-            "user-label": "elmi-test1",
             "status-error-threshold": 7,
             "polling-timer": 22,
             "polling-verification-timer": 23
           },
           {
             "id": "pccwg-elmi-test2",
-            "user-label": "elmi-test2",
             "status-error-threshold": 6,
             "polling-timer": 20,
             "polling-verification-timer": 21

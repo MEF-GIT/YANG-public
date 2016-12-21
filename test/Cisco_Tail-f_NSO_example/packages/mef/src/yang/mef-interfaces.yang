@@ -760,7 +760,7 @@ module mef-interfaces {
           type leafref {
             path "/mef-global:mef-global/mef-global:profiles/" +
             		"mef-global:l2cp-peering/mef-global:" +
-            		"l2cp-profile/mef-global:id";
+            		"profile/mef-global:id";
           }
           description
             "L2CP Peering Profile for this UNI. This profile " +
