@@ -925,18 +925,18 @@ MEF GET Config ALLs
           </bwp-flow-parameter-set>
         </egress-bwp-flows-parameter-set>
         <l2cp-cos>
-          <l2cp-profile>
+          <profile>
             <id>MEF103_Table3PlusCoS</id>
-            <l2cps>
-              <l2cp>
+            <cos-maps>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:00</dest-mac-addr>
                 <peering-proto-name>STP/RSTP/MSTP</peering-proto-name>
                 <protocol>llc</protocol>
                 <protocol-id>42</protocol-id>
                 <cos-name>Krypton</cos-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:01</dest-mac-addr>
                 <peering-proto-name>802.3 MAC Control Pause</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -944,8 +944,8 @@ MEF GET Config ALLs
                 <cos-name>Krypton</cos-name>
                 <handling>discard</handling>
                 <subtype>00:01</subtype>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>ESMC</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -953,8 +953,8 @@ MEF GET Config ALLs
                 <cos-name>Krypton</cos-name>
                 <handling>pass</handling>
                 <subtype>0a</subtype>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>Link OAM</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -962,69 +962,69 @@ MEF GET Config ALLs
                 <cos-name>Krypton</cos-name>
                 <handling>pass</handling>
                 <subtype>03</subtype>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:03</dest-mac-addr>
                 <peering-proto-name>Port Authentication</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:8e</protocol-id>
                 <cos-name>Krypton</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:07</dest-mac-addr>
                 <peering-proto-name>E-LMI</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:ee</protocol-id>
                 <cos-name>Krypton</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>LLDP</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:cc</protocol-id>
                 <cos-name>Krypton</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>PTP Peer Delay</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:f7</protocol-id>
                 <cos-name>Krypton</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:32</dest-mac-addr>
                 <peering-proto-name>Example3 of a custom MAC</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <cos-name>Neon</cos-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:3f</dest-mac-addr>
                 <peering-proto-name>Example of SOAM Service Frame</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>89:02</protocol-id>
                 <cos-name>Neon</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-            </l2cps>
+              </cos-map>
+            </cos-maps>
             <user-label>Ingress L2CP Profile with CoS Names</user-label>
-          </l2cp-profile>
-          <l2cp-profile>
+          </profile>
+          <profile>
             <id>PCCWG_L2CP_CoS</id>
-            <l2cps>
-              <l2cp>
+            <cos-maps>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:00</dest-mac-addr>
                 <peering-proto-name>STP/RSTP/MSTP</peering-proto-name>
                 <protocol>llc</protocol>
                 <protocol-id>42</protocol-id>
                 <cos-name>pccwg_gold</cos-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:01</dest-mac-addr>
                 <peering-proto-name>802.3 MAC Control Pause</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -1032,8 +1032,8 @@ MEF GET Config ALLs
                 <cos-name>pccwg_gold</cos-name>
                 <handling>discard</handling>
                 <subtype>00:01</subtype>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>ESMC</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -1041,8 +1041,8 @@ MEF GET Config ALLs
                 <cos-name>pccwg_gold</cos-name>
                 <handling>pass</handling>
                 <subtype>0a</subtype>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>Link OAM</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -1050,71 +1050,71 @@ MEF GET Config ALLs
                 <cos-name>pccwg_gold</cos-name>
                 <handling>pass</handling>
                 <subtype>03</subtype>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:03</dest-mac-addr>
                 <peering-proto-name>Port Authentication</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:8e</protocol-id>
                 <cos-name>pccwg_gold</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:07</dest-mac-addr>
                 <peering-proto-name>E-LMI</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:ee</protocol-id>
                 <cos-name>pccwg_gold</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>LLDP</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:cc</protocol-id>
                 <cos-name>pccwg_gold</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>PTP Peer Delay</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:f7</protocol-id>
                 <cos-name>pccwg_gold</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:32</dest-mac-addr>
                 <peering-proto-name>Example3 of a custom MAC</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <cos-name>pccwg_bronze</cos-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:3f</dest-mac-addr>
                 <peering-proto-name>Example of SOAM Service Frame</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>89:02</protocol-id>
                 <cos-name>pccwg_bronze</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-            </l2cps>
+              </cos-map>
+            </cos-maps>
             <user-label>Ingress L2CP Profile with CoS Names</user-label>
-          </l2cp-profile>
+          </profile>
         </l2cp-cos>
         <l2cp-eec>
-          <l2cp-profile>
+          <profile>
             <id>MEF103_Table3PlusEEC</id>
-            <l2cps>
-              <l2cp>
+            <eec-maps>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:00</dest-mac-addr>
                 <peering-proto-name>STP/RSTP/MSTP</peering-proto-name>
                 <protocol>llc</protocol>
                 <protocol-id>42</protocol-id>
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:01</dest-mac-addr>
                 <peering-proto-name>802.3 MAC Control Pause</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -1122,8 +1122,8 @@ MEF GET Config ALLs
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>discard</handling>
                 <subtype>00:01</subtype>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>ESMC</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -1131,8 +1131,8 @@ MEF GET Config ALLs
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>pass</handling>
                 <subtype>0a</subtype>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>Link OAM</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -1140,69 +1140,69 @@ MEF GET Config ALLs
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>pass</handling>
                 <subtype>03</subtype>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:03</dest-mac-addr>
                 <peering-proto-name>Port Authentication</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:8e</protocol-id>
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:07</dest-mac-addr>
                 <peering-proto-name>E-LMI</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:ee</protocol-id>
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>LLDP</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:cc</protocol-id>
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>PTP Peer Delay</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:f7</protocol-id>
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:32</dest-mac-addr>
                 <peering-proto-name>Example3 of a custom MAC</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <eec-name>EEC-Neon</eec-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:3f</dest-mac-addr>
                 <peering-proto-name>Example of SOAM Service Frame</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>89:02</protocol-id>
                 <eec-name>EEC-Neon</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-            </l2cps>
+              </eec-map>
+            </eec-maps>
             <user-label>Egress L2CP Profile with EEC Names</user-label>
-          </l2cp-profile>
-          <l2cp-profile>
+          </profile>
+          <profile>
             <id>PCCWG_L2CP_EEC</id>
-            <l2cps>
-              <l2cp>
+            <eec-maps>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:00</dest-mac-addr>
                 <peering-proto-name>STP/RSTP/MSTP</peering-proto-name>
                 <protocol>llc</protocol>
                 <protocol-id>42</protocol-id>
                 <eec-name>pccwg_gold</eec-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:01</dest-mac-addr>
                 <peering-proto-name>802.3 MAC Control Pause</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -1210,8 +1210,8 @@ MEF GET Config ALLs
                 <eec-name>pccwg_gold</eec-name>
                 <handling>discard</handling>
                 <subtype>00:01</subtype>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>ESMC</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -1219,8 +1219,8 @@ MEF GET Config ALLs
                 <eec-name>pccwg_gold</eec-name>
                 <handling>pass</handling>
                 <subtype>0a</subtype>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>Link OAM</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -1228,157 +1228,153 @@ MEF GET Config ALLs
                 <eec-name>pccwg_gold</eec-name>
                 <handling>pass</handling>
                 <subtype>03</subtype>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:03</dest-mac-addr>
                 <peering-proto-name>Port Authentication</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:8e</protocol-id>
                 <eec-name>pccwg_gold</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:07</dest-mac-addr>
                 <peering-proto-name>E-LMI</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:ee</protocol-id>
                 <eec-name>pccwg_gold</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>LLDP</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:cc</protocol-id>
                 <eec-name>pccwg_gold</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>PTP Peer Delay</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:f7</protocol-id>
                 <eec-name>pccwg_gold</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:32</dest-mac-addr>
                 <peering-proto-name>Example3 of a custom MAC</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <eec-name>pccwg_bronze</eec-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:3f</dest-mac-addr>
                 <peering-proto-name>Example of SOAM Service Frame</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>89:02</protocol-id>
                 <eec-name>pccwg_bronze</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-            </l2cps>
+              </eec-map>
+            </eec-maps>
             <user-label>Egress L2CP Profile with EEC Names</user-label>
-          </l2cp-profile>
+          </profile>
         </l2cp-eec>
         <l2cp-peering>
-          <l2cp-profile>
+          <profile>
             <id>L2CP_Peering_Profile1</id>
-            <l2cps>
-              <l2cp>
+            <peering-maps>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:03</dest-mac-addr>
                 <peering-proto-name>Port Authentication</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:8e</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:07</dest-mac-addr>
                 <peering-proto-name>E-LMI</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:ee</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>LLDP</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:cc</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>PTP Peer Delay</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:f7</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:3f</dest-mac-addr>
                 <peering-proto-name>Example of SOAM Service Frame</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>89:02</protocol-id>
-              </l2cp>
-            </l2cps>
+              </peering-map>
+            </peering-maps>
             <user-label>L2CP Peering Profile #1</user-label>
-          </l2cp-profile>
-          <l2cp-profile>
+          </profile>
+          <profile>
             <id>PCCWG_L2CP_Peering_Profile1</id>
-            <l2cps>
-              <l2cp>
+            <peering-maps>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:03</dest-mac-addr>
                 <peering-proto-name>Port Authentication</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:8e</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:07</dest-mac-addr>
                 <peering-proto-name>E-LMI</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:ee</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>LLDP</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:cc</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>PTP Peer Delay</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:f7</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:3f</dest-mac-addr>
                 <peering-proto-name>Example of SOAM Service Frame</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>89:02</protocol-id>
-              </l2cp>
-            </l2cps>
+              </peering-map>
+            </peering-maps>
             <user-label>L2CP Peering Profile #1</user-label>
-          </l2cp-profile>
+          </profile>
         </l2cp-peering>
         <elmi>
           <elmi-profile>
             <id>elmi-test1</id>
-            <user-label>elmi-test1</user-label>
             <status-error-threshold>7</status-error-threshold>
             <polling-timer>22</polling-timer>
             <polling-verification-timer>23</polling-verification-timer>
           </elmi-profile>
           <elmi-profile>
             <id>elmi-test2</id>
-            <user-label>elmi-test2</user-label>
             <status-error-threshold>6</status-error-threshold>
             <polling-timer>20</polling-timer>
             <polling-verification-timer>21</polling-verification-timer>
           </elmi-profile>
           <elmi-profile>
             <id>pccwg-elmi-test1</id>
-            <user-label>elmi-test1</user-label>
             <status-error-threshold>7</status-error-threshold>
             <polling-timer>22</polling-timer>
             <polling-verification-timer>23</polling-verification-timer>
           </elmi-profile>
           <elmi-profile>
             <id>pccwg-elmi-test2</id>
-            <user-label>elmi-test2</user-label>
             <status-error-threshold>6</status-error-threshold>
             <polling-timer>20</polling-timer>
             <polling-verification-timer>21</polling-verification-timer>
@@ -6619,18 +6615,18 @@ MEF GET Config ALLs
           </bwp-flow-parameter-set>
         </egress-bwp-flows-parameter-set>
         <l2cp-cos>
-          <l2cp-profile>
+          <profile>
             <id>MEF103_Table3PlusCoS</id>
-            <l2cps>
-              <l2cp>
+            <cos-maps>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:00</dest-mac-addr>
                 <peering-proto-name>STP/RSTP/MSTP</peering-proto-name>
                 <protocol>llc</protocol>
                 <protocol-id>42</protocol-id>
                 <cos-name>Krypton</cos-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:01</dest-mac-addr>
                 <peering-proto-name>802.3 MAC Control Pause</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -6638,8 +6634,8 @@ MEF GET Config ALLs
                 <cos-name>Krypton</cos-name>
                 <handling>discard</handling>
                 <subtype>00:01</subtype>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>ESMC</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -6647,8 +6643,8 @@ MEF GET Config ALLs
                 <cos-name>Krypton</cos-name>
                 <handling>pass</handling>
                 <subtype>0a</subtype>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>Link OAM</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -6656,69 +6652,69 @@ MEF GET Config ALLs
                 <cos-name>Krypton</cos-name>
                 <handling>pass</handling>
                 <subtype>03</subtype>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:03</dest-mac-addr>
                 <peering-proto-name>Port Authentication</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:8e</protocol-id>
                 <cos-name>Krypton</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:07</dest-mac-addr>
                 <peering-proto-name>E-LMI</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:ee</protocol-id>
                 <cos-name>Krypton</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>LLDP</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:cc</protocol-id>
                 <cos-name>Krypton</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>PTP Peer Delay</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:f7</protocol-id>
                 <cos-name>Krypton</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:32</dest-mac-addr>
                 <peering-proto-name>Example3 of a custom MAC</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <cos-name>Neon</cos-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:3f</dest-mac-addr>
                 <peering-proto-name>Example of SOAM Service Frame</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>89:02</protocol-id>
                 <cos-name>Neon</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-            </l2cps>
+              </cos-map>
+            </cos-maps>
             <user-label>Ingress L2CP Profile with CoS Names</user-label>
-          </l2cp-profile>
-          <l2cp-profile>
+          </profile>
+          <profile>
             <id>PCCWG_L2CP_CoS</id>
-            <l2cps>
-              <l2cp>
+            <cos-maps>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:00</dest-mac-addr>
                 <peering-proto-name>STP/RSTP/MSTP</peering-proto-name>
                 <protocol>llc</protocol>
                 <protocol-id>42</protocol-id>
                 <cos-name>pccwg_gold</cos-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:01</dest-mac-addr>
                 <peering-proto-name>802.3 MAC Control Pause</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -6726,8 +6722,8 @@ MEF GET Config ALLs
                 <cos-name>pccwg_gold</cos-name>
                 <handling>discard</handling>
                 <subtype>00:01</subtype>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>ESMC</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -6735,8 +6731,8 @@ MEF GET Config ALLs
                 <cos-name>pccwg_gold</cos-name>
                 <handling>pass</handling>
                 <subtype>0a</subtype>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>Link OAM</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -6744,71 +6740,71 @@ MEF GET Config ALLs
                 <cos-name>pccwg_gold</cos-name>
                 <handling>pass</handling>
                 <subtype>03</subtype>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:03</dest-mac-addr>
                 <peering-proto-name>Port Authentication</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:8e</protocol-id>
                 <cos-name>pccwg_gold</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:07</dest-mac-addr>
                 <peering-proto-name>E-LMI</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:ee</protocol-id>
                 <cos-name>pccwg_gold</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>LLDP</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:cc</protocol-id>
                 <cos-name>pccwg_gold</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>PTP Peer Delay</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:f7</protocol-id>
                 <cos-name>pccwg_gold</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:32</dest-mac-addr>
                 <peering-proto-name>Example3 of a custom MAC</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <cos-name>pccwg_bronze</cos-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:3f</dest-mac-addr>
                 <peering-proto-name>Example of SOAM Service Frame</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>89:02</protocol-id>
                 <cos-name>pccwg_bronze</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-            </l2cps>
+              </cos-map>
+            </cos-maps>
             <user-label>Ingress L2CP Profile with CoS Names</user-label>
-          </l2cp-profile>
+          </profile>
         </l2cp-cos>
         <l2cp-eec>
-          <l2cp-profile>
+          <profile>
             <id>MEF103_Table3PlusEEC</id>
-            <l2cps>
-              <l2cp>
+            <eec-maps>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:00</dest-mac-addr>
                 <peering-proto-name>STP/RSTP/MSTP</peering-proto-name>
                 <protocol>llc</protocol>
                 <protocol-id>42</protocol-id>
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:01</dest-mac-addr>
                 <peering-proto-name>802.3 MAC Control Pause</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -6816,8 +6812,8 @@ MEF GET Config ALLs
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>discard</handling>
                 <subtype>00:01</subtype>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>ESMC</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -6825,8 +6821,8 @@ MEF GET Config ALLs
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>pass</handling>
                 <subtype>0a</subtype>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>Link OAM</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -6834,69 +6830,69 @@ MEF GET Config ALLs
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>pass</handling>
                 <subtype>03</subtype>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:03</dest-mac-addr>
                 <peering-proto-name>Port Authentication</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:8e</protocol-id>
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:07</dest-mac-addr>
                 <peering-proto-name>E-LMI</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:ee</protocol-id>
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>LLDP</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:cc</protocol-id>
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>PTP Peer Delay</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:f7</protocol-id>
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:32</dest-mac-addr>
                 <peering-proto-name>Example3 of a custom MAC</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <eec-name>EEC-Neon</eec-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:3f</dest-mac-addr>
                 <peering-proto-name>Example of SOAM Service Frame</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>89:02</protocol-id>
                 <eec-name>EEC-Neon</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-            </l2cps>
+              </eec-map>
+            </eec-maps>
             <user-label>Egress L2CP Profile with EEC Names</user-label>
-          </l2cp-profile>
-          <l2cp-profile>
+          </profile>
+          <profile>
             <id>PCCWG_L2CP_EEC</id>
-            <l2cps>
-              <l2cp>
+            <eec-maps>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:00</dest-mac-addr>
                 <peering-proto-name>STP/RSTP/MSTP</peering-proto-name>
                 <protocol>llc</protocol>
                 <protocol-id>42</protocol-id>
                 <eec-name>pccwg_gold</eec-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:01</dest-mac-addr>
                 <peering-proto-name>802.3 MAC Control Pause</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -6904,8 +6900,8 @@ MEF GET Config ALLs
                 <eec-name>pccwg_gold</eec-name>
                 <handling>discard</handling>
                 <subtype>00:01</subtype>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>ESMC</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -6913,8 +6909,8 @@ MEF GET Config ALLs
                 <eec-name>pccwg_gold</eec-name>
                 <handling>pass</handling>
                 <subtype>0a</subtype>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>Link OAM</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -6922,157 +6918,153 @@ MEF GET Config ALLs
                 <eec-name>pccwg_gold</eec-name>
                 <handling>pass</handling>
                 <subtype>03</subtype>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:03</dest-mac-addr>
                 <peering-proto-name>Port Authentication</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:8e</protocol-id>
                 <eec-name>pccwg_gold</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:07</dest-mac-addr>
                 <peering-proto-name>E-LMI</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:ee</protocol-id>
                 <eec-name>pccwg_gold</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>LLDP</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:cc</protocol-id>
                 <eec-name>pccwg_gold</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>PTP Peer Delay</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:f7</protocol-id>
                 <eec-name>pccwg_gold</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:32</dest-mac-addr>
                 <peering-proto-name>Example3 of a custom MAC</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <eec-name>pccwg_bronze</eec-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:3f</dest-mac-addr>
                 <peering-proto-name>Example of SOAM Service Frame</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>89:02</protocol-id>
                 <eec-name>pccwg_bronze</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-            </l2cps>
+              </eec-map>
+            </eec-maps>
             <user-label>Egress L2CP Profile with EEC Names</user-label>
-          </l2cp-profile>
+          </profile>
         </l2cp-eec>
         <l2cp-peering>
-          <l2cp-profile>
+          <profile>
             <id>L2CP_Peering_Profile1</id>
-            <l2cps>
-              <l2cp>
+            <peering-maps>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:03</dest-mac-addr>
                 <peering-proto-name>Port Authentication</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:8e</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:07</dest-mac-addr>
                 <peering-proto-name>E-LMI</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:ee</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>LLDP</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:cc</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>PTP Peer Delay</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:f7</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:3f</dest-mac-addr>
                 <peering-proto-name>Example of SOAM Service Frame</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>89:02</protocol-id>
-              </l2cp>
-            </l2cps>
+              </peering-map>
+            </peering-maps>
             <user-label>L2CP Peering Profile #1</user-label>
-          </l2cp-profile>
-          <l2cp-profile>
+          </profile>
+          <profile>
             <id>PCCWG_L2CP_Peering_Profile1</id>
-            <l2cps>
-              <l2cp>
+            <peering-maps>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:03</dest-mac-addr>
                 <peering-proto-name>Port Authentication</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:8e</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:07</dest-mac-addr>
                 <peering-proto-name>E-LMI</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:ee</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>LLDP</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:cc</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>PTP Peer Delay</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:f7</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:3f</dest-mac-addr>
                 <peering-proto-name>Example of SOAM Service Frame</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>89:02</protocol-id>
-              </l2cp>
-            </l2cps>
+              </peering-map>
+            </peering-maps>
             <user-label>L2CP Peering Profile #1</user-label>
-          </l2cp-profile>
+          </profile>
         </l2cp-peering>
         <elmi>
           <elmi-profile>
             <id>elmi-test1</id>
-            <user-label>elmi-test1</user-label>
             <status-error-threshold>7</status-error-threshold>
             <polling-timer>22</polling-timer>
             <polling-verification-timer>23</polling-verification-timer>
           </elmi-profile>
           <elmi-profile>
             <id>elmi-test2</id>
-            <user-label>elmi-test2</user-label>
             <status-error-threshold>6</status-error-threshold>
             <polling-timer>20</polling-timer>
             <polling-verification-timer>21</polling-verification-timer>
           </elmi-profile>
           <elmi-profile>
             <id>pccwg-elmi-test1</id>
-            <user-label>elmi-test1</user-label>
             <status-error-threshold>7</status-error-threshold>
             <polling-timer>22</polling-timer>
             <polling-verification-timer>23</polling-verification-timer>
           </elmi-profile>
           <elmi-profile>
             <id>pccwg-elmi-test2</id>
-            <user-label>elmi-test2</user-label>
             <status-error-threshold>6</status-error-threshold>
             <polling-timer>20</polling-timer>
             <polling-verification-timer>21</polling-verification-timer>
@@ -13572,18 +13564,18 @@ MEF GET Config ALLs
           </bwp-flow-parameter-set>
         </egress-bwp-flows-parameter-set>
         <l2cp-cos>
-          <l2cp-profile>
+          <profile>
             <id>MEF103_Table3PlusCoS</id>
-            <l2cps>
-              <l2cp>
+            <cos-maps>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:00</dest-mac-addr>
                 <peering-proto-name>STP/RSTP/MSTP</peering-proto-name>
                 <protocol>llc</protocol>
                 <protocol-id>42</protocol-id>
                 <cos-name>Krypton</cos-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:01</dest-mac-addr>
                 <peering-proto-name>802.3 MAC Control Pause</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -13591,8 +13583,8 @@ MEF GET Config ALLs
                 <cos-name>Krypton</cos-name>
                 <handling>discard</handling>
                 <subtype>00:01</subtype>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>ESMC</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -13600,8 +13592,8 @@ MEF GET Config ALLs
                 <cos-name>Krypton</cos-name>
                 <handling>pass</handling>
                 <subtype>0a</subtype>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>Link OAM</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -13609,69 +13601,69 @@ MEF GET Config ALLs
                 <cos-name>Krypton</cos-name>
                 <handling>pass</handling>
                 <subtype>03</subtype>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:03</dest-mac-addr>
                 <peering-proto-name>Port Authentication</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:8e</protocol-id>
                 <cos-name>Krypton</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:07</dest-mac-addr>
                 <peering-proto-name>E-LMI</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:ee</protocol-id>
                 <cos-name>Krypton</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>LLDP</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:cc</protocol-id>
                 <cos-name>Krypton</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>PTP Peer Delay</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:f7</protocol-id>
                 <cos-name>Krypton</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:32</dest-mac-addr>
                 <peering-proto-name>Example3 of a custom MAC</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <cos-name>Neon</cos-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:3f</dest-mac-addr>
                 <peering-proto-name>Example of SOAM Service Frame</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>89:02</protocol-id>
                 <cos-name>Neon</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-            </l2cps>
+              </cos-map>
+            </cos-maps>
             <user-label>Ingress L2CP Profile with CoS Names</user-label>
-          </l2cp-profile>
-          <l2cp-profile>
+          </profile>
+          <profile>
             <id>PCCWG_L2CP_CoS</id>
-            <l2cps>
-              <l2cp>
+            <cos-maps>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:00</dest-mac-addr>
                 <peering-proto-name>STP/RSTP/MSTP</peering-proto-name>
                 <protocol>llc</protocol>
                 <protocol-id>42</protocol-id>
                 <cos-name>pccwg_gold</cos-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:01</dest-mac-addr>
                 <peering-proto-name>802.3 MAC Control Pause</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -13679,8 +13671,8 @@ MEF GET Config ALLs
                 <cos-name>pccwg_gold</cos-name>
                 <handling>discard</handling>
                 <subtype>00:01</subtype>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>ESMC</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -13688,8 +13680,8 @@ MEF GET Config ALLs
                 <cos-name>pccwg_gold</cos-name>
                 <handling>pass</handling>
                 <subtype>0a</subtype>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>Link OAM</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -13697,71 +13689,71 @@ MEF GET Config ALLs
                 <cos-name>pccwg_gold</cos-name>
                 <handling>pass</handling>
                 <subtype>03</subtype>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:03</dest-mac-addr>
                 <peering-proto-name>Port Authentication</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:8e</protocol-id>
                 <cos-name>pccwg_gold</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:07</dest-mac-addr>
                 <peering-proto-name>E-LMI</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:ee</protocol-id>
                 <cos-name>pccwg_gold</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>LLDP</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:cc</protocol-id>
                 <cos-name>pccwg_gold</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>PTP Peer Delay</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:f7</protocol-id>
                 <cos-name>pccwg_gold</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:32</dest-mac-addr>
                 <peering-proto-name>Example3 of a custom MAC</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <cos-name>pccwg_bronze</cos-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </cos-map>
+              <cos-map>
                 <dest-mac-addr>01:80:c2:00:00:3f</dest-mac-addr>
                 <peering-proto-name>Example of SOAM Service Frame</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>89:02</protocol-id>
                 <cos-name>pccwg_bronze</cos-name>
                 <handling>peer</handling>
-              </l2cp>
-            </l2cps>
+              </cos-map>
+            </cos-maps>
             <user-label>Ingress L2CP Profile with CoS Names</user-label>
-          </l2cp-profile>
+          </profile>
         </l2cp-cos>
         <l2cp-eec>
-          <l2cp-profile>
+          <profile>
             <id>MEF103_Table3PlusEEC</id>
-            <l2cps>
-              <l2cp>
+            <eec-maps>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:00</dest-mac-addr>
                 <peering-proto-name>STP/RSTP/MSTP</peering-proto-name>
                 <protocol>llc</protocol>
                 <protocol-id>42</protocol-id>
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:01</dest-mac-addr>
                 <peering-proto-name>802.3 MAC Control Pause</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -13769,8 +13761,8 @@ MEF GET Config ALLs
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>discard</handling>
                 <subtype>00:01</subtype>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>ESMC</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -13778,8 +13770,8 @@ MEF GET Config ALLs
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>pass</handling>
                 <subtype>0a</subtype>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>Link OAM</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -13787,69 +13779,69 @@ MEF GET Config ALLs
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>pass</handling>
                 <subtype>03</subtype>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:03</dest-mac-addr>
                 <peering-proto-name>Port Authentication</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:8e</protocol-id>
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:07</dest-mac-addr>
                 <peering-proto-name>E-LMI</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:ee</protocol-id>
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>LLDP</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:cc</protocol-id>
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>PTP Peer Delay</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:f7</protocol-id>
                 <eec-name>EEC-Krypton</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:32</dest-mac-addr>
                 <peering-proto-name>Example3 of a custom MAC</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <eec-name>EEC-Neon</eec-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:3f</dest-mac-addr>
                 <peering-proto-name>Example of SOAM Service Frame</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>89:02</protocol-id>
                 <eec-name>EEC-Neon</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-            </l2cps>
+              </eec-map>
+            </eec-maps>
             <user-label>Egress L2CP Profile with EEC Names</user-label>
-          </l2cp-profile>
-          <l2cp-profile>
+          </profile>
+          <profile>
             <id>PCCWG_L2CP_EEC</id>
-            <l2cps>
-              <l2cp>
+            <eec-maps>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:00</dest-mac-addr>
                 <peering-proto-name>STP/RSTP/MSTP</peering-proto-name>
                 <protocol>llc</protocol>
                 <protocol-id>42</protocol-id>
                 <eec-name>pccwg_gold</eec-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:01</dest-mac-addr>
                 <peering-proto-name>802.3 MAC Control Pause</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -13857,8 +13849,8 @@ MEF GET Config ALLs
                 <eec-name>pccwg_gold</eec-name>
                 <handling>discard</handling>
                 <subtype>00:01</subtype>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>ESMC</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -13866,8 +13858,8 @@ MEF GET Config ALLs
                 <eec-name>pccwg_gold</eec-name>
                 <handling>pass</handling>
                 <subtype>0a</subtype>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:02</dest-mac-addr>
                 <peering-proto-name>Link OAM</peering-proto-name>
                 <protocol>ethertype</protocol>
@@ -13875,157 +13867,153 @@ MEF GET Config ALLs
                 <eec-name>pccwg_gold</eec-name>
                 <handling>pass</handling>
                 <subtype>03</subtype>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:03</dest-mac-addr>
                 <peering-proto-name>Port Authentication</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:8e</protocol-id>
                 <eec-name>pccwg_gold</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:07</dest-mac-addr>
                 <peering-proto-name>E-LMI</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:ee</protocol-id>
                 <eec-name>pccwg_gold</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>LLDP</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:cc</protocol-id>
                 <eec-name>pccwg_gold</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>PTP Peer Delay</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:f7</protocol-id>
                 <eec-name>pccwg_gold</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:32</dest-mac-addr>
                 <peering-proto-name>Example3 of a custom MAC</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <eec-name>pccwg_bronze</eec-name>
                 <handling>pass</handling>
-              </l2cp>
-              <l2cp>
+              </eec-map>
+              <eec-map>
                 <dest-mac-addr>01:80:c2:00:00:3f</dest-mac-addr>
                 <peering-proto-name>Example of SOAM Service Frame</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>89:02</protocol-id>
                 <eec-name>pccwg_bronze</eec-name>
                 <handling>peer</handling>
-              </l2cp>
-            </l2cps>
+              </eec-map>
+            </eec-maps>
             <user-label>Egress L2CP Profile with EEC Names</user-label>
-          </l2cp-profile>
+          </profile>
         </l2cp-eec>
         <l2cp-peering>
-          <l2cp-profile>
+          <profile>
             <id>L2CP_Peering_Profile1</id>
-            <l2cps>
-              <l2cp>
+            <peering-maps>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:03</dest-mac-addr>
                 <peering-proto-name>Port Authentication</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:8e</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:07</dest-mac-addr>
                 <peering-proto-name>E-LMI</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:ee</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>LLDP</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:cc</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>PTP Peer Delay</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:f7</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:3f</dest-mac-addr>
                 <peering-proto-name>Example of SOAM Service Frame</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>89:02</protocol-id>
-              </l2cp>
-            </l2cps>
+              </peering-map>
+            </peering-maps>
             <user-label>L2CP Peering Profile #1</user-label>
-          </l2cp-profile>
-          <l2cp-profile>
+          </profile>
+          <profile>
             <id>PCCWG_L2CP_Peering_Profile1</id>
-            <l2cps>
-              <l2cp>
+            <peering-maps>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:03</dest-mac-addr>
                 <peering-proto-name>Port Authentication</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:8e</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:07</dest-mac-addr>
                 <peering-proto-name>E-LMI</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:ee</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>LLDP</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:cc</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
                 <peering-proto-name>PTP Peer Delay</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:f7</protocol-id>
-              </l2cp>
-              <l2cp>
+              </peering-map>
+              <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:3f</dest-mac-addr>
                 <peering-proto-name>Example of SOAM Service Frame</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>89:02</protocol-id>
-              </l2cp>
-            </l2cps>
+              </peering-map>
+            </peering-maps>
             <user-label>L2CP Peering Profile #1</user-label>
-          </l2cp-profile>
+          </profile>
         </l2cp-peering>
         <elmi>
           <elmi-profile>
             <id>elmi-test1</id>
-            <user-label>elmi-test1</user-label>
             <status-error-threshold>7</status-error-threshold>
             <polling-timer>22</polling-timer>
             <polling-verification-timer>23</polling-verification-timer>
           </elmi-profile>
           <elmi-profile>
             <id>elmi-test2</id>
-            <user-label>elmi-test2</user-label>
             <status-error-threshold>6</status-error-threshold>
             <polling-timer>20</polling-timer>
             <polling-verification-timer>21</polling-verification-timer>
           </elmi-profile>
           <elmi-profile>
             <id>pccwg-elmi-test1</id>
-            <user-label>elmi-test1</user-label>
             <status-error-threshold>7</status-error-threshold>
             <polling-timer>22</polling-timer>
             <polling-verification-timer>23</polling-verification-timer>
           </elmi-profile>
           <elmi-profile>
             <id>pccwg-elmi-test2</id>
-            <user-label>elmi-test2</user-label>
             <status-error-threshold>6</status-error-threshold>
             <polling-timer>20</polling-timer>
             <polling-verification-timer>21</polling-verification-timer>

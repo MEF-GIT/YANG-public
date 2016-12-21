@@ -674,7 +674,7 @@ module mef-services {
             }
             description
               "Performance Metric(PM): Start DateTime for " +
-              "Time Intervals (YYYYMMDDHHHHZ). If not set, treat as start immediately.";
+              "Time Intervals (YYYYMMDDHHHHZ). If not set, treat as start immediately. The \"Z\" indicates timezone as GMT (ie. Zulu).";
           }
         container cos-entries {
           description
