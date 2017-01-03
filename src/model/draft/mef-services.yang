@@ -89,12 +89,22 @@ module mef-services {
 
   container mef-services {
     description
-      "MEF Services for Ethernet Virtual Circuit(EVC) " +
+      "MEF Services " +
       "Configuration and Status";
-    list mef-service {
+  container carrier-ethernet {
+	    description
+	      "MEF Services for Carrier Ethernet" +
+	      "Configuration and Status";
+	 
+  container subscriber-services {
+	    description
+	      "MEF Subscriber Services" +
+	      "Configuration and Status";
+	  
+    list evc {
       key "evc-id";
       description
-        "MEF Forum's Ethernet Services.";
+        "MEF Forum's Ethernet Virtual Services (EVC).";
       leaf evc-id {
         type mef-types:evc-id-type;
         description
@@ -144,7 +154,7 @@ module mef-services {
           		"[mef-interfaces:uni-id/../mef-interfaces:" +
           		"all-to-one-bundling-enabled = 'false']) " +
           		"or (count(/mef-services:mef-services/" +
-          		"mef-service/end-points/end-point" +
+          		"carrier-ethernet/subscriber-services/evc/end-points/end-point" +
           		"[uni-id = current()/uni-id]) = 1)" {
             error-message "If All-to-One Bundling is enabled " +
             		"for any UNI in an EVC, all CE-VLAN IDs " +
@@ -160,10 +170,10 @@ module mef-services {
           		"[mef-interfaces:uni-id = current()/" +
           		"mef-services:uni-id][mef-interfaces:uni-id" +
           		"/../mef-interfaces:ingress-bw-profile-per-uni])" +
-          		" or (/mef-services:mef-services/mef-service/" +
+          		" or (/mef-services:mef-services/carrier-ethernet/subscriber-services/evc/" +
           		"end-points/end-point[uni-id = current()/" +
           		"mef-services:uni-id]/ingress-bwp-flows-per-cos)" +
-          		" or (/mef-services:mef-services/mef-service/" +
+          		" or (/mef-services:mef-services/carrier-ethernet/subscriber-services/evc/" +
           		"end-points/end-point[uni-id = current()/" +
           		"mef-services:uni-id]/" +
           		"ingress-bw-profile-per-evc))" +
@@ -187,11 +197,11 @@ module mef-services {
           		"uni-id = current()/mef-services:uni-id]" +
           		"[mef-interfaces:uni-id/../mef-interfaces:" +
           		"egress-bw-profile-per-uni]) or " +
-          		"(/mef-services:mef-services/mef-service/" +
+          		"(/mef-services:mef-services/carrier-ethernet/subscriber-services/evc/" +
           		"end-points/end-point[uni-id = " +
           		"current()/mef-services:uni-id]/" +
           		"egress-bwp-flows-per-eec) or " +
-          		"(/mef-services:mef-services/mef-service/" +
+          		"(/mef-services:mef-services/carrier-ethernet/subscriber-services/evc/" +
           		"end-points/end-point[uni-id = current()/" +
           		"mef-services:uni-id]/" +
           		"egress-bw-profile-per-evc)) or " +
@@ -1680,5 +1690,7 @@ module mef-services {
           "The MEF Service Type.";
       }
     }
-  }
-}
+  } // 	 subscriber-services 
+  } // carrier-ethernet
+  } //mef-services
+} //module end

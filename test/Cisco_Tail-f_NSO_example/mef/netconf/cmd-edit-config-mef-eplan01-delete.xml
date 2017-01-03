@@ -25,10 +25,19 @@
           </uni>        
         </unis>
       </mef-interfaces>
+<<<<<<< Upstream, based on origin/master
     <mef-services xmlns="urn:mef:yang:mef-services"   xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" >
       <mef-service nc:operation="delete">
+=======
+    <mef-services xmlns="urn:mef:xid:mef-services"   xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" >
+           <carrier-ethernet>
+           <subscriber-services>
+      <evc nc:operation="delete">
+>>>>>>> 406a708  Updates to MEF Services to add additional containers to the top level and rename mef-service to evc.
         <evc-id>EVC-0001901-ACME-MEGAMART</evc-id>
-      </mef-service>
+      </evc>
+           </subscriber-services>             
+           </carrier-ethernet>
     </mef-services>
    </config>
   </edit-config>

@@ -23,7 +23,9 @@
     }
   },
   "mef-services:mef-services": {
-	   "mef-service": [
+	  "carrier-ethernet": {
+      "subscriber-services": {	  
+	   "evc": [
 	    {	  
         "evc-id": "EVC-0001911-ACME-MEGAMART",
         "end-points": {
@@ -242,6 +244,8 @@
         "svc-type": "eptree"
 	  }
 	 ]
+  }
+  }
   }
  }
 }

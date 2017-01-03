@@ -18,7 +18,7 @@
 <rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1">
   <ok/>
 </rpc-reply>
-... cconfig-mef-eplan01-delete.xml
+... cmd-edit-config-mef-eplan01-delete.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1">
   <ok/>
@@ -28,7 +28,7 @@
 <rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1">
   <ok/>
 </rpc-reply>
-... cmd-edit-config-mef-global-delete.xml
+... cmd-edit-config-mef-epl01-delete.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1">
   <ok/>

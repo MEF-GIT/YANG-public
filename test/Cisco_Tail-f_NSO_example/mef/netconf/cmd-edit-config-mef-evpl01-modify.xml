@@ -39,8 +39,15 @@
     </uni>
     </unis>
     </mef-interfaces>
+<<<<<<< Upstream, based on origin/master
     <mef-services xmlns="urn:mef:yang:mef-services">
       <mef-service>
+=======
+    <mef-services xmlns="urn:mef:xid:mef-services">
+          <carrier-ethernet>
+           <subscriber-services>
+      <evc>
+>>>>>>> 406a708  Updates to MEF Services to add additional containers to the top level and rename mef-service to evc.
         <evc-id>EVC-0001899-ACME-MEGAMART</evc-id>
        <end-points>
           <end-point>
@@ -50,8 +57,8 @@
             <uni-id>MMPOP1-ce1-Slot1-Port3</uni-id>        
           </end-point>
           </end-points> 
-        </mef-service>
-        <mef-service>
+        </evc>
+        <evc>
         <evc-id>EVC-0001900-ACME-MEGAMART</evc-id>
        <end-points>
           <end-point>
@@ -61,8 +68,8 @@
             <uni-id>MMPOP1-ce2-Slot2-Port3</uni-id>        
           </end-point>          
             </end-points> 
-        </mef-service>
-        <mef-service>
+        </evc>
+        <evc>
         <evc-id>EVC-0001343-ACME-MEGAMART</evc-id>
           <end-points>
             <end-point>
@@ -72,8 +79,9 @@
             <uni-id>MMPOP1-ce1-Slot1-Port3</uni-id>        
             </end-point>
           </end-points> 
-        </mef-service>
-        
+        </evc>
+           </subscriber-services>             
+           </carrier-ethernet>        
      </mef-services>              
    </config>
   </edit-config>

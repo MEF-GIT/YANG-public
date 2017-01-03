@@ -4375,6 +4375,7 @@
         </uni>
       </unis>
     </mef-interfaces>
+<<<<<<< Upstream, based on origin/master
     <mef-services xmlns="urn:mef:yang:mef-services">
       <mef-service>
         <evc-id>EVC-0001343-ACME-MEGAMART</evc-id>
@@ -4386,390 +4387,1302 @@
                 <vid>1343</vid>
               </ce-vlan>
             </ce-vlans>
+=======
+    <mef-services xmlns="urn:mef:xid:mef-services">
+      <carrier-ethernet>
+        <subscriber-services>
+          <evc>
+            <evc-id>EVC-0001343-ACME-MEGAMART</evc-id>
+            <end-points>
+              <end-point>
+                <uni-id>MMPOP1-ce0-Slot0-Port3</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>1343</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <ingress-bw-profile-per-evc>ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+              <end-point>
+                <uni-id>MMPOP1-ce1-Slot1-Port3</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>17</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>pcp</color-identifier>
+                <cos-identifier>MEF103_Table13</cos-identifier>
+                <eec-identifier>MEF62_ApdxA</eec-identifier>
+                <ingress-bw-profile-per-evc>ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+            </end-points>
+>>>>>>> 406a708  Updates to MEF Services to add additional containers to the top level and rename mef-service to evc.
             <status>
               <operational-state>false</operational-state>
               <evc-end-point-id/>
             </status>
-            <role>root</role>
+            <carrier-ethernet-sls>
+              <sls-id>MEF103_Table25</sls-id>
+              <start-time>201606181200Z</start-time>
+              <cos-entries>
+                <cos-entry>
+                  <cos-name>Neon</cos-name>
+                  <pm-entries>
+                    <pm-entry>
+                      <pm-entry-id>SLS_Neon_Test2</pm-entry-id>
+                      <end-point-pairs>
+                        <sls-uni-exclusions>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce1-Slot1-Port3</end-point1>
+                            <end-point2>MMPOP1-ce0-Slot0-Port3</end-point2>
+                          </end-point-pair>
+                        </sls-uni-exclusions>
+                      </end-point-pairs>
+                    </pm-entry>
+                  </pm-entries>
+                </cos-entry>
+              </cos-entries>
+            </carrier-ethernet-sls>
+            <connection-type>point-to-point</connection-type>
             <admin-state>false</admin-state>
-            <color-identifier>dscp</color-identifier>
-            <cos-identifier>MEF103_Table23</cos-identifier>
-            <eec-identifier>MEF103_Table23</eec-identifier>
-            <ingress-bw-profile-per-evc>ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</ingress-bw-profile-per-evc>
-            <egress-bw-profile-per-evc>eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</egress-bw-profile-per-evc>
-            <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-            <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
-            <test-meg-enabled wd:default="true">false</test-meg-enabled>
-            <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
-          </end-point>
-          <end-point>
-            <uni-id>MMPOP1-ce1-Slot1-Port3</uni-id>
-            <ce-vlans>
-              <ce-vlan>
-                <vid>17</vid>
-              </ce-vlan>
-            </ce-vlans>
+            <max-num-of-evc-end-point>2</max-num-of-evc-end-point>
+            <ce-vlan-id-preservation>false</ce-vlan-id-preservation>
+            <ce-vlan-pcp-preservation wd:default="true">false</ce-vlan-pcp-preservation>
+            <ce-vlan-dei-preservation wd:default="true">false</ce-vlan-dei-preservation>
+            <unicast-frame-delivery wd:default="true">unconditional</unicast-frame-delivery>
+            <multicast-frame-delivery wd:default="true">unconditional</multicast-frame-delivery>
+            <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
+            <svc-type>evpl</svc-type>
+          </evc>
+          <evc>
+            <evc-id>EVC-0001898-ACME-MEGAMART</evc-id>
+            <end-points>
+              <end-point>
+                <uni-id>MMPOP1-ce0-Slot0-Port1</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>100</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>101</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>102</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+              <end-point>
+                <uni-id>MMPOP1-ce1-Slot1-Port1</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>100</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>101</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>102</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+            </end-points>
             <status>
               <operational-state>false</operational-state>
               <evc-end-point-id/>
             </status>
-            <role>root</role>
+            <carrier-ethernet-sls>
+              <sls-id>MEF103_Table25</sls-id>
+              <start-time>201606181200Z</start-time>
+              <cos-entries>
+                <cos-entry>
+                  <cos-name>Argon</cos-name>
+                  <pm-entries>
+                    <pm-entry>
+                      <pm-entry-id>SLS_Argon_Test1</pm-entry-id>
+                      <end-point-pairs>
+                        <sls-uni-inclusions>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce0-Slot0-Port1</end-point1>
+                            <end-point2>MMPOP1-ce1-Slot1-Port1</end-point2>
+                          </end-point-pair>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce1-Slot1-Port1</end-point1>
+                            <end-point2>MMPOP1-ce0-Slot0-Port1</end-point2>
+                          </end-point-pair>
+                        </sls-uni-inclusions>
+                      </end-point-pairs>
+                    </pm-entry>
+                  </pm-entries>
+                </cos-entry>
+                <cos-entry>
+                  <cos-name>Krypton</cos-name>
+                  <pm-entries>
+                    <pm-entry>
+                      <pm-entry-id>SLS_Krypton_Test1</pm-entry-id>
+                      <end-point-pairs>
+                        <sls-uni-inclusions>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce0-Slot0-Port1</end-point1>
+                            <end-point2>MMPOP1-ce1-Slot1-Port1</end-point2>
+                          </end-point-pair>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce1-Slot1-Port1</end-point1>
+                            <end-point2>MMPOP1-ce0-Slot0-Port1</end-point2>
+                          </end-point-pair>
+                        </sls-uni-inclusions>
+                      </end-point-pairs>
+                    </pm-entry>
+                  </pm-entries>
+                </cos-entry>
+                <cos-entry>
+                  <cos-name>Neon</cos-name>
+                  <pm-entries>
+                    <pm-entry>
+                      <pm-entry-id>SLS_Neon_Test1</pm-entry-id>
+                      <end-point-pairs>
+                        <sls-uni-inclusions>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce0-Slot0-Port1</end-point1>
+                            <end-point2>MMPOP1-ce1-Slot1-Port1</end-point2>
+                          </end-point-pair>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce1-Slot1-Port1</end-point1>
+                            <end-point2>MMPOP1-ce0-Slot0-Port1</end-point2>
+                          </end-point-pair>
+                        </sls-uni-inclusions>
+                      </end-point-pairs>
+                    </pm-entry>
+                  </pm-entries>
+                </cos-entry>
+              </cos-entries>
+            </carrier-ethernet-sls>
+            <connection-type>point-to-point</connection-type>
             <admin-state>false</admin-state>
-            <color-identifier>pcp</color-identifier>
-            <cos-identifier>MEF103_Table13</cos-identifier>
-            <eec-identifier>MEF62_ApdxA</eec-identifier>
-            <ingress-bw-profile-per-evc>ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</ingress-bw-profile-per-evc>
-            <egress-bw-profile-per-evc>eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</egress-bw-profile-per-evc>
-            <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-            <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
-            <test-meg-enabled wd:default="true">false</test-meg-enabled>
-            <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
-          </end-point>
-        </end-points>
-        <status>
-          <operational-state>false</operational-state>
-        </status>
-        <carrier-ethernet-sls>
-          <sls-id>MEF103_Table25</sls-id>
-          <start-time>201606181200Z</start-time>
-          <cos-entries>
-            <cos-entry>
-              <cos-name>Neon</cos-name>
-              <pm-entries>
-                <pm-entry>
-                  <pm-entry-id>SLS_Neon_Test2</pm-entry-id>
-                  <end-point-pairs>
-                    <sls-uni-exclusions>
-                      <end-point-pair>
-                        <end-point1>MMPOP1-ce1-Slot1-Port3</end-point1>
-                        <end-point2>MMPOP1-ce0-Slot0-Port3</end-point2>
-                      </end-point-pair>
-                    </sls-uni-exclusions>
-                  </end-point-pairs>
-                </pm-entry>
-              </pm-entries>
-            </cos-entry>
-          </cos-entries>
-        </carrier-ethernet-sls>
-        <connection-type>point-to-point</connection-type>
-        <admin-state>false</admin-state>
-        <max-num-of-evc-end-point>2</max-num-of-evc-end-point>
-        <ce-vlan-id-preservation>false</ce-vlan-id-preservation>
-        <ce-vlan-pcp-preservation wd:default="true">false</ce-vlan-pcp-preservation>
-        <ce-vlan-dei-preservation wd:default="true">false</ce-vlan-dei-preservation>
-        <unicast-frame-delivery wd:default="true">unconditional</unicast-frame-delivery>
-        <multicast-frame-delivery wd:default="true">unconditional</multicast-frame-delivery>
-        <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
-        <svc-type>evpl</svc-type>
-      </mef-service>
-      <mef-service>
-        <evc-id>EVC-0001898-ACME-MEGAMART</evc-id>
-        <end-points>
-          <end-point>
-            <uni-id>MMPOP1-ce0-Slot0-Port1</uni-id>
-            <ce-vlans>
-              <ce-vlan>
-                <vid>100</vid>
-              </ce-vlan>
-              <ce-vlan>
-                <vid>101</vid>
-              </ce-vlan>
-              <ce-vlan>
-                <vid>102</vid>
-              </ce-vlan>
-            </ce-vlans>
+            <max-num-of-evc-end-point>2</max-num-of-evc-end-point>
+            <ce-vlan-id-preservation>true</ce-vlan-id-preservation>
+            <ce-vlan-pcp-preservation>true</ce-vlan-pcp-preservation>
+            <ce-vlan-dei-preservation wd:default="true">false</ce-vlan-dei-preservation>
+            <unicast-frame-delivery wd:default="true">unconditional</unicast-frame-delivery>
+            <multicast-frame-delivery wd:default="true">unconditional</multicast-frame-delivery>
+            <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
+            <svc-type>epl</svc-type>
+          </evc>
+          <evc>
+            <evc-id>EVC-0001899-ACME-MEGAMART</evc-id>
+            <end-points>
+              <end-point>
+                <uni-id>MMPOP1-ce0-Slot0-Port3</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>22</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <ingress-bw-profile-per-evc>ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+              <end-point>
+                <uni-id>MMPOP1-ce1-Slot1-Port3</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>22</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>pcp</color-identifier>
+                <cos-identifier>MEF103_Table14</cos-identifier>
+                <eec-identifier>MEF62_ApdxA</eec-identifier>
+                <ingress-bw-profile-per-evc>ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+            </end-points>
             <status>
               <operational-state>false</operational-state>
               <evc-end-point-id/>
             </status>
-            <role>root</role>
+            <carrier-ethernet-sls>
+              <sls-id>MEF103_Table25</sls-id>
+              <start-time>201606181200Z</start-time>
+              <cos-entries>
+                <cos-entry>
+                  <cos-name>Neon</cos-name>
+                  <pm-entries>
+                    <pm-entry>
+                      <pm-entry-id>SLS_Neon_Test1</pm-entry-id>
+                      <end-point-pairs>
+                        <sls-uni-exclusions>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce1-Slot1-Port3</end-point1>
+                            <end-point2>MMPOP1-ce0-Slot0-Port3</end-point2>
+                          </end-point-pair>
+                        </sls-uni-exclusions>
+                      </end-point-pairs>
+                    </pm-entry>
+                  </pm-entries>
+                </cos-entry>
+              </cos-entries>
+            </carrier-ethernet-sls>
+            <connection-type>point-to-point</connection-type>
             <admin-state>false</admin-state>
-            <color-identifier>dscp</color-identifier>
-            <cos-identifier>MEF103_Table23</cos-identifier>
-            <eec-identifier>MEF103_Table23</eec-identifier>
-            <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-            <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
-            <test-meg-enabled wd:default="true">false</test-meg-enabled>
-            <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
-          </end-point>
-          <end-point>
-            <uni-id>MMPOP1-ce1-Slot1-Port1</uni-id>
-            <ce-vlans>
-              <ce-vlan>
-                <vid>100</vid>
-              </ce-vlan>
-              <ce-vlan>
-                <vid>101</vid>
-              </ce-vlan>
-              <ce-vlan>
-                <vid>102</vid>
-              </ce-vlan>
-            </ce-vlans>
+            <max-num-of-evc-end-point>2</max-num-of-evc-end-point>
+            <ce-vlan-id-preservation>true</ce-vlan-id-preservation>
+            <ce-vlan-pcp-preservation wd:default="true">false</ce-vlan-pcp-preservation>
+            <ce-vlan-dei-preservation wd:default="true">false</ce-vlan-dei-preservation>
+            <unicast-frame-delivery wd:default="true">unconditional</unicast-frame-delivery>
+            <multicast-frame-delivery wd:default="true">unconditional</multicast-frame-delivery>
+            <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
+            <svc-type>evpl</svc-type>
+          </evc>
+          <evc>
+            <evc-id>EVC-0001900-ACME-MEGAMART</evc-id>
+            <end-points>
+              <end-point>
+                <uni-id>MMPOP1-ce0-Slot0-Port3</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>33</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <ingress-bw-profile-per-evc>ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+              <end-point>
+                <uni-id>MMPOP1-ce2-Slot2-Port3</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>33</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>pcp</color-identifier>
+                <cos-identifier>MEF103_Table13</cos-identifier>
+                <eec-identifier>MEF62_ApdxA</eec-identifier>
+                <ingress-bw-profile-per-evc>ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+            </end-points>
             <status>
               <operational-state>false</operational-state>
               <evc-end-point-id/>
             </status>
-            <role>root</role>
+            <carrier-ethernet-sls>
+              <sls-id>MEF103_Table25</sls-id>
+              <start-time>201606181200Z</start-time>
+            </carrier-ethernet-sls>
+            <connection-type>point-to-point</connection-type>
             <admin-state>false</admin-state>
-            <color-identifier>dscp</color-identifier>
-            <cos-identifier>MEF103_Table23</cos-identifier>
-            <eec-identifier>MEF103_Table23</eec-identifier>
-            <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-            <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
-            <test-meg-enabled wd:default="true">false</test-meg-enabled>
-            <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
-          </end-point>
-        </end-points>
-        <status>
-          <operational-state>false</operational-state>
-        </status>
-        <carrier-ethernet-sls>
-          <sls-id>MEF103_Table25</sls-id>
-          <start-time>201606181200Z</start-time>
-          <cos-entries>
-            <cos-entry>
-              <cos-name>Argon</cos-name>
-              <pm-entries>
-                <pm-entry>
-                  <pm-entry-id>SLS_Argon_Test1</pm-entry-id>
-                  <end-point-pairs>
-                    <sls-uni-inclusions>
-                      <end-point-pair>
-                        <end-point1>MMPOP1-ce0-Slot0-Port1</end-point1>
-                        <end-point2>MMPOP1-ce1-Slot1-Port1</end-point2>
-                      </end-point-pair>
-                      <end-point-pair>
-                        <end-point1>MMPOP1-ce1-Slot1-Port1</end-point1>
-                        <end-point2>MMPOP1-ce0-Slot0-Port1</end-point2>
-                      </end-point-pair>
-                    </sls-uni-inclusions>
-                  </end-point-pairs>
-                </pm-entry>
-              </pm-entries>
-            </cos-entry>
-            <cos-entry>
-              <cos-name>Krypton</cos-name>
-              <pm-entries>
-                <pm-entry>
-                  <pm-entry-id>SLS_Krypton_Test1</pm-entry-id>
-                  <end-point-pairs>
-                    <sls-uni-inclusions>
-                      <end-point-pair>
-                        <end-point1>MMPOP1-ce0-Slot0-Port1</end-point1>
-                        <end-point2>MMPOP1-ce1-Slot1-Port1</end-point2>
-                      </end-point-pair>
-                      <end-point-pair>
-                        <end-point1>MMPOP1-ce1-Slot1-Port1</end-point1>
-                        <end-point2>MMPOP1-ce0-Slot0-Port1</end-point2>
-                      </end-point-pair>
-                    </sls-uni-inclusions>
-                  </end-point-pairs>
-                </pm-entry>
-              </pm-entries>
-            </cos-entry>
-            <cos-entry>
-              <cos-name>Neon</cos-name>
-              <pm-entries>
-                <pm-entry>
-                  <pm-entry-id>SLS_Neon_Test1</pm-entry-id>
-                  <end-point-pairs>
-                    <sls-uni-inclusions>
-                      <end-point-pair>
-                        <end-point1>MMPOP1-ce0-Slot0-Port1</end-point1>
-                        <end-point2>MMPOP1-ce1-Slot1-Port1</end-point2>
-                      </end-point-pair>
-                      <end-point-pair>
-                        <end-point1>MMPOP1-ce1-Slot1-Port1</end-point1>
-                        <end-point2>MMPOP1-ce0-Slot0-Port1</end-point2>
-                      </end-point-pair>
-                    </sls-uni-inclusions>
-                  </end-point-pairs>
-                </pm-entry>
-              </pm-entries>
-            </cos-entry>
-          </cos-entries>
-        </carrier-ethernet-sls>
-        <connection-type>point-to-point</connection-type>
-        <admin-state>false</admin-state>
-        <max-num-of-evc-end-point>2</max-num-of-evc-end-point>
-        <ce-vlan-id-preservation>true</ce-vlan-id-preservation>
-        <ce-vlan-pcp-preservation>true</ce-vlan-pcp-preservation>
-        <ce-vlan-dei-preservation wd:default="true">false</ce-vlan-dei-preservation>
-        <unicast-frame-delivery wd:default="true">unconditional</unicast-frame-delivery>
-        <multicast-frame-delivery wd:default="true">unconditional</multicast-frame-delivery>
-        <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
-        <svc-type>epl</svc-type>
-      </mef-service>
-      <mef-service>
-        <evc-id>EVC-0001899-ACME-MEGAMART</evc-id>
-        <end-points>
-          <end-point>
-            <uni-id>MMPOP1-ce0-Slot0-Port3</uni-id>
-            <ce-vlans>
-              <ce-vlan>
-                <vid>22</vid>
-              </ce-vlan>
-            </ce-vlans>
+            <max-num-of-evc-end-point>2</max-num-of-evc-end-point>
+            <ce-vlan-id-preservation>true</ce-vlan-id-preservation>
+            <ce-vlan-pcp-preservation wd:default="true">false</ce-vlan-pcp-preservation>
+            <ce-vlan-dei-preservation wd:default="true">false</ce-vlan-dei-preservation>
+            <unicast-frame-delivery wd:default="true">unconditional</unicast-frame-delivery>
+            <multicast-frame-delivery wd:default="true">unconditional</multicast-frame-delivery>
+            <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
+            <svc-type>evpl</svc-type>
+          </evc>
+          <evc>
+            <evc-id>EVC-0001901-ACME-MEGAMART</evc-id>
+            <end-points>
+              <end-point>
+                <uni-id>MMPOP1-ce5-Slot5-Port1</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>1</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+              <end-point>
+                <uni-id>MMPOP1-ce6-Slot6-Port1</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>1</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+              <end-point>
+                <uni-id>MMPOP1-ce7-Slot7-Port1</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>1</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+            </end-points>
             <status>
               <operational-state>false</operational-state>
               <evc-end-point-id/>
             </status>
-            <role>root</role>
+            <carrier-ethernet-sls>
+              <sls-id>MEF103_Table25</sls-id>
+              <start-time>201606181200Z</start-time>
+              <cos-entries>
+                <cos-entry>
+                  <cos-name>Argon</cos-name>
+                  <pm-entries>
+                    <pm-entry>
+                      <pm-entry-id>SLS_Argon_Test1</pm-entry-id>
+                    </pm-entry>
+                  </pm-entries>
+                </cos-entry>
+                <cos-entry>
+                  <cos-name>Krypton</cos-name>
+                  <pm-entries>
+                    <pm-entry>
+                      <pm-entry-id>SLS_Krypton_Test3</pm-entry-id>
+                    </pm-entry>
+                  </pm-entries>
+                </cos-entry>
+              </cos-entries>
+            </carrier-ethernet-sls>
+            <connection-type>multipoint-to-multipoint</connection-type>
             <admin-state>false</admin-state>
-            <color-identifier>dscp</color-identifier>
-            <cos-identifier>MEF103_Table23</cos-identifier>
-            <eec-identifier>MEF103_Table23</eec-identifier>
-            <ingress-bw-profile-per-evc>ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</ingress-bw-profile-per-evc>
-            <egress-bw-profile-per-evc>eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</egress-bw-profile-per-evc>
-            <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-            <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
-            <test-meg-enabled wd:default="true">false</test-meg-enabled>
-            <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
-          </end-point>
-          <end-point>
-            <uni-id>MMPOP1-ce1-Slot1-Port3</uni-id>
-            <ce-vlans>
-              <ce-vlan>
-                <vid>22</vid>
-              </ce-vlan>
-            </ce-vlans>
+            <max-num-of-evc-end-point>3</max-num-of-evc-end-point>
+            <ce-vlan-id-preservation>true</ce-vlan-id-preservation>
+            <ce-vlan-pcp-preservation>true</ce-vlan-pcp-preservation>
+            <ce-vlan-dei-preservation wd:default="true">false</ce-vlan-dei-preservation>
+            <unicast-frame-delivery>conditional</unicast-frame-delivery>
+            <multicast-frame-delivery wd:default="true">unconditional</multicast-frame-delivery>
+            <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
+            <svc-type>eplan</svc-type>
+          </evc>
+          <evc>
+            <evc-id>EVC-0001911-ACME-MEGAMART</evc-id>
+            <end-points>
+              <end-point>
+                <uni-id>MMPOP1-ce5-Slot5-Port2</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>1</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <ingress-bwp-flows-per-cos>
+                  <coupling-enabled>false</coupling-enabled>
+                  <bwp-flow-per-cos>
+                    <cos-name>Krypton</cos-name>
+                    <bw-profile>ienv_EPTREE_UNI552_EVC-0001911_Krypton</bw-profile>
+                  </bwp-flow-per-cos>
+                </ingress-bwp-flows-per-cos>
+                <egress-bwp-flows-per-eec>
+                  <coupling-enabled>false</coupling-enabled>
+                  <bwp-flow-per-eec>
+                    <eec-name>Sophomore</eec-name>
+                    <bw-profile>eenv_EPTREE_UNI552_EVC-0001911_Sophomore</bw-profile>
+                  </bwp-flow-per-eec>
+                </egress-bwp-flows-per-eec>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+              <end-point>
+                <uni-id>MMPOP1-ce6-Slot6-Port2</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>1</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <ingress-bwp-flows-per-cos>
+                  <coupling-enabled>false</coupling-enabled>
+                  <bwp-flow-per-cos>
+                    <cos-name>Krypton</cos-name>
+                    <bw-profile>ienv_EPTREE_UNI662_EVC-0001911_Krypton</bw-profile>
+                  </bwp-flow-per-cos>
+                </ingress-bwp-flows-per-cos>
+                <egress-bwp-flows-per-eec>
+                  <coupling-enabled>false</coupling-enabled>
+                  <bwp-flow-per-eec>
+                    <eec-name>Sophomore</eec-name>
+                    <bw-profile>eenv_EPTREE_UNI662_EVC-0001911_Sophomore</bw-profile>
+                  </bwp-flow-per-eec>
+                </egress-bwp-flows-per-eec>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>leaf</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+              <end-point>
+                <uni-id>MMPOP1-ce7-Slot7-Port2</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>1</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <ingress-bwp-flows-per-cos>
+                  <coupling-enabled>false</coupling-enabled>
+                  <bwp-flow-per-cos>
+                    <cos-name>Krypton</cos-name>
+                    <bw-profile>ienv_EPTREE_UNI772_EVC-0001911_Krypton</bw-profile>
+                  </bwp-flow-per-cos>
+                </ingress-bwp-flows-per-cos>
+                <egress-bwp-flows-per-eec>
+                  <coupling-enabled>false</coupling-enabled>
+                  <bwp-flow-per-eec>
+                    <eec-name>Sophomore</eec-name>
+                    <bw-profile>eenv_EPTREE_UNI772_EVC-0001911_Sophomore</bw-profile>
+                  </bwp-flow-per-eec>
+                </egress-bwp-flows-per-eec>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>leaf</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+              <end-point>
+                <uni-id>MMPOP1-ce8-Slot8-Port2</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>1</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <ingress-bwp-flows-per-cos>
+                  <coupling-enabled>false</coupling-enabled>
+                  <bwp-flow-per-cos>
+                    <cos-name>Krypton</cos-name>
+                    <bw-profile>ienv_EPTREE_UNI882_EVC-0001911_Krypton</bw-profile>
+                  </bwp-flow-per-cos>
+                </ingress-bwp-flows-per-cos>
+                <egress-bwp-flows-per-eec>
+                  <coupling-enabled>false</coupling-enabled>
+                  <bwp-flow-per-eec>
+                    <eec-name>Sophomore</eec-name>
+                    <bw-profile>eenv_EPTREE_UNI882_EVC-0001911_Sophomore</bw-profile>
+                  </bwp-flow-per-eec>
+                </egress-bwp-flows-per-eec>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>leaf</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+            </end-points>
             <status>
               <operational-state>false</operational-state>
               <evc-end-point-id/>
             </status>
-            <role>root</role>
+            <carrier-ethernet-sls>
+              <sls-id>MEF103_Table25</sls-id>
+              <start-time>201606181200Z</start-time>
+              <cos-entries>
+                <cos-entry>
+                  <cos-name>Argon</cos-name>
+                  <pm-entries>
+                    <pm-entry>
+                      <pm-entry-id>SLS_Argon_Test1</pm-entry-id>
+                      <end-point-pairs>
+                        <sls-uni-inclusions>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce5-Slot5-Port2</end-point1>
+                            <end-point2>MMPOP1-ce6-Slot6-Port2</end-point2>
+                          </end-point-pair>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce7-Slot7-Port2</end-point1>
+                            <end-point2>MMPOP1-ce5-Slot5-Port2</end-point2>
+                          </end-point-pair>
+                        </sls-uni-inclusions>
+                      </end-point-pairs>
+                    </pm-entry>
+                  </pm-entries>
+                </cos-entry>
+                <cos-entry>
+                  <cos-name>Krypton</cos-name>
+                  <pm-entries>
+                    <pm-entry>
+                      <pm-entry-id>SLS_Krypton_Test1</pm-entry-id>
+                      <end-point-pairs>
+                        <sls-uni-inclusions>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce5-Slot5-Port2</end-point1>
+                            <end-point2>MMPOP1-ce7-Slot7-Port2</end-point2>
+                          </end-point-pair>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce5-Slot5-Port2</end-point1>
+                            <end-point2>MMPOP1-ce8-Slot8-Port2</end-point2>
+                          </end-point-pair>
+                        </sls-uni-inclusions>
+                      </end-point-pairs>
+                    </pm-entry>
+                  </pm-entries>
+                </cos-entry>
+                <cos-entry>
+                  <cos-name>Neon</cos-name>
+                  <pm-entries>
+                    <pm-entry>
+                      <pm-entry-id>SLS_Neon_Test1</pm-entry-id>
+                      <end-point-pairs>
+                        <sls-uni-inclusions>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce6-Slot6-Port2</end-point1>
+                            <end-point2>MMPOP1-ce5-Slot5-Port2</end-point2>
+                          </end-point-pair>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce8-Slot8-Port2</end-point1>
+                            <end-point2>MMPOP1-ce5-Slot5-Port2</end-point2>
+                          </end-point-pair>
+                        </sls-uni-inclusions>
+                      </end-point-pairs>
+                    </pm-entry>
+                  </pm-entries>
+                </cos-entry>
+              </cos-entries>
+            </carrier-ethernet-sls>
+            <connection-type>rooted-multipoint</connection-type>
             <admin-state>false</admin-state>
-            <color-identifier>pcp</color-identifier>
-            <cos-identifier>MEF103_Table14</cos-identifier>
-            <eec-identifier>MEF62_ApdxA</eec-identifier>
-            <ingress-bw-profile-per-evc>ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</ingress-bw-profile-per-evc>
-            <egress-bw-profile-per-evc>eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</egress-bw-profile-per-evc>
-            <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-            <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
-            <test-meg-enabled wd:default="true">false</test-meg-enabled>
-            <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
-          </end-point>
-        </end-points>
-        <status>
-          <operational-state>false</operational-state>
-        </status>
-        <carrier-ethernet-sls>
-          <sls-id>MEF103_Table25</sls-id>
-          <start-time>201606181200Z</start-time>
-          <cos-entries>
-            <cos-entry>
-              <cos-name>Neon</cos-name>
-              <pm-entries>
-                <pm-entry>
-                  <pm-entry-id>SLS_Neon_Test1</pm-entry-id>
-                  <end-point-pairs>
-                    <sls-uni-exclusions>
-                      <end-point-pair>
-                        <end-point1>MMPOP1-ce1-Slot1-Port3</end-point1>
-                        <end-point2>MMPOP1-ce0-Slot0-Port3</end-point2>
-                      </end-point-pair>
-                    </sls-uni-exclusions>
-                  </end-point-pairs>
-                </pm-entry>
-              </pm-entries>
-            </cos-entry>
-          </cos-entries>
-        </carrier-ethernet-sls>
-        <connection-type>point-to-point</connection-type>
-        <admin-state>false</admin-state>
-        <max-num-of-evc-end-point>2</max-num-of-evc-end-point>
-        <ce-vlan-id-preservation>true</ce-vlan-id-preservation>
-        <ce-vlan-pcp-preservation wd:default="true">false</ce-vlan-pcp-preservation>
-        <ce-vlan-dei-preservation wd:default="true">false</ce-vlan-dei-preservation>
-        <unicast-frame-delivery wd:default="true">unconditional</unicast-frame-delivery>
-        <multicast-frame-delivery wd:default="true">unconditional</multicast-frame-delivery>
-        <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
-        <svc-type>evpl</svc-type>
-      </mef-service>
-      <mef-service>
-        <evc-id>EVC-0001900-ACME-MEGAMART</evc-id>
-        <end-points>
-          <end-point>
-            <uni-id>MMPOP1-ce0-Slot0-Port3</uni-id>
-            <ce-vlans>
-              <ce-vlan>
-                <vid>33</vid>
-              </ce-vlan>
-            </ce-vlans>
+            <max-num-of-evc-end-point>4</max-num-of-evc-end-point>
+            <ce-vlan-id-preservation>true</ce-vlan-id-preservation>
+            <ce-vlan-pcp-preservation>true</ce-vlan-pcp-preservation>
+            <ce-vlan-dei-preservation wd:default="true">false</ce-vlan-dei-preservation>
+            <unicast-frame-delivery>conditional</unicast-frame-delivery>
+            <multicast-frame-delivery wd:default="true">unconditional</multicast-frame-delivery>
+            <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
+            <svc-type>eptree</svc-type>
+          </evc>
+          <evc>
+            <evc-id>EVC-0001944-ACME-MEGAMART</evc-id>
+            <end-points>
+              <end-point>
+                <uni-id>MMPOP1-ce5-Slot5-Port3</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>53</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>54</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>63</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>73</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>83</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <ingress-bwp-flows-per-cos>
+                  <coupling-enabled>false</coupling-enabled>
+                  <bwp-flow-per-cos>
+                    <cos-name>Argon</cos-name>
+                    <bw-profile>ienv_EVPLAN_UNI553_EVC-0001944_Argon</bw-profile>
+                  </bwp-flow-per-cos>
+                  <bwp-flow-per-cos>
+                    <cos-name>Krypton</cos-name>
+                    <bw-profile>ienv_EVPLAN_UNI553_EVC-0001944_Krypton</bw-profile>
+                  </bwp-flow-per-cos>
+                  <bwp-flow-per-cos>
+                    <cos-name>Neon</cos-name>
+                    <bw-profile>ienv_EVPLAN_UNI553_EVC-0001944_Neon</bw-profile>
+                  </bwp-flow-per-cos>
+                </ingress-bwp-flows-per-cos>
+                <egress-bwp-flows-per-eec>
+                  <coupling-enabled>false</coupling-enabled>
+                  <bwp-flow-per-eec>
+                    <eec-name>EEC-Argon</eec-name>
+                    <bw-profile>eenv_EVPLAN_UNI553_EVC-0001944_Argon</bw-profile>
+                  </bwp-flow-per-eec>
+                  <bwp-flow-per-eec>
+                    <eec-name>EEC-Krypton</eec-name>
+                    <bw-profile>eenv_EVPLAN_UNI553_EVC-0001944_Krypton</bw-profile>
+                  </bwp-flow-per-eec>
+                  <bwp-flow-per-eec>
+                    <eec-name>EEC-Neon</eec-name>
+                    <bw-profile>eenv_EVPLAN_UNI553_EVC-0001944_Neon</bw-profile>
+                  </bwp-flow-per-eec>
+                </egress-bwp-flows-per-eec>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+              <end-point>
+                <uni-id>MMPOP1-ce6-Slot6-Port3</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>53</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>54</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>63</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>73</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>83</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <ingress-bwp-flows-per-cos>
+                  <coupling-enabled>false</coupling-enabled>
+                  <bwp-flow-per-cos>
+                    <cos-name>Argon</cos-name>
+                    <bw-profile>ienv_EVPLAN_UNI663_EVC-0001944_Argon</bw-profile>
+                  </bwp-flow-per-cos>
+                  <bwp-flow-per-cos>
+                    <cos-name>Krypton</cos-name>
+                    <bw-profile>ienv_EVPLAN_UNI663_EVC-0001944_Krypton</bw-profile>
+                  </bwp-flow-per-cos>
+                  <bwp-flow-per-cos>
+                    <cos-name>Neon</cos-name>
+                    <bw-profile>ienv_EVPLAN_UNI663_EVC-0001944_Neon</bw-profile>
+                  </bwp-flow-per-cos>
+                </ingress-bwp-flows-per-cos>
+                <egress-bwp-flows-per-eec>
+                  <coupling-enabled>false</coupling-enabled>
+                  <bwp-flow-per-eec>
+                    <eec-name>EEC-Argon</eec-name>
+                    <bw-profile>eenv_EVPLAN_UNI663_EVC-0001944_Argon</bw-profile>
+                  </bwp-flow-per-eec>
+                  <bwp-flow-per-eec>
+                    <eec-name>EEC-Krypton</eec-name>
+                    <bw-profile>eenv_EVPLAN_UNI663_EVC-0001944_Krypton</bw-profile>
+                  </bwp-flow-per-eec>
+                  <bwp-flow-per-eec>
+                    <eec-name>EEC-Neon</eec-name>
+                    <bw-profile>eenv_EVPLAN_UNI663_EVC-0001944_Neon</bw-profile>
+                  </bwp-flow-per-eec>
+                </egress-bwp-flows-per-eec>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+              <end-point>
+                <uni-id>MMPOP1-ce7-Slot7-Port3</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>53</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>54</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>63</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>73</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>83</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <ingress-bwp-flows-per-cos>
+                  <coupling-enabled>false</coupling-enabled>
+                  <bwp-flow-per-cos>
+                    <cos-name>Argon</cos-name>
+                    <bw-profile>ienv_EVPLAN_UNI773_EVC-0001944_Argon</bw-profile>
+                  </bwp-flow-per-cos>
+                  <bwp-flow-per-cos>
+                    <cos-name>Krypton</cos-name>
+                    <bw-profile>ienv_EVPLAN_UNI773_EVC-0001944_Krypton</bw-profile>
+                  </bwp-flow-per-cos>
+                  <bwp-flow-per-cos>
+                    <cos-name>Neon</cos-name>
+                    <bw-profile>ienv_EVPLAN_UNI773_EVC-0001944_Neon</bw-profile>
+                  </bwp-flow-per-cos>
+                </ingress-bwp-flows-per-cos>
+                <egress-bwp-flows-per-eec>
+                  <coupling-enabled>false</coupling-enabled>
+                  <bwp-flow-per-eec>
+                    <eec-name>EEC-Argon</eec-name>
+                    <bw-profile>eenv_EVPLAN_UNI773_EVC-0001944_Argon</bw-profile>
+                  </bwp-flow-per-eec>
+                  <bwp-flow-per-eec>
+                    <eec-name>EEC-Krypton</eec-name>
+                    <bw-profile>eenv_EVPLAN_UNI773_EVC-0001944_Krypton</bw-profile>
+                  </bwp-flow-per-eec>
+                  <bwp-flow-per-eec>
+                    <eec-name>EEC-Neon</eec-name>
+                    <bw-profile>eenv_EVPLAN_UNI773_EVC-0001944_Neon</bw-profile>
+                  </bwp-flow-per-eec>
+                </egress-bwp-flows-per-eec>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+              <end-point>
+                <uni-id>MMPOP1-ce8-Slot8-Port3</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>53</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>54</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>63</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>73</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>83</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <ingress-bwp-flows-per-cos>
+                  <coupling-enabled>false</coupling-enabled>
+                  <bwp-flow-per-cos>
+                    <cos-name>Argon</cos-name>
+                    <bw-profile>ienv_EVPLAN_UNI883_EVC-0001944_Argon</bw-profile>
+                  </bwp-flow-per-cos>
+                  <bwp-flow-per-cos>
+                    <cos-name>Krypton</cos-name>
+                    <bw-profile>ienv_EVPLAN_UNI883_EVC-0001944_Krypton</bw-profile>
+                  </bwp-flow-per-cos>
+                  <bwp-flow-per-cos>
+                    <cos-name>Neon</cos-name>
+                    <bw-profile>ienv_EVPLAN_UNI883_EVC-0001944_Neon</bw-profile>
+                  </bwp-flow-per-cos>
+                </ingress-bwp-flows-per-cos>
+                <egress-bwp-flows-per-eec>
+                  <coupling-enabled>false</coupling-enabled>
+                  <bwp-flow-per-eec>
+                    <eec-name>EEC-Argon</eec-name>
+                    <bw-profile>eenv_EVPLAN_UNI883_EVC-0001944_Argon</bw-profile>
+                  </bwp-flow-per-eec>
+                  <bwp-flow-per-eec>
+                    <eec-name>EEC-Krypton</eec-name>
+                    <bw-profile>eenv_EVPLAN_UNI883_EVC-0001944_Krypton</bw-profile>
+                  </bwp-flow-per-eec>
+                  <bwp-flow-per-eec>
+                    <eec-name>EEC-Neon</eec-name>
+                    <bw-profile>eenv_EVPLAN_UNI883_EVC-0001944_Neon</bw-profile>
+                  </bwp-flow-per-eec>
+                </egress-bwp-flows-per-eec>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+            </end-points>
             <status>
               <operational-state>false</operational-state>
               <evc-end-point-id/>
             </status>
-            <role>root</role>
+            <carrier-ethernet-sls>
+              <sls-id>MEF103_Table25</sls-id>
+              <start-time>201606181200Z</start-time>
+              <cos-entries>
+                <cos-entry>
+                  <cos-name>Argon</cos-name>
+                  <pm-entries>
+                    <pm-entry>
+                      <pm-entry-id>SLS_Argon_Test2</pm-entry-id>
+                    </pm-entry>
+                  </pm-entries>
+                </cos-entry>
+                <cos-entry>
+                  <cos-name>Krypton</cos-name>
+                  <pm-entries>
+                    <pm-entry>
+                      <pm-entry-id>SLS_Krypton_Test1</pm-entry-id>
+                    </pm-entry>
+                  </pm-entries>
+                </cos-entry>
+                <cos-entry>
+                  <cos-name>Neon</cos-name>
+                  <pm-entries>
+                    <pm-entry>
+                      <pm-entry-id>SLS_Neon_GA_Test</pm-entry-id>
+                      <sets-of-end-point-pairs>
+                        <set-of-end-point-pairs>
+                          <index>1</index>
+                          <sls-uni-inclusions>
+                            <end-point-pair>
+                              <end-point1>MMPOP1-ce5-Slot5-Port3</end-point1>
+                              <end-point2>MMPOP1-ce6-Slot6-Port3</end-point2>
+                            </end-point-pair>
+                            <end-point-pair>
+                              <end-point1>MMPOP1-ce6-Slot6-Port3</end-point1>
+                              <end-point2>MMPOP1-ce5-Slot5-Port3</end-point2>
+                            </end-point-pair>
+                          </sls-uni-inclusions>
+                        </set-of-end-point-pairs>
+                        <set-of-end-point-pairs>
+                          <index>2</index>
+                          <sls-uni-inclusions>
+                            <end-point-pair>
+                              <end-point1>MMPOP1-ce7-Slot7-Port3</end-point1>
+                              <end-point2>MMPOP1-ce8-Slot8-Port3</end-point2>
+                            </end-point-pair>
+                            <end-point-pair>
+                              <end-point1>MMPOP1-ce8-Slot8-Port3</end-point1>
+                              <end-point2>MMPOP1-ce7-Slot7-Port3</end-point2>
+                            </end-point-pair>
+                          </sls-uni-inclusions>
+                        </set-of-end-point-pairs>
+                      </sets-of-end-point-pairs>
+                    </pm-entry>
+                  </pm-entries>
+                </cos-entry>
+              </cos-entries>
+            </carrier-ethernet-sls>
+            <connection-type>multipoint-to-multipoint</connection-type>
             <admin-state>false</admin-state>
-            <color-identifier>dscp</color-identifier>
-            <cos-identifier>MEF103_Table23</cos-identifier>
-            <eec-identifier>MEF103_Table23</eec-identifier>
-            <ingress-bw-profile-per-evc>ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</ingress-bw-profile-per-evc>
-            <egress-bw-profile-per-evc>eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</egress-bw-profile-per-evc>
-            <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-            <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
-            <test-meg-enabled wd:default="true">false</test-meg-enabled>
-            <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
-          </end-point>
-          <end-point>
-            <uni-id>MMPOP1-ce2-Slot2-Port3</uni-id>
-            <ce-vlans>
-              <ce-vlan>
-                <vid>33</vid>
-              </ce-vlan>
-            </ce-vlans>
+            <max-num-of-evc-end-point>4</max-num-of-evc-end-point>
+            <ce-vlan-id-preservation>true</ce-vlan-id-preservation>
+            <ce-vlan-pcp-preservation wd:default="true">false</ce-vlan-pcp-preservation>
+            <ce-vlan-dei-preservation wd:default="true">false</ce-vlan-dei-preservation>
+            <unicast-frame-delivery>conditional</unicast-frame-delivery>
+            <multicast-frame-delivery wd:default="true">unconditional</multicast-frame-delivery>
+            <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
+            <svc-type>evplan</svc-type>
+          </evc>
+          <evc>
+            <evc-id>EVC-0002947-ACME-MEGAMART</evc-id>
+            <end-points>
+              <end-point>
+                <uni-id>MMPOP1-ce5-Slot5-Port4</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>153</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+              <end-point>
+                <uni-id>MMPOP1-ce6-Slot6-Port3</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>153</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>leaf</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+              <end-point>
+                <uni-id>MMPOP1-ce7-Slot7-Port3</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>153</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>leaf</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+              <end-point>
+                <uni-id>MMPOP1-ce8-Slot8-Port3</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>153</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>leaf</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+            </end-points>
             <status>
               <operational-state>false</operational-state>
               <evc-end-point-id/>
             </status>
-            <role>root</role>
+            <carrier-ethernet-sls>
+              <sls-id>MEF103_Table25</sls-id>
+              <start-time>201606181200Z</start-time>
+              <cos-entries>
+                <cos-entry>
+                  <cos-name>Krypton</cos-name>
+                  <pm-entries>
+                    <pm-entry>
+                      <pm-entry-id>SLS_Krypton_Test1</pm-entry-id>
+                      <end-point-pairs>
+                        <sls-uni-inclusions>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce5-Slot5-Port4</end-point1>
+                            <end-point2>MMPOP1-ce6-Slot6-Port3</end-point2>
+                          </end-point-pair>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce5-Slot5-Port4</end-point1>
+                            <end-point2>MMPOP1-ce7-Slot7-Port3</end-point2>
+                          </end-point-pair>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce5-Slot5-Port4</end-point1>
+                            <end-point2>MMPOP1-ce8-Slot8-Port3</end-point2>
+                          </end-point-pair>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce6-Slot6-Port3</end-point1>
+                            <end-point2>MMPOP1-ce5-Slot5-Port4</end-point2>
+                          </end-point-pair>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce7-Slot7-Port3</end-point1>
+                            <end-point2>MMPOP1-ce5-Slot5-Port4</end-point2>
+                          </end-point-pair>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce8-Slot8-Port3</end-point1>
+                            <end-point2>MMPOP1-ce5-Slot5-Port4</end-point2>
+                          </end-point-pair>
+                        </sls-uni-inclusions>
+                      </end-point-pairs>
+                    </pm-entry>
+                  </pm-entries>
+                </cos-entry>
+              </cos-entries>
+            </carrier-ethernet-sls>
+            <connection-type>rooted-multipoint</connection-type>
             <admin-state>false</admin-state>
-            <color-identifier>pcp</color-identifier>
-            <cos-identifier>MEF103_Table13</cos-identifier>
-            <eec-identifier>MEF62_ApdxA</eec-identifier>
-            <ingress-bw-profile-per-evc>ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</ingress-bw-profile-per-evc>
-            <egress-bw-profile-per-evc>eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</egress-bw-profile-per-evc>
-            <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-            <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
-            <test-meg-enabled wd:default="true">false</test-meg-enabled>
-            <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
-          </end-point>
-        </end-points>
-        <status>
-          <operational-state>false</operational-state>
-        </status>
-        <carrier-ethernet-sls>
-          <sls-id>MEF103_Table25</sls-id>
-          <start-time>201606181200Z</start-time>
-        </carrier-ethernet-sls>
-        <connection-type>point-to-point</connection-type>
-        <admin-state>false</admin-state>
-        <max-num-of-evc-end-point>2</max-num-of-evc-end-point>
-        <ce-vlan-id-preservation>true</ce-vlan-id-preservation>
-        <ce-vlan-pcp-preservation wd:default="true">false</ce-vlan-pcp-preservation>
-        <ce-vlan-dei-preservation wd:default="true">false</ce-vlan-dei-preservation>
-        <unicast-frame-delivery wd:default="true">unconditional</unicast-frame-delivery>
-        <multicast-frame-delivery wd:default="true">unconditional</multicast-frame-delivery>
-        <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
-        <svc-type>evpl</svc-type>
-      </mef-service>
-      <mef-service>
-        <evc-id>EVC-0001901-ACME-MEGAMART</evc-id>
-        <end-points>
-          <end-point>
-            <uni-id>MMPOP1-ce5-Slot5-Port1</uni-id>
-            <ce-vlans>
-              <ce-vlan>
-                <vid>1</vid>
-              </ce-vlan>
-            </ce-vlans>
+            <max-num-of-evc-end-point>4</max-num-of-evc-end-point>
+            <ce-vlan-id-preservation wd:default="true">false</ce-vlan-id-preservation>
+            <ce-vlan-pcp-preservation wd:default="true">false</ce-vlan-pcp-preservation>
+            <ce-vlan-dei-preservation wd:default="true">false</ce-vlan-dei-preservation>
+            <unicast-frame-delivery>conditional</unicast-frame-delivery>
+            <multicast-frame-delivery wd:default="true">unconditional</multicast-frame-delivery>
+            <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
+            <svc-type>evptree</svc-type>
+          </evc>
+          <evc>
+            <evc-id>EVC-0009898-ACME-MEGAMART</evc-id>
+            <end-points>
+              <end-point>
+                <uni-id>MMPOP1-ce0-Slot0-Port2</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>800</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>801</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>802</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+              <end-point>
+                <uni-id>MMPOP1-ce2-Slot0-Port3</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>800</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>801</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>802</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+            </end-points>
             <status>
               <operational-state>false</operational-state>
               <evc-end-point-id/>
             </status>
-            <role>root</role>
+            <carrier-ethernet-sls>
+              <sls-id>MEF103_Table25</sls-id>
+              <start-time>201606181200Z</start-time>
+              <cos-entries>
+                <cos-entry>
+                  <cos-name>Argon</cos-name>
+                  <pm-entries>
+                    <pm-entry>
+                      <pm-entry-id>SLS_Argon_Test1</pm-entry-id>
+                      <end-point-pairs>
+                        <sls-uni-inclusions>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce0-Slot0-Port2</end-point1>
+                            <end-point2>MMPOP1-ce2-Slot0-Port3</end-point2>
+                          </end-point-pair>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce2-Slot0-Port3</end-point1>
+                            <end-point2>MMPOP1-ce0-Slot0-Port2</end-point2>
+                          </end-point-pair>
+                        </sls-uni-inclusions>
+                      </end-point-pairs>
+                    </pm-entry>
+                  </pm-entries>
+                </cos-entry>
+                <cos-entry>
+                  <cos-name>Krypton</cos-name>
+                  <pm-entries>
+                    <pm-entry>
+                      <pm-entry-id>SLS_Krypton_Test1</pm-entry-id>
+                      <end-point-pairs>
+                        <sls-uni-inclusions>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce0-Slot0-Port2</end-point1>
+                            <end-point2>MMPOP1-ce2-Slot0-Port3</end-point2>
+                          </end-point-pair>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce2-Slot0-Port3</end-point1>
+                            <end-point2>MMPOP1-ce0-Slot0-Port2</end-point2>
+                          </end-point-pair>
+                        </sls-uni-inclusions>
+                      </end-point-pairs>
+                    </pm-entry>
+                  </pm-entries>
+                </cos-entry>
+                <cos-entry>
+                  <cos-name>Neon</cos-name>
+                  <pm-entries>
+                    <pm-entry>
+                      <pm-entry-id>SLS_Neon_Test1</pm-entry-id>
+                      <end-point-pairs>
+                        <sls-uni-inclusions>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce0-Slot0-Port2</end-point1>
+                            <end-point2>MMPOP1-ce2-Slot0-Port3</end-point2>
+                          </end-point-pair>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce2-Slot0-Port3</end-point1>
+                            <end-point2>MMPOP1-ce0-Slot0-Port2</end-point2>
+                          </end-point-pair>
+                        </sls-uni-inclusions>
+                      </end-point-pairs>
+                    </pm-entry>
+                  </pm-entries>
+                </cos-entry>
+              </cos-entries>
+            </carrier-ethernet-sls>
+            <connection-type>point-to-point</connection-type>
             <admin-state>false</admin-state>
+<<<<<<< Upstream, based on origin/master
             <color-identifier>dscp</color-identifier>
             <cos-identifier>MEF103_Table23</cos-identifier>
             <eec-identifier>MEF103_Table23</eec-identifier>
@@ -5691,6 +6604,19 @@
         <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
         <svc-type>other</svc-type>
       </mef-service>
+=======
+            <max-num-of-evc-end-point>2</max-num-of-evc-end-point>
+            <ce-vlan-id-preservation>true</ce-vlan-id-preservation>
+            <ce-vlan-pcp-preservation>true</ce-vlan-pcp-preservation>
+            <ce-vlan-dei-preservation wd:default="true">false</ce-vlan-dei-preservation>
+            <unicast-frame-delivery wd:default="true">unconditional</unicast-frame-delivery>
+            <multicast-frame-delivery wd:default="true">unconditional</multicast-frame-delivery>
+            <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
+            <svc-type>other</svc-type>
+          </evc>
+        </subscriber-services>
+      </carrier-ethernet>
+>>>>>>> 406a708  Updates to MEF Services to add additional containers to the top level and rename mef-service to evc.
     </mef-services>
     <mef-topology xmlns="urn:mef:yang:mef-topology">
       <devices>
@@ -7821,6 +8747,7 @@
         </uni>
       </unis>
     </mef-interfaces>
+<<<<<<< Upstream, based on origin/master
     <mef-services xmlns="urn:mef:yang:mef-services">
       <mef-service>
         <evc-id>EVC-0001898-ACME-MEGAMART</evc-id>
@@ -7838,12 +8765,140 @@
                 <vid>102</vid>
               </ce-vlan>
             </ce-vlans>
+=======
+    <mef-services xmlns="urn:mef:xid:mef-services">
+      <carrier-ethernet>
+        <subscriber-services>
+          <evc>
+            <evc-id>EVC-0001898-ACME-MEGAMART</evc-id>
+            <end-points>
+              <end-point>
+                <uni-id>MMPOP1-ce0-Slot0-Port1</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>100</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>101</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>102</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+              <end-point>
+                <uni-id>MMPOP1-ce1-Slot1-Port1</uni-id>
+                <ce-vlans>
+                  <ce-vlan>
+                    <vid>100</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>101</vid>
+                  </ce-vlan>
+                  <ce-vlan>
+                    <vid>102</vid>
+                  </ce-vlan>
+                </ce-vlans>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
+                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
+                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
+                <test-meg-enabled wd:default="true">false</test-meg-enabled>
+                <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
+              </end-point>
+            </end-points>
+>>>>>>> 406a708  Updates to MEF Services to add additional containers to the top level and rename mef-service to evc.
             <status>
               <operational-state>false</operational-state>
               <evc-end-point-id/>
             </status>
-            <role>root</role>
+            <carrier-ethernet-sls>
+              <sls-id>MEF103_Table25</sls-id>
+              <start-time>201606181200Z</start-time>
+              <cos-entries>
+                <cos-entry>
+                  <cos-name>Argon</cos-name>
+                  <pm-entries>
+                    <pm-entry>
+                      <pm-entry-id>SLS_Argon_Test1</pm-entry-id>
+                      <end-point-pairs>
+                        <sls-uni-inclusions>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce0-Slot0-Port1</end-point1>
+                            <end-point2>MMPOP1-ce1-Slot1-Port1</end-point2>
+                          </end-point-pair>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce1-Slot1-Port1</end-point1>
+                            <end-point2>MMPOP1-ce0-Slot0-Port1</end-point2>
+                          </end-point-pair>
+                        </sls-uni-inclusions>
+                      </end-point-pairs>
+                    </pm-entry>
+                  </pm-entries>
+                </cos-entry>
+                <cos-entry>
+                  <cos-name>Krypton</cos-name>
+                  <pm-entries>
+                    <pm-entry>
+                      <pm-entry-id>SLS_Krypton_Test1</pm-entry-id>
+                      <end-point-pairs>
+                        <sls-uni-inclusions>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce0-Slot0-Port1</end-point1>
+                            <end-point2>MMPOP1-ce1-Slot1-Port1</end-point2>
+                          </end-point-pair>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce1-Slot1-Port1</end-point1>
+                            <end-point2>MMPOP1-ce0-Slot0-Port1</end-point2>
+                          </end-point-pair>
+                        </sls-uni-inclusions>
+                      </end-point-pairs>
+                    </pm-entry>
+                  </pm-entries>
+                </cos-entry>
+                <cos-entry>
+                  <cos-name>Neon</cos-name>
+                  <pm-entries>
+                    <pm-entry>
+                      <pm-entry-id>SLS_Neon_Test1</pm-entry-id>
+                      <end-point-pairs>
+                        <sls-uni-inclusions>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce0-Slot0-Port1</end-point1>
+                            <end-point2>MMPOP1-ce1-Slot1-Port1</end-point2>
+                          </end-point-pair>
+                          <end-point-pair>
+                            <end-point1>MMPOP1-ce1-Slot1-Port1</end-point1>
+                            <end-point2>MMPOP1-ce0-Slot0-Port1</end-point2>
+                          </end-point-pair>
+                        </sls-uni-inclusions>
+                      </end-point-pairs>
+                    </pm-entry>
+                  </pm-entries>
+                </cos-entry>
+              </cos-entries>
+            </carrier-ethernet-sls>
+            <connection-type>point-to-point</connection-type>
             <admin-state>false</admin-state>
+<<<<<<< Upstream, based on origin/master
             <color-identifier>dscp</color-identifier>
             <cos-identifier>MEF103_Table23</cos-identifier>
             <eec-identifier>MEF103_Table23</eec-identifier>
@@ -7960,6 +9015,19 @@
         <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
         <svc-type>epl</svc-type>
       </mef-service>
+=======
+            <max-num-of-evc-end-point>2</max-num-of-evc-end-point>
+            <ce-vlan-id-preservation>true</ce-vlan-id-preservation>
+            <ce-vlan-pcp-preservation>true</ce-vlan-pcp-preservation>
+            <ce-vlan-dei-preservation wd:default="true">false</ce-vlan-dei-preservation>
+            <unicast-frame-delivery wd:default="true">unconditional</unicast-frame-delivery>
+            <multicast-frame-delivery wd:default="true">unconditional</multicast-frame-delivery>
+            <broadcast-frame-delivery wd:default="true">unconditional</broadcast-frame-delivery>
+            <svc-type>epl</svc-type>
+          </evc>
+        </subscriber-services>
+      </carrier-ethernet>
+>>>>>>> 406a708  Updates to MEF Services to add additional containers to the top level and rename mef-service to evc.
     </mef-services>
   </data>
 </rpc-reply>
