@@ -88,7 +88,7 @@
     }
   },
   "mef-services:mef-services": {
-	   "mef-service": [
+	   "evc": [
 	    {	  
 	    "svc-id": 12345,
 	    "evc": {

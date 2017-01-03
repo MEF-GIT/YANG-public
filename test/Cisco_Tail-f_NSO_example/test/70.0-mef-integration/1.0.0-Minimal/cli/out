@@ -3261,7 +3261,7 @@ mef-interfaces unis uni MMPOP1-ce8-Slot8-Port3
  l2cp-address-set             cta
  l2cp-peering                 L2CP_Peering_Profile1
 !
-mef-services mef-service EVC-0001343-ACME-MEGAMART
+mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART
  end-points end-point MMPOP1-ce0-Slot0-Port3
   ce-vlans ce-vlan 1343
   !
@@ -3300,7 +3300,7 @@ mef-services mef-service EVC-0001343-ACME-MEGAMART
  ce-vlan-id-preservation  false
  svc-type                 evpl
 !
-mef-services mef-service EVC-0001898-ACME-MEGAMART
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART
  end-points end-point MMPOP1-ce0-Slot0-Port1
   ce-vlans ce-vlan 100
   !
@@ -3362,7 +3362,7 @@ mef-services mef-service EVC-0001898-ACME-MEGAMART
  ce-vlan-pcp-preservation true
  svc-type                 epl
 !
-mef-services mef-service EVC-0001899-ACME-MEGAMART
+mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART
  end-points end-point MMPOP1-ce0-Slot0-Port3
   ce-vlans ce-vlan 22
   !
@@ -3401,7 +3401,7 @@ mef-services mef-service EVC-0001899-ACME-MEGAMART
  ce-vlan-id-preservation  true
  svc-type                 evpl
 !
-mef-services mef-service EVC-0001900-ACME-MEGAMART
+mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART
  end-points end-point MMPOP1-ce0-Slot0-Port3
   ce-vlans ce-vlan 33
   !
@@ -3434,7 +3434,7 @@ mef-services mef-service EVC-0001900-ACME-MEGAMART
  ce-vlan-id-preservation  true
  svc-type                 evpl
 !
-mef-services mef-service EVC-0001901-ACME-MEGAMART
+mef-services carrier-ethernet subscriber-services evc EVC-0001901-ACME-MEGAMART
  end-points end-point MMPOP1-ce5-Slot5-Port1
   ce-vlans ce-vlan 1
   !
@@ -3483,7 +3483,7 @@ mef-services mef-service EVC-0001901-ACME-MEGAMART
  unicast-frame-delivery   conditional
  svc-type                 eplan
 !
-mef-services mef-service EVC-0001911-ACME-MEGAMART
+mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART
  end-points end-point MMPOP1-ce5-Slot5-Port2
   ce-vlans ce-vlan 1
   !
@@ -3590,7 +3590,7 @@ mef-services mef-service EVC-0001911-ACME-MEGAMART
  unicast-frame-delivery   conditional
  svc-type                 eptree
 !
-mef-services mef-service EVC-0001944-ACME-MEGAMART
+mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART
  end-points end-point MMPOP1-ce5-Slot5-Port3
   ce-vlans ce-vlan 53
   !
@@ -3776,7 +3776,7 @@ mef-services mef-service EVC-0001944-ACME-MEGAMART
  unicast-frame-delivery   conditional
  svc-type                 evplan
 !
-mef-services mef-service EVC-0002947-ACME-MEGAMART
+mef-services carrier-ethernet subscriber-services evc EVC-0002947-ACME-MEGAMART
  end-points end-point MMPOP1-ce5-Slot5-Port4
   ce-vlans ce-vlan 153
   !
@@ -3841,7 +3841,7 @@ mef-services mef-service EVC-0002947-ACME-MEGAMART
  unicast-frame-delivery   conditional
  svc-type                 evptree
 !
-mef-services mef-service EVC-0009898-ACME-MEGAMART
+mef-services carrier-ethernet subscriber-services evc EVC-0009898-ACME-MEGAMART
  end-points end-point MMPOP1-ce0-Slot0-Port2
   ce-vlans ce-vlan 800
   !

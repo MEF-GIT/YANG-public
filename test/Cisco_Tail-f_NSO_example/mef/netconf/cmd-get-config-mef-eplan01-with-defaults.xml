@@ -26,9 +26,13 @@
             </unis>
           </mef-interfaces>          
           <mef-services xmlns="urn:mef:xid:mef-services">
-             <mef-service>
+           <carrier-ethernet>
+           <subscriber-services>          
+             <evc>
                 <evc-id>EVC-0001901-ACME-MEGAMART</evc-id>
-             </mef-service>
+             </evc>
+           </subscriber-services>             
+           </carrier-ethernet>
           </mef-services>
         </filter>          
   </get-config>

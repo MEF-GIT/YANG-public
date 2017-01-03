@@ -23,9 +23,13 @@
         </unis>
       </mef-interfaces>
     <mef-services xmlns="urn:mef:xid:mef-services"   xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" >
-      <mef-service nc:operation="delete">
+           <carrier-ethernet>
+           <subscriber-services>          
+      <evc nc:operation="delete">
         <evc-id>EVC-0009898-ACME-MEGAMART</evc-id>
-      </mef-service>
+      </evc>
+           </subscriber-services>             
+           </carrier-ethernet>
     </mef-services>
       <mef-interfaces xmlns="urn:mef:xid:mef-interfaces" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" >
         <unis>

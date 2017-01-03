@@ -27,7 +27,9 @@
     </unis>
     </mef-interfaces>
     <mef-services xmlns="urn:mef:xid:mef-services">
-      <mef-service>
+           <carrier-ethernet>
+           <subscriber-services>
+      <evc>
         <evc-id>EVC-0001901-ACME-MEGAMART</evc-id>
           <end-points>
             <end-point>
@@ -40,7 +42,9 @@
             <uni-id>MMPOP1-ce7-Slot7-Port1</uni-id>        
           </end-point>            
           </end-points> 
-        </mef-service>
+        </evc>
+           </subscriber-services>             
+           </carrier-ethernet>
      </mef-services>              
    </config>
   </edit-config>

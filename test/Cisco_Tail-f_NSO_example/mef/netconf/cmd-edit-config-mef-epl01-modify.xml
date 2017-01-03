@@ -21,14 +21,18 @@
     </unis>
     </mef-interfaces>
     <mef-services xmlns="urn:mef:xid:mef-services">
-      <mef-service>
+           <carrier-ethernet>
+           <subscriber-services>
+      <evc>
         <evc-id>EVC-0001898-ACME-MEGAMART</evc-id>
        <end-points>
           <end-point>
               <uni-id>MMPOP1-ce0-Slot0-Port1</uni-id>        
             </end-point>
           </end-points> 
-        </mef-service>
+        </evc>
+       </subscriber-services>             
+       </carrier-ethernet>
      </mef-services>              
    </config>
   </edit-config>

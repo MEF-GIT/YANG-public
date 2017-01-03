@@ -15,7 +15,9 @@
     }
   },
   "mef-services:mef-services": {
-	   "mef-service": [
+	  "carrier-ethernet": {
+      "subscriber-services": {	  
+	   "evc": [
 	    {
        "evc-id": "EVC-0001898-ACME-MEGAMART",
         "end-points": {
@@ -73,7 +75,9 @@
         "ce-vlan-pcp-preservation": true,
         "svc-type": "epl"
         }
-      ] 
+      ]
+      }
+	  }
  }
 }
 }

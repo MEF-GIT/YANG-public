@@ -9,7 +9,7 @@
 </unis>
 </mef-interfaces>
 <mef-services xmlns="http://metroethernetforum.org/ns/yang/mef-services">
-  <mef-service>
+  <evc>
     <svc-id>12345</svc-id>
     <evc>
       <admin-state-enabled>true</admin-state-enabled>        
@@ -20,6 +20,6 @@
         </uni>
       </unis> 
     </evc>
-    </mef-service>
+    </evc>
  </mef-services>  
 </data>
