@@ -850,67 +850,65 @@ commit
 !
 top
 !
-mef-global profiles l2cp-cos profile MEF103_Table3PlusCoS user-label "Ingress L2CP Profile with CoS Names"
-mef-global profiles l2cp-cos profile MEF103_Table3PlusCoS cos-maps cos-map 01:80:C2:00:00:00 "STP/RSTP/MSTP" protocol llc protocol-id 42 cos-name Krypton handling pass
-mef-global profiles l2cp-cos profile MEF103_Table3PlusCoS cos-maps cos-map 01:80:C2:00:00:01 "802.3 MAC Control Pause" protocol ethertype protocol-id 88:08 subtype 00:01 cos-name Krypton handling discard
-mef-global profiles l2cp-cos profile MEF103_Table3PlusCoS cos-maps cos-map 01:80:C2:00:00:02 "Link OAM" protocol ethertype protocol-id 88:09 subtype 03 cos-name Krypton handling pass
-mef-global profiles l2cp-cos profile MEF103_Table3PlusCoS cos-maps cos-map 01:80:C2:00:00:02 "ESMC" protocol ethertype protocol-id 88:09 subtype 0A cos-name Krypton handling pass
-mef-global profiles l2cp-cos profile MEF103_Table3PlusCoS cos-maps cos-map 01:80:C2:00:00:03 "Port Authentication" protocol ethertype protocol-id 88:8E cos-name Krypton handling peer
-mef-global profiles l2cp-cos profile MEF103_Table3PlusCoS cos-maps cos-map 01:80:C2:00:00:07 "E-LMI" protocol ethertype protocol-id 88:EE cos-name Krypton handling peer
-mef-global profiles l2cp-cos profile MEF103_Table3PlusCoS cos-maps cos-map 01:80:C2:00:00:0E "LLDP" protocol ethertype protocol-id 88:CC cos-name Krypton handling peer
-mef-global profiles l2cp-cos profile MEF103_Table3PlusCoS cos-maps cos-map 01:80:C2:00:00:0E "PTP Peer Delay" protocol ethertype protocol-id 88:F7 cos-name Krypton handling peer
-mef-global profiles l2cp-cos profile MEF103_Table3PlusCoS cos-maps cos-map 01:80:C2:00:00:3F "Example of SOAM Service Frame" protocol ethertype protocol-id 89:02 cos-name Neon handling peer
-mef-global profiles l2cp-cos profile MEF103_Table3PlusCoS cos-maps cos-map 01:80:C2:00:00:32 "Example3 of a custom MAC" protocol ethertype cos-name Neon handling pass
+mef-global profiles l2cp-cos profile MEF103_Table3PlusCoS 
+mef-global profiles l2cp-cos profile MEF103_Table3PlusCoS cos-maps cos-map llc 42 cos-name Krypton
+mef-global profiles l2cp-cos profile MEF103_Table3PlusCoS cos-maps cos-map ethertype 88:08 subtypes subtype 00:01 cos-name Krypton
+mef-global profiles l2cp-cos profile MEF103_Table3PlusCoS cos-maps cos-map ethertype 88:09 subtypes subtype 03 cos-name Krypton
+mef-global profiles l2cp-cos profile MEF103_Table3PlusCoS cos-maps cos-map ethertype 88:09 subtypes subtype 0A cos-name Krypton
+mef-global profiles l2cp-cos profile MEF103_Table3PlusCoS cos-maps cos-map ethertype 88:8E cos-name Krypton
+mef-global profiles l2cp-cos profile MEF103_Table3PlusCoS cos-maps cos-map ethertype 88:EE cos-name Krypton
+mef-global profiles l2cp-cos profile MEF103_Table3PlusCoS cos-maps cos-map ethertype 88:CC cos-name Krypton
+mef-global profiles l2cp-cos profile MEF103_Table3PlusCoS cos-maps cos-map ethertype 88:F7 cos-name Krypton
+mef-global profiles l2cp-cos profile MEF103_Table3PlusCoS cos-maps cos-map ethertype 89:02 cos-name Neon
 !
-mef-global profiles l2cp-eec profile MEF103_Table3PlusEEC user-label "Egress L2CP Profile with EEC Names"
-mef-global profiles l2cp-eec profile MEF103_Table3PlusEEC eec-maps eec-map 01:80:C2:00:00:00 "STP/RSTP/MSTP" protocol llc protocol-id 42 eec-name EEC-Krypton handling pass
-mef-global profiles l2cp-eec profile MEF103_Table3PlusEEC eec-maps eec-map 01:80:C2:00:00:01 "802.3 MAC Control Pause" protocol ethertype protocol-id 88:08 subtype 00:01 eec-name EEC-Krypton handling discard
-mef-global profiles l2cp-eec profile MEF103_Table3PlusEEC eec-maps eec-map 01:80:C2:00:00:02 "Link OAM" protocol ethertype protocol-id 88:09 subtype 03 eec-name EEC-Krypton handling pass
-mef-global profiles l2cp-eec profile MEF103_Table3PlusEEC eec-maps eec-map 01:80:C2:00:00:02 "ESMC" protocol ethertype protocol-id 88:09 subtype 0A eec-name EEC-Krypton handling pass
-mef-global profiles l2cp-eec profile MEF103_Table3PlusEEC eec-maps eec-map 01:80:C2:00:00:03 "Port Authentication" protocol ethertype protocol-id 88:8E eec-name EEC-Krypton handling peer
-mef-global profiles l2cp-eec profile MEF103_Table3PlusEEC eec-maps eec-map 01:80:C2:00:00:07 "E-LMI" protocol ethertype protocol-id 88:EE eec-name EEC-Krypton handling peer
-mef-global profiles l2cp-eec profile MEF103_Table3PlusEEC eec-maps eec-map 01:80:C2:00:00:0E "LLDP" protocol ethertype protocol-id 88:CC eec-name EEC-Krypton handling peer
-mef-global profiles l2cp-eec profile MEF103_Table3PlusEEC eec-maps eec-map 01:80:C2:00:00:0E "PTP Peer Delay" protocol ethertype protocol-id 88:F7 eec-name EEC-Krypton handling peer
-mef-global profiles l2cp-eec profile MEF103_Table3PlusEEC eec-maps eec-map 01:80:C2:00:00:3F "Example of SOAM Service Frame" protocol ethertype protocol-id 89:02 eec-name EEC-Neon handling peer
-mef-global profiles l2cp-eec profile MEF103_Table3PlusEEC eec-maps eec-map 01:80:C2:00:00:32 "Example3 of a custom MAC" protocol ethertype eec-name EEC-Neon handling pass
+mef-global profiles l2cp-eec profile MEF103_Table3PlusEEC
+mef-global profiles l2cp-eec profile MEF103_Table3PlusEEC eec-maps eec-map llc 42 eec-name EEC-Krypton
+mef-global profiles l2cp-eec profile MEF103_Table3PlusEEC eec-maps eec-map ethertype 88:08 subtypes subtype 00:01 eec-name EEC-Krypton
+mef-global profiles l2cp-eec profile MEF103_Table3PlusEEC eec-maps eec-map ethertype 88:09 subtypes subtype 03 eec-name EEC-Krypton
+mef-global profiles l2cp-eec profile MEF103_Table3PlusEEC eec-maps eec-map ethertype 88:09 subtypes subtype 0A eec-name EEC-Krypton
+mef-global profiles l2cp-eec profile MEF103_Table3PlusEEC eec-maps eec-map ethertype 88:8E eec-name EEC-Krypton
+mef-global profiles l2cp-eec profile MEF103_Table3PlusEEC eec-maps eec-map ethertype 88:EE eec-name EEC-Krypton
+mef-global profiles l2cp-eec profile MEF103_Table3PlusEEC eec-maps eec-map ethertype 88:CC eec-name EEC-Krypton
+mef-global profiles l2cp-eec profile MEF103_Table3PlusEEC eec-maps eec-map ethertype 88:F7 eec-name EEC-Krypton
+mef-global profiles l2cp-eec profile MEF103_Table3PlusEEC eec-maps eec-map ethertype 89:02 eec-name EEC-Neon
 !
-mef-global profiles l2cp-peering profile L2CP_Peering_Profile1 user-label "L2CP Peering Profile #1"
-mef-global profiles l2cp-peering profile L2CP_Peering_Profile1 peering-maps peering-map 01:80:C2:00:00:03 "Port Authentication" protocol ethertype protocol-id 88:8E
-mef-global profiles l2cp-peering profile L2CP_Peering_Profile1 peering-maps peering-map 01:80:C2:00:00:07 "E-LMI" protocol ethertype protocol-id 88:EE
-mef-global profiles l2cp-peering profile L2CP_Peering_Profile1 peering-maps peering-map 01:80:C2:00:00:0E "LLDP" protocol ethertype protocol-id 88:CC
-mef-global profiles l2cp-peering profile L2CP_Peering_Profile1 peering-maps peering-map 01:80:C2:00:00:0E "PTP Peer Delay" protocol ethertype protocol-id 88:F7
-mef-global profiles l2cp-peering profile L2CP_Peering_Profile1 peering-maps peering-map 01:80:C2:00:00:3F "Example of SOAM Service Frame" protocol ethertype protocol-id 89:02
+mef-global profiles l2cp-peering profile L2CP_Peering_Profile1
+mef-global profiles l2cp-peering profile L2CP_Peering_Profile1 peering-maps peering-map 01:80:C2:00:00:02 ethertype 88:09 subtype [ 03 0A ]
+mef-global profiles l2cp-peering profile L2CP_Peering_Profile1 peering-maps peering-map 01:80:C2:00:00:03 ethertype 88:8E
+mef-global profiles l2cp-peering profile L2CP_Peering_Profile1 peering-maps peering-map 01:80:C2:00:00:07 ethertype 88:EE
+mef-global profiles l2cp-peering profile L2CP_Peering_Profile1 peering-maps peering-map 01:80:C2:00:00:0E ethertype 88:CC
+mef-global profiles l2cp-peering profile L2CP_Peering_Profile1 peering-maps peering-map 01:80:C2:00:00:0E ethertype 88:F7
+mef-global profiles l2cp-peering profile L2CP_Peering_Profile1 peering-maps peering-map 01:80:C2:00:00:3F ethertype 89:02
 !
-mef-global profiles l2cp-cos profile PCCWG_L2CP_CoS user-label "Ingress L2CP Profile with CoS Names"
-mef-global profiles l2cp-cos profile PCCWG_L2CP_CoS cos-maps cos-map 01:80:C2:00:00:00 "STP/RSTP/MSTP" protocol llc protocol-id 42 cos-name pccwg_gold handling pass
-mef-global profiles l2cp-cos profile PCCWG_L2CP_CoS cos-maps cos-map 01:80:C2:00:00:01 "802.3 MAC Control Pause" protocol ethertype protocol-id 88:08 subtype 00:01 cos-name pccwg_gold handling discard
-mef-global profiles l2cp-cos profile PCCWG_L2CP_CoS cos-maps cos-map 01:80:C2:00:00:02 "Link OAM" protocol ethertype protocol-id 88:09 subtype 03 cos-name pccwg_gold handling pass
-mef-global profiles l2cp-cos profile PCCWG_L2CP_CoS cos-maps cos-map 01:80:C2:00:00:02 "ESMC" protocol ethertype protocol-id 88:09 subtype 0A cos-name pccwg_gold handling pass
-mef-global profiles l2cp-cos profile PCCWG_L2CP_CoS cos-maps cos-map 01:80:C2:00:00:03 "Port Authentication" protocol ethertype protocol-id 88:8E cos-name pccwg_gold handling peer
-mef-global profiles l2cp-cos profile PCCWG_L2CP_CoS cos-maps cos-map 01:80:C2:00:00:07 "E-LMI" protocol ethertype protocol-id 88:EE cos-name pccwg_gold handling peer
-mef-global profiles l2cp-cos profile PCCWG_L2CP_CoS cos-maps cos-map 01:80:C2:00:00:0E "LLDP" protocol ethertype protocol-id 88:CC cos-name pccwg_gold handling peer
-mef-global profiles l2cp-cos profile PCCWG_L2CP_CoS cos-maps cos-map 01:80:C2:00:00:0E "PTP Peer Delay" protocol ethertype protocol-id 88:F7 cos-name pccwg_gold handling peer
-mef-global profiles l2cp-cos profile PCCWG_L2CP_CoS cos-maps cos-map 01:80:C2:00:00:3F "Example of SOAM Service Frame" protocol ethertype protocol-id 89:02 cos-name pccwg_bronze handling peer
-mef-global profiles l2cp-cos profile PCCWG_L2CP_CoS cos-maps cos-map 01:80:C2:00:00:32 "Example3 of a custom MAC" protocol ethertype cos-name pccwg_bronze handling pass
+mef-global profiles l2cp-cos profile PCCWG_L2CP_CoS
+mef-global profiles l2cp-cos profile PCCWG_L2CP_CoS cos-maps cos-map llc 42 cos-name pccwg_gold
+mef-global profiles l2cp-cos profile PCCWG_L2CP_CoS cos-maps cos-map ethertype 88:08 subtypes subtype 00:01 cos-name pccwg_gold
+mef-global profiles l2cp-cos profile PCCWG_L2CP_CoS cos-maps cos-map ethertype 88:09 subtypes subtype 03 cos-name pccwg_gold
+mef-global profiles l2cp-cos profile PCCWG_L2CP_CoS cos-maps cos-map ethertype 88:09 subtypes subtype 0A cos-name pccwg_gold
+mef-global profiles l2cp-cos profile PCCWG_L2CP_CoS cos-maps cos-map ethertype 88:8E cos-name pccwg_gold
+mef-global profiles l2cp-cos profile PCCWG_L2CP_CoS cos-maps cos-map ethertype 88:EE cos-name pccwg_gold
+mef-global profiles l2cp-cos profile PCCWG_L2CP_CoS cos-maps cos-map ethertype 88:CC cos-name pccwg_gold
+mef-global profiles l2cp-cos profile PCCWG_L2CP_CoS cos-maps cos-map ethertype 88:F7 cos-name pccwg_gold
+mef-global profiles l2cp-cos profile PCCWG_L2CP_CoS cos-maps cos-map ethertype 89:02 cos-name pccwg_bronze
 !
-mef-global profiles l2cp-eec profile PCCWG_L2CP_EEC user-label "Egress L2CP Profile with EEC Names"
-mef-global profiles l2cp-eec profile PCCWG_L2CP_EEC eec-maps eec-map 01:80:C2:00:00:00 "STP/RSTP/MSTP" protocol llc protocol-id 42 eec-name pccwg_gold handling pass
-mef-global profiles l2cp-eec profile PCCWG_L2CP_EEC eec-maps eec-map 01:80:C2:00:00:01 "802.3 MAC Control Pause" protocol ethertype protocol-id 88:08 subtype 00:01 eec-name pccwg_gold handling discard
-mef-global profiles l2cp-eec profile PCCWG_L2CP_EEC eec-maps eec-map 01:80:C2:00:00:02 "Link OAM" protocol ethertype protocol-id 88:09 subtype 03 eec-name pccwg_gold handling pass
-mef-global profiles l2cp-eec profile PCCWG_L2CP_EEC eec-maps eec-map 01:80:C2:00:00:02 "ESMC" protocol ethertype protocol-id 88:09 subtype 0A eec-name pccwg_gold handling pass
-mef-global profiles l2cp-eec profile PCCWG_L2CP_EEC eec-maps eec-map 01:80:C2:00:00:03 "Port Authentication" protocol ethertype protocol-id 88:8E eec-name pccwg_gold handling peer
-mef-global profiles l2cp-eec profile PCCWG_L2CP_EEC eec-maps eec-map 01:80:C2:00:00:07 "E-LMI" protocol ethertype protocol-id 88:EE eec-name pccwg_gold handling peer
-mef-global profiles l2cp-eec profile PCCWG_L2CP_EEC eec-maps eec-map 01:80:C2:00:00:0E "LLDP" protocol ethertype protocol-id 88:CC eec-name pccwg_gold handling peer
-mef-global profiles l2cp-eec profile PCCWG_L2CP_EEC eec-maps eec-map 01:80:C2:00:00:0E "PTP Peer Delay" protocol ethertype protocol-id 88:F7 eec-name pccwg_gold handling peer
-mef-global profiles l2cp-eec profile PCCWG_L2CP_EEC eec-maps eec-map 01:80:C2:00:00:3F "Example of SOAM Service Frame" protocol ethertype protocol-id 89:02 eec-name pccwg_bronze handling peer
-mef-global profiles l2cp-eec profile PCCWG_L2CP_EEC eec-maps eec-map 01:80:C2:00:00:32 "Example3 of a custom MAC" protocol ethertype eec-name pccwg_bronze handling pass
+mef-global profiles l2cp-eec profile PCCWG_L2CP_EEC
+mef-global profiles l2cp-eec profile PCCWG_L2CP_EEC eec-maps eec-map llc 42 eec-name pccwg_gold
+mef-global profiles l2cp-eec profile PCCWG_L2CP_EEC eec-maps eec-map ethertype 88:08 subtypes subtype 00:01 eec-name pccwg_gold
+mef-global profiles l2cp-eec profile PCCWG_L2CP_EEC eec-maps eec-map ethertype 88:09 subtypes subtype 03 eec-name pccwg_gold
+mef-global profiles l2cp-eec profile PCCWG_L2CP_EEC eec-maps eec-map ethertype 88:09 subtypes subtype 0A eec-name pccwg_gold
+mef-global profiles l2cp-eec profile PCCWG_L2CP_EEC eec-maps eec-map ethertype 88:8E eec-name pccwg_gold
+mef-global profiles l2cp-eec profile PCCWG_L2CP_EEC eec-maps eec-map ethertype 88:EE eec-name pccwg_gold
+mef-global profiles l2cp-eec profile PCCWG_L2CP_EEC eec-maps eec-map ethertype 88:CC eec-name pccwg_gold
+mef-global profiles l2cp-eec profile PCCWG_L2CP_EEC eec-maps eec-map ethertype 88:F7 eec-name pccwg_gold
+mef-global profiles l2cp-eec profile PCCWG_L2CP_EEC eec-maps eec-map ethertype 89:02 eec-name pccwg_bronze
 !
-mef-global profiles l2cp-peering profile PCCWG_L2CP_Peering_Profile1 user-label "L2CP Peering Profile #1"
-mef-global profiles l2cp-peering profile PCCWG_L2CP_Peering_Profile1 peering-maps peering-map 01:80:C2:00:00:03 "Port Authentication" protocol ethertype protocol-id 88:8E
-mef-global profiles l2cp-peering profile PCCWG_L2CP_Peering_Profile1 peering-maps peering-map 01:80:C2:00:00:07 "E-LMI" protocol ethertype protocol-id 88:EE
-mef-global profiles l2cp-peering profile PCCWG_L2CP_Peering_Profile1 peering-maps peering-map 01:80:C2:00:00:0E "LLDP" protocol ethertype protocol-id 88:CC
-mef-global profiles l2cp-peering profile PCCWG_L2CP_Peering_Profile1 peering-maps peering-map 01:80:C2:00:00:0E "PTP Peer Delay" protocol ethertype protocol-id 88:F7
-mef-global profiles l2cp-peering profile PCCWG_L2CP_Peering_Profile1 peering-maps peering-map 01:80:C2:00:00:3F "Example of SOAM Service Frame" protocol ethertype protocol-id 89:02
+mef-global profiles l2cp-peering profile PCCWG_L2CP_Peering_Profile1
+mef-global profiles l2cp-peering profile PCCWG_L2CP_Peering_Profile1 peering-maps peering-map 01:80:C2:00:00:02 ethertype 88:09 subtype [ 03 0A ]
+mef-global profiles l2cp-peering profile PCCWG_L2CP_Peering_Profile1 peering-maps peering-map 01:80:C2:00:00:03 ethertype 88:8E
+mef-global profiles l2cp-peering profile PCCWG_L2CP_Peering_Profile1 peering-maps peering-map 01:80:C2:00:00:07 ethertype 88:EE
+mef-global profiles l2cp-peering profile PCCWG_L2CP_Peering_Profile1 peering-maps peering-map 01:80:C2:00:00:0E ethertype 88:CC
+mef-global profiles l2cp-peering profile PCCWG_L2CP_Peering_Profile1 peering-maps peering-map 01:80:C2:00:00:0E ethertype 88:F7
+mef-global profiles l2cp-peering profile PCCWG_L2CP_Peering_Profile1 peering-maps peering-map 01:80:C2:00:00:3F ethertype 89:02
 !
 commit
 !

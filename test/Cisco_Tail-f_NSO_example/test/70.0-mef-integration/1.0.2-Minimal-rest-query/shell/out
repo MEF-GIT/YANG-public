@@ -2006,180 +2006,130 @@
             "cos-maps": {
               "cos-map": [
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:00",
-                  "peering-proto-name": "STP/RSTP/MSTP",
-                  "protocol": "llc",
-                  "protocol-id": "42",
-                  "cos-name": "Krypton",
-                  "handling": "pass"
-                },
-                {
-                  "dest-mac-addr": "01:80:c2:00:00:01",
-                  "peering-proto-name": "802.3 MAC Control Pause",
                   "protocol": "ethertype",
                   "protocol-id": "88:08",
-                  "cos-name": "Krypton",
-                  "handling": "discard",
-                  "subtype": ["00:01"]
+                  "subtypes": {
+                    "subtype": [
+                      {
+                        "subtype-id": "00:01",
+                        "cos-name": "Krypton"
+                      }
+                    ]
+                  }
                 },
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:02",
-                  "peering-proto-name": "ESMC",
                   "protocol": "ethertype",
                   "protocol-id": "88:09",
-                  "cos-name": "Krypton",
-                  "handling": "pass",
-                  "subtype": ["0a"]
+                  "subtypes": {
+                    "subtype": [
+                      {
+                        "subtype-id": "03",
+                        "cos-name": "Krypton"
+                      },
+                      {
+                        "subtype-id": "0a",
+                        "cos-name": "Krypton"
+                      }
+                    ]
+                  }
                 },
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:02",
-                  "peering-proto-name": "Link OAM",
-                  "protocol": "ethertype",
-                  "protocol-id": "88:09",
-                  "cos-name": "Krypton",
-                  "handling": "pass",
-                  "subtype": ["03"]
-                },
-                {
-                  "dest-mac-addr": "01:80:c2:00:00:03",
-                  "peering-proto-name": "Port Authentication",
                   "protocol": "ethertype",
                   "protocol-id": "88:8e",
-                  "cos-name": "Krypton",
-                  "handling": "peer"
+                  "cos-name": "Krypton"
                 },
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:07",
-                  "peering-proto-name": "E-LMI",
-                  "protocol": "ethertype",
-                  "protocol-id": "88:ee",
-                  "cos-name": "Krypton",
-                  "handling": "peer"
-                },
-                {
-                  "dest-mac-addr": "01:80:c2:00:00:0e",
-                  "peering-proto-name": "LLDP",
                   "protocol": "ethertype",
                   "protocol-id": "88:cc",
-                  "cos-name": "Krypton",
-                  "handling": "peer"
+                  "cos-name": "Krypton"
                 },
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:0e",
-                  "peering-proto-name": "PTP Peer Delay",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:ee",
+                  "cos-name": "Krypton"
+                },
+                {
                   "protocol": "ethertype",
                   "protocol-id": "88:f7",
-                  "cos-name": "Krypton",
-                  "handling": "peer"
+                  "cos-name": "Krypton"
                 },
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:32",
-                  "peering-proto-name": "Example3 of a custom MAC",
-                  "protocol": "ethertype",
-                  "cos-name": "Neon",
-                  "handling": "pass"
-                },
-                {
-                  "dest-mac-addr": "01:80:c2:00:00:3f",
-                  "peering-proto-name": "Example of SOAM Service Frame",
                   "protocol": "ethertype",
                   "protocol-id": "89:02",
-                  "cos-name": "Neon",
-                  "handling": "peer"
+                  "cos-name": "Neon"
+                },
+                {
+                  "protocol": "llc",
+                  "protocol-id": "42",
+                  "cos-name": "Krypton"
                 }
               ]
-            },
-            "user-label": "Ingress L2CP Profile with CoS Names"
+            }
           },
           {
             "id": "PCCWG_L2CP_CoS",
             "cos-maps": {
               "cos-map": [
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:00",
-                  "peering-proto-name": "STP/RSTP/MSTP",
-                  "protocol": "llc",
-                  "protocol-id": "42",
-                  "cos-name": "pccwg_gold",
-                  "handling": "pass"
-                },
-                {
-                  "dest-mac-addr": "01:80:c2:00:00:01",
-                  "peering-proto-name": "802.3 MAC Control Pause",
                   "protocol": "ethertype",
                   "protocol-id": "88:08",
-                  "cos-name": "pccwg_gold",
-                  "handling": "discard",
-                  "subtype": ["00:01"]
+                  "subtypes": {
+                    "subtype": [
+                      {
+                        "subtype-id": "00:01",
+                        "cos-name": "pccwg_gold"
+                      }
+                    ]
+                  }
                 },
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:02",
-                  "peering-proto-name": "ESMC",
                   "protocol": "ethertype",
                   "protocol-id": "88:09",
-                  "cos-name": "pccwg_gold",
-                  "handling": "pass",
-                  "subtype": ["0a"]
+                  "subtypes": {
+                    "subtype": [
+                      {
+                        "subtype-id": "03",
+                        "cos-name": "pccwg_gold"
+                      },
+                      {
+                        "subtype-id": "0a",
+                        "cos-name": "pccwg_gold"
+                      }
+                    ]
+                  }
                 },
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:02",
-                  "peering-proto-name": "Link OAM",
-                  "protocol": "ethertype",
-                  "protocol-id": "88:09",
-                  "cos-name": "pccwg_gold",
-                  "handling": "pass",
-                  "subtype": ["03"]
-                },
-                {
-                  "dest-mac-addr": "01:80:c2:00:00:03",
-                  "peering-proto-name": "Port Authentication",
                   "protocol": "ethertype",
                   "protocol-id": "88:8e",
-                  "cos-name": "pccwg_gold",
-                  "handling": "peer"
+                  "cos-name": "pccwg_gold"
                 },
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:07",
-                  "peering-proto-name": "E-LMI",
-                  "protocol": "ethertype",
-                  "protocol-id": "88:ee",
-                  "cos-name": "pccwg_gold",
-                  "handling": "peer"
-                },
-                {
-                  "dest-mac-addr": "01:80:c2:00:00:0e",
-                  "peering-proto-name": "LLDP",
                   "protocol": "ethertype",
                   "protocol-id": "88:cc",
-                  "cos-name": "pccwg_gold",
-                  "handling": "peer"
+                  "cos-name": "pccwg_gold"
                 },
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:0e",
-                  "peering-proto-name": "PTP Peer Delay",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:ee",
+                  "cos-name": "pccwg_gold"
+                },
+                {
                   "protocol": "ethertype",
                   "protocol-id": "88:f7",
-                  "cos-name": "pccwg_gold",
-                  "handling": "peer"
+                  "cos-name": "pccwg_gold"
                 },
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:32",
-                  "peering-proto-name": "Example3 of a custom MAC",
-                  "protocol": "ethertype",
-                  "cos-name": "pccwg_bronze",
-                  "handling": "pass"
-                },
-                {
-                  "dest-mac-addr": "01:80:c2:00:00:3f",
-                  "peering-proto-name": "Example of SOAM Service Frame",
                   "protocol": "ethertype",
                   "protocol-id": "89:02",
-                  "cos-name": "pccwg_bronze",
-                  "handling": "peer"
+                  "cos-name": "pccwg_bronze"
+                },
+                {
+                  "protocol": "llc",
+                  "protocol-id": "42",
+                  "cos-name": "pccwg_gold"
                 }
               ]
-            },
-            "user-label": "Ingress L2CP Profile with CoS Names"
+            }
           }
         ]
       },
@@ -2190,180 +2140,130 @@
             "eec-maps": {
               "eec-map": [
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:00",
-                  "peering-proto-name": "STP/RSTP/MSTP",
-                  "protocol": "llc",
-                  "protocol-id": "42",
-                  "eec-name": "EEC-Krypton",
-                  "handling": "pass"
-                },
-                {
-                  "dest-mac-addr": "01:80:c2:00:00:01",
-                  "peering-proto-name": "802.3 MAC Control Pause",
                   "protocol": "ethertype",
                   "protocol-id": "88:08",
-                  "eec-name": "EEC-Krypton",
-                  "handling": "discard",
-                  "subtype": ["00:01"]
+                  "subtypes": {
+                    "subtype": [
+                      {
+                        "subtype-id": "00:01",
+                        "eec-name": "EEC-Krypton"
+                      }
+                    ]
+                  }
                 },
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:02",
-                  "peering-proto-name": "ESMC",
                   "protocol": "ethertype",
                   "protocol-id": "88:09",
-                  "eec-name": "EEC-Krypton",
-                  "handling": "pass",
-                  "subtype": ["0a"]
+                  "subtypes": {
+                    "subtype": [
+                      {
+                        "subtype-id": "03",
+                        "eec-name": "EEC-Krypton"
+                      },
+                      {
+                        "subtype-id": "0a",
+                        "eec-name": "EEC-Krypton"
+                      }
+                    ]
+                  }
                 },
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:02",
-                  "peering-proto-name": "Link OAM",
-                  "protocol": "ethertype",
-                  "protocol-id": "88:09",
-                  "eec-name": "EEC-Krypton",
-                  "handling": "pass",
-                  "subtype": ["03"]
-                },
-                {
-                  "dest-mac-addr": "01:80:c2:00:00:03",
-                  "peering-proto-name": "Port Authentication",
                   "protocol": "ethertype",
                   "protocol-id": "88:8e",
-                  "eec-name": "EEC-Krypton",
-                  "handling": "peer"
+                  "eec-name": "EEC-Krypton"
                 },
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:07",
-                  "peering-proto-name": "E-LMI",
-                  "protocol": "ethertype",
-                  "protocol-id": "88:ee",
-                  "eec-name": "EEC-Krypton",
-                  "handling": "peer"
-                },
-                {
-                  "dest-mac-addr": "01:80:c2:00:00:0e",
-                  "peering-proto-name": "LLDP",
                   "protocol": "ethertype",
                   "protocol-id": "88:cc",
-                  "eec-name": "EEC-Krypton",
-                  "handling": "peer"
+                  "eec-name": "EEC-Krypton"
                 },
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:0e",
-                  "peering-proto-name": "PTP Peer Delay",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:ee",
+                  "eec-name": "EEC-Krypton"
+                },
+                {
                   "protocol": "ethertype",
                   "protocol-id": "88:f7",
-                  "eec-name": "EEC-Krypton",
-                  "handling": "peer"
+                  "eec-name": "EEC-Krypton"
                 },
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:32",
-                  "peering-proto-name": "Example3 of a custom MAC",
-                  "protocol": "ethertype",
-                  "eec-name": "EEC-Neon",
-                  "handling": "pass"
-                },
-                {
-                  "dest-mac-addr": "01:80:c2:00:00:3f",
-                  "peering-proto-name": "Example of SOAM Service Frame",
                   "protocol": "ethertype",
                   "protocol-id": "89:02",
-                  "eec-name": "EEC-Neon",
-                  "handling": "peer"
+                  "eec-name": "EEC-Neon"
+                },
+                {
+                  "protocol": "llc",
+                  "protocol-id": "42",
+                  "eec-name": "EEC-Krypton"
                 }
               ]
-            },
-            "user-label": "Egress L2CP Profile with EEC Names"
+            }
           },
           {
             "id": "PCCWG_L2CP_EEC",
             "eec-maps": {
               "eec-map": [
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:00",
-                  "peering-proto-name": "STP/RSTP/MSTP",
-                  "protocol": "llc",
-                  "protocol-id": "42",
-                  "eec-name": "pccwg_gold",
-                  "handling": "pass"
-                },
-                {
-                  "dest-mac-addr": "01:80:c2:00:00:01",
-                  "peering-proto-name": "802.3 MAC Control Pause",
                   "protocol": "ethertype",
                   "protocol-id": "88:08",
-                  "eec-name": "pccwg_gold",
-                  "handling": "discard",
-                  "subtype": ["00:01"]
+                  "subtypes": {
+                    "subtype": [
+                      {
+                        "subtype-id": "00:01",
+                        "eec-name": "pccwg_gold"
+                      }
+                    ]
+                  }
                 },
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:02",
-                  "peering-proto-name": "ESMC",
                   "protocol": "ethertype",
                   "protocol-id": "88:09",
-                  "eec-name": "pccwg_gold",
-                  "handling": "pass",
-                  "subtype": ["0a"]
+                  "subtypes": {
+                    "subtype": [
+                      {
+                        "subtype-id": "03",
+                        "eec-name": "pccwg_gold"
+                      },
+                      {
+                        "subtype-id": "0a",
+                        "eec-name": "pccwg_gold"
+                      }
+                    ]
+                  }
                 },
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:02",
-                  "peering-proto-name": "Link OAM",
-                  "protocol": "ethertype",
-                  "protocol-id": "88:09",
-                  "eec-name": "pccwg_gold",
-                  "handling": "pass",
-                  "subtype": ["03"]
-                },
-                {
-                  "dest-mac-addr": "01:80:c2:00:00:03",
-                  "peering-proto-name": "Port Authentication",
                   "protocol": "ethertype",
                   "protocol-id": "88:8e",
-                  "eec-name": "pccwg_gold",
-                  "handling": "peer"
+                  "eec-name": "pccwg_gold"
                 },
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:07",
-                  "peering-proto-name": "E-LMI",
-                  "protocol": "ethertype",
-                  "protocol-id": "88:ee",
-                  "eec-name": "pccwg_gold",
-                  "handling": "peer"
-                },
-                {
-                  "dest-mac-addr": "01:80:c2:00:00:0e",
-                  "peering-proto-name": "LLDP",
                   "protocol": "ethertype",
                   "protocol-id": "88:cc",
-                  "eec-name": "pccwg_gold",
-                  "handling": "peer"
+                  "eec-name": "pccwg_gold"
                 },
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:0e",
-                  "peering-proto-name": "PTP Peer Delay",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:ee",
+                  "eec-name": "pccwg_gold"
+                },
+                {
                   "protocol": "ethertype",
                   "protocol-id": "88:f7",
-                  "eec-name": "pccwg_gold",
-                  "handling": "peer"
+                  "eec-name": "pccwg_gold"
                 },
                 {
-                  "dest-mac-addr": "01:80:c2:00:00:32",
-                  "peering-proto-name": "Example3 of a custom MAC",
-                  "protocol": "ethertype",
-                  "eec-name": "pccwg_bronze",
-                  "handling": "pass"
-                },
-                {
-                  "dest-mac-addr": "01:80:c2:00:00:3f",
-                  "peering-proto-name": "Example of SOAM Service Frame",
                   "protocol": "ethertype",
                   "protocol-id": "89:02",
-                  "eec-name": "pccwg_bronze",
-                  "handling": "peer"
+                  "eec-name": "pccwg_bronze"
+                },
+                {
+                  "protocol": "llc",
+                  "protocol-id": "42",
+                  "eec-name": "pccwg_gold"
                 }
               ]
-            },
-            "user-label": "Egress L2CP Profile with EEC Names"
+            }
           }
         ]
       },
@@ -2374,76 +2274,76 @@
             "peering-maps": {
               "peering-map": [
                 {
+                  "dest-mac-addr": "01:80:c2:00:00:02",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:09",
+                  "subtype": ["03", "0a"]
+                },
+                {
                   "dest-mac-addr": "01:80:c2:00:00:03",
-                  "peering-proto-name": "Port Authentication",
                   "protocol": "ethertype",
                   "protocol-id": "88:8e"
                 },
                 {
                   "dest-mac-addr": "01:80:c2:00:00:07",
-                  "peering-proto-name": "E-LMI",
                   "protocol": "ethertype",
                   "protocol-id": "88:ee"
                 },
                 {
                   "dest-mac-addr": "01:80:c2:00:00:0e",
-                  "peering-proto-name": "LLDP",
                   "protocol": "ethertype",
                   "protocol-id": "88:cc"
                 },
                 {
                   "dest-mac-addr": "01:80:c2:00:00:0e",
-                  "peering-proto-name": "PTP Peer Delay",
                   "protocol": "ethertype",
                   "protocol-id": "88:f7"
                 },
                 {
                   "dest-mac-addr": "01:80:c2:00:00:3f",
-                  "peering-proto-name": "Example of SOAM Service Frame",
                   "protocol": "ethertype",
                   "protocol-id": "89:02"
                 }
               ]
-            },
-            "user-label": "L2CP Peering Profile #1"
+            }
           },
           {
             "id": "PCCWG_L2CP_Peering_Profile1",
             "peering-maps": {
               "peering-map": [
                 {
+                  "dest-mac-addr": "01:80:c2:00:00:02",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:09",
+                  "subtype": ["03", "0a"]
+                },
+                {
                   "dest-mac-addr": "01:80:c2:00:00:03",
-                  "peering-proto-name": "Port Authentication",
                   "protocol": "ethertype",
                   "protocol-id": "88:8e"
                 },
                 {
                   "dest-mac-addr": "01:80:c2:00:00:07",
-                  "peering-proto-name": "E-LMI",
                   "protocol": "ethertype",
                   "protocol-id": "88:ee"
                 },
                 {
                   "dest-mac-addr": "01:80:c2:00:00:0e",
-                  "peering-proto-name": "LLDP",
                   "protocol": "ethertype",
                   "protocol-id": "88:cc"
                 },
                 {
                   "dest-mac-addr": "01:80:c2:00:00:0e",
-                  "peering-proto-name": "PTP Peer Delay",
                   "protocol": "ethertype",
                   "protocol-id": "88:f7"
                 },
                 {
                   "dest-mac-addr": "01:80:c2:00:00:3f",
-                  "peering-proto-name": "Example of SOAM Service Frame",
                   "protocol": "ethertype",
                   "protocol-id": "89:02"
                 }
               ]
-            },
-            "user-label": "L2CP Peering Profile #1"
+            }
           }
         ]
       },
