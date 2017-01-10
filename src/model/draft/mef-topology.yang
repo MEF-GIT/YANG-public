@@ -80,8 +80,10 @@ module mef-topology {
   }
 
   revision 2016-04-01 {
-   	    description
+   	description
    	      "Added Operational Status output for interface maximum data rate";
+   	reference "EVC Ethernet Services Definitions YANG Modules
+	      (MEF XX), TBD";
   }  
      
   revision 2015-05-26 {

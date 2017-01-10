@@ -676,18 +676,18 @@ module mef-service-types {
 
   typedef bwp-ir-type {
     type uint32;
+    units "bps";
     description
       "Bandwidth Profile Information Rate in " +
       "Bits Per Second.";
-    units "bps";
     reference "[MEF10.3] [R143], [R144].";
   }
 
   typedef bwp-bs-type {
     type uint32;
+    units "bytes";
     description
       "Bandwidth Profile Burst Size in Bytes.";
-    units "bytes";
     reference "[MEF10.3] [R145].";
   }
 
