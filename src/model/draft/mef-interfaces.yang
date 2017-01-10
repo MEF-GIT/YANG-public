@@ -130,16 +130,16 @@ module mef-interfaces {
               "excluding 1000BASE-PX-D and 1000BASE-PX-U.";
             reference "[MEF10.3] Section 9.2 [R60]";
             list link {
-              min-elements 1;
-              key "device interface";
-              description
-                "A list of all the physical ports associated " +
-                "with this Link Layer.";
-              leaf device {
-                type leafref {
-                  path "/mef-topology:mef-topology/mef-topology:" +
-                  		"devices/mef-topology:device/" +
-                  		"mef-topology:dev-id";
+                key "device interface";
+                min-elements 1;
+                description
+                    "A list of all the physical ports associated " +
+                    "with this Link Layer.";
+                leaf device {
+                    type leafref {
+                    path "/mef-topology:mef-topology/mef-topology:" +
+                  	   	 "devices/mef-topology:device/" +
+                  		 "mef-topology:dev-id";
                 }
                 description
                   "The Physical Layer for each physical link " +

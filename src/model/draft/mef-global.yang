@@ -825,8 +825,8 @@ module mef-global {
           }
           leaf polling-timer {
             type mef-types:elmi-polling-timer-type;
-            default "10";
             units "seconds";
+            default "10";
             description
               "The timer started after tranmitting a Status " +
               "Enquiry. If the timer expires, record the error if" +
@@ -836,8 +836,8 @@ module mef-global {
           }
           leaf polling-verification-timer {
             type mef-types:elmi-polling-verification-timer-type;
-            default "15";
             units "seconds";
+            default "15";
             description
               "The type used for a timer started after tranmitting" +
               " a Status Message. If a Status Enquiry is recieved" +

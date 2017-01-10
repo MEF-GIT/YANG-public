@@ -79,9 +79,16 @@ module mef-topology {
   }
 
   revision 2016-04-01 {
+<<<<<<< Upstream, based on origin/master
    	    description
    	      "Added Operational Status output for interface " +
    	      "maximum data rate";
+=======
+   	description
+   	      "Added Operational Status output for interface maximum data rate";
+   	reference "EVC Ethernet Services Definitions YANG Modules
+	      (MEF XX), TBD";
+>>>>>>> dd18f25 Fixed some of the errors found in yangvalidator.com
   }  
      
   revision 2015-05-26 {
