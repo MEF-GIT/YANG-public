@@ -752,39 +752,6 @@ module mef-service-types {
     reference "[MEF10.3] Section 12.1. [MEF23.1] Section 8.1.";
   }
 
-  typedef l2cp-handling-type {
-	type enumeration {
-	  enum "discard" {
-	    description
-	      "Discard - An action taken at a L2CP Decision Point " +
-          "where a L2CP frame is neither delivered to a protocol " +
-          "entity, nor delivered to the External Interface " +
-          "where the L2CP Decision Point is located, nor " +
-          "propagated to L2CP Decision Points at other " +
-          "External Interfaces.";
-     }
-     enum "pass" {
-       description
-         "Pass(Tunnel) - An action taken at a L2CP Decision " +
-         "Point where a L2CP frame is either delivered to " +
-         "the External Interface where the L2CP Decision Point " +
-         "is located, or propagated to the L2CP Decision " +
-         "Points located at all other External Interfaces " +
-         "associated by the EVC.";
-     }
-     enum "peer" {
-       description
-         "Peer - An action taken at a L2CP Decision Point " +
-         "where a L2CP frame is delivered to a protocol " +
-         "entity determined by the Protocol Identifier " +
-         "in the L2CP Frame.";
-     }
-   }
-   description
-     "L2CP Service Frame handling option.";
-   reference "[MEF45] Table 8.";
- }
-
   typedef l2cp-address-set-type {
     type enumeration {
       enum "cta" {

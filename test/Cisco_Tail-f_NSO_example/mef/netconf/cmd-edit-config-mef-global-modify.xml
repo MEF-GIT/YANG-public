@@ -26,9 +26,14 @@
             <id>MEF103_Table3PlusCoS</id>
             <cos-maps>
               <cos-map>
-                <dest-mac-addr>01:80:C2:00:00:01</dest-mac-addr>
-                <peering-proto-name>802.3 MAC Control Pause</peering-proto-name>
-                <subtype nc:operation="create">00:02</subtype>
+                <protocol>ethertype</protocol>
+                <protocol-id>88:08</protocol-id>
+                <subtypes>
+                  <subtype>
+                    <subtype-id>00:02</subtype-id>
+                    <cos-name>Krypton</cos-name>
+                  </subtype>
+                </subtypes>
               </cos-map>
             </cos-maps>
           </profile>
@@ -39,25 +44,21 @@
             <peering-maps>
               <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:03</dest-mac-addr>
-                <peering-proto-name>Port Authentication REPLACED</peering-proto-name>
                 <protocol>llc</protocol>
-                <protocol-id>88:8e</protocol-id>
+                <protocol-id>42</protocol-id>
               </peering-map>
               <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:07</dest-mac-addr>
-                <peering-proto-name>E-LMI REPLACED</peering-proto-name>
                 <protocol>ethertype</protocol>
                 <protocol-id>88:ef</protocol-id>
               </peering-map>
               <peering-map>
                 <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
-                <peering-proto-name>LLDP REPLACED</peering-proto-name>
                 <protocol>llc</protocol>
-                <protocol-id>88:cd</protocol-id>
+                <protocol-id>43</protocol-id>
               </peering-map>
             </peering-maps>
-            <user-label>L2CP Peering Profile #1 REPLACED</user-label>
-          </profile>
+           </profile>
         </l2cp-peering>
         <cos>
           <cos-profile>

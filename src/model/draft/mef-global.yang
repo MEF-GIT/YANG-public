@@ -591,28 +591,15 @@ module mef-global {
           reference "[MEF10.3] Section 8.5.";
           container cos-maps {
             description
-              "Layer 2 Control Protocol (L2CP) Profiles " +
-              "for Classes of Service (CoS).";
+              "Layer 2 Control Protocol (L2CP) " +
+              "Classes of Service (CoS) Mappings.";
             list cos-map {
-              key "dest-mac-addr peering-proto-name";
+              key "protocol protocol-id";
               description
-                "L2CP Destination MAC Address.";
-              reference "[MEF10.3] Section 8.5.";
-              leaf dest-mac-addr {
-                type yang:mac-address;
-                description
-                  "The Destination MAC Address for the " +
-                  "Layer 2 Control Protocol.";
-              }
-              leaf peering-proto-name {
-                type mef-types:identifier45;
-                description
-                  "This attribute is a friendly name for the " +
-                  "Protocol to be Peered. It is optional.";
-              }
+                "The L2CP CoS Map of Protocols to CoS Names.";
+              reference "[MEF10.3] Section 8.5. [MEF45] Section 8.1.";
               leaf protocol {
                 type mef-types:l2cp-peering-protocol-field-type;
-                default "ethertype";
                 description
                   "The Protocol is one of Ethertype, LLC, " +
                   "or Other.";
@@ -625,6 +612,33 @@ module mef-global {
                   "in a colon separated list of hex values " +
                   "(ie. 88:EE or 82).";
               }
+              
+        choice simple-or-subtypes {
+        	case subtypes-option {
+              container subtypes {
+            	presence "subtypes configured";
+                list subtype {
+                  key "subtype-id";
+                  max-elements "255";
+            	  leaf subtype-id {
+            		type yang:hex-string;        
+                    description
+                    "L2CP Subtype for this Destination MAC's " +
+                    "Protocol ID.";
+                  }
+                  leaf cos-name {
+                      type leafref {
+                        path "/mef-global:mef-global/profiles/cos-names" +
+                        		"/cos-name/name";
+                      }
+                      description
+                        "This attribute identifies the name of a " +
+                        "class of service (CoS).";
+                    }            	  
+                }
+              }
+        	}
+        	case simple-option {
               leaf cos-name {
                 type leafref {
                   path "/mef-global:mef-global/profiles/cos-names" +
@@ -634,22 +648,9 @@ module mef-global {
                   "This attribute identifies the name of a " +
                   "class of service (CoS).";
               }
-              leaf handling {
-                type mef-types:l2cp-handling-type;
-                description
-                  "The handling selection indicates whether the " +
-                  "L2CP Service Frames identified by this list " +
-                  "entry should " +
-                  "be passed, discarded, or peered.";
-                reference "[MEF45] Section 8.5.";
-              }
-              leaf-list subtype {
-                type yang:hex-string;
-                max-elements "255";
-                description
-                  "L2CP Subtype for this Destination MAC's " +
-                  "Protocol ID.";
-              }
+        	}
+        } //choice
+        
             }
           }
           leaf id {
@@ -658,12 +659,6 @@ module mef-global {
               "The L2CP ID identifies a specific profile for " +
               "Layer 2 Control Processing.";
             reference "[MEF10.3] Section 8.5.";
-          }
-          leaf user-label {
-            type mef-types:identifier45;
-            description
-              "This attribute is a friendly name for the " +
-              "specific L2CP profile.";
           }
         }
       }
@@ -682,25 +677,12 @@ module mef-global {
               "Layer 2 Control Protocol (L2CP) Profiles " +
               "or Egress Equivalence Classes.";
             list eec-map {
-              key "dest-mac-addr peering-proto-name";
+              key "protocol protocol-id";
               description
                 "L2CP Destination MAC Address.";
               reference "[MEF10.3] Section 8.5.";
-              leaf dest-mac-addr {
-                type yang:mac-address;
-                description
-                  "The Destination MAC Address for the " +
-                  "Layer 2 Control Protocol.";
-              }
-              leaf peering-proto-name {
-                type mef-types:identifier45;
-                description
-                  "This attribute is a friendly name for the " +
-                  "Protocol to be Peered. It is optional.";
-              }
               leaf protocol {
                 type mef-types:l2cp-peering-protocol-field-type;
-                default "ethertype";
                 description
                   "The Protocol is one of Ethertype, LLC, or Other.";
               }
@@ -712,44 +694,53 @@ module mef-global {
                   "in a colon separated list of hex values " +
                   "(ie. 88:EE or 82).";
               }
-              leaf eec-name {
-                type leafref {
-                  path "/mef-global:mef-global/profiles/eec-names" +
-                  		"/eec-name/name";
-                }
-                description
-                  "This attribute identifies the name of a " +
-                  "Egress Equivalence Class (EEC).";
-              }
-              leaf handling {
-                type mef-types:l2cp-handling-type;
-                description
-                  "The handling selection indicates whether the " +
-                  "L2CP Service Frames identified by this list " +
-                  "entry should be passed, discarded, or peered.";
-                reference "[MEF45] Section 8.5.";
-              }
-              leaf-list subtype {
-                type yang:hex-string;
-                max-elements "255";
-                description
-                  "L2CP Subtype for this Destination MAC's " +
-                  "Protocol ID.";
-              }
-            }
-          }
+             
+           choice simple-or-subtypes {
+          	case subtypes-option {
+                container subtypes {
+              	presence "subtypes configured";
+                  list subtype {
+                    key "subtype-id";
+                    max-elements "255";
+              	  leaf subtype-id {
+              		type yang:hex-string;        
+                      description
+                      "L2CP Subtype for this Destination MAC's " +
+                      "Protocol ID.";
+                    }
+                  leaf eec-name {
+                      type leafref {
+                        path "/mef-global:mef-global/profiles/eec-names" +
+                        		"/eec-name/name";
+                      }
+                      description
+                        "This attribute identifies the name of a " +
+                        "Egress Equivalence Class (EEC).";
+                    }
+                  } // list
+                } // container  
+          	} // case 
+          	case simple-option {
+                leaf eec-name {
+                    type leafref {
+                      path "/mef-global:mef-global/profiles/eec-names" +
+                      		"/eec-name/name";
+                    }
+                    description
+                      "This attribute identifies the name of a " +
+                      "Egress Equivalence Class (EEC).";
+                  }
+          	} //case      
+           } //choice
+           
+            } //eec-map
+          } //eec-maps
           leaf id {
             type mef-types:identifier45;
             description
               "The L2CP ID identifies a specific profile " +
               "for Layer 2 Control Processing.";
             reference "[MEF10.3] Section 8.5.";
-          }
-          leaf user-label {
-            type mef-types:identifier45;
-            description
-              "This attribute is a friendly name for " +
-              "the specific L2CP profile.";
           }
         }
       }
@@ -762,31 +753,24 @@ module mef-global {
           description
             "A list of global profiles for Layer 2 " +
             "Control Processing.";
-          reference "[MEF10.3] Section 8.5.";
+          reference "[MEF10.3] Section 8.5. [MEF45] Section 8.2.";
           container peering-maps {
             description
               "Layer 2 Control Protocol (L2CP) Profiles " +
               "for Peering.";
             list peering-map {
-              key "dest-mac-addr peering-proto-name";
+              key "dest-mac-addr protocol protocol-id";
               description
                 "L2CP Destination MAC Address.";
-              reference "[MEF10.3] Section 8.5.";
+              reference "[MEF10.3] Section 8.5. [MEF45] Section 8.2.";
               leaf dest-mac-addr {
                 type yang:mac-address;
                 description
                   "The Destination MAC Address for the " +
                   "Layer 2 Control Protocol.";
               }
-              leaf peering-proto-name {
-                type mef-types:identifier45;
-                description
-                  "This attribute is a friendly name for " +
-                  "the Protocol to be Peered. It is optional.";
-              }
               leaf protocol {
                 type mef-types:l2cp-peering-protocol-field-type;
-                default "ethertype";
                 description
                   "The Protocol is one of Ethertype, LLC, or Other.";
               }
@@ -813,12 +797,6 @@ module mef-global {
               "The L2CP ID identifies a specific profile for " +
               "Layer 2 Control Processing.";
             reference "[MEF10.3] Section 8.5.";
-          }
-          leaf user-label {
-            type mef-types:identifier45;
-            description
-              "This attribute is a friendly name for the " +
-              "specific L2CP profile.";
           }
         }
       }
