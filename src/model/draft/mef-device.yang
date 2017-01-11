@@ -92,7 +92,11 @@ module mef-device {
            type leafref {
              path "/if:interfaces/if:interface/if:name";
            }
-         } 
+           description
+        	   "A reference to the interface in question.";
+         }
+   	     description
+		     "List of interfaces that the device is dealing with.";
       }
       
       list interfaces {
@@ -102,7 +106,11 @@ module mef-device {
             type leafref {
               path "/if:interfaces-state/if:interface/if:name";
             }
-          } 
+            description
+            	"A reference to the interface state leafs.";
+          }
+    	  description
+    		  "List of interfaces to keep track of interface state.";
        }      
       
     }
