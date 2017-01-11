@@ -58,6 +58,13 @@ module mef-service-types {
      of Ethernet over Transport and Metro Ethernet 
      Network(EoT/MEN)' March 2007";
 
+  revision 2017-01-10 {
+ 	    description
+ 	      "Updated to address CFC1 Review Comments.";
+ 	    reference
+ 	      "EVC Ethernet Services Definitions YANG Modules 
+ 	       (MEF XX), TBD";
+  }
   revision 2016-07-01 {
     description
          "Updated to better align with MEF 7.3 and
@@ -370,6 +377,21 @@ module mef-service-types {
 	      "specification not disallowing it.";
 	    reference "[MEF10.3] [R8], [R9]. [RFC2579]. [RFC854].";
 	  }
+  typedef identifier255 {
+	    type string {
+	      length "min..255";
+	      pattern "[ -~]+";
+	    }
+	    description
+	      "This type definition is intended for use EVC End Point ID." +
+	      "This type definition accepts any visible ASCII character " +
+	      "plus the <space> character.The string must be an RFC 2579 " +
+	      "Display String (RFC 854 ASCII 0.00-0.7f) but not contain " +
+	      "the characters 0.00 through 0.1f. It does not accept " +
+	      "the <delete> character (0.7f) despite the current MEF " +
+	      "specification not disallowing it.";
+	    reference "[MEF10.3] [R8], [R9]. [RFC2579]. [RFC854].";
+	  }  
   typedef max-svc-frame-size-type {
     type uint16 {
       range "1522..16384";

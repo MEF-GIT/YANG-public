@@ -76,7 +76,15 @@ module mef-topology {
      of Ethernet over Transport and Metro Ethernet 
      Network(EoT/MEN)' March 2007";
 
-   revision 2016-07-01 {
+  revision 2017-01-10 {
+ 	    description
+ 	      "Updated to address CFC1 Review Comments.";
+ 	    reference
+ 	      "EVC Ethernet Services Definitions YANG Modules 
+ 	       (MEF XX), TBD";
+  }
+     
+  revision 2016-07-01 {
      description
         	      "Updated to better align with MEF 7.3 and
         	       MEF Common Information Model attributes";
