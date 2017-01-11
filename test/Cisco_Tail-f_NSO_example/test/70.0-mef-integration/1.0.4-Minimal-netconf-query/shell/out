@@ -24,20 +24,20 @@ MEF GET Config ALLs
                 <pm-entry>
                   <pm-entry-id>SLS_Argon_Test1</pm-entry-id>
                   <one-way-frame-delay-pm>
-                    <pm-percentile>99.0</pm-percentile>
-                    <pm-objective>300</pm-objective>
+                    <percentile>99.0</percentile>
+                    <objective>300</objective>
                   </one-way-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Argon_Test2</pm-entry-id>
                   <one-way-frame-loss-ratio-pm>
-                    <pm-percentile>39.0</pm-percentile>
+                    <percentile>39.0</percentile>
                   </one-way-frame-loss-ratio-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Argon_Test3</pm-entry-id>
                   <one-way-availability-pm>
-                    <pm-percentile>9.4</pm-percentile>
+                    <percentile>9.4</percentile>
                   </one-way-availability-pm>
                 </pm-entry>
               </pm-entries>
@@ -51,28 +51,28 @@ MEF GET Config ALLs
                 <pm-entry>
                   <pm-entry-id>SLS_Krypton_Test1</pm-entry-id>
                   <one-way-frame-delay-pm>
-                    <pm-percentile>99.9</pm-percentile>
-                    <pm-objective>200</pm-objective>
+                    <percentile>99.9</percentile>
+                    <objective>200</objective>
                   </one-way-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Krypton_Test2</pm-entry-id>
                   <one-way-frame-loss-ratio-pm>
-                    <pm-percentile>29.0</pm-percentile>
+                    <percentile>29.0</percentile>
                   </one-way-frame-loss-ratio-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Krypton_Test3</pm-entry-id>
                   <one-way-inter-frame-delay-variation-pm>
-                    <pm-percentile>99.9</pm-percentile>
+                    <percentile>99.9</percentile>
                     <frame-pair-separation>1</frame-pair-separation>
-                    <pm-objective>250</pm-objective>
+                    <objective>250</objective>
                   </one-way-inter-frame-delay-variation-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Krypton_Test4</pm-entry-id>
                   <one-way-availability-pm>
-                    <pm-percentile>9.6</pm-percentile>
+                    <percentile>9.6</percentile>
                   </one-way-availability-pm>
                 </pm-entry>
               </pm-entries>
@@ -87,52 +87,52 @@ MEF GET Config ALLs
                   <pm-entry-id>SLS_Neon_GA_Test</pm-entry-id>
                   <one-way-group-availability-pm>
                     <min-number-of-uni-pair-sets>1</min-number-of-uni-pair-sets>
-                    <pm-objective>300</pm-objective>
+                    <objective>300</objective>
                   </one-way-group-availability-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Neon_Test1</pm-entry-id>
                   <one-way-frame-delay-pm>
-                    <pm-percentile>95.0</pm-percentile>
-                    <pm-objective>400</pm-objective>
+                    <percentile>95.0</percentile>
+                    <objective>400</objective>
                   </one-way-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Neon_Test2</pm-entry-id>
                   <one-way-frame-loss-ratio-pm>
-                    <pm-percentile>49.0</pm-percentile>
+                    <percentile>49.0</percentile>
                   </one-way-frame-loss-ratio-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Neon_Test3</pm-entry-id>
                   <one-way-availability-pm>
-                    <pm-percentile>92.0</pm-percentile>
+                    <percentile>92.0</percentile>
                   </one-way-availability-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Neon_Test5</pm-entry-id>
                   <one-way-frame-delay-range-pm>
-                    <pm-percentile>98.0</pm-percentile>
-                    <pm-objective>150</pm-objective>
+                    <percentile>98.0</percentile>
+                    <objective>150</objective>
                   </one-way-frame-delay-range-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Neon_Test6</pm-entry-id>
                   <one-way-mean-frame-delay-pm>
-                    <pm-objective>300</pm-objective>
+                    <objective>300</objective>
                   </one-way-mean-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Neon_Test7</pm-entry-id>
                   <one-way-high-loss-interval-pm>
-                    <pm-objective>220</pm-objective>
+                    <objective>220</objective>
                   </one-way-high-loss-interval-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Neon_Test8</pm-entry-id>
                   <one-way-consecutive-high-loss-interval-pm>
                     <consecutive-number-p>9</consecutive-number-p>
-                    <pm-objective>257</pm-objective>
+                    <objective>257</objective>
                   </one-way-consecutive-high-loss-interval-pm>
                 </pm-entry>
                 <pm-entry>
@@ -144,7 +144,7 @@ MEF GET Config ALLs
                     <ifdv-indicator>true</ifdv-indicator>
                     <one-way-fd-threshold>42</one-way-fd-threshold>
                     <one-way-ifdv-threshold>55</one-way-ifdv-threshold>
-                    <pm-objective>300</pm-objective>
+                    <objective>300</objective>
                   </one-way-composite-pm>
                 </pm-entry>
               </pm-entries>
@@ -165,60 +165,60 @@ MEF GET Config ALLs
                   <pm-entry-id>SLS_H_GA_Test</pm-entry-id>
                   <one-way-group-availability-pm>
                     <min-number-of-uni-pair-sets>1</min-number-of-uni-pair-sets>
-                    <pm-objective>300</pm-objective>
+                    <objective>300</objective>
                   </one-way-group-availability-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test1</pm-entry-id>
                   <one-way-frame-delay-pm>
-                    <pm-percentile>99.9</pm-percentile>
-                    <pm-objective>200</pm-objective>
+                    <percentile>99.9</percentile>
+                    <objective>200</objective>
                   </one-way-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test2</pm-entry-id>
                   <one-way-frame-loss-ratio-pm>
-                    <pm-percentile>29.0</pm-percentile>
+                    <percentile>29.0</percentile>
                   </one-way-frame-loss-ratio-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test3</pm-entry-id>
                   <one-way-inter-frame-delay-variation-pm>
-                    <pm-percentile>99.9</pm-percentile>
+                    <percentile>99.9</percentile>
                     <frame-pair-separation>1</frame-pair-separation>
-                    <pm-objective>250</pm-objective>
+                    <objective>250</objective>
                   </one-way-inter-frame-delay-variation-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test4</pm-entry-id>
                   <one-way-availability-pm>
-                    <pm-percentile>96.0</pm-percentile>
+                    <percentile>96.0</percentile>
                   </one-way-availability-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test5</pm-entry-id>
                   <one-way-frame-delay-range-pm>
-                    <pm-percentile>98.0</pm-percentile>
-                    <pm-objective>150</pm-objective>
+                    <percentile>98.0</percentile>
+                    <objective>150</objective>
                   </one-way-frame-delay-range-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test6</pm-entry-id>
                   <one-way-mean-frame-delay-pm>
-                    <pm-objective>300</pm-objective>
+                    <objective>300</objective>
                   </one-way-mean-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test7</pm-entry-id>
                   <one-way-high-loss-interval-pm>
-                    <pm-objective>220</pm-objective>
+                    <objective>220</objective>
                   </one-way-high-loss-interval-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test8</pm-entry-id>
                   <one-way-consecutive-high-loss-interval-pm>
                     <consecutive-number-p>9</consecutive-number-p>
-                    <pm-objective>257</pm-objective>
+                    <objective>257</objective>
                   </one-way-consecutive-high-loss-interval-pm>
                 </pm-entry>
                 <pm-entry>
@@ -230,7 +230,7 @@ MEF GET Config ALLs
                     <ifdv-indicator>true</ifdv-indicator>
                     <one-way-fd-threshold>42</one-way-fd-threshold>
                     <one-way-ifdv-threshold>55</one-way-ifdv-threshold>
-                    <pm-objective>300</pm-objective>
+                    <objective>300</objective>
                   </one-way-composite-pm>
                 </pm-entry>
               </pm-entries>
@@ -244,20 +244,20 @@ MEF GET Config ALLs
                 <pm-entry>
                   <pm-entry-id>SLS_L_Test1</pm-entry-id>
                   <one-way-frame-delay-pm>
-                    <pm-percentile>95.0</pm-percentile>
-                    <pm-objective>400</pm-objective>
+                    <percentile>95.0</percentile>
+                    <objective>400</objective>
                   </one-way-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_L_Test2</pm-entry-id>
                   <one-way-frame-loss-ratio-pm>
-                    <pm-percentile>49.0</pm-percentile>
+                    <percentile>49.0</percentile>
                   </one-way-frame-loss-ratio-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_L_Test3</pm-entry-id>
                   <one-way-availability-pm>
-                    <pm-percentile>92.0</pm-percentile>
+                    <percentile>92.0</percentile>
                   </one-way-availability-pm>
                 </pm-entry>
               </pm-entries>
@@ -271,20 +271,20 @@ MEF GET Config ALLs
                 <pm-entry>
                   <pm-entry-id>SLS_M_Test1</pm-entry-id>
                   <one-way-frame-delay-pm>
-                    <pm-percentile>99.0</pm-percentile>
-                    <pm-objective>300</pm-objective>
+                    <percentile>99.0</percentile>
+                    <objective>300</objective>
                   </one-way-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_M_Test2</pm-entry-id>
                   <one-way-frame-loss-ratio-pm>
-                    <pm-percentile>39.0</pm-percentile>
+                    <percentile>39.0</percentile>
                   </one-way-frame-loss-ratio-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_M_Test3</pm-entry-id>
                   <one-way-availability-pm>
-                    <pm-percentile>94.0</pm-percentile>
+                    <percentile>94.0</percentile>
                   </one-way-availability-pm>
                 </pm-entry>
               </pm-entries>
@@ -314,6 +314,15 @@ MEF GET Config ALLs
           </cos-name>
           <cos-name>
             <name>Discard</name>
+          </cos-name>
+          <cos-name>
+            <name>EEC-Argon</name>
+          </cos-name>
+          <cos-name>
+            <name>EEC-Krypton</name>
+          </cos-name>
+          <cos-name>
+            <name>EEC-Neon</name>
           </cos-name>
           <cos-name>
             <name>Freshman</name>
@@ -388,321 +397,7 @@ MEF GET Config ALLs
             <name>silver+</name>
           </cos-name>
         </cos-names>
-        <eec-names>
-          <eec-name>
-            <name>Bronze</name>
-          </eec-name>
-          <eec-name>
-            <name>BronzeEnhanced</name>
-          </eec-name>
-          <eec-name>
-            <name>BronzePlus</name>
-          </eec-name>
-          <eec-name>
-            <name>Control</name>
-          </eec-name>
-          <eec-name>
-            <name>Discard</name>
-          </eec-name>
-          <eec-name>
-            <name>EEC-Argon</name>
-          </eec-name>
-          <eec-name>
-            <name>EEC-Krypton</name>
-          </eec-name>
-          <eec-name>
-            <name>EEC-Neon</name>
-          </eec-name>
-          <eec-name>
-            <name>Freshman</name>
-          </eec-name>
-          <eec-name>
-            <name>Gold</name>
-          </eec-name>
-          <eec-name>
-            <name>H</name>
-          </eec-name>
-          <eec-name>
-            <name>Junior</name>
-          </eec-name>
-          <eec-name>
-            <name>L</name>
-          </eec-name>
-          <eec-name>
-            <name>M</name>
-          </eec-name>
-          <eec-name>
-            <name>Platinum</name>
-          </eec-name>
-          <eec-name annotation="Global EEC Names">
-            <name>Senior</name>
-          </eec-name>
-          <eec-name>
-            <name>Silver</name>
-          </eec-name>
-          <eec-name>
-            <name>SilverPlus</name>
-          </eec-name>
-          <eec-name>
-            <name>Sophomore</name>
-          </eec-name>
-          <eec-name>
-            <name>control</name>
-          </eec-name>
-          <eec-name>
-            <name>gold</name>
-          </eec-name>
-          <eec-name>
-            <name>mpls-bronze</name>
-          </eec-name>
-          <eec-name>
-            <name>pccwg_bronze</name>
-          </eec-name>
-          <eec-name>
-            <name>pccwg_gold</name>
-          </eec-name>
-          <eec-name>
-            <name>pccwg_silver</name>
-          </eec-name>
-          <eec-name>
-            <name>pccwg_silverplus</name>
-          </eec-name>
-          <eec-name>
-            <name>silver</name>
-          </eec-name>
-          <eec-name>
-            <name>silver+</name>
-          </eec-name>
-        </eec-names>
-        <ingress-bwp-flows-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>INGRESS_BWP_100mbps</bwp-flow-parameter-set-id>
-            <cir>100000</cir>
-            <cir-max>200000</cir-max>
-            <cbs>12800</cbs>
-            <eir>50000</eir>
-            <eir-max>0</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>INGRESS_BWP_200kbps</bwp-flow-parameter-set-id>
-            <cir>200</cir>
-            <cir-max>4000</cir-max>
-            <cbs>32000</cbs>
-            <eir>0</eir>
-            <eir-max>30000</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>INGRESS_BWP_2mbps</bwp-flow-parameter-set-id>
-            <cir>2000</cir>
-            <cir-max>4000</cir-max>
-            <cbs>32000</cbs>
-            <eir>0</eir>
-            <eir-max>30000</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>INGRESS_BWP_70mbps</bwp-flow-parameter-set-id>
-            <cir>70000</cir>
-            <cir-max>200000</cir-max>
-            <cbs>12800</cbs>
-            <eir>50000</eir>
-            <eir-max>0</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>INGRESS_BWP_800kbps</bwp-flow-parameter-set-id>
-            <cir>800</cir>
-            <cir-max>4000</cir-max>
-            <cbs>32000</cbs>
-            <eir>0</eir>
-            <eir-max>30000</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>chicago-bwp-evc</bwp-flow-parameter-set-id>
-            <cir>400000</cir>
-            <cbs>9000</cbs>
-            <eir>10000</eir>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>chicago-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>10000000</cir>
-            <cbs>12000</cbs>
-            <eir>10000</eir>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>denver-bwp-evc</bwp-flow-parameter-set-id>
-            <cir>400000</cir>
-            <cbs>9000</cbs>
-            <eir>10000</eir>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>denver-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>2000000</cir>
-            <cbs>10000</cbs>
-            <eir>10000</eir>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>high1-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>20000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>64000</cbs>
-            <eir>0</eir>
-            <eir-max>50000</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>high2-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>10000000</cir>
-            <cbs>12000</cbs>
-            <eir>0</eir>
-            <ebs>0</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>high3-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>20000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>64000</cbs>
-            <eir>0</eir>
-            <eir-max>50000</eir-max>
-            <ebs>0</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>itest-bwp1</bwp-flow-parameter-set-id>
-            <cir>5000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>12800</cbs>
-            <eir>50000</eir>
-            <eir-max>0</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>itest-bwp2</bwp-flow-parameter-set-id>
-            <cir>14000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>32000</cbs>
-            <eir>0</eir>
-            <eir-max>30000</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>low1-bwp-uni</bwp-flow-parameter-set-id>
-            <cir annotation="Global Ingress Bandwidth Profiles are Ordered-By User">5000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>12800</cbs>
-            <eir>50000</eir>
-            <eir-max>0</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>low2-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>400000</cir>
-            <cbs>9000</cbs>
-            <eir>10000</eir>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>low3-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>5000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>12800</cbs>
-            <eir>50000</eir>
-            <eir-max>0</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>medium1-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>14000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>32000</cbs>
-            <eir>0</eir>
-            <eir-max>30000</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>medium2-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>2000000</cir>
-            <cbs>10000</cbs>
-            <eir>10000</eir>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>medium3-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>14000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>32000</cbs>
-            <eir>0</eir>
-            <eir-max>30000</eir-max>
-            <ebs>0</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-        </ingress-bwp-flows-parameter-set>
-        <egress-bwp-flows-parameter-set>
+        <bwp-flows-parameter-set>
           <bwp-flow-parameter-set>
             <bwp-flow-parameter-set-id>EGRESS_BWP_100mbps</bwp-flow-parameter-set-id>
             <cir>100000</cir>
@@ -753,6 +448,66 @@ MEF GET Config ALLs
           </bwp-flow-parameter-set>
           <bwp-flow-parameter-set>
             <bwp-flow-parameter-set-id>EGRESS_BWP_800kbps</bwp-flow-parameter-set-id>
+            <cir>800</cir>
+            <cir-max>4000</cir-max>
+            <cbs>32000</cbs>
+            <eir>0</eir>
+            <eir-max>30000</eir-max>
+            <ebs>10000</ebs>
+            <coupling-enabled>false</coupling-enabled>
+            <color-mode>color-blind</color-mode>
+            <coupling-flag>false</coupling-flag>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>INGRESS_BWP_100mbps</bwp-flow-parameter-set-id>
+            <cir>100000</cir>
+            <cir-max>200000</cir-max>
+            <cbs>12800</cbs>
+            <eir>50000</eir>
+            <eir-max>0</eir-max>
+            <ebs>10000</ebs>
+            <coupling-enabled>false</coupling-enabled>
+            <color-mode>color-blind</color-mode>
+            <coupling-flag>false</coupling-flag>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>INGRESS_BWP_200kbps</bwp-flow-parameter-set-id>
+            <cir>200</cir>
+            <cir-max>4000</cir-max>
+            <cbs>32000</cbs>
+            <eir>0</eir>
+            <eir-max>30000</eir-max>
+            <ebs>10000</ebs>
+            <coupling-enabled>false</coupling-enabled>
+            <color-mode>color-blind</color-mode>
+            <coupling-flag>false</coupling-flag>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>INGRESS_BWP_2mbps</bwp-flow-parameter-set-id>
+            <cir>2000</cir>
+            <cir-max>4000</cir-max>
+            <cbs>32000</cbs>
+            <eir>0</eir>
+            <eir-max>30000</eir-max>
+            <ebs>10000</ebs>
+            <coupling-enabled>false</coupling-enabled>
+            <color-mode>color-blind</color-mode>
+            <coupling-flag>false</coupling-flag>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>INGRESS_BWP_70mbps</bwp-flow-parameter-set-id>
+            <cir>70000</cir>
+            <cir-max>200000</cir-max>
+            <cbs>12800</cbs>
+            <eir>50000</eir>
+            <eir-max>0</eir-max>
+            <ebs>10000</ebs>
+            <coupling-enabled>false</coupling-enabled>
+            <color-mode>color-blind</color-mode>
+            <coupling-flag>false</coupling-flag>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>INGRESS_BWP_800kbps</bwp-flow-parameter-set-id>
             <cir>800</cir>
             <cir-max>4000</cir-max>
             <cbs>32000</cbs>
@@ -862,6 +617,30 @@ MEF GET Config ALLs
             <coupling-flag>false</coupling-flag>
           </bwp-flow-parameter-set>
           <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>itest-bwp1</bwp-flow-parameter-set-id>
+            <cir>5000</cir>
+            <cir-max>20000</cir-max>
+            <cbs>12800</cbs>
+            <eir>50000</eir>
+            <eir-max>0</eir-max>
+            <ebs>10000</ebs>
+            <coupling-enabled>false</coupling-enabled>
+            <color-mode>color-blind</color-mode>
+            <coupling-flag>false</coupling-flag>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>itest-bwp2</bwp-flow-parameter-set-id>
+            <cir>14000</cir>
+            <cir-max>20000</cir-max>
+            <cbs>32000</cbs>
+            <eir>0</eir>
+            <eir-max>30000</eir-max>
+            <ebs>10000</ebs>
+            <coupling-enabled>false</coupling-enabled>
+            <color-mode>color-blind</color-mode>
+            <coupling-flag>false</coupling-flag>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
             <bwp-flow-parameter-set-id>low1-bwp-uni</bwp-flow-parameter-set-id>
             <cir annotation="Global Egress Bandwidth Profiles are Ordered-By User">5000</cir>
             <cir-max>20000</cir-max>
@@ -929,7 +708,7 @@ MEF GET Config ALLs
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
           </bwp-flow-parameter-set>
-        </egress-bwp-flows-parameter-set>
+        </bwp-flows-parameter-set>
         <l2cp-cos>
           <profile>
             <id>MEF103_Table3PlusCoS</id>
@@ -3750,7 +3529,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
               <cos-entries>
                 <cos-entry>
                   <cos-name>Neon</cos-name>
@@ -3823,7 +3602,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
               <cos-entries>
                 <cos-entry>
                   <cos-name>Argon</cos-name>
@@ -3932,7 +3711,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
               <cos-entries>
                 <cos-entry>
                   <cos-name>Neon</cos-name>
@@ -3996,7 +3775,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
             </carrier-ethernet-sls>
             <connection-type>point-to-point</connection-type>
             <admin-state>false</admin-state>
@@ -4052,7 +3831,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
               <cos-entries>
                 <cos-entry>
                   <cos-name>Argon</cos-name>
@@ -4198,7 +3977,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
               <cos-entries>
                 <cos-entry>
                   <cos-name>Argon</cos-name>
@@ -4500,7 +4279,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
               <cos-entries>
                 <cos-entry>
                   <cos-name>Argon</cos-name>
@@ -4625,7 +4404,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
               <cos-entries>
                 <cos-entry>
                   <cos-name>Krypton</cos-name>
@@ -4717,7 +4496,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
               <cos-entries>
                 <cos-entry>
                   <cos-name>Argon</cos-name>
@@ -6119,20 +5898,20 @@ MEF GET Config ALLs
                 <pm-entry>
                   <pm-entry-id>SLS_Argon_Test1</pm-entry-id>
                   <one-way-frame-delay-pm>
-                    <pm-percentile>99.0</pm-percentile>
-                    <pm-objective>300</pm-objective>
+                    <percentile>99.0</percentile>
+                    <objective>300</objective>
                   </one-way-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Argon_Test2</pm-entry-id>
                   <one-way-frame-loss-ratio-pm>
-                    <pm-percentile>39.0</pm-percentile>
+                    <percentile>39.0</percentile>
                   </one-way-frame-loss-ratio-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Argon_Test3</pm-entry-id>
                   <one-way-availability-pm>
-                    <pm-percentile>9.4</pm-percentile>
+                    <percentile>9.4</percentile>
                   </one-way-availability-pm>
                 </pm-entry>
               </pm-entries>
@@ -6146,28 +5925,28 @@ MEF GET Config ALLs
                 <pm-entry>
                   <pm-entry-id>SLS_Krypton_Test1</pm-entry-id>
                   <one-way-frame-delay-pm>
-                    <pm-percentile>99.9</pm-percentile>
-                    <pm-objective>200</pm-objective>
+                    <percentile>99.9</percentile>
+                    <objective>200</objective>
                   </one-way-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Krypton_Test2</pm-entry-id>
                   <one-way-frame-loss-ratio-pm>
-                    <pm-percentile>29.0</pm-percentile>
+                    <percentile>29.0</percentile>
                   </one-way-frame-loss-ratio-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Krypton_Test3</pm-entry-id>
                   <one-way-inter-frame-delay-variation-pm>
-                    <pm-percentile>99.9</pm-percentile>
+                    <percentile>99.9</percentile>
                     <frame-pair-separation>1</frame-pair-separation>
-                    <pm-objective>250</pm-objective>
+                    <objective>250</objective>
                   </one-way-inter-frame-delay-variation-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Krypton_Test4</pm-entry-id>
                   <one-way-availability-pm>
-                    <pm-percentile>9.6</pm-percentile>
+                    <percentile>9.6</percentile>
                   </one-way-availability-pm>
                 </pm-entry>
               </pm-entries>
@@ -6182,52 +5961,52 @@ MEF GET Config ALLs
                   <pm-entry-id>SLS_Neon_GA_Test</pm-entry-id>
                   <one-way-group-availability-pm>
                     <min-number-of-uni-pair-sets>1</min-number-of-uni-pair-sets>
-                    <pm-objective>300</pm-objective>
+                    <objective>300</objective>
                   </one-way-group-availability-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Neon_Test1</pm-entry-id>
                   <one-way-frame-delay-pm>
-                    <pm-percentile>95.0</pm-percentile>
-                    <pm-objective>400</pm-objective>
+                    <percentile>95.0</percentile>
+                    <objective>400</objective>
                   </one-way-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Neon_Test2</pm-entry-id>
                   <one-way-frame-loss-ratio-pm>
-                    <pm-percentile>49.0</pm-percentile>
+                    <percentile>49.0</percentile>
                   </one-way-frame-loss-ratio-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Neon_Test3</pm-entry-id>
                   <one-way-availability-pm>
-                    <pm-percentile>92.0</pm-percentile>
+                    <percentile>92.0</percentile>
                   </one-way-availability-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Neon_Test5</pm-entry-id>
                   <one-way-frame-delay-range-pm>
-                    <pm-percentile>98.0</pm-percentile>
-                    <pm-objective>150</pm-objective>
+                    <percentile>98.0</percentile>
+                    <objective>150</objective>
                   </one-way-frame-delay-range-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Neon_Test6</pm-entry-id>
                   <one-way-mean-frame-delay-pm>
-                    <pm-objective>300</pm-objective>
+                    <objective>300</objective>
                   </one-way-mean-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Neon_Test7</pm-entry-id>
                   <one-way-high-loss-interval-pm>
-                    <pm-objective>220</pm-objective>
+                    <objective>220</objective>
                   </one-way-high-loss-interval-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Neon_Test8</pm-entry-id>
                   <one-way-consecutive-high-loss-interval-pm>
                     <consecutive-number-p>9</consecutive-number-p>
-                    <pm-objective>257</pm-objective>
+                    <objective>257</objective>
                   </one-way-consecutive-high-loss-interval-pm>
                 </pm-entry>
                 <pm-entry>
@@ -6239,7 +6018,7 @@ MEF GET Config ALLs
                     <ifdv-indicator>true</ifdv-indicator>
                     <one-way-fd-threshold>42</one-way-fd-threshold>
                     <one-way-ifdv-threshold>55</one-way-ifdv-threshold>
-                    <pm-objective>300</pm-objective>
+                    <objective>300</objective>
                   </one-way-composite-pm>
                 </pm-entry>
               </pm-entries>
@@ -6260,60 +6039,60 @@ MEF GET Config ALLs
                   <pm-entry-id>SLS_H_GA_Test</pm-entry-id>
                   <one-way-group-availability-pm>
                     <min-number-of-uni-pair-sets>1</min-number-of-uni-pair-sets>
-                    <pm-objective>300</pm-objective>
+                    <objective>300</objective>
                   </one-way-group-availability-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test1</pm-entry-id>
                   <one-way-frame-delay-pm>
-                    <pm-percentile>99.9</pm-percentile>
-                    <pm-objective>200</pm-objective>
+                    <percentile>99.9</percentile>
+                    <objective>200</objective>
                   </one-way-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test2</pm-entry-id>
                   <one-way-frame-loss-ratio-pm>
-                    <pm-percentile>29.0</pm-percentile>
+                    <percentile>29.0</percentile>
                   </one-way-frame-loss-ratio-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test3</pm-entry-id>
                   <one-way-inter-frame-delay-variation-pm>
-                    <pm-percentile>99.9</pm-percentile>
+                    <percentile>99.9</percentile>
                     <frame-pair-separation>1</frame-pair-separation>
-                    <pm-objective>250</pm-objective>
+                    <objective>250</objective>
                   </one-way-inter-frame-delay-variation-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test4</pm-entry-id>
                   <one-way-availability-pm>
-                    <pm-percentile>96.0</pm-percentile>
+                    <percentile>96.0</percentile>
                   </one-way-availability-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test5</pm-entry-id>
                   <one-way-frame-delay-range-pm>
-                    <pm-percentile>98.0</pm-percentile>
-                    <pm-objective>150</pm-objective>
+                    <percentile>98.0</percentile>
+                    <objective>150</objective>
                   </one-way-frame-delay-range-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test6</pm-entry-id>
                   <one-way-mean-frame-delay-pm>
-                    <pm-objective>300</pm-objective>
+                    <objective>300</objective>
                   </one-way-mean-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test7</pm-entry-id>
                   <one-way-high-loss-interval-pm>
-                    <pm-objective>220</pm-objective>
+                    <objective>220</objective>
                   </one-way-high-loss-interval-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test8</pm-entry-id>
                   <one-way-consecutive-high-loss-interval-pm>
                     <consecutive-number-p>9</consecutive-number-p>
-                    <pm-objective>257</pm-objective>
+                    <objective>257</objective>
                   </one-way-consecutive-high-loss-interval-pm>
                 </pm-entry>
                 <pm-entry>
@@ -6325,7 +6104,7 @@ MEF GET Config ALLs
                     <ifdv-indicator>true</ifdv-indicator>
                     <one-way-fd-threshold>42</one-way-fd-threshold>
                     <one-way-ifdv-threshold>55</one-way-ifdv-threshold>
-                    <pm-objective>300</pm-objective>
+                    <objective>300</objective>
                   </one-way-composite-pm>
                 </pm-entry>
               </pm-entries>
@@ -6339,20 +6118,20 @@ MEF GET Config ALLs
                 <pm-entry>
                   <pm-entry-id>SLS_L_Test1</pm-entry-id>
                   <one-way-frame-delay-pm>
-                    <pm-percentile>95.0</pm-percentile>
-                    <pm-objective>400</pm-objective>
+                    <percentile>95.0</percentile>
+                    <objective>400</objective>
                   </one-way-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_L_Test2</pm-entry-id>
                   <one-way-frame-loss-ratio-pm>
-                    <pm-percentile>49.0</pm-percentile>
+                    <percentile>49.0</percentile>
                   </one-way-frame-loss-ratio-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_L_Test3</pm-entry-id>
                   <one-way-availability-pm>
-                    <pm-percentile>92.0</pm-percentile>
+                    <percentile>92.0</percentile>
                   </one-way-availability-pm>
                 </pm-entry>
               </pm-entries>
@@ -6366,20 +6145,20 @@ MEF GET Config ALLs
                 <pm-entry>
                   <pm-entry-id>SLS_M_Test1</pm-entry-id>
                   <one-way-frame-delay-pm>
-                    <pm-percentile>99.0</pm-percentile>
-                    <pm-objective>300</pm-objective>
+                    <percentile>99.0</percentile>
+                    <objective>300</objective>
                   </one-way-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_M_Test2</pm-entry-id>
                   <one-way-frame-loss-ratio-pm>
-                    <pm-percentile>39.0</pm-percentile>
+                    <percentile>39.0</percentile>
                   </one-way-frame-loss-ratio-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_M_Test3</pm-entry-id>
                   <one-way-availability-pm>
-                    <pm-percentile>94.0</pm-percentile>
+                    <percentile>94.0</percentile>
                   </one-way-availability-pm>
                 </pm-entry>
               </pm-entries>
@@ -6409,6 +6188,15 @@ MEF GET Config ALLs
           </cos-name>
           <cos-name>
             <name>Discard</name>
+          </cos-name>
+          <cos-name>
+            <name>EEC-Argon</name>
+          </cos-name>
+          <cos-name>
+            <name>EEC-Krypton</name>
+          </cos-name>
+          <cos-name>
+            <name>EEC-Neon</name>
           </cos-name>
           <cos-name>
             <name>Freshman</name>
@@ -6483,335 +6271,7 @@ MEF GET Config ALLs
             <name>silver+</name>
           </cos-name>
         </cos-names>
-        <eec-names>
-          <eec-name>
-            <name>Bronze</name>
-          </eec-name>
-          <eec-name>
-            <name>BronzeEnhanced</name>
-          </eec-name>
-          <eec-name>
-            <name>BronzePlus</name>
-          </eec-name>
-          <eec-name>
-            <name>Control</name>
-          </eec-name>
-          <eec-name>
-            <name>Discard</name>
-          </eec-name>
-          <eec-name>
-            <name>EEC-Argon</name>
-          </eec-name>
-          <eec-name>
-            <name>EEC-Krypton</name>
-          </eec-name>
-          <eec-name>
-            <name>EEC-Neon</name>
-          </eec-name>
-          <eec-name>
-            <name>Freshman</name>
-          </eec-name>
-          <eec-name>
-            <name>Gold</name>
-          </eec-name>
-          <eec-name>
-            <name>H</name>
-          </eec-name>
-          <eec-name>
-            <name>Junior</name>
-          </eec-name>
-          <eec-name>
-            <name>L</name>
-          </eec-name>
-          <eec-name>
-            <name>M</name>
-          </eec-name>
-          <eec-name>
-            <name>Platinum</name>
-          </eec-name>
-          <eec-name annotation="Global EEC Names">
-            <name>Senior</name>
-          </eec-name>
-          <eec-name>
-            <name>Silver</name>
-          </eec-name>
-          <eec-name>
-            <name>SilverPlus</name>
-          </eec-name>
-          <eec-name>
-            <name>Sophomore</name>
-          </eec-name>
-          <eec-name>
-            <name>control</name>
-          </eec-name>
-          <eec-name>
-            <name>gold</name>
-          </eec-name>
-          <eec-name>
-            <name>mpls-bronze</name>
-          </eec-name>
-          <eec-name>
-            <name>pccwg_bronze</name>
-          </eec-name>
-          <eec-name>
-            <name>pccwg_gold</name>
-          </eec-name>
-          <eec-name>
-            <name>pccwg_silver</name>
-          </eec-name>
-          <eec-name>
-            <name>pccwg_silverplus</name>
-          </eec-name>
-          <eec-name>
-            <name>silver</name>
-          </eec-name>
-          <eec-name>
-            <name>silver+</name>
-          </eec-name>
-        </eec-names>
-        <ingress-bwp-flows-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>INGRESS_BWP_100mbps</bwp-flow-parameter-set-id>
-            <cir>100000</cir>
-            <cir-max>200000</cir-max>
-            <cbs>12800</cbs>
-            <eir>50000</eir>
-            <eir-max>0</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>INGRESS_BWP_200kbps</bwp-flow-parameter-set-id>
-            <cir>200</cir>
-            <cir-max>4000</cir-max>
-            <cbs>32000</cbs>
-            <eir>0</eir>
-            <eir-max>30000</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>INGRESS_BWP_2mbps</bwp-flow-parameter-set-id>
-            <cir>2000</cir>
-            <cir-max>4000</cir-max>
-            <cbs>32000</cbs>
-            <eir>0</eir>
-            <eir-max>30000</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>INGRESS_BWP_70mbps</bwp-flow-parameter-set-id>
-            <cir>70000</cir>
-            <cir-max>200000</cir-max>
-            <cbs>12800</cbs>
-            <eir>50000</eir>
-            <eir-max>0</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>INGRESS_BWP_800kbps</bwp-flow-parameter-set-id>
-            <cir>800</cir>
-            <cir-max>4000</cir-max>
-            <cbs>32000</cbs>
-            <eir>0</eir>
-            <eir-max>30000</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>chicago-bwp-evc</bwp-flow-parameter-set-id>
-            <cir>400000</cir>
-            <cir-max wd:default="true">0</cir-max>
-            <cbs>9000</cbs>
-            <eir>10000</eir>
-            <eir-max wd:default="true">0</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>chicago-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>10000000</cir>
-            <cir-max wd:default="true">0</cir-max>
-            <cbs>12000</cbs>
-            <eir>10000</eir>
-            <eir-max wd:default="true">0</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>denver-bwp-evc</bwp-flow-parameter-set-id>
-            <cir>400000</cir>
-            <cir-max wd:default="true">0</cir-max>
-            <cbs>9000</cbs>
-            <eir>10000</eir>
-            <eir-max wd:default="true">0</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>denver-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>2000000</cir>
-            <cir-max wd:default="true">0</cir-max>
-            <cbs>10000</cbs>
-            <eir>10000</eir>
-            <eir-max wd:default="true">0</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>high1-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>20000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>64000</cbs>
-            <eir>0</eir>
-            <eir-max>50000</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>high2-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>10000000</cir>
-            <cir-max wd:default="true">0</cir-max>
-            <cbs>12000</cbs>
-            <eir>0</eir>
-            <eir-max wd:default="true">0</eir-max>
-            <ebs>0</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>high3-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>20000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>64000</cbs>
-            <eir>0</eir>
-            <eir-max>50000</eir-max>
-            <ebs>0</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>itest-bwp1</bwp-flow-parameter-set-id>
-            <cir>5000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>12800</cbs>
-            <eir>50000</eir>
-            <eir-max>0</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>itest-bwp2</bwp-flow-parameter-set-id>
-            <cir>14000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>32000</cbs>
-            <eir>0</eir>
-            <eir-max>30000</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>low1-bwp-uni</bwp-flow-parameter-set-id>
-            <cir annotation="Global Ingress Bandwidth Profiles are Ordered-By User">5000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>12800</cbs>
-            <eir>50000</eir>
-            <eir-max>0</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>low2-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>400000</cir>
-            <cir-max wd:default="true">0</cir-max>
-            <cbs>9000</cbs>
-            <eir>10000</eir>
-            <eir-max wd:default="true">0</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>low3-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>5000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>12800</cbs>
-            <eir>50000</eir>
-            <eir-max>0</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>medium1-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>14000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>32000</cbs>
-            <eir>0</eir>
-            <eir-max>30000</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>medium2-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>2000000</cir>
-            <cir-max wd:default="true">0</cir-max>
-            <cbs>10000</cbs>
-            <eir>10000</eir>
-            <eir-max wd:default="true">0</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>medium3-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>14000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>32000</cbs>
-            <eir>0</eir>
-            <eir-max>30000</eir-max>
-            <ebs>0</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-        </ingress-bwp-flows-parameter-set>
-        <egress-bwp-flows-parameter-set>
+        <bwp-flows-parameter-set>
           <bwp-flow-parameter-set>
             <bwp-flow-parameter-set-id>EGRESS_BWP_100mbps</bwp-flow-parameter-set-id>
             <cir>100000</cir>
@@ -6862,6 +6322,66 @@ MEF GET Config ALLs
           </bwp-flow-parameter-set>
           <bwp-flow-parameter-set>
             <bwp-flow-parameter-set-id>EGRESS_BWP_800kbps</bwp-flow-parameter-set-id>
+            <cir>800</cir>
+            <cir-max>4000</cir-max>
+            <cbs>32000</cbs>
+            <eir>0</eir>
+            <eir-max>30000</eir-max>
+            <ebs>10000</ebs>
+            <coupling-enabled>false</coupling-enabled>
+            <color-mode>color-blind</color-mode>
+            <coupling-flag>false</coupling-flag>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>INGRESS_BWP_100mbps</bwp-flow-parameter-set-id>
+            <cir>100000</cir>
+            <cir-max>200000</cir-max>
+            <cbs>12800</cbs>
+            <eir>50000</eir>
+            <eir-max>0</eir-max>
+            <ebs>10000</ebs>
+            <coupling-enabled>false</coupling-enabled>
+            <color-mode>color-blind</color-mode>
+            <coupling-flag>false</coupling-flag>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>INGRESS_BWP_200kbps</bwp-flow-parameter-set-id>
+            <cir>200</cir>
+            <cir-max>4000</cir-max>
+            <cbs>32000</cbs>
+            <eir>0</eir>
+            <eir-max>30000</eir-max>
+            <ebs>10000</ebs>
+            <coupling-enabled>false</coupling-enabled>
+            <color-mode>color-blind</color-mode>
+            <coupling-flag>false</coupling-flag>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>INGRESS_BWP_2mbps</bwp-flow-parameter-set-id>
+            <cir>2000</cir>
+            <cir-max>4000</cir-max>
+            <cbs>32000</cbs>
+            <eir>0</eir>
+            <eir-max>30000</eir-max>
+            <ebs>10000</ebs>
+            <coupling-enabled>false</coupling-enabled>
+            <color-mode>color-blind</color-mode>
+            <coupling-flag>false</coupling-flag>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>INGRESS_BWP_70mbps</bwp-flow-parameter-set-id>
+            <cir>70000</cir>
+            <cir-max>200000</cir-max>
+            <cbs>12800</cbs>
+            <eir>50000</eir>
+            <eir-max>0</eir-max>
+            <ebs>10000</ebs>
+            <coupling-enabled>false</coupling-enabled>
+            <color-mode>color-blind</color-mode>
+            <coupling-flag>false</coupling-flag>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>INGRESS_BWP_800kbps</bwp-flow-parameter-set-id>
             <cir>800</cir>
             <cir-max>4000</cir-max>
             <cbs>32000</cbs>
@@ -6981,6 +6501,30 @@ MEF GET Config ALLs
             <coupling-flag>false</coupling-flag>
           </bwp-flow-parameter-set>
           <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>itest-bwp1</bwp-flow-parameter-set-id>
+            <cir>5000</cir>
+            <cir-max>20000</cir-max>
+            <cbs>12800</cbs>
+            <eir>50000</eir>
+            <eir-max>0</eir-max>
+            <ebs>10000</ebs>
+            <coupling-enabled>false</coupling-enabled>
+            <color-mode>color-blind</color-mode>
+            <coupling-flag>false</coupling-flag>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>itest-bwp2</bwp-flow-parameter-set-id>
+            <cir>14000</cir>
+            <cir-max>20000</cir-max>
+            <cbs>32000</cbs>
+            <eir>0</eir>
+            <eir-max>30000</eir-max>
+            <ebs>10000</ebs>
+            <coupling-enabled>false</coupling-enabled>
+            <color-mode>color-blind</color-mode>
+            <coupling-flag>false</coupling-flag>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
             <bwp-flow-parameter-set-id>low1-bwp-uni</bwp-flow-parameter-set-id>
             <cir annotation="Global Egress Bandwidth Profiles are Ordered-By User">5000</cir>
             <cir-max>20000</cir-max>
@@ -7052,7 +6596,7 @@ MEF GET Config ALLs
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
           </bwp-flow-parameter-set>
-        </egress-bwp-flows-parameter-set>
+        </bwp-flows-parameter-set>
         <l2cp-cos>
           <profile>
             <id>MEF103_Table3PlusCoS</id>
@@ -10268,7 +9812,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
               <cos-entries>
                 <cos-entry>
                   <cos-name>Neon</cos-name>
@@ -10352,7 +9896,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
               <cos-entries>
                 <cos-entry>
                   <cos-name>Argon</cos-name>
@@ -10471,7 +10015,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
               <cos-entries>
                 <cos-entry>
                   <cos-name>Neon</cos-name>
@@ -10546,7 +10090,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
             </carrier-ethernet-sls>
             <connection-type>point-to-point</connection-type>
             <admin-state>false</admin-state>
@@ -10616,7 +10160,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
               <cos-entries>
                 <cos-entry>
                   <cos-name>Argon</cos-name>
@@ -10777,7 +10321,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
               <cos-entries>
                 <cos-entry>
                   <cos-name>Argon</cos-name>
@@ -11094,7 +10638,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
               <cos-entries>
                 <cos-entry>
                   <cos-name>Argon</cos-name>
@@ -11235,7 +10779,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
               <cos-entries>
                 <cos-entry>
                   <cos-name>Krypton</cos-name>
@@ -11338,7 +10882,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
               <cos-entries>
                 <cos-entry>
                   <cos-name>Argon</cos-name>
@@ -14051,20 +13595,20 @@ MEF GET Config ALLs
                 <pm-entry>
                   <pm-entry-id>SLS_Argon_Test1</pm-entry-id>
                   <one-way-frame-delay-pm>
-                    <pm-percentile>99.0</pm-percentile>
-                    <pm-objective>300</pm-objective>
+                    <percentile>99.0</percentile>
+                    <objective>300</objective>
                   </one-way-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Argon_Test2</pm-entry-id>
                   <one-way-frame-loss-ratio-pm>
-                    <pm-percentile>39.0</pm-percentile>
+                    <percentile>39.0</percentile>
                   </one-way-frame-loss-ratio-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Argon_Test3</pm-entry-id>
                   <one-way-availability-pm>
-                    <pm-percentile>9.4</pm-percentile>
+                    <percentile>9.4</percentile>
                   </one-way-availability-pm>
                 </pm-entry>
               </pm-entries>
@@ -14078,28 +13622,28 @@ MEF GET Config ALLs
                 <pm-entry>
                   <pm-entry-id>SLS_Krypton_Test1</pm-entry-id>
                   <one-way-frame-delay-pm>
-                    <pm-percentile>99.9</pm-percentile>
-                    <pm-objective>200</pm-objective>
+                    <percentile>99.9</percentile>
+                    <objective>200</objective>
                   </one-way-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Krypton_Test2</pm-entry-id>
                   <one-way-frame-loss-ratio-pm>
-                    <pm-percentile>29.0</pm-percentile>
+                    <percentile>29.0</percentile>
                   </one-way-frame-loss-ratio-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Krypton_Test3</pm-entry-id>
                   <one-way-inter-frame-delay-variation-pm>
-                    <pm-percentile>99.9</pm-percentile>
+                    <percentile>99.9</percentile>
                     <frame-pair-separation>1</frame-pair-separation>
-                    <pm-objective>250</pm-objective>
+                    <objective>250</objective>
                   </one-way-inter-frame-delay-variation-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Krypton_Test4</pm-entry-id>
                   <one-way-availability-pm>
-                    <pm-percentile>9.6</pm-percentile>
+                    <percentile>9.6</percentile>
                   </one-way-availability-pm>
                 </pm-entry>
               </pm-entries>
@@ -14114,52 +13658,52 @@ MEF GET Config ALLs
                   <pm-entry-id>SLS_Neon_GA_Test</pm-entry-id>
                   <one-way-group-availability-pm>
                     <min-number-of-uni-pair-sets>1</min-number-of-uni-pair-sets>
-                    <pm-objective>300</pm-objective>
+                    <objective>300</objective>
                   </one-way-group-availability-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Neon_Test1</pm-entry-id>
                   <one-way-frame-delay-pm>
-                    <pm-percentile>95.0</pm-percentile>
-                    <pm-objective>400</pm-objective>
+                    <percentile>95.0</percentile>
+                    <objective>400</objective>
                   </one-way-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Neon_Test2</pm-entry-id>
                   <one-way-frame-loss-ratio-pm>
-                    <pm-percentile>49.0</pm-percentile>
+                    <percentile>49.0</percentile>
                   </one-way-frame-loss-ratio-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Neon_Test3</pm-entry-id>
                   <one-way-availability-pm>
-                    <pm-percentile>92.0</pm-percentile>
+                    <percentile>92.0</percentile>
                   </one-way-availability-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Neon_Test5</pm-entry-id>
                   <one-way-frame-delay-range-pm>
-                    <pm-percentile>98.0</pm-percentile>
-                    <pm-objective>150</pm-objective>
+                    <percentile>98.0</percentile>
+                    <objective>150</objective>
                   </one-way-frame-delay-range-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Neon_Test6</pm-entry-id>
                   <one-way-mean-frame-delay-pm>
-                    <pm-objective>300</pm-objective>
+                    <objective>300</objective>
                   </one-way-mean-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Neon_Test7</pm-entry-id>
                   <one-way-high-loss-interval-pm>
-                    <pm-objective>220</pm-objective>
+                    <objective>220</objective>
                   </one-way-high-loss-interval-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_Neon_Test8</pm-entry-id>
                   <one-way-consecutive-high-loss-interval-pm>
                     <consecutive-number-p>9</consecutive-number-p>
-                    <pm-objective>257</pm-objective>
+                    <objective>257</objective>
                   </one-way-consecutive-high-loss-interval-pm>
                 </pm-entry>
                 <pm-entry>
@@ -14171,7 +13715,7 @@ MEF GET Config ALLs
                     <ifdv-indicator>true</ifdv-indicator>
                     <one-way-fd-threshold>42</one-way-fd-threshold>
                     <one-way-ifdv-threshold>55</one-way-ifdv-threshold>
-                    <pm-objective>300</pm-objective>
+                    <objective>300</objective>
                   </one-way-composite-pm>
                 </pm-entry>
               </pm-entries>
@@ -14192,60 +13736,60 @@ MEF GET Config ALLs
                   <pm-entry-id>SLS_H_GA_Test</pm-entry-id>
                   <one-way-group-availability-pm>
                     <min-number-of-uni-pair-sets>1</min-number-of-uni-pair-sets>
-                    <pm-objective>300</pm-objective>
+                    <objective>300</objective>
                   </one-way-group-availability-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test1</pm-entry-id>
                   <one-way-frame-delay-pm>
-                    <pm-percentile>99.9</pm-percentile>
-                    <pm-objective>200</pm-objective>
+                    <percentile>99.9</percentile>
+                    <objective>200</objective>
                   </one-way-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test2</pm-entry-id>
                   <one-way-frame-loss-ratio-pm>
-                    <pm-percentile>29.0</pm-percentile>
+                    <percentile>29.0</percentile>
                   </one-way-frame-loss-ratio-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test3</pm-entry-id>
                   <one-way-inter-frame-delay-variation-pm>
-                    <pm-percentile>99.9</pm-percentile>
+                    <percentile>99.9</percentile>
                     <frame-pair-separation>1</frame-pair-separation>
-                    <pm-objective>250</pm-objective>
+                    <objective>250</objective>
                   </one-way-inter-frame-delay-variation-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test4</pm-entry-id>
                   <one-way-availability-pm>
-                    <pm-percentile>96.0</pm-percentile>
+                    <percentile>96.0</percentile>
                   </one-way-availability-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test5</pm-entry-id>
                   <one-way-frame-delay-range-pm>
-                    <pm-percentile>98.0</pm-percentile>
-                    <pm-objective>150</pm-objective>
+                    <percentile>98.0</percentile>
+                    <objective>150</objective>
                   </one-way-frame-delay-range-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test6</pm-entry-id>
                   <one-way-mean-frame-delay-pm>
-                    <pm-objective>300</pm-objective>
+                    <objective>300</objective>
                   </one-way-mean-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test7</pm-entry-id>
                   <one-way-high-loss-interval-pm>
-                    <pm-objective>220</pm-objective>
+                    <objective>220</objective>
                   </one-way-high-loss-interval-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_H_Test8</pm-entry-id>
                   <one-way-consecutive-high-loss-interval-pm>
                     <consecutive-number-p>9</consecutive-number-p>
-                    <pm-objective>257</pm-objective>
+                    <objective>257</objective>
                   </one-way-consecutive-high-loss-interval-pm>
                 </pm-entry>
                 <pm-entry>
@@ -14257,7 +13801,7 @@ MEF GET Config ALLs
                     <ifdv-indicator>true</ifdv-indicator>
                     <one-way-fd-threshold>42</one-way-fd-threshold>
                     <one-way-ifdv-threshold>55</one-way-ifdv-threshold>
-                    <pm-objective>300</pm-objective>
+                    <objective>300</objective>
                   </one-way-composite-pm>
                 </pm-entry>
               </pm-entries>
@@ -14271,20 +13815,20 @@ MEF GET Config ALLs
                 <pm-entry>
                   <pm-entry-id>SLS_L_Test1</pm-entry-id>
                   <one-way-frame-delay-pm>
-                    <pm-percentile>95.0</pm-percentile>
-                    <pm-objective>400</pm-objective>
+                    <percentile>95.0</percentile>
+                    <objective>400</objective>
                   </one-way-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_L_Test2</pm-entry-id>
                   <one-way-frame-loss-ratio-pm>
-                    <pm-percentile>49.0</pm-percentile>
+                    <percentile>49.0</percentile>
                   </one-way-frame-loss-ratio-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_L_Test3</pm-entry-id>
                   <one-way-availability-pm>
-                    <pm-percentile>92.0</pm-percentile>
+                    <percentile>92.0</percentile>
                   </one-way-availability-pm>
                 </pm-entry>
               </pm-entries>
@@ -14298,20 +13842,20 @@ MEF GET Config ALLs
                 <pm-entry>
                   <pm-entry-id>SLS_M_Test1</pm-entry-id>
                   <one-way-frame-delay-pm>
-                    <pm-percentile>99.0</pm-percentile>
-                    <pm-objective>300</pm-objective>
+                    <percentile>99.0</percentile>
+                    <objective>300</objective>
                   </one-way-frame-delay-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_M_Test2</pm-entry-id>
                   <one-way-frame-loss-ratio-pm>
-                    <pm-percentile>39.0</pm-percentile>
+                    <percentile>39.0</percentile>
                   </one-way-frame-loss-ratio-pm>
                 </pm-entry>
                 <pm-entry>
                   <pm-entry-id>SLS_M_Test3</pm-entry-id>
                   <one-way-availability-pm>
-                    <pm-percentile>94.0</pm-percentile>
+                    <percentile>94.0</percentile>
                   </one-way-availability-pm>
                 </pm-entry>
               </pm-entries>
@@ -14341,6 +13885,15 @@ MEF GET Config ALLs
           </cos-name>
           <cos-name>
             <name>Discard</name>
+          </cos-name>
+          <cos-name>
+            <name>EEC-Argon</name>
+          </cos-name>
+          <cos-name>
+            <name>EEC-Krypton</name>
+          </cos-name>
+          <cos-name>
+            <name>EEC-Neon</name>
           </cos-name>
           <cos-name>
             <name>Freshman</name>
@@ -14415,321 +13968,7 @@ MEF GET Config ALLs
             <name>silver+</name>
           </cos-name>
         </cos-names>
-        <eec-names>
-          <eec-name>
-            <name>Bronze</name>
-          </eec-name>
-          <eec-name>
-            <name>BronzeEnhanced</name>
-          </eec-name>
-          <eec-name>
-            <name>BronzePlus</name>
-          </eec-name>
-          <eec-name>
-            <name>Control</name>
-          </eec-name>
-          <eec-name>
-            <name>Discard</name>
-          </eec-name>
-          <eec-name>
-            <name>EEC-Argon</name>
-          </eec-name>
-          <eec-name>
-            <name>EEC-Krypton</name>
-          </eec-name>
-          <eec-name>
-            <name>EEC-Neon</name>
-          </eec-name>
-          <eec-name>
-            <name>Freshman</name>
-          </eec-name>
-          <eec-name>
-            <name>Gold</name>
-          </eec-name>
-          <eec-name>
-            <name>H</name>
-          </eec-name>
-          <eec-name>
-            <name>Junior</name>
-          </eec-name>
-          <eec-name>
-            <name>L</name>
-          </eec-name>
-          <eec-name>
-            <name>M</name>
-          </eec-name>
-          <eec-name>
-            <name>Platinum</name>
-          </eec-name>
-          <eec-name annotation="Global EEC Names">
-            <name>Senior</name>
-          </eec-name>
-          <eec-name>
-            <name>Silver</name>
-          </eec-name>
-          <eec-name>
-            <name>SilverPlus</name>
-          </eec-name>
-          <eec-name>
-            <name>Sophomore</name>
-          </eec-name>
-          <eec-name>
-            <name>control</name>
-          </eec-name>
-          <eec-name>
-            <name>gold</name>
-          </eec-name>
-          <eec-name>
-            <name>mpls-bronze</name>
-          </eec-name>
-          <eec-name>
-            <name>pccwg_bronze</name>
-          </eec-name>
-          <eec-name>
-            <name>pccwg_gold</name>
-          </eec-name>
-          <eec-name>
-            <name>pccwg_silver</name>
-          </eec-name>
-          <eec-name>
-            <name>pccwg_silverplus</name>
-          </eec-name>
-          <eec-name>
-            <name>silver</name>
-          </eec-name>
-          <eec-name>
-            <name>silver+</name>
-          </eec-name>
-        </eec-names>
-        <ingress-bwp-flows-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>INGRESS_BWP_100mbps</bwp-flow-parameter-set-id>
-            <cir>100000</cir>
-            <cir-max>200000</cir-max>
-            <cbs>12800</cbs>
-            <eir>50000</eir>
-            <eir-max>0</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>INGRESS_BWP_200kbps</bwp-flow-parameter-set-id>
-            <cir>200</cir>
-            <cir-max>4000</cir-max>
-            <cbs>32000</cbs>
-            <eir>0</eir>
-            <eir-max>30000</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>INGRESS_BWP_2mbps</bwp-flow-parameter-set-id>
-            <cir>2000</cir>
-            <cir-max>4000</cir-max>
-            <cbs>32000</cbs>
-            <eir>0</eir>
-            <eir-max>30000</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>INGRESS_BWP_70mbps</bwp-flow-parameter-set-id>
-            <cir>70000</cir>
-            <cir-max>200000</cir-max>
-            <cbs>12800</cbs>
-            <eir>50000</eir>
-            <eir-max>0</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>INGRESS_BWP_800kbps</bwp-flow-parameter-set-id>
-            <cir>800</cir>
-            <cir-max>4000</cir-max>
-            <cbs>32000</cbs>
-            <eir>0</eir>
-            <eir-max>30000</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>chicago-bwp-evc</bwp-flow-parameter-set-id>
-            <cir>400000</cir>
-            <cbs>9000</cbs>
-            <eir>10000</eir>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>chicago-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>10000000</cir>
-            <cbs>12000</cbs>
-            <eir>10000</eir>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>denver-bwp-evc</bwp-flow-parameter-set-id>
-            <cir>400000</cir>
-            <cbs>9000</cbs>
-            <eir>10000</eir>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>denver-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>2000000</cir>
-            <cbs>10000</cbs>
-            <eir>10000</eir>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>high1-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>20000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>64000</cbs>
-            <eir>0</eir>
-            <eir-max>50000</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>high2-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>10000000</cir>
-            <cbs>12000</cbs>
-            <eir>0</eir>
-            <ebs>0</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>high3-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>20000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>64000</cbs>
-            <eir>0</eir>
-            <eir-max>50000</eir-max>
-            <ebs>0</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>itest-bwp1</bwp-flow-parameter-set-id>
-            <cir>5000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>12800</cbs>
-            <eir>50000</eir>
-            <eir-max>0</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>itest-bwp2</bwp-flow-parameter-set-id>
-            <cir>14000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>32000</cbs>
-            <eir>0</eir>
-            <eir-max>30000</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>low1-bwp-uni</bwp-flow-parameter-set-id>
-            <cir annotation="Global Ingress Bandwidth Profiles are Ordered-By User">5000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>12800</cbs>
-            <eir>50000</eir>
-            <eir-max>0</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>low2-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>400000</cir>
-            <cbs>9000</cbs>
-            <eir>10000</eir>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>low3-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>5000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>12800</cbs>
-            <eir>50000</eir>
-            <eir-max>0</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>medium1-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>14000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>32000</cbs>
-            <eir>0</eir>
-            <eir-max>30000</eir-max>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>medium2-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>2000000</cir>
-            <cbs>10000</cbs>
-            <eir>10000</eir>
-            <ebs>10000</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-          <bwp-flow-parameter-set>
-            <bwp-flow-parameter-set-id>medium3-bwp-uni</bwp-flow-parameter-set-id>
-            <cir>14000</cir>
-            <cir-max>20000</cir-max>
-            <cbs>32000</cbs>
-            <eir>0</eir>
-            <eir-max>30000</eir-max>
-            <ebs>0</ebs>
-            <coupling-enabled>false</coupling-enabled>
-            <color-mode>color-blind</color-mode>
-            <coupling-flag>false</coupling-flag>
-          </bwp-flow-parameter-set>
-        </ingress-bwp-flows-parameter-set>
-        <egress-bwp-flows-parameter-set>
+        <bwp-flows-parameter-set>
           <bwp-flow-parameter-set>
             <bwp-flow-parameter-set-id>EGRESS_BWP_100mbps</bwp-flow-parameter-set-id>
             <cir>100000</cir>
@@ -14780,6 +14019,66 @@ MEF GET Config ALLs
           </bwp-flow-parameter-set>
           <bwp-flow-parameter-set>
             <bwp-flow-parameter-set-id>EGRESS_BWP_800kbps</bwp-flow-parameter-set-id>
+            <cir>800</cir>
+            <cir-max>4000</cir-max>
+            <cbs>32000</cbs>
+            <eir>0</eir>
+            <eir-max>30000</eir-max>
+            <ebs>10000</ebs>
+            <coupling-enabled>false</coupling-enabled>
+            <color-mode>color-blind</color-mode>
+            <coupling-flag>false</coupling-flag>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>INGRESS_BWP_100mbps</bwp-flow-parameter-set-id>
+            <cir>100000</cir>
+            <cir-max>200000</cir-max>
+            <cbs>12800</cbs>
+            <eir>50000</eir>
+            <eir-max>0</eir-max>
+            <ebs>10000</ebs>
+            <coupling-enabled>false</coupling-enabled>
+            <color-mode>color-blind</color-mode>
+            <coupling-flag>false</coupling-flag>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>INGRESS_BWP_200kbps</bwp-flow-parameter-set-id>
+            <cir>200</cir>
+            <cir-max>4000</cir-max>
+            <cbs>32000</cbs>
+            <eir>0</eir>
+            <eir-max>30000</eir-max>
+            <ebs>10000</ebs>
+            <coupling-enabled>false</coupling-enabled>
+            <color-mode>color-blind</color-mode>
+            <coupling-flag>false</coupling-flag>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>INGRESS_BWP_2mbps</bwp-flow-parameter-set-id>
+            <cir>2000</cir>
+            <cir-max>4000</cir-max>
+            <cbs>32000</cbs>
+            <eir>0</eir>
+            <eir-max>30000</eir-max>
+            <ebs>10000</ebs>
+            <coupling-enabled>false</coupling-enabled>
+            <color-mode>color-blind</color-mode>
+            <coupling-flag>false</coupling-flag>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>INGRESS_BWP_70mbps</bwp-flow-parameter-set-id>
+            <cir>70000</cir>
+            <cir-max>200000</cir-max>
+            <cbs>12800</cbs>
+            <eir>50000</eir>
+            <eir-max>0</eir-max>
+            <ebs>10000</ebs>
+            <coupling-enabled>false</coupling-enabled>
+            <color-mode>color-blind</color-mode>
+            <coupling-flag>false</coupling-flag>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>INGRESS_BWP_800kbps</bwp-flow-parameter-set-id>
             <cir>800</cir>
             <cir-max>4000</cir-max>
             <cbs>32000</cbs>
@@ -14889,6 +14188,30 @@ MEF GET Config ALLs
             <coupling-flag>false</coupling-flag>
           </bwp-flow-parameter-set>
           <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>itest-bwp1</bwp-flow-parameter-set-id>
+            <cir>5000</cir>
+            <cir-max>20000</cir-max>
+            <cbs>12800</cbs>
+            <eir>50000</eir>
+            <eir-max>0</eir-max>
+            <ebs>10000</ebs>
+            <coupling-enabled>false</coupling-enabled>
+            <color-mode>color-blind</color-mode>
+            <coupling-flag>false</coupling-flag>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
+            <bwp-flow-parameter-set-id>itest-bwp2</bwp-flow-parameter-set-id>
+            <cir>14000</cir>
+            <cir-max>20000</cir-max>
+            <cbs>32000</cbs>
+            <eir>0</eir>
+            <eir-max>30000</eir-max>
+            <ebs>10000</ebs>
+            <coupling-enabled>false</coupling-enabled>
+            <color-mode>color-blind</color-mode>
+            <coupling-flag>false</coupling-flag>
+          </bwp-flow-parameter-set>
+          <bwp-flow-parameter-set>
             <bwp-flow-parameter-set-id>low1-bwp-uni</bwp-flow-parameter-set-id>
             <cir annotation="Global Egress Bandwidth Profiles are Ordered-By User">5000</cir>
             <cir-max>20000</cir-max>
@@ -14956,7 +14279,7 @@ MEF GET Config ALLs
             <color-mode>color-blind</color-mode>
             <coupling-flag>false</coupling-flag>
           </bwp-flow-parameter-set>
-        </egress-bwp-flows-parameter-set>
+        </bwp-flows-parameter-set>
         <l2cp-cos>
           <profile>
             <id>MEF103_Table3PlusCoS</id>
@@ -16514,7 +15837,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
               <cos-entries>
                 <cos-entry>
                   <cos-name>Argon</cos-name>
@@ -16741,7 +16064,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
               <cos-entries>
                 <cos-entry>
                   <cos-name>Argon</cos-name>
@@ -17106,7 +16429,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
               <cos-entries>
                 <cos-entry>
                   <cos-name>Argon</cos-name>
@@ -17507,7 +16830,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
               <cos-entries>
                 <cos-entry>
                   <cos-name>Neon</cos-name>
@@ -17572,7 +16895,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
             </carrier-ethernet-sls>
             <connection-type>point-to-point</connection-type>
             <admin-state>false</admin-state>
@@ -17618,7 +16941,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
               <cos-entries>
                 <cos-entry>
                   <cos-name>Neon</cos-name>
@@ -18337,7 +17660,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
               <cos-entries>
                 <cos-entry>
                   <cos-name>Argon</cos-name>
@@ -18813,7 +18136,7 @@ MEF GET Config ALLs
             </end-points>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
-              <start-time>201606181200Z</start-time>
+              <start-time>2016-06-18T12:00:00+00:00</start-time>
               <cos-entries>
                 <cos-entry>
                   <cos-name>Krypton</cos-name>

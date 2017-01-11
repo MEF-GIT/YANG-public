@@ -78,13 +78,20 @@ module mef-interfaces {
      of Ethernet over Transport and Metro Ethernet 
      Network(EoT/MEN)' March 2007";
 
-   revision 2016-07-01 {
+  revision 2017-01-10 {
+ 	    description
+ 	      "Updated to address CFC1 Review Comments.";
+ 	    reference
+ 	      "EVC Ethernet Services Definitions YANG Modules 
+ 	       (MEF XX), TBD";
+  }
+  revision 2016-07-01 {
      description
     	      "Updated to better align with MEF 7.3 and
     	       MEF Common Information Model attributes";
      reference "EVC Ethernet Services Definitions YANG Modules
     	    	      (MEF XX), TBD";
-   }
+  }
     
   revision 2015-05-26 {
     description
@@ -316,7 +323,7 @@ module mef-interfaces {
                   type leafref {
                     path "/mef-global:mef-global/mef-global:" +
                     		"profiles/mef-global:" +
-                    		"ingress-bwp-flows-parameter-set/mef-global:" +
+                    		"bwp-flows-parameter-set/mef-global:" +
                     		"bwp-flow-parameter-set/mef-global:bwp-flow-parameter-set-id";
                   }
                   must "(../../../../../token-share-enabled = " +
@@ -335,7 +342,7 @@ module mef-interfaces {
                   must "(../../../coupling-enabled = 'false') or " +
                   		"(/mef-global:mef-global/mef-global:" +
                   		"profiles/mef-global:" +
-                  		"ingress-bwp-flows-parameter-set/mef-global:bwp-flow-parameter-set" +
+                  		"bwp-flows-parameter-set/mef-global:bwp-flow-parameter-set" +
                   		"[mef-global:bwp-flow-parameter-set-id = current()]/" +
                   		"mef-global:coupling-enabled = 'false')" {
                     error-message "If an Ingress Envelope's " +
@@ -426,7 +433,7 @@ module mef-interfaces {
                 leaf bw-profile {
                   type leafref {
                     path "/mef-global:mef-global/mef-global:" +
-                    		"profiles/mef-global:egress-bwp-flows-parameter-set" +
+                    		"profiles/mef-global:bwp-flows-parameter-set" +
                     		"/mef-global:bwp-flow-parameter-set/" +
                     		"mef-global:bwp-flow-parameter-set-id";
                   }
@@ -446,7 +453,7 @@ module mef-interfaces {
                   must "(../../../coupling-enabled = 'false') or " +
                   		"(/mef-global:mef-global/mef-global:" +
                   		"profiles/mef-global:" +
-                  		"egress-bwp-flows-parameter-set/mef-global:bwp-flow-parameter-set" +
+                  		"bwp-flows-parameter-set/mef-global:bwp-flow-parameter-set" +
                   		"[mef-global:bwp-flow-parameter-set-id = current()]/" +
                   		"mef-global:coupling-enabled = 'false')" {
                     error-message "If an Egress Envelope's " +
@@ -666,7 +673,7 @@ module mef-interfaces {
         leaf ingress-bw-profile-per-uni {
           type leafref {
             path "/mef-global:mef-global/mef-global:profiles/" +
-            		"mef-global:ingress-bwp-flows-parameter-set/mef-global:" +
+            		"mef-global:bwp-flows-parameter-set/mef-global:" +
             		"bwp-flow-parameter-set/mef-global:bwp-flow-parameter-set-id";
           }
           description
@@ -678,7 +685,7 @@ module mef-interfaces {
         leaf egress-bw-profile-per-uni {
           type leafref {
             path "/mef-global:mef-global/mef-global:profiles/" +
-            		"mef-global:egress-bwp-flows-parameter-set/mef-global:" +
+            		"mef-global:bwp-flows-parameter-set/mef-global:" +
             		"bwp-flow-parameter-set/mef-global:bwp-flow-parameter-set-id";
           }
           description

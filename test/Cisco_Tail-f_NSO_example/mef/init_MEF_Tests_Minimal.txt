@@ -267,62 +267,11 @@ mef-global profiles cos-names cos-name silver;
 !
 mef-global profiles cos-names cos-name mpls-bronze;
 !
-! Global EEC Names
-mef-global profiles eec-names eec-name Senior;
+mef-global profiles cos-names cos-name EEC-Krypton;
 !
-mef-global profiles eec-names eec-name Junior;
+mef-global profiles cos-names cos-name EEC-Argon;
 !
-mef-global profiles eec-names eec-name Sophomore;
-!
-mef-global profiles eec-names eec-name Freshman;
-!
-mef-global profiles eec-names eec-name EEC-Krypton;
-!
-mef-global profiles eec-names eec-name EEC-Argon;
-!
-mef-global profiles eec-names eec-name EEC-Neon;
-!
-mef-global profiles eec-names eec-name H;
-!
-mef-global profiles eec-names eec-name M;
-!
-mef-global profiles eec-names eec-name L;
-!
-mef-global profiles eec-names eec-name Discard;
-!
-mef-global profiles eec-names eec-name Platinum;
-!
-mef-global profiles eec-names eec-name Control;
-!
-mef-global profiles eec-names eec-name Gold;
-!
-mef-global profiles eec-names eec-name SilverPlus;
-!
-mef-global profiles eec-names eec-name Silver;
-!
-mef-global profiles eec-names eec-name BronzeEnhanced;
-!
-mef-global profiles eec-names eec-name BronzePlus;
-!
-mef-global profiles eec-names eec-name Bronze;
-!
-mef-global profiles eec-names eec-name pccwg_gold;
-!
-mef-global profiles eec-names eec-name pccwg_silverplus;
-!
-mef-global profiles eec-names eec-name pccwg_silver;
-!
-mef-global profiles eec-names eec-name pccwg_bronze;
-!
-mef-global profiles eec-names eec-name control;
-!
-mef-global profiles eec-names eec-name gold;
-!
-mef-global profiles eec-names eec-name "silver+";
-!
-mef-global profiles eec-names eec-name silver;
-!
-mef-global profiles eec-names eec-name mpls-bronze;
+mef-global profiles cos-names cos-name EEC-Neon;
 !
 commit
 !
@@ -330,133 +279,133 @@ top
 ! Service Level Specifications
 mef-global sls-profiles sls-profile MEF103_Table25 time-interval 2592000
 mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Krypton delta-t 1 threshold-c 50.0 consecutive-interval-n 10
-mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 one-way-frame-delay-pm pm-percentile 99.9 pm-objective 200
-mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Krypton pm-entries pm-entry SLS_Krypton_Test2 one-way-frame-loss-ratio-pm pm-percentile 29.0
-mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Krypton pm-entries pm-entry SLS_Krypton_Test3 one-way-inter-frame-delay-variation-pm pm-percentile 99.9 frame-pair-separation 1 pm-objective 250
-mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Krypton pm-entries pm-entry SLS_Krypton_Test4 one-way-availability-pm pm-percentil 9.6
+mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 one-way-frame-delay-pm percentile 99.9 objective 200
+mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Krypton pm-entries pm-entry SLS_Krypton_Test2 one-way-frame-loss-ratio-pm percentile 29.0
+mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Krypton pm-entries pm-entry SLS_Krypton_Test3 one-way-inter-frame-delay-variation-pm percentile 99.9 frame-pair-separation 1 objective 250
+mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Krypton pm-entries pm-entry SLS_Krypton_Test4 one-way-availability-pm percentile 9.6
 !
 mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Argon delta-t 1 threshold-c 50.0 consecutive-interval-n 10
-mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Argon pm-entries pm-entry SLS_Argon_Test1 one-way-frame-delay-pm pm-percentile 99.0 pm-objective 300
-mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Argon pm-entries pm-entry SLS_Argon_Test2 one-way-frame-loss-ratio-pm pm-percentile 39.0
-mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Argon pm-entries pm-entry SLS_Argon_Test3 one-way-availability-pm pm-percentile 9.4
+mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Argon pm-entries pm-entry SLS_Argon_Test1 one-way-frame-delay-pm percentile 99.0 objective 300
+mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Argon pm-entries pm-entry SLS_Argon_Test2 one-way-frame-loss-ratio-pm percentile 39.0
+mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Argon pm-entries pm-entry SLS_Argon_Test3 one-way-availability-pm percentile 9.4
 !
 mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon delta-t 1 threshold-c 50.0 consecutive-interval-n 10
-mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test1 one-way-frame-delay-pm pm-percentile 95.0 pm-objective 400
-mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test2 one-way-frame-loss-ratio-pm pm-percentile 49.0
-mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test3 one-way-availability-pm pm-percentile 92.0
-mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test5 one-way-frame-delay-range pm-percentile 98.0 pm-objective 150
-mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test6 one-way-mean-frame-delay-pm pm-objective 300
-mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test7 one-way-high-loss-interval-pm  pm-objective 220
-mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test8 one-way-consecutive-high-loss-interval-pm consecutive-number-p 9 pm-objective 257
-mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test9 one-way-composite-pm cpi-threshold-u 90.6 frame-loss-indicator true frame-delay-indicator true ifdv-indicator true one-way-fd-threshold 42 one-way-ifdv-threshold 55 pm-objective 300
-mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_GA_Test one-way-group-availability-pm min-number-of-uni-pair-sets 1 pm-objective 300
+mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test1 one-way-frame-delay-pm percentile 95.0 objective 400
+mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test2 one-way-frame-loss-ratio-pm percentile 49.0
+mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test3 one-way-availability-pm percentile 92.0
+mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test5 one-way-frame-delay-range percentile 98.0 objective 150
+mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test6 one-way-mean-frame-delay-pm objective 300
+mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test7 one-way-high-loss-interval-pm  objective 220
+mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test8 one-way-consecutive-high-loss-interval-pm consecutive-number-p 9 objective 257
+mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test9 one-way-composite-pm cpi-threshold-u 90.6 frame-loss-indicator true frame-delay-indicator true ifdv-indicator true one-way-fd-threshold 42 one-way-ifdv-threshold 55 objective 300
+mef-global sls-profiles sls-profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_GA_Test one-way-group-availability-pm min-number-of-uni-pair-sets 1 objective 300
 !
 mef-global sls-profiles sls-profile SLS_Example time-interval 1292000
 mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry H delta-t 1 threshold-c 50.0 consecutive-interval-n 10
-mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test1 one-way-frame-delay-pm pm-percentile 99.9 pm-objective 200
-mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test2 one-way-frame-loss-ratio-pm pm-percentile 29.0
-mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test3 one-way-inter-frame-delay-variation-pm pm-percentile 99.9 frame-pair-separation 1 pm-objective 250
-mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test4 one-way-availability-pm pm-percentile 96.0
-mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test5 one-way-frame-delay-range pm-percentile 98.0 pm-objective 150
-mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test6 one-way-mean-frame-delay-pm pm-objective 300
-mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test7 one-way-high-loss-interval-pm  pm-objective 220
-mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test8 one-way-consecutive-high-loss-interval-pm consecutive-number-p 9 pm-objective 257
-mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test9 one-way-composite-pm cpi-threshold-u 90.6 frame-loss-indicator true frame-delay-indicator true ifdv-indicator true one-way-fd-threshold 42 one-way-ifdv-threshold 55 pm-objective 300
-mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_GA_Test one-way-group-availability-pm min-number-of-uni-pair-sets 1 pm-objective 300
+mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test1 one-way-frame-delay-pm percentile 99.9 objective 200
+mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test2 one-way-frame-loss-ratio-pm percentile 29.0
+mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test3 one-way-inter-frame-delay-variation-pm percentile 99.9 frame-pair-separation 1 objective 250
+mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test4 one-way-availability-pm percentile 96.0
+mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test5 one-way-frame-delay-range percentile 98.0 objective 150
+mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test6 one-way-mean-frame-delay-pm objective 300
+mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test7 one-way-high-loss-interval-pm  objective 220
+mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test8 one-way-consecutive-high-loss-interval-pm consecutive-number-p 9 objective 257
+mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test9 one-way-composite-pm cpi-threshold-u 90.6 frame-loss-indicator true frame-delay-indicator true ifdv-indicator true one-way-fd-threshold 42 one-way-ifdv-threshold 55 objective 300
+mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_GA_Test one-way-group-availability-pm min-number-of-uni-pair-sets 1 objective 300
 !
 mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry M delta-t 1 threshold-c 50.0 consecutive-interval-n 10
-mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry M pm-entries pm-entry SLS_M_Test1 one-way-frame-delay-pm pm-percentile 99.0 pm-objective 300
-mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry M pm-entries pm-entry SLS_M_Test2 one-way-frame-loss-ratio-pm pm-percentile 39.0
-mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry M pm-entries pm-entry SLS_M_Test3 one-way-availability-pm pm-percentile 94.0
+mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry M pm-entries pm-entry SLS_M_Test1 one-way-frame-delay-pm percentile 99.0 objective 300
+mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry M pm-entries pm-entry SLS_M_Test2 one-way-frame-loss-ratio-pm percentile 39.0
+mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry M pm-entries pm-entry SLS_M_Test3 one-way-availability-pm percentile 94.0
 !
 mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry L delta-t 1 threshold-c 50.0 consecutive-interval-n 10
-mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry L pm-entries pm-entry SLS_L_Test1 one-way-frame-delay-pm pm-percentile 95.0 pm-objective 400
-mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry L pm-entries pm-entry SLS_L_Test2 one-way-frame-loss-ratio-pm pm-percentile 49.0
-mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry L pm-entries pm-entry SLS_L_Test3 one-way-availability-pm pm-percentile 92.0
+mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry L pm-entries pm-entry SLS_L_Test1 one-way-frame-delay-pm percentile 95.0 objective 400
+mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry L pm-entries pm-entry SLS_L_Test2 one-way-frame-loss-ratio-pm percentile 49.0
+mef-global sls-profiles sls-profile SLS_Example pm-cos-name-entries pm-cos-name-entry L pm-entries pm-entry SLS_L_Test3 one-way-availability-pm percentile 92.0
 !
 commit
 !
 top
 ! Global Ingress Bandwidth Profiles are Ordered-By User
-mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set low1-bwp-uni cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set low1-bwp-uni cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set medium1-bwp-uni cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set medium1-bwp-uni cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set high1-bwp-uni cir 20000 cir-max 20000 cbs 64000 eir 0 eir-max 50000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set high1-bwp-uni cir 20000 cir-max 20000 cbs 64000 eir 0 eir-max 50000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set low2-bwp-uni cir 400000 cbs 9000 eir 10000 ebs 10000  color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set low2-bwp-uni cir 400000 cbs 9000 eir 10000 ebs 10000  color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set medium2-bwp-uni cir 2000000 cbs 10000 eir 10000 ebs 10000  color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set medium2-bwp-uni cir 2000000 cbs 10000 eir 10000 ebs 10000  color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set high2-bwp-uni cir 10000000 cbs 12000 eir 0 ebs 0  color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set high2-bwp-uni cir 10000000 cbs 12000 eir 0 ebs 0  color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set high3-bwp-uni cir 20000 cir-max 20000 cbs 64000 eir 0 eir-max 50000 ebs 0 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set high3-bwp-uni cir 20000 cir-max 20000 cbs 64000 eir 0 eir-max 50000 ebs 0 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set medium3-bwp-uni cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 30000 ebs 0 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set medium3-bwp-uni cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 30000 ebs 0 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set low3-bwp-uni cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set low3-bwp-uni cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set chicago-bwp-uni cir 10000000 cbs 12000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set chicago-bwp-uni cir 10000000 cbs 12000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set denver-bwp-uni cir 2000000 cbs 10000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set denver-bwp-uni cir 2000000 cbs 10000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set chicago-bwp-evc cir 400000 cbs 9000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set chicago-bwp-evc cir 400000 cbs 9000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set denver-bwp-evc cir 400000 cbs 9000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set denver-bwp-evc cir 400000 cbs 9000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set itest-bwp1 cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set itest-bwp1 cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set itest-bwp2 cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set itest-bwp2 cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set INGRESS_BWP_100mbps cir 100000 cir-max 200000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set INGRESS_BWP_100mbps cir 100000 cir-max 200000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set INGRESS_BWP_70mbps cir 70000 cir-max 200000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set INGRESS_BWP_70mbps cir 70000 cir-max 200000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set INGRESS_BWP_2mbps cir 2000 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set INGRESS_BWP_2mbps cir 2000 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set INGRESS_BWP_200kbps cir 200 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set INGRESS_BWP_200kbps cir 200 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set INGRESS_BWP_800kbps cir 800 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set INGRESS_BWP_800kbps cir 800 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 ! Global Egress Bandwidth Profiles are Ordered-By User
-mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set low1-bwp-uni cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set low1-bwp-uni cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set medium1-bwp-uni cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 0 ebs 0 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set medium1-bwp-uni cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 0 ebs 0 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set high1-bwp-uni cir 20000 cir-max 20000 cbs 64000 eir 0 eir-max 50000 ebs 0 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set high1-bwp-uni cir 20000 cir-max 20000 cbs 64000 eir 0 eir-max 50000 ebs 0 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set low2-bwp-uni cir 400000 cbs 9000 eir 10000 ebs 10000  color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set low2-bwp-uni cir 400000 cbs 9000 eir 10000 ebs 10000  color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set medium2-bwp-uni cir 2000000 cbs 10000 eir 10000 ebs 10000  color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set medium2-bwp-uni cir 2000000 cbs 10000 eir 10000 ebs 10000  color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set high2-bwp-uni cir 10000000 cbs 12000 eir 0 ebs 0  color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set high2-bwp-uni cir 10000000 cbs 12000 eir 0 ebs 0  color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set high3-bwp-uni cir 20000 cir-max 20000 cbs 64000 eir 0 eir-max 0 ebs 0 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set high3-bwp-uni cir 20000 cir-max 20000 cbs 64000 eir 0 eir-max 0 ebs 0 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set medium3-bwp-uni cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 0 ebs 0 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set medium3-bwp-uni cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 0 ebs 0 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set low3-bwp-uni cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 2000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set low3-bwp-uni cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 2000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set chicago-bwp-uni cir 10000000 cbs 12000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set chicago-bwp-uni cir 10000000 cbs 12000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set denver-bwp-uni cir 2000000 cbs 10000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set denver-bwp-uni cir 2000000 cbs 10000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set chicago-bwp-evc cir 400000 cbs 9000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set chicago-bwp-evc cir 400000 cbs 9000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set denver-bwp-evc cir 400000 cbs 9000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set denver-bwp-evc cir 400000 cbs 9000 eir 10000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set etest-bwp1 cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set etest-bwp1 cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set etest-bwp2 cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set etest-bwp2 cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set EGRESS_BWP_100mbps cir 100000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set EGRESS_BWP_100mbps cir 100000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set EGRESS_BWP_70mbps cir 70000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set EGRESS_BWP_70mbps cir 70000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set EGRESS_BWP_2mbps cir 2000 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set EGRESS_BWP_2mbps cir 2000 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set EGRESS_BWP_200kbps cir 200 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set EGRESS_BWP_200kbps cir 200 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
-mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set EGRESS_BWP_800kbps cir 800 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set EGRESS_BWP_800kbps cir 800 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false coupling-flag false
 !
 commit
 !
@@ -1040,7 +989,7 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART 
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 eec-identifier MEF103_Table23 color-identifier dscp
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 start-time 201606181200Z cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce0-Slot0-Port1 MMPOP1-ce1-Slot1-Port1
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 start-time 2016-06-18T12:00:00+00:00 cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce0-Slot0-Port1 MMPOP1-ce1-Slot1-Port1
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce1-Slot1-Port1 MMPOP1-ce0-Slot0-Port1
 !
@@ -1121,7 +1070,7 @@ mef-interfaces unis uni MMPOP1-ce2-Slot2-Port3 egress-envelopes envelope eenv_EV
 !
 mef-interfaces unis uni MMPOP1-ce2-Slot2-Port3 l2cp-address-set cta l2cp-peering L2CP_Peering_Profile1
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART svc-type evpl connection-type point-to-point max-num-of-evc-end-point 2 admin-state false ce-vlan-id-preservation true carrier-ethernet-sls sls-id MEF103_Table25 start-time 201606181200Z
+mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART svc-type evpl connection-type point-to-point max-num-of-evc-end-point 2 admin-state false ce-vlan-id-preservation true carrier-ethernet-sls sls-id MEF103_Table25 start-time 2016-06-18T12:00:00+00:00
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 role root admin-state false source-mac-address-limit-enabled false ce-vlans ce-vlan 22
 !
@@ -1143,7 +1092,7 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART 
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port3 eec-identifier MEF62_ApdxA color-identifier pcp
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART svc-type evpl connection-type point-to-point max-num-of-evc-end-point 2 admin-state false ce-vlan-id-preservation true  carrier-ethernet-sls sls-id MEF103_Table25 start-time 201606181200Z
+mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART svc-type evpl connection-type point-to-point max-num-of-evc-end-point 2 admin-state false ce-vlan-id-preservation true  carrier-ethernet-sls sls-id MEF103_Table25 start-time 2016-06-18T12:00:00+00:00
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 role root admin-state false source-mac-address-limit-enabled false ce-vlans ce-vlan 33
 !
@@ -1165,7 +1114,7 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART 
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot2-Port3 eec-identifier MEF62_ApdxA color-identifier pcp
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 start-time 201606181200Z cos-entries cos-entry Neon pm-entries pm-entry SLS_Neon_Test1 end-point-pairs sls-uni-exclusions end-point-pair MMPOP1-ce1-Slot1-Port3 MMPOP1-ce0-Slot0-Port3
+mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 start-time 2016-06-18T12:00:00+00:00 cos-entries cos-entry Neon pm-entries pm-entry SLS_Neon_Test1 end-point-pairs sls-uni-exclusions end-point-pair MMPOP1-ce1-Slot1-Port3 MMPOP1-ce0-Slot0-Port3
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART svc-type evpl connection-type point-to-point max-num-of-evc-end-point 2 admin-state false ce-vlan-id-preservation false
 !
@@ -1189,7 +1138,7 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART 
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port3 eec-identifier MEF62_ApdxA color-identifier pcp
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 start-time 201606181200Z cos-entries cos-entry Neon pm-entries pm-entry SLS_Neon_Test2 end-point-pairs sls-uni-exclusions end-point-pair MMPOP1-ce1-Slot1-Port3 MMPOP1-ce0-Slot0-Port3
+mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 start-time 2016-06-18T12:00:00+00:00 cos-entries cos-entry Neon pm-entries pm-entry SLS_Neon_Test2 end-point-pairs sls-uni-exclusions end-point-pair MMPOP1-ce1-Slot1-Port3 MMPOP1-ce0-Slot0-Port3
 !
 commit
 !
@@ -1237,9 +1186,9 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001901-ACME-MEGAMART 
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001901-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port1 role root cos-identifier MEF103_Table23 color-identifier dscp eec-identifier MEF103_Table23 admin-state false source-mac-address-limit-enabled true ce-vlans ce-vlan 1
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001901-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 start-time 201606181200Z cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test3
+mef-services carrier-ethernet subscriber-services evc EVC-0001901-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 start-time 2016-06-18T12:00:00+00:00 cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test3
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001901-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 start-time 201606181200Z cos-entries cos-entry Argon pm-entries pm-entry SLS_Argon_Test1
+mef-services carrier-ethernet subscriber-services evc EVC-0001901-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 start-time 2016-06-18T12:00:00+00:00 cos-entries cos-entry Argon pm-entries pm-entry SLS_Argon_Test1
 !
 commit
 !
@@ -1442,7 +1391,7 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART 
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec EEC-Krypton bw-profile eenv_EVPLAN_UNI883_EVC-0001944_Krypton
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 start-time 201606181200Z cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1
+mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 start-time 2016-06-18T12:00:00+00:00 cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Argon pm-entries pm-entry SLS_Argon_Test2
 !
@@ -1518,7 +1467,7 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART 
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port2 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Sophomore bw-profile eenv_EPTREE_UNI882_EVC-0001911_Sophomore
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 start-time 201606181200Z cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce5-Slot5-Port2 MMPOP1-ce7-Slot7-Port2
+mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 start-time 2016-06-18T12:00:00+00:00 cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce5-Slot5-Port2 MMPOP1-ce7-Slot7-Port2
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce5-Slot5-Port2 MMPOP1-ce8-Slot8-Port2
 !
@@ -1571,7 +1520,7 @@ mef-services carrier-ethernet subscriber-services evc EVC-0002947-ACME-MEGAMART 
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0002947-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port3 role leaf cos-identifier MEF103_Table23 color-identifier dscp eec-identifier MEF103_Table23 admin-state false source-mac-address-limit-enabled true ce-vlans ce-vlan 153
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0002947-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 start-time 201606181200Z cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce5-Slot5-Port4 MMPOP1-ce7-Slot7-Port3
+mef-services carrier-ethernet subscriber-services evc EVC-0002947-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 start-time 2016-06-18T12:00:00+00:00 cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce5-Slot5-Port4 MMPOP1-ce7-Slot7-Port3
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0002947-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce5-Slot5-Port4 MMPOP1-ce8-Slot8-Port3
 !
@@ -1648,7 +1597,7 @@ mef-services carrier-ethernet subscriber-services evc EVC-0009898-ACME-MEGAMART 
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0009898-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot0-Port3 eec-identifier MEF103_Table23 color-identifier dscp
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0009898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 start-time 201606181200Z cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce0-Slot0-Port2 MMPOP1-ce2-Slot0-Port3
+mef-services carrier-ethernet subscriber-services evc EVC-0009898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 start-time 2016-06-18T12:00:00+00:00 cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce0-Slot0-Port2 MMPOP1-ce2-Slot0-Port3
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0009898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce2-Slot0-Port3 MMPOP1-ce0-Slot0-Port2
 !

@@ -72,6 +72,13 @@ module mef-services {
       of Ethernet over Transport and Metro Ethernet 
       Network(EoT/MEN)' March 2007";
 
+  revision 2017-01-10 {
+  	    description
+  	      "Updated to address CFC1 Review Comments.";
+  	    reference
+  	      "EVC Ethernet Services Definitions YANG Modules 
+  	       (MEF XX), TBD";
+  }
   revision 2016-07-01 {
     description
       "Updated to better align with MEF 7.3 and
@@ -372,8 +379,8 @@ module mef-services {
               leaf eec-name {
                 type leafref {
                   path "/mef-global:mef-global/mef-global:" +
-                  		"profiles/mef-global:eec-names/" +
-                  		"mef-global:eec-name/mef-global:name";
+                  		"profiles/mef-global:cos-names/" +
+                  		"mef-global:cos-name/mef-global:name";
                 }
                 description
                   "EVC Per UNI: Egress Equivalence Class " +
@@ -680,12 +687,11 @@ module mef-services {
           		"[MEF7.3] Section 12.2.2.";
         }
         leaf start-time {
-            type string {
-              length "min..255";
-            }
+            type yang:date-and-time;
+            mandatory true;
             description
               "Performance Metric(PM): Start DateTime for " +
-              "Time Intervals (YYYYMMDDHHHHZ). If not set, treat as start immediately. The \"Z\" indicates timezone as GMT (ie. Zulu).";
+              "Time Intervals using a RFC 3339 formatted string (YYYY-MM-DDTHH:MM:SS[+HH:MM]). The timezone offset is optional but will be assumed as [+00:00].";
           }
         container cos-entries {
           description

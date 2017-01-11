@@ -2,7 +2,7 @@
 "data": {
  "mef-global:mef-global": {
     "profiles": {
-    	"ingress-bwp-flows-parameter-set": {
+    	"bwp-flows-parameter-set": {
             "bwp-flow-parameter-set": [
               {
                 "bwp-flow-parameter-set-id": "chicago-bwp-evc",

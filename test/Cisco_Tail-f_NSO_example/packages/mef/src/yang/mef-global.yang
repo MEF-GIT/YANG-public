@@ -74,6 +74,13 @@ module mef-global {
      of Ethernet over Transport and Metro Ethernet 
      Network(EoT/MEN)' March 2007";
 
+  revision 2017-01-10 {
+    	    description
+    	      "Updated to address CFC1 Review Comments.";
+    	    reference
+    	      "EVC Ethernet Services Definitions YANG Modules 
+    	       (MEF XX), TBD";
+  }
   revision 2016-04-17 {
     description
       "First set of updates to better align with
@@ -103,7 +110,7 @@ module mef-global {
           "Bandwidth Profiles.";
         reference "[MEF10.3] Section 9.14, 12.2.";
         leaf bwp-flow-parameter-set-id {
-          type mef-types:identifier45;
+          type mef-types:identifier255;
           description
             "Bandwidth Profile Identifier.";
           reference "[MEF10.3] Section 9.14, 12.2.";
@@ -273,7 +280,7 @@ module mef-global {
                 "expressed in percentage.";
             }
             leaf consecutive-interval-n {
-              type uint64;
+              type uint8;
               mandatory true;
               description
                 "Number of consecutive small time intervals " +
@@ -299,18 +306,19 @@ module mef-global {
                   description
                     "Choice of different One-Way Performance " +
                     "Objectives";
+                  mandatory true;
                   case fd {
                     container one-way-frame-delay-pm {
                       description
                       "one-way-frame-delay-pm";
-                      leaf pm-percentile {
+                      leaf percentile {
                         type mef-types:simple-percent;
                         units "percent";
                         mandatory true;
                         description
                           "Frame Delay Performance Percentile.";
                       }
-                      leaf pm-objective {
+                      leaf objective {
                         type uint64;
                         units "ms";
                         mandatory true;
@@ -323,7 +331,7 @@ module mef-global {
                     container one-way-mean-frame-delay-pm {
                       description
                       "one-way-mean-frame-delay-pm";
-                      leaf pm-objective {
+                      leaf objective {
                         type uint64;
                         units "ms";
                         mandatory true;
@@ -336,7 +344,7 @@ module mef-global {
                     container one-way-frame-delay-range-pm {
                       description
                       "one-way-frame-delay-range-pm";
-                      leaf pm-percentile {
+                      leaf percentile {
                         type mef-types:simple-percent;
                         units "percent";
                         mandatory true;
@@ -344,7 +352,7 @@ module mef-global {
                           "Frame Delay Range Performance " +
                           "Percentile.";
                       }
-                      leaf pm-objective {
+                      leaf objective {
                         type uint64;
                         units "ms";
                         mandatory true;
@@ -358,7 +366,7 @@ module mef-global {
                    container one-way-inter-frame-delay-variation-pm {
                       description
                       "one-way-inter-frame-delay-variation-pm";
-                      leaf pm-percentile {
+                      leaf percentile {
                         type mef-types:simple-percent;
                         units "percent";
                         mandatory true;
@@ -374,7 +382,7 @@ module mef-global {
                           "Inter-Frame Delay Variation" +
                           "Performance Separation / Pair Interval.";
                       }
-                      leaf pm-objective {
+                      leaf objective {
                         type uint64;
                         units "ms";
                         mandatory true;
@@ -388,7 +396,7 @@ module mef-global {
                     container one-way-frame-loss-ratio-pm {
                       description
                       "one-way-frame-loss-ratio-pm";
-                      leaf pm-percentile {
+                      leaf percentile {
                           type mef-types:simple-percent;
                           units "percent";
                           mandatory true;
@@ -402,7 +410,7 @@ module mef-global {
                     container one-way-availability-pm {
                       description
                       "one-way-availability-pm";
-                      leaf pm-percentile {
+                      leaf percentile {
                           type mef-types:simple-percent;
                           units "percent";
                           mandatory true;
@@ -416,7 +424,7 @@ module mef-global {
                     container one-way-high-loss-interval-pm {
                       description
                       "one-way-high-loss-interval-pm";
-                      leaf pm-objective {
+                      leaf objective {
                         type uint64;
                         mandatory true;
                         description
@@ -431,10 +439,8 @@ module mef-global {
                       "one-way-consecutive-high-loss-interval-pm";
                       leaf consecutive-number-p {
                         type uint64;
-                        must "not(../../../../" +
-                        		"consecutive-interval-n) " +
-                        		"or (. < ../../../../" +
-                        		"consecutive-interval-n)" {
+                        must ". < ../../../../" +
+                        		"consecutive-interval-n" {
                           error-message "The value of " +
                           		"chli-consecutive-small-" +
                           		"time-intervals " +
@@ -455,7 +461,7 @@ module mef-global {
                           "intervals for assessing CHLI.";
                         reference "[MEF10.3] Table 10.";
                       }
-                      leaf pm-objective {
+                      leaf objective {
                         type uint64;
                         mandatory true;
                         description
@@ -505,7 +511,7 @@ module mef-global {
                         description
                           "one-way-ifdv-threshold";
                       }
-                      leaf pm-objective {
+                      leaf objective {
                         type uint64;
                         mandatory true;
                         description
@@ -522,7 +528,7 @@ module mef-global {
                         description
                           "Minimum number of sets of ordered UNI pairs.";
                       }
-                      leaf pm-objective {
+                      leaf objective {
                         type uint64;
                         mandatory true;
                         description
@@ -556,29 +562,10 @@ module mef-global {
           }
         }
       }
-      container eec-names {
+
+      container bwp-flows-parameter-set {
         description
-          "Egress Equivalance Class (EEC) Names agreed to " +
-          "between the Service Provider and the Subscribers.";
-        list eec-name {
-          key "name";
-          description
-            "List of EEC Names.";
-          leaf name {
-            type mef-types:identifier45;
-            description
-              "EEC Name.";
-          }
-        }
-      }
-      container ingress-bwp-flows-parameter-set {
-        description
-          "Ingress Bandwidth Profile Flows.";
-        uses bwp-flows-parameter-set-group;
-      }
-      container egress-bwp-flows-parameter-set {
-        description
-          "Egress Bandwidth Profile Flows.";
+          "Bandwidth Profile Flows.";
         uses bwp-flows-parameter-set-group;
       }
       container l2cp-cos {
@@ -712,8 +699,8 @@ module mef-global {
                     }
                   leaf eec-name {
                       type leafref {
-                        path "/mef-global:mef-global/profiles/eec-names" +
-                        		"/eec-name/name";
+                        path "/mef-global:mef-global/profiles/cos-names" +
+                        		"/cos-name/name";
                       }
                       description
                         "This attribute identifies the name of a " +
@@ -725,8 +712,8 @@ module mef-global {
           	case simple-option {
                 leaf eec-name {
                     type leafref {
-                      path "/mef-global:mef-global/profiles/eec-names" +
-                      		"/eec-name/name";
+                      path "/mef-global:mef-global/profiles/cos-names" +
+                      		"/cos-name/name";
                     }
                     description
                       "This attribute identifies the name of a " +
@@ -882,7 +869,7 @@ module mef-global {
                 leaf default-pcp-eec-name {
                   type leafref {
                     path "/mef-global:mef-global/profiles/" +
-                    		"eec-names/eec-name/name";
+                    		"cos-names/cos-name/name";
                   }
                   description
                     "Default value for EEC Name for PCP when it " +
@@ -919,7 +906,7 @@ module mef-global {
                   leaf eec-name {
                     type leafref {
                       path "/mef-global:mef-global/profiles/" +
-                      		"eec-names/eec-name/name";
+                      		"cos-names/cos-name/name";
                     }
                     description
                       "This attribute identifies the name " +
@@ -944,7 +931,7 @@ module mef-global {
                 leaf default-ipv4-eec-name {
                   type leafref {
                     path "/mef-global:mef-global/profiles/" +
-                    		"eec-names/eec-name/name";
+                    		"cos-names/cos-name/name";
                   }
                   description
                     "Default value for EEC Name for DSCP " +
@@ -964,7 +951,7 @@ module mef-global {
                 leaf default-ipv6-eec-name {
                   type leafref {
                     path "/mef-global:mef-global/profiles/" +
-                    		"eec-names/eec-name/name";
+                    		"cos-names/cos-name/name";
                   }
                   description
                     "Default value for EEC Name for DSCP IPv6 " +
@@ -1000,7 +987,7 @@ module mef-global {
                   leaf eec-name {
                     type leafref {
                       path "/mef-global:mef-global/profiles/" +
-                      		"eec-names/eec-name/name";
+                      		"cos-names/cos-name/name";
                     }
                     description
                       "This attribute identifies the name " +
@@ -1034,7 +1021,7 @@ module mef-global {
                   leaf eec-name {
                     type leafref {
                       path "/mef-global:mef-global/profiles/" +
-                      		"eec-names/eec-name/name";
+                      		"cos-names/cos-name/name";
                     }
                     description
                       "This attribute identifies the name " +

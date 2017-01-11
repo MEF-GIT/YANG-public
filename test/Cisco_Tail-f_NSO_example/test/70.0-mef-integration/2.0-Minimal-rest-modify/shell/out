@@ -1624,20 +1624,20 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     {
                       "pm-entry-id": "SLS_Argon_Test1",
                       "one-way-frame-delay-pm": {
-                        "pm-percentile": "99.0",
-                        "pm-objective": 300
+                        "percentile": "99.0",
+                        "objective": 300
                       }
                     },
                     {
                       "pm-entry-id": "SLS_Argon_Test2",
                       "one-way-frame-loss-ratio-pm": {
-                        "pm-percentile": "39.0"
+                        "percentile": "39.0"
                       }
                     },
                     {
                       "pm-entry-id": "SLS_Argon_Test3",
                       "one-way-availability-pm": {
-                        "pm-percentile": "9.4"
+                        "percentile": "9.4"
                       }
                     }
                   ]
@@ -1653,28 +1653,28 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     {
                       "pm-entry-id": "SLS_Krypton_Test1",
                       "one-way-frame-delay-pm": {
-                        "pm-percentile": "99.9",
-                        "pm-objective": 200
+                        "percentile": "99.9",
+                        "objective": 200
                       }
                     },
                     {
                       "pm-entry-id": "SLS_Krypton_Test2",
                       "one-way-frame-loss-ratio-pm": {
-                        "pm-percentile": "29.0"
+                        "percentile": "29.0"
                       }
                     },
                     {
                       "pm-entry-id": "SLS_Krypton_Test3",
                       "one-way-inter-frame-delay-variation-pm": {
-                        "pm-percentile": "99.9",
+                        "percentile": "99.9",
                         "frame-pair-separation": 1,
-                        "pm-objective": 250
+                        "objective": 250
                       }
                     },
                     {
                       "pm-entry-id": "SLS_Krypton_Test4",
                       "one-way-availability-pm": {
-                        "pm-percentile": "9.6"
+                        "percentile": "9.6"
                       }
                     }
                   ]
@@ -1691,52 +1691,52 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                       "pm-entry-id": "SLS_Neon_GA_Test",
                       "one-way-group-availability-pm": {
                         "min-number-of-uni-pair-sets": 1,
-                        "pm-objective": 300
+                        "objective": 300
                       }
                     },
                     {
                       "pm-entry-id": "SLS_Neon_Test1",
                       "one-way-frame-delay-pm": {
-                        "pm-percentile": "95.0",
-                        "pm-objective": 400
+                        "percentile": "95.0",
+                        "objective": 400
                       }
                     },
                     {
                       "pm-entry-id": "SLS_Neon_Test2",
                       "one-way-frame-loss-ratio-pm": {
-                        "pm-percentile": "49.0"
+                        "percentile": "49.0"
                       }
                     },
                     {
                       "pm-entry-id": "SLS_Neon_Test3",
                       "one-way-availability-pm": {
-                        "pm-percentile": "92.0"
+                        "percentile": "92.0"
                       }
                     },
                     {
                       "pm-entry-id": "SLS_Neon_Test5",
                       "one-way-frame-delay-range-pm": {
-                        "pm-percentile": "98.0",
-                        "pm-objective": 150
+                        "percentile": "98.0",
+                        "objective": 150
                       }
                     },
                     {
                       "pm-entry-id": "SLS_Neon_Test6",
                       "one-way-mean-frame-delay-pm": {
-                        "pm-objective": 300
+                        "objective": 300
                       }
                     },
                     {
                       "pm-entry-id": "SLS_Neon_Test7",
                       "one-way-high-loss-interval-pm": {
-                        "pm-objective": 220
+                        "objective": 220
                       }
                     },
                     {
                       "pm-entry-id": "SLS_Neon_Test8",
                       "one-way-consecutive-high-loss-interval-pm": {
                         "consecutive-number-p": 9,
-                        "pm-objective": 257
+                        "objective": 257
                       }
                     },
                     {
@@ -1748,7 +1748,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                         "ifdv-indicator": true,
                         "one-way-fd-threshold": 42,
                         "one-way-ifdv-threshold": 55,
-                        "pm-objective": 300
+                        "objective": 300
                       }
                     }
                   ]
@@ -1773,60 +1773,60 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                       "pm-entry-id": "SLS_H_GA_Test",
                       "one-way-group-availability-pm": {
                         "min-number-of-uni-pair-sets": 1,
-                        "pm-objective": 300
+                        "objective": 300
                       }
                     },
                     {
                       "pm-entry-id": "SLS_H_Test1",
                       "one-way-frame-delay-pm": {
-                        "pm-percentile": "99.9",
-                        "pm-objective": 200
+                        "percentile": "99.9",
+                        "objective": 200
                       }
                     },
                     {
                       "pm-entry-id": "SLS_H_Test2",
                       "one-way-frame-loss-ratio-pm": {
-                        "pm-percentile": "29.0"
+                        "percentile": "29.0"
                       }
                     },
                     {
                       "pm-entry-id": "SLS_H_Test3",
                       "one-way-inter-frame-delay-variation-pm": {
-                        "pm-percentile": "99.9",
+                        "percentile": "99.9",
                         "frame-pair-separation": 1,
-                        "pm-objective": 250
+                        "objective": 250
                       }
                     },
                     {
                       "pm-entry-id": "SLS_H_Test4",
                       "one-way-availability-pm": {
-                        "pm-percentile": "96.0"
+                        "percentile": "96.0"
                       }
                     },
                     {
                       "pm-entry-id": "SLS_H_Test5",
                       "one-way-frame-delay-range-pm": {
-                        "pm-percentile": "98.0",
-                        "pm-objective": 150
+                        "percentile": "98.0",
+                        "objective": 150
                       }
                     },
                     {
                       "pm-entry-id": "SLS_H_Test6",
                       "one-way-mean-frame-delay-pm": {
-                        "pm-objective": 300
+                        "objective": 300
                       }
                     },
                     {
                       "pm-entry-id": "SLS_H_Test7",
                       "one-way-high-loss-interval-pm": {
-                        "pm-objective": 220
+                        "objective": 220
                       }
                     },
                     {
                       "pm-entry-id": "SLS_H_Test8",
                       "one-way-consecutive-high-loss-interval-pm": {
                         "consecutive-number-p": 9,
-                        "pm-objective": 257
+                        "objective": 257
                       }
                     },
                     {
@@ -1838,7 +1838,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                         "ifdv-indicator": true,
                         "one-way-fd-threshold": 42,
                         "one-way-ifdv-threshold": 55,
-                        "pm-objective": 300
+                        "objective": 300
                       }
                     }
                   ]
@@ -1854,20 +1854,20 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     {
                       "pm-entry-id": "SLS_L_Test1",
                       "one-way-frame-delay-pm": {
-                        "pm-percentile": "95.0",
-                        "pm-objective": 400
+                        "percentile": "95.0",
+                        "objective": 400
                       }
                     },
                     {
                       "pm-entry-id": "SLS_L_Test2",
                       "one-way-frame-loss-ratio-pm": {
-                        "pm-percentile": "49.0"
+                        "percentile": "49.0"
                       }
                     },
                     {
                       "pm-entry-id": "SLS_L_Test3",
                       "one-way-availability-pm": {
-                        "pm-percentile": "92.0"
+                        "percentile": "92.0"
                       }
                     }
                   ]
@@ -1883,20 +1883,20 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     {
                       "pm-entry-id": "SLS_M_Test1",
                       "one-way-frame-delay-pm": {
-                        "pm-percentile": "99.0",
-                        "pm-objective": 300
+                        "percentile": "99.0",
+                        "objective": 300
                       }
                     },
                     {
                       "pm-entry-id": "SLS_M_Test2",
                       "one-way-frame-loss-ratio-pm": {
-                        "pm-percentile": "39.0"
+                        "percentile": "39.0"
                       }
                     },
                     {
                       "pm-entry-id": "SLS_M_Test3",
                       "one-way-availability-pm": {
-                        "pm-percentile": "94.0"
+                        "percentile": "94.0"
                       }
                     }
                   ]
@@ -1930,6 +1930,15 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           },
           {
             "name": "Discard"
+          },
+          {
+            "name": "EEC-Argon"
+          },
+          {
+            "name": "EEC-Krypton"
+          },
+          {
+            "name": "EEC-Neon"
           },
           {
             "name": "Freshman"
@@ -2006,97 +2015,68 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           }
         ]
       },
-      "eec-names": {
-        "eec-name": [
-          {
-            "name": "Bronze"
-          },
-          {
-            "name": "BronzeEnhanced"
-          },
-          {
-            "name": "BronzePlus"
-          },
-          {
-            "name": "Control"
-          },
-          {
-            "name": "Discard"
-          },
-          {
-            "name": "EEC-Argon"
-          },
-          {
-            "name": "EEC-Krypton"
-          },
-          {
-            "name": "EEC-Neon"
-          },
-          {
-            "name": "Freshman"
-          },
-          {
-            "name": "Gold"
-          },
-          {
-            "name": "H"
-          },
-          {
-            "name": "Junior"
-          },
-          {
-            "name": "L"
-          },
-          {
-            "name": "M"
-          },
-          {
-            "name": "Platinum"
-          },
-          {
-            "@@eec-name": {"annotation": "Global EEC Names"},
-            "name": "Senior"
-          },
-          {
-            "name": "Silver"
-          },
-          {
-            "name": "SilverPlus"
-          },
-          {
-            "name": "Sophomore"
-          },
-          {
-            "name": "control"
-          },
-          {
-            "name": "gold"
-          },
-          {
-            "name": "mpls-bronze"
-          },
-          {
-            "name": "pccwg_bronze"
-          },
-          {
-            "name": "pccwg_gold"
-          },
-          {
-            "name": "pccwg_silver"
-          },
-          {
-            "name": "pccwg_silverplus"
-          },
-          {
-            "name": "silver"
-          },
-          {
-            "name": "silver+"
-          }
-        ]
-      },
-      "ingress-bwp-flows-parameter-set": {
+      "bwp-flows-parameter-set": {
         "bwp-flow-parameter-set": [
+          {
+            "bwp-flow-parameter-set-id": "EGRESS_BWP_100mbps",
+            "cir": 100000,
+            "cir-max": 20000,
+            "cbs": 12800,
+            "eir": 50000,
+            "eir-max": 0,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bwp-flow-parameter-set-id": "EGRESS_BWP_200kbps",
+            "cir": 200,
+            "cir-max": 4000,
+            "cbs": 32000,
+            "eir": 0,
+            "eir-max": 30000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bwp-flow-parameter-set-id": "EGRESS_BWP_2mbps",
+            "cir": 2000,
+            "cir-max": 4000,
+            "cbs": 32000,
+            "eir": 0,
+            "eir-max": 30000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bwp-flow-parameter-set-id": "EGRESS_BWP_70mbps",
+            "cir": 70000,
+            "cir-max": 20000,
+            "cbs": 12800,
+            "eir": 50000,
+            "eir-max": 0,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bwp-flow-parameter-set-id": "EGRESS_BWP_800kbps",
+            "cir": 800,
+            "cir-max": 4000,
+            "cbs": 32000,
+            "eir": 0,
+            "eir-max": 30000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
           {
             "bwp-flow-parameter-set-id": "INGRESS_BWP_100mbps",
             "cir": 100000,
@@ -2198,237 +2178,6 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             "coupling-flag": false
           },
           {
-            "bwp-flow-parameter-set-id": "high1-bwp-uni",
-            "cir": 20000,
-            "cir-max": 20000,
-            "cbs": 64000,
-            "eir": 0,
-            "eir-max": 50000,
-            "ebs": 10000,
-            "coupling-enabled": false,
-            "color-mode": "color-blind",
-            "coupling-flag": false
-          },
-          {
-            "bwp-flow-parameter-set-id": "high2-bwp-uni",
-            "cir": 10000000,
-            "cbs": 12000,
-            "eir": 0,
-            "ebs": 0,
-            "coupling-enabled": false,
-            "color-mode": "color-blind",
-            "coupling-flag": false
-          },
-          {
-            "bwp-flow-parameter-set-id": "high3-bwp-uni",
-            "cir": 20000,
-            "cir-max": 20000,
-            "cbs": 64000,
-            "eir": 0,
-            "eir-max": 50000,
-            "ebs": 0,
-            "coupling-enabled": false,
-            "color-mode": "color-blind",
-            "coupling-flag": false
-          },
-          {
-            "bwp-flow-parameter-set-id": "itest-bwp1",
-            "cir": 5000,
-            "cir-max": 20000,
-            "cbs": 12800,
-            "eir": 50000,
-            "eir-max": 0,
-            "ebs": 10000,
-            "coupling-enabled": false,
-            "color-mode": "color-blind",
-            "coupling-flag": false
-          },
-          {
-            "bwp-flow-parameter-set-id": "itest-bwp2",
-            "cir": 14000,
-            "cir-max": 20000,
-            "cbs": 32000,
-            "eir": 0,
-            "eir-max": 30000,
-            "ebs": 10000,
-            "coupling-enabled": false,
-            "color-mode": "color-blind",
-            "coupling-flag": false
-          },
-          {
-            "bwp-flow-parameter-set-id": "low1-bwp-uni",
-            "cir": 5000,
-            "@cir": {"annotation": "Global Ingress Bandwidth Profiles are Ordered-By User"},
-            "cir-max": 20000,
-            "cbs": 12800,
-            "eir": 50000,
-            "eir-max": 0,
-            "ebs": 10000,
-            "coupling-enabled": false,
-            "color-mode": "color-blind",
-            "coupling-flag": false
-          },
-          {
-            "bwp-flow-parameter-set-id": "low2-bwp-uni",
-            "cir": 400000,
-            "cbs": 9000,
-            "eir": 10000,
-            "ebs": 10000,
-            "coupling-enabled": false,
-            "color-mode": "color-blind",
-            "coupling-flag": false
-          },
-          {
-            "bwp-flow-parameter-set-id": "low3-bwp-uni",
-            "cir": 5000,
-            "cir-max": 20000,
-            "cbs": 12800,
-            "eir": 50000,
-            "eir-max": 0,
-            "ebs": 10000,
-            "coupling-enabled": false,
-            "color-mode": "color-blind",
-            "coupling-flag": false
-          },
-          {
-            "bwp-flow-parameter-set-id": "medium1-bwp-uni",
-            "cir": 14000,
-            "cir-max": 20000,
-            "cbs": 32000,
-            "eir": 0,
-            "eir-max": 30000,
-            "ebs": 10000,
-            "coupling-enabled": false,
-            "color-mode": "color-blind",
-            "coupling-flag": false
-          },
-          {
-            "bwp-flow-parameter-set-id": "medium2-bwp-uni",
-            "cir": 2000000,
-            "cbs": 10000,
-            "eir": 10000,
-            "ebs": 10000,
-            "coupling-enabled": false,
-            "color-mode": "color-blind",
-            "coupling-flag": false
-          },
-          {
-            "bwp-flow-parameter-set-id": "medium3-bwp-uni",
-            "cir": 14000,
-            "cir-max": 20000,
-            "cbs": 32000,
-            "eir": 0,
-            "eir-max": 30000,
-            "ebs": 0,
-            "coupling-enabled": false,
-            "color-mode": "color-blind",
-            "coupling-flag": false
-          }
-        ]
-      },
-      "egress-bwp-flows-parameter-set": {
-        "bwp-flow-parameter-set": [
-          {
-            "bwp-flow-parameter-set-id": "EGRESS_BWP_100mbps",
-            "cir": 100000,
-            "cir-max": 20000,
-            "cbs": 12800,
-            "eir": 50000,
-            "eir-max": 0,
-            "ebs": 10000,
-            "coupling-enabled": false,
-            "color-mode": "color-blind",
-            "coupling-flag": false
-          },
-          {
-            "bwp-flow-parameter-set-id": "EGRESS_BWP_200kbps",
-            "cir": 200,
-            "cir-max": 4000,
-            "cbs": 32000,
-            "eir": 0,
-            "eir-max": 30000,
-            "ebs": 10000,
-            "coupling-enabled": false,
-            "color-mode": "color-blind",
-            "coupling-flag": false
-          },
-          {
-            "bwp-flow-parameter-set-id": "EGRESS_BWP_2mbps",
-            "cir": 2000,
-            "cir-max": 4000,
-            "cbs": 32000,
-            "eir": 0,
-            "eir-max": 30000,
-            "ebs": 10000,
-            "coupling-enabled": false,
-            "color-mode": "color-blind",
-            "coupling-flag": false
-          },
-          {
-            "bwp-flow-parameter-set-id": "EGRESS_BWP_70mbps",
-            "cir": 70000,
-            "cir-max": 20000,
-            "cbs": 12800,
-            "eir": 50000,
-            "eir-max": 0,
-            "ebs": 10000,
-            "coupling-enabled": false,
-            "color-mode": "color-blind",
-            "coupling-flag": false
-          },
-          {
-            "bwp-flow-parameter-set-id": "EGRESS_BWP_800kbps",
-            "cir": 800,
-            "cir-max": 4000,
-            "cbs": 32000,
-            "eir": 0,
-            "eir-max": 30000,
-            "ebs": 10000,
-            "coupling-enabled": false,
-            "color-mode": "color-blind",
-            "coupling-flag": false
-          },
-          {
-            "bwp-flow-parameter-set-id": "chicago-bwp-evc",
-            "cir": 400000,
-            "cbs": 9000,
-            "eir": 10000,
-            "ebs": 10000,
-            "coupling-enabled": false,
-            "color-mode": "color-blind",
-            "coupling-flag": false
-          },
-          {
-            "bwp-flow-parameter-set-id": "chicago-bwp-uni",
-            "cir": 10000000,
-            "cbs": 12000,
-            "eir": 10000,
-            "ebs": 10000,
-            "coupling-enabled": false,
-            "color-mode": "color-blind",
-            "coupling-flag": false
-          },
-          {
-            "bwp-flow-parameter-set-id": "denver-bwp-evc",
-            "cir": 400000,
-            "cbs": 9000,
-            "eir": 10000,
-            "ebs": 10000,
-            "coupling-enabled": false,
-            "color-mode": "color-blind",
-            "coupling-flag": false
-          },
-          {
-            "bwp-flow-parameter-set-id": "denver-bwp-uni",
-            "cir": 2000000,
-            "cbs": 10000,
-            "eir": 10000,
-            "ebs": 10000,
-            "coupling-enabled": false,
-            "color-mode": "color-blind",
-            "coupling-flag": false
-          },
-          {
             "bwp-flow-parameter-set-id": "etest-bwp1",
             "cir": 5000,
             "cir-max": 20000,
@@ -2482,6 +2231,30 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             "eir": 0,
             "eir-max": 0,
             "ebs": 0,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bwp-flow-parameter-set-id": "itest-bwp1",
+            "cir": 5000,
+            "cir-max": 20000,
+            "cbs": 12800,
+            "eir": 50000,
+            "eir-max": 0,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bwp-flow-parameter-set-id": "itest-bwp2",
+            "cir": 14000,
+            "cir-max": 20000,
+            "cbs": 32000,
+            "eir": 0,
+            "eir-max": 30000,
+            "ebs": 10000,
             "coupling-enabled": false,
             "color-mode": "color-blind",
             "coupling-flag": false
@@ -5746,7 +5519,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             },
             "carrier-ethernet-sls": {
               "sls-id": "MEF103_Table25",
-              "start-time": "201606181200Z",
+              "start-time": "2016-06-18T12:00:00+00:00",
               "cos-entries": {
                 "cos-entry": [
                   {
@@ -5830,7 +5603,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             },
             "carrier-ethernet-sls": {
               "sls-id": "MEF103_Table25",
-              "start-time": "201606181200Z",
+              "start-time": "2016-06-18T12:00:00+00:00",
               "cos-entries": {
                 "cos-entry": [
                   {
@@ -5959,7 +5732,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             },
             "carrier-ethernet-sls": {
               "sls-id": "MEF103_Table25",
-              "start-time": "201606181200Z",
+              "start-time": "2016-06-18T12:00:00+00:00",
               "cos-entries": {
                 "cos-entry": [
                   {
@@ -6035,7 +5808,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             },
             "carrier-ethernet-sls": {
               "sls-id": "MEF103_Table25",
-              "start-time": "201606181200Z"
+              "start-time": "2016-06-18T12:00:00+00:00"
             },
             "connection-type": "point-to-point",
             "admin-state": false,
@@ -6099,7 +5872,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             },
             "carrier-ethernet-sls": {
               "sls-id": "MEF103_Table25",
-              "start-time": "201606181200Z",
+              "start-time": "2016-06-18T12:00:00+00:00",
               "cos-entries": {
                 "cos-entry": [
                   {
@@ -6277,7 +6050,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             },
             "carrier-ethernet-sls": {
               "sls-id": "MEF103_Table25",
-              "start-time": "201606181200Z",
+              "start-time": "2016-06-18T12:00:00+00:00",
               "cos-entries": {
                 "cos-entry": [
                   {
@@ -6619,7 +6392,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             },
             "carrier-ethernet-sls": {
               "sls-id": "MEF103_Table25",
-              "start-time": "201606181200Z",
+              "start-time": "2016-06-18T12:00:00+00:00",
               "cos-entries": {
                 "cos-entry": [
                   {
@@ -6768,7 +6541,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             },
             "carrier-ethernet-sls": {
               "sls-id": "MEF103_Table25",
-              "start-time": "201606181200Z",
+              "start-time": "2016-06-18T12:00:00+00:00",
               "cos-entries": {
                 "cos-entry": [
                   {
@@ -6872,7 +6645,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             },
             "carrier-ethernet-sls": {
               "sls-id": "MEF103_Table25",
-              "start-time": "201606181200Z",
+              "start-time": "2016-06-18T12:00:00+00:00",
               "cos-entries": {
                 "cos-entry": [
                   {

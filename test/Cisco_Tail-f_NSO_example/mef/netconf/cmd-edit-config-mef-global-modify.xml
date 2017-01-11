@@ -15,12 +15,12 @@
     <mef-global xmlns="urn:mef:yang:mef-global"
       xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
       <profiles>
-      <ingress-bwp-flows-parameter-set>
+      <bwp-flows-parameter-set>
         <bwp-flow-parameter-set>
           <bwp-flow-parameter-set-id>chicago-bwp-evc</bwp-flow-parameter-set-id>
           <cir>300000</cir>
         </bwp-flow-parameter-set>
-        </ingress-bwp-flows-parameter-set>
+        </bwp-flows-parameter-set>
         <l2cp-cos>
           <profile>
             <id>MEF103_Table3PlusCoS</id>

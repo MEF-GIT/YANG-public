@@ -408,6 +408,7 @@ fi
 { ncs_cli -u admin -C << EOF;
 config
 mef-services carrier-ethernet subscriber-services evc EVC-1101898-ACME-MEGAMART svc-type epl connection-type point-to-point max-num-of-evc-end-point 2 ce-vlan-id-preservation true ce-vlan-pcp-preservation true
+mef-services carrier-ethernet subscriber-services evc EVC-1101898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 start-time 2016-06-18T12:00:00Z
 mef-services carrier-ethernet subscriber-services evc EVC-1101898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 role root cos-identifier MEF103_Table23 color-identifier dscp eec-identifier MEF103_Table23 source-mac-address-limit-enabled false ce-vlans ce-vlan 100
 mef-services carrier-ethernet subscriber-services evc EVC-1101898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 role root cos-identifier MEF103_Table23 color-identifier dscp eec-identifier MEF103_Table23 source-mac-address-limit-enabled false ce-vlans ce-vlan 100
 commit
@@ -532,7 +533,7 @@ fi
 config
 mef-interfaces unis uni MMPOP1-ce2-Slot2-Port1 token-share-enabled true
 mef-interfaces unis uni MMPOP1-ce2-Slot2-Port1 egress-envelopes envelope eMM_EPL_Medium coupling-enabled true bwp-flows bwp-flow high2-bwp-uni
-mef-global profiles egress-bwp-flows-parameter-set bwp-flow-parameter-set high2-bwp-uni coupling-enabled true
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set high2-bwp-uni coupling-enabled true
 commit
 end no-confirm
 exit
@@ -549,7 +550,7 @@ fi
 config
 mef-interfaces unis uni MMPOP1-ce2-Slot2-Port1 token-share-enabled true
 mef-interfaces unis uni MMPOP1-ce2-Slot2-Port1 ingress-envelopes envelope MM_EPL_Medium coupling-enabled true bwp-flows bwp-flow high1-bwp-uni
-mef-global profiles ingress-bwp-flows-parameter-set bwp-flow-parameter-set high1-bwp-uni coupling-enabled true
+mef-global profiles bwp-flows-parameter-set bwp-flow-parameter-set high1-bwp-uni coupling-enabled true
 commit
 end no-confirm
 exit
