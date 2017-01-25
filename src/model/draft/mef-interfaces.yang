@@ -698,9 +698,9 @@ module mef-interfaces {
           type boolean;
           must "(. = 'false') or " +
           		"(. = 'true' and " +
-          		"(../elmi-profile))" {
-            error-message "ELMI Profile must be set if " +
-            		"ELMI is Enabled.";
+          		"(../elmi-service-attribute = 'true'))" {
+            error-message "ELMI Service Attribute must " +
+            		"be Enabled.";
             description
               "MEF 10.3 [R88] Ethernet Local Management Interface(ELMI) " +
               "Profile ID must be set if ELMI is Enabled.";
@@ -713,21 +713,14 @@ module mef-interfaces {
           		"[MEF16]. [MEF6.2] Section 8.2.2, [D5]. " +
           		"[MEF7.3] Section 10.2.2.";
         }
-        leaf elmi-profile {
+        leaf elmi-service-attribute {
           type leafref {
             path "/mef-global:mef-global/mef-global:profiles/" +
-            		"mef-global:elmi/mef-global:elmi-profile/" +
-            		"mef-global:id";
+            		"mef-global:elmi/mef-global:service-attribute";
           }
           description
             "The ELMI Profile is only applicable when ELMI " +
-            "is enabled. The E-LMI protocol is based on " +
-            "ITU-T Q.933, X.36 and other relevant " +
-            "recommendations as well as Frame Relay " +
-            "Local Management Interface (FR-LMI) " +
-            "Implementation Agreement document defined " +
-            "by the Frame Relay Forum and related " +
-            "ITU-T recommendations.";
+            "is enabled.";
           reference "[MEF10.3] Section 9.18. " +
           		"[MEF7.3] Section 10.2.2.";
         }
