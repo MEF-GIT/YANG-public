@@ -130,10 +130,7 @@ module mef-cfm {
           description "The interface status cannot be determined for some reason.";
       }
       enum dormant {
-          description "The interface is not in a state to pass
-packets but is in 
-                       a pending state, waiting
-for some external event.";
+          description "The interface is not in a state to pass					   packets but is in a pending state, waiting					   for some external event.";
       }
       enum not-present {
           description "Some component of the interface is missing.";
@@ -1160,17 +1157,13 @@ for some external event.";
             description "No format specified.";
         }
         enum domain-name {
-            description "Domain Name like string, globally unique
-text string 
-                         derived from a DNS name.";
+            description "Domain Name like string, globally unique						 text string derived from a DNS name.";
         }
         enum mac-address-and-uint {
             description "MAC address + 2-octet (unsigned) integer.";
         }
         enum character-string {
-            description "RFC2579 DisplayString, except that the
-character 
-                         codes 0-31 (decimal) are not used.";
+            description "RFC2579 DisplayString, except that the						 character codes 0-31 (decimal) are not used.";
         }
       }
 
@@ -1267,9 +1260,7 @@ character
               description "Specifies the Primary VLAN ID.";
           } 
           enum character-string {
-              description "RFC2579 DisplayString, except that the
-character 
-                         codes 0-31 (decimal) are not used.";
+              description "RFC2579 DisplayString, except that the						   character codes 0-31 (decimal) are not used.";
           }
           enum uint16 {
               description "2-octet integer/big endian.";
@@ -1418,7 +1409,8 @@ character
         key "mep-identifier";
 
         description
-          "The list of Maintenance association End Points in a specific Maintance As-sociation.";
+          "The list of Maintenance association End Points in a specific Maintance
+           Association.";
 
         leaf mep-identifier {
           type mep-id-type;
@@ -1527,8 +1519,7 @@ character
               enum reset {
                   description "No defect has been present since the
                                fng-reset-time timer expired, or since 
-                               the state machine
-was last reset.";
+                               the state machine was last reset.";
               }
               enum defect {
                   description "A defect is present, but not for a long enough 
@@ -1536,19 +1527,15 @@ was last reset.";
               }
               enum report-defect {
                   description "A momentary state during which the defect is 
-                               reported by sending a
-fault-alarm notification,
+                               reported by sending a fault-alarm notification,
                                if that action is enabled.";
               } 
               enum defect-reported {
-                  description "A defect is present, and some defect
-has been 
-                               reported.";
+                  description "A defect is present, and some defect							   has been reported.";
               }
               enum defect-clearing {
                   description "No defect is present, but the fng-reset-time timer
-                               has
-not yet expired.";
+                               has not yet expired.";
               }
             }
             default reset;
@@ -2083,6 +2070,22 @@ not yet expired.";
       "[802.1q] 12.14.7.3";
   
     input {
+      leaf maintenance-domain-id {
+        type string;
+
+        description
+          "The ID of a Maintenance Domain of the MEP on which a loopback session will
+           be started";
+      }
+
+      leaf maintenance-association-id {
+        type string;
+
+        description
+          "The ID of a Maintenance Association of the MEP on which a loopback session 
+           will be started";
+      }
+
       leaf mep-id {
         type mep-id-type;
 
@@ -2100,6 +2103,22 @@ not yet expired.";
       "[MEF30] 8.2, R28";
 
     input { 
+      leaf maintenance-domain-id {
+        type string;
+
+        description
+          "The ID of a Maintenance Domain of the MEP on which a loopback session 
+           should be administratively aborted";
+      }
+
+      leaf maintenance-association-id {
+        type string;
+
+        description
+          "The ID of a Maintenance Association of the MEP on which a loopback session
+           should be administratively aborted";
+      }
+
       leaf mep-id {
         type mep-id-type;
 
@@ -2122,6 +2141,22 @@ not yet expired.";
       "[802.1q] 12.14.7.4";
 
     input {
+      leaf maintenance-domain-id {
+        type string;
+
+        description
+          "The ID of a Maintenance Domain of the MEP on which a linktrace session will
+           be started";
+      }
+
+      leaf maintenance-association-id {
+        type string;
+
+        description
+          "The ID of a Maintenance Association of the MEP on which a linktrace session
+           will be started";
+      }
+
       leaf mep-id {
         type mep-id-type;
 
@@ -2155,6 +2190,22 @@ not yet expired.";
     container alarm {
       description
         "Data definitions related to a persistent defect on a specific MEP.";
+
+      leaf maintenance-domain-id {
+        type string;
+
+        description
+          "The ID of a Maintenance Domain of the MEP on which a persistent defect
+           has been detected";
+      }
+
+      leaf maintenance-association-id {
+        type string;
+
+        description
+          "The ID of a Maintenance Association of the MEP on which a persistent
+           defect has been detected";
+      }
 
       leaf mep-id {
         type mep-id-type;
