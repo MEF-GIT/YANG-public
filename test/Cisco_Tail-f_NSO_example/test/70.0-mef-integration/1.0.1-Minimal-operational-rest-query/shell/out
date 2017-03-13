@@ -2439,34 +2439,6 @@
           }
         ]
       },
-      "elmi": {
-        "elmi-profile": [
-          {
-            "id": "elmi-test1",
-            "status-error-threshold": 7,
-            "polling-timer": 22,
-            "polling-verification-timer": 23
-          },
-          {
-            "id": "elmi-test2",
-            "status-error-threshold": 6,
-            "polling-timer": 20,
-            "polling-verification-timer": 21
-          },
-          {
-            "id": "pccwg-elmi-test1",
-            "status-error-threshold": 7,
-            "polling-timer": 22,
-            "polling-verification-timer": 23
-          },
-          {
-            "id": "pccwg-elmi-test2",
-            "status-error-threshold": 6,
-            "polling-timer": 20,
-            "polling-verification-timer": 21
-          }
-        ]
-      },
       "eec": {
         "eec-profile": [
           {
@@ -3627,7 +3599,7 @@
           "max-svc-frame-size": 1600,
           "max-num-of-evcs": 1,
           "elmi-enabled": true,
-          "elmi-profile": "elmi-test1"
+          "elmi-service-attribute": true
         },
         {
           "uni-id": "CYPOP1-ce4-Slot4-Port3",
@@ -3796,7 +3768,7 @@
           "ingress-bw-profile-per-uni": "high1-bwp-uni",
           "egress-bw-profile-per-uni": "high1-bwp-uni",
           "elmi-enabled": true,
-          "elmi-profile": "elmi-test1",
+          "elmi-service-attribute": true,
           "l2cp-address-set": "option2-blind-ctb2",
           "l2cp-peering": "L2CP_Peering_Profile1"
         },
@@ -3842,7 +3814,7 @@
           "ingress-bw-profile-per-uni": "high1-bwp-uni",
           "egress-bw-profile-per-uni": "high1-bwp-uni",
           "elmi-enabled": true,
-          "elmi-profile": "elmi-test1",
+          "elmi-service-attribute": true,
           "l2cp-address-set": "option2-blind-ctb2",
           "l2cp-peering": "L2CP_Peering_Profile1"
         },
@@ -3957,7 +3929,7 @@
           "default-ce-vlan-id": 22,
           "max-num-of-evcs": 2,
           "elmi-enabled": true,
-          "elmi-profile": "elmi-test2",
+          "elmi-service-attribute": true,
           "l2cp-address-set": "cta",
           "l2cp-peering": "L2CP_Peering_Profile1"
         },
@@ -4511,7 +4483,7 @@
           "ingress-bw-profile-per-uni": "medium1-bwp-uni",
           "egress-bw-profile-per-uni": "medium2-bwp-uni",
           "elmi-enabled": true,
-          "elmi-profile": "elmi-test1",
+          "elmi-service-attribute": true,
           "l2cp-address-set": "blind-ctb",
           "l2cp-peering": "L2CP_Peering_Profile1"
         },
@@ -4575,7 +4547,7 @@
           "all-to-one-bundling-enabled": true,
           "max-num-of-evcs": 1,
           "elmi-enabled": true,
-          "elmi-profile": "elmi-test1"
+          "elmi-service-attribute": true
         },
         {
           "uni-id": "MMPOP1-ce5-Slot5-Port3",
@@ -4695,7 +4667,7 @@
           "default-ce-vlan-id": 53,
           "max-num-of-evcs": 1,
           "elmi-enabled": true,
-          "elmi-profile": "elmi-test2",
+          "elmi-service-attribute": true,
           "l2cp-address-set": "cta",
           "l2cp-peering": "L2CP_Peering_Profile1"
         },
@@ -4730,7 +4702,7 @@
           "default-ce-vlan-id": 153,
           "max-num-of-evcs": 1,
           "elmi-enabled": false,
-          "elmi-profile": "elmi-test1",
+          "elmi-service-attribute": false,
           "l2cp-address-set": "cta",
           "l2cp-peering": "L2CP_Peering_Profile1"
         },

@@ -422,15 +422,15 @@ else
    echo 'Test MEF 10.3 [R82]: PASS';
 fi
 
-# Test for MEF 10.3 [R88].  This test should fail to commit with "ELMI Profile must be set if ELMI is Enabled.".
+# Test for MEF 10.3 [R88].  This test should fail to commit with "ELMI Service Attribute must be Enabled.".
 { ncs_cli -u admin -C << EOF;
 config
-no mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 elmi-profile
+mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 elmi-service-attribute false
 commit
 end no-confirm
 exit
 EOF
-} | grep 'Aborted:.*Profile must be set if ELMI is Enabled.'
+} | grep 'Aborted:.*ELMI Service Attribute must be Enabled.'
 if [ $? != 0 ]; then
    echo 'Test MEF 10.3 [R88]: FAIL - commit did not fail or did not fail as expected'; exit 1;
 else
