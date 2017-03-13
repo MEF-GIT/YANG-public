@@ -1038,32 +1038,6 @@
             </peering-maps>
           </profile>
         </l2cp-peering>
-        <elmi>
-          <elmi-profile>
-            <id>elmi-test1</id>
-            <status-error-threshold>7</status-error-threshold>
-            <polling-timer>22</polling-timer>
-            <polling-verification-timer>23</polling-verification-timer>
-          </elmi-profile>
-          <elmi-profile>
-            <id>elmi-test2</id>
-            <status-error-threshold>6</status-error-threshold>
-            <polling-timer>20</polling-timer>
-            <polling-verification-timer>21</polling-verification-timer>
-          </elmi-profile>
-          <elmi-profile>
-            <id>pccwg-elmi-test1</id>
-            <status-error-threshold>7</status-error-threshold>
-            <polling-timer>22</polling-timer>
-            <polling-verification-timer>23</polling-verification-timer>
-          </elmi-profile>
-          <elmi-profile>
-            <id>pccwg-elmi-test2</id>
-            <status-error-threshold>6</status-error-threshold>
-            <polling-timer>20</polling-timer>
-            <polling-verification-timer>21</polling-verification-timer>
-          </elmi-profile>
-        </elmi>
         <eec>
           <eec-profile>
             <id>EEC_DSCP_1</id>
@@ -2267,7 +2241,7 @@
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled>true</elmi-enabled>
-          <elmi-profile>elmi-test1</elmi-profile>
+          <elmi-service-attribute>true</elmi-service-attribute>
           <l2cp-address-set wd:default="true">cta</l2cp-address-set>
         </uni>
         <uni>
@@ -2450,7 +2424,7 @@
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled>true</elmi-enabled>
-          <elmi-profile>elmi-test1</elmi-profile>
+          <elmi-service-attribute>true</elmi-service-attribute>
           <l2cp-address-set>option2-blind-ctb2</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
         </uni>
@@ -2500,7 +2474,7 @@
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled>true</elmi-enabled>
-          <elmi-profile>elmi-test1</elmi-profile>
+          <elmi-service-attribute>true</elmi-service-attribute>
           <l2cp-address-set>option2-blind-ctb2</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
         </uni>
@@ -2603,7 +2577,7 @@
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled>true</elmi-enabled>
-          <elmi-profile>elmi-test2</elmi-profile>
+          <elmi-service-attribute>true</elmi-service-attribute>
           <l2cp-address-set>cta</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
         </uni>
@@ -3222,7 +3196,7 @@
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled>true</elmi-enabled>
-          <elmi-profile>elmi-test1</elmi-profile>
+          <elmi-service-attribute>true</elmi-service-attribute>
           <l2cp-address-set>blind-ctb</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
         </uni>
@@ -3283,7 +3257,7 @@
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled>true</elmi-enabled>
-          <elmi-profile>elmi-test1</elmi-profile>
+          <elmi-service-attribute>true</elmi-service-attribute>
           <l2cp-address-set wd:default="true">cta</l2cp-address-set>
         </uni>
         <uni>
@@ -3391,7 +3365,7 @@
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled>true</elmi-enabled>
-          <elmi-profile>elmi-test2</elmi-profile>
+          <elmi-service-attribute>true</elmi-service-attribute>
           <l2cp-address-set>cta</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
         </uni>
@@ -3430,7 +3404,7 @@
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled>false</elmi-enabled>
-          <elmi-profile>elmi-test1</elmi-profile>
+          <elmi-service-attribute>false</elmi-service-attribute>
           <l2cp-address-set>cta</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
         </uni>
@@ -8343,7 +8317,7 @@
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled>true</elmi-enabled>
-          <elmi-profile>elmi-test1</elmi-profile>
+          <elmi-service-attribute>true</elmi-service-attribute>
           <l2cp-address-set>option2-blind-ctb2</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
         </uni>

@@ -714,15 +714,12 @@ module mef-interfaces {
           		"[MEF7.3] Section 10.2.2.";
         }
         leaf elmi-service-attribute {
-          type leafref {
-            path "/mef-global:mef-global/mef-global:profiles/" +
-            		"mef-global:elmi/mef-global:service-attribute";
-          }
+          type boolean;
           description
             "The ELMI Profile is only applicable when ELMI " +
             "is enabled.";
           reference "[MEF10.3] Section 9.18. " +
-          		"[MEF7.3] Section 10.2.2.";
+          		"[MEF7.3] Section 10.2.2.[MEF10.3] [R88]. [MEF16].";
         }
         leaf l2cp-address-set {
           type mef-types:l2cp-address-set-type;

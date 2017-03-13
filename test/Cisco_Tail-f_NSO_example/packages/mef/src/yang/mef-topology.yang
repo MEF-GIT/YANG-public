@@ -107,9 +107,16 @@ module mef-topology {
   }
 
   revision 2016-04-01 {
+<<<<<<< Upstream, based on origin/master
    	    description
    	      "Added Operational Status output for interface " +
    	      "maximum data rate";
+=======
+   	description
+   	      "Added Operational Status output for interface maximum data rate";
+   	reference "EVC Ethernet Services Definitions YANG Modules
+	      (MEF XX), TBD";
+>>>>>>> bb8a9fa Removed leafref to fixed single bool for elmi. Updates to mef-global.yang and mef-interfaces.yang. Fixed tests.
   }  
      
   revision 2015-05-26 {

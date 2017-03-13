@@ -787,16 +787,7 @@ module mef-global {
           }
         }
       }
-      container elmi {
-        description
-          "Ethernet Local Management Interface(ELMI).";
-        leaf service-attribute {
-        	type boolean;
-        	description
-        		"ELMI can either be enabled or disabled.";
-        	reference "[MEF10.3] [R88]. [MEF16].";
-        }
-      }
+
       container eec {
         description
           "Egress Equivalence Class (EEC) Profiles.";
