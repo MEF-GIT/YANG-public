@@ -4,8 +4,41 @@ REST/JSON examples for mef-services
 ... rest-json-patch-epl01-modify.txt
 ... rest-json-patch-eplan01-modify.txt
 ... rest-json-patch-eptree01-modify.txt
+{
+  "errors": {
+    "error": [
+      {
+        "error-message": "illegal reference /mef-services/carrier-ethernet/subscriber-services/evc{EVC-0001911-ACME-MEGAMART}/end-points/end-point{MMPOP1-ce5-Slot5-Port2}/ingress-bwp-flows-per-cos/bwp-flow-per-cos{Krypton}/bw-profile",
+        "error-urlpath": "/api/running",
+        "error-tag": "malformed-message"
+      }
+    ]
+  }
+}
 ... rest-json-patch-evpl01-modify.txt
+{
+  "errors": {
+    "error": [
+      {
+        "error-message": "invalid value for: ingress-bw-profile-per-evc in /mef-services:mef-services/mef-services:carrier-ethernet/mef-services:subscriber-services/mef-services:evc[mef-services:evc-id='EVC-0001343-ACME-MEGAMART']/mef-services:end-points/mef-services:end-point[mef-services:uni-id='MMPOP1-ce0-Slot0-Port3']/mef-services:ingress-bw-profile-per-evc",
+        "error-urlpath": "/api/running",
+        "error-tag": "malformed-message"
+      }
+    ]
+  }
+}
 ... rest-json-patch-evplan01-modify.txt
+{
+  "errors": {
+    "error": [
+      {
+        "error-message": "illegal reference /mef-services/carrier-ethernet/subscriber-services/evc{EVC-0001944-ACME-MEGAMART}/end-points/end-point{MMPOP1-ce5-Slot5-Port3}/ingress-bwp-flows-per-cos/bwp-flow-per-cos{Argon}/bw-profile",
+        "error-urlpath": "/api/running",
+        "error-tag": "malformed-message"
+      }
+    ]
+  }
+}
 ... rest-json-patch-evptree01-modify.txt
 REST/XML examples
 ... rest-xml-patch-mef-topology.txt
@@ -3594,7 +3627,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "admin-state": false,
-          "max-svc-frame-size": 1670,
+          "max-svc-frame-size": 1600,
           "@max-svc-frame-size": {"annotation": "EVPL Use Case 1:"},
           "service-multiplexing-enabled": true,
           "default-ce-vlan-id": 22,
@@ -3757,7 +3790,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "admin-state": false,
-          "max-svc-frame-size": 1679,
+          "max-svc-frame-size": 1600,
           "service-multiplexing-enabled": true,
           "default-ce-vlan-id": 17,
           "max-num-of-evcs": 1,
@@ -4003,7 +4036,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "admin-state": false,
-          "max-svc-frame-size": 1679,
+          "max-svc-frame-size": 1600,
           "service-multiplexing-enabled": false,
           "default-ce-vlan-id": 1,
           "max-num-of-evcs": 1,
@@ -4162,7 +4195,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           },
           "admin-state": false,
           "@admin-state": {"annotation": "EP-TREE Use Case 1:"},
-          "max-svc-frame-size": 1670,
+          "max-svc-frame-size": 1600,
           "all-to-one-bundling-enabled": true,
           "max-num-of-evcs": 1,
           "elmi-enabled": true,
@@ -4276,7 +4309,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           },
           "admin-state": false,
           "@admin-state": {"annotation": "EVP-LAN Use Case 1:"},
-          "max-svc-frame-size": 1670,
+          "max-svc-frame-size": 1600,
           "service-multiplexing-enabled": true,
           "bundling-enabled": true,
           "default-ce-vlan-id": 53,
@@ -4397,7 +4430,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "admin-state": false,
-          "max-svc-frame-size": 1679,
+          "max-svc-frame-size": 1600,
           "all-to-one-bundling-enabled": true,
           "max-num-of-evcs": 1
         },
@@ -4599,7 +4632,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "admin-state": false,
-          "max-svc-frame-size": 1670,
+          "max-svc-frame-size": 1600,
           "all-to-one-bundling-enabled": true,
           "max-num-of-evcs": 1
         },
@@ -4772,7 +4805,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "admin-state": false,
-          "max-svc-frame-size": 1679,
+          "max-svc-frame-size": 1600,
           "all-to-one-bundling-enabled": true,
           "max-num-of-evcs": 1
         },
@@ -4921,8 +4954,14 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                   "color-identifier": "dscp",
                   "cos-identifier": "MEF103_Table23",
                   "eec-identifier": "MEF103_Table23",
-                  "ingress-bw-profile-per-evc": "ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART",
-                  "egress-bw-profile-per-evc": "eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART",
+                  "ingress-bw-profile-per-evc": {
+                    "envelope-id": "ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART",
+                    "bw-profile": "high1-bwp-uni"
+                  },
+                  "egress-bw-profile-per-evc": {
+                    "envelope-id": "eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART",
+                    "bw-profile": "high1-bwp-uni"
+                  },
                   "source-mac-address-limit-enabled": false
                 },
                 {
@@ -4939,8 +4978,14 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                   "color-identifier": "pcp",
                   "cos-identifier": "MEF103_Table13",
                   "eec-identifier": "MEF62_ApdxA",
-                  "ingress-bw-profile-per-evc": "ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART",
-                  "egress-bw-profile-per-evc": "eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART",
+                  "ingress-bw-profile-per-evc": {
+                    "envelope-id": "ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART",
+                    "bw-profile": "high2-bwp-uni"
+                  },
+                  "egress-bw-profile-per-evc": {
+                    "envelope-id": "eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART",
+                    "bw-profile": "high2-bwp-uni"
+                  },
                   "source-mac-address-limit-enabled": false
                 }
               ]
@@ -5134,8 +5179,14 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                   "color-identifier": "dscp",
                   "cos-identifier": "MEF103_Table23",
                   "eec-identifier": "MEF103_Table23",
-                  "ingress-bw-profile-per-evc": "ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART",
-                  "egress-bw-profile-per-evc": "eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART",
+                  "ingress-bw-profile-per-evc": {
+                    "envelope-id": "ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART",
+                    "bw-profile": "low1-bwp-uni"
+                  },
+                  "egress-bw-profile-per-evc": {
+                    "envelope-id": "eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART",
+                    "bw-profile": "low1-bwp-uni"
+                  },
                   "source-mac-address-limit-enabled": false
                 },
                 {
@@ -5152,8 +5203,14 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                   "color-identifier": "pcp",
                   "cos-identifier": "MEF103_Table14",
                   "eec-identifier": "MEF62_ApdxA",
-                  "ingress-bw-profile-per-evc": "ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART",
-                  "egress-bw-profile-per-evc": "eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART",
+                  "ingress-bw-profile-per-evc": {
+                    "envelope-id": "ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART",
+                    "bw-profile": "low2-bwp-uni"
+                  },
+                  "egress-bw-profile-per-evc": {
+                    "envelope-id": "eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART",
+                    "bw-profile": "low2-bwp-uni"
+                  },
                   "source-mac-address-limit-enabled": false
                 }
               ]
@@ -5210,8 +5267,14 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                   "color-identifier": "dscp",
                   "cos-identifier": "MEF103_Table23",
                   "eec-identifier": "MEF103_Table23",
-                  "ingress-bw-profile-per-evc": "ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART",
-                  "egress-bw-profile-per-evc": "eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART",
+                  "ingress-bw-profile-per-evc": {
+                    "envelope-id": "ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART",
+                    "bw-profile": "medium1-bwp-uni"
+                  },
+                  "egress-bw-profile-per-evc": {
+                    "envelope-id": "eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART",
+                    "bw-profile": "medium1-bwp-uni"
+                  },
                   "source-mac-address-limit-enabled": false
                 },
                 {
@@ -5228,8 +5291,14 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                   "color-identifier": "pcp",
                   "cos-identifier": "MEF103_Table13",
                   "eec-identifier": "MEF62_ApdxA",
-                  "ingress-bw-profile-per-evc": "ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART",
-                  "egress-bw-profile-per-evc": "eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART",
+                  "ingress-bw-profile-per-evc": {
+                    "envelope-id": "ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART",
+                    "bw-profile": "medium3-bwp-uni"
+                  },
+                  "egress-bw-profile-per-evc": {
+                    "envelope-id": "eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART",
+                    "bw-profile": "medium3-bwp-uni"
+                  },
                   "source-mac-address-limit-enabled": false
                 }
               ]
@@ -5352,7 +5421,8 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "bwp-flow-per-cos": [
                       {
                         "cos-name": "Krypton",
-                        "bw-profile": "ienv_EPTREE_UNI552_EVC-0001911_Krypton"
+                        "envelope-id": "ienv_EPTREE_UNI552_EVC-0001911_Krypton",
+                        "bw-profile": "itest-bwp1"
                       }
                     ]
                   },
@@ -5361,7 +5431,8 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "bwp-flow-per-eec": [
                       {
                         "eec-name": "Sophomore",
-                        "bw-profile": "eenv_EPTREE_UNI552_EVC-0001911_Sophomore"
+                        "envelope-id": "eenv_EPTREE_UNI552_EVC-0001911_Sophomore",
+                        "bw-profile": "etest-bwp1"
                       }
                     ]
                   },
@@ -5386,7 +5457,8 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "bwp-flow-per-cos": [
                       {
                         "cos-name": "Krypton",
-                        "bw-profile": "ienv_EPTREE_UNI662_EVC-0001911_Krypton"
+                        "envelope-id": "ienv_EPTREE_UNI662_EVC-0001911_Krypton",
+                        "bw-profile": "itest-bwp2"
                       }
                     ]
                   },
@@ -5395,7 +5467,8 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "bwp-flow-per-eec": [
                       {
                         "eec-name": "Sophomore",
-                        "bw-profile": "eenv_EPTREE_UNI662_EVC-0001911_Sophomore"
+                        "envelope-id": "eenv_EPTREE_UNI662_EVC-0001911_Sophomore",
+                        "bw-profile": "etest-bwp2"
                       }
                     ]
                   },
@@ -5420,7 +5493,8 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "bwp-flow-per-cos": [
                       {
                         "cos-name": "Krypton",
-                        "bw-profile": "ienv_EPTREE_UNI772_EVC-0001911_Krypton"
+                        "envelope-id": "ienv_EPTREE_UNI772_EVC-0001911_Krypton",
+                        "bw-profile": "itest-bwp1"
                       }
                     ]
                   },
@@ -5429,7 +5503,8 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "bwp-flow-per-eec": [
                       {
                         "eec-name": "Sophomore",
-                        "bw-profile": "eenv_EPTREE_UNI772_EVC-0001911_Sophomore"
+                        "envelope-id": "eenv_EPTREE_UNI772_EVC-0001911_Sophomore",
+                        "bw-profile": "etest-bwp1"
                       }
                     ]
                   },
@@ -5454,7 +5529,8 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "bwp-flow-per-cos": [
                       {
                         "cos-name": "Krypton",
-                        "bw-profile": "ienv_EPTREE_UNI882_EVC-0001911_Krypton"
+                        "envelope-id": "ienv_EPTREE_UNI882_EVC-0001911_Krypton",
+                        "bw-profile": "itest-bwp2"
                       }
                     ]
                   },
@@ -5463,7 +5539,8 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "bwp-flow-per-eec": [
                       {
                         "eec-name": "Sophomore",
-                        "bw-profile": "eenv_EPTREE_UNI882_EVC-0001911_Sophomore"
+                        "envelope-id": "eenv_EPTREE_UNI882_EVC-0001911_Sophomore",
+                        "bw-profile": "etest-bwp2"
                       }
                     ]
                   },
@@ -5594,15 +5671,18 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "bwp-flow-per-cos": [
                       {
                         "cos-name": "Argon",
-                        "bw-profile": "ienv_EVPLAN_UNI553_EVC-0001944_Argon"
+                        "envelope-id": "ienv_EVPLAN_UNI553_EVC-0001944_Argon",
+                        "bw-profile": "medium1-bwp-uni"
                       },
                       {
                         "cos-name": "Krypton",
-                        "bw-profile": "ienv_EVPLAN_UNI553_EVC-0001944_Krypton"
+                        "envelope-id": "ienv_EVPLAN_UNI553_EVC-0001944_Krypton",
+                        "bw-profile": "high1-bwp-uni"
                       },
                       {
                         "cos-name": "Neon",
-                        "bw-profile": "ienv_EVPLAN_UNI553_EVC-0001944_Neon"
+                        "envelope-id": "ienv_EVPLAN_UNI553_EVC-0001944_Neon",
+                        "bw-profile": "low1-bwp-uni"
                       }
                     ]
                   },
@@ -5611,15 +5691,18 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "bwp-flow-per-eec": [
                       {
                         "eec-name": "EEC-Argon",
-                        "bw-profile": "eenv_EVPLAN_UNI553_EVC-0001944_Argon"
+                        "envelope-id": "eenv_EVPLAN_UNI553_EVC-0001944_Argon",
+                        "bw-profile": "medium2-bwp-uni"
                       },
                       {
                         "eec-name": "EEC-Krypton",
-                        "bw-profile": "eenv_EVPLAN_UNI553_EVC-0001944_Krypton"
+                        "envelope-id": "eenv_EVPLAN_UNI553_EVC-0001944_Krypton",
+                        "bw-profile": "high2-bwp-uni"
                       },
                       {
                         "eec-name": "EEC-Neon",
-                        "bw-profile": "eenv_EVPLAN_UNI553_EVC-0001944_Neon"
+                        "envelope-id": "eenv_EVPLAN_UNI553_EVC-0001944_Neon",
+                        "bw-profile": "low2-bwp-uni"
                       }
                     ]
                   },
@@ -5656,15 +5739,18 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "bwp-flow-per-cos": [
                       {
                         "cos-name": "Argon",
-                        "bw-profile": "ienv_EVPLAN_UNI663_EVC-0001944_Argon"
+                        "envelope-id": "ienv_EVPLAN_UNI663_EVC-0001944_Argon",
+                        "bw-profile": "medium1-bwp-uni"
                       },
                       {
                         "cos-name": "Krypton",
-                        "bw-profile": "ienv_EVPLAN_UNI663_EVC-0001944_Krypton"
+                        "envelope-id": "ienv_EVPLAN_UNI663_EVC-0001944_Krypton",
+                        "bw-profile": "high1-bwp-uni"
                       },
                       {
                         "cos-name": "Neon",
-                        "bw-profile": "ienv_EVPLAN_UNI663_EVC-0001944_Neon"
+                        "envelope-id": "ienv_EVPLAN_UNI663_EVC-0001944_Neon",
+                        "bw-profile": "low1-bwp-uni"
                       }
                     ]
                   },
@@ -5673,15 +5759,18 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "bwp-flow-per-eec": [
                       {
                         "eec-name": "EEC-Argon",
-                        "bw-profile": "eenv_EVPLAN_UNI663_EVC-0001944_Argon"
+                        "envelope-id": "eenv_EVPLAN_UNI663_EVC-0001944_Argon",
+                        "bw-profile": "medium2-bwp-uni"
                       },
                       {
                         "eec-name": "EEC-Krypton",
-                        "bw-profile": "eenv_EVPLAN_UNI663_EVC-0001944_Krypton"
+                        "envelope-id": "eenv_EVPLAN_UNI663_EVC-0001944_Krypton",
+                        "bw-profile": "high2-bwp-uni"
                       },
                       {
                         "eec-name": "EEC-Neon",
-                        "bw-profile": "eenv_EVPLAN_UNI663_EVC-0001944_Neon"
+                        "envelope-id": "eenv_EVPLAN_UNI663_EVC-0001944_Neon",
+                        "bw-profile": "low2-bwp-uni"
                       }
                     ]
                   },
@@ -5718,15 +5807,18 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "bwp-flow-per-cos": [
                       {
                         "cos-name": "Argon",
-                        "bw-profile": "ienv_EVPLAN_UNI773_EVC-0001944_Argon"
+                        "envelope-id": "ienv_EVPLAN_UNI773_EVC-0001944_Argon",
+                        "bw-profile": "medium1-bwp-uni"
                       },
                       {
                         "cos-name": "Krypton",
-                        "bw-profile": "ienv_EVPLAN_UNI773_EVC-0001944_Krypton"
+                        "envelope-id": "ienv_EVPLAN_UNI773_EVC-0001944_Krypton",
+                        "bw-profile": "high1-bwp-uni"
                       },
                       {
                         "cos-name": "Neon",
-                        "bw-profile": "ienv_EVPLAN_UNI773_EVC-0001944_Neon"
+                        "envelope-id": "ienv_EVPLAN_UNI773_EVC-0001944_Neon",
+                        "bw-profile": "low1-bwp-uni"
                       }
                     ]
                   },
@@ -5735,15 +5827,18 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "bwp-flow-per-eec": [
                       {
                         "eec-name": "EEC-Argon",
-                        "bw-profile": "eenv_EVPLAN_UNI773_EVC-0001944_Argon"
+                        "envelope-id": "eenv_EVPLAN_UNI773_EVC-0001944_Argon",
+                        "bw-profile": "medium2-bwp-uni"
                       },
                       {
                         "eec-name": "EEC-Krypton",
-                        "bw-profile": "eenv_EVPLAN_UNI773_EVC-0001944_Krypton"
+                        "envelope-id": "eenv_EVPLAN_UNI773_EVC-0001944_Krypton",
+                        "bw-profile": "high2-bwp-uni"
                       },
                       {
                         "eec-name": "EEC-Neon",
-                        "bw-profile": "eenv_EVPLAN_UNI773_EVC-0001944_Neon"
+                        "envelope-id": "eenv_EVPLAN_UNI773_EVC-0001944_Neon",
+                        "bw-profile": "low2-bwp-uni"
                       }
                     ]
                   },
@@ -5780,15 +5875,18 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "bwp-flow-per-cos": [
                       {
                         "cos-name": "Argon",
-                        "bw-profile": "ienv_EVPLAN_UNI883_EVC-0001944_Argon"
+                        "envelope-id": "ienv_EVPLAN_UNI883_EVC-0001944_Argon",
+                        "bw-profile": "medium1-bwp-uni"
                       },
                       {
                         "cos-name": "Krypton",
-                        "bw-profile": "ienv_EVPLAN_UNI883_EVC-0001944_Krypton"
+                        "envelope-id": "ienv_EVPLAN_UNI883_EVC-0001944_Krypton",
+                        "bw-profile": "high1-bwp-uni"
                       },
                       {
                         "cos-name": "Neon",
-                        "bw-profile": "ienv_EVPLAN_UNI883_EVC-0001944_Neon"
+                        "envelope-id": "ienv_EVPLAN_UNI883_EVC-0001944_Neon",
+                        "bw-profile": "low1-bwp-uni"
                       }
                     ]
                   },
@@ -5797,15 +5895,18 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "bwp-flow-per-eec": [
                       {
                         "eec-name": "EEC-Argon",
-                        "bw-profile": "eenv_EVPLAN_UNI883_EVC-0001944_Argon"
+                        "envelope-id": "eenv_EVPLAN_UNI883_EVC-0001944_Argon",
+                        "bw-profile": "medium2-bwp-uni"
                       },
                       {
                         "eec-name": "EEC-Krypton",
-                        "bw-profile": "eenv_EVPLAN_UNI883_EVC-0001944_Krypton"
+                        "envelope-id": "eenv_EVPLAN_UNI883_EVC-0001944_Krypton",
+                        "bw-profile": "high2-bwp-uni"
                       },
                       {
                         "eec-name": "EEC-Neon",
-                        "bw-profile": "eenv_EVPLAN_UNI883_EVC-0001944_Neon"
+                        "envelope-id": "eenv_EVPLAN_UNI883_EVC-0001944_Neon",
+                        "bw-profile": "low2-bwp-uni"
                       }
                     ]
                   },
