@@ -2925,8 +2925,10 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART
   color-identifier                 dscp
   cos-identifier                   MEF103_Table23
   eec-identifier                   MEF103_Table23
-  ingress-bw-profile-per-evc       ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART
-  egress-bw-profile-per-evc        eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART
+  ingress-bw-profile-per-evc envelope-id ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART
+  ingress-bw-profile-per-evc bw-profile high1-bwp-uni
+  egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART
+  egress-bw-profile-per-evc bw-profile high1-bwp-uni
   source-mac-address-limit-enabled false
  !
  end-points end-point MMPOP1-ce1-Slot1-Port3
@@ -2937,8 +2939,10 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART
   color-identifier                 pcp
   cos-identifier                   MEF103_Table13
   eec-identifier                   MEF62_ApdxA
-  ingress-bw-profile-per-evc       ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART
-  egress-bw-profile-per-evc        eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART
+  ingress-bw-profile-per-evc envelope-id ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART
+  ingress-bw-profile-per-evc bw-profile high2-bwp-uni
+  egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART
+  egress-bw-profile-per-evc bw-profile high2-bwp-uni
   source-mac-address-limit-enabled false
  !
  carrier-ethernet-sls sls-id MEF103_Table25
@@ -3026,8 +3030,10 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART
   color-identifier                 dscp
   cos-identifier                   MEF103_Table23
   eec-identifier                   MEF103_Table23
-  ingress-bw-profile-per-evc       ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART
-  egress-bw-profile-per-evc        eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART
+  ingress-bw-profile-per-evc envelope-id ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART
+  ingress-bw-profile-per-evc bw-profile low1-bwp-uni
+  egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART
+  egress-bw-profile-per-evc bw-profile low1-bwp-uni
   source-mac-address-limit-enabled false
  !
  end-points end-point MMPOP1-ce1-Slot1-Port3
@@ -3038,8 +3044,10 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART
   color-identifier                 pcp
   cos-identifier                   MEF103_Table14
   eec-identifier                   MEF62_ApdxA
-  ingress-bw-profile-per-evc       ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART
-  egress-bw-profile-per-evc        eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART
+  ingress-bw-profile-per-evc envelope-id ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART
+  ingress-bw-profile-per-evc bw-profile low2-bwp-uni
+  egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART
+  egress-bw-profile-per-evc bw-profile low2-bwp-uni
   source-mac-address-limit-enabled false
  !
  carrier-ethernet-sls sls-id MEF103_Table25
@@ -3065,8 +3073,10 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART
   color-identifier                 dscp
   cos-identifier                   MEF103_Table23
   eec-identifier                   MEF103_Table23
-  ingress-bw-profile-per-evc       ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART
-  egress-bw-profile-per-evc        eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART
+  ingress-bw-profile-per-evc envelope-id ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART
+  ingress-bw-profile-per-evc bw-profile medium1-bwp-uni
+  egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART
+  egress-bw-profile-per-evc bw-profile medium1-bwp-uni
   source-mac-address-limit-enabled false
  !
  end-points end-point MMPOP1-ce2-Slot2-Port3
@@ -3077,8 +3087,10 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART
   color-identifier                 pcp
   cos-identifier                   MEF103_Table13
   eec-identifier                   MEF62_ApdxA
-  ingress-bw-profile-per-evc       ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART
-  egress-bw-profile-per-evc        eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART
+  ingress-bw-profile-per-evc envelope-id ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART
+  ingress-bw-profile-per-evc bw-profile medium3-bwp-uni
+  egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART
+  egress-bw-profile-per-evc bw-profile medium3-bwp-uni
   source-mac-address-limit-enabled false
  !
  carrier-ethernet-sls sls-id MEF103_Table25
@@ -3144,11 +3156,13 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART
   !
   ingress-bwp-flows-per-cos coupling-enabled false
   ingress-bwp-flows-per-cos bwp-flow-per-cos Krypton
-   bw-profile ienv_EPTREE_UNI552_EVC-0001911_Krypton
+   envelope-id ienv_EPTREE_UNI552_EVC-0001911_Krypton
+   bw-profile  itest-bwp1
   !
   egress-bwp-flows-per-eec coupling-enabled false
   egress-bwp-flows-per-eec bwp-flow-per-eec Sophomore
-   bw-profile eenv_EPTREE_UNI552_EVC-0001911_Sophomore
+   envelope-id eenv_EPTREE_UNI552_EVC-0001911_Sophomore
+   bw-profile  etest-bwp1
   !
   role                             root
   admin-state                      false
@@ -3162,11 +3176,13 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART
   !
   ingress-bwp-flows-per-cos coupling-enabled false
   ingress-bwp-flows-per-cos bwp-flow-per-cos Krypton
-   bw-profile ienv_EPTREE_UNI662_EVC-0001911_Krypton
+   envelope-id ienv_EPTREE_UNI662_EVC-0001911_Krypton
+   bw-profile  itest-bwp2
   !
   egress-bwp-flows-per-eec coupling-enabled false
   egress-bwp-flows-per-eec bwp-flow-per-eec Sophomore
-   bw-profile eenv_EPTREE_UNI662_EVC-0001911_Sophomore
+   envelope-id eenv_EPTREE_UNI662_EVC-0001911_Sophomore
+   bw-profile  etest-bwp2
   !
   role                             leaf
   admin-state                      false
@@ -3180,11 +3196,13 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART
   !
   ingress-bwp-flows-per-cos coupling-enabled false
   ingress-bwp-flows-per-cos bwp-flow-per-cos Krypton
-   bw-profile ienv_EPTREE_UNI772_EVC-0001911_Krypton
+   envelope-id ienv_EPTREE_UNI772_EVC-0001911_Krypton
+   bw-profile  itest-bwp1
   !
   egress-bwp-flows-per-eec coupling-enabled false
   egress-bwp-flows-per-eec bwp-flow-per-eec Sophomore
-   bw-profile eenv_EPTREE_UNI772_EVC-0001911_Sophomore
+   envelope-id eenv_EPTREE_UNI772_EVC-0001911_Sophomore
+   bw-profile  etest-bwp1
   !
   role                             leaf
   admin-state                      false
@@ -3198,11 +3216,13 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART
   !
   ingress-bwp-flows-per-cos coupling-enabled false
   ingress-bwp-flows-per-cos bwp-flow-per-cos Krypton
-   bw-profile ienv_EPTREE_UNI882_EVC-0001911_Krypton
+   envelope-id ienv_EPTREE_UNI882_EVC-0001911_Krypton
+   bw-profile  itest-bwp2
   !
   egress-bwp-flows-per-eec coupling-enabled false
   egress-bwp-flows-per-eec bwp-flow-per-eec Sophomore
-   bw-profile eenv_EPTREE_UNI882_EVC-0001911_Sophomore
+   envelope-id eenv_EPTREE_UNI882_EVC-0001911_Sophomore
+   bw-profile  etest-bwp2
   !
   role                             leaf
   admin-state                      false
@@ -3259,23 +3279,29 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART
   !
   ingress-bwp-flows-per-cos coupling-enabled false
   ingress-bwp-flows-per-cos bwp-flow-per-cos Argon
-   bw-profile ienv_EVPLAN_UNI553_EVC-0001944_Argon
+   envelope-id ienv_EVPLAN_UNI553_EVC-0001944_Argon
+   bw-profile  medium1-bwp-uni
   !
   ingress-bwp-flows-per-cos bwp-flow-per-cos Krypton
-   bw-profile ienv_EVPLAN_UNI553_EVC-0001944_Krypton
+   envelope-id ienv_EVPLAN_UNI553_EVC-0001944_Krypton
+   bw-profile  high1-bwp-uni
   !
   ingress-bwp-flows-per-cos bwp-flow-per-cos Neon
-   bw-profile ienv_EVPLAN_UNI553_EVC-0001944_Neon
+   envelope-id ienv_EVPLAN_UNI553_EVC-0001944_Neon
+   bw-profile  low1-bwp-uni
   !
   egress-bwp-flows-per-eec coupling-enabled false
   egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Argon
-   bw-profile eenv_EVPLAN_UNI553_EVC-0001944_Argon
+   envelope-id eenv_EVPLAN_UNI553_EVC-0001944_Argon
+   bw-profile  medium2-bwp-uni
   !
   egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Krypton
-   bw-profile eenv_EVPLAN_UNI553_EVC-0001944_Krypton
+   envelope-id eenv_EVPLAN_UNI553_EVC-0001944_Krypton
+   bw-profile  high2-bwp-uni
   !
   egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Neon
-   bw-profile eenv_EVPLAN_UNI553_EVC-0001944_Neon
+   envelope-id eenv_EVPLAN_UNI553_EVC-0001944_Neon
+   bw-profile  low2-bwp-uni
   !
   role                             root
   admin-state                      false
@@ -3297,23 +3323,29 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART
   !
   ingress-bwp-flows-per-cos coupling-enabled false
   ingress-bwp-flows-per-cos bwp-flow-per-cos Argon
-   bw-profile ienv_EVPLAN_UNI663_EVC-0001944_Argon
+   envelope-id ienv_EVPLAN_UNI663_EVC-0001944_Argon
+   bw-profile  medium1-bwp-uni
   !
   ingress-bwp-flows-per-cos bwp-flow-per-cos Krypton
-   bw-profile ienv_EVPLAN_UNI663_EVC-0001944_Krypton
+   envelope-id ienv_EVPLAN_UNI663_EVC-0001944_Krypton
+   bw-profile  high1-bwp-uni
   !
   ingress-bwp-flows-per-cos bwp-flow-per-cos Neon
-   bw-profile ienv_EVPLAN_UNI663_EVC-0001944_Neon
+   envelope-id ienv_EVPLAN_UNI663_EVC-0001944_Neon
+   bw-profile  low1-bwp-uni
   !
   egress-bwp-flows-per-eec coupling-enabled false
   egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Argon
-   bw-profile eenv_EVPLAN_UNI663_EVC-0001944_Argon
+   envelope-id eenv_EVPLAN_UNI663_EVC-0001944_Argon
+   bw-profile  medium2-bwp-uni
   !
   egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Krypton
-   bw-profile eenv_EVPLAN_UNI663_EVC-0001944_Krypton
+   envelope-id eenv_EVPLAN_UNI663_EVC-0001944_Krypton
+   bw-profile  high2-bwp-uni
   !
   egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Neon
-   bw-profile eenv_EVPLAN_UNI663_EVC-0001944_Neon
+   envelope-id eenv_EVPLAN_UNI663_EVC-0001944_Neon
+   bw-profile  low2-bwp-uni
   !
   role                             root
   admin-state                      false
@@ -3335,23 +3367,29 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART
   !
   ingress-bwp-flows-per-cos coupling-enabled false
   ingress-bwp-flows-per-cos bwp-flow-per-cos Argon
-   bw-profile ienv_EVPLAN_UNI773_EVC-0001944_Argon
+   envelope-id ienv_EVPLAN_UNI773_EVC-0001944_Argon
+   bw-profile  medium1-bwp-uni
   !
   ingress-bwp-flows-per-cos bwp-flow-per-cos Krypton
-   bw-profile ienv_EVPLAN_UNI773_EVC-0001944_Krypton
+   envelope-id ienv_EVPLAN_UNI773_EVC-0001944_Krypton
+   bw-profile  high1-bwp-uni
   !
   ingress-bwp-flows-per-cos bwp-flow-per-cos Neon
-   bw-profile ienv_EVPLAN_UNI773_EVC-0001944_Neon
+   envelope-id ienv_EVPLAN_UNI773_EVC-0001944_Neon
+   bw-profile  low1-bwp-uni
   !
   egress-bwp-flows-per-eec coupling-enabled false
   egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Argon
-   bw-profile eenv_EVPLAN_UNI773_EVC-0001944_Argon
+   envelope-id eenv_EVPLAN_UNI773_EVC-0001944_Argon
+   bw-profile  medium2-bwp-uni
   !
   egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Krypton
-   bw-profile eenv_EVPLAN_UNI773_EVC-0001944_Krypton
+   envelope-id eenv_EVPLAN_UNI773_EVC-0001944_Krypton
+   bw-profile  high2-bwp-uni
   !
   egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Neon
-   bw-profile eenv_EVPLAN_UNI773_EVC-0001944_Neon
+   envelope-id eenv_EVPLAN_UNI773_EVC-0001944_Neon
+   bw-profile  low2-bwp-uni
   !
   role                             root
   admin-state                      false
@@ -3373,23 +3411,29 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART
   !
   ingress-bwp-flows-per-cos coupling-enabled false
   ingress-bwp-flows-per-cos bwp-flow-per-cos Argon
-   bw-profile ienv_EVPLAN_UNI883_EVC-0001944_Argon
+   envelope-id ienv_EVPLAN_UNI883_EVC-0001944_Argon
+   bw-profile  medium1-bwp-uni
   !
   ingress-bwp-flows-per-cos bwp-flow-per-cos Krypton
-   bw-profile ienv_EVPLAN_UNI883_EVC-0001944_Krypton
+   envelope-id ienv_EVPLAN_UNI883_EVC-0001944_Krypton
+   bw-profile  high1-bwp-uni
   !
   ingress-bwp-flows-per-cos bwp-flow-per-cos Neon
-   bw-profile ienv_EVPLAN_UNI883_EVC-0001944_Neon
+   envelope-id ienv_EVPLAN_UNI883_EVC-0001944_Neon
+   bw-profile  low1-bwp-uni
   !
   egress-bwp-flows-per-eec coupling-enabled false
   egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Argon
-   bw-profile eenv_EVPLAN_UNI883_EVC-0001944_Argon
+   envelope-id eenv_EVPLAN_UNI883_EVC-0001944_Argon
+   bw-profile  medium2-bwp-uni
   !
   egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Krypton
-   bw-profile eenv_EVPLAN_UNI883_EVC-0001944_Krypton
+   envelope-id eenv_EVPLAN_UNI883_EVC-0001944_Krypton
+   bw-profile  high2-bwp-uni
   !
   egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Neon
-   bw-profile eenv_EVPLAN_UNI883_EVC-0001944_Neon
+   envelope-id eenv_EVPLAN_UNI883_EVC-0001944_Neon
+   bw-profile  low2-bwp-uni
   !
   role                             root
   admin-state                      false

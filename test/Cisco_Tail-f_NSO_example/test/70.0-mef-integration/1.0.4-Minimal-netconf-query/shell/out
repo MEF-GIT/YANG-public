@@ -3480,8 +3480,14 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <ingress-bw-profile-per-evc>ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</ingress-bw-profile-per-evc>
-                <egress-bw-profile-per-evc>eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <ingress-bw-profile-per-evc>
+                  <envelope-id>ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</envelope-id>
+                  <bw-profile>high1-bwp-uni</bw-profile>
+                </ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>
+                  <envelope-id>eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</envelope-id>
+                  <bw-profile>high1-bwp-uni</bw-profile>
+                </egress-bw-profile-per-evc>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
               <end-point>
@@ -3496,8 +3502,14 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table13</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <ingress-bw-profile-per-evc>ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</ingress-bw-profile-per-evc>
-                <egress-bw-profile-per-evc>eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <ingress-bw-profile-per-evc>
+                  <envelope-id>ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</envelope-id>
+                  <bw-profile>high2-bwp-uni</bw-profile>
+                </ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>
+                  <envelope-id>eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</envelope-id>
+                  <bw-profile>high2-bwp-uni</bw-profile>
+                </egress-bw-profile-per-evc>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
             </end-points>
@@ -3662,8 +3674,14 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <ingress-bw-profile-per-evc>ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</ingress-bw-profile-per-evc>
-                <egress-bw-profile-per-evc>eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <ingress-bw-profile-per-evc>
+                  <envelope-id>ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</envelope-id>
+                  <bw-profile>low1-bwp-uni</bw-profile>
+                </ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>
+                  <envelope-id>eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</envelope-id>
+                  <bw-profile>low1-bwp-uni</bw-profile>
+                </egress-bw-profile-per-evc>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
               <end-point>
@@ -3678,8 +3696,14 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table14</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <ingress-bw-profile-per-evc>ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</ingress-bw-profile-per-evc>
-                <egress-bw-profile-per-evc>eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <ingress-bw-profile-per-evc>
+                  <envelope-id>ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</envelope-id>
+                  <bw-profile>low2-bwp-uni</bw-profile>
+                </ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>
+                  <envelope-id>eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</envelope-id>
+                  <bw-profile>low2-bwp-uni</bw-profile>
+                </egress-bw-profile-per-evc>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
             </end-points>
@@ -3726,8 +3750,14 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <ingress-bw-profile-per-evc>ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</ingress-bw-profile-per-evc>
-                <egress-bw-profile-per-evc>eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <ingress-bw-profile-per-evc>
+                  <envelope-id>ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</envelope-id>
+                  <bw-profile>medium1-bwp-uni</bw-profile>
+                </ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>
+                  <envelope-id>eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</envelope-id>
+                  <bw-profile>medium1-bwp-uni</bw-profile>
+                </egress-bw-profile-per-evc>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
               <end-point>
@@ -3742,8 +3772,14 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table13</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <ingress-bw-profile-per-evc>ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</ingress-bw-profile-per-evc>
-                <egress-bw-profile-per-evc>eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <ingress-bw-profile-per-evc>
+                  <envelope-id>ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</envelope-id>
+                  <bw-profile>medium3-bwp-uni</bw-profile>
+                </ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>
+                  <envelope-id>eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</envelope-id>
+                  <bw-profile>medium3-bwp-uni</bw-profile>
+                </egress-bw-profile-per-evc>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
             </end-points>
@@ -3847,14 +3883,16 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EPTREE_UNI552_EVC-0001911_Krypton</bw-profile>
+                    <envelope-id>ienv_EPTREE_UNI552_EVC-0001911_Krypton</envelope-id>
+                    <bw-profile>itest-bwp1</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>Sophomore</eec-name>
-                    <bw-profile>eenv_EPTREE_UNI552_EVC-0001911_Sophomore</bw-profile>
+                    <envelope-id>eenv_EPTREE_UNI552_EVC-0001911_Sophomore</envelope-id>
+                    <bw-profile>etest-bwp1</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>root</role>
@@ -3875,14 +3913,16 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EPTREE_UNI662_EVC-0001911_Krypton</bw-profile>
+                    <envelope-id>ienv_EPTREE_UNI662_EVC-0001911_Krypton</envelope-id>
+                    <bw-profile>itest-bwp2</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>Sophomore</eec-name>
-                    <bw-profile>eenv_EPTREE_UNI662_EVC-0001911_Sophomore</bw-profile>
+                    <envelope-id>eenv_EPTREE_UNI662_EVC-0001911_Sophomore</envelope-id>
+                    <bw-profile>etest-bwp2</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>leaf</role>
@@ -3903,14 +3943,16 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EPTREE_UNI772_EVC-0001911_Krypton</bw-profile>
+                    <envelope-id>ienv_EPTREE_UNI772_EVC-0001911_Krypton</envelope-id>
+                    <bw-profile>itest-bwp1</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>Sophomore</eec-name>
-                    <bw-profile>eenv_EPTREE_UNI772_EVC-0001911_Sophomore</bw-profile>
+                    <envelope-id>eenv_EPTREE_UNI772_EVC-0001911_Sophomore</envelope-id>
+                    <bw-profile>etest-bwp1</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>leaf</role>
@@ -3931,14 +3973,16 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EPTREE_UNI882_EVC-0001911_Krypton</bw-profile>
+                    <envelope-id>ienv_EPTREE_UNI882_EVC-0001911_Krypton</envelope-id>
+                    <bw-profile>itest-bwp2</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>Sophomore</eec-name>
-                    <bw-profile>eenv_EPTREE_UNI882_EVC-0001911_Sophomore</bw-profile>
+                    <envelope-id>eenv_EPTREE_UNI882_EVC-0001911_Sophomore</envelope-id>
+                    <bw-profile>etest-bwp2</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>leaf</role>
@@ -4049,30 +4093,36 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Argon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI553_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI553_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI553_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI553_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Neon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI553_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI553_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Argon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI553_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI553_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Krypton</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI553_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI553_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Neon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI553_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI553_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>root</role>
@@ -4105,30 +4155,36 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Argon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI663_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI663_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI663_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI663_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Neon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI663_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI663_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Argon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI663_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI663_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Krypton</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI663_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI663_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Neon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI663_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI663_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>root</role>
@@ -4161,30 +4217,36 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Argon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI773_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI773_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI773_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI773_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Neon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI773_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI773_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Argon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI773_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI773_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Krypton</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI773_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI773_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Neon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI773_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI773_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>root</role>
@@ -4217,30 +4279,36 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Argon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI883_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI883_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI883_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI883_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Neon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI883_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI883_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Argon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI883_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI883_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Krypton</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI883_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI883_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Neon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI883_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI883_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>root</role>
@@ -9731,8 +9799,14 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <ingress-bw-profile-per-evc>ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</ingress-bw-profile-per-evc>
-                <egress-bw-profile-per-evc>eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <ingress-bw-profile-per-evc>
+                  <envelope-id>ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</envelope-id>
+                  <bw-profile>high1-bwp-uni</bw-profile>
+                </ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>
+                  <envelope-id>eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</envelope-id>
+                  <bw-profile>high1-bwp-uni</bw-profile>
+                </egress-bw-profile-per-evc>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -9750,8 +9824,14 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table13</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <ingress-bw-profile-per-evc>ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</ingress-bw-profile-per-evc>
-                <egress-bw-profile-per-evc>eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <ingress-bw-profile-per-evc>
+                  <envelope-id>ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</envelope-id>
+                  <bw-profile>high2-bwp-uni</bw-profile>
+                </ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>
+                  <envelope-id>eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</envelope-id>
+                  <bw-profile>high2-bwp-uni</bw-profile>
+                </egress-bw-profile-per-evc>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -9934,8 +10014,14 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <ingress-bw-profile-per-evc>ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</ingress-bw-profile-per-evc>
-                <egress-bw-profile-per-evc>eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <ingress-bw-profile-per-evc>
+                  <envelope-id>ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</envelope-id>
+                  <bw-profile>low1-bwp-uni</bw-profile>
+                </ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>
+                  <envelope-id>eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</envelope-id>
+                  <bw-profile>low1-bwp-uni</bw-profile>
+                </egress-bw-profile-per-evc>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -9953,8 +10039,14 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table14</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <ingress-bw-profile-per-evc>ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</ingress-bw-profile-per-evc>
-                <egress-bw-profile-per-evc>eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <ingress-bw-profile-per-evc>
+                  <envelope-id>ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</envelope-id>
+                  <bw-profile>low2-bwp-uni</bw-profile>
+                </ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>
+                  <envelope-id>eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</envelope-id>
+                  <bw-profile>low2-bwp-uni</bw-profile>
+                </egress-bw-profile-per-evc>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -10009,8 +10101,14 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <ingress-bw-profile-per-evc>ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</ingress-bw-profile-per-evc>
-                <egress-bw-profile-per-evc>eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <ingress-bw-profile-per-evc>
+                  <envelope-id>ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</envelope-id>
+                  <bw-profile>medium1-bwp-uni</bw-profile>
+                </ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>
+                  <envelope-id>eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</envelope-id>
+                  <bw-profile>medium1-bwp-uni</bw-profile>
+                </egress-bw-profile-per-evc>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -10028,8 +10126,14 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table13</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <ingress-bw-profile-per-evc>ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</ingress-bw-profile-per-evc>
-                <egress-bw-profile-per-evc>eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <ingress-bw-profile-per-evc>
+                  <envelope-id>ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</envelope-id>
+                  <bw-profile>medium3-bwp-uni</bw-profile>
+                </ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>
+                  <envelope-id>eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</envelope-id>
+                  <bw-profile>medium3-bwp-uni</bw-profile>
+                </egress-bw-profile-per-evc>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -10153,14 +10257,16 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EPTREE_UNI552_EVC-0001911_Krypton</bw-profile>
+                    <envelope-id>ienv_EPTREE_UNI552_EVC-0001911_Krypton</envelope-id>
+                    <bw-profile>itest-bwp1</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>Sophomore</eec-name>
-                    <bw-profile>eenv_EPTREE_UNI552_EVC-0001911_Sophomore</bw-profile>
+                    <envelope-id>eenv_EPTREE_UNI552_EVC-0001911_Sophomore</envelope-id>
+                    <bw-profile>etest-bwp1</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>root</role>
@@ -10184,14 +10290,16 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EPTREE_UNI662_EVC-0001911_Krypton</bw-profile>
+                    <envelope-id>ienv_EPTREE_UNI662_EVC-0001911_Krypton</envelope-id>
+                    <bw-profile>itest-bwp2</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>Sophomore</eec-name>
-                    <bw-profile>eenv_EPTREE_UNI662_EVC-0001911_Sophomore</bw-profile>
+                    <envelope-id>eenv_EPTREE_UNI662_EVC-0001911_Sophomore</envelope-id>
+                    <bw-profile>etest-bwp2</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>leaf</role>
@@ -10215,14 +10323,16 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EPTREE_UNI772_EVC-0001911_Krypton</bw-profile>
+                    <envelope-id>ienv_EPTREE_UNI772_EVC-0001911_Krypton</envelope-id>
+                    <bw-profile>itest-bwp1</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>Sophomore</eec-name>
-                    <bw-profile>eenv_EPTREE_UNI772_EVC-0001911_Sophomore</bw-profile>
+                    <envelope-id>eenv_EPTREE_UNI772_EVC-0001911_Sophomore</envelope-id>
+                    <bw-profile>etest-bwp1</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>leaf</role>
@@ -10246,14 +10356,16 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EPTREE_UNI882_EVC-0001911_Krypton</bw-profile>
+                    <envelope-id>ienv_EPTREE_UNI882_EVC-0001911_Krypton</envelope-id>
+                    <bw-profile>itest-bwp2</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>Sophomore</eec-name>
-                    <bw-profile>eenv_EPTREE_UNI882_EVC-0001911_Sophomore</bw-profile>
+                    <envelope-id>eenv_EPTREE_UNI882_EVC-0001911_Sophomore</envelope-id>
+                    <bw-profile>etest-bwp2</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>leaf</role>
@@ -10370,30 +10482,36 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Argon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI553_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI553_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI553_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI553_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Neon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI553_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI553_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Argon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI553_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI553_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Krypton</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI553_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI553_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Neon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI553_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI553_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>root</role>
@@ -10429,30 +10547,36 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Argon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI663_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI663_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI663_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI663_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Neon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI663_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI663_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Argon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI663_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI663_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Krypton</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI663_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI663_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Neon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI663_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI663_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>root</role>
@@ -10488,30 +10612,36 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Argon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI773_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI773_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI773_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI773_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Neon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI773_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI773_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Argon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI773_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI773_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Krypton</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI773_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI773_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Neon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI773_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI773_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>root</role>
@@ -10547,30 +10677,36 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Argon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI883_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI883_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI883_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI883_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Neon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI883_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI883_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Argon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI883_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI883_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Krypton</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI883_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI883_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Neon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI883_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI883_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>root</role>
@@ -16247,14 +16383,16 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EPTREE_UNI552_EVC-0001911_Krypton</bw-profile>
+                    <envelope-id>ienv_EPTREE_UNI552_EVC-0001911_Krypton</envelope-id>
+                    <bw-profile>itest-bwp1</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>Sophomore</eec-name>
-                    <bw-profile>eenv_EPTREE_UNI552_EVC-0001911_Sophomore</bw-profile>
+                    <envelope-id>eenv_EPTREE_UNI552_EVC-0001911_Sophomore</envelope-id>
+                    <bw-profile>etest-bwp1</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>root</role>
@@ -16275,14 +16413,16 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EPTREE_UNI662_EVC-0001911_Krypton</bw-profile>
+                    <envelope-id>ienv_EPTREE_UNI662_EVC-0001911_Krypton</envelope-id>
+                    <bw-profile>itest-bwp2</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>Sophomore</eec-name>
-                    <bw-profile>eenv_EPTREE_UNI662_EVC-0001911_Sophomore</bw-profile>
+                    <envelope-id>eenv_EPTREE_UNI662_EVC-0001911_Sophomore</envelope-id>
+                    <bw-profile>etest-bwp2</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>leaf</role>
@@ -16303,14 +16443,16 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EPTREE_UNI772_EVC-0001911_Krypton</bw-profile>
+                    <envelope-id>ienv_EPTREE_UNI772_EVC-0001911_Krypton</envelope-id>
+                    <bw-profile>itest-bwp1</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>Sophomore</eec-name>
-                    <bw-profile>eenv_EPTREE_UNI772_EVC-0001911_Sophomore</bw-profile>
+                    <envelope-id>eenv_EPTREE_UNI772_EVC-0001911_Sophomore</envelope-id>
+                    <bw-profile>etest-bwp1</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>leaf</role>
@@ -16331,14 +16473,16 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EPTREE_UNI882_EVC-0001911_Krypton</bw-profile>
+                    <envelope-id>ienv_EPTREE_UNI882_EVC-0001911_Krypton</envelope-id>
+                    <bw-profile>itest-bwp2</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>Sophomore</eec-name>
-                    <bw-profile>eenv_EPTREE_UNI882_EVC-0001911_Sophomore</bw-profile>
+                    <envelope-id>eenv_EPTREE_UNI882_EVC-0001911_Sophomore</envelope-id>
+                    <bw-profile>etest-bwp2</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>leaf</role>
@@ -16729,8 +16873,14 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <ingress-bw-profile-per-evc>ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</ingress-bw-profile-per-evc>
-                <egress-bw-profile-per-evc>eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <ingress-bw-profile-per-evc>
+                  <envelope-id>ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</envelope-id>
+                  <bw-profile>low1-bwp-uni</bw-profile>
+                </ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>
+                  <envelope-id>eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</envelope-id>
+                  <bw-profile>low1-bwp-uni</bw-profile>
+                </egress-bw-profile-per-evc>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
               <end-point>
@@ -16745,8 +16895,14 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table14</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <ingress-bw-profile-per-evc>ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</ingress-bw-profile-per-evc>
-                <egress-bw-profile-per-evc>eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <ingress-bw-profile-per-evc>
+                  <envelope-id>ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</envelope-id>
+                  <bw-profile>low2-bwp-uni</bw-profile>
+                </ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>
+                  <envelope-id>eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</envelope-id>
+                  <bw-profile>low2-bwp-uni</bw-profile>
+                </egress-bw-profile-per-evc>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
             </end-points>
@@ -16794,8 +16950,14 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <ingress-bw-profile-per-evc>ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</ingress-bw-profile-per-evc>
-                <egress-bw-profile-per-evc>eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <ingress-bw-profile-per-evc>
+                  <envelope-id>ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</envelope-id>
+                  <bw-profile>medium1-bwp-uni</bw-profile>
+                </ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>
+                  <envelope-id>eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</envelope-id>
+                  <bw-profile>medium1-bwp-uni</bw-profile>
+                </egress-bw-profile-per-evc>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
               <end-point>
@@ -16810,8 +16972,14 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table13</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <ingress-bw-profile-per-evc>ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</ingress-bw-profile-per-evc>
-                <egress-bw-profile-per-evc>eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <ingress-bw-profile-per-evc>
+                  <envelope-id>ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</envelope-id>
+                  <bw-profile>medium3-bwp-uni</bw-profile>
+                </ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>
+                  <envelope-id>eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</envelope-id>
+                  <bw-profile>medium3-bwp-uni</bw-profile>
+                </egress-bw-profile-per-evc>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
             </end-points>
@@ -16840,8 +17008,14 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <ingress-bw-profile-per-evc>ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</ingress-bw-profile-per-evc>
-                <egress-bw-profile-per-evc>eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <ingress-bw-profile-per-evc>
+                  <envelope-id>ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</envelope-id>
+                  <bw-profile>high1-bwp-uni</bw-profile>
+                </ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>
+                  <envelope-id>eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</envelope-id>
+                  <bw-profile>high1-bwp-uni</bw-profile>
+                </egress-bw-profile-per-evc>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
               <end-point>
@@ -16856,8 +17030,14 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table13</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <ingress-bw-profile-per-evc>ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</ingress-bw-profile-per-evc>
-                <egress-bw-profile-per-evc>eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</egress-bw-profile-per-evc>
+                <ingress-bw-profile-per-evc>
+                  <envelope-id>ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</envelope-id>
+                  <bw-profile>high2-bwp-uni</bw-profile>
+                </ingress-bw-profile-per-evc>
+                <egress-bw-profile-per-evc>
+                  <envelope-id>eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</envelope-id>
+                  <bw-profile>high2-bwp-uni</bw-profile>
+                </egress-bw-profile-per-evc>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
             </end-points>
@@ -17378,30 +17558,36 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Argon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI553_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI553_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI553_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI553_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Neon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI553_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI553_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Argon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI553_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI553_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Krypton</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI553_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI553_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Neon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI553_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI553_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>root</role>
@@ -17434,30 +17620,36 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Argon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI663_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI663_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI663_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI663_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Neon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI663_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI663_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Argon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI663_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI663_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Krypton</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI663_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI663_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Neon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI663_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI663_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>root</role>
@@ -17490,30 +17682,36 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Argon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI773_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI773_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI773_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI773_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Neon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI773_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI773_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Argon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI773_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI773_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Krypton</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI773_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI773_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Neon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI773_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI773_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>root</role>
@@ -17546,30 +17744,36 @@ MEF GET Config ALLs
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-cos>
                     <cos-name>Argon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI883_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI883_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Krypton</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI883_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI883_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                   <bwp-flow-per-cos>
                     <cos-name>Neon</cos-name>
-                    <bw-profile>ienv_EVPLAN_UNI883_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>ienv_EVPLAN_UNI883_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low1-bwp-uni</bw-profile>
                   </bwp-flow-per-cos>
                 </ingress-bwp-flows-per-cos>
                 <egress-bwp-flows-per-eec>
                   <coupling-enabled>false</coupling-enabled>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Argon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI883_EVC-0001944_Argon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI883_EVC-0001944_Argon</envelope-id>
+                    <bw-profile>medium2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Krypton</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI883_EVC-0001944_Krypton</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI883_EVC-0001944_Krypton</envelope-id>
+                    <bw-profile>high2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                   <bwp-flow-per-eec>
                     <eec-name>EEC-Neon</eec-name>
-                    <bw-profile>eenv_EVPLAN_UNI883_EVC-0001944_Neon</bw-profile>
+                    <envelope-id>eenv_EVPLAN_UNI883_EVC-0001944_Neon</envelope-id>
+                    <bw-profile>low2-bwp-uni</bw-profile>
                   </bwp-flow-per-eec>
                 </egress-bwp-flows-per-eec>
                 <role>root</role>

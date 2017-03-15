@@ -497,6 +497,42 @@ else
    echo 'Test MEF 10.3 [R112B]: PASS';
 fi
 
+# Test for MEF 10.3 [R135A]. All Bandwidth Profile Flows in an Envelope MUST satisfy the same criterion in [R134] (A UNI cannot be configured with a mix of EVC ingress-bwp-flows-per-cos and ingress-bw-profile-per-evc in the same BWP Envelope. This implies configuration from two multiplexed EVCs sharing a UNI.)
+
+# Test for MEF 10.3 [R135A].  This test should fail to commit with "TBD.".
+#{ ncs_cli -u admin -C << EOF;
+#config
+#no mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot2-Port3 ingress-bw-profile-per-evc
+#mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot2-Port3 ingress-bwp-flows-per-cos coupling-enabled false bwp-flow-per-cos Neon envelope-id ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART bw-profile medium3-bwp-uni
+#commit
+#end no-confirm
+#exit
+#EOF
+#} | grep 'Aborted:.*TBD.'
+#if [ $? != 0 ]; then
+#   echo 'Test MEF 10.3 [R135A]: FAIL - commit did not fail or did not fail as expected'; exit 1;
+#else
+#   echo 'Test MEF 10.3 [R135A]: PASS';
+#fi
+
+# Test for MEF 10.3 [R135B]. All Bandwidth Profile Flows in an Envelope MUST satisfy the same criterion in [R134] (A UNI cannot be configured with a mix of egress-bwp-flows-per-eec and egress-bw-profile-per-evc in the same BWP Envelope. This implies configuration from two multiplexed EVCs sharing a UNI.)
+
+# Test for MEF 10.3 [R135B].  This test should fail to commit with "TBD.".
+#{ ncs_cli -u admin -C << EOF;
+#config
+#no mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot2-Port3 egress-bw-profile-per-evc
+#mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot2-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Neon envelope-id eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART bw-profile medium3-bwp-uni
+#commit
+#end no-confirm
+#exit
+#EOF
+#} | grep 'Aborted:.*TBD.'
+#if [ $? != 0 ]; then
+#   echo 'Test MEF 10.3 [R135B]: FAIL - commit did not fail or did not fail as expected'; exit 1;
+#else
+#   echo 'Test MEF 10.3 [R135B]: PASS';
+#fi
+
 # Test for MEF 10.3 [R140]. Character Restriction Tests are TBD.
 
 # Test for MEF 10.3 [R142A].  This test should fail to commit with "When only one Bandwidth Profile Flow is mapped to an envelope, Envelope Coupling must be Disabled.".
@@ -580,7 +616,7 @@ fi
 # Test for MEF 10.3 [O8B].  This test should fail to commit with "If there is a per EVC Ingress Bandwidth Profile on an EVC, then there cannot be any per Class of Service Ingress Bandwidth Profiles on that EVC.".
 { ncs_cli -u admin -C << EOF;
 config
-mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 ingress-bw-profile-per-evc ienv_EVPLAN_UNI553_EVC-0001944_Neon
+mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 ingress-bw-profile-per-evc envelope-id ienv_EVPLAN_UNI553_EVC-0001944_Neon bw-profile low1-bwp-uni 
 commit
 end no-confirm
 exit
@@ -610,7 +646,7 @@ fi
 # Test for MEF 10.3 [O9B].  This test should fail to commit with "If there is a per EVC Egress Bandwidth Profile on an EVC, then there cannot be any per Egress Equivalence Class Identifier Bandwidth Profiles on that EVC.".
 { ncs_cli -u admin -C << EOF;
 config
-mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 egress-bw-profile-per-evc eenv_EVPLAN_UNI553_EVC-0001944_Neon
+mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 egress-bw-profile-per-evc envelope-id eenv_EVPLAN_UNI553_EVC-0001944_Neon bw-profile low2-bwp-uni
 commit
 end no-confirm
 exit
@@ -754,7 +790,7 @@ fi
 config
 no mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 egress-bw-profile-per-uni
 mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 egress-envelopes envelope eenv_EPL_UNI001_EVC-0001898_Neon coupling-enabled false bwp-flows bwp-flow low1-bwp-uni
-mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec EEC-Neon bw-profile eenv_EPL_UNI001_EVC-0001898_Neon
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec EEC-Neon envelope-id eenv_EPL_UNI001_EVC-0001898_Neon bw-profile low1-bwp-uni
 commit
 end no-confirm
 exit

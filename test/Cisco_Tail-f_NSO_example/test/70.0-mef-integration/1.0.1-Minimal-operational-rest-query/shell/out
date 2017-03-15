@@ -6414,8 +6414,14 @@
                   "color-identifier": "dscp",
                   "cos-identifier": "MEF103_Table23",
                   "eec-identifier": "MEF103_Table23",
-                  "ingress-bw-profile-per-evc": "ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART",
-                  "egress-bw-profile-per-evc": "eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART",
+                  "ingress-bw-profile-per-evc": {
+                    "envelope-id": "ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART",
+                    "bw-profile": "high1-bwp-uni"
+                  },
+                  "egress-bw-profile-per-evc": {
+                    "envelope-id": "eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART",
+                    "bw-profile": "high1-bwp-uni"
+                  },
                   "source-mac-address-limit-enabled": false
                 },
                 {
@@ -7015,8 +7021,14 @@
                   "color-identifier": "pcp",
                   "cos-identifier": "MEF103_Table13",
                   "eec-identifier": "MEF62_ApdxA",
-                  "ingress-bw-profile-per-evc": "ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART",
-                  "egress-bw-profile-per-evc": "eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART",
+                  "ingress-bw-profile-per-evc": {
+                    "envelope-id": "ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART",
+                    "bw-profile": "high2-bwp-uni"
+                  },
+                  "egress-bw-profile-per-evc": {
+                    "envelope-id": "eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART",
+                    "bw-profile": "high2-bwp-uni"
+                  },
                   "source-mac-address-limit-enabled": false
                 }
               ]
@@ -7684,8 +7696,14 @@
                   "color-identifier": "dscp",
                   "cos-identifier": "MEF103_Table23",
                   "eec-identifier": "MEF103_Table23",
-                  "ingress-bw-profile-per-evc": "ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART",
-                  "egress-bw-profile-per-evc": "eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART",
+                  "ingress-bw-profile-per-evc": {
+                    "envelope-id": "ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART",
+                    "bw-profile": "low1-bwp-uni"
+                  },
+                  "egress-bw-profile-per-evc": {
+                    "envelope-id": "eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART",
+                    "bw-profile": "low1-bwp-uni"
+                  },
                   "source-mac-address-limit-enabled": false
                 },
                 {
@@ -7705,8 +7723,14 @@
                   "color-identifier": "pcp",
                   "cos-identifier": "MEF103_Table14",
                   "eec-identifier": "MEF62_ApdxA",
-                  "ingress-bw-profile-per-evc": "ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART",
-                  "egress-bw-profile-per-evc": "eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART",
+                  "ingress-bw-profile-per-evc": {
+                    "envelope-id": "ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART",
+                    "bw-profile": "low2-bwp-uni"
+                  },
+                  "egress-bw-profile-per-evc": {
+                    "envelope-id": "eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART",
+                    "bw-profile": "low2-bwp-uni"
+                  },
                   "source-mac-address-limit-enabled": false
                 }
               ]
@@ -7865,8 +7889,14 @@
                   "color-identifier": "dscp",
                   "cos-identifier": "MEF103_Table23",
                   "eec-identifier": "MEF103_Table23",
-                  "ingress-bw-profile-per-evc": "ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART",
-                  "egress-bw-profile-per-evc": "eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART",
+                  "ingress-bw-profile-per-evc": {
+                    "envelope-id": "ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART",
+                    "bw-profile": "medium1-bwp-uni"
+                  },
+                  "egress-bw-profile-per-evc": {
+                    "envelope-id": "eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART",
+                    "bw-profile": "medium1-bwp-uni"
+                  },
                   "source-mac-address-limit-enabled": false
                 },
                 {
@@ -7886,8 +7916,14 @@
                   "color-identifier": "pcp",
                   "cos-identifier": "MEF103_Table13",
                   "eec-identifier": "MEF62_ApdxA",
-                  "ingress-bw-profile-per-evc": "ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART",
-                  "egress-bw-profile-per-evc": "eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART",
+                  "ingress-bw-profile-per-evc": {
+                    "envelope-id": "ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART",
+                    "bw-profile": "medium3-bwp-uni"
+                  },
+                  "egress-bw-profile-per-evc": {
+                    "envelope-id": "eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART",
+                    "bw-profile": "medium3-bwp-uni"
+                  },
                   "source-mac-address-limit-enabled": false
                 }
               ]
@@ -8025,7 +8061,8 @@
                     "bwp-flow-per-cos": [
                       {
                         "cos-name": "Krypton",
-                        "bw-profile": "ienv_EPTREE_UNI552_EVC-0001911_Krypton"
+                        "envelope-id": "ienv_EPTREE_UNI552_EVC-0001911_Krypton",
+                        "bw-profile": "itest-bwp1"
                       }
                     ]
                   },
@@ -8034,7 +8071,8 @@
                     "bwp-flow-per-eec": [
                       {
                         "eec-name": "Sophomore",
-                        "bw-profile": "eenv_EPTREE_UNI552_EVC-0001911_Sophomore"
+                        "envelope-id": "eenv_EPTREE_UNI552_EVC-0001911_Sophomore",
+                        "bw-profile": "etest-bwp1"
                       }
                     ]
                   },
@@ -8062,7 +8100,8 @@
                     "bwp-flow-per-cos": [
                       {
                         "cos-name": "Krypton",
-                        "bw-profile": "ienv_EPTREE_UNI662_EVC-0001911_Krypton"
+                        "envelope-id": "ienv_EPTREE_UNI662_EVC-0001911_Krypton",
+                        "bw-profile": "itest-bwp2"
                       }
                     ]
                   },
@@ -8071,7 +8110,8 @@
                     "bwp-flow-per-eec": [
                       {
                         "eec-name": "Sophomore",
-                        "bw-profile": "eenv_EPTREE_UNI662_EVC-0001911_Sophomore"
+                        "envelope-id": "eenv_EPTREE_UNI662_EVC-0001911_Sophomore",
+                        "bw-profile": "etest-bwp2"
                       }
                     ]
                   },
@@ -8099,7 +8139,8 @@
                     "bwp-flow-per-cos": [
                       {
                         "cos-name": "Krypton",
-                        "bw-profile": "ienv_EPTREE_UNI772_EVC-0001911_Krypton"
+                        "envelope-id": "ienv_EPTREE_UNI772_EVC-0001911_Krypton",
+                        "bw-profile": "itest-bwp1"
                       }
                     ]
                   },
@@ -8108,7 +8149,8 @@
                     "bwp-flow-per-eec": [
                       {
                         "eec-name": "Sophomore",
-                        "bw-profile": "eenv_EPTREE_UNI772_EVC-0001911_Sophomore"
+                        "envelope-id": "eenv_EPTREE_UNI772_EVC-0001911_Sophomore",
+                        "bw-profile": "etest-bwp1"
                       }
                     ]
                   },
@@ -8136,7 +8178,8 @@
                     "bwp-flow-per-cos": [
                       {
                         "cos-name": "Krypton",
-                        "bw-profile": "ienv_EPTREE_UNI882_EVC-0001911_Krypton"
+                        "envelope-id": "ienv_EPTREE_UNI882_EVC-0001911_Krypton",
+                        "bw-profile": "itest-bwp2"
                       }
                     ]
                   },
@@ -8145,7 +8188,8 @@
                     "bwp-flow-per-eec": [
                       {
                         "eec-name": "Sophomore",
-                        "bw-profile": "eenv_EPTREE_UNI882_EVC-0001911_Sophomore"
+                        "envelope-id": "eenv_EPTREE_UNI882_EVC-0001911_Sophomore",
+                        "bw-profile": "etest-bwp2"
                       }
                     ]
                   },
@@ -8282,15 +8326,18 @@
                     "bwp-flow-per-cos": [
                       {
                         "cos-name": "Argon",
-                        "bw-profile": "ienv_EVPLAN_UNI553_EVC-0001944_Argon"
+                        "envelope-id": "ienv_EVPLAN_UNI553_EVC-0001944_Argon",
+                        "bw-profile": "medium1-bwp-uni"
                       },
                       {
                         "cos-name": "Krypton",
-                        "bw-profile": "ienv_EVPLAN_UNI553_EVC-0001944_Krypton"
+                        "envelope-id": "ienv_EVPLAN_UNI553_EVC-0001944_Krypton",
+                        "bw-profile": "high1-bwp-uni"
                       },
                       {
                         "cos-name": "Neon",
-                        "bw-profile": "ienv_EVPLAN_UNI553_EVC-0001944_Neon"
+                        "envelope-id": "ienv_EVPLAN_UNI553_EVC-0001944_Neon",
+                        "bw-profile": "low1-bwp-uni"
                       }
                     ]
                   },
@@ -8299,15 +8346,18 @@
                     "bwp-flow-per-eec": [
                       {
                         "eec-name": "EEC-Argon",
-                        "bw-profile": "eenv_EVPLAN_UNI553_EVC-0001944_Argon"
+                        "envelope-id": "eenv_EVPLAN_UNI553_EVC-0001944_Argon",
+                        "bw-profile": "medium2-bwp-uni"
                       },
                       {
                         "eec-name": "EEC-Krypton",
-                        "bw-profile": "eenv_EVPLAN_UNI553_EVC-0001944_Krypton"
+                        "envelope-id": "eenv_EVPLAN_UNI553_EVC-0001944_Krypton",
+                        "bw-profile": "high2-bwp-uni"
                       },
                       {
                         "eec-name": "EEC-Neon",
-                        "bw-profile": "eenv_EVPLAN_UNI553_EVC-0001944_Neon"
+                        "envelope-id": "eenv_EVPLAN_UNI553_EVC-0001944_Neon",
+                        "bw-profile": "low2-bwp-uni"
                       }
                     ]
                   },
@@ -8347,15 +8397,18 @@
                     "bwp-flow-per-cos": [
                       {
                         "cos-name": "Argon",
-                        "bw-profile": "ienv_EVPLAN_UNI663_EVC-0001944_Argon"
+                        "envelope-id": "ienv_EVPLAN_UNI663_EVC-0001944_Argon",
+                        "bw-profile": "medium1-bwp-uni"
                       },
                       {
                         "cos-name": "Krypton",
-                        "bw-profile": "ienv_EVPLAN_UNI663_EVC-0001944_Krypton"
+                        "envelope-id": "ienv_EVPLAN_UNI663_EVC-0001944_Krypton",
+                        "bw-profile": "high1-bwp-uni"
                       },
                       {
                         "cos-name": "Neon",
-                        "bw-profile": "ienv_EVPLAN_UNI663_EVC-0001944_Neon"
+                        "envelope-id": "ienv_EVPLAN_UNI663_EVC-0001944_Neon",
+                        "bw-profile": "low1-bwp-uni"
                       }
                     ]
                   },
@@ -8364,15 +8417,18 @@
                     "bwp-flow-per-eec": [
                       {
                         "eec-name": "EEC-Argon",
-                        "bw-profile": "eenv_EVPLAN_UNI663_EVC-0001944_Argon"
+                        "envelope-id": "eenv_EVPLAN_UNI663_EVC-0001944_Argon",
+                        "bw-profile": "medium2-bwp-uni"
                       },
                       {
                         "eec-name": "EEC-Krypton",
-                        "bw-profile": "eenv_EVPLAN_UNI663_EVC-0001944_Krypton"
+                        "envelope-id": "eenv_EVPLAN_UNI663_EVC-0001944_Krypton",
+                        "bw-profile": "high2-bwp-uni"
                       },
                       {
                         "eec-name": "EEC-Neon",
-                        "bw-profile": "eenv_EVPLAN_UNI663_EVC-0001944_Neon"
+                        "envelope-id": "eenv_EVPLAN_UNI663_EVC-0001944_Neon",
+                        "bw-profile": "low2-bwp-uni"
                       }
                     ]
                   },
@@ -8412,15 +8468,18 @@
                     "bwp-flow-per-cos": [
                       {
                         "cos-name": "Argon",
-                        "bw-profile": "ienv_EVPLAN_UNI773_EVC-0001944_Argon"
+                        "envelope-id": "ienv_EVPLAN_UNI773_EVC-0001944_Argon",
+                        "bw-profile": "medium1-bwp-uni"
                       },
                       {
                         "cos-name": "Krypton",
-                        "bw-profile": "ienv_EVPLAN_UNI773_EVC-0001944_Krypton"
+                        "envelope-id": "ienv_EVPLAN_UNI773_EVC-0001944_Krypton",
+                        "bw-profile": "high1-bwp-uni"
                       },
                       {
                         "cos-name": "Neon",
-                        "bw-profile": "ienv_EVPLAN_UNI773_EVC-0001944_Neon"
+                        "envelope-id": "ienv_EVPLAN_UNI773_EVC-0001944_Neon",
+                        "bw-profile": "low1-bwp-uni"
                       }
                     ]
                   },
@@ -8429,15 +8488,18 @@
                     "bwp-flow-per-eec": [
                       {
                         "eec-name": "EEC-Argon",
-                        "bw-profile": "eenv_EVPLAN_UNI773_EVC-0001944_Argon"
+                        "envelope-id": "eenv_EVPLAN_UNI773_EVC-0001944_Argon",
+                        "bw-profile": "medium2-bwp-uni"
                       },
                       {
                         "eec-name": "EEC-Krypton",
-                        "bw-profile": "eenv_EVPLAN_UNI773_EVC-0001944_Krypton"
+                        "envelope-id": "eenv_EVPLAN_UNI773_EVC-0001944_Krypton",
+                        "bw-profile": "high2-bwp-uni"
                       },
                       {
                         "eec-name": "EEC-Neon",
-                        "bw-profile": "eenv_EVPLAN_UNI773_EVC-0001944_Neon"
+                        "envelope-id": "eenv_EVPLAN_UNI773_EVC-0001944_Neon",
+                        "bw-profile": "low2-bwp-uni"
                       }
                     ]
                   },
@@ -8477,15 +8539,18 @@
                     "bwp-flow-per-cos": [
                       {
                         "cos-name": "Argon",
-                        "bw-profile": "ienv_EVPLAN_UNI883_EVC-0001944_Argon"
+                        "envelope-id": "ienv_EVPLAN_UNI883_EVC-0001944_Argon",
+                        "bw-profile": "medium1-bwp-uni"
                       },
                       {
                         "cos-name": "Krypton",
-                        "bw-profile": "ienv_EVPLAN_UNI883_EVC-0001944_Krypton"
+                        "envelope-id": "ienv_EVPLAN_UNI883_EVC-0001944_Krypton",
+                        "bw-profile": "high1-bwp-uni"
                       },
                       {
                         "cos-name": "Neon",
-                        "bw-profile": "ienv_EVPLAN_UNI883_EVC-0001944_Neon"
+                        "envelope-id": "ienv_EVPLAN_UNI883_EVC-0001944_Neon",
+                        "bw-profile": "low1-bwp-uni"
                       }
                     ]
                   },
@@ -8494,15 +8559,18 @@
                     "bwp-flow-per-eec": [
                       {
                         "eec-name": "EEC-Argon",
-                        "bw-profile": "eenv_EVPLAN_UNI883_EVC-0001944_Argon"
+                        "envelope-id": "eenv_EVPLAN_UNI883_EVC-0001944_Argon",
+                        "bw-profile": "medium2-bwp-uni"
                       },
                       {
                         "eec-name": "EEC-Krypton",
-                        "bw-profile": "eenv_EVPLAN_UNI883_EVC-0001944_Krypton"
+                        "envelope-id": "eenv_EVPLAN_UNI883_EVC-0001944_Krypton",
+                        "bw-profile": "high2-bwp-uni"
                       },
                       {
                         "eec-name": "EEC-Neon",
-                        "bw-profile": "eenv_EVPLAN_UNI883_EVC-0001944_Neon"
+                        "envelope-id": "eenv_EVPLAN_UNI883_EVC-0001944_Neon",
+                        "bw-profile": "low2-bwp-uni"
                       }
                     ]
                   },
