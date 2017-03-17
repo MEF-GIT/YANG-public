@@ -64,14 +64,6 @@ Aborted: 'mef-interfaces unis uni MMPOP1-ce2-Slot2-Port1 egress-envelopes envelo
 Test MEF 10.3 [R150A]: PASS
 Aborted: 'mef-interfaces unis uni MMPOP1-ce2-Slot2-Port1 ingress-envelopes envelope MM_EPL_Medium bwp-flows bwp-flow high1-bwp-uni bw-profile' (value "high1-bwp-uni"): If an Ingress Envelope's Coupling Flag is Enabled, then the Coupling Flags must be disabled for all Bandwidth Profile Flows mapped to the Envelope.
 Test MEF 10.3 [R150B]: PASS
-Aborted: 'mef-interfaces unis uni MMPOP1-ce8-Slot8-Port3' : If there is a per UNI Ingress Bandwidth Profile, then there cannot be any other Ingress Bandwidth Profiles at that UNI.
-Test MEF 10.3 [O8A]: PASS
-Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3' : If there is a per EVC Ingress Bandwidth Profile on an EVC, then there cannot be any per Class of Service Ingress Bandwidth Profiles on that EVC.
-Test MEF 10.3 [O8B]: PASS
-Aborted: 'mef-interfaces unis uni MMPOP1-ce8-Slot8-Port3' : If there is a per UNI Egress Bandwidth Profile, then there cannot be any other Egress Bandwidth Profiles at that UNI.
-Test MEF 10.3 [O9A]: PASS
-Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3' : If there is a per EVC Egress Bandwidth Profile on an EVC, then there cannot be any per Egress Equivalence Class Identifier Bandwidth Profiles on that EVC.
-Test MEF 10.3 [O9B]: PASS
 
 MEF 6.2 EPL Testing
 

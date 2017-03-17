@@ -2405,6 +2405,8 @@
               <vid>102</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
@@ -2419,8 +2421,6 @@
           <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled>true</token-share-enabled>
-          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled>true</elmi-enabled>
@@ -2455,6 +2455,8 @@
               <vid>802</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
@@ -2469,8 +2471,6 @@
           <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled>true</token-share-enabled>
-          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled>true</elmi-enabled>
@@ -2608,6 +2608,8 @@
               <vid>102</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
@@ -2622,8 +2624,6 @@
           <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
-          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled wd:default="true">false</elmi-enabled>
@@ -2788,6 +2788,8 @@
               <vid>802</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
@@ -2802,8 +2804,6 @@
           <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
-          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled wd:default="true">false</elmi-enabled>
@@ -3177,6 +3177,8 @@
               <vid>1</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>medium1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>medium2-bwp-uni</egress-bw-profile-per-uni>
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
@@ -3191,8 +3193,6 @@
           <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
-          <ingress-bw-profile-per-uni>medium1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>medium2-bwp-uni</egress-bw-profile-per-uni>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled>true</elmi-enabled>
@@ -3426,6 +3426,8 @@
               <vid>1</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>low1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>low2-bwp-uni</egress-bw-profile-per-uni>
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
@@ -3440,8 +3442,6 @@
           <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
-          <ingress-bw-profile-per-uni>low1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>low2-bwp-uni</egress-bw-profile-per-uni>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled wd:default="true">false</elmi-enabled>
@@ -3636,6 +3636,8 @@
               <vid>1</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>high2-bwp-uni</egress-bw-profile-per-uni>
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
@@ -3650,8 +3652,6 @@
           <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
-          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>high2-bwp-uni</egress-bw-profile-per-uni>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled wd:default="true">false</elmi-enabled>
@@ -8366,6 +8366,8 @@
               <vid>102</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
@@ -8380,8 +8382,6 @@
           <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled>true</token-share-enabled>
-          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled>true</elmi-enabled>
@@ -8416,6 +8416,8 @@
               <vid>102</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <status>
             <operational-state>false</operational-state>
             <number-of-links>0</number-of-links>
@@ -8430,8 +8432,6 @@
           <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
-          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled wd:default="true">false</elmi-enabled>
