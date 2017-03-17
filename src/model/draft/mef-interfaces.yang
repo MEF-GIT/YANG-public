@@ -99,28 +99,6 @@ module mef-interfaces {
       description
         "User Network Interface(UNI).";
       list uni {
-        must "not(./ingress-bw-profile-per-uni) or " +
-        		"((./ingress-bw-profile-per-uni) and " +
-        		"not(./ingress-envelopes))" {
-          error-message "If there is a per UNI Ingress Bandwidth " +
-          		"Profile, then there cannot be any other Ingress " +
-          		"Bandwidth Profiles at that UNI.";
-          description
-            "MEF 10.3 [O8A] If there is a per UNI Ingress Bandwidth Profile, " +
-            "then there cannot be any other Ingress Bandwidth " +
-            "Profiles at that UNI.";
-        }
-        must "not(./egress-bw-profile-per-uni) or " +
-        		"((./egress-bw-profile-per-uni) and " +
-        		"not(./egress-envelopes))" {
-          error-message "If there is a per UNI Egress Bandwidth " +
-          		"Profile, then there cannot be any other Egress " +
-          		"Bandwidth Profiles at that UNI.";
-          description
-            "MEF 10.3 [O9A] If there is a per UNI Egress Bandwidth Profile, " +
-            "then there cannot be any other Egress Bandwidth " +
-            "Profiles at that UNI.";
-        }
         key "uni-id";
         description
           "MEF UNI List.";
@@ -276,7 +254,13 @@ module mef-interfaces {
             }
           }
         }
-        container ingress-envelopes {
+
+        choice ingress-bwp-options {
+         description "Choice to ensure one cannot configure BWP per-uni and envelopes at the same time.";
+         mandatory false;
+         case ingress-envelopes-options
+         {
+          container ingress-envelopes {
           presence "Ingress Bandwidth Profile Envelopes " +
           		"configured.";
           description
@@ -388,7 +372,31 @@ module mef-interfaces {
             }
           }
         }
-        container egress-envelopes {
+        } //end ingress envelope option case
+
+         case ingress-per-uni-option
+         {
+          leaf ingress-bw-profile-per-uni {
+          type leafref {
+            path "/mef-global:mef-global/mef-global:profiles/" +
+            		"mef-global:bwp-flows-parameter-set/mef-global:" +
+            		"bwp-flow-parameter-set/mef-global:bwp-flow-parameter-set-id";
+          }
+          description
+            "Ingress Bandwidth Profile for this UNI.";
+          reference "[MEF10.3] Section 9.15, Section 12.1. " +
+          		"[MEF6.2] Section 8.2.1: [R3]. " +
+          		"[MEF7.3] Section 10.2.2.";
+          }
+         } //end ingress-per-uni-option case
+        } //end ingress bwp choice
+
+        choice egress-bwp-options {
+         description "Choice to ensure one cannot configure BWP per-uni and envelopes at the same time.";
+         mandatory false;
+         case egress-envelopes-options
+         {
+          container egress-envelopes {
           presence "Egress Bandwidth Profile Envelopes configured.";
           description
             "UNI Bandwidth Profile Flow Envelopes.";
@@ -494,6 +502,26 @@ module mef-interfaces {
             }
           }
         }
+        } //end egress envelope option
+
+         case egress-per-uni-option
+         {
+
+          leaf egress-bw-profile-per-uni {
+          type leafref {
+            path "/mef-global:mef-global/mef-global:profiles/" +
+            		"mef-global:bwp-flows-parameter-set/mef-global:" +
+            		"bwp-flow-parameter-set/mef-global:bwp-flow-parameter-set-id";
+          }
+          description
+            "Egress Bandwidth Profile Flow for this UNI.";
+          reference "[MEF10.3] Section 9.15, Section 12.1. " +
+          		"[MEF6.2] Section 8.2.1: [R3]. " +
+          		"[MEF7.3] Section 10.2.2.";
+          }
+         } //end egress-per-uni-option
+        } //end egress bwp choice
+
         container status {
           description
             "This group is related to the MEF 7.3 External " +
@@ -649,31 +677,7 @@ module mef-interfaces {
             "Token Share Enabled/Disabled is used to indicate " +
             "whether a given UNI is capable of sharing tokens " +
             "across Bandwidth Profile Flows in an envelope.";
-          reference "[MEF6.2] Section 8.2.1, [R2], [D1], [R3]. " +
-          		"[MEF7.3] Section 10.2.2.";
-        }
-        leaf ingress-bw-profile-per-uni {
-          type leafref {
-            path "/mef-global:mef-global/mef-global:profiles/" +
-            		"mef-global:bwp-flows-parameter-set/mef-global:" +
-            		"bwp-flow-parameter-set/mef-global:bwp-flow-parameter-set-id";
-          }
-          description
-            "Ingress Bandwidth Profile for this UNI.";
-          reference "[MEF10.3] Section 9.15, Section 12.1. " +
-          		"[MEF6.2] Section 8.2.1: [R3]. " +
-          		"[MEF7.3] Section 10.2.2.";
-        }
-        leaf egress-bw-profile-per-uni {
-          type leafref {
-            path "/mef-global:mef-global/mef-global:profiles/" +
-            		"mef-global:bwp-flows-parameter-set/mef-global:" +
-            		"bwp-flow-parameter-set/mef-global:bwp-flow-parameter-set-id";
-          }
-          description
-            "Egress Bandwidth Profile Flow for this UNI.";
-          reference "[MEF10.3] Section 9.15, Section 12.1. " +
-          		"[MEF6.2] Section 8.2.1: [R3]. " +
+          reference "[MEF6.2] Section 8.2.1, [R2], [D1], [R3]. MEF 10.3 Section 12." +
           		"[MEF7.3] Section 10.2.2.";
         }
         leaf link-oam-enabled {

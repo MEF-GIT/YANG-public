@@ -597,67 +597,6 @@ if [ $? != 0 ]; then
 else
    echo 'Test MEF 10.3 [R150B]: PASS';
 fi
-
-# Test for MEF 10.3 [O8A].  This test should fail to commit with "If there is a per UNI Ingress Bandwidth Profile, then there cannot be any other Ingress Bandwidth Profiles at that UNI.".
-{ ncs_cli -u admin -C << EOF;
-config
-mef-interfaces unis uni MMPOP1-ce8-Slot8-Port3 ingress-bw-profile-per-uni high1-bwp-uni
-commit
-end no-confirm
-exit
-EOF
-} | grep 'Aborted:.*there cannot be any other Ingress Bandwidth Profiles at that UNI.'
-if [ $? != 0 ]; then
-   echo 'Test MEF 10.3 [O8A]: FAIL - commit did not fail or did not fail as expected'; exit 1;
-else
-   echo 'Test MEF 10.3 [O8A]: PASS';
-fi
-
-# Test for MEF 10.3 [O8B].  This test should fail to commit with "If there is a per EVC Ingress Bandwidth Profile on an EVC, then there cannot be any per Class of Service Ingress Bandwidth Profiles on that EVC.".
-{ ncs_cli -u admin -C << EOF;
-config
-mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 ingress-bw-profile-per-evc envelope-id ienv_EVPLAN_UNI553_EVC-0001944_Neon bw-profile low1-bwp-uni 
-commit
-end no-confirm
-exit
-EOF
-} | grep 'Aborted:.*there cannot be any per Class of Service Ingress Bandwidth Profiles on that EVC.'
-if [ $? != 0 ]; then
-   echo 'Test MEF 10.3 [O8B]: FAIL - commit did not fail or did not fail as expected'; exit 1;
-else
-   echo 'Test MEF 10.3 [O8B]: PASS';
-fi
-
-# Test for MEF 10.3 [O9A].  This test should fail to commit with "If there is a per UNI Egress Bandwidth Profile, then there cannot be any other Egress Bandwidth Profiles at that UNI.".
-{ ncs_cli -u admin -C << EOF;
-config
-mef-interfaces unis uni MMPOP1-ce8-Slot8-Port3 egress-bw-profile-per-uni high1-bwp-uni
-commit
-end no-confirm
-exit
-EOF
-} | grep 'Aborted:.*there cannot be any other Egress Bandwidth Profiles at that UNI.'
-if [ $? != 0 ]; then
-   echo 'Test MEF 10.3 [O9A]: FAIL - commit did not fail or did not fail as expected'; exit 1;
-else
-   echo 'Test MEF 10.3 [O9A]: PASS';
-fi
-
-# Test for MEF 10.3 [O9B].  This test should fail to commit with "If there is a per EVC Egress Bandwidth Profile on an EVC, then there cannot be any per Egress Equivalence Class Identifier Bandwidth Profiles on that EVC.".
-{ ncs_cli -u admin -C << EOF;
-config
-mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 egress-bw-profile-per-evc envelope-id eenv_EVPLAN_UNI553_EVC-0001944_Neon bw-profile low2-bwp-uni
-commit
-end no-confirm
-exit
-EOF
-} | grep 'Aborted:.*there cannot be any per Egress Equivalence Class Identifier Bandwidth Profiles on that EVC.'
-if [ $? != 0 ]; then
-   echo 'Test MEF 10.3 [O9B]: FAIL - commit did not fail or did not fail as expected'; exit 1;
-else
-   echo 'Test MEF 10.3 [O9B]: PASS';
-fi
-
 #  MEF 6.2 Tests
 
 echo "\nMEF 6.2 EPL Testing\n";

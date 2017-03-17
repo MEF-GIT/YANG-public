@@ -2237,13 +2237,13 @@ MEF GET Config ALLs
               <vid>102</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <admin-state annotation="EPL Use Case 1:">false</admin-state>
           <max-svc-frame-size>1600</max-svc-frame-size>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled>true</token-share-enabled>
-          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <elmi-enabled>true</elmi-enabled>
           <elmi-service-attribute>true</elmi-service-attribute>
           <l2cp-address-set>option2-blind-ctb2</l2cp-address-set>
@@ -2274,13 +2274,13 @@ MEF GET Config ALLs
               <vid>802</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <admin-state annotation="OTHER Use Case 1: This is just to show the other enumeration works as expected. I still set connection-type as point-to-point in this case">false</admin-state>
           <max-svc-frame-size>1600</max-svc-frame-size>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled>true</token-share-enabled>
-          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <elmi-enabled>true</elmi-enabled>
           <elmi-service-attribute>true</elmi-service-attribute>
           <l2cp-address-set>option2-blind-ctb2</l2cp-address-set>
@@ -2401,12 +2401,12 @@ MEF GET Config ALLs
               <vid>102</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <admin-state>false</admin-state>
           <max-svc-frame-size>1600</max-svc-frame-size>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
           <max-num-of-evcs>1</max-num-of-evcs>
-          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <l2cp-address-set>option2-blind-ctb2</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
         </uni>
@@ -2535,12 +2535,12 @@ MEF GET Config ALLs
               <vid>802</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <admin-state>false</admin-state>
           <max-svc-frame-size>1600</max-svc-frame-size>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
           <max-num-of-evcs>1</max-num-of-evcs>
-          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <l2cp-address-set>option2-blind-ctb2</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
         </uni>
@@ -2788,12 +2788,12 @@ MEF GET Config ALLs
               <vid>1</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>medium1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>medium2-bwp-uni</egress-bw-profile-per-uni>
           <admin-state>false</admin-state>
           <max-svc-frame-size annotation="EP-LAN Use Case 1:">1600</max-svc-frame-size>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
           <max-num-of-evcs>1</max-num-of-evcs>
-          <ingress-bw-profile-per-uni>medium1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>medium2-bwp-uni</egress-bw-profile-per-uni>
           <elmi-enabled>true</elmi-enabled>
           <elmi-service-attribute>true</elmi-service-attribute>
           <l2cp-address-set>blind-ctb</l2cp-address-set>
@@ -2983,12 +2983,12 @@ MEF GET Config ALLs
               <vid>1</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>low1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>low2-bwp-uni</egress-bw-profile-per-uni>
           <admin-state>false</admin-state>
           <max-svc-frame-size>1600</max-svc-frame-size>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
           <max-num-of-evcs>1</max-num-of-evcs>
-          <ingress-bw-profile-per-uni>low1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>low2-bwp-uni</egress-bw-profile-per-uni>
           <l2cp-address-set>blind-ctb</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
         </uni>
@@ -3149,12 +3149,12 @@ MEF GET Config ALLs
               <vid>1</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>high2-bwp-uni</egress-bw-profile-per-uni>
           <admin-state>false</admin-state>
           <max-svc-frame-size>1600</max-svc-frame-size>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
           <max-num-of-evcs>1</max-num-of-evcs>
-          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>high2-bwp-uni</egress-bw-profile-per-uni>
           <l2cp-address-set>blind-ctb</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
         </uni>
@@ -7753,6 +7753,8 @@ MEF GET Config ALLs
               <vid>102</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <admin-state annotation="EPL Use Case 1:">false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
           <max-svc-frame-size>1600</max-svc-frame-size>
@@ -7762,8 +7764,6 @@ MEF GET Config ALLs
           <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled>true</token-share-enabled>
-          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled>true</elmi-enabled>
@@ -7798,6 +7798,8 @@ MEF GET Config ALLs
               <vid>802</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <admin-state annotation="OTHER Use Case 1: This is just to show the other enumeration works as expected. I still set connection-type as point-to-point in this case">false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
           <max-svc-frame-size>1600</max-svc-frame-size>
@@ -7807,8 +7809,6 @@ MEF GET Config ALLs
           <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled>true</token-share-enabled>
-          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled>true</elmi-enabled>
@@ -7941,6 +7941,8 @@ MEF GET Config ALLs
               <vid>102</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
           <max-svc-frame-size>1600</max-svc-frame-size>
@@ -7950,8 +7952,6 @@ MEF GET Config ALLs
           <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
-          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled wd:default="true">false</elmi-enabled>
@@ -8106,6 +8106,8 @@ MEF GET Config ALLs
               <vid>802</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
           <max-svc-frame-size>1600</max-svc-frame-size>
@@ -8115,8 +8117,6 @@ MEF GET Config ALLs
           <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
-          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled wd:default="true">false</elmi-enabled>
@@ -8455,6 +8455,8 @@ MEF GET Config ALLs
               <vid>1</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>medium1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>medium2-bwp-uni</egress-bw-profile-per-uni>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
           <max-svc-frame-size annotation="EP-LAN Use Case 1:">1600</max-svc-frame-size>
@@ -8464,8 +8466,6 @@ MEF GET Config ALLs
           <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
-          <ingress-bw-profile-per-uni>medium1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>medium2-bwp-uni</egress-bw-profile-per-uni>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled>true</elmi-enabled>
@@ -8684,6 +8684,8 @@ MEF GET Config ALLs
               <vid>1</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>low1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>low2-bwp-uni</egress-bw-profile-per-uni>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
           <max-svc-frame-size>1600</max-svc-frame-size>
@@ -8693,8 +8695,6 @@ MEF GET Config ALLs
           <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
-          <ingress-bw-profile-per-uni>low1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>low2-bwp-uni</egress-bw-profile-per-uni>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled wd:default="true">false</elmi-enabled>
@@ -8879,6 +8879,8 @@ MEF GET Config ALLs
               <vid>1</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>high2-bwp-uni</egress-bw-profile-per-uni>
           <admin-state>false</admin-state>
           <link-aggregation wd:default="true">none</link-aggregation>
           <max-svc-frame-size>1600</max-svc-frame-size>
@@ -8888,8 +8890,6 @@ MEF GET Config ALLs
           <default-ce-vlan-id wd:default="true">1</default-ce-vlan-id>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled wd:default="true">false</token-share-enabled>
-          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>high2-bwp-uni</egress-bw-profile-per-uni>
           <link-oam-enabled wd:default="true">false</link-oam-enabled>
           <uni-meg-enabled wd:default="true">false</uni-meg-enabled>
           <elmi-enabled wd:default="true">false</elmi-enabled>
@@ -14164,13 +14164,13 @@ MEF GET Config ALLs
               <vid>102</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <admin-state annotation="EPL Use Case 1:">false</admin-state>
           <max-svc-frame-size>1600</max-svc-frame-size>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
           <max-num-of-evcs>1</max-num-of-evcs>
           <token-share-enabled>true</token-share-enabled>
-          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <elmi-enabled>true</elmi-enabled>
           <elmi-service-attribute>true</elmi-service-attribute>
           <l2cp-address-set>option2-blind-ctb2</l2cp-address-set>
@@ -14201,12 +14201,12 @@ MEF GET Config ALLs
               <vid>102</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <admin-state>false</admin-state>
           <max-svc-frame-size>1600</max-svc-frame-size>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
           <max-num-of-evcs>1</max-num-of-evcs>
-          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>high1-bwp-uni</egress-bw-profile-per-uni>
           <l2cp-address-set>option2-blind-ctb2</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
         </uni>
@@ -14359,12 +14359,12 @@ MEF GET Config ALLs
               <vid>1</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>medium1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>medium2-bwp-uni</egress-bw-profile-per-uni>
           <admin-state>false</admin-state>
           <max-svc-frame-size annotation="EP-LAN Use Case 1:">1600</max-svc-frame-size>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
           <max-num-of-evcs>1</max-num-of-evcs>
-          <ingress-bw-profile-per-uni>medium1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>medium2-bwp-uni</egress-bw-profile-per-uni>
           <elmi-enabled>true</elmi-enabled>
           <elmi-service-attribute>true</elmi-service-attribute>
           <l2cp-address-set>blind-ctb</l2cp-address-set>
@@ -14386,12 +14386,12 @@ MEF GET Config ALLs
               <vid>1</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>low1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>low2-bwp-uni</egress-bw-profile-per-uni>
           <admin-state>false</admin-state>
           <max-svc-frame-size>1600</max-svc-frame-size>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
           <max-num-of-evcs>1</max-num-of-evcs>
-          <ingress-bw-profile-per-uni>low1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>low2-bwp-uni</egress-bw-profile-per-uni>
           <l2cp-address-set>blind-ctb</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
         </uni>
@@ -14411,12 +14411,12 @@ MEF GET Config ALLs
               <vid>1</vid>
             </ce-vlan>
           </ce-vlans>
+          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
+          <egress-bw-profile-per-uni>high2-bwp-uni</egress-bw-profile-per-uni>
           <admin-state>false</admin-state>
           <max-svc-frame-size>1600</max-svc-frame-size>
           <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
           <max-num-of-evcs>1</max-num-of-evcs>
-          <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
-          <egress-bw-profile-per-uni>high2-bwp-uni</egress-bw-profile-per-uni>
           <l2cp-address-set>blind-ctb</l2cp-address-set>
           <l2cp-peering>L2CP_Peering_Profile1</l2cp-peering>
         </uni>
