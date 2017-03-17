@@ -4898,11 +4898,6 @@
                       }
                     ]
                   },
-                  "role": "root",
-                  "admin-state": false,
-                  "color-identifier": "dscp",
-                  "cos-identifier": "MEF103_Table23",
-                  "eec-identifier": "MEF103_Table23",
                   "ingress-bw-profile-per-evc": {
                     "envelope-id": "ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART",
                     "bw-profile": "high1-bwp-uni"
@@ -4911,6 +4906,11 @@
                     "envelope-id": "eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART",
                     "bw-profile": "high1-bwp-uni"
                   },
+                  "role": "root",
+                  "admin-state": false,
+                  "color-identifier": "dscp",
+                  "cos-identifier": "MEF103_Table23",
+                  "eec-identifier": "MEF103_Table23",
                   "source-mac-address-limit-enabled": false
                 },
                 {
@@ -4922,11 +4922,6 @@
                       }
                     ]
                   },
-                  "role": "root",
-                  "admin-state": false,
-                  "color-identifier": "pcp",
-                  "cos-identifier": "MEF103_Table13",
-                  "eec-identifier": "MEF62_ApdxA",
                   "ingress-bw-profile-per-evc": {
                     "envelope-id": "ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART",
                     "bw-profile": "high2-bwp-uni"
@@ -4935,6 +4930,11 @@
                     "envelope-id": "eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART",
                     "bw-profile": "high2-bwp-uni"
                   },
+                  "role": "root",
+                  "admin-state": false,
+                  "color-identifier": "pcp",
+                  "cos-identifier": "MEF103_Table13",
+                  "eec-identifier": "MEF62_ApdxA",
                   "source-mac-address-limit-enabled": false
                 }
               ]
@@ -5123,11 +5123,6 @@
                       }
                     ]
                   },
-                  "role": "root",
-                  "admin-state": false,
-                  "color-identifier": "dscp",
-                  "cos-identifier": "MEF103_Table23",
-                  "eec-identifier": "MEF103_Table23",
                   "ingress-bw-profile-per-evc": {
                     "envelope-id": "ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART",
                     "bw-profile": "low1-bwp-uni"
@@ -5136,6 +5131,11 @@
                     "envelope-id": "eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART",
                     "bw-profile": "low1-bwp-uni"
                   },
+                  "role": "root",
+                  "admin-state": false,
+                  "color-identifier": "dscp",
+                  "cos-identifier": "MEF103_Table23",
+                  "eec-identifier": "MEF103_Table23",
                   "source-mac-address-limit-enabled": false
                 },
                 {
@@ -5147,11 +5147,6 @@
                       }
                     ]
                   },
-                  "role": "root",
-                  "admin-state": false,
-                  "color-identifier": "pcp",
-                  "cos-identifier": "MEF103_Table14",
-                  "eec-identifier": "MEF62_ApdxA",
                   "ingress-bw-profile-per-evc": {
                     "envelope-id": "ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART",
                     "bw-profile": "low2-bwp-uni"
@@ -5160,6 +5155,11 @@
                     "envelope-id": "eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART",
                     "bw-profile": "low2-bwp-uni"
                   },
+                  "role": "root",
+                  "admin-state": false,
+                  "color-identifier": "pcp",
+                  "cos-identifier": "MEF103_Table14",
+                  "eec-identifier": "MEF62_ApdxA",
                   "source-mac-address-limit-enabled": false
                 }
               ]
@@ -5211,11 +5211,6 @@
                       }
                     ]
                   },
-                  "role": "root",
-                  "admin-state": false,
-                  "color-identifier": "dscp",
-                  "cos-identifier": "MEF103_Table23",
-                  "eec-identifier": "MEF103_Table23",
                   "ingress-bw-profile-per-evc": {
                     "envelope-id": "ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART",
                     "bw-profile": "medium1-bwp-uni"
@@ -5224,6 +5219,11 @@
                     "envelope-id": "eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART",
                     "bw-profile": "medium1-bwp-uni"
                   },
+                  "role": "root",
+                  "admin-state": false,
+                  "color-identifier": "dscp",
+                  "cos-identifier": "MEF103_Table23",
+                  "eec-identifier": "MEF103_Table23",
                   "source-mac-address-limit-enabled": false
                 },
                 {
@@ -5235,11 +5235,6 @@
                       }
                     ]
                   },
-                  "role": "root",
-                  "admin-state": false,
-                  "color-identifier": "pcp",
-                  "cos-identifier": "MEF103_Table13",
-                  "eec-identifier": "MEF62_ApdxA",
                   "ingress-bw-profile-per-evc": {
                     "envelope-id": "ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART",
                     "bw-profile": "medium3-bwp-uni"
@@ -5248,6 +5243,11 @@
                     "envelope-id": "eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART",
                     "bw-profile": "medium3-bwp-uni"
                   },
+                  "role": "root",
+                  "admin-state": false,
+                  "color-identifier": "pcp",
+                  "cos-identifier": "MEF103_Table13",
+                  "eec-identifier": "MEF62_ApdxA",
                   "source-mac-address-limit-enabled": false
                 }
               ]

@@ -2920,29 +2920,29 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART
  end-points end-point MMPOP1-ce0-Slot0-Port3
   ce-vlans ce-vlan 1343
   !
+  ingress-bw-profile-per-evc envelope-id ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART
+  ingress-bw-profile-per-evc bw-profile high1-bwp-uni
+  egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART
+  egress-bw-profile-per-evc bw-profile high1-bwp-uni
   role                             root
   admin-state                      false
   color-identifier                 dscp
   cos-identifier                   MEF103_Table23
   eec-identifier                   MEF103_Table23
-  ingress-bw-profile-per-evc envelope-id ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART
-  ingress-bw-profile-per-evc bw-profile high1-bwp-uni
-  egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART
-  egress-bw-profile-per-evc bw-profile high1-bwp-uni
   source-mac-address-limit-enabled false
  !
  end-points end-point MMPOP1-ce1-Slot1-Port3
   ce-vlans ce-vlan 17
   !
+  ingress-bw-profile-per-evc envelope-id ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART
+  ingress-bw-profile-per-evc bw-profile high2-bwp-uni
+  egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART
+  egress-bw-profile-per-evc bw-profile high2-bwp-uni
   role                             root
   admin-state                      false
   color-identifier                 pcp
   cos-identifier                   MEF103_Table13
   eec-identifier                   MEF62_ApdxA
-  ingress-bw-profile-per-evc envelope-id ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART
-  ingress-bw-profile-per-evc bw-profile high2-bwp-uni
-  egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART
-  egress-bw-profile-per-evc bw-profile high2-bwp-uni
   source-mac-address-limit-enabled false
  !
  carrier-ethernet-sls sls-id MEF103_Table25
@@ -3025,29 +3025,29 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART
  end-points end-point MMPOP1-ce0-Slot0-Port3
   ce-vlans ce-vlan 22
   !
+  ingress-bw-profile-per-evc envelope-id ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART
+  ingress-bw-profile-per-evc bw-profile low1-bwp-uni
+  egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART
+  egress-bw-profile-per-evc bw-profile low1-bwp-uni
   role                             root
   admin-state                      false
   color-identifier                 dscp
   cos-identifier                   MEF103_Table23
   eec-identifier                   MEF103_Table23
-  ingress-bw-profile-per-evc envelope-id ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART
-  ingress-bw-profile-per-evc bw-profile low1-bwp-uni
-  egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART
-  egress-bw-profile-per-evc bw-profile low1-bwp-uni
   source-mac-address-limit-enabled false
  !
  end-points end-point MMPOP1-ce1-Slot1-Port3
   ce-vlans ce-vlan 22
   !
+  ingress-bw-profile-per-evc envelope-id ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART
+  ingress-bw-profile-per-evc bw-profile low2-bwp-uni
+  egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART
+  egress-bw-profile-per-evc bw-profile low2-bwp-uni
   role                             root
   admin-state                      false
   color-identifier                 pcp
   cos-identifier                   MEF103_Table14
   eec-identifier                   MEF62_ApdxA
-  ingress-bw-profile-per-evc envelope-id ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART
-  ingress-bw-profile-per-evc bw-profile low2-bwp-uni
-  egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART
-  egress-bw-profile-per-evc bw-profile low2-bwp-uni
   source-mac-address-limit-enabled false
  !
  carrier-ethernet-sls sls-id MEF103_Table25
@@ -3068,29 +3068,29 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART
  end-points end-point MMPOP1-ce0-Slot0-Port3
   ce-vlans ce-vlan 33
   !
+  ingress-bw-profile-per-evc envelope-id ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART
+  ingress-bw-profile-per-evc bw-profile medium1-bwp-uni
+  egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART
+  egress-bw-profile-per-evc bw-profile medium1-bwp-uni
   role                             root
   admin-state                      false
   color-identifier                 dscp
   cos-identifier                   MEF103_Table23
   eec-identifier                   MEF103_Table23
-  ingress-bw-profile-per-evc envelope-id ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART
-  ingress-bw-profile-per-evc bw-profile medium1-bwp-uni
-  egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART
-  egress-bw-profile-per-evc bw-profile medium1-bwp-uni
   source-mac-address-limit-enabled false
  !
  end-points end-point MMPOP1-ce2-Slot2-Port3
   ce-vlans ce-vlan 33
   !
+  ingress-bw-profile-per-evc envelope-id ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART
+  ingress-bw-profile-per-evc bw-profile medium3-bwp-uni
+  egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART
+  egress-bw-profile-per-evc bw-profile medium3-bwp-uni
   role                             root
   admin-state                      false
   color-identifier                 pcp
   cos-identifier                   MEF103_Table13
   eec-identifier                   MEF62_ApdxA
-  ingress-bw-profile-per-evc envelope-id ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART
-  ingress-bw-profile-per-evc bw-profile medium3-bwp-uni
-  egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART
-  egress-bw-profile-per-evc bw-profile medium3-bwp-uni
   source-mac-address-limit-enabled false
  !
  carrier-ethernet-sls sls-id MEF103_Table25
