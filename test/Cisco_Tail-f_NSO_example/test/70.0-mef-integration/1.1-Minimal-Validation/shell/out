@@ -56,6 +56,10 @@ Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME
 Test MEF 10.3 [R112A]: PASS
 Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port3 eec-identifier' (value "MEF103_Table23"): When the Egress Equivalence Class Identifier is based on DSCP for a given EVC at a given UNI, the Color Identifier must be based DSCP.
 Test MEF 10.3 [R112B]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 ingress-bwp-flows-per-cos bwp-flow-per-cos Neon envelope-id' (value "ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART"): All EVCs sharing a Ingress Bandwidth Profile Envelope for a UNI must use the same BWP Method ( Per-EVC or Per-CoS).
+Test MEF 10.3 [R135AI]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 egress-bwp-flows-per-eec bwp-flow-per-eec Neon envelope-id' (value "eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART"): All EVCs sharing a Egress Bandwidth Profile Envelope for a UNI must use the same BWP Method ( Per-EVC or Per-CoS).
+Test MEF 10.3 [R135AE]: PASS
 Aborted: 'mef-interfaces unis uni MMPOP1-ce2-Slot2-Port1 ingress-envelopes envelope MM_EPL_Medium coupling-enabled' (value "true"): When only one Bandwidth Profile Flow is mapped to an envelope, Envelope Coupling must be Disabled.
 Test MEF 10.3 [R142A]: PASS
 Aborted: 'mef-interfaces unis uni MMPOP1-ce2-Slot2-Port1 egress-envelopes envelope eMM_EPL_Medium coupling-enabled' (value "true"): When only one Bandwidth Profile Flow is mapped to an envelope, Envelope Coupling must be Disabled.

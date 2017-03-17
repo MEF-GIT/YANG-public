@@ -497,27 +497,63 @@ else
    echo 'Test MEF 10.3 [R112B]: PASS';
 fi
 
-# Test for MEF 10.3 [R135A]. All Bandwidth Profile Flows in an Envelope MUST satisfy the same criterion in [R134] (A UNI cannot be configured with a mix of EVC ingress-bwp-flows-per-cos and ingress-bw-profile-per-evc in the same BWP Envelope. This implies configuration from two multiplexed EVCs sharing a UNI.)
+# Test for MEF 10.3 [R135AI]. All Bandwidth Profile Flows in an Envelope MUST satisfy the same criterion in [R134] (A UNI cannot be configured with a mix of EVC ingress-bwp-flows-per-cos and ingress-bw-profile-per-evc in the same BWP Envelope. This implies configuration from two multiplexed EVCs sharing a UNI.)
 
-# Test for MEF 10.3 [R135A].  This test should fail to commit with "TBD.".
+# Test for MEF 10.3 [R135AI].  This test should fail to commit with "All EVCs sharing a Ingress Bandwidth Profile Envelope for a UNI must use the same BWP Method ( Per-EVC or Per-CoS).".
+{ ncs_cli -u admin -C << EOF;
+config
+mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 ingress-bwp-flows-per-cos coupling-enabled false bwp-flow-per-cos Neon envelope-id ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART bw-profile high1-bwp-uni
+commit
+end no-confirm
+exit
+EOF
+} | grep 'Aborted:.*All EVCs sharing a Ingress Bandwidth Profile Envelope for a UNI must use the same BWP Method ( Per-EVC or Per-CoS).'
+if [ $? != 0 ]; then
+   echo 'Test MEF 10.3 [R135AI]: FAIL - commit did not fail or did not fail as expected'; exit 1;
+else
+   echo 'Test MEF 10.3 [R135AI]: PASS';
+fi
+
+# Test for MEF 10.3 [R135AE]. All Bandwidth Profile Flows in an Envelope MUST satisfy the same criterion in [R134] (A UNI cannot be configured with a mix of EVC ingress-bwp-flows-per-cos and ingress-bw-profile-per-evc in the same BWP Envelope. This implies configuration from two multiplexed EVCs sharing a UNI.)
+
+# Test for MEF 10.3 [R135AE].  This test should fail to commit with "All EVCs sharing a Egress Bandwidth Profile Envelope for a UNI must use the same BWP Method ( Per-EVC or Per-CoS).".
+{ ncs_cli -u admin -C << EOF;
+config
+mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Neon envelope-id eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART bw-profile high1-bwp-uni
+commit
+end no-confirm
+exit
+EOF
+} | grep 'Aborted:.*All EVCs sharing a Egress Bandwidth Profile Envelope for a UNI must use the same BWP Method ( Per-EVC or Per-CoS).'
+if [ $? != 0 ]; then
+   echo 'Test MEF 10.3 [R135AE]: FAIL - commit did not fail or did not fail as expected'; exit 1;
+else
+   echo 'Test MEF 10.3 [R135AE]: PASS';
+fi
+
+
+
+# Test for MEF 10.3 [R135BI]. All Bandwidth Profile Flows in an Envelope MUST satisfy the same criterion in [R134] (A UNI cannot be configured with a mix of EVC ingress-bwp-flows-per-cos and ingress-bw-profile-per-evc in the same BWP Envelope. This implies configuration from two multiplexed EVCs sharing a UNI.)
+
+# Test for MEF 10.3 [R135BI].  This test should fail to commit with "TBD.".
 #{ ncs_cli -u admin -C << EOF;
 #config
-#no mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot2-Port3 ingress-bw-profile-per-evc
-#mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot2-Port3 ingress-bwp-flows-per-cos coupling-enabled false bwp-flow-per-cos Neon envelope-id ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART bw-profile medium3-bwp-uni
+#mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 ingress-bw-profile-per-evc coupling-enabled false envelope-id ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART bw-profile high1-bwp-uni
 #commit
 #end no-confirm
 #exit
 #EOF
 #} | grep 'Aborted:.*TBD.'
 #if [ $? != 0 ]; then
-#   echo 'Test MEF 10.3 [R135A]: FAIL - commit did not fail or did not fail as expected'; exit 1;
+#   echo 'Test MEF 10.3 [R135BI]: FAIL - commit did not fail or did not fail as expected'; exit 1;
 #else
-#   echo 'Test MEF 10.3 [R135A]: PASS';
+#   echo 'Test MEF 10.3 [R135BI]: PASS';
 #fi
 
-# Test for MEF 10.3 [R135B]. All Bandwidth Profile Flows in an Envelope MUST satisfy the same criterion in [R134] (A UNI cannot be configured with a mix of egress-bwp-flows-per-eec and egress-bw-profile-per-evc in the same BWP Envelope. This implies configuration from two multiplexed EVCs sharing a UNI.)
 
-# Test for MEF 10.3 [R135B].  This test should fail to commit with "TBD.".
+# Test for MEF 10.3 [R135BE]. All Bandwidth Profile Flows in an Envelope MUST satisfy the same criterion in [R134] (A UNI cannot be configured with a mix of egress-bwp-flows-per-eec and egress-bw-profile-per-evc in the same BWP Envelope. This implies configuration from two multiplexed EVCs sharing a UNI.)
+
+# Test for MEF 10.3 [R135BE].  This test should fail to commit with "TBD.".
 #{ ncs_cli -u admin -C << EOF;
 #config
 #no mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce2-Slot2-Port3 egress-bw-profile-per-evc
@@ -528,9 +564,9 @@ fi
 #EOF
 #} | grep 'Aborted:.*TBD.'
 #if [ $? != 0 ]; then
-#   echo 'Test MEF 10.3 [R135B]: FAIL - commit did not fail or did not fail as expected'; exit 1;
+#   echo 'Test MEF 10.3 [R135BE]: FAIL - commit did not fail or did not fail as expected'; exit 1;
 #else
-#   echo 'Test MEF 10.3 [R135B]: PASS';
+#   echo 'Test MEF 10.3 [R135BE]: PASS';
 #fi
 
 # Test for MEF 10.3 [R140]. Character Restriction Tests are TBD.
