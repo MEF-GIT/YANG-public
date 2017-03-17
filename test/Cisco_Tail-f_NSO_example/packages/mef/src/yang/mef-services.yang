@@ -248,34 +248,6 @@ module mef-services {
               "EEC, nor BW Profile Per EVC), then the UNI " +
               "Egress Envelopes list must be empty.";
           }
-          must "not(./ingress-bw-profile-per-evc) or " +
-          		"((./ingress-bw-profile-per-evc) " +
-          		"and not(./ingress-bwp-flows-per-cos))" {
-            error-message "If there is a per EVC " +
-            		"Ingress Bandwidth Profile on " +
-            		"an EVC, then there cannot be " +
-            		"any per Class of Service " +
-            		"Ingress Bandwidth Profiles on that EVC.";
-            description
-              "MEF 10.3 [O8B] If there is a per EVC Ingress Bandwidth " +
-              "Profile on an EVC, then there cannot be " +
-              "any per Class of Service Ingress Bandwidth " +
-              "Profiles on that EVC.";
-          }
-          must "not(./egress-bw-profile-per-evc) or " +
-          		"((./egress-bw-profile-per-evc) and " +
-          		"not(./egress-bwp-flows-per-eec))" {
-            error-message "If there is a per EVC Egress " +
-            		"Bandwidth Profile on an EVC, " +
-            		"then there cannot be any per " +
-            		"Egress Equivalence Class Identifier " +
-            		"Bandwidth Profiles on that EVC.";
-            description
-              "MEF 10.3 [O9B] If there is a per EVC Egress Bandwidth " +
-              "Profile on an EVC, then there cannot " +
-              "be any per Egress Equivalence Class " +
-              "Identifier Bandwidth Profiles on that EVC.";
-          }
           key "uni-id";
           description
             "EVC End Points and EVC-UNI List defines the " +
@@ -324,6 +296,12 @@ module mef-services {
               }
             }
           }
+
+          choice ingress-bwp-choices {
+            description "Choice to ensure one cannot configure BWP per-cos and per-evc at the same time.";
+            mandatory false;
+          case ingress-bwp-per-cos-option {
+
           container ingress-bwp-flows-per-cos {
             presence "Use Ingress Bandwidth Profiles Per CoS";
             description
@@ -393,6 +371,56 @@ module mef-services {
               }
             }
           }
+          } //end per-cos option
+
+          case ingress-per-evc-option {
+          container ingress-bw-profile-per-evc {
+           presence "ingress-bw-profile-per-evc configured";
+           leaf envelope-id {
+            type leafref {
+              path "/mef-interfaces:mef-interfaces/" +
+              		"mef-interfaces:unis/mef-interfaces:uni" +
+              		"[mef-interfaces:uni-id = current()/../../" +
+              		"uni-id]/mef-interfaces:ingress-envelopes" +
+              		"/mef-interfaces:envelope/" +
+              		"mef-interfaces:envelope-id";
+            }
+            description
+              "EVC Per UNI: Ingress Bandwidth Profile " +
+              "Envelope Per EVC. If this parameter is " +
+              "not configured (ie. 'No') this setting is " +
+              "configured else at the UNI Level.";
+            reference "[MEF10.3] Section 10.5. " +
+            		"[MEF7.3] Section 12.1.2.";
+           }
+              leaf bw-profile {
+                type leafref {
+                  path "/mef-interfaces:mef-interfaces/" +
+                  		"mef-interfaces:unis/mef-interfaces:" +
+                  		"uni[mef-interfaces:uni-id = " +
+                  		"current()/../../uni-id]/" +
+                  		"mef-interfaces:ingress-envelopes/" +
+                  		"mef-interfaces:envelope[mef-interfaces:envelope-id = current()/../envelope-id]/mef-interfaces:bwp-flows/mef-interfaces:bwp-flow/mef-interfaces:bw-profile";
+                }
+                mandatory true;
+                description
+                  "EVC Per UNI: Ingress Bandwidth Profile " +
+                  "Envelope Per CoS ID. If this parameter " +
+                  "is not configured (ie. 'No') this setting " +
+                  "is configured else at the UNI Level.";
+                reference "[MEF10.3] Section 10.6, Table 28. " +
+                		"[MEF7.3] Section 12.1.2.";
+              }
+          }
+          } // end ingress-per-evc-option
+         } //end ingress choices
+
+          choice egress-bwp-choices {
+            description "Choice to ensure one cannot configure BWP per-cos and per-evc at the same time.";
+            mandatory false;
+          case egress-bwp-per-cos-option {
+
+
           container egress-bwp-flows-per-eec {
             presence "Using Egress Bandwidth Profiles Per Egress" +
             		" Equivalence Class";
@@ -468,6 +496,53 @@ module mef-services {
               }
             }
           }
+          } //end per-cos option
+
+          case egress-per-evc-option {
+
+          container egress-bw-profile-per-evc {
+           presence "egress-bw-profile-per-evc configured";
+           leaf envelope-id {
+            type leafref {
+              path "/mef-interfaces:mef-interfaces/" +
+              		"mef-interfaces:unis/mef-interfaces:" +
+              		"uni[mef-interfaces:uni-id = " +
+              		"current()/../../uni-id]/mef-interfaces:" +
+              		"egress-envelopes/mef-interfaces:" +
+              		"envelope/mef-interfaces:envelope-id";
+            }
+            description
+              "EVC Per UNI: Egress Bandwidth Profile Envelope " +
+              "Per EVC. If this parameter is not configured " +
+              "(ie. 'No') this setting is configured else " +
+              "at the UNI Level.";
+            reference "[MEF10.3] Section 10.7. " +
+            		"[MEF7.3] Section 12.1.2.";
+           }
+             leaf bw-profile {
+                type leafref {
+                  path "/mef-interfaces:mef-interfaces/" +
+                  		"mef-interfaces:unis/mef-interfaces:" +
+                  		"uni[mef-interfaces:uni-id = " +
+                  		"current()/../../uni-id]" +
+                  		"/mef-interfaces:" +
+                  		"egress-envelopes/" +
+                  		"mef-interfaces:envelope[mef-interfaces:envelope-id = current()/../envelope-id]/mef-interfaces:bwp-flows/mef-interfaces:bwp-flow/mef-interfaces:bw-profile";
+                }
+                mandatory true;
+                description
+                  "EVC Per UNI: Egress Bandwidth Profile " +
+                  "Envelope Per Equivance Class. " +
+                  "If this parameter is not configured " +
+                  "(ie. 'No') this setting is configured " +
+                  "else at the UNI Level.";
+                reference "[MEF10.3] Section 10.6, " +
+                		"Table 28. [MEF7.3] Section 12.1.2.";
+              }
+          }
+          } // end egress-per-evc-option
+         } //end egress choices
+
           container status {
             description
               "EVC Per UNI: This status group is related to the " +
@@ -628,84 +703,7 @@ module mef-services {
             reference "[MEF10.3] Section 10.4." +
             		" [MEF7.3] Section 12.1.2.";
           }
-          container ingress-bw-profile-per-evc {
-           presence "ingress-bw-profile-per-evc configured";
-           leaf envelope-id {
-            type leafref {
-              path "/mef-interfaces:mef-interfaces/" +
-              		"mef-interfaces:unis/mef-interfaces:uni" +
-              		"[mef-interfaces:uni-id = current()/../../" +
-              		"uni-id]/mef-interfaces:ingress-envelopes" +
-              		"/mef-interfaces:envelope/" +
-              		"mef-interfaces:envelope-id";
-            }
-            description
-              "EVC Per UNI: Ingress Bandwidth Profile " +
-              "Envelope Per EVC. If this parameter is " +
-              "not configured (ie. 'No') this setting is " +
-              "configured else at the UNI Level.";
-            reference "[MEF10.3] Section 10.5. " +
-            		"[MEF7.3] Section 12.1.2.";
-           }
-              leaf bw-profile {
-                type leafref {
-                  path "/mef-interfaces:mef-interfaces/" +
-                  		"mef-interfaces:unis/mef-interfaces:" +
-                  		"uni[mef-interfaces:uni-id = " +
-                  		"current()/../../uni-id]/" +
-                  		"mef-interfaces:ingress-envelopes/" +
-                  		"mef-interfaces:envelope[mef-interfaces:envelope-id = current()/../envelope-id]/mef-interfaces:bwp-flows/mef-interfaces:bwp-flow/mef-interfaces:bw-profile";
-                }
-                mandatory true;
-                description
-                  "EVC Per UNI: Ingress Bandwidth Profile " +
-                  "Envelope Per CoS ID. If this parameter " +
-                  "is not configured (ie. 'No') this setting " +
-                  "is configured else at the UNI Level.";
-                reference "[MEF10.3] Section 10.6, Table 28. " +
-                		"[MEF7.3] Section 12.1.2.";
-              }
-          }
-          container egress-bw-profile-per-evc {
-           presence "egress-bw-profile-per-evc configured";
-           leaf envelope-id {
-            type leafref {
-              path "/mef-interfaces:mef-interfaces/" +
-              		"mef-interfaces:unis/mef-interfaces:" +
-              		"uni[mef-interfaces:uni-id = " +
-              		"current()/../../uni-id]/mef-interfaces:" +
-              		"egress-envelopes/mef-interfaces:" +
-              		"envelope/mef-interfaces:envelope-id";
-            }
-            description
-              "EVC Per UNI: Egress Bandwidth Profile Envelope " +
-              "Per EVC. If this parameter is not configured " +
-              "(ie. 'No') this setting is configured else " +
-              "at the UNI Level.";
-            reference "[MEF10.3] Section 10.7. " +
-            		"[MEF7.3] Section 12.1.2.";
-           }
-             leaf bw-profile {
-                type leafref {
-                  path "/mef-interfaces:mef-interfaces/" +
-                  		"mef-interfaces:unis/mef-interfaces:" +
-                  		"uni[mef-interfaces:uni-id = " +
-                  		"current()/../../uni-id]" +
-                  		"/mef-interfaces:" +
-                  		"egress-envelopes/" +
-                  		"mef-interfaces:envelope[mef-interfaces:envelope-id = current()/../envelope-id]/mef-interfaces:bwp-flows/mef-interfaces:bwp-flow/mef-interfaces:bw-profile";
-                }
-                mandatory true;
-                description
-                  "EVC Per UNI: Egress Bandwidth Profile " +
-                  "Envelope Per Equivance Class. " +
-                  "If this parameter is not configured " +
-                  "(ie. 'No') this setting is configured " +
-                  "else at the UNI Level.";
-                reference "[MEF10.3] Section 10.6, " +
-                		"Table 28. [MEF7.3] Section 12.1.2.";
-              }
-          }
+
           leaf source-mac-address-limit-enabled {
             type boolean;
             default "false";

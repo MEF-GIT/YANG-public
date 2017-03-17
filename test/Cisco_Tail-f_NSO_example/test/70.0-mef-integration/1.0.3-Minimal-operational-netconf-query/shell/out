@@ -4026,14 +4026,6 @@
                     <vid>1343</vid>
                   </ce-vlan>
                 </ce-vlans>
-                <status>
-                  <operational-state>false</operational-state>
-                </status>
-                <role>root</role>
-                <admin-state>false</admin-state>
-                <color-identifier>dscp</color-identifier>
-                <cos-identifier>MEF103_Table23</cos-identifier>
-                <eec-identifier>MEF103_Table23</eec-identifier>
                 <ingress-bw-profile-per-evc>
                   <envelope-id>ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</envelope-id>
                   <bw-profile>high1-bwp-uni</bw-profile>
@@ -4042,6 +4034,14 @@
                   <envelope-id>eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART</envelope-id>
                   <bw-profile>high1-bwp-uni</bw-profile>
                 </egress-bw-profile-per-evc>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -4054,14 +4054,6 @@
                     <vid>17</vid>
                   </ce-vlan>
                 </ce-vlans>
-                <status>
-                  <operational-state>false</operational-state>
-                </status>
-                <role>root</role>
-                <admin-state>false</admin-state>
-                <color-identifier>pcp</color-identifier>
-                <cos-identifier>MEF103_Table13</cos-identifier>
-                <eec-identifier>MEF62_ApdxA</eec-identifier>
                 <ingress-bw-profile-per-evc>
                   <envelope-id>ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</envelope-id>
                   <bw-profile>high2-bwp-uni</bw-profile>
@@ -4070,6 +4062,14 @@
                   <envelope-id>eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART</envelope-id>
                   <bw-profile>high2-bwp-uni</bw-profile>
                 </egress-bw-profile-per-evc>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>pcp</color-identifier>
+                <cos-identifier>MEF103_Table13</cos-identifier>
+                <eec-identifier>MEF62_ApdxA</eec-identifier>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -4261,14 +4261,6 @@
                     <vid>22</vid>
                   </ce-vlan>
                 </ce-vlans>
-                <status>
-                  <operational-state>false</operational-state>
-                </status>
-                <role>root</role>
-                <admin-state>false</admin-state>
-                <color-identifier>dscp</color-identifier>
-                <cos-identifier>MEF103_Table23</cos-identifier>
-                <eec-identifier>MEF103_Table23</eec-identifier>
                 <ingress-bw-profile-per-evc>
                   <envelope-id>ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</envelope-id>
                   <bw-profile>low1-bwp-uni</bw-profile>
@@ -4277,6 +4269,14 @@
                   <envelope-id>eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART</envelope-id>
                   <bw-profile>low1-bwp-uni</bw-profile>
                 </egress-bw-profile-per-evc>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -4289,14 +4289,6 @@
                     <vid>22</vid>
                   </ce-vlan>
                 </ce-vlans>
-                <status>
-                  <operational-state>false</operational-state>
-                </status>
-                <role>root</role>
-                <admin-state>false</admin-state>
-                <color-identifier>pcp</color-identifier>
-                <cos-identifier>MEF103_Table14</cos-identifier>
-                <eec-identifier>MEF62_ApdxA</eec-identifier>
                 <ingress-bw-profile-per-evc>
                   <envelope-id>ienv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</envelope-id>
                   <bw-profile>low2-bwp-uni</bw-profile>
@@ -4305,6 +4297,14 @@
                   <envelope-id>eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART</envelope-id>
                   <bw-profile>low2-bwp-uni</bw-profile>
                 </egress-bw-profile-per-evc>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>pcp</color-identifier>
+                <cos-identifier>MEF103_Table14</cos-identifier>
+                <eec-identifier>MEF62_ApdxA</eec-identifier>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -4358,14 +4358,6 @@
                     <vid>33</vid>
                   </ce-vlan>
                 </ce-vlans>
-                <status>
-                  <operational-state>false</operational-state>
-                </status>
-                <role>root</role>
-                <admin-state>false</admin-state>
-                <color-identifier>dscp</color-identifier>
-                <cos-identifier>MEF103_Table23</cos-identifier>
-                <eec-identifier>MEF103_Table23</eec-identifier>
                 <ingress-bw-profile-per-evc>
                   <envelope-id>ienv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</envelope-id>
                   <bw-profile>medium1-bwp-uni</bw-profile>
@@ -4374,6 +4366,14 @@
                   <envelope-id>eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART</envelope-id>
                   <bw-profile>medium1-bwp-uni</bw-profile>
                 </egress-bw-profile-per-evc>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>dscp</color-identifier>
+                <cos-identifier>MEF103_Table23</cos-identifier>
+                <eec-identifier>MEF103_Table23</eec-identifier>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
@@ -4386,14 +4386,6 @@
                     <vid>33</vid>
                   </ce-vlan>
                 </ce-vlans>
-                <status>
-                  <operational-state>false</operational-state>
-                </status>
-                <role>root</role>
-                <admin-state>false</admin-state>
-                <color-identifier>pcp</color-identifier>
-                <cos-identifier>MEF103_Table13</cos-identifier>
-                <eec-identifier>MEF62_ApdxA</eec-identifier>
                 <ingress-bw-profile-per-evc>
                   <envelope-id>ienv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</envelope-id>
                   <bw-profile>medium3-bwp-uni</bw-profile>
@@ -4402,6 +4394,14 @@
                   <envelope-id>eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART</envelope-id>
                   <bw-profile>medium3-bwp-uni</bw-profile>
                 </egress-bw-profile-per-evc>
+                <status>
+                  <operational-state>false</operational-state>
+                </status>
+                <role>root</role>
+                <admin-state>false</admin-state>
+                <color-identifier>pcp</color-identifier>
+                <cos-identifier>MEF103_Table13</cos-identifier>
+                <eec-identifier>MEF62_ApdxA</eec-identifier>
                 <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
