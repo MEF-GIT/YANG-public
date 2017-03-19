@@ -359,13 +359,11 @@ module mef-services {
           case ingress-per-evc-option {
           container ingress-bw-profile-per-evc {
            leaf envelope-id {
-
              must "count(/mef-services:mef-services/carrier-ethernet/subscriber-services/evc/end-points/end-point[uni-id = current()/../../uni-id]/ingress-bwp-flows-per-cos/bwp-flow-per-cos/envelope-id = current()) = 0" {
-               error-message "R135 Evc TBD.";
+               error-message "All EVCs sharing a Ingress Bandwidth Profile Envelope for a UNI must use the same BWP Method (Per-CoS or Per-EVC).";
                description
-                 "MEF 10.3 [R135] TBD.";
+                 "MEF 10.3 [R135] All EVCs sharing a Ingress Bandwidth Profile Envelope for a UNI must use the same BWP Method (Per-CoS or Per-EVC).";
              }
-
             type leafref {
               path "/mef-interfaces:mef-interfaces/" +
               		"mef-interfaces:unis/mef-interfaces:uni" +
@@ -489,17 +487,13 @@ module mef-services {
           } //end per-cos option
 
           case egress-per-evc-option {
-
           container egress-bw-profile-per-evc {
            leaf envelope-id {
-
-
-             must "count(/mef-services:mef-services/carrier-ethernet/subscriber-services/evc/end-points/end-point[uni-id = current()/../../uni-id]/egress-bwp-flows-per-eec/bwp-flow-per-eec/envelope-id = current()) = 0" {
-               error-message "R135 Evc Egress TBD.";
+             must "count(/mef-services:mef-services/carrier-ethernet/subscriber-services/evc/end-points/end-point[uni-id = current()/../../uni-id][./egress-bwp-flows-per-eec/bwp-flow-per-eec/envelope-id = current()]) = 0" {
+               error-message "All EVCs sharing a Egress Bandwidth Profile Envelope for a UNI must use the same BWP Method (Per-CoS or Per-EVC).";
                description
-                 "MEF 10.3 [R135] TBD.";
+                 "MEF 10.3 [R135] All EVCs sharing a Egress Bandwidth Profile Envelope for a UNI must use the same BWP Method (Per-CoS or Per-EVC).";
              }
-
             type leafref {
               path "/mef-interfaces:mef-interfaces/" +
               		"mef-interfaces:unis/mef-interfaces:" +

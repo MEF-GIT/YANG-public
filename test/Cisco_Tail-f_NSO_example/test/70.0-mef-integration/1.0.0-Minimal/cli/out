@@ -125,6 +125,7 @@ Commit complete.
 Commit complete.
 Commit complete.
 Commit complete.
+Commit complete.
 mef-topology devices device CSR-1_0
  interfaces interface GigabitEthernet1
   ieee8023-phy ieee8023-1000BASE-X
@@ -283,6 +284,7 @@ mef-topology devices device ce1
   ieee8023-phy ieee8023-1000BASE-SX
  !
  interfaces interface GigabitEthernet0/2
+  /* EVPL Use Case 2 */
   ieee8023-phy ieee8023-1000BASE-SX
  !
  interfaces interface GigabitEthernet0/3
@@ -324,6 +326,7 @@ mef-topology devices device ce2
   /* EVPL Use Case 1 and EPL Use Case 2 */
   ieee8023-phy ieee8023-1000BASE-SX
  !
+ /* EVPL Use Case 2 */
  role ce
 !
 mef-topology devices device ce3
@@ -334,6 +337,7 @@ mef-topology devices device ce3
   /* c3 link to pe1 */
   ieee8023-phy ieee8023-1000BASE-SX
  !
+ /* EVPL Use Case 2 */
  role ce
 !
 mef-topology devices device ce4
@@ -2327,6 +2331,57 @@ mef-interfaces unis uni MMPOP1-ce0-Slot0-Port3
  l2cp-address-set             cta
  l2cp-peering                 L2CP_Peering_Profile1
 !
+mef-interfaces unis uni MMPOP1-ce1-Slot0-Port2
+ physical-layers links link ce1 GigabitEthernet0/2
+  ieee8023-phy ieee8023-1000BASE-SX
+ !
+ ce-vlans ce-vlan 22
+ !
+ ce-vlans ce-vlan 33
+ !
+ ce-vlans ce-vlan 1343
+ !
+ ingress-envelopes envelope ienv_EVPL_UNI003_EVC-0002343-ACME-MEGAMART
+  bwp-flows bwp-flow high1-bwp-uni
+  !
+  coupling-enabled false
+ !
+ ingress-envelopes envelope ienv_EVPL_UNI003_EVC-0002899-ACME-MEGAMART
+  bwp-flows bwp-flow low1-bwp-uni
+  !
+  coupling-enabled false
+ !
+ ingress-envelopes envelope ienv_EVPL_UNI003_EVC-0002900-ACME-MEGAMART
+  bwp-flows bwp-flow medium1-bwp-uni
+  !
+  coupling-enabled false
+ !
+ egress-envelopes envelope eenv_EVPL_UNI003_EVC-0002343-ACME-MEGAMART
+  bwp-flows bwp-flow high1-bwp-uni
+  !
+  coupling-enabled false
+ !
+ egress-envelopes envelope eenv_EVPL_UNI003_EVC-0002899-ACME-MEGAMART
+  bwp-flows bwp-flow low1-bwp-uni
+  !
+  coupling-enabled false
+ !
+ egress-envelopes envelope eenv_EVPL_UNI003_EVC-0002900-ACME-MEGAMART
+  bwp-flows bwp-flow medium1-bwp-uni
+  !
+  coupling-enabled false
+ !
+ admin-state                  false
+ /* EVPL Use Case 2: */
+ max-svc-frame-size           1600
+ service-multiplexing-enabled true
+ default-ce-vlan-id           22
+ max-num-of-evcs              2
+ elmi-enabled                 true
+ elmi-service-attribute       true
+ l2cp-address-set             cta
+ l2cp-peering                 L2CP_Peering_Profile1
+!
 mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1
  physical-layers links link ce1 GigabitEthernet0/1
   ieee8023-phy ieee8023-1000BASE-SX
@@ -2390,6 +2445,52 @@ mef-interfaces unis uni MMPOP1-ce1-Slot1-Port3
   coupling-enabled false
  !
  egress-envelopes envelope eenv_EVPL_UNI113_EVC-0001900-ACME-MEGAMART
+  bwp-flows bwp-flow medium2-bwp-uni
+  !
+  coupling-enabled false
+ !
+ admin-state                  false
+ max-svc-frame-size           1600
+ service-multiplexing-enabled true
+ default-ce-vlan-id           17
+ max-num-of-evcs              1
+ l2cp-address-set             cta
+ l2cp-peering                 L2CP_Peering_Profile1
+!
+mef-interfaces unis uni MMPOP1-ce2-Slot0-Port1
+ physical-layers links link ce2 GigabitEthernet0/1
+  ieee8023-phy ieee8023-1000BASE-SX
+ !
+ ce-vlans ce-vlan 17
+ !
+ ce-vlans ce-vlan 22
+ !
+ ingress-envelopes envelope ienv_EVPL_UNI113_EVC-0002343-ACME-MEGAMART
+  bwp-flows bwp-flow high2-bwp-uni
+  !
+  coupling-enabled false
+ !
+ ingress-envelopes envelope ienv_EVPL_UNI113_EVC-0002899-ACME-MEGAMART
+  bwp-flows bwp-flow low2-bwp-uni
+  !
+  coupling-enabled false
+ !
+ ingress-envelopes envelope ienv_EVPL_UNI113_EVC-0002900-ACME-MEGAMART
+  bwp-flows bwp-flow medium2-bwp-uni
+  !
+  coupling-enabled false
+ !
+ egress-envelopes envelope eenv_EVPL_UNI113_EVC-0002343-ACME-MEGAMART
+  bwp-flows bwp-flow high2-bwp-uni
+  !
+  coupling-enabled false
+ !
+ egress-envelopes envelope eenv_EVPL_UNI113_EVC-0002899-ACME-MEGAMART
+  bwp-flows bwp-flow low2-bwp-uni
+  !
+  coupling-enabled false
+ !
+ egress-envelopes envelope eenv_EVPL_UNI113_EVC-0002900-ACME-MEGAMART
   bwp-flows bwp-flow medium2-bwp-uni
   !
   coupling-enabled false
@@ -2498,6 +2599,52 @@ mef-interfaces unis uni MMPOP1-ce2-Slot2-Port3
   coupling-enabled false
  !
  egress-envelopes envelope eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART
+  bwp-flows bwp-flow medium3-bwp-uni
+  !
+  coupling-enabled false
+ !
+ admin-state                  false
+ max-svc-frame-size           1600
+ service-multiplexing-enabled false
+ default-ce-vlan-id           1
+ max-num-of-evcs              1
+ l2cp-address-set             cta
+ l2cp-peering                 L2CP_Peering_Profile1
+!
+mef-interfaces unis uni MMPOP1-ce3-Slot0-Port3
+ physical-layers links link ce3 GigabitEthernet0/3
+  ieee8023-phy ieee8023-1000BASE-SX
+ !
+ ce-vlans ce-vlan 1
+ !
+ ce-vlans ce-vlan 33
+ !
+ ingress-envelopes envelope ienv_EVPL_UNI223_EVC-0002343-ACME-MEGAMART
+  bwp-flows bwp-flow high3-bwp-uni
+  !
+  coupling-enabled false
+ !
+ ingress-envelopes envelope ienv_EVPL_UNI223_EVC-0002899-ACME-MEGAMART
+  bwp-flows bwp-flow low3-bwp-uni
+  !
+  coupling-enabled false
+ !
+ ingress-envelopes envelope ienv_EVPL_UNI223_EVC-0002900-ACME-MEGAMART
+  bwp-flows bwp-flow medium3-bwp-uni
+  !
+  coupling-enabled false
+ !
+ egress-envelopes envelope eenv_EVPL_UNI223_EVC-0002343-ACME-MEGAMART
+  bwp-flows bwp-flow high3-bwp-uni
+  !
+  coupling-enabled false
+ !
+ egress-envelopes envelope eenv_EVPL_UNI223_EVC-0002899-ACME-MEGAMART
+  bwp-flows bwp-flow low3-bwp-uni
+  !
+  coupling-enabled false
+ !
+ egress-envelopes envelope eenv_EVPL_UNI223_EVC-0002900-ACME-MEGAMART
   bwp-flows bwp-flow medium3-bwp-uni
   !
   coupling-enabled false
@@ -3475,6 +3622,165 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART
  unicast-frame-delivery   conditional
  svc-type                 evplan
 !
+mef-services carrier-ethernet subscriber-services evc EVC-0002343-ACME-MEGAMART
+ end-points end-point MMPOP1-ce1-Slot0-Port2
+  ce-vlans ce-vlan 1343
+  !
+  ingress-bwp-flows-per-cos coupling-enabled false
+  ingress-bwp-flows-per-cos bwp-flow-per-cos Neon
+   envelope-id ienv_EVPL_UNI003_EVC-0002343-ACME-MEGAMART
+   bw-profile  high1-bwp-uni
+  !
+  egress-bwp-flows-per-eec coupling-enabled false
+  egress-bwp-flows-per-eec bwp-flow-per-eec Neon
+   envelope-id eenv_EVPL_UNI003_EVC-0002343-ACME-MEGAMART
+   bw-profile  high1-bwp-uni
+  !
+  role                             root
+  admin-state                      false
+  color-identifier                 dscp
+  cos-identifier                   MEF103_Table23
+  eec-identifier                   MEF103_Table23
+  source-mac-address-limit-enabled false
+ !
+ end-points end-point MMPOP1-ce2-Slot0-Port1
+  ce-vlans ce-vlan 17
+  !
+  ingress-bwp-flows-per-cos coupling-enabled false
+  ingress-bwp-flows-per-cos bwp-flow-per-cos Argon
+   envelope-id ienv_EVPL_UNI113_EVC-0002343-ACME-MEGAMART
+   bw-profile  high2-bwp-uni
+  !
+  egress-bwp-flows-per-eec coupling-enabled false
+  egress-bwp-flows-per-eec bwp-flow-per-eec Argon
+   envelope-id eenv_EVPL_UNI113_EVC-0002343-ACME-MEGAMART
+   bw-profile  high2-bwp-uni
+  !
+  role                             root
+  admin-state                      false
+  color-identifier                 pcp
+  cos-identifier                   MEF103_Table13
+  eec-identifier                   MEF62_ApdxA
+  source-mac-address-limit-enabled false
+ !
+ carrier-ethernet-sls sls-id MEF103_Table25
+ carrier-ethernet-sls start-time 2016-06-18T12:00:00+00:00
+ carrier-ethernet-sls cos-entries cos-entry Neon
+  pm-entries pm-entry SLS_Neon_Test2
+   end-point-pairs sls-uni-exclusions end-point-pair MMPOP1-ce2-Slot0-Port1 MMPOP1-ce1-Slot0-Port2
+   !
+  !
+ !
+ connection-type          point-to-point
+ admin-state              false
+ max-num-of-evc-end-point 2
+ ce-vlan-id-preservation  false
+ svc-type                 evpl
+!
+mef-services carrier-ethernet subscriber-services evc EVC-0002899-ACME-MEGAMART
+ end-points end-point MMPOP1-ce1-Slot0-Port2
+  ce-vlans ce-vlan 22
+  !
+  ingress-bwp-flows-per-cos coupling-enabled false
+  ingress-bwp-flows-per-cos bwp-flow-per-cos Neon
+   envelope-id ienv_EVPL_UNI003_EVC-0002899-ACME-MEGAMART
+   bw-profile  low1-bwp-uni
+  !
+  egress-bwp-flows-per-eec coupling-enabled false
+  egress-bwp-flows-per-eec bwp-flow-per-eec Neon
+   envelope-id eenv_EVPL_UNI003_EVC-0002899-ACME-MEGAMART
+   bw-profile  low1-bwp-uni
+  !
+  role                             root
+  admin-state                      false
+  color-identifier                 dscp
+  cos-identifier                   MEF103_Table23
+  eec-identifier                   MEF103_Table23
+  source-mac-address-limit-enabled false
+ !
+ end-points end-point MMPOP1-ce2-Slot0-Port1
+  ce-vlans ce-vlan 22
+  !
+  ingress-bwp-flows-per-cos coupling-enabled false
+  ingress-bwp-flows-per-cos bwp-flow-per-cos Argon
+   envelope-id ienv_EVPL_UNI113_EVC-0002899-ACME-MEGAMART
+   bw-profile  low2-bwp-uni
+  !
+  egress-bwp-flows-per-eec coupling-enabled false
+  egress-bwp-flows-per-eec bwp-flow-per-eec Argon
+   envelope-id eenv_EVPL_UNI113_EVC-0002899-ACME-MEGAMART
+   bw-profile  low2-bwp-uni
+  !
+  role                             root
+  admin-state                      false
+  color-identifier                 pcp
+  cos-identifier                   MEF103_Table14
+  eec-identifier                   MEF62_ApdxA
+  source-mac-address-limit-enabled false
+ !
+ carrier-ethernet-sls sls-id MEF103_Table25
+ carrier-ethernet-sls start-time 2016-06-18T12:00:00+00:00
+ carrier-ethernet-sls cos-entries cos-entry Neon
+  pm-entries pm-entry SLS_Neon_Test1
+   end-point-pairs sls-uni-exclusions end-point-pair MMPOP1-ce2-Slot0-Port1 MMPOP1-ce1-Slot0-Port2
+   !
+  !
+ !
+ connection-type          point-to-point
+ admin-state              false
+ max-num-of-evc-end-point 2
+ ce-vlan-id-preservation  true
+ svc-type                 evpl
+!
+mef-services carrier-ethernet subscriber-services evc EVC-0002900-ACME-MEGAMART
+ end-points end-point MMPOP1-ce1-Slot0-Port2
+  ce-vlans ce-vlan 33
+  !
+  ingress-bwp-flows-per-cos coupling-enabled false
+  ingress-bwp-flows-per-cos bwp-flow-per-cos Neon
+   envelope-id ienv_EVPL_UNI003_EVC-0002900-ACME-MEGAMART
+   bw-profile  medium1-bwp-uni
+  !
+  egress-bwp-flows-per-eec coupling-enabled false
+  egress-bwp-flows-per-eec bwp-flow-per-eec Neon
+   envelope-id eenv_EVPL_UNI003_EVC-0002900-ACME-MEGAMART
+   bw-profile  medium1-bwp-uni
+  !
+  role                             root
+  admin-state                      false
+  color-identifier                 dscp
+  cos-identifier                   MEF103_Table23
+  eec-identifier                   MEF103_Table23
+  source-mac-address-limit-enabled false
+ !
+ end-points end-point MMPOP1-ce3-Slot0-Port3
+  ce-vlans ce-vlan 33
+  !
+  ingress-bwp-flows-per-cos coupling-enabled false
+  ingress-bwp-flows-per-cos bwp-flow-per-cos Krypton
+   envelope-id ienv_EVPL_UNI223_EVC-0002900-ACME-MEGAMART
+   bw-profile  medium3-bwp-uni
+  !
+  egress-bwp-flows-per-eec coupling-enabled false
+  egress-bwp-flows-per-eec bwp-flow-per-eec Krypton
+   envelope-id eenv_EVPL_UNI223_EVC-0002900-ACME-MEGAMART
+   bw-profile  medium3-bwp-uni
+  !
+  role                             root
+  admin-state                      false
+  color-identifier                 pcp
+  cos-identifier                   MEF103_Table13
+  eec-identifier                   MEF62_ApdxA
+  source-mac-address-limit-enabled false
+ !
+ carrier-ethernet-sls sls-id MEF103_Table25
+ carrier-ethernet-sls start-time 2016-06-18T12:00:00+00:00
+ connection-type          point-to-point
+ admin-state              false
+ max-num-of-evc-end-point 2
+ ce-vlan-id-preservation  true
+ svc-type                 evpl
+!
 mef-services carrier-ethernet subscriber-services evc EVC-0002947-ACME-MEGAMART
  end-points end-point MMPOP1-ce5-Slot5-Port4
   ce-vlans ce-vlan 153
@@ -3613,13 +3919,16 @@ CYPOP1-ce4-Slot4-Port4  false        0
 MMPOP1-ce0-Slot0-Port1  false        0       
 MMPOP1-ce0-Slot0-Port2  false        0       
 MMPOP1-ce0-Slot0-Port3  false        0       
+MMPOP1-ce1-Slot0-Port2  false        0       
 MMPOP1-ce1-Slot1-Port1  false        0       
 MMPOP1-ce1-Slot1-Port2  false        0       
 MMPOP1-ce1-Slot1-Port3  false        0       
+MMPOP1-ce2-Slot0-Port1  false        0       
 MMPOP1-ce2-Slot0-Port3  false        0       
 MMPOP1-ce2-Slot2-Port1  false        0       
 MMPOP1-ce2-Slot2-Port2  false        0       
 MMPOP1-ce2-Slot2-Port3  false        0       
+MMPOP1-ce3-Slot0-Port3  false        0       
 MMPOP1-ce3-Slot3-Port3  false        0       
 MMPOP1-ce3-Slot3-Port4  false        0       
 MMPOP1-ce4-Slot4-Port3  false        0       
@@ -3703,6 +4012,33 @@ MMPOP1-ce5-Slot5-Port3  false        -
 MMPOP1-ce6-Slot6-Port3  false        -      
 MMPOP1-ce7-Slot7-Port3  false        -      
 MMPOP1-ce8-Slot8-Port3  false        -      
+
+ status operational-state false
+                                     EVC    
+                                     END    
+                        OPERATIONAL  POINT  
+UNI ID                  STATE        ID     
+--------------------------------------------
+MMPOP1-ce1-Slot0-Port2  false        -      
+MMPOP1-ce2-Slot0-Port1  false        -      
+
+ status operational-state false
+                                     EVC    
+                                     END    
+                        OPERATIONAL  POINT  
+UNI ID                  STATE        ID     
+--------------------------------------------
+MMPOP1-ce1-Slot0-Port2  false        -      
+MMPOP1-ce2-Slot0-Port1  false        -      
+
+ status operational-state false
+                                     EVC    
+                                     END    
+                        OPERATIONAL  POINT  
+UNI ID                  STATE        ID     
+--------------------------------------------
+MMPOP1-ce1-Slot0-Port2  false        -      
+MMPOP1-ce3-Slot0-Port3  false        -      
 
  status operational-state false
                                      EVC    
