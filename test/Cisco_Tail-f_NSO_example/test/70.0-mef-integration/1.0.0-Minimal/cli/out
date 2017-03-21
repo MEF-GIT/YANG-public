@@ -3307,7 +3307,7 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART
    bw-profile  itest-bwp1
   !
   egress-bwp-flows-per-eec coupling-enabled false
-  egress-bwp-flows-per-eec bwp-flow-per-eec Sophomore
+  egress-bwp-flows-per-eec bwp-flow-per-eec Argon
    envelope-id eenv_EPTREE_UNI552_EVC-0001911_Sophomore
    bw-profile  etest-bwp1
   !
@@ -3327,7 +3327,7 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART
    bw-profile  itest-bwp2
   !
   egress-bwp-flows-per-eec coupling-enabled false
-  egress-bwp-flows-per-eec bwp-flow-per-eec Sophomore
+  egress-bwp-flows-per-eec bwp-flow-per-eec Argon
    envelope-id eenv_EPTREE_UNI662_EVC-0001911_Sophomore
    bw-profile  etest-bwp2
   !
@@ -3347,7 +3347,7 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART
    bw-profile  itest-bwp1
   !
   egress-bwp-flows-per-eec coupling-enabled false
-  egress-bwp-flows-per-eec bwp-flow-per-eec Sophomore
+  egress-bwp-flows-per-eec bwp-flow-per-eec Argon
    envelope-id eenv_EPTREE_UNI772_EVC-0001911_Sophomore
    bw-profile  etest-bwp1
   !
@@ -3367,7 +3367,7 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART
    bw-profile  itest-bwp2
   !
   egress-bwp-flows-per-eec coupling-enabled false
-  egress-bwp-flows-per-eec bwp-flow-per-eec Sophomore
+  egress-bwp-flows-per-eec bwp-flow-per-eec Argon
    envelope-id eenv_EPTREE_UNI882_EVC-0001911_Sophomore
    bw-profile  etest-bwp2
   !
@@ -3438,15 +3438,15 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART
    bw-profile  low1-bwp-uni
   !
   egress-bwp-flows-per-eec coupling-enabled false
-  egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Argon
+  egress-bwp-flows-per-eec bwp-flow-per-eec Argon
    envelope-id eenv_EVPLAN_UNI553_EVC-0001944_Argon
    bw-profile  medium2-bwp-uni
   !
-  egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Krypton
+  egress-bwp-flows-per-eec bwp-flow-per-eec Krypton
    envelope-id eenv_EVPLAN_UNI553_EVC-0001944_Krypton
    bw-profile  high2-bwp-uni
   !
-  egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Neon
+  egress-bwp-flows-per-eec bwp-flow-per-eec Neon
    envelope-id eenv_EVPLAN_UNI553_EVC-0001944_Neon
    bw-profile  low2-bwp-uni
   !
@@ -3482,15 +3482,15 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART
    bw-profile  low1-bwp-uni
   !
   egress-bwp-flows-per-eec coupling-enabled false
-  egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Argon
+  egress-bwp-flows-per-eec bwp-flow-per-eec Argon
    envelope-id eenv_EVPLAN_UNI663_EVC-0001944_Argon
    bw-profile  medium2-bwp-uni
   !
-  egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Krypton
+  egress-bwp-flows-per-eec bwp-flow-per-eec Krypton
    envelope-id eenv_EVPLAN_UNI663_EVC-0001944_Krypton
    bw-profile  high2-bwp-uni
   !
-  egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Neon
+  egress-bwp-flows-per-eec bwp-flow-per-eec Neon
    envelope-id eenv_EVPLAN_UNI663_EVC-0001944_Neon
    bw-profile  low2-bwp-uni
   !
@@ -3526,15 +3526,15 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART
    bw-profile  low1-bwp-uni
   !
   egress-bwp-flows-per-eec coupling-enabled false
-  egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Argon
+  egress-bwp-flows-per-eec bwp-flow-per-eec Argon
    envelope-id eenv_EVPLAN_UNI773_EVC-0001944_Argon
    bw-profile  medium2-bwp-uni
   !
-  egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Krypton
+  egress-bwp-flows-per-eec bwp-flow-per-eec Krypton
    envelope-id eenv_EVPLAN_UNI773_EVC-0001944_Krypton
    bw-profile  high2-bwp-uni
   !
-  egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Neon
+  egress-bwp-flows-per-eec bwp-flow-per-eec Neon
    envelope-id eenv_EVPLAN_UNI773_EVC-0001944_Neon
    bw-profile  low2-bwp-uni
   !
@@ -3570,15 +3570,15 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART
    bw-profile  low1-bwp-uni
   !
   egress-bwp-flows-per-eec coupling-enabled false
-  egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Argon
+  egress-bwp-flows-per-eec bwp-flow-per-eec Argon
    envelope-id eenv_EVPLAN_UNI883_EVC-0001944_Argon
    bw-profile  medium2-bwp-uni
   !
-  egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Krypton
+  egress-bwp-flows-per-eec bwp-flow-per-eec Krypton
    envelope-id eenv_EVPLAN_UNI883_EVC-0001944_Krypton
    bw-profile  high2-bwp-uni
   !
-  egress-bwp-flows-per-eec bwp-flow-per-eec EEC-Neon
+  egress-bwp-flows-per-eec bwp-flow-per-eec Neon
    envelope-id eenv_EVPLAN_UNI883_EVC-0001944_Neon
    bw-profile  low2-bwp-uni
   !

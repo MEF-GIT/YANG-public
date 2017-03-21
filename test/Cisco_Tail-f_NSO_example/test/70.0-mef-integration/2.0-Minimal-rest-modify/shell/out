@@ -8,7 +8,7 @@ REST/JSON examples for mef-services
   "errors": {
     "error": [
       {
-        "error-message": "illegal reference /mef-services/carrier-ethernet/subscriber-services/evc{EVC-0001911-ACME-MEGAMART}/end-points/end-point{MMPOP1-ce5-Slot5-Port2}/ingress-bwp-flows-per-cos/bwp-flow-per-cos{Krypton}/bw-profile",
+        "error-message": "/mef-services/carrier-ethernet/subscriber-services/evc{EVC-0001911-ACME-MEGAMART}/end-points/end-point{MMPOP1-ce5-Slot5-Port2}/egress-bwp-flows-per-eec/bwp-flow-per-eec{Sophomore}/envelope-id is not configured",
         "error-urlpath": "/api/running",
         "error-tag": "malformed-message"
       }
@@ -32,7 +32,7 @@ REST/JSON examples for mef-services
   "errors": {
     "error": [
       {
-        "error-message": "illegal reference /mef-services/carrier-ethernet/subscriber-services/evc{EVC-0001944-ACME-MEGAMART}/end-points/end-point{MMPOP1-ce5-Slot5-Port3}/ingress-bwp-flows-per-cos/bwp-flow-per-cos{Argon}/bw-profile",
+        "error-message": "/mef-services/carrier-ethernet/subscriber-services/evc{EVC-0001944-ACME-MEGAMART}/end-points/end-point{MMPOP1-ce5-Slot5-Port3}/egress-bwp-flows-per-eec/bwp-flow-per-eec{EEC-Argon}/envelope-id is not configured",
         "error-urlpath": "/api/running",
         "error-tag": "malformed-message"
       }
@@ -5754,7 +5754,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "coupling-enabled": false,
                     "bwp-flow-per-eec": [
                       {
-                        "eec-name": "Sophomore",
+                        "eec-name": "Argon",
                         "envelope-id": "eenv_EPTREE_UNI552_EVC-0001911_Sophomore",
                         "bw-profile": "etest-bwp1"
                       }
@@ -5790,7 +5790,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "coupling-enabled": false,
                     "bwp-flow-per-eec": [
                       {
-                        "eec-name": "Sophomore",
+                        "eec-name": "Argon",
                         "envelope-id": "eenv_EPTREE_UNI662_EVC-0001911_Sophomore",
                         "bw-profile": "etest-bwp2"
                       }
@@ -5826,7 +5826,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "coupling-enabled": false,
                     "bwp-flow-per-eec": [
                       {
-                        "eec-name": "Sophomore",
+                        "eec-name": "Argon",
                         "envelope-id": "eenv_EPTREE_UNI772_EVC-0001911_Sophomore",
                         "bw-profile": "etest-bwp1"
                       }
@@ -5862,7 +5862,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "coupling-enabled": false,
                     "bwp-flow-per-eec": [
                       {
-                        "eec-name": "Sophomore",
+                        "eec-name": "Argon",
                         "envelope-id": "eenv_EPTREE_UNI882_EVC-0001911_Sophomore",
                         "bw-profile": "etest-bwp2"
                       }
@@ -6014,17 +6014,17 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "coupling-enabled": false,
                     "bwp-flow-per-eec": [
                       {
-                        "eec-name": "EEC-Argon",
+                        "eec-name": "Argon",
                         "envelope-id": "eenv_EVPLAN_UNI553_EVC-0001944_Argon",
                         "bw-profile": "medium2-bwp-uni"
                       },
                       {
-                        "eec-name": "EEC-Krypton",
+                        "eec-name": "Krypton",
                         "envelope-id": "eenv_EVPLAN_UNI553_EVC-0001944_Krypton",
                         "bw-profile": "high2-bwp-uni"
                       },
                       {
-                        "eec-name": "EEC-Neon",
+                        "eec-name": "Neon",
                         "envelope-id": "eenv_EVPLAN_UNI553_EVC-0001944_Neon",
                         "bw-profile": "low2-bwp-uni"
                       }
@@ -6082,17 +6082,17 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "coupling-enabled": false,
                     "bwp-flow-per-eec": [
                       {
-                        "eec-name": "EEC-Argon",
+                        "eec-name": "Argon",
                         "envelope-id": "eenv_EVPLAN_UNI663_EVC-0001944_Argon",
                         "bw-profile": "medium2-bwp-uni"
                       },
                       {
-                        "eec-name": "EEC-Krypton",
+                        "eec-name": "Krypton",
                         "envelope-id": "eenv_EVPLAN_UNI663_EVC-0001944_Krypton",
                         "bw-profile": "high2-bwp-uni"
                       },
                       {
-                        "eec-name": "EEC-Neon",
+                        "eec-name": "Neon",
                         "envelope-id": "eenv_EVPLAN_UNI663_EVC-0001944_Neon",
                         "bw-profile": "low2-bwp-uni"
                       }
@@ -6150,17 +6150,17 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "coupling-enabled": false,
                     "bwp-flow-per-eec": [
                       {
-                        "eec-name": "EEC-Argon",
+                        "eec-name": "Argon",
                         "envelope-id": "eenv_EVPLAN_UNI773_EVC-0001944_Argon",
                         "bw-profile": "medium2-bwp-uni"
                       },
                       {
-                        "eec-name": "EEC-Krypton",
+                        "eec-name": "Krypton",
                         "envelope-id": "eenv_EVPLAN_UNI773_EVC-0001944_Krypton",
                         "bw-profile": "high2-bwp-uni"
                       },
                       {
-                        "eec-name": "EEC-Neon",
+                        "eec-name": "Neon",
                         "envelope-id": "eenv_EVPLAN_UNI773_EVC-0001944_Neon",
                         "bw-profile": "low2-bwp-uni"
                       }
@@ -6218,17 +6218,17 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                     "coupling-enabled": false,
                     "bwp-flow-per-eec": [
                       {
-                        "eec-name": "EEC-Argon",
+                        "eec-name": "Argon",
                         "envelope-id": "eenv_EVPLAN_UNI883_EVC-0001944_Argon",
                         "bw-profile": "medium2-bwp-uni"
                       },
                       {
-                        "eec-name": "EEC-Krypton",
+                        "eec-name": "Krypton",
                         "envelope-id": "eenv_EVPLAN_UNI883_EVC-0001944_Krypton",
                         "bw-profile": "high2-bwp-uni"
                       },
                       {
-                        "eec-name": "EEC-Neon",
+                        "eec-name": "Neon",
                         "envelope-id": "eenv_EVPLAN_UNI883_EVC-0001944_Neon",
                         "bw-profile": "low2-bwp-uni"
                       }

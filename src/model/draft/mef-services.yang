@@ -300,11 +300,14 @@ module mef-services {
                 "Service Identifiers corresponding to " +
                 "this UNI's Ingress Bandwidth Profile Flow.";
               leaf cos-name {
-                type leafref {
-                  path "/mef-global:mef-global/mef-global:" +
-                  		"profiles/mef-global:cos-names/" +
-                  		"mef-global:cos-name/mef-global:name";
-                }
+              type leafref {
+                path "/mef-global:mef-global/mef-global:sls-profiles" +
+                		"/mef-global:sls-profile[mef-global:" +
+                		"sls-id = current()/../../../../../carrier-ethernet-sls/sls-id]/" +
+                		"mef-global:pm-cos-name-entries/" +
+                		"mef-global:pm-cos-name-entry/" +
+                		"mef-global:cos-name";
+              }
                 description
                   "EVC Per UNI: Class of Service Identifier " +
                   "for this Bandwidth Profile Flow.";
@@ -427,9 +430,12 @@ module mef-services {
                 "Egress Bandwidth Profile Flow.";
               leaf eec-name {
                 type leafref {
-                  path "/mef-global:mef-global/mef-global:" +
-                  		"profiles/mef-global:cos-names/" +
-                  		"mef-global:cos-name/mef-global:name";
+                  path "/mef-global:mef-global/mef-global:sls-profiles" +
+                		"/mef-global:sls-profile[mef-global:" +
+                		"sls-id = current()/../../../../../carrier-ethernet-sls/sls-id]/" +
+                		"mef-global:pm-cos-name-entries/" +
+                		"mef-global:pm-cos-name-entry/" +
+                		"mef-global:cos-name";
                 }
                 description
                   "EVC Per UNI: Egress Equivalence Class " +

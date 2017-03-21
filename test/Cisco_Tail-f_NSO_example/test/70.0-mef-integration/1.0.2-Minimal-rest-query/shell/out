@@ -5703,7 +5703,7 @@
                     "coupling-enabled": false,
                     "bwp-flow-per-eec": [
                       {
-                        "eec-name": "Sophomore",
+                        "eec-name": "Argon",
                         "envelope-id": "eenv_EPTREE_UNI552_EVC-0001911_Sophomore",
                         "bw-profile": "etest-bwp1"
                       }
@@ -5739,7 +5739,7 @@
                     "coupling-enabled": false,
                     "bwp-flow-per-eec": [
                       {
-                        "eec-name": "Sophomore",
+                        "eec-name": "Argon",
                         "envelope-id": "eenv_EPTREE_UNI662_EVC-0001911_Sophomore",
                         "bw-profile": "etest-bwp2"
                       }
@@ -5775,7 +5775,7 @@
                     "coupling-enabled": false,
                     "bwp-flow-per-eec": [
                       {
-                        "eec-name": "Sophomore",
+                        "eec-name": "Argon",
                         "envelope-id": "eenv_EPTREE_UNI772_EVC-0001911_Sophomore",
                         "bw-profile": "etest-bwp1"
                       }
@@ -5811,7 +5811,7 @@
                     "coupling-enabled": false,
                     "bwp-flow-per-eec": [
                       {
-                        "eec-name": "Sophomore",
+                        "eec-name": "Argon",
                         "envelope-id": "eenv_EPTREE_UNI882_EVC-0001911_Sophomore",
                         "bw-profile": "etest-bwp2"
                       }
@@ -5963,17 +5963,17 @@
                     "coupling-enabled": false,
                     "bwp-flow-per-eec": [
                       {
-                        "eec-name": "EEC-Argon",
+                        "eec-name": "Argon",
                         "envelope-id": "eenv_EVPLAN_UNI553_EVC-0001944_Argon",
                         "bw-profile": "medium2-bwp-uni"
                       },
                       {
-                        "eec-name": "EEC-Krypton",
+                        "eec-name": "Krypton",
                         "envelope-id": "eenv_EVPLAN_UNI553_EVC-0001944_Krypton",
                         "bw-profile": "high2-bwp-uni"
                       },
                       {
-                        "eec-name": "EEC-Neon",
+                        "eec-name": "Neon",
                         "envelope-id": "eenv_EVPLAN_UNI553_EVC-0001944_Neon",
                         "bw-profile": "low2-bwp-uni"
                       }
@@ -6031,17 +6031,17 @@
                     "coupling-enabled": false,
                     "bwp-flow-per-eec": [
                       {
-                        "eec-name": "EEC-Argon",
+                        "eec-name": "Argon",
                         "envelope-id": "eenv_EVPLAN_UNI663_EVC-0001944_Argon",
                         "bw-profile": "medium2-bwp-uni"
                       },
                       {
-                        "eec-name": "EEC-Krypton",
+                        "eec-name": "Krypton",
                         "envelope-id": "eenv_EVPLAN_UNI663_EVC-0001944_Krypton",
                         "bw-profile": "high2-bwp-uni"
                       },
                       {
-                        "eec-name": "EEC-Neon",
+                        "eec-name": "Neon",
                         "envelope-id": "eenv_EVPLAN_UNI663_EVC-0001944_Neon",
                         "bw-profile": "low2-bwp-uni"
                       }
@@ -6099,17 +6099,17 @@
                     "coupling-enabled": false,
                     "bwp-flow-per-eec": [
                       {
-                        "eec-name": "EEC-Argon",
+                        "eec-name": "Argon",
                         "envelope-id": "eenv_EVPLAN_UNI773_EVC-0001944_Argon",
                         "bw-profile": "medium2-bwp-uni"
                       },
                       {
-                        "eec-name": "EEC-Krypton",
+                        "eec-name": "Krypton",
                         "envelope-id": "eenv_EVPLAN_UNI773_EVC-0001944_Krypton",
                         "bw-profile": "high2-bwp-uni"
                       },
                       {
-                        "eec-name": "EEC-Neon",
+                        "eec-name": "Neon",
                         "envelope-id": "eenv_EVPLAN_UNI773_EVC-0001944_Neon",
                         "bw-profile": "low2-bwp-uni"
                       }
@@ -6167,17 +6167,17 @@
                     "coupling-enabled": false,
                     "bwp-flow-per-eec": [
                       {
-                        "eec-name": "EEC-Argon",
+                        "eec-name": "Argon",
                         "envelope-id": "eenv_EVPLAN_UNI883_EVC-0001944_Argon",
                         "bw-profile": "medium2-bwp-uni"
                       },
                       {
-                        "eec-name": "EEC-Krypton",
+                        "eec-name": "Krypton",
                         "envelope-id": "eenv_EVPLAN_UNI883_EVC-0001944_Krypton",
                         "bw-profile": "high2-bwp-uni"
                       },
                       {
-                        "eec-name": "EEC-Neon",
+                        "eec-name": "Neon",
                         "envelope-id": "eenv_EVPLAN_UNI883_EVC-0001944_Neon",
                         "bw-profile": "low2-bwp-uni"
                       }
