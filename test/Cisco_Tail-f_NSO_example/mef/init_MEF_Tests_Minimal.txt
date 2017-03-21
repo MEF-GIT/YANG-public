@@ -1452,11 +1452,11 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART 
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 ingress-bwp-flows-per-cos coupling-enabled false bwp-flow-per-cos Krypton envelope-id ienv_EVPLAN_UNI553_EVC-0001944_Krypton bw-profile high1-bwp-uni
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec EEC-Neon  envelope-id eenv_EVPLAN_UNI553_EVC-0001944_Neon bw-profile low2-bwp-uni
+mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Neon  envelope-id eenv_EVPLAN_UNI553_EVC-0001944_Neon bw-profile low2-bwp-uni
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec EEC-Argon envelope-id eenv_EVPLAN_UNI553_EVC-0001944_Argon bw-profile medium2-bwp-uni
+mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Argon envelope-id eenv_EVPLAN_UNI553_EVC-0001944_Argon bw-profile medium2-bwp-uni
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec EEC-Krypton envelope-id eenv_EVPLAN_UNI553_EVC-0001944_Krypton bw-profile high2-bwp-uni
+mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Krypton envelope-id eenv_EVPLAN_UNI553_EVC-0001944_Krypton bw-profile high2-bwp-uni
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port3 role root cos-identifier MEF103_Table23 color-identifier dscp eec-identifier MEF103_Table23 admin-state false source-mac-address-limit-enabled true ce-vlans ce-vlan 53
 !
@@ -1474,11 +1474,11 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART 
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port3 ingress-bwp-flows-per-cos coupling-enabled false bwp-flow-per-cos Krypton envelope-id ienv_EVPLAN_UNI663_EVC-0001944_Krypton bw-profile high1-bwp-uni
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec EEC-Neon envelope-id eenv_EVPLAN_UNI663_EVC-0001944_Neon bw-profile low2-bwp-uni
+mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Neon envelope-id eenv_EVPLAN_UNI663_EVC-0001944_Neon bw-profile low2-bwp-uni
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec EEC-Argon envelope-id eenv_EVPLAN_UNI663_EVC-0001944_Argon bw-profile medium2-bwp-uni
+mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Argon envelope-id eenv_EVPLAN_UNI663_EVC-0001944_Argon bw-profile medium2-bwp-uni
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec EEC-Krypton envelope-id eenv_EVPLAN_UNI663_EVC-0001944_Krypton bw-profile high2-bwp-uni
+mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Krypton envelope-id eenv_EVPLAN_UNI663_EVC-0001944_Krypton bw-profile high2-bwp-uni
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 role root cos-identifier MEF103_Table23 color-identifier dscp eec-identifier MEF103_Table23 admin-state false source-mac-address-limit-enabled true ce-vlans ce-vlan 53
 !
@@ -1496,11 +1496,11 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART 
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 ingress-bwp-flows-per-cos coupling-enabled false bwp-flow-per-cos Krypton envelope-id ienv_EVPLAN_UNI773_EVC-0001944_Krypton bw-profile high1-bwp-uni
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec EEC-Neon  envelope-id eenv_EVPLAN_UNI773_EVC-0001944_Neon bw-profile low2-bwp-uni
+mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Neon  envelope-id eenv_EVPLAN_UNI773_EVC-0001944_Neon bw-profile low2-bwp-uni
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec EEC-Argon envelope-id eenv_EVPLAN_UNI773_EVC-0001944_Argon bw-profile medium2-bwp-uni
+mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Argon envelope-id eenv_EVPLAN_UNI773_EVC-0001944_Argon bw-profile medium2-bwp-uni
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec EEC-Krypton envelope-id eenv_EVPLAN_UNI773_EVC-0001944_Krypton bw-profile high2-bwp-uni
+mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Krypton envelope-id eenv_EVPLAN_UNI773_EVC-0001944_Krypton bw-profile high2-bwp-uni
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port3 role root cos-identifier MEF103_Table23 color-identifier dscp eec-identifier MEF103_Table23 admin-state false source-mac-address-limit-enabled true ce-vlans ce-vlan 53
 !
@@ -1518,11 +1518,11 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART 
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port3 ingress-bwp-flows-per-cos coupling-enabled false bwp-flow-per-cos Krypton envelope-id ienv_EVPLAN_UNI883_EVC-0001944_Krypton bw-profile high1-bwp-uni
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec EEC-Neon envelope-id eenv_EVPLAN_UNI883_EVC-0001944_Neon bw-profile low2-bwp-uni
+mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Neon envelope-id eenv_EVPLAN_UNI883_EVC-0001944_Neon bw-profile low2-bwp-uni
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec EEC-Argon envelope-id eenv_EVPLAN_UNI883_EVC-0001944_Argon bw-profile medium2-bwp-uni
+mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Argon envelope-id eenv_EVPLAN_UNI883_EVC-0001944_Argon bw-profile medium2-bwp-uni
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec EEC-Krypton envelope-id eenv_EVPLAN_UNI883_EVC-0001944_Krypton bw-profile high2-bwp-uni
+mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port3 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Krypton envelope-id eenv_EVPLAN_UNI883_EVC-0001944_Krypton bw-profile high2-bwp-uni
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 start-time 2016-06-18T12:00:00+00:00 cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1
 !
@@ -1580,25 +1580,25 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART 
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port2 ingress-bwp-flows-per-cos coupling-enabled false bwp-flow-per-cos Krypton envelope-id ienv_EPTREE_UNI552_EVC-0001911_Krypton bw-profile itest-bwp1
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port2 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Sophomore envelope-id eenv_EPTREE_UNI552_EVC-0001911_Sophomore bw-profile etest-bwp1
+mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port2 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Argon envelope-id eenv_EPTREE_UNI552_EVC-0001911_Sophomore bw-profile etest-bwp1
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port2 role leaf cos-identifier MEF103_Table23 color-identifier dscp eec-identifier MEF103_Table23 admin-state false source-mac-address-limit-enabled true ce-vlans ce-vlan 1
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port2 ingress-bwp-flows-per-cos coupling-enabled false bwp-flow-per-cos Krypton envelope-id ienv_EPTREE_UNI662_EVC-0001911_Krypton bw-profile itest-bwp2
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port2 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Sophomore envelope-id eenv_EPTREE_UNI662_EVC-0001911_Sophomore bw-profile etest-bwp2
+mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce6-Slot6-Port2 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Argon envelope-id eenv_EPTREE_UNI662_EVC-0001911_Sophomore bw-profile etest-bwp2
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port2 role leaf cos-identifier MEF103_Table23 color-identifier dscp eec-identifier MEF103_Table23 admin-state false source-mac-address-limit-enabled true ce-vlans ce-vlan 1
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port2 ingress-bwp-flows-per-cos coupling-enabled false bwp-flow-per-cos Krypton envelope-id ienv_EPTREE_UNI772_EVC-0001911_Krypton bw-profile itest-bwp1
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port2 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Sophomore envelope-id eenv_EPTREE_UNI772_EVC-0001911_Sophomore bw-profile etest-bwp1
+mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce7-Slot7-Port2 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Argon envelope-id eenv_EPTREE_UNI772_EVC-0001911_Sophomore bw-profile etest-bwp1
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port2 role leaf cos-identifier MEF103_Table23 color-identifier dscp eec-identifier MEF103_Table23 admin-state false source-mac-address-limit-enabled true ce-vlans ce-vlan 1
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port2 ingress-bwp-flows-per-cos coupling-enabled false bwp-flow-per-cos Krypton envelope-id ienv_EPTREE_UNI882_EVC-0001911_Krypton bw-profile itest-bwp2
 !
-mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port2 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Sophomore envelope-id eenv_EPTREE_UNI882_EVC-0001911_Sophomore bw-profile etest-bwp2
+mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port2 egress-bwp-flows-per-eec coupling-enabled false bwp-flow-per-eec Argon envelope-id eenv_EPTREE_UNI882_EVC-0001911_Sophomore bw-profile etest-bwp2
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 start-time 2016-06-18T12:00:00+00:00 cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce5-Slot5-Port2 MMPOP1-ce7-Slot7-Port2
 !
