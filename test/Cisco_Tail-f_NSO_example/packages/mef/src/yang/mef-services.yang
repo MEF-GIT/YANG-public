@@ -152,9 +152,9 @@ module mef-services {
             type mef-types:identifier45;
             description
               "CoS Name.";
-          } //name
-        } // list cos-name
-        } // container cos-names
+          }
+         }
+        }
 
       container end-points {
         description
@@ -826,12 +826,7 @@ module mef-services {
               "CoS Name.";
             leaf cos-name {
               type leafref {
-                path "/mef-global:mef-global/mef-global:sls-profiles" +
-                		"/mef-global:sls-profile[mef-global:" +
-                		"sls-id = current()/../../../sls-id]/" +
-                		"mef-global:pm-cos-name-entries/" +
-                		"mef-global:pm-cos-name-entry/" +
-                		"mef-global:cos-name";
+                 path "../../../../cos-names/cos-name/name";
               }
               description
                 "EVC: This attribute identifies the name of " +

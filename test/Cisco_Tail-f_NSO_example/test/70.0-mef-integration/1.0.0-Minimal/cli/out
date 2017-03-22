@@ -3115,7 +3115,7 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART
 mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART
  cos-names cos-name Argon
  !
- cos-names cos-name Kryton
+ cos-names cos-name Krypton
  !
  cos-names cos-name Neon
  !
@@ -3273,9 +3273,15 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART
  svc-type                 evpl
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001901-ACME-MEGAMART
+ cos-names cos-name Argon
+ !
  cos-names cos-name Freshman
  !
  cos-names cos-name Junior
+ !
+ cos-names cos-name Krypton
+ !
+ cos-names cos-name Neon
  !
  cos-names cos-name Senior
  !

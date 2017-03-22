@@ -5917,7 +5917,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                   "name": "Argon"
                 },
                 {
-                  "name": "Kryton"
+                  "name": "Krypton"
                 },
                 {
                   "name": "Neon"
@@ -6242,10 +6242,19 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             "cos-names": {
               "cos-name": [
                 {
+                  "name": "Argon"
+                },
+                {
                   "name": "Freshman"
                 },
                 {
                   "name": "Junior"
+                },
+                {
+                  "name": "Krypton"
+                },
+                {
+                  "name": "Neon"
                 },
                 {
                   "name": "Senior"
