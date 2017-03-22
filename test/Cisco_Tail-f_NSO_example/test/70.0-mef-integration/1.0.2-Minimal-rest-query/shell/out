@@ -5211,6 +5211,19 @@
         "evc": [
           {
             "evc-id": "EVC-0001343-ACME-MEGAMART",
+            "cos-names": {
+              "cos-name": [
+                {
+                  "name": "Argon"
+                },
+                {
+                  "name": "Krypton"
+                },
+                {
+                  "name": "Neon"
+                }
+              ]
+            },
             "end-points": {
               "end-point": [
                 {
@@ -5299,6 +5312,19 @@
           },
           {
             "evc-id": "EVC-0001898-ACME-MEGAMART",
+            "cos-names": {
+              "cos-name": [
+                {
+                  "name": "Argon"
+                },
+                {
+                  "name": "Kryton"
+                },
+                {
+                  "name": "Neon"
+                }
+              ]
+            },
             "end-points": {
               "end-point": [
                 {
@@ -5436,6 +5462,19 @@
           },
           {
             "evc-id": "EVC-0001899-ACME-MEGAMART",
+            "cos-names": {
+              "cos-name": [
+                {
+                  "name": "Argon"
+                },
+                {
+                  "name": "Krypton"
+                },
+                {
+                  "name": "Neon"
+                }
+              ]
+            },
             "end-points": {
               "end-point": [
                 {
@@ -5524,6 +5563,19 @@
           },
           {
             "evc-id": "EVC-0001900-ACME-MEGAMART",
+            "cos-names": {
+              "cos-name": [
+                {
+                  "name": "Argon"
+                },
+                {
+                  "name": "Krypton"
+                },
+                {
+                  "name": "Neon"
+                }
+              ]
+            },
             "end-points": {
               "end-point": [
                 {
@@ -5588,6 +5640,22 @@
           },
           {
             "evc-id": "EVC-0001901-ACME-MEGAMART",
+            "cos-names": {
+              "cos-name": [
+                {
+                  "name": "Freshman"
+                },
+                {
+                  "name": "Junior"
+                },
+                {
+                  "name": "Senior"
+                },
+                {
+                  "name": "Sophomore"
+                }
+              ]
+            },
             "end-points": {
               "end-point": [
                 {
@@ -5678,6 +5746,31 @@
           },
           {
             "evc-id": "EVC-0001911-ACME-MEGAMART",
+            "cos-names": {
+              "cos-name": [
+                {
+                  "name": "Argon"
+                },
+                {
+                  "name": "Freshman"
+                },
+                {
+                  "name": "Junior"
+                },
+                {
+                  "name": "Krypton"
+                },
+                {
+                  "name": "Neon"
+                },
+                {
+                  "name": "Senior"
+                },
+                {
+                  "name": "Sophomore"
+                }
+              ]
+            },
             "end-points": {
               "end-point": [
                 {
@@ -5916,6 +6009,31 @@
           },
           {
             "evc-id": "EVC-0001944-ACME-MEGAMART",
+            "cos-names": {
+              "cos-name": [
+                {
+                  "name": "Argon"
+                },
+                {
+                  "name": "Freshman"
+                },
+                {
+                  "name": "Junior"
+                },
+                {
+                  "name": "Krypton"
+                },
+                {
+                  "name": "Neon"
+                },
+                {
+                  "name": "Senior"
+                },
+                {
+                  "name": "Sophomore"
+                }
+              ]
+            },
             "end-points": {
               "end-point": [
                 {
@@ -6273,6 +6391,19 @@
           },
           {
             "evc-id": "EVC-0002343-ACME-MEGAMART",
+            "cos-names": {
+              "cos-name": [
+                {
+                  "name": "Argon"
+                },
+                {
+                  "name": "Krypton"
+                },
+                {
+                  "name": "Neon"
+                }
+              ]
+            },
             "end-points": {
               "end-point": [
                 {
@@ -6385,6 +6516,19 @@
           },
           {
             "evc-id": "EVC-0002899-ACME-MEGAMART",
+            "cos-names": {
+              "cos-name": [
+                {
+                  "name": "Argon"
+                },
+                {
+                  "name": "Krypton"
+                },
+                {
+                  "name": "Neon"
+                }
+              ]
+            },
             "end-points": {
               "end-point": [
                 {
@@ -6497,6 +6641,19 @@
           },
           {
             "evc-id": "EVC-0002900-ACME-MEGAMART",
+            "cos-names": {
+              "cos-name": [
+                {
+                  "name": "Argon"
+                },
+                {
+                  "name": "Krypton"
+                },
+                {
+                  "name": "Neon"
+                }
+              ]
+            },
             "end-points": {
               "end-point": [
                 {
@@ -6585,6 +6742,31 @@
           },
           {
             "evc-id": "EVC-0002947-ACME-MEGAMART",
+            "cos-names": {
+              "cos-name": [
+                {
+                  "name": "Argon"
+                },
+                {
+                  "name": "Freshman"
+                },
+                {
+                  "name": "Junior"
+                },
+                {
+                  "name": "Krypton"
+                },
+                {
+                  "name": "Neon"
+                },
+                {
+                  "name": "Senior"
+                },
+                {
+                  "name": "Sophomore"
+                }
+              ]
+            },
             "end-points": {
               "end-point": [
                 {
@@ -6709,6 +6891,31 @@
           },
           {
             "evc-id": "EVC-0009898-ACME-MEGAMART",
+            "cos-names": {
+              "cos-name": [
+                {
+                  "name": "Argon"
+                },
+                {
+                  "name": "Freshman"
+                },
+                {
+                  "name": "Junior"
+                },
+                {
+                  "name": "Krypton"
+                },
+                {
+                  "name": "Neon"
+                },
+                {
+                  "name": "Senior"
+                },
+                {
+                  "name": "Sophomore"
+                }
+              ]
+            },
             "end-points": {
               "end-point": [
                 {

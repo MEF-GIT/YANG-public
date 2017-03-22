@@ -120,6 +120,22 @@ module mef-services {
         reference "[MEF10.3] Section 8.2 [R7]. " +
         		"[MEF7.3] Section 11.1.1, Section 12.2.2.";
       }
+
+      container cos-names {
+        description
+          "CoS Names (AKA CoS Labels) for use by this EVC.";
+        list cos-name {
+          key "name";
+          description
+            "List of CoS Names.";
+          leaf name {
+            type mef-types:identifier45;
+            description
+              "CoS Name.";
+          } //name
+        } // list cos-name
+        } // container cos-names
+
       container end-points {
         description
           "EVC Per User Network Interface(UNI) Configuration " +
@@ -301,12 +317,7 @@ module mef-services {
                 "this UNI's Ingress Bandwidth Profile Flow.";
               leaf cos-name {
               type leafref {
-                path "/mef-global:mef-global/mef-global:sls-profiles" +
-                		"/mef-global:sls-profile[mef-global:" +
-                		"sls-id = current()/../../../../../carrier-ethernet-sls/sls-id]/" +
-                		"mef-global:pm-cos-name-entries/" +
-                		"mef-global:pm-cos-name-entry/" +
-                		"mef-global:cos-name";
+                path "../../../../../cos-names/cos-name/name";
               }
                 description
                   "EVC Per UNI: Class of Service Identifier " +
@@ -429,14 +440,9 @@ module mef-services {
                 "Class Identifiers corresponding to this EVC's " +
                 "Egress Bandwidth Profile Flow.";
               leaf eec-name {
-                type leafref {
-                  path "/mef-global:mef-global/mef-global:sls-profiles" +
-                		"/mef-global:sls-profile[mef-global:" +
-                		"sls-id = current()/../../../../../carrier-ethernet-sls/sls-id]/" +
-                		"mef-global:pm-cos-name-entries/" +
-                		"mef-global:pm-cos-name-entry/" +
-                		"mef-global:cos-name";
-                }
+                 type leafref {
+                   path "../../../../../cos-names/cos-name/name";
+                 }
                 description
                   "EVC Per UNI: Egress Equivalence Class " +
                   "Identifier for this Bandwidth Profile Flow.";

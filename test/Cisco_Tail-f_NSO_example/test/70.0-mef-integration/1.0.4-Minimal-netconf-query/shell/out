@@ -3707,6 +3707,17 @@ MEF GET Config ALLs
         <subscriber-services>
           <evc>
             <evc-id>EVC-0001343-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce0-Slot0-Port3</uni-id>
@@ -3783,6 +3794,17 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0001898-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Kryton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce0-Slot0-Port1</uni-id>
@@ -3900,6 +3922,17 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0001899-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce0-Slot0-Port3</uni-id>
@@ -3976,6 +4009,17 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0001900-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce0-Slot0-Port3</uni-id>
@@ -4034,6 +4078,20 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0001901-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Freshman</name>
+              </cos-name>
+              <cos-name>
+                <name>Junior</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce5-Slot5-Port1</uni-id>
@@ -4110,6 +4168,29 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0001911-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Freshman</name>
+              </cos-name>
+              <cos-name>
+                <name>Junior</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce5-Slot5-Port2</uni-id>
@@ -4308,6 +4389,29 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0001944-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Freshman</name>
+              </cos-name>
+              <cos-name>
+                <name>Junior</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce5-Slot5-Port3</uni-id>
@@ -4625,6 +4729,17 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0002343-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce1-Slot0-Port2</uni-id>
@@ -4717,6 +4832,17 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0002899-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce1-Slot0-Port2</uni-id>
@@ -4809,6 +4935,17 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0002900-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce1-Slot0-Port2</uni-id>
@@ -4883,6 +5020,29 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0002947-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Freshman</name>
+              </cos-name>
+              <cos-name>
+                <name>Junior</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce5-Slot5-Port4</uni-id>
@@ -4991,6 +5151,29 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0009898-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Freshman</name>
+              </cos-name>
+              <cos-name>
+                <name>Junior</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce0-Slot0-Port2</uni-id>
@@ -10027,6 +10210,17 @@ MEF GET Config ALLs
         <subscriber-services>
           <evc>
             <evc-id>EVC-0001343-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce0-Slot0-Port3</uni-id>
@@ -10114,6 +10308,17 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0001898-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Kryton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce0-Slot0-Port1</uni-id>
@@ -10241,6 +10446,17 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0001899-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce0-Slot0-Port3</uni-id>
@@ -10328,6 +10544,17 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0001900-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce0-Slot0-Port3</uni-id>
@@ -10397,6 +10624,20 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0001901-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Freshman</name>
+              </cos-name>
+              <cos-name>
+                <name>Junior</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce5-Slot5-Port1</uni-id>
@@ -10485,6 +10726,29 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0001911-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Freshman</name>
+              </cos-name>
+              <cos-name>
+                <name>Junior</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce5-Slot5-Port2</uni-id>
@@ -10698,6 +10962,29 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0001944-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Freshman</name>
+              </cos-name>
+              <cos-name>
+                <name>Junior</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce5-Slot5-Port3</uni-id>
@@ -11031,6 +11318,17 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0002343-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce1-Slot0-Port2</uni-id>
@@ -11134,6 +11432,17 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0002899-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce1-Slot0-Port2</uni-id>
@@ -11237,6 +11546,17 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0002900-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce1-Slot0-Port2</uni-id>
@@ -11322,6 +11642,29 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0002947-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Freshman</name>
+              </cos-name>
+              <cos-name>
+                <name>Junior</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce5-Slot5-Port4</uni-id>
@@ -11447,6 +11790,29 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0009898-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Freshman</name>
+              </cos-name>
+              <cos-name>
+                <name>Junior</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce0-Slot0-Port2</uni-id>
@@ -15312,6 +15678,17 @@ MEF GET Config ALLs
         <subscriber-services>
           <evc>
             <evc-id>EVC-0001898-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Kryton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce0-Slot0-Port1</uni-id>
@@ -15522,6 +15899,20 @@ MEF GET Config ALLs
         <subscriber-services>
           <evc>
             <evc-id>EVC-0001901-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Freshman</name>
+              </cos-name>
+              <cos-name>
+                <name>Junior</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce5-Slot5-Port1</uni-id>
@@ -15788,6 +16179,29 @@ MEF GET Config ALLs
         <subscriber-services>
           <evc>
             <evc-id>EVC-0001911-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Freshman</name>
+              </cos-name>
+              <cos-name>
+                <name>Junior</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce5-Slot5-Port2</uni-id>
@@ -16262,6 +16676,17 @@ MEF GET Config ALLs
         <subscriber-services>
           <evc>
             <evc-id>EVC-0001899-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce0-Slot0-Port3</uni-id>
@@ -16338,6 +16763,17 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0001900-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce0-Slot0-Port3</uni-id>
@@ -16396,6 +16832,17 @@ MEF GET Config ALLs
           </evc>
           <evc>
             <evc-id>EVC-0001343-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce0-Slot0-Port3</uni-id>
@@ -16879,6 +17326,29 @@ MEF GET Config ALLs
         <subscriber-services>
           <evc>
             <evc-id>EVC-0001944-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Freshman</name>
+              </cos-name>
+              <cos-name>
+                <name>Junior</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce5-Slot5-Port3</uni-id>
@@ -17532,6 +18002,29 @@ MEF GET Config ALLs
         <subscriber-services>
           <evc>
             <evc-id>EVC-0002947-ACME-MEGAMART</evc-id>
+            <cos-names>
+              <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Freshman</name>
+              </cos-name>
+              <cos-name>
+                <name>Junior</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
+              </cos-name>
+            </cos-names>
             <end-points>
               <end-point>
                 <uni-id>MMPOP1-ce5-Slot5-Port4</uni-id>
