@@ -5778,7 +5778,7 @@
                   "name": "Argon"
                 },
                 {
-                  "name": "Kryton"
+                  "name": "Krypton"
                 },
                 {
                   "name": "Neon"
@@ -6130,10 +6130,19 @@
             "cos-names": {
               "cos-name": [
                 {
+                  "name": "Argon"
+                },
+                {
                   "name": "Freshman"
                 },
                 {
                   "name": "Junior"
+                },
+                {
+                  "name": "Krypton"
+                },
+                {
+                  "name": "Neon"
                 },
                 {
                   "name": "Senior"

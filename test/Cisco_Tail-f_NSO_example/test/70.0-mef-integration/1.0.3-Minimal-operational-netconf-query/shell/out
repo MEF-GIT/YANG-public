@@ -4379,7 +4379,7 @@
                 <name>Argon</name>
               </cos-name>
               <cos-name>
-                <name>Kryton</name>
+                <name>Krypton</name>
               </cos-name>
               <cos-name>
                 <name>Neon</name>
@@ -4719,10 +4719,19 @@
             <evc-id>EVC-0001901-ACME-MEGAMART</evc-id>
             <cos-names>
               <cos-name>
+                <name>Argon</name>
+              </cos-name>
+              <cos-name>
                 <name>Freshman</name>
               </cos-name>
               <cos-name>
                 <name>Junior</name>
+              </cos-name>
+              <cos-name>
+                <name>Krypton</name>
+              </cos-name>
+              <cos-name>
+                <name>Neon</name>
               </cos-name>
               <cos-name>
                 <name>Senior</name>
@@ -7391,7 +7400,7 @@
                 <name>Argon</name>
               </cos-name>
               <cos-name>
-                <name>Kryton</name>
+                <name>Krypton</name>
               </cos-name>
               <cos-name>
                 <name>Neon</name>
