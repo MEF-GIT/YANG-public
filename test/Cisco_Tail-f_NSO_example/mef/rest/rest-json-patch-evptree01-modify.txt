@@ -28,62 +28,99 @@
 	   "evc": [
 	    {	  
        "evc-id": "EVC-0002947-ACME-MEGAMART",
-        "end-points": {
-          "end-point": [
-            {
-              "uni-id": "MMPOP1-ce5-Slot5-Port4",
-              "ce-vlans": {
-                "ce-vlan": [
-                  {
-                    "vid": 153
-                  }
-                ]
-              },
-              "role": "root",
-              "admin-state": false,
-              "source-mac-address-limit-enabled": true
+            "cos-names": {
+              "cos-name": [
+                {
+                  "name": "Argon"
+                },
+                {
+                  "name": "Freshman"
+                },
+                {
+                  "name": "Junior"
+                },
+                {
+                  "name": "Krypton"
+                },
+                {
+                  "name": "Neon"
+                },
+                {
+                  "name": "Senior"
+                },
+                {
+                  "name": "Sophomore"
+                }
+              ]
             },
-            {
-              "uni-id": "MMPOP1-ce6-Slot6-Port3",
-              "ce-vlans": {
-                "ce-vlan": [
-                  {
-                    "vid": 153
-                  }
-                ]
-              },
-              "role": "leaf",
-              "admin-state": false,
-              "source-mac-address-limit-enabled": true
+            "end-points": {
+              "end-point": [
+                {
+                  "uni-id": "MMPOP1-ce5-Slot5-Port4",
+                  "ce-vlans": {
+                    "ce-vlan": [
+                      {
+                        "vid": 153
+                      }
+                    ]
+                  },
+                  "role": "root",
+                  "admin-state": false,
+                  "color-identifier": "dscp",
+                  "cos-identifier": "MEF103_Table23",
+                  "eec-identifier": "MEF103_Table23",
+                  "source-mac-address-limit-enabled": true
+                },
+                {
+                  "uni-id": "MMPOP1-ce6-Slot6-Port3",
+                  "ce-vlans": {
+                    "ce-vlan": [
+                      {
+                        "vid": 153
+                      }
+                    ]
+                  },
+                  "role": "leaf",
+                  "admin-state": false,
+                  "color-identifier": "dscp",
+                  "cos-identifier": "MEF103_Table23",
+                  "eec-identifier": "MEF103_Table23",
+                  "source-mac-address-limit-enabled": true
+                },
+                {
+                  "uni-id": "MMPOP1-ce7-Slot7-Port3",
+                  "ce-vlans": {
+                    "ce-vlan": [
+                      {
+                        "vid": 153
+                      }
+                    ]
+                  },
+                  "role": "leaf",
+                  "admin-state": false,
+                  "color-identifier": "dscp",
+                  "cos-identifier": "MEF103_Table23",
+                  "eec-identifier": "MEF103_Table23",
+                  "source-mac-address-limit-enabled": true
+                },
+                {
+                  "uni-id": "MMPOP1-ce8-Slot8-Port3",
+                  "ce-vlans": {
+                    "ce-vlan": [
+                      {
+                        "vid": 153
+                      }
+                    ]
+                  },
+                  "role": "leaf",
+                  "admin-state": false,
+                  "color-identifier": "dscp",
+                  "cos-identifier": "MEF103_Table23",
+                  "eec-identifier": "MEF103_Table23",
+                  "source-mac-address-limit-enabled": true
+                }
+              ]
             },
-            {
-              "uni-id": "MMPOP1-ce7-Slot7-Port3",
-              "ce-vlans": {
-                "ce-vlan": [
-                  {
-                    "vid": 153
-                  }
-                ]
-              },
-              "role": "leaf",
-              "admin-state": false,
-              "source-mac-address-limit-enabled": true
-            },
-            {
-              "uni-id": "MMPOP1-ce8-Slot8-Port3",
-              "ce-vlans": {
-                "ce-vlan": [
-                  {
-                    "vid": 153
-                  }
-                ]
-              },
-              "role": "leaf",
-              "admin-state": false,
-              "source-mac-address-limit-enabled": true
-            }
-          ]
-        },
         "carrier-ethernet-sls": {
           "sls-id": "MEF103_Table25",
           "cos-entries": {
