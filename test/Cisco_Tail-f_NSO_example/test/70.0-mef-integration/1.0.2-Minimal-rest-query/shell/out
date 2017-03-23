@@ -3100,22 +3100,22 @@
           {
             "id": "MEF62_ApdxA",
             "eec-pcp": {
-              "default-pcp-eec-name": "EEC-Neon",
+              "default-pcp-eec-name": "Neon",
               "default-pcp-color": "green",
               "pcp": [
                 {
                   "pcp-value": 1,
-                  "eec-name": "EEC-Neon",
+                  "eec-name": "Neon",
                   "color": "yellow"
                 },
                 {
                   "pcp-value": 3,
-                  "eec-name": "EEC-Argon",
+                  "eec-name": "Argon",
                   "color": "green"
                 },
                 {
                   "pcp-value": 5,
-                  "eec-name": "EEC-Krypton",
+                  "eec-name": "Krypton",
                   "color": "green"
                 }
               ]
@@ -3668,7 +3668,7 @@
           {
             "id": "MEF103_Table23",
             "cos-dscp": {
-              "default-ipv4-cos-name": "L",
+              "default-ipv4-cos-name": "Freshman",
               "default-ipv4-color": "yellow",
               "default-ipv6-cos-name": "Freshman",
               "default-ipv6-color": "yellow",
@@ -5761,6 +5761,12 @@
                   "name": "Argon"
                 },
                 {
+                  "name": "Freshman"
+                },
+                {
+                  "name": "Gold"
+                },
+                {
                   "name": "Krypton"
                 },
                 {
@@ -5860,6 +5866,9 @@
               "cos-name": [
                 {
                   "name": "Argon"
+                },
+                {
+                  "name": "Freshman"
                 },
                 {
                   "name": "Krypton"
@@ -6012,6 +6021,12 @@
                   "name": "Argon"
                 },
                 {
+                  "name": "Freshman"
+                },
+                {
+                  "name": "Gold"
+                },
+                {
                   "name": "Krypton"
                 },
                 {
@@ -6111,6 +6126,12 @@
               "cos-name": [
                 {
                   "name": "Argon"
+                },
+                {
+                  "name": "Freshman"
+                },
+                {
+                  "name": "Gold"
                 },
                 {
                   "name": "Krypton"
@@ -6950,6 +6971,12 @@
                   "name": "Argon"
                 },
                 {
+                  "name": "Freshman"
+                },
+                {
+                  "name": "Gold"
+                },
+                {
                   "name": "Krypton"
                 },
                 {
@@ -7075,6 +7102,12 @@
                   "name": "Argon"
                 },
                 {
+                  "name": "Freshman"
+                },
+                {
+                  "name": "Gold"
+                },
+                {
                   "name": "Krypton"
                 },
                 {
@@ -7198,6 +7231,12 @@
               "cos-name": [
                 {
                   "name": "Argon"
+                },
+                {
+                  "name": "Freshman"
+                },
+                {
+                  "name": "Gold"
                 },
                 {
                   "name": "Krypton"
