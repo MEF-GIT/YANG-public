@@ -1666,18 +1666,18 @@ mef-global profiles eec eec-profile MEF103_Table23
  !
 !
 mef-global profiles eec eec-profile MEF62_ApdxA
- eec-pcp default-pcp-eec-name EEC-Neon
+ eec-pcp default-pcp-eec-name Neon
  eec-pcp default-pcp-color green
  eec-pcp pcp 1
-  eec-name EEC-Neon
+  eec-name Neon
   color    yellow
  !
  eec-pcp pcp 3
-  eec-name EEC-Argon
+  eec-name Argon
   color    green
  !
  eec-pcp pcp 5
-  eec-name EEC-Krypton
+  eec-name Krypton
   color    green
  !
 !
@@ -2086,7 +2086,7 @@ mef-global profiles cos cos-profile MEF103_Table14
  !
 !
 mef-global profiles cos cos-profile MEF103_Table23
- cos-dscp default-ipv4-cos-name L
+ cos-dscp default-ipv4-cos-name Freshman
  cos-dscp default-ipv4-color yellow
  cos-dscp default-ipv6-cos-name Freshman
  cos-dscp default-ipv6-color yellow
@@ -3066,6 +3066,10 @@ mef-interfaces unis uni MMPOP1-ce8-Slot8-Port3
 mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART
  cos-names cos-name Argon
  !
+ cos-names cos-name Freshman
+ !
+ cos-names cos-name Gold
+ !
  cos-names cos-name Krypton
  !
  cos-names cos-name Neon
@@ -3114,6 +3118,8 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART
  cos-names cos-name Argon
+ !
+ cos-names cos-name Freshman
  !
  cos-names cos-name Krypton
  !
@@ -3183,6 +3189,10 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART
 mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART
  cos-names cos-name Argon
  !
+ cos-names cos-name Freshman
+ !
+ cos-names cos-name Gold
+ !
  cos-names cos-name Krypton
  !
  cos-names cos-name Neon
@@ -3231,6 +3241,10 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART
  cos-names cos-name Argon
+ !
+ cos-names cos-name Freshman
+ !
+ cos-names cos-name Gold
  !
  cos-names cos-name Krypton
  !
@@ -3691,6 +3705,10 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART
 mef-services carrier-ethernet subscriber-services evc EVC-0002343-ACME-MEGAMART
  cos-names cos-name Argon
  !
+ cos-names cos-name Freshman
+ !
+ cos-names cos-name Gold
+ !
  cos-names cos-name Krypton
  !
  cos-names cos-name Neon
@@ -3752,6 +3770,10 @@ mef-services carrier-ethernet subscriber-services evc EVC-0002343-ACME-MEGAMART
 mef-services carrier-ethernet subscriber-services evc EVC-0002899-ACME-MEGAMART
  cos-names cos-name Argon
  !
+ cos-names cos-name Freshman
+ !
+ cos-names cos-name Gold
+ !
  cos-names cos-name Krypton
  !
  cos-names cos-name Neon
@@ -3812,6 +3834,10 @@ mef-services carrier-ethernet subscriber-services evc EVC-0002899-ACME-MEGAMART
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0002900-ACME-MEGAMART
  cos-names cos-name Argon
+ !
+ cos-names cos-name Freshman
+ !
+ cos-names cos-name Gold
  !
  cos-names cos-name Krypton
  !

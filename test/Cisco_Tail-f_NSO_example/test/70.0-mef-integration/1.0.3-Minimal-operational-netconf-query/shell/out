@@ -1465,24 +1465,24 @@
           <eec-profile>
             <id>MEF62_ApdxA</id>
             <eec-pcp>
-              <default-pcp-eec-name>EEC-Neon</default-pcp-eec-name>
+              <default-pcp-eec-name>Neon</default-pcp-eec-name>
               <default-pcp-color>green</default-pcp-color>
               <pcp>
                 <pcp-value>1</pcp-value>
                 <discard-value wd:default="true">false</discard-value>
-                <eec-name>EEC-Neon</eec-name>
+                <eec-name>Neon</eec-name>
                 <color>yellow</color>
               </pcp>
               <pcp>
                 <pcp-value>3</pcp-value>
                 <discard-value wd:default="true">false</discard-value>
-                <eec-name>EEC-Argon</eec-name>
+                <eec-name>Argon</eec-name>
                 <color>green</color>
               </pcp>
               <pcp>
                 <pcp-value>5</pcp-value>
                 <discard-value wd:default="true">false</discard-value>
-                <eec-name>EEC-Krypton</eec-name>
+                <eec-name>Krypton</eec-name>
                 <color>green</color>
               </pcp>
             </eec-pcp>
@@ -2064,7 +2064,7 @@
           <cos-profile>
             <id>MEF103_Table23</id>
             <cos-dscp>
-              <default-ipv4-cos-name>L</default-ipv4-cos-name>
+              <default-ipv4-cos-name>Freshman</default-ipv4-cos-name>
               <default-ipv4-color>yellow</default-ipv4-color>
               <default-ipv6-cos-name>Freshman</default-ipv6-cos-name>
               <default-ipv6-color>yellow</default-ipv6-color>
@@ -4272,6 +4272,12 @@
                 <name>Argon</name>
               </cos-name>
               <cos-name>
+                <name>Freshman</name>
+              </cos-name>
+              <cos-name>
+                <name>Gold</name>
+              </cos-name>
+              <cos-name>
                 <name>Krypton</name>
               </cos-name>
               <cos-name>
@@ -4377,6 +4383,9 @@
             <cos-names>
               <cos-name>
                 <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Freshman</name>
               </cos-name>
               <cos-name>
                 <name>Krypton</name>
@@ -4526,6 +4535,12 @@
                 <name>Argon</name>
               </cos-name>
               <cos-name>
+                <name>Freshman</name>
+              </cos-name>
+              <cos-name>
+                <name>Gold</name>
+              </cos-name>
+              <cos-name>
                 <name>Krypton</name>
               </cos-name>
               <cos-name>
@@ -4631,6 +4646,12 @@
             <cos-names>
               <cos-name>
                 <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Freshman</name>
+              </cos-name>
+              <cos-name>
+                <name>Gold</name>
               </cos-name>
               <cos-name>
                 <name>Krypton</name>
@@ -5467,6 +5488,12 @@
                 <name>Argon</name>
               </cos-name>
               <cos-name>
+                <name>Freshman</name>
+              </cos-name>
+              <cos-name>
+                <name>Gold</name>
+              </cos-name>
+              <cos-name>
                 <name>Krypton</name>
               </cos-name>
               <cos-name>
@@ -5590,6 +5617,12 @@
                 <name>Argon</name>
               </cos-name>
               <cos-name>
+                <name>Freshman</name>
+              </cos-name>
+              <cos-name>
+                <name>Gold</name>
+              </cos-name>
+              <cos-name>
                 <name>Krypton</name>
               </cos-name>
               <cos-name>
@@ -5711,6 +5744,12 @@
             <cos-names>
               <cos-name>
                 <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Freshman</name>
+              </cos-name>
+              <cos-name>
+                <name>Gold</name>
               </cos-name>
               <cos-name>
                 <name>Krypton</name>
@@ -7398,6 +7437,9 @@
             <cos-names>
               <cos-name>
                 <name>Argon</name>
+              </cos-name>
+              <cos-name>
+                <name>Freshman</name>
               </cos-name>
               <cos-name>
                 <name>Krypton</name>
