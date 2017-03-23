@@ -36,22 +36,7 @@
 ... cmd-edit-config-mef-global-delete.xml
 <?xml version="1.0" encoding="UTF-8"?>
 <rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1">
-  <rpc-error>
-    <error-type>application</error-type>
-    <error-tag>data-missing</error-tag>
-    <error-severity>error</error-severity>
-    <error-app-tag>instance-required</error-app-tag>
-    <error-path xmlns:mef-interfaces="urn:mef:xid:mef-interfaces">
-    /rpc/edit-config/config/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id='MMPOP1-ce1-Slot0-Port2']/mef-interfaces:ingress-envelopes/mef-interfaces:envelope[mef-interfaces:envelope-id='ienv_EVPL_UNI003_EVC-0002899-ACME-MEGAMART']/mef-interfaces:bwp-flows/mef-interfaces:bwp-flow[mef-interfaces:bw-profile='low1-bwp-uni']/mef-interfaces:bw-profile
-  </error-path>
-    <error-message xml:lang="en">illegal reference /mef-interfaces/unis/uni[uni-id='MMPOP1-ce1-Slot0-Port2']/ingress-envelopes/envelope[envelope-id='ienv_EVPL_UNI003_EVC-0002899-ACME-MEGAMART']/bwp-flows/bwp-flow[bw-profile='low1-bwp-uni']/bw-profile</error-message>
-    <error-info xmlns:tailf="http://tail-f.com/ns/netconf/params/1.1" xmlns:mef-interfaces="urn:mef:xid:mef-interfaces" xmlns:mef-global="urn:mef:xid:mef-global">
-      <tailf:bad-keyref>
-        <tailf:bad-element>/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id='MMPOP1-ce1-Slot0-Port2']/mef-interfaces:ingress-envelopes/mef-interfaces:envelope[mef-interfaces:envelope-id='ienv_EVPL_UNI003_EVC-0002899-ACME-MEGAMART']/mef-interfaces:bwp-flows/mef-interfaces:bwp-flow[mef-interfaces:bw-profile='low1-bwp-uni']/mef-interfaces:bw-profile</tailf:bad-element>
-        <tailf:missing-element>/mef-global:mef-global/mef-global:profiles/mef-global:bwp-flows-parameter-set/mef-global:bwp-flow-parameter-set[mef-global:bwp-flow-parameter-set-id='low1-bwp-uni']/mef-global:bwp-flow-parameter-set-id</tailf:missing-element>
-      </tailf:bad-keyref>
-    </error-info>
-  </rpc-error>
+  <ok/>
 </rpc-reply>
 ... cmd-edit-config-mef-topology-delete.xml
 <?xml version="1.0" encoding="UTF-8"?>
