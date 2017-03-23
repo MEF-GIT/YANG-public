@@ -28,246 +28,307 @@
 	   "evc": [
 	    {	  
         "evc-id": "EVC-0001944-ACME-MEGAMART",
-        "end-points": {
-          "end-point": [
-            {
-              "uni-id": "MMPOP1-ce5-Slot5-Port3",
-              "ce-vlans": {
-                "ce-vlan": [
-                  {
-                    "vid": 53
-                  },
-                  {
-                    "vid": 54
-                  },
-                  {
-                    "vid": 63
-                  },
-                  {
-                    "vid": 73
-                  },
-                  {
-                    "vid": 83
-                  }
-                ]
-              },
-              "ingress-bwp-flows-per-cos": {
-                "coupling-enabled": false,
-                "bwp-flow-per-cos": [
-                  {
-                    "cos-name": "Argon",
-                    "bw-profile": "ienv_EVPLAN_UNI553_EVC-0001944_Argon"
-                  },
-                  {
-                    "cos-name": "Krypton",
-                    "bw-profile": "ienv_EVPLAN_UNI553_EVC-0001944_Krypton"
-                  },
-                  {
-                    "cos-name": "Neon",
-                    "bw-profile": "ienv_EVPLAN_UNI553_EVC-0001944_Neon"
-                  }
-                ]
-              },
-              "egress-bwp-flows-per-eec": {
-                "coupling-enabled": false,
-                "bwp-flow-per-eec": [
-                  {
-                    "eec-name": "EEC-Argon",
-                    "bw-profile": "eenv_EVPLAN_UNI553_EVC-0001944_Argon"
-                  },
-                  {
-                    "eec-name": "EEC-Krypton",
-                    "bw-profile": "eenv_EVPLAN_UNI553_EVC-0001944_Krypton"
-                  },
-                  {
-                    "eec-name": "EEC-Neon",
-                    "bw-profile": "eenv_EVPLAN_UNI553_EVC-0001944_Neon"
-                  }
-                ]
-              },
-              "role": "root",
-              "admin-state": false,
-              "source-mac-address-limit-enabled": true
+            "cos-names": {
+              "cos-name": [
+                {
+                  "name": "Argon"
+                },
+                {
+                  "name": "Freshman"
+                },
+                {
+                  "name": "Junior"
+                },
+                {
+                  "name": "Krypton"
+                },
+                {
+                  "name": "Neon"
+                },
+                {
+                  "name": "Senior"
+                },
+                {
+                  "name": "Sophomore"
+                }
+              ]
             },
-            {
-              "uni-id": "MMPOP1-ce6-Slot6-Port3",
-              "ce-vlans": {
-                "ce-vlan": [
-                  {
-                    "vid": 53
+            "end-points": {
+              "end-point": [
+                {
+                  "uni-id": "MMPOP1-ce5-Slot5-Port3",
+                  "ce-vlans": {
+                    "ce-vlan": [
+                      {
+                        "vid": 53
+                      },
+                      {
+                        "vid": 54
+                      },
+                      {
+                        "vid": 63
+                      },
+                      {
+                        "vid": 73
+                      },
+                      {
+                        "vid": 83
+                      }
+                    ]
                   },
-                  {
-                    "vid": 54
+                  "ingress-bwp-flows-per-cos": {
+                    "coupling-enabled": false,
+                    "bwp-flow-per-cos": [
+                      {
+                        "cos-name": "Argon",
+                        "envelope-id": "ienv_EVPLAN_UNI553_EVC-0001944_Argon",
+                        "bw-profile": "medium1-bwp-uni"
+                      },
+                      {
+                        "cos-name": "Krypton",
+                        "envelope-id": "ienv_EVPLAN_UNI553_EVC-0001944_Krypton",
+                        "bw-profile": "high1-bwp-uni"
+                      },
+                      {
+                        "cos-name": "Neon",
+                        "envelope-id": "ienv_EVPLAN_UNI553_EVC-0001944_Neon",
+                        "bw-profile": "low1-bwp-uni"
+                      }
+                    ]
                   },
-                  {
-                    "vid": 63
+                  "egress-bwp-flows-per-eec": {
+                    "coupling-enabled": false,
+                    "bwp-flow-per-eec": [
+                      {
+                        "eec-name": "Argon",
+                        "envelope-id": "eenv_EVPLAN_UNI553_EVC-0001944_Argon",
+                        "bw-profile": "medium2-bwp-uni"
+                      },
+                      {
+                        "eec-name": "Krypton",
+                        "envelope-id": "eenv_EVPLAN_UNI553_EVC-0001944_Krypton",
+                        "bw-profile": "high2-bwp-uni"
+                      },
+                      {
+                        "eec-name": "Neon",
+                        "envelope-id": "eenv_EVPLAN_UNI553_EVC-0001944_Neon",
+                        "bw-profile": "low2-bwp-uni"
+                      }
+                    ]
                   },
-                  {
-                    "vid": 73
+                  "role": "root",
+                  "admin-state": false,
+                  "color-identifier": "dscp",
+                  "cos-identifier": "MEF103_Table23",
+                  "eec-identifier": "MEF103_Table23",
+                  "source-mac-address-limit-enabled": true
+                },
+                {
+                  "uni-id": "MMPOP1-ce6-Slot6-Port3",
+                  "ce-vlans": {
+                    "ce-vlan": [
+                      {
+                        "vid": 53
+                      },
+                      {
+                        "vid": 54
+                      },
+                      {
+                        "vid": 63
+                      },
+                      {
+                        "vid": 73
+                      },
+                      {
+                        "vid": 83
+                      }
+                    ]
                   },
-                  {
-                    "vid": 83
-                  }
-                ]
-              },
-              "ingress-bwp-flows-per-cos": {
-                "coupling-enabled": false,
-                "bwp-flow-per-cos": [
-                  {
-                    "cos-name": "Argon",
-                    "bw-profile": "ienv_EVPLAN_UNI663_EVC-0001944_Argon"
+                  "ingress-bwp-flows-per-cos": {
+                    "coupling-enabled": false,
+                    "bwp-flow-per-cos": [
+                      {
+                        "cos-name": "Argon",
+                        "envelope-id": "ienv_EVPLAN_UNI663_EVC-0001944_Argon",
+                        "bw-profile": "medium1-bwp-uni"
+                      },
+                      {
+                        "cos-name": "Krypton",
+                        "envelope-id": "ienv_EVPLAN_UNI663_EVC-0001944_Krypton",
+                        "bw-profile": "high1-bwp-uni"
+                      },
+                      {
+                        "cos-name": "Neon",
+                        "envelope-id": "ienv_EVPLAN_UNI663_EVC-0001944_Neon",
+                        "bw-profile": "low1-bwp-uni"
+                      }
+                    ]
                   },
-                  {
-                    "cos-name": "Krypton",
-                    "bw-profile": "ienv_EVPLAN_UNI663_EVC-0001944_Krypton"
+                  "egress-bwp-flows-per-eec": {
+                    "coupling-enabled": false,
+                    "bwp-flow-per-eec": [
+                      {
+                        "eec-name": "Argon",
+                        "envelope-id": "eenv_EVPLAN_UNI663_EVC-0001944_Argon",
+                        "bw-profile": "medium2-bwp-uni"
+                      },
+                      {
+                        "eec-name": "Krypton",
+                        "envelope-id": "eenv_EVPLAN_UNI663_EVC-0001944_Krypton",
+                        "bw-profile": "high2-bwp-uni"
+                      },
+                      {
+                        "eec-name": "Neon",
+                        "envelope-id": "eenv_EVPLAN_UNI663_EVC-0001944_Neon",
+                        "bw-profile": "low2-bwp-uni"
+                      }
+                    ]
                   },
-                  {
-                    "cos-name": "Neon",
-                    "bw-profile": "ienv_EVPLAN_UNI663_EVC-0001944_Neon"
-                  }
-                ]
-              },
-              "egress-bwp-flows-per-eec": {
-                "coupling-enabled": false,
-                "bwp-flow-per-eec": [
-                  {
-                    "eec-name": "EEC-Argon",
-                    "bw-profile": "eenv_EVPLAN_UNI663_EVC-0001944_Argon"
+                  "role": "root",
+                  "admin-state": false,
+                  "color-identifier": "dscp",
+                  "cos-identifier": "MEF103_Table23",
+                  "eec-identifier": "MEF103_Table23",
+                  "source-mac-address-limit-enabled": true
+                },
+                {
+                  "uni-id": "MMPOP1-ce7-Slot7-Port3",
+                  "ce-vlans": {
+                    "ce-vlan": [
+                      {
+                        "vid": 53
+                      },
+                      {
+                        "vid": 54
+                      },
+                      {
+                        "vid": 63
+                      },
+                      {
+                        "vid": 73
+                      },
+                      {
+                        "vid": 83
+                      }
+                    ]
                   },
-                  {
-                    "eec-name": "EEC-Krypton",
-                    "bw-profile": "eenv_EVPLAN_UNI663_EVC-0001944_Krypton"
+                  "ingress-bwp-flows-per-cos": {
+                    "coupling-enabled": false,
+                    "bwp-flow-per-cos": [
+                      {
+                        "cos-name": "Argon",
+                        "envelope-id": "ienv_EVPLAN_UNI773_EVC-0001944_Argon",
+                        "bw-profile": "medium1-bwp-uni"
+                      },
+                      {
+                        "cos-name": "Krypton",
+                        "envelope-id": "ienv_EVPLAN_UNI773_EVC-0001944_Krypton",
+                        "bw-profile": "high1-bwp-uni"
+                      },
+                      {
+                        "cos-name": "Neon",
+                        "envelope-id": "ienv_EVPLAN_UNI773_EVC-0001944_Neon",
+                        "bw-profile": "low1-bwp-uni"
+                      }
+                    ]
                   },
-                  {
-                    "eec-name": "EEC-Neon",
-                    "bw-profile": "eenv_EVPLAN_UNI663_EVC-0001944_Neon"
-                  }
-                ]
-              },
-              "role": "root",
-              "admin-state": false,
-              "source-mac-address-limit-enabled": true
+                  "egress-bwp-flows-per-eec": {
+                    "coupling-enabled": false,
+                    "bwp-flow-per-eec": [
+                      {
+                        "eec-name": "Argon",
+                        "envelope-id": "eenv_EVPLAN_UNI773_EVC-0001944_Argon",
+                        "bw-profile": "medium2-bwp-uni"
+                      },
+                      {
+                        "eec-name": "Krypton",
+                        "envelope-id": "eenv_EVPLAN_UNI773_EVC-0001944_Krypton",
+                        "bw-profile": "high2-bwp-uni"
+                      },
+                      {
+                        "eec-name": "Neon",
+                        "envelope-id": "eenv_EVPLAN_UNI773_EVC-0001944_Neon",
+                        "bw-profile": "low2-bwp-uni"
+                      }
+                    ]
+                  },
+                  "role": "root",
+                  "admin-state": false,
+                  "color-identifier": "dscp",
+                  "cos-identifier": "MEF103_Table23",
+                  "eec-identifier": "MEF103_Table23",
+                  "source-mac-address-limit-enabled": true
+                },
+                {
+                  "uni-id": "MMPOP1-ce8-Slot8-Port3",
+                  "ce-vlans": {
+                    "ce-vlan": [
+                      {
+                        "vid": 53
+                      },
+                      {
+                        "vid": 54
+                      },
+                      {
+                        "vid": 63
+                      },
+                      {
+                        "vid": 73
+                      },
+                      {
+                        "vid": 83
+                      }
+                    ]
+                  },
+                  "ingress-bwp-flows-per-cos": {
+                    "coupling-enabled": false,
+                    "bwp-flow-per-cos": [
+                      {
+                        "cos-name": "Argon",
+                        "envelope-id": "ienv_EVPLAN_UNI883_EVC-0001944_Argon",
+                        "bw-profile": "medium1-bwp-uni"
+                      },
+                      {
+                        "cos-name": "Krypton",
+                        "envelope-id": "ienv_EVPLAN_UNI883_EVC-0001944_Krypton",
+                        "bw-profile": "high1-bwp-uni"
+                      },
+                      {
+                        "cos-name": "Neon",
+                        "envelope-id": "ienv_EVPLAN_UNI883_EVC-0001944_Neon",
+                        "bw-profile": "low1-bwp-uni"
+                      }
+                    ]
+                  },
+                  "egress-bwp-flows-per-eec": {
+                    "coupling-enabled": false,
+                    "bwp-flow-per-eec": [
+                      {
+                        "eec-name": "Argon",
+                        "envelope-id": "eenv_EVPLAN_UNI883_EVC-0001944_Argon",
+                        "bw-profile": "medium2-bwp-uni"
+                      },
+                      {
+                        "eec-name": "Krypton",
+                        "envelope-id": "eenv_EVPLAN_UNI883_EVC-0001944_Krypton",
+                        "bw-profile": "high2-bwp-uni"
+                      },
+                      {
+                        "eec-name": "Neon",
+                        "envelope-id": "eenv_EVPLAN_UNI883_EVC-0001944_Neon",
+                        "bw-profile": "low2-bwp-uni"
+                      }
+                    ]
+                  },
+                  "role": "root",
+                  "admin-state": false,
+                  "color-identifier": "dscp",
+                  "cos-identifier": "MEF103_Table23",
+                  "eec-identifier": "MEF103_Table23",
+                  "source-mac-address-limit-enabled": true
+                }
+              ]
             },
-            {
-              "uni-id": "MMPOP1-ce7-Slot7-Port3",
-              "ce-vlans": {
-                "ce-vlan": [
-                  {
-                    "vid": 53
-                  },
-                  {
-                    "vid": 54
-                  },
-                  {
-                    "vid": 63
-                  },
-                  {
-                    "vid": 73
-                  },
-                  {
-                    "vid": 83
-                  }
-                ]
-              },
-              "ingress-bwp-flows-per-cos": {
-                "coupling-enabled": false,
-                "bwp-flow-per-cos": [
-                  {
-                    "cos-name": "Argon",
-                    "bw-profile": "ienv_EVPLAN_UNI773_EVC-0001944_Argon"
-                  },
-                  {
-                    "cos-name": "Krypton",
-                    "bw-profile": "ienv_EVPLAN_UNI773_EVC-0001944_Krypton"
-                  },
-                  {
-                    "cos-name": "Neon",
-                    "bw-profile": "ienv_EVPLAN_UNI773_EVC-0001944_Neon"
-                  }
-                ]
-              },
-              "egress-bwp-flows-per-eec": {
-                "coupling-enabled": false,
-                "bwp-flow-per-eec": [
-                  {
-                    "eec-name": "EEC-Argon",
-                    "bw-profile": "eenv_EVPLAN_UNI773_EVC-0001944_Argon"
-                  },
-                  {
-                    "eec-name": "EEC-Krypton",
-                    "bw-profile": "eenv_EVPLAN_UNI773_EVC-0001944_Krypton"
-                  },
-                  {
-                    "eec-name": "EEC-Neon",
-                    "bw-profile": "eenv_EVPLAN_UNI773_EVC-0001944_Neon"
-                  }
-                ]
-              },
-              "role": "root",
-              "admin-state": false,
-              "source-mac-address-limit-enabled": true
-            },
-            {
-              "uni-id": "MMPOP1-ce8-Slot8-Port3",
-              "ce-vlans": {
-                "ce-vlan": [
-                  {
-                    "vid": 53
-                  },
-                  {
-                    "vid": 54
-                  },
-                  {
-                    "vid": 63
-                  },
-                  {
-                    "vid": 73
-                  },
-                  {
-                    "vid": 83
-                  }
-                ]
-              },
-              "ingress-bwp-flows-per-cos": {
-                "coupling-enabled": false,
-                "bwp-flow-per-cos": [
-                  {
-                    "cos-name": "Argon",
-                    "bw-profile": "ienv_EVPLAN_UNI883_EVC-0001944_Argon"
-                  },
-                  {
-                    "cos-name": "Krypton",
-                    "bw-profile": "ienv_EVPLAN_UNI883_EVC-0001944_Krypton"
-                  },
-                  {
-                    "cos-name": "Neon",
-                    "bw-profile": "ienv_EVPLAN_UNI883_EVC-0001944_Neon"
-                  }
-                ]
-              },
-              "egress-bwp-flows-per-eec": {
-                "coupling-enabled": false,
-                "bwp-flow-per-eec": [
-                  {
-                    "eec-name": "EEC-Argon",
-                    "bw-profile": "eenv_EVPLAN_UNI883_EVC-0001944_Argon"
-                  },
-                  {
-                    "eec-name": "EEC-Krypton",
-                    "bw-profile": "eenv_EVPLAN_UNI883_EVC-0001944_Krypton"
-                  },
-                  {
-                    "eec-name": "EEC-Neon",
-                    "bw-profile": "eenv_EVPLAN_UNI883_EVC-0001944_Neon"
-                  }
-                ]
-              },
-              "role": "root",
-              "admin-state": false,
-              "source-mac-address-limit-enabled": true
-            }
-          ]
-        },
         "carrier-ethernet-sls": {
           "sls-id": "MEF103_Table25",
           "cos-entries": {

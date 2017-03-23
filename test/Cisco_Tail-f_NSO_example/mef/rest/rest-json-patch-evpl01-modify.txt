@@ -24,53 +24,54 @@
 	   "evc": [
 	    {
         "evc-id": "EVC-0001343-ACME-MEGAMART",
-        "end-points": {
-          "end-point": [
-            {
-              "uni-id": "MMPOP1-ce0-Slot0-Port3",
-              "ce-vlans": {
-                "ce-vlan": [
-                  {
-                    "vid": 1343
-                  }
-                ]
-              },
-              "role": "root",
-              "admin-state": false,
-              "color-identifier": "dscp",
-              "cos-identifier": "MEF103_Table23",
-              "eec-identifier": "MEF103_Table23",
-              "ingress-bw-profile-per-evc": "ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART",
-              "egress-bw-profile-per-evc": "eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART",
-              "source-mac-address-limit-enabled": false
+           "cos-names": {
+              "cos-name": [
+                {
+                  "name": "Argon"
+                },
+                {
+                  "name": "Krypton"
+                },
+                {
+                  "name": "Neon"
+                }
+              ]
             },
-            {
-              "uni-id": "MMPOP1-ce1-Slot1-Port3",
-              "ce-vlans": {
-                "ce-vlan": [
+            "carrier-ethernet-sls": {
+              "sls-id": "MEF103_Table25",
+              "start-time": "2016-06-18T12:00:00+00:00",
+              "cos-entries": {
+                "cos-entry": [
                   {
-                    "vid": 17
+                    "cos-name": "Neon",
+                    "pm-entries": {
+                      "pm-entry": [
+                        {
+                          "pm-entry-id": "SLS_Neon_Test2",
+                          "end-point-pairs": {
+                            "sls-uni-exclusions": {
+                              "end-point-pair": [
+                                {
+                                  "end-point1": "MMPOP1-ce1-Slot1-Port3",
+                                  "end-point2": "MMPOP1-ce0-Slot0-Port3"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
                   }
                 ]
-              },
-              "role": "root",
-              "admin-state": false,
-              "color-identifier": "pcp",
-              "cos-identifier": "MEF103_Table13",
-              "eec-identifier": "MEF62_ApdxA",
-              "ingress-bw-profile-per-evc": "ienv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART",
-              "egress-bw-profile-per-evc": "eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART",
-              "source-mac-address-limit-enabled": false
-            }
-          ]
-        },
+              }
+            },
         "connection-type": "point-to-point",
         "admin-state": false,
         "ce-vlan-id-preservation": false,
         "svc-type": "evpl"
         }
      ]
-   }  
+   }
    }
    } 
  }

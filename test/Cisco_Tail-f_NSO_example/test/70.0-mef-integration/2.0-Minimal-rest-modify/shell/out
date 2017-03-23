@@ -4,41 +4,8 @@ REST/JSON examples for mef-services
 ... rest-json-patch-epl01-modify.txt
 ... rest-json-patch-eplan01-modify.txt
 ... rest-json-patch-eptree01-modify.txt
-{
-  "errors": {
-    "error": [
-      {
-        "error-message": "/mef-services/carrier-ethernet/subscriber-services/evc{EVC-0001911-ACME-MEGAMART}/end-points/end-point{MMPOP1-ce5-Slot5-Port2}/egress-bwp-flows-per-eec/bwp-flow-per-eec{Sophomore}/envelope-id is not configured",
-        "error-urlpath": "/api/running",
-        "error-tag": "malformed-message"
-      }
-    ]
-  }
-}
 ... rest-json-patch-evpl01-modify.txt
-{
-  "errors": {
-    "error": [
-      {
-        "error-message": "invalid value for: ingress-bw-profile-per-evc in /mef-services:mef-services/mef-services:carrier-ethernet/mef-services:subscriber-services/mef-services:evc[mef-services:evc-id='EVC-0001343-ACME-MEGAMART']/mef-services:end-points/mef-services:end-point[mef-services:uni-id='MMPOP1-ce0-Slot0-Port3']/mef-services:ingress-bw-profile-per-evc",
-        "error-urlpath": "/api/running",
-        "error-tag": "malformed-message"
-      }
-    ]
-  }
-}
 ... rest-json-patch-evplan01-modify.txt
-{
-  "errors": {
-    "error": [
-      {
-        "error-message": "/mef-services/carrier-ethernet/subscriber-services/evc{EVC-0001944-ACME-MEGAMART}/end-points/end-point{MMPOP1-ce5-Slot5-Port3}/egress-bwp-flows-per-eec/bwp-flow-per-eec{EEC-Argon}/envelope-id is not configured",
-        "error-urlpath": "/api/running",
-        "error-tag": "malformed-message"
-      }
-    ]
-  }
-}
 ... rest-json-patch-evptree01-modify.txt
 REST/XML examples
 ... rest-xml-patch-mef-topology.txt
@@ -4174,7 +4141,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "admin-state": false,
-          "max-svc-frame-size": 1600,
+          "max-svc-frame-size": 1670,
           "@max-svc-frame-size": {"annotation": "EVPL Use Case 1:"},
           "service-multiplexing-enabled": true,
           "default-ce-vlan-id": 22,
@@ -4452,7 +4419,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "admin-state": false,
-          "max-svc-frame-size": 1600,
+          "max-svc-frame-size": 1679,
           "service-multiplexing-enabled": true,
           "default-ce-vlan-id": 17,
           "max-num-of-evcs": 1,
@@ -4803,7 +4770,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "admin-state": false,
-          "max-svc-frame-size": 1600,
+          "max-svc-frame-size": 1679,
           "service-multiplexing-enabled": false,
           "default-ce-vlan-id": 1,
           "max-num-of-evcs": 1,
@@ -5067,7 +5034,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           },
           "admin-state": false,
           "@admin-state": {"annotation": "EP-TREE Use Case 1:"},
-          "max-svc-frame-size": 1600,
+          "max-svc-frame-size": 1670,
           "all-to-one-bundling-enabled": true,
           "max-num-of-evcs": 1,
           "elmi-enabled": true,
@@ -5181,7 +5148,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           },
           "admin-state": false,
           "@admin-state": {"annotation": "EVP-LAN Use Case 1:"},
-          "max-svc-frame-size": 1600,
+          "max-svc-frame-size": 1670,
           "service-multiplexing-enabled": true,
           "bundling-enabled": true,
           "default-ce-vlan-id": 53,
@@ -5302,7 +5269,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "admin-state": false,
-          "max-svc-frame-size": 1600,
+          "max-svc-frame-size": 1679,
           "all-to-one-bundling-enabled": true,
           "max-num-of-evcs": 1
         },
@@ -5504,7 +5471,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "admin-state": false,
-          "max-svc-frame-size": 1600,
+          "max-svc-frame-size": 1670,
           "all-to-one-bundling-enabled": true,
           "max-num-of-evcs": 1
         },
@@ -5677,7 +5644,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "admin-state": false,
-          "max-svc-frame-size": 1600,
+          "max-svc-frame-size": 1679,
           "all-to-one-bundling-enabled": true,
           "max-num-of-evcs": 1
         },
