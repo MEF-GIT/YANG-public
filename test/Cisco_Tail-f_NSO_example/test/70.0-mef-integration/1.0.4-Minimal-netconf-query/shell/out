@@ -3712,6 +3712,9 @@ MEF GET Config ALLs
                 <name>Argon</name>
               </cos-name>
               <cos-name>
+                <name>Discard</name>
+              </cos-name>
+              <cos-name>
                 <name>Freshman</name>
               </cos-name>
               <cos-name>
@@ -3722,6 +3725,15 @@ MEF GET Config ALLs
               </cos-name>
               <cos-name>
                 <name>Neon</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Silver</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
               </cos-name>
             </cos-names>
             <end-points>
@@ -3808,10 +3820,19 @@ MEF GET Config ALLs
                 <name>Freshman</name>
               </cos-name>
               <cos-name>
+                <name>Junior</name>
+              </cos-name>
+              <cos-name>
                 <name>Krypton</name>
               </cos-name>
               <cos-name>
                 <name>Neon</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
               </cos-name>
             </cos-names>
             <end-points>
@@ -3947,6 +3968,15 @@ MEF GET Config ALLs
               <cos-name>
                 <name>Neon</name>
               </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Silver</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
+              </cos-name>
             </cos-names>
             <end-points>
               <end-point>
@@ -4039,6 +4069,15 @@ MEF GET Config ALLs
               </cos-name>
               <cos-name>
                 <name>Neon</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Silver</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
               </cos-name>
             </cos-names>
             <end-points>
@@ -4775,6 +4814,15 @@ MEF GET Config ALLs
               <cos-name>
                 <name>Neon</name>
               </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Silver</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
+              </cos-name>
             </cos-names>
             <end-points>
               <end-point>
@@ -4884,6 +4932,15 @@ MEF GET Config ALLs
               <cos-name>
                 <name>Neon</name>
               </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Silver</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
+              </cos-name>
             </cos-names>
             <end-points>
               <end-point>
@@ -4992,6 +5049,15 @@ MEF GET Config ALLs
               </cos-name>
               <cos-name>
                 <name>Neon</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Silver</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
               </cos-name>
             </cos-names>
             <end-points>
@@ -10263,6 +10329,9 @@ MEF GET Config ALLs
                 <name>Argon</name>
               </cos-name>
               <cos-name>
+                <name>Discard</name>
+              </cos-name>
+              <cos-name>
                 <name>Freshman</name>
               </cos-name>
               <cos-name>
@@ -10273,6 +10342,15 @@ MEF GET Config ALLs
               </cos-name>
               <cos-name>
                 <name>Neon</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Silver</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
               </cos-name>
             </cos-names>
             <end-points>
@@ -10370,10 +10448,19 @@ MEF GET Config ALLs
                 <name>Freshman</name>
               </cos-name>
               <cos-name>
+                <name>Junior</name>
+              </cos-name>
+              <cos-name>
                 <name>Krypton</name>
               </cos-name>
               <cos-name>
                 <name>Neon</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
               </cos-name>
             </cos-names>
             <end-points>
@@ -10519,6 +10606,15 @@ MEF GET Config ALLs
               <cos-name>
                 <name>Neon</name>
               </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Silver</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
+              </cos-name>
             </cos-names>
             <end-points>
               <end-point>
@@ -10622,6 +10718,15 @@ MEF GET Config ALLs
               </cos-name>
               <cos-name>
                 <name>Neon</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Silver</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
               </cos-name>
             </cos-names>
             <end-points>
@@ -11412,6 +11517,15 @@ MEF GET Config ALLs
               <cos-name>
                 <name>Neon</name>
               </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Silver</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
+              </cos-name>
             </cos-names>
             <end-points>
               <end-point>
@@ -11532,6 +11646,15 @@ MEF GET Config ALLs
               <cos-name>
                 <name>Neon</name>
               </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Silver</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
+              </cos-name>
             </cos-names>
             <end-points>
               <end-point>
@@ -11651,6 +11774,15 @@ MEF GET Config ALLs
               </cos-name>
               <cos-name>
                 <name>Neon</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Silver</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
               </cos-name>
             </cos-names>
             <end-points>
@@ -15782,10 +15914,19 @@ MEF GET Config ALLs
                 <name>Freshman</name>
               </cos-name>
               <cos-name>
+                <name>Junior</name>
+              </cos-name>
+              <cos-name>
                 <name>Krypton</name>
               </cos-name>
               <cos-name>
                 <name>Neon</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
               </cos-name>
             </cos-names>
             <end-points>
@@ -16800,6 +16941,15 @@ MEF GET Config ALLs
               <cos-name>
                 <name>Neon</name>
               </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Silver</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
+              </cos-name>
             </cos-names>
             <end-points>
               <end-point>
@@ -16893,6 +17043,15 @@ MEF GET Config ALLs
               <cos-name>
                 <name>Neon</name>
               </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Silver</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
+              </cos-name>
             </cos-names>
             <end-points>
               <end-point>
@@ -16957,6 +17116,9 @@ MEF GET Config ALLs
                 <name>Argon</name>
               </cos-name>
               <cos-name>
+                <name>Discard</name>
+              </cos-name>
+              <cos-name>
                 <name>Freshman</name>
               </cos-name>
               <cos-name>
@@ -16967,6 +17129,15 @@ MEF GET Config ALLs
               </cos-name>
               <cos-name>
                 <name>Neon</name>
+              </cos-name>
+              <cos-name>
+                <name>Senior</name>
+              </cos-name>
+              <cos-name>
+                <name>Silver</name>
+              </cos-name>
+              <cos-name>
+                <name>Sophomore</name>
               </cos-name>
             </cos-names>
             <end-points>
