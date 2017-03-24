@@ -5783,6 +5783,9 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                   "name": "Argon"
                 },
                 {
+                  "name": "Discard"
+                },
+                {
                   "name": "Freshman"
                 },
                 {
@@ -5793,6 +5796,15 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 },
                 {
                   "name": "Neon"
+                },
+                {
+                  "name": "Senior"
+                },
+                {
+                  "name": "Silver"
+                },
+                {
+                  "name": "Sophomore"
                 }
               ]
             },
@@ -5893,10 +5905,19 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                   "name": "Freshman"
                 },
                 {
+                  "name": "Junior"
+                },
+                {
                   "name": "Krypton"
                 },
                 {
                   "name": "Neon"
+                },
+                {
+                  "name": "Senior"
+                },
+                {
+                  "name": "Sophomore"
                 }
               ]
             },
@@ -6053,6 +6074,15 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 },
                 {
                   "name": "Neon"
+                },
+                {
+                  "name": "Senior"
+                },
+                {
+                  "name": "Silver"
+                },
+                {
+                  "name": "Sophomore"
                 }
               ]
             },
@@ -6160,6 +6190,15 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 },
                 {
                   "name": "Neon"
+                },
+                {
+                  "name": "Senior"
+                },
+                {
+                  "name": "Silver"
+                },
+                {
+                  "name": "Sophomore"
                 }
               ]
             },
@@ -7003,6 +7042,15 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 },
                 {
                   "name": "Neon"
+                },
+                {
+                  "name": "Senior"
+                },
+                {
+                  "name": "Silver"
+                },
+                {
+                  "name": "Sophomore"
                 }
               ]
             },
@@ -7134,6 +7182,15 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 },
                 {
                   "name": "Neon"
+                },
+                {
+                  "name": "Senior"
+                },
+                {
+                  "name": "Silver"
+                },
+                {
+                  "name": "Sophomore"
                 }
               ]
             },
@@ -7265,6 +7322,15 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                 },
                 {
                   "name": "Neon"
+                },
+                {
+                  "name": "Senior"
+                },
+                {
+                  "name": "Silver"
+                },
+                {
+                  "name": "Sophomore"
                 }
               ]
             },

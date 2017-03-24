@@ -3066,6 +3066,8 @@ mef-interfaces unis uni MMPOP1-ce8-Slot8-Port3
 mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART
  cos-names cos-name Argon
  !
+ cos-names cos-name Discard
+ !
  cos-names cos-name Freshman
  !
  cos-names cos-name Gold
@@ -3073,6 +3075,12 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART
  cos-names cos-name Krypton
  !
  cos-names cos-name Neon
+ !
+ cos-names cos-name Senior
+ !
+ cos-names cos-name Silver
+ !
+ cos-names cos-name Sophomore
  !
  end-points end-point MMPOP1-ce0-Slot0-Port3
   ce-vlans ce-vlan 1343
@@ -3121,9 +3129,15 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART
  !
  cos-names cos-name Freshman
  !
+ cos-names cos-name Junior
+ !
  cos-names cos-name Krypton
  !
  cos-names cos-name Neon
+ !
+ cos-names cos-name Senior
+ !
+ cos-names cos-name Sophomore
  !
  end-points end-point MMPOP1-ce0-Slot0-Port1
   ce-vlans ce-vlan 100
@@ -3197,6 +3211,12 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART
  !
  cos-names cos-name Neon
  !
+ cos-names cos-name Senior
+ !
+ cos-names cos-name Silver
+ !
+ cos-names cos-name Sophomore
+ !
  end-points end-point MMPOP1-ce0-Slot0-Port3
   ce-vlans ce-vlan 22
   !
@@ -3249,6 +3269,12 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART
  cos-names cos-name Krypton
  !
  cos-names cos-name Neon
+ !
+ cos-names cos-name Senior
+ !
+ cos-names cos-name Silver
+ !
+ cos-names cos-name Sophomore
  !
  end-points end-point MMPOP1-ce0-Slot0-Port3
   ce-vlans ce-vlan 33
@@ -3713,6 +3739,12 @@ mef-services carrier-ethernet subscriber-services evc EVC-0002343-ACME-MEGAMART
  !
  cos-names cos-name Neon
  !
+ cos-names cos-name Senior
+ !
+ cos-names cos-name Silver
+ !
+ cos-names cos-name Sophomore
+ !
  end-points end-point MMPOP1-ce1-Slot0-Port2
   ce-vlans ce-vlan 1343
   !
@@ -3778,6 +3810,12 @@ mef-services carrier-ethernet subscriber-services evc EVC-0002899-ACME-MEGAMART
  !
  cos-names cos-name Neon
  !
+ cos-names cos-name Senior
+ !
+ cos-names cos-name Silver
+ !
+ cos-names cos-name Sophomore
+ !
  end-points end-point MMPOP1-ce1-Slot0-Port2
   ce-vlans ce-vlan 22
   !
@@ -3842,6 +3880,12 @@ mef-services carrier-ethernet subscriber-services evc EVC-0002900-ACME-MEGAMART
  cos-names cos-name Krypton
  !
  cos-names cos-name Neon
+ !
+ cos-names cos-name Senior
+ !
+ cos-names cos-name Silver
+ !
+ cos-names cos-name Sophomore
  !
  end-points end-point MMPOP1-ce1-Slot0-Port2
   ce-vlans ce-vlan 33

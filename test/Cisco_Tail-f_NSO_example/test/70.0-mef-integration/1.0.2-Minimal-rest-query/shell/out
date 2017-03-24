@@ -5761,6 +5761,9 @@
                   "name": "Argon"
                 },
                 {
+                  "name": "Discard"
+                },
+                {
                   "name": "Freshman"
                 },
                 {
@@ -5771,6 +5774,15 @@
                 },
                 {
                   "name": "Neon"
+                },
+                {
+                  "name": "Senior"
+                },
+                {
+                  "name": "Silver"
+                },
+                {
+                  "name": "Sophomore"
                 }
               ]
             },
@@ -5871,10 +5883,19 @@
                   "name": "Freshman"
                 },
                 {
+                  "name": "Junior"
+                },
+                {
                   "name": "Krypton"
                 },
                 {
                   "name": "Neon"
+                },
+                {
+                  "name": "Senior"
+                },
+                {
+                  "name": "Sophomore"
                 }
               ]
             },
@@ -6031,6 +6052,15 @@
                 },
                 {
                   "name": "Neon"
+                },
+                {
+                  "name": "Senior"
+                },
+                {
+                  "name": "Silver"
+                },
+                {
+                  "name": "Sophomore"
                 }
               ]
             },
@@ -6138,6 +6168,15 @@
                 },
                 {
                   "name": "Neon"
+                },
+                {
+                  "name": "Senior"
+                },
+                {
+                  "name": "Silver"
+                },
+                {
+                  "name": "Sophomore"
                 }
               ]
             },
@@ -6981,6 +7020,15 @@
                 },
                 {
                   "name": "Neon"
+                },
+                {
+                  "name": "Senior"
+                },
+                {
+                  "name": "Silver"
+                },
+                {
+                  "name": "Sophomore"
                 }
               ]
             },
@@ -7112,6 +7160,15 @@
                 },
                 {
                   "name": "Neon"
+                },
+                {
+                  "name": "Senior"
+                },
+                {
+                  "name": "Silver"
+                },
+                {
+                  "name": "Sophomore"
                 }
               ]
             },
@@ -7243,6 +7300,15 @@
                 },
                 {
                   "name": "Neon"
+                },
+                {
+                  "name": "Senior"
+                },
+                {
+                  "name": "Silver"
+                },
+                {
+                  "name": "Sophomore"
                 }
               ]
             },

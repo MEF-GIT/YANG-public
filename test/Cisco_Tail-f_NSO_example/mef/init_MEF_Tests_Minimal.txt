@@ -966,6 +966,9 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART 
 mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART cos-names cos-name Krypton
 mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART cos-names cos-name Argon
 mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART cos-names cos-name Neon
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART cos-names cos-name Senior
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART cos-names cos-name Junior
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART cos-names cos-name Sophomore
 mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART cos-names cos-name Freshman
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 role root admin-state false source-mac-address-limit-enabled false ce-vlans ce-vlan 100
@@ -1075,6 +1078,9 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART 
 mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART cos-names cos-name Argon
 mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART cos-names cos-name Neon
 mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART cos-names cos-name Gold
+mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART cos-names cos-name Silver
+mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART cos-names cos-name Senior
+mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART cos-names cos-name Sophomore
 mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART cos-names cos-name Freshman
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 role root admin-state false source-mac-address-limit-enabled false ce-vlans ce-vlan 22
@@ -1103,6 +1109,9 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART 
 mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART cos-names cos-name Argon
 mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART cos-names cos-name Neon
 mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART cos-names cos-name Gold
+mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART cos-names cos-name Silver
+mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART cos-names cos-name Senior
+mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART cos-names cos-name Sophomore
 mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART cos-names cos-name Freshman
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 role root admin-state false source-mac-address-limit-enabled false ce-vlans ce-vlan 33
@@ -1135,6 +1144,10 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART 
 mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART cos-names cos-name Argon
 mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART cos-names cos-name Neon
 mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART cos-names cos-name Gold
+mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART cos-names cos-name Silver
+mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART cos-names cos-name Discard
+mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART cos-names cos-name Senior
+mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART cos-names cos-name Sophomore
 mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART cos-names cos-name Freshman
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 ingress-bw-profile-per-evc envelope-id ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART bw-profile high1-bwp-uni
@@ -1232,6 +1245,9 @@ mef-services carrier-ethernet subscriber-services evc EVC-0002899-ACME-MEGAMART 
 mef-services carrier-ethernet subscriber-services evc EVC-0002899-ACME-MEGAMART cos-names cos-name Argon
 mef-services carrier-ethernet subscriber-services evc EVC-0002899-ACME-MEGAMART cos-names cos-name Neon
 mef-services carrier-ethernet subscriber-services evc EVC-0002899-ACME-MEGAMART cos-names cos-name Gold
+mef-services carrier-ethernet subscriber-services evc EVC-0002899-ACME-MEGAMART cos-names cos-name Silver
+mef-services carrier-ethernet subscriber-services evc EVC-0002899-ACME-MEGAMART cos-names cos-name Senior
+mef-services carrier-ethernet subscriber-services evc EVC-0002899-ACME-MEGAMART cos-names cos-name Sophomore
 mef-services carrier-ethernet subscriber-services evc EVC-0002899-ACME-MEGAMART cos-names cos-name Freshman
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0002899-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot0-Port2 role root admin-state false source-mac-address-limit-enabled false ce-vlans ce-vlan 22
@@ -1260,6 +1276,9 @@ mef-services carrier-ethernet subscriber-services evc EVC-0002900-ACME-MEGAMART 
 mef-services carrier-ethernet subscriber-services evc EVC-0002900-ACME-MEGAMART cos-names cos-name Argon
 mef-services carrier-ethernet subscriber-services evc EVC-0002900-ACME-MEGAMART cos-names cos-name Neon
 mef-services carrier-ethernet subscriber-services evc EVC-0002900-ACME-MEGAMART cos-names cos-name Gold
+mef-services carrier-ethernet subscriber-services evc EVC-0002900-ACME-MEGAMART cos-names cos-name Silver
+mef-services carrier-ethernet subscriber-services evc EVC-0002900-ACME-MEGAMART cos-names cos-name Senior
+mef-services carrier-ethernet subscriber-services evc EVC-0002900-ACME-MEGAMART cos-names cos-name Sophomore
 mef-services carrier-ethernet subscriber-services evc EVC-0002900-ACME-MEGAMART cos-names cos-name Freshman
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0002900-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot0-Port2 role root admin-state false source-mac-address-limit-enabled false ce-vlans ce-vlan 33
@@ -1290,6 +1309,9 @@ mef-services carrier-ethernet subscriber-services evc EVC-0002343-ACME-MEGAMART 
 mef-services carrier-ethernet subscriber-services evc EVC-0002343-ACME-MEGAMART cos-names cos-name Argon
 mef-services carrier-ethernet subscriber-services evc EVC-0002343-ACME-MEGAMART cos-names cos-name Neon
 mef-services carrier-ethernet subscriber-services evc EVC-0002343-ACME-MEGAMART cos-names cos-name Gold
+mef-services carrier-ethernet subscriber-services evc EVC-0002343-ACME-MEGAMART cos-names cos-name Silver
+mef-services carrier-ethernet subscriber-services evc EVC-0002343-ACME-MEGAMART cos-names cos-name Senior
+mef-services carrier-ethernet subscriber-services evc EVC-0002343-ACME-MEGAMART cos-names cos-name Sophomore
 mef-services carrier-ethernet subscriber-services evc EVC-0002343-ACME-MEGAMART cos-names cos-name Freshman
 !
 mef-services carrier-ethernet subscriber-services evc EVC-0002343-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot0-Port2 role root admin-state false source-mac-address-limit-enabled false ce-vlans ce-vlan 1343
