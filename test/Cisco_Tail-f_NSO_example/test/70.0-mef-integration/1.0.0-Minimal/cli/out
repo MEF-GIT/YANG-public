@@ -3072,6 +3072,8 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART
  !
  cos-names cos-name Gold
  !
+ cos-names cos-name Junior
+ !
  cos-names cos-name Krypton
  !
  cos-names cos-name Neon
@@ -3207,9 +3209,13 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART
  !
  cos-names cos-name Gold
  !
+ cos-names cos-name Junior
+ !
  cos-names cos-name Krypton
  !
  cos-names cos-name Neon
+ !
+ cos-names cos-name Platinum
  !
  cos-names cos-name Senior
  !
@@ -3262,9 +3268,13 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART
 mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART
  cos-names cos-name Argon
  !
+ cos-names cos-name Discard
+ !
  cos-names cos-name Freshman
  !
  cos-names cos-name Gold
+ !
+ cos-names cos-name Junior
  !
  cos-names cos-name Krypton
  !
@@ -3731,9 +3741,13 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART
 mef-services carrier-ethernet subscriber-services evc EVC-0002343-ACME-MEGAMART
  cos-names cos-name Argon
  !
+ cos-names cos-name Discard
+ !
  cos-names cos-name Freshman
  !
  cos-names cos-name Gold
+ !
+ cos-names cos-name Junior
  !
  cos-names cos-name Krypton
  !
@@ -3802,13 +3816,19 @@ mef-services carrier-ethernet subscriber-services evc EVC-0002343-ACME-MEGAMART
 mef-services carrier-ethernet subscriber-services evc EVC-0002899-ACME-MEGAMART
  cos-names cos-name Argon
  !
+ cos-names cos-name Discard
+ !
  cos-names cos-name Freshman
  !
  cos-names cos-name Gold
  !
+ cos-names cos-name Junior
+ !
  cos-names cos-name Krypton
  !
  cos-names cos-name Neon
+ !
+ cos-names cos-name Platinum
  !
  cos-names cos-name Senior
  !
@@ -3873,9 +3893,13 @@ mef-services carrier-ethernet subscriber-services evc EVC-0002899-ACME-MEGAMART
 mef-services carrier-ethernet subscriber-services evc EVC-0002900-ACME-MEGAMART
  cos-names cos-name Argon
  !
+ cos-names cos-name Discard
+ !
  cos-names cos-name Freshman
  !
  cos-names cos-name Gold
+ !
+ cos-names cos-name Junior
  !
  cos-names cos-name Krypton
  !

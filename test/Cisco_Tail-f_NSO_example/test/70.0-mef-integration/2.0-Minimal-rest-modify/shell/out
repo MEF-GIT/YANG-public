@@ -5792,6 +5792,9 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                   "name": "Gold"
                 },
                 {
+                  "name": "Junior"
+                },
+                {
                   "name": "Krypton"
                 },
                 {
@@ -6070,10 +6073,16 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                   "name": "Gold"
                 },
                 {
+                  "name": "Junior"
+                },
+                {
                   "name": "Krypton"
                 },
                 {
                   "name": "Neon"
+                },
+                {
+                  "name": "Platinum"
                 },
                 {
                   "name": "Senior"
@@ -6180,10 +6189,16 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                   "name": "Argon"
                 },
                 {
+                  "name": "Discard"
+                },
+                {
                   "name": "Freshman"
                 },
                 {
                   "name": "Gold"
+                },
+                {
+                  "name": "Junior"
                 },
                 {
                   "name": "Krypton"
@@ -7032,10 +7047,16 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                   "name": "Argon"
                 },
                 {
+                  "name": "Discard"
+                },
+                {
                   "name": "Freshman"
                 },
                 {
                   "name": "Gold"
+                },
+                {
+                  "name": "Junior"
                 },
                 {
                   "name": "Krypton"
@@ -7172,16 +7193,25 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                   "name": "Argon"
                 },
                 {
+                  "name": "Discard"
+                },
+                {
                   "name": "Freshman"
                 },
                 {
                   "name": "Gold"
                 },
                 {
+                  "name": "Junior"
+                },
+                {
                   "name": "Krypton"
                 },
                 {
                   "name": "Neon"
+                },
+                {
+                  "name": "Platinum"
                 },
                 {
                   "name": "Senior"
@@ -7312,10 +7342,16 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
                   "name": "Argon"
                 },
                 {
+                  "name": "Discard"
+                },
+                {
                   "name": "Freshman"
                 },
                 {
                   "name": "Gold"
+                },
+                {
+                  "name": "Junior"
                 },
                 {
                   "name": "Krypton"
