@@ -5226,6 +5226,9 @@
                   "name": "Gold"
                 },
                 {
+                  "name": "Junior"
+                },
+                {
                   "name": "Krypton"
                 },
                 {
@@ -5504,10 +5507,16 @@
                   "name": "Gold"
                 },
                 {
+                  "name": "Junior"
+                },
+                {
                   "name": "Krypton"
                 },
                 {
                   "name": "Neon"
+                },
+                {
+                  "name": "Platinum"
                 },
                 {
                   "name": "Senior"
@@ -5614,10 +5623,16 @@
                   "name": "Argon"
                 },
                 {
+                  "name": "Discard"
+                },
+                {
                   "name": "Freshman"
                 },
                 {
                   "name": "Gold"
+                },
+                {
+                  "name": "Junior"
                 },
                 {
                   "name": "Krypton"
@@ -6466,10 +6481,16 @@
                   "name": "Argon"
                 },
                 {
+                  "name": "Discard"
+                },
+                {
                   "name": "Freshman"
                 },
                 {
                   "name": "Gold"
+                },
+                {
+                  "name": "Junior"
                 },
                 {
                   "name": "Krypton"
@@ -6606,16 +6627,25 @@
                   "name": "Argon"
                 },
                 {
+                  "name": "Discard"
+                },
+                {
                   "name": "Freshman"
                 },
                 {
                   "name": "Gold"
                 },
                 {
+                  "name": "Junior"
+                },
+                {
                   "name": "Krypton"
                 },
                 {
                   "name": "Neon"
+                },
+                {
+                  "name": "Platinum"
                 },
                 {
                   "name": "Senior"
@@ -6746,10 +6776,16 @@
                   "name": "Argon"
                 },
                 {
+                  "name": "Discard"
+                },
+                {
                   "name": "Freshman"
                 },
                 {
                   "name": "Gold"
+                },
+                {
+                  "name": "Junior"
                 },
                 {
                   "name": "Krypton"

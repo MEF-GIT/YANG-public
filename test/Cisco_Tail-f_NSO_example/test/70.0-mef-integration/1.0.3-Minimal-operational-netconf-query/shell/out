@@ -4281,6 +4281,9 @@
                 <name>Gold</name>
               </cos-name>
               <cos-name>
+                <name>Junior</name>
+              </cos-name>
+              <cos-name>
                 <name>Krypton</name>
               </cos-name>
               <cos-name>
@@ -4562,10 +4565,16 @@
                 <name>Gold</name>
               </cos-name>
               <cos-name>
+                <name>Junior</name>
+              </cos-name>
+              <cos-name>
                 <name>Krypton</name>
               </cos-name>
               <cos-name>
                 <name>Neon</name>
+              </cos-name>
+              <cos-name>
+                <name>Platinum</name>
               </cos-name>
               <cos-name>
                 <name>Senior</name>
@@ -4678,10 +4687,16 @@
                 <name>Argon</name>
               </cos-name>
               <cos-name>
+                <name>Discard</name>
+              </cos-name>
+              <cos-name>
                 <name>Freshman</name>
               </cos-name>
               <cos-name>
                 <name>Gold</name>
+              </cos-name>
+              <cos-name>
+                <name>Junior</name>
               </cos-name>
               <cos-name>
                 <name>Krypton</name>
@@ -5527,10 +5542,16 @@
                 <name>Argon</name>
               </cos-name>
               <cos-name>
+                <name>Discard</name>
+              </cos-name>
+              <cos-name>
                 <name>Freshman</name>
               </cos-name>
               <cos-name>
                 <name>Gold</name>
+              </cos-name>
+              <cos-name>
+                <name>Junior</name>
               </cos-name>
               <cos-name>
                 <name>Krypton</name>
@@ -5665,16 +5686,25 @@
                 <name>Argon</name>
               </cos-name>
               <cos-name>
+                <name>Discard</name>
+              </cos-name>
+              <cos-name>
                 <name>Freshman</name>
               </cos-name>
               <cos-name>
                 <name>Gold</name>
               </cos-name>
               <cos-name>
+                <name>Junior</name>
+              </cos-name>
+              <cos-name>
                 <name>Krypton</name>
               </cos-name>
               <cos-name>
                 <name>Neon</name>
+              </cos-name>
+              <cos-name>
+                <name>Platinum</name>
               </cos-name>
               <cos-name>
                 <name>Senior</name>
@@ -5803,10 +5833,16 @@
                 <name>Argon</name>
               </cos-name>
               <cos-name>
+                <name>Discard</name>
+              </cos-name>
+              <cos-name>
                 <name>Freshman</name>
               </cos-name>
               <cos-name>
                 <name>Gold</name>
+              </cos-name>
+              <cos-name>
+                <name>Junior</name>
               </cos-name>
               <cos-name>
                 <name>Krypton</name>
