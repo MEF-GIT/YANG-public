@@ -618,11 +618,10 @@ module mef-services {
             		"/mef-global:cos-pcp) or " +
 "count(/mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-pcp/mef-global:pcp" +
 "[not(mef-global:cos-name = current()/../../../cos-names/cos-name/name)]) = 0" {
-              error-message "When the Class of Service Identifier is based on PCP for a given " +
-              		"EVC at a given UNI, all cos-pcp CoS Names must be in the the EVC's Cos Names List.";
+              error-message "When the Class of Service Identifier is based on PCP for a given EVC at a given UNI, all cos-pcp CoS Names must be in the the EVC Cos Names List.";
               description
                 "When the Class of Service Identifier is based on PCP for a given " +
-              		"EVC at a given UNI, all cos-pcp CoS Names must be in the the EVC's Cos Names List.";
+              		"EVC at a given UNI, all cos-pcp CoS Names must be in the the EVC Cos Names List.";
             }
 
             must "not(/mef-global:mef-global/mef-global:" +
@@ -631,11 +630,10 @@ module mef-services {
             		"/mef-global:cos-dscp) or " +
 "count(/mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-dscp/mef-global:ipv4-dscp" +
 "[not(mef-global:cos-name = current()/../../../cos-names/cos-name/name)]) = 0" {
-              error-message "When the Class of Service Identifier is based on DSCP for a given " +
-              		"EVC at a given UNI, all IPv4 cos-dscp CoS Names must be in the the EVC's Cos Names List.";
+              error-message "When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, all IPv4 cos-dscp CoS Names must be in the the EVC Cos Names List.";
               description
                 "When the Class of Service Identifier is based on DSCP for a given " +
-              		"EVC at a given UNI, all IPv4 cos-dscp CoS Names must be in the the EVC's Cos Names List.";
+              		"EVC at a given UNI, all IPv4 cos-dscp CoS Names must be in the the EVC Cos Names List.";
             }
 
             must "not(/mef-global:mef-global/mef-global:" +
@@ -644,11 +642,10 @@ module mef-services {
             		"/mef-global:cos-dscp) or " +
 "count(/mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-dscp/mef-global:ipv6-dscp" +
 "[not(mef-global:cos-name = current()/../../../cos-names/cos-name/name)]) = 0" {
-              error-message "When the Class of Service Identifier is based on DSCP for a given " +
-              		"EVC at a given UNI, all IPv6 cos-dscp CoS Names must be in the the EVC's Cos Names List.";
+              error-message "When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, all IPv6 cos-dscp CoS Names must be in the the EVC Cos Names List.";
               description
                 "When the Class of Service Identifier is based on DSCP for a given " +
-              		"EVC at a given UNI, all IPv6 cos-dscp CoS Names must be in the the EVC's Cos Names List.";
+              		"EVC at a given UNI, all IPv6 cos-dscp CoS Names must be in the the EVC Cos Names List.";
             }
 
             must "not(/mef-global:mef-global/mef-global:" +
@@ -656,11 +653,10 @@ module mef-services {
             		"cos-profile[mef-global:id = current()]" +
             		"/mef-global:cos-pcp) or " +
             		"(../../../cos-names/cos-name[name = /mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-pcp/mef-global:default-pcp-cos-name])" {
-              error-message "When the Class of Service Identifier is based on PCP for a given " +
-              		"EVC at a given UNI, the default-pcp-cos-name must be in the the EVC's Cos Names List.";
+              error-message "When the Class of Service Identifier is based on PCP for a given EVC at a given UNI, the default-pcp-cos-name must be in the the EVC Cos Names List.";
               description
                 "When the Class of Service Identifier is based on PCP for a given " +
-              		"EVC at a given UNI, the default-pcp-cos-name must be in the the EVC's Cos Names List.";
+              		"EVC at a given UNI, the default-pcp-cos-name must be in the the EVC Cos Names List.";
             }
 
             must "not(/mef-global:mef-global/mef-global:" +
@@ -668,11 +664,10 @@ module mef-services {
             		"cos-profile[mef-global:id = current()]" +
             		"/mef-global:cos-evc) or " +
             		"(../../../cos-names/cos-name[name = /mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-evc/mef-global:default-evc-cos-name])" {
-              error-message "When the Class of Service Identifier is based on EVC for a given " +
-              		"EVC at a given UNI, the default-evc-cos-name must be in the the EVC's Cos Names List.";
+              error-message "When the Class of Service Identifier is based on EVC for a given EVC at a given UNI, the default-evc-cos-name must be in the the EVC Cos Names List.";
               description
                 "When the Class of Service Identifier is based on EVC for a given " +
-              		"EVC at a given UNI, the default-evc-cos-name must be in the the EVC's Cos Names List.";
+              		"EVC at a given UNI, the default-evc-cos-name must be in the the EVC Cos Names List.";
             }
 
             must "not(/mef-global:mef-global/mef-global:" +
@@ -680,11 +675,10 @@ module mef-services {
             		"cos-profile[mef-global:id = current()]" +
             		"/mef-global:cos-dscp) or " +
             		"(../../../cos-names/cos-name[name = /mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-dscp/mef-global:default-ipv4-cos-name])" {
-              error-message "When the Class of Service Identifier is based on DSCP for a given " +
-              		"EVC at a given UNI, the default-ipv4-cos-name must be in the the EVC's Cos Names List.";
+              error-message "When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv4-cos-name must be in the the EVC Cos Names List.";
               description
                 "When the Class of Service Identifier is based on DSCP for a given " +
-              		"EVC at a given UNI, the default-ipv4-cos-name must be in the the EVC's Cos Names List.";
+              		"EVC at a given UNI, the default-ipv4-cos-name must be in the the EVC Cos Names List.";
             }
 
             must "not(/mef-global:mef-global/mef-global:" +
@@ -692,11 +686,10 @@ module mef-services {
             		"cos-profile[mef-global:id = current()]" +
             		"/mef-global:cos-dscp) or " +
             		"(../../../cos-names/cos-name[name = /mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-dscp/mef-global:default-ipv6-cos-name])" {
-              error-message "When the Class of Service Identifier is based on DSCP for a given " +
-              		"EVC at a given UNI, the default-ipv6-cos-name must be in the the EVC's Cos Names List.";
+              error-message "When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv6-cos-name must be in the the EVC Cos Names List.";
               description
                 "When the Class of Service Identifier is based on DSCP for a given " +
-              		"EVC at a given UNI, the default-ipv6-cos-name must be in the the EVC's Cos Names List.";
+              		"EVC at a given UNI, the default-ipv6-cos-name must be in the the EVC Cos Names List.";
             }
 
             must "not(/mef-global:mef-global/mef-global:" +
@@ -755,11 +748,10 @@ module mef-services {
             		"/mef-global:eec-pcp) or " +
 "count(/mef-global:mef-global/mef-global:profiles/mef-global:eec/mef-global:eec-profile[mef-global:id = current()]/mef-global:eec-pcp/mef-global:pcp" +
 "[not(mef-global:eec-name = current()/../../../cos-names/cos-name/name)]) = 0" {
-              error-message "When the EEC Identifier is based on PCP for a given " +
-              		"EVC at a given UNI, all eec-pcp CoS Names must be in the the EVC's Cos Names List.";
+              error-message "When the EEC Identifier is based on PCP for a given EVC at a given UNI, all eec-pcp CoS Names must be in the the EVC Cos Names List.";
               description
                 "When the EEC Identifier is based on PCP for a given " +
-              		"EVC at a given UNI, all eec-pcp CoS Names must be in the the EVC's Cos Names List.";
+              		"EVC at a given UNI, all eec-pcp CoS Names must be in the the EVC Cos Names List.";
             }
 
             must "not(/mef-global:mef-global/mef-global:" +
@@ -768,11 +760,10 @@ module mef-services {
             		"/mef-global:eec-dscp) or " +
 "count(/mef-global:mef-global/mef-global:profiles/mef-global:eec/mef-global:eec-profile[mef-global:id = current()]/mef-global:eec-dscp/mef-global:ipv4-dscp" +
 "[not(mef-global:eec-name = current()/../../../cos-names/cos-name/name)]) = 0" {
-              error-message "When the EEC Identifier is based on DSCP for a given " +
-              		"EVC at a given UNI, all IPv4 eec-dscp CoS Names must be in the the EVC's Cos Names List.";
+              error-message "When the EEC Identifier is based on DSCP for a given EVC at a given UNI, all IPv4 eec-dscp CoS Names must be in the the EVC Cos Names List.";
               description
                 "When the EEC Identifier is based on DSCP for a given " +
-              		"EVC at a given UNI, all IPv4 eec-dscp CoS Names must be in the the EVC's Cos Names List.";
+              		"EVC at a given UNI, all IPv4 eec-dscp CoS Names must be in the the EVC Cos Names List.";
             }
 
             must "not(/mef-global:mef-global/mef-global:" +
@@ -781,11 +772,10 @@ module mef-services {
             		"/mef-global:eec-dscp) or " +
 "count(/mef-global:mef-global/mef-global:profiles/mef-global:eec/mef-global:eec-profile[mef-global:id = current()]/mef-global:eec-dscp/mef-global:ipv6-dscp" +
 "[not(mef-global:eec-name = current()/../../../cos-names/cos-name/name)]) = 0" {
-              error-message "When the EEC Identifier is based on DSCP for a given " +
-              		"EVC at a given UNI, all IPv6 eec-dscp CoS Names must be in the the EVC's Cos Names List.";
+              error-message "When the EEC Identifier is based on DSCP for a given EVC at a given UNI, all IPv6 eec-dscp CoS Names must be in the the EVC Cos Names List.";
               description
                 "When the EEC Identifier is based on DSCP for a given " +
-              		"EVC at a given UNI, all IPv6 eec-dscp CoS Names must be in the the EVC's Cos Names List.";
+              		"EVC at a given UNI, all IPv6 eec-dscp CoS Names must be in the the EVC Cos Names List.";
             }
 
             must "not(/mef-global:mef-global/mef-global:" +
@@ -793,11 +783,10 @@ module mef-services {
             		"eec-profile[mef-global:id = current()]" +
             		"/mef-global:eec-pcp) or " +
             		"(../../../cos-names/cos-name[name = /mef-global:mef-global/mef-global:profiles/mef-global:eec/mef-global:eec-profile[mef-global:id = current()]/mef-global:eec-pcp/mef-global:default-pcp-eec-name])" {
-              error-message "When the EEC Identifier is based on PCP for a given " +
-              		"EVC at a given UNI, the default-pcp-eec-name must be in the the EVC's Cos Names List.";
+              error-message "When the EEC Identifier is based on PCP for a given EVC at a given UNI, the default-pcp-eec-name must be in the the EVC Cos Names List.";
               description
                 "When the EEC Identifier is based on PCP for a given " +
-              		"EVC at a given UNI, the default-pcp-eec-name must be in the the EVC's Cos Names List.";
+              		"EVC at a given UNI, the default-pcp-eec-name must be in the the EVC Cos Names List.";
             }
 
             must "not(/mef-global:mef-global/mef-global:" +
@@ -805,23 +794,21 @@ module mef-services {
             		"eec-profile[mef-global:id = current()]" +
             		"/mef-global:eec-dscp) or " +
             		"(../../../cos-names/cos-name[name = /mef-global:mef-global/mef-global:profiles/mef-global:eec/mef-global:eec-profile[mef-global:id = current()]/mef-global:eec-dscp/mef-global:default-ipv4-eec-name])" {
-              error-message "When the EEC Identifier is based on DSCP for a given " +
-              		"EVC at a given UNI, the default-ipv4-eec-name must be in the the EVC's Cos Names List.";
+              error-message "When the EEC Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv4-eec-name must be in the the EVC Cos Names List.";
               description
                 "When the EEC Identifier is based on DSCP for a given " +
-              		"EVC at a given UNI, the default-ipv4-eec-name must be in the the EVC's Cos Names List.";
+              		"EVC at a given UNI, the default-ipv4-eec-name must be in the the EVC Cos Names List.";
             }
 
             must "not(/mef-global:mef-global/mef-global:" +
-            		"profiles/mef-global:cos/mef-global:" +
-            		"cos-profile[mef-global:id = current()]" +
-            		"/mef-global:cos-dscp) or " +
-            		"(../../../cos-names/cos-name[name = /mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-dscp/mef-global:default-ipv6-cos-name])" {
-              error-message "When the Class of Service Identifier is based on DSCP for a given " +
-              		"EVC at a given UNI, the default-dscp-ipv6-name must be in the the EVC's Cos Names List.";
+            		"profiles/mef-global:eec/mef-global:" +
+            		"eec-profile[mef-global:id = current()]" +
+            		"/mef-global:eec-dscp) or " +
+            		"(../../../cos-names/cos-name[name = /mef-global:mef-global/mef-global:profiles/mef-global:eec/mef-global:eec-profile[mef-global:id = current()]/mef-global:eec-dscp/mef-global:default-ipv6-eec-name])" {
+              error-message "When the EEC Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv6-eec-name must be in the the EVC Cos Names List.";
               description
-                "When the Class of Service Identifier is based on DSCP for a given " +
-              		"EVC at a given UNI, the default-dscp-ipv6-name must be in the the EVC's Cos Names List.";
+                "When the EEC Identifier is based on DSCP for a given " +
+              		"EVC at a given UNI, the default-ipv6-eec-name must be in the the EVC Cos Names List.";
             }
 
             must "not(/mef-global:mef-global/mef-global:profiles" +

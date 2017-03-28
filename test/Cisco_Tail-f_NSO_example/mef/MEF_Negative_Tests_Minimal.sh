@@ -565,6 +565,227 @@ else
    echo 'Test MEF 10.3 [R135BE]: PASS';
 fi
 
+# Test for MEF 10.3 [EVC CoS1]. A set of must-statements were added to mef-services.yang to ensure all CoS dependencies are consistent with the CoS Names configured for the EVC.
+
+# Test for MEF 10.3 [EVC CoS1].  This test should fail to commit with "When the Class of Service Identifier is based on PCP for a given EVC at a given UNI, all cos-pcp CoS Names must be in the the EVC Cos Names List.".
+{ ncs_cli -u admin -C << EOF;
+config
+mef-global profiles cos cos-profile MEF103_Table13 cos-pcp pcp 6 cos-name H color green
+commit
+end no-confirm
+exit
+EOF
+} | grep 'Aborted:.*When the Class of Service Identifier is based on PCP for a given EVC at a given UNI, all cos-pcp CoS Names must be in the the EVC Cos Names List.'
+if [ $? != 0 ]; then
+   echo 'Test MEF 10.3 [EVC CoS1]: FAIL - commit did not fail or did not fail as expected'; exit 1;
+else
+   echo 'Test MEF 10.3 [EVC CoS1]: PASS';
+fi
+
+# Test for MEF 10.3 [EVC CoS2]. A set of must-statements were added to mef-services.yang to ensure all CoS dependencies are consistent with the CoS Names configured for the EVC.
+
+# Test for MEF 10.3 [EVC CoS2].  This test should fail to commit with "When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, all IPv4 cos-dscp CoS Names must be in the the EVC Cos Names List.".
+{ ncs_cli -u admin -C << EOF;
+config
+mef-global profiles cos cos-profile MEF103_Table23 cos-dscp ipv4-dscp 37 discard-value false cos-name M color green
+commit
+end no-confirm
+exit
+EOF
+} | grep 'Aborted:.*When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, all IPv4 cos-dscp CoS Names must be in the the EVC Cos Names List.'
+if [ $? != 0 ]; then
+   echo 'Test MEF 10.3 [EVC CoS2]: FAIL - commit did not fail or did not fail as expected'; exit 1;
+else
+   echo 'Test MEF 10.3 [EVC CoS2]: PASS';
+fi
+
+# Test for MEF 10.3 [EVC CoS3]. A set of must-statements were added to mef-services.yang to ensure all CoS dependencies are consistent with the CoS Names configured for the EVC.
+
+# Test for MEF 10.3 [EVC CoS3].  This test should fail to commit with "When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, all IPv6 cos-dscp CoS Names must be in the the EVC Cos Names List.".
+{ ncs_cli -u admin -C << EOF;
+config
+mef-global profiles cos cos-profile MEF103_Table23 cos-dscp ipv6-dscp 45 discard-value false cos-name L color green
+commit
+end no-confirm
+exit
+EOF
+} | grep 'Aborted:.*When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, all IPv6 cos-dscp CoS Names must be in the the EVC Cos Names List.'
+if [ $? != 0 ]; then
+   echo 'Test MEF 10.3 [EVC CoS3]: FAIL - commit did not fail or did not fail as expected'; exit 1;
+else
+   echo 'Test MEF 10.3 [EVC CoS3]: PASS';
+fi
+
+# Test for MEF 10.3 [EVC CoS4]. A set of must-statements were added to mef-services.yang to ensure all CoS dependencies are consistent with the CoS Names configured for the EVC.
+
+# Test for MEF 10.3 [EVC CoS4].  This test should fail to commit with "When the Class of Service Identifier is based on PCP for a given EVC at a given UNI, the default-pcp-cos-name must be in the the EVC Cos Names List.".
+{ ncs_cli -u admin -C << EOF;
+config
+mef-global profiles cos cos-profile MEF103_Table13 cos-pcp default-pcp-cos-name H default-pcp-color green
+commit
+end no-confirm
+exit
+EOF
+} | grep 'Aborted:.*When the Class of Service Identifier is based on PCP for a given EVC at a given UNI, the default-pcp-cos-name must be in the the EVC Cos Names List.'
+if [ $? != 0 ]; then
+   echo 'Test MEF 10.3 [EVC CoS4]: FAIL - commit did not fail or did not fail as expected'; exit 1;
+else
+   echo 'Test MEF 10.3 [EVC CoS4]: PASS';
+fi
+
+# Test for MEF 10.3 [EVC CoS5]. A set of must-statements were added to mef-services.yang to ensure all CoS dependencies are consistent with the CoS Names configured for the EVC.
+
+# Test for MEF 10.3 [EVC CoS5].  This test should fail to commit with "When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv4-cos-name must be in the the EVC Cos Names List.".
+{ ncs_cli -u admin -C << EOF;
+config
+mef-global profiles cos cos-profile MEF103_Table23 cos-dscp default-ipv4-cos-name M default-ipv4-color yellow
+commit
+end no-confirm
+exit
+EOF
+} | grep 'Aborted:.*When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv4-cos-name must be in the the EVC Cos Names List.'
+if [ $? != 0 ]; then
+   echo 'Test MEF 10.3 [EVC CoS5]: FAIL - commit did not fail or did not fail as expected'; exit 1;
+else
+   echo 'Test MEF 10.3 [EVC CoS5]: PASS';
+fi
+
+# Test for MEF 10.3 [EVC CoS6]. A set of must-statements were added to mef-services.yang to ensure all CoS dependencies are consistent with the CoS Names configured for the EVC.
+
+# Test for MEF 10.3 [EVC CoS6].  This test should fail to commit with "When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv6-cos-name must be in the the EVC Cos Names List.".
+{ ncs_cli -u admin -C << EOF;
+config
+mef-global profiles cos cos-profile MEF103_Table23 cos-dscp default-ipv6-cos-name M default-ipv6-color yellow
+commit
+end no-confirm
+exit
+EOF
+} | grep 'Aborted:.*When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv6-cos-name must be in the the EVC Cos Names List.'
+if [ $? != 0 ]; then
+   echo 'Test MEF 10.3 [EVC CoS6]: FAIL - commit did not fail or did not fail as expected'; exit 1;
+else
+   echo 'Test MEF 10.3 [EVC CoS6]: PASS';
+fi
+
+# Test for MEF 10.3 [EVC CoS7]. A set of must-statements were added to mef-services.yang to ensure all CoS dependencies are consistent with the CoS Names configured for the EVC.
+
+# Test for MEF 10.3 [EVC CoS7].  This test should fail to commit with "When the Class of Service Identifier is based on EVC for a given EVC at a given UNI, the default-evc-cos-name must be in the the EVC Cos Names List.".
+#{ ncs_cli -u admin -C << EOF;
+#config
+#mef-global profiles cos cos-profile MEF62_ApdxA_CoS cos-evc default-evc-cos-name H default-evc-color green
+#commit
+#end no-confirm
+#exit
+#EOF
+#} | grep 'Aborted:.*When the Class of Service Identifier is based on EVC for a given EVC at a given UNI, the default-evc-cos-name must be in the the EVC Cos Names List.'
+#if [ $? != 0 ]; then
+#   echo 'Test MEF 10.3 [EVC CoS7]: FAIL - commit did not fail or did not fail as expected'; exit 1;
+#else
+#   echo 'Test MEF 10.3 [EVC CoS7]: PASS';
+#fi
+
+# Test for MEF 10.3 [EVC EEC1]. A set of must-statements were added to mef-services.yang to ensure all EEC dependencies are consistent with the CoS Names configured for the EVC.
+
+# Test for MEF 10.3 [EVC EEC1].  This test should fail to commit with "When the EEC Identifier is based on PCP for a given EVC at a given UNI, all eec-pcp CoS Names must be in the the EVC Cos Names List.".
+{ ncs_cli -u admin -C << EOF;
+config
+mef-global profiles eec eec-profile MEF62_ApdxA eec-pcp pcp 3 eec-name H color green
+commit
+end no-confirm
+exit
+EOF
+} | grep 'Aborted:.*When the EEC Identifier is based on PCP for a given EVC at a given UNI, all eec-pcp CoS Names must be in the the EVC Cos Names List.'
+if [ $? != 0 ]; then
+   echo 'Test MEF 10.3 [EVC EEC1]: FAIL - commit did not fail or did not fail as expected'; exit 1;
+else
+   echo 'Test MEF 10.3 [EVC EEC1]: PASS';
+fi
+
+# Test for MEF 10.3 [EVC EEC2]. A set of must-statements were added to mef-services.yang to ensure all EEC dependencies are consistent with the CoS Names configured for the EVC.
+
+# Test for MEF 10.3 [EVC EEC2].  This test should fail to commit with "When the EEC Identifier is based on DSCP for a given EVC at a given UNI, all IPv4 eec-dscp CoS Names must be in the the EVC Cos Names List.".
+{ ncs_cli -u admin -C << EOF;
+config
+mef-global profiles eec eec-profile MEF103_Table23 eec-dscp ipv4-dscp 8 discard-value false eec-name H color green
+commit
+end no-confirm
+exit
+EOF
+} | grep 'Aborted:.*When the EEC Identifier is based on DSCP for a given EVC at a given UNI, all IPv4 eec-dscp CoS Names must be in the the EVC Cos Names List.'
+if [ $? != 0 ]; then
+   echo 'Test MEF 10.3 [EVC EEC2]: FAIL - commit did not fail or did not fail as expected'; exit 1;
+else
+   echo 'Test MEF 10.3 [EVC EEC2]: PASS';
+fi
+
+# Test for MEF 10.3 [EVC EEC3]. A set of must-statements were added to mef-services.yang to ensure all EEC dependencies are consistent with the CoS Names configured for the EVC.
+
+# Test for MEF 10.3 [EVC EEC3].  This test should fail to commit with "When the EEC Identifier is based on DSCP for a given EVC at a given UNI, all IPv6 eec-dscp CoS Names must be in the the EVC Cos Names List.".
+{ ncs_cli -u admin -C << EOF;
+config
+mef-global profiles eec eec-profile MEF103_Table23 eec-dscp ipv6-dscp 37 discard-value false eec-name M color green
+commit
+end no-confirm
+exit
+EOF
+} | grep 'Aborted:.*When the EEC Identifier is based on DSCP for a given EVC at a given UNI, all IPv6 eec-dscp CoS Names must be in the the EVC Cos Names List.'
+if [ $? != 0 ]; then
+   echo 'Test MEF 10.3 [EVC EEC3]: FAIL - commit did not fail or did not fail as expected'; exit 1;
+else
+   echo 'Test MEF 10.3 [EVC EEC3]: PASS';
+fi
+
+# Test for MEF 10.3 [EVC EEC4]. A set of must-statements were added to mef-services.yang to ensure all EEC dependencies are consistent with the CoS Names configured for the EVC.
+
+# Test for MEF 10.3 [EVC EEC4].  This test should fail to commit with "When the EEC Identifier is based on PCP for a given EVC at a given UNI, the default-pcp-eec-name must be in the the EVC Cos Names List.".
+{ ncs_cli -u admin -C << EOF;
+config
+mef-global profiles eec eec-profile MEF62_ApdxA eec-pcp default-pcp-eec-name L default-pcp-color green
+commit
+end no-confirm
+exit
+EOF
+} | grep 'Aborted:.*When the EEC Identifier is based on PCP for a given EVC at a given UNI, the default-pcp-eec-name must be in the the EVC Cos Names List.'
+if [ $? != 0 ]; then
+   echo 'Test MEF 10.3 [EVC EEC4]: FAIL - commit did not fail or did not fail as expected'; exit 1;
+else
+   echo 'Test MEF 10.3 [EVC EEC4]: PASS';
+fi
+
+# Test for MEF 10.3 [EVC EEC5]. A set of must-statements were added to mef-services.yang to ensure all EEC dependencies are consistent with the CoS Names configured for the EVC.
+
+# Test for MEF 10.3 [EVC EEC5].  This test should fail to commit with "When the EEC Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv4-eec-name must be in the the EVC Cos Names List.".
+{ ncs_cli -u admin -C << EOF;
+config
+mef-global profiles eec eec-profile MEF103_Table23 eec-dscp default-ipv4-eec-name M default-ipv4-color green
+commit
+end no-confirm
+exit
+EOF
+} | grep 'Aborted:.*When the EEC Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv4-eec-name must be in the the EVC Cos Names List.'
+if [ $? != 0 ]; then
+   echo 'Test MEF 10.3 [EVC EEC5]: FAIL - commit did not fail or did not fail as expected'; exit 1;
+else
+   echo 'Test MEF 10.3 [EVC EEC5]: PASS';
+fi
+
+# Test for MEF 10.3 [EVC EEC6]. A set of must-statements were added to mef-services.yang to ensure all EEC dependencies are consistent with the CoS Names configured for the EVC.
+
+# Test for MEF 10.3 [EVC EEC6].  This test should fail to commit with "When the EEC Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv6-eec-name must be in the the EVC Cos Names List.".
+{ ncs_cli -u admin -C << EOF;
+config
+mef-global profiles eec eec-profile MEF103_Table23 eec-dscp default-ipv6-eec-name M default-ipv6-color green
+commit
+end no-confirm
+exit
+EOF
+} | grep 'Aborted:.*When the EEC Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv6-eec-name must be in the the EVC Cos Names List.'
+if [ $? != 0 ]; then
+   echo 'Test MEF 10.3 [EVC EEC6]: FAIL - commit did not fail or did not fail as expected'; exit 1;
+else
+   echo 'Test MEF 10.3 [EVC EEC6]: PASS';
+fi
+
 # Test for MEF 10.3 [R140]. Character Restriction Tests are TBD.
 
 # Test for MEF 10.3 [R142A].  This test should fail to commit with "When only one Bandwidth Profile Flow is mapped to an envelope, Envelope Coupling must be Disabled.".
