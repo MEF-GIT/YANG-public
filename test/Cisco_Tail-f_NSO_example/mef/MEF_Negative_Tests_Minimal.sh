@@ -670,19 +670,19 @@ fi
 # Test for MEF 10.3 [EVC CoS7]. A set of must-statements were added to mef-services.yang to ensure all CoS dependencies are consistent with the CoS Names configured for the EVC.
 
 # Test for MEF 10.3 [EVC CoS7].  This test should fail to commit with "When the Class of Service Identifier is based on EVC for a given EVC at a given UNI, the default-evc-cos-name must be in the the EVC Cos Names List.".
-#{ ncs_cli -u admin -C << EOF;
-#config
-#mef-global profiles cos cos-profile MEF62_ApdxA_CoS cos-evc default-evc-cos-name H default-evc-color green
-#commit
-#end no-confirm
-#exit
-#EOF
-#} | grep 'Aborted:.*When the Class of Service Identifier is based on EVC for a given EVC at a given UNI, the default-evc-cos-name must be in the the EVC Cos Names List.'
-#if [ $? != 0 ]; then
-#   echo 'Test MEF 10.3 [EVC CoS7]: FAIL - commit did not fail or did not fail as expected'; exit 1;
-#else
-#   echo 'Test MEF 10.3 [EVC CoS7]: PASS';
-#fi
+{ ncs_cli -u admin -C << EOF;
+config
+mef-global profiles cos cos-profile MEF62_ApdxA_CoS cos-evc default-evc-cos-name H default-evc-color green
+commit
+end no-confirm
+exit
+EOF
+} | grep 'Aborted:.*When the Class of Service Identifier is based on EVC for a given EVC at a given UNI, the default-evc-cos-name must be in the the EVC Cos Names List.'
+if [ $? != 0 ]; then
+   echo 'Test MEF 10.3 [EVC CoS7]: FAIL - commit did not fail or did not fail as expected'; exit 1;
+else
+   echo 'Test MEF 10.3 [EVC CoS7]: PASS';
+fi
 
 # Test for MEF 10.3 [EVC EEC1]. A set of must-statements were added to mef-services.yang to ensure all EEC dependencies are consistent with the CoS Names configured for the EVC.
 
