@@ -76,6 +76,8 @@ Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME
 Test MEF 10.3 [EVC CoS5]: PASS
 Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 cos-identifier' (value "MEF103_Table23"): When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv6-cos-name must be in the the EVC Cos Names List.
 Test MEF 10.3 [EVC CoS6]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0002898-ACME-MEGAMART end-points end-point MMPOP1-ce4-Slot4-Port3 cos-identifier' (value "MEF62_ApdxA_CoS"): When the Class of Service Identifier is based on EVC for a given EVC at a given UNI, the default-evc-cos-name must be in the the EVC Cos Names List.
+Test MEF 10.3 [EVC CoS7]: PASS
 Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port3 eec-identifier' (value "MEF62_ApdxA"): When the EEC Identifier is based on PCP for a given EVC at a given UNI, all eec-pcp CoS Names must be in the the EVC Cos Names List.
 Test MEF 10.3 [EVC EEC1]: PASS
 Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 eec-identifier' (value "MEF103_Table23"): When the EEC Identifier is based on DSCP for a given EVC at a given UNI, all IPv4 eec-dscp CoS Names must be in the the EVC Cos Names List.
