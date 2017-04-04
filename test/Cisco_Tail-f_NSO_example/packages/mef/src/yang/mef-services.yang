@@ -125,11 +125,11 @@ module mef-services {
         list evc {
           key "evc-id";
           description
-            "MEF Forum's Ethernet Virtual Services (EVC).";
+            "List of Ethernet Virtual Connection services (EVCs).";
           leaf evc-id {
             type mef-types:evc-id-type;
             description
-              "The EVC ID must be unique across all EVCs in the CEN. The EVC ID must be non-NULL.";
+              "An identifier for the EVC, that is unique across all the EVCs in the Service Provider's CEN";
             reference "[MEF10.3] Section 8.2 [R7]. [MEF7.3] Section 7.2.";
           }
           container cos-names {
@@ -148,37 +148,42 @@ module mef-services {
           }
           container end-points {
             description
-              "EVC Per User Network Interface(UNI) Configuration and Status.";
+              "EVC End Point configuration and status. Note that EVC End Points contain the EVC per UNI attributes from MEF 10.3.";
             list end-point {
               must "not(ce-vlans/ce-vlan[2]) or ../../ce-vlan-id-preservation = 'true'" {
                 error-message "When more than one CE-VLAN-ID is mapped to an EVC at a UNI, the EVC must have CE-VLAN ID Preservation Enabled.";
                 description
-                  "MEF 10.3 [R25] When more than one CE-VLAN-ID is mapped to an EVC at a UNI, the EVC must have CE-VLAN ID Preservation Enabled.";
+                  "When more than one CE-VLAN-ID is mapped to an EVC at a UNI, the EVC must have CE-VLAN ID Preservation Enabled.";
+                reference "[MEF10.3] [R25].";
               }
               must "(/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/mef-services:uni-id][mef-interfaces:uni-id/../mef-interfaces:bundling-enabled = 'true']) or (/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/mef-services:uni-id][mef-interfaces:uni-id/../mef-interfaces:all-to-one-bundling-enabled = 'true']) or not(ce-vlans/ce-vlan[2])" {
                 error-message "If both Bundling and All-to-One Bundling are disabled for a UNI, only one CE VLAN ID can be configured for a specific EVC on that UNI.";
                 description
-                  "MEF 10.3 [R77] If both Bundling and All-to-One Bundling are disabled for a UNI, only one CE VLAN ID can be configured for a specific EVC on that UNI.";
+                  "If both Bundling and All-to-One Bundling are disabled for a UNI, only one CE VLAN ID can be configured for a specific EVC on that UNI.";
+                reference "[MEF10.3] [R77].";
               }
               must "(/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/mef-services:uni-id][mef-interfaces:uni-id/../mef-interfaces:all-to-one-bundling-enabled = 'false']) or (count(/mef-services:mef-services/carrier-ethernet/subscriber-services/evc/end-points/end-point[uni-id = current()/uni-id]) = 1)" {
                 error-message "If All-to-One Bundling is enabled for any UNI in an EVC, all CE-VLAN IDs mapped to any EVC for that UNI must map to the same EVC ID.";
                 description
-                  "MEF 10.3 [R82] If All-to-One Bundling is enabled for any UNI in an EVC, all CE-VLAN IDs mapped to any EVC for that UNI must map to the same EVC ID.";
+                  "If All-to-One Bundling is enabled for any UNI in an EVC, all CE-VLAN IDs mapped to any EVC for that UNI must map to the same EVC ID.";
+                reference "[MEF10.3] [R82].";
               }
               must "((/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/mef-services:uni-id][mef-interfaces:uni-id/../mef-interfaces:ingress-bw-profile-per-uni]) or (/mef-services:mef-services/carrier-ethernet/subscriber-services/evc/end-points/end-point[uni-id = current()/mef-services:uni-id]/ingress-bwp-flows-per-cos) or (/mef-services:mef-services/carrier-ethernet/subscriber-services/evc/end-points/end-point[uni-id = current()/mef-services:uni-id]/ingress-bw-profile-per-evc)) or not(/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/mef-services:uni-id]/mef-interfaces:ingress-envelopes)" {
                 error-message "If no Ingress Bandwidth Profiles are specified for this UNI (BW Profile Per UNI, BWP Flows Per CoS, nor BW Profile Per EVC), then the UNI Ingress Envelopes list must be empty.";
                 description
-                  "MEF 6.2 [R4A] If no Ingress Bandwidth Profiles are specified for this UNI (BW Profile Per UNI, BWP Flows Per CoS, nor BW Profile Per EVC), then the UNI Ingress Envelopes list must be empty.";
+                  "If no Ingress Bandwidth Profiles are specified for this UNI (BW Profile Per UNI, BWP Flows Per CoS, nor BW Profile Per EVC), then the UNI Ingress Envelopes list must be empty.";
+                reference "MEF 6.2 [R4A].";
               }
               must "((/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/mef-services:uni-id][mef-interfaces:uni-id/../mef-interfaces:egress-bw-profile-per-uni]) or (/mef-services:mef-services/carrier-ethernet/subscriber-services/evc/end-points/end-point[uni-id = current()/mef-services:uni-id]/egress-bwp-flows-per-eec) or (/mef-services:mef-services/carrier-ethernet/subscriber-services/evc/end-points/end-point[uni-id = current()/mef-services:uni-id]/egress-bw-profile-per-evc)) or not(/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/mef-services:uni-id]/mef-interfaces:egress-envelopes)" {
                 error-message "If no Egress Bandwidth Profiles are specied for this UNI (BW Profile Per UNI, BWP Flows Per EEC, nor BW Profile Per EVC), then the UNI Egress Envelopes list must be empty.";
                 description
-                  "MEF 6.2 [R4B] If no Egress Bandwidth Profiles are specied for this UNI (BW Profile Per UNI, BWP Flows Per EEC, nor BW Profile Per EVC), then the UNI Egress Envelopes list must be empty.";
+                  "If no Egress Bandwidth Profiles are specied for this UNI (BW Profile Per UNI, BWP Flows Per EEC, nor BW Profile Per EVC), then the UNI Egress Envelopes list must be empty.";
+                reference "[MEF10.3] [R4B].";
               }
               key "uni-id";
               description
                 "EVC End Points and EVC-UNI List defines the roles of each UNI in the Service. One UNI can be used by 0 or more EVCs.";
-              reference "[MEF10.3] Section 8.3. [MEF7.3] Section 7.4.";
+              reference "[MEF10.3] Section 8.3 and Section 10. [MEF7.3] Section 7.4 and Section 7.5.";
               container ce-vlans {
                 description
                   "EVC Per UNI CE-VLAN IDs.";
@@ -194,7 +199,8 @@ module mef-services {
                     must "not(current()/../../ce-vlan[2]) or (count(../../../../end-point/ce-vlans/ce-vlan[vid = current()]) = count(../../../../end-point))" {
                       error-message "If more than one CE-VLAN ID is configured for a UNI as part of an EVC, every CE VLAN-ID mapped to that EVC must be configured for all UNIs within that EVC.";
                       description
-                        "MEF 10.3 [R81] If more than one CE-VLAN ID is configured for a UNI as part of an EVC, every CE VLAN-ID mapped to that EVC must be configured for all UNIs within that EVC.";
+                        "If more than one CE-VLAN ID is configured for a UNI as part of an EVC, every CE VLAN-ID mapped to that EVC must be configured for all UNIs within that EVC.";
+                      reference "[MEF10.3] [R81].";
                     }
                     description
                       "VLAN Identifier.";
@@ -232,7 +238,8 @@ module mef-services {
                         must "count(/mef-services:mef-services/carrier-ethernet/subscriber-services/evc/end-points/end-point[uni-id = current()/../../../uni-id][./ingress-bw-profile-per-evc/envelope-id = current()]) = 0" {
                           error-message "All EVCs sharing a Ingress Bandwidth Profile Envelope for a UNI must use the same BWP Method ( Per-EVC or Per-CoS).";
                           description
-                            "MEF 10.3 [R135] All EVCs sharing a Ingress Bandwidth Profile Envelope for a UNI must use the same BWP Method ( Per-EVC or Per-CoS).";
+                            "All EVCs sharing a Ingress Bandwidth Profile Envelope for a UNI must use the same BWP Method ( Per-EVC or Per-CoS).";
+                          reference "[MEF10.3] [R135].";
                         }
                         type leafref {
                           path "/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/../../../uni-id]/mef-interfaces:ingress-envelopes/mef-interfaces:envelope/mef-interfaces:envelope-id";
@@ -260,7 +267,8 @@ module mef-services {
                       must "count(/mef-services:mef-services/carrier-ethernet/subscriber-services/evc/end-points/end-point[uni-id = current()/../../uni-id]/ingress-bwp-flows-per-cos/bwp-flow-per-cos/envelope-id = current()) = 0" {
                         error-message "All EVCs sharing a Ingress Bandwidth Profile Envelope for a UNI must use the same BWP Method (Per-CoS or Per-EVC).";
                         description
-                          "MEF 10.3 [R135] All EVCs sharing a Ingress Bandwidth Profile Envelope for a UNI must use the same BWP Method (Per-CoS or Per-EVC).";
+                          "All EVCs sharing a Ingress Bandwidth Profile Envelope for a UNI must use the same BWP Method (Per-CoS or Per-EVC).";
+                        reference "[MEF10.3] [R135].";
                       }
                       type leafref {
                         path "/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/../../uni-id]/mef-interfaces:ingress-envelopes/mef-interfaces:envelope/mef-interfaces:envelope-id";
@@ -312,7 +320,8 @@ module mef-services {
                         must "count(/mef-services:mef-services/carrier-ethernet/subscriber-services/evc/end-points/end-point[uni-id = current()/../../../uni-id][./egress-bw-profile-per-evc/envelope-id = current()]) = 0" {
                           error-message "All EVCs sharing a Egress Bandwidth Profile Envelope for a UNI must use the same BWP Method ( Per-EVC or Per-CoS).";
                           description
-                            "MEF 10.3 [R135] All EVCs sharing a Egress Bandwidth Profile Envelope for a UNI must use the same BWP Method ( Per-EVC or Per-CoS).";
+                            "All EVCs sharing a Egress Bandwidth Profile Envelope for a UNI must use the same BWP Method ( Per-EVC or Per-CoS).";
+                          reference "[MEF10.3] [R135].";
                         }
                         type leafref {
                           path "/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/../../../uni-id]/mef-interfaces:egress-envelopes/mef-interfaces:envelope/mef-interfaces:envelope-id";
@@ -340,7 +349,8 @@ module mef-services {
                       must "count(/mef-services:mef-services/carrier-ethernet/subscriber-services/evc/end-points/end-point[uni-id = current()/../../uni-id][./egress-bwp-flows-per-eec/bwp-flow-per-eec/envelope-id = current()]) = 0" {
                         error-message "All EVCs sharing a Egress Bandwidth Profile Envelope for a UNI must use the same BWP Method (Per-CoS or Per-EVC).";
                         description
-                          "MEF 10.3 [R135] All EVCs sharing a Egress Bandwidth Profile Envelope for a UNI must use the same BWP Method (Per-CoS or Per-EVC).";
+                          "All EVCs sharing a Egress Bandwidth Profile Envelope for a UNI must use the same BWP Method (Per-CoS or Per-EVC).";
+                        reference "[MEF10.3] [R135].";
                       }
                       type leafref {
                         path "/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/../../uni-id]/mef-interfaces:egress-envelopes/mef-interfaces:envelope/mef-interfaces:envelope-id";
@@ -416,46 +426,55 @@ module mef-services {
                   error-message "When the Class of Service Identifier is based on PCP for a given EVC at a given UNI, all cos-pcp CoS Names must be in the the EVC Cos Names List.";
                   description
                     "When the Class of Service Identifier is based on PCP for a given EVC at a given UNI, all cos-pcp CoS Names must be in the the EVC Cos Names List.";
+                  reference "[MEF10.3] [R135].";
                 }
                 must "not(/mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-dscp) or count(/mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-dscp/mef-global:ipv4-dscp[not(mef-global:cos-name = current()/../../../cos-names/cos-name/name)]) = 0" {
                   error-message "When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, all IPv4 cos-dscp CoS Names must be in the the EVC Cos Names List.";
                   description
                     "When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, all IPv4 cos-dscp CoS Names must be in the the EVC Cos Names List.";
+                  reference "[MEF10.3] [R135].";
                 }
                 must "not(/mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-dscp) or count(/mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-dscp/mef-global:ipv6-dscp[not(mef-global:cos-name = current()/../../../cos-names/cos-name/name)]) = 0" {
                   error-message "When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, all IPv6 cos-dscp CoS Names must be in the the EVC Cos Names List.";
                   description
                     "When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, all IPv6 cos-dscp CoS Names must be in the the EVC Cos Names List.";
+                  reference "[MEF10.3] [R135].";
                 }
                 must "not(/mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-pcp) or (../../../cos-names/cos-name[name = /mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-pcp/mef-global:default-pcp-cos-name])" {
                   error-message "When the Class of Service Identifier is based on PCP for a given EVC at a given UNI, the default-pcp-cos-name must be in the the EVC Cos Names List.";
                   description
                     "When the Class of Service Identifier is based on PCP for a given EVC at a given UNI, the default-pcp-cos-name must be in the the EVC Cos Names List.";
+                  reference "[MEF10.3] [R135].";
                 }
                 must "not(/mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-evc) or (../../../cos-names/cos-name[name = /mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-evc/mef-global:default-evc-cos-name])" {
                   error-message "When the Class of Service Identifier is based on EVC for a given EVC at a given UNI, the default-evc-cos-name must be in the the EVC Cos Names List.";
                   description
                     "When the Class of Service Identifier is based on EVC for a given EVC at a given UNI, the default-evc-cos-name must be in the the EVC Cos Names List.";
+                  reference "[MEF10.3] [R135].";
                 }
                 must "not(/mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-dscp) or (../../../cos-names/cos-name[name = /mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-dscp/mef-global:default-ipv4-cos-name])" {
                   error-message "When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv4-cos-name must be in the the EVC Cos Names List.";
                   description
                     "When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv4-cos-name must be in the the EVC Cos Names List.";
+                  reference "[MEF10.3] [R135].";
                 }
                 must "not(/mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-dscp) or (../../../cos-names/cos-name[name = /mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-dscp/mef-global:default-ipv6-cos-name])" {
                   error-message "When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv6-cos-name must be in the the EVC Cos Names List.";
                   description
                     "When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv6-cos-name must be in the the EVC Cos Names List.";
+                  reference "[MEF10.3] [R135].";
                 }
                 must "not(/mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-pcp) or ((/mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-pcp) and ((../color-identifier = 'pcp') or (../color-identifier = 'dei')) )" {
                   error-message "When the Class of Service Identifier is based on PCP for a given EVC at a given UNI, the Color Identifier must be based on either DEI or PCP.";
                   description
-                    "MEF 10.3 [R111A] When the Class of Service Identifier is based on PCP for a given EVC at a given UNI, the Color Identifier must be based on either DEI or PCP.";
+                    "When the Class of Service Identifier is based on PCP for a given EVC at a given UNI, the Color Identifier must be based on either DEI or PCP.";
+                  reference "[MEF10.3] [R111A].";
                 }
                 must "not(/mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-dscp) or ((/mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-dscp) and (../color-identifier = 'dscp'))" {
                   error-message "When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, the Color Identifier must be based DSCP.";
                   description
-                    "MEF 10.3 [R112B] When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, the Color Identifier must be based DSCP.";
+                    "When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, the Color Identifier must be based DSCP.";
+                  reference "[MEF10.3] [R112B].";
                 }
                 mandatory true;
                 description
@@ -470,11 +489,13 @@ module mef-services {
                   error-message "When the EEC Identifier is based on PCP for a given EVC at a given UNI, all eec-pcp CoS Names must be in the the EVC Cos Names List.";
                   description
                     "When the EEC Identifier is based on PCP for a given EVC at a given UNI, all eec-pcp CoS Names must be in the the EVC Cos Names List.";
+                  reference "[MEF10.3] [R135].";
                 }
                 must "not(/mef-global:mef-global/mef-global:profiles/mef-global:eec/mef-global:eec-profile[mef-global:id = current()]/mef-global:eec-dscp) or count(/mef-global:mef-global/mef-global:profiles/mef-global:eec/mef-global:eec-profile[mef-global:id = current()]/mef-global:eec-dscp/mef-global:ipv4-dscp[not(mef-global:eec-name = current()/../../../cos-names/cos-name/name)]) = 0" {
                   error-message "When the EEC Identifier is based on DSCP for a given EVC at a given UNI, all IPv4 eec-dscp CoS Names must be in the the EVC Cos Names List.";
                   description
                     "When the EEC Identifier is based on DSCP for a given EVC at a given UNI, all IPv4 eec-dscp CoS Names must be in the the EVC Cos Names List.";
+                  reference "[MEF10.3] [R135].";
                 }
                 must "not(/mef-global:mef-global/mef-global:profiles/mef-global:eec/mef-global:eec-profile[mef-global:id = current()]/mef-global:eec-dscp) or count(/mef-global:mef-global/mef-global:profiles/mef-global:eec/mef-global:eec-profile[mef-global:id = current()]/mef-global:eec-dscp/mef-global:ipv6-dscp[not(mef-global:eec-name = current()/../../../cos-names/cos-name/name)]) = 0" {
                   error-message "When the EEC Identifier is based on DSCP for a given EVC at a given UNI, all IPv6 eec-dscp CoS Names must be in the the EVC Cos Names List.";
@@ -485,26 +506,31 @@ module mef-services {
                   error-message "When the EEC Identifier is based on PCP for a given EVC at a given UNI, the default-pcp-eec-name must be in the the EVC Cos Names List.";
                   description
                     "When the EEC Identifier is based on PCP for a given EVC at a given UNI, the default-pcp-eec-name must be in the the EVC Cos Names List.";
+                  reference "[MEF10.3] [R135].";
                 }
                 must "not(/mef-global:mef-global/mef-global:profiles/mef-global:eec/mef-global:eec-profile[mef-global:id = current()]/mef-global:eec-dscp) or (../../../cos-names/cos-name[name = /mef-global:mef-global/mef-global:profiles/mef-global:eec/mef-global:eec-profile[mef-global:id = current()]/mef-global:eec-dscp/mef-global:default-ipv4-eec-name])" {
                   error-message "When the EEC Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv4-eec-name must be in the the EVC Cos Names List.";
                   description
                     "When the EEC Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv4-eec-name must be in the the EVC Cos Names List.";
+                  reference "[MEF10.3] [R135].";
                 }
                 must "not(/mef-global:mef-global/mef-global:profiles/mef-global:eec/mef-global:eec-profile[mef-global:id = current()]/mef-global:eec-dscp) or (../../../cos-names/cos-name[name = /mef-global:mef-global/mef-global:profiles/mef-global:eec/mef-global:eec-profile[mef-global:id = current()]/mef-global:eec-dscp/mef-global:default-ipv6-eec-name])" {
                   error-message "When the EEC Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv6-eec-name must be in the the EVC Cos Names List.";
                   description
                     "When the EEC Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv6-eec-name must be in the the EVC Cos Names List.";
+                  reference "[MEF10.3] [R135].";
                 }
                 must "not(/mef-global:mef-global/mef-global:profiles/mef-global:eec/mef-global:eec-profile[mef-global:id = current()]/mef-global:eec-pcp) or ((/mef-global:mef-global/mef-global:profiles/mef-global:eec/mef-global:eec-profile[mef-global:id = current()]/mef-global:eec-pcp) and ((../color-identifier = 'pcp') or (../color-identifier = 'dei')) )" {
                   error-message "When the Egress Equivalence Class Identifier is based on PCP for a given EVC at a given UNI, the Color Identifier must be based on either DEI or PCP.";
                   description
-                    "MEF 10.3 [R111B] When the Egress Equivalence Class Identifier is based on PCP for a given EVC at a given UNI, the Color Identifier must be based on either DEI or PCP.";
+                    "When the Egress Equivalence Class Identifier is based on PCP for a given EVC at a given UNI, the Color Identifier must be based on either DEI or PCP.";
+                  reference "[MEF10.3] [R111B].";
                 }
                 must "not(/mef-global:mef-global/mef-global:profiles/mef-global:eec/mef-global:eec-profile[mef-global:id = current()]/mef-global:eec-dscp) or ((/mef-global:mef-global/mef-global:profiles/mef-global:eec/mef-global:eec-profile[mef-global:id = current()]/mef-global:eec-dscp) and (../color-identifier = 'dscp'))" {
                   error-message "When the Egress Equivalence Class Identifier is based on DSCP for a given EVC at a given UNI, the Color Identifier must be based DSCP.";
                   description
-                    "MEF 10.3 [R112B] When the Egress Equivalence Class Identifier is based on DSCP for a given EVC at a given UNI, the Color Identifier must be based DSCP.";
+                    "When the Egress Equivalence Class Identifier is based on DSCP for a given EVC at a given UNI, the Color Identifier must be based DSCP.";
+                  reference "[MEF10.3] [R112B].";
                 }
                 mandatory true;
                 description
@@ -637,12 +663,14 @@ module mef-services {
                         must "not(sls-uni-inclusions) or (sls-uni-inclusions and not(sls-uni-exclusions))" {
                           error-message "The EVC Performance SLS Exclusions and Inclusions List cannot both be configured for an EVC.";
                           description
-                            "MEF 10.3 [R32A] The EVC Performance SLS Exclusions and Inclusions List cannot both be configured for an EVC.";
+                            "The EVC Performance SLS Exclusions and Inclusions List cannot both be configured for an EVC.";
+                          reference "[MEF10.3] [R32A].";
                         }
                         must "(../../../../../../../connection-type != 'rooted-multipoint') or ((../../../../../../../connection-type = 'rooted-multipoint') and not(sls-uni-exclusions) )" {
                           error-message "If EVC Type is Rooted-Multipoint, sls-uni-inclusions must be used instead of sls-uni-exclusions.";
                           description
                             "If EVC Type is Rooted-Multipoint, sls-uni-inclusions must be used instead of sls-uni-exclusions.";
+                          reference "[MEF10.3].";
                         }
                         key "index";
                         description
@@ -660,12 +688,14 @@ module mef-services {
                             must "end-point1 != end-point2" {
                               error-message "The two UNI IDs for a given inclusion cannot be the same.";
                               description
-                                "MEF 10.3 [R32B] The two UNI IDs for a given inclusion cannot be the same.";
+                                "The two UNI IDs for a given inclusion cannot be the same.";
+                              reference "[MEF10.3] [R32B].";
                             }
                             must "(../../../../../../../../../connection-type != 'rooted-multipoint') or ((../../../../../../../../../connection-type = 'rooted-multipoint') and not((../../../../../../../../../end-points/end-point[uni-id = current()/end-point1]/role = 'leaf') and (../../../../../../../../../end-points/end-point[uni-id = current()/end-point2]/role = 'leaf')))" {
                               error-message "If EVC Type is Rooted-Multipoint, sls-uni-inclusion UNI Pairs cannot both be role 'leaf'.";
                               description
                                 "If EVC Type is Rooted-Multipoint, sls-uni-inclusion UNI Pairs cannot both be role 'leaf'.";
+                              reference "[MEF10.3].";
                             }
                             key "end-point1 end-point2";
                             description
@@ -696,7 +726,8 @@ module mef-services {
                             must "end-point1 != end-point2" {
                               error-message "The two UNI IDs for a given exclusion cannot be the same.";
                               description
-                                "MEF 10.3 [R32C] The two UNI IDs for a given exclusion cannot be the same as these pairs are invalid as defined in MEF 10.3.";
+                                "The two UNI IDs for a given exclusion cannot be the same as these pairs are invalid as defined in MEF 10.3.";
+                              reference "[MEF10.3] [R32C].";
                             }
                             key "end-point1 end-point2";
                             description
@@ -730,11 +761,13 @@ module mef-services {
                         error-message "The EVC Performance SLS Exclusions and Inclusions List cannot both be configured for an EVC.";
                         description
                           "The EVC Performance SLS Exclusions and Inclusions List cannot both be configured for an EVC.";
+                        reference "[MEF10.3] [R37A].";
                       }
                       must "(../../../../../../connection-type != 'rooted-multipoint') or ((../../../../../../connection-type = 'rooted-multipoint') and not(sls-uni-exclusions) )" {
                         error-message "If EVC Type is Rooted-Multipoint, sls-uni-inclusions must be used instead of sls-uni-exclusions.";
                         description
-                          "MEF 10.3 [R37A] If EVC Type is Rooted-Multipoint, sls-uni-inclusions must be used instead of sls-uni-exclusions.";
+                          "If EVC Type is Rooted-Multipoint, sls-uni-inclusions must be used instead of sls-uni-exclusions.";
+                        reference "[MEF10.3] [R37A].";
                       }
                       description
                         "End Point Pairs";
@@ -747,11 +780,13 @@ module mef-services {
                             error-message "The two UNI IDs for a given inclusion cannot be the same.";
                             description
                               "The two UNI IDs for a given inclusion cannot be the same.";
+                            reference "[MEF10.3].";
                           }
                           must "(../../../../../../../../connection-type != 'rooted-multipoint') or ((../../../../../../../../connection-type = 'rooted-multipoint') and not((../../../../../../../../end-points/end-point[uni-id = current()/end-point1]/role = 'leaf') and (../../../../../../../../end-points/end-point[uni-id = current()/end-point2]/role = 'leaf')))" {
                             error-message "If EVC Type is Rooted-Multipoint, sls-uni-inclusion UNI Pairs cannot both be role 'leaf'.";
                             description
-                              "MEF 10.3 [R37B] If EVC Type is Rooted-Multipoint, sls-uni-inclusion UNI Pairs cannot both be role 'leaf'.";
+                              "If EVC Type is Rooted-Multipoint, sls-uni-inclusion UNI Pairs cannot both be role 'leaf'.";
+                            reference "[MEF10.3] [R37B].";
                           }
                           key "end-point1 end-point2";
                           description
@@ -783,6 +818,7 @@ module mef-services {
                             error-message "The two UNI IDs for a given exclusion cannot be the same.";
                             description
                               "The two UNI IDs for a given exclusion cannot be the same as these pairs are invalid as defined in MEF 10.3.";
+                            reference "[MEF10.3].";
                           }
                           key "end-point1 end-point2";
                           description
@@ -816,47 +852,56 @@ module mef-services {
             must "(. != 'point-to-point') or ((. = 'point-to-point') and (count(../end-points/end-point[role = 'leaf']) = 0))" {
               error-message "If EVC Type is Point-to-Point, all UNI Roles must be root.";
               description
-                "MEF 10.3 [R12A PP] If EVC Type is Point-to-Point, all UNI Roles must be root.";
+                "If EVC Type is Point-to-Point, all UNI Roles must be root.";
+              reference "[MEF10.3] [R12A PP].";
             }
             must "(. != 'multipoint-to-multipoint') or ((. = 'multipoint-to-multipoint') and (count(../end-points/end-point[role = 'leaf']) = 0))" {
               error-message "If EVC Type is Multipoint-to-Multipoint, all UNI Roles must be root.";
               description
-                "MEF 10.3 [R12A MM] If EVC Type is Multipoint-to-Multipoint, all UNI Roles must be root.";
+                "If EVC Type is Multipoint-to-Multipoint, all UNI Roles must be root.";
+              reference "[MEF10.3] [R12A MM].";
             }
             must "(. != 'rooted-multipoint') or ((. = 'rooted-multipoint') and (count(../end-points/end-point[role = 'root']) > 0) )" {
               error-message "If EVC Type is Rooted-Multipoint, one or more UNI Roles must be root.";
               description
-                "MEF 10.3 [R54] If EVC Type is Rooted-Multipoint, one or more UNI Roles must be root.";
+                "If EVC Type is Rooted-Multipoint, one or more UNI Roles must be root.";
+              reference "[MEF10.3] [R54].";
             }
             must "(. != 'point-to-point') or ((. = 'point-to-point') and (count(../end-points/end-point) = 2))" {
               error-message "If EVC Type is Point-to-Point, there must be exactly 2 UNI configured for the EVC.";
               description
-                "MEF 10.3 [R9 B PP] If EVC Type is Point-to-Point, there must be exactly 2 UNI configured for the EVC.";
+                "If EVC Type is Point-to-Point, there must be exactly 2 UNI configured for the EVC.";
+              reference "[MEF10.3] [R9 B PP].";
             }
             must "(. != 'multipoint-to-multipoint') or ((. = 'multipoint-to-multipoint') and (count(../end-points/end-point) > 1) and (count(../end-points/end-point) <= ../max-num-of-evc-end-point))" {
               error-message "If EVC Type is Multipoint-to-Multipoint, there must be 2 or more UNI configured for the EVC.";
               description
-                "MEF 10.3 [R9 B MM] If EVC Type is Multipoint-to-Multipoint, there must be 2 or more UNI configured for the EVC.";
+                "If EVC Type is Multipoint-to-Multipoint, there must be 2 or more UNI configured for the EVC.";
+              reference "[MEF10.3] [R9 B MM].";
             }
             must "(. != 'rooted-multipoint') or ((. = 'rooted-multipoint') and (count(../end-points/end-point) > 1) and (count(../end-points/end-point) <= ../max-num-of-evc-end-point))" {
               error-message "If EVC Type is Rooted-Multipoint, there must be 2 or more UNI configured for the EVC.";
               description
-                "MEF 10.3 [R9 B RM] If EVC Type is Rooted-Multipoint, there must be 2 or more UNI configured for the EVC.";
+                "If EVC Type is Rooted-Multipoint, there must be 2 or more UNI configured for the EVC.";
+              reference "[MEF10.3] [R9 B RM].";
             }
             must "(. != 'point-to-point') or ((. = 'point-to-point') and (../max-num-of-evc-end-point = 2))" {
               error-message "If EVC Type is Point-to-Point, the value of max-num-of-evc-end-point must be 2.";
               description
-                "MEF 10.3 [R9 B PP] If EVC Type is Point-to-Point, the value of max-num-of-evc-end-point must be 2.";
+                "If EVC Type is Point-to-Point, the value of max-num-of-evc-end-point must be 2.";
+              reference "[MEF10.3] [R9 B PP].";
             }
             must "(. != 'multipoint-to-multipoint') or ((. = 'multipoint-to-multipoint') and (../max-num-of-evc-end-point > 2))" {
               error-message "If EVC Type is Multipoint-to-Multipoint, the value of max-num-of-evc-end-point must be at least 3.";
               description
-                "MEF 10.3 [R9 B MM] If EVC Type is Multipoint-to-Multipoint, the value of max-num-of-evc-end-point must be at least 3.";
+                "If EVC Type is Multipoint-to-Multipoint, the value of max-num-of-evc-end-point must be at least 3.";
+              reference "[MEF10.3] [R9 B MM].";
             }
             must "(. != 'rooted-multipoint') or ((. = 'rooted-multipoint') and (../max-num-of-evc-end-point > 2))" {
               error-message "If EVC Type is Rooted-Multipoint, the value of max-num-of-evc-end-point must be at least 3.";
               description
                 "MEF 10.3 [R9 B RM] If EVC Type is Rooted-Multipoint, the value of max-num-of-evc-end-point must be at least 3.";
+              reference "[MEF10.3] [R9 B RM].";
             }
             mandatory true;
             description
@@ -889,12 +934,14 @@ module mef-services {
             must "(. > 2) or ((. = 2) and (../connection-type = 'point-to-point'))" {
               error-message "If EVC Type is Point-to-Point, the max-num-of-evc-end-point value must be 2.";
               description
-                "MEF 10.3 [R13] If EVC Type is Point-to-Point, the max-num-of-evc-end-point value must be 2.";
+                "If EVC Type is Point-to-Point, the max-num-of-evc-end-point value must be 2.";
+              reference "[MEF10.3] [R13].";
             }
             must "(. = 2) or ((. > 2) and ((../connection-type = 'multipoint-to-multipoint') or (../connection-type = 'rooted-multipoint')))" {
               error-message "If EVC Type is Multipoint-to-Multipoint or Rooted-Multipoint, the max-num-of-evc-end-point value must be at least 3.";
               description
-                "MEF 10.3 [R14] and MEF 6.2 [R54] If EVC Type is Multipoint-to-Multipoint or Rooted-Multipoint, the max-num-of-evc-end-point value must be at least 3.";
+                "If EVC Type is Multipoint-to-Multipoint or Rooted-Multipoint, the max-num-of-evc-end-point value must be at least 3.";
+              reference "[MEF10.3] [R14]. [MEF6.2] [R54].";
             }
             mandatory true;
             description
@@ -949,51 +996,61 @@ module mef-services {
               error-message "For EPL, Service Multiplexing must be disabled for all UNIs in the EVC UNI List.";
               description
                 "MEF 6.2 [R19] For EPL, Service Multiplexing must be disabled for all UNIs in the EVC UNI List.";
+              reference "[MEF6.2] [R19].";
             }
             must "(. != 'epl') or ((. = 'epl') and (count(/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/../mef-services:end-points/mef-services:end-point/mef-services:uni-id][mef-interfaces:uni-id/../mef-interfaces:bundling-enabled = 'true']) = 0))" {
               error-message "For EPL, Bundling must be disabled for all UNIs in the EVC UNI List.";
               description
-                "MEF 6.2 [R20] For EPL, Bundling must be disabled for all UNIs in the EVC UNI List.";
+                "For EPL, Bundling must be disabled for all UNIs in the EVC UNI List.";
+              reference "[MEF6.2] [R20].";
             }
             must "(. != 'epl') or ((. = 'epl') and (count(/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/../mef-services:end-points/mef-services:end-point/mef-services:uni-id][mef-interfaces:uni-id/../mef-interfaces:all-to-one-bundling-enabled = 'false']) = 0))" {
               error-message "For EPL, All-to-One Bundling must be enabled for all UNIs in the EVC UNI List.";
               description
-                "MEF 6.2 [R21] For EPL, All-to-One Bundling must be enabled for all UNIs in the EVC UNI List.";
+                "For EPL, All-to-One Bundling must be enabled for all UNIs in the EVC UNI List.";
+              reference "[MEF6.2] [R21].";
             }
             must "(. != 'epl') or ((. = 'epl') and (count(/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/../mef-services:end-points/mef-services:end-point/mef-services:uni-id][mef-interfaces:uni-id/../mef-interfaces:max-num-of-evcs != 1]) = 0))" {
               error-message "For EPL, Max EVC Count must be 1 for all UNIs in the EVC UNI List.";
               description
-                "MEF 6.2 [R22] For EPL, Max EVC Count must be 1 for all UNIs in the EVC UNI List.";
+                "For EPL, Max EVC Count must be 1 for all UNIs in the EVC UNI List.";
+              reference "[MEF6.2] [R22].";
             }
             must "(. != 'epl') or ((. = 'epl') and (count(../end-points/end-point/egress-bwp-flows-per-eec/bwp-flow-per-eec) = 0))" {
               error-message "For EPL, Egress Bandwidth Profile per Egress Equivalence Class cannot be set for all UNIs in the EVC per UNI List.";
               description
-                "MEF 6.2 [R23] For EPL, Egress Bandwidth Profile per Egress Equivalence Class cannot be set for all UNIs in the EVC per UNI List.";
+                "For EPL, Egress Bandwidth Profile per Egress Equivalence Class cannot be set for all UNIs in the EVC per UNI List.";
+              reference "[MEF6.2] [R23].";
             }
             must "(. != 'epl') or ((. = 'epl') and (count(../end-points/end-point[source-mac-address-limit-enabled = 'true']) = 0) )" {
               error-message "For EPL, Source MAC Address Limit must be disabled.";
               description
-                "MEF 6.2 [R24] For EPL, Source MAC Address Limit must be disabled.";
+                "For EPL, Source MAC Address Limit must be disabled.";
+              reference "[MEF6.2] [R24].";
             }
             must "(. != 'epl') or ((. = 'epl') and (../connection-type = 'point-to-point'))" {
               error-message "For EPL, EVC Type must be Point-to-Point.";
               description
-                "MEF 6.2 [R25] For EPL, EVC Type must be Point-to-Point.";
+                "For EPL, EVC Type must be Point-to-Point.";
+              reference "[MEF6.2] [R25].";
             }
             must "(. != 'epl') or ((. = 'epl') and (../unicast-frame-delivery = 'unconditional'))" {
               error-message "For EPL, unicast-frame-delivery must be unconditional.";
               description
-                "MEF 6.2 [R26] For EPL, unicast-frame-delivery must be unconditional.";
+                "For EPL, unicast-frame-delivery must be unconditional.";
+              reference "[MEF6.2] [R26].";
             }
             must "(. != 'epl') or ((. = 'epl') and (../multicast-frame-delivery = 'unconditional'))" {
               error-message "For EPL, multicast-frame-delivery must be unconditional.";
               description
-                "MEF 6.2 [R27] For EPL, multicast-frame-delivery must be unconditional.";
+                "For EPL, multicast-frame-delivery must be unconditional.";
+              reference "[MEF6.2] [R27].";
             }
             must "(. != 'epl') or ((. = 'epl') and (../broadcast-frame-delivery = 'unconditional'))" {
               error-message "For EPL, broadcast-frame-delivery must be unconditional.";
               description
-                "MEF 6.2 [R28] For EPL, broadcast-frame-delivery must be unconditional.";
+                "For EPL, broadcast-frame-delivery must be unconditional.";
+              reference "[MEF6.2] [R28].";
             }
             must "(. != 'epl') or ((. = 'epl') and (../ce-vlan-id-preservation = 'true'))" {
               error-message "For EPL, CE-VLAN ID Preservation must be enabled.";
@@ -1003,112 +1060,134 @@ module mef-services {
             must "(. != 'epl') or ((. = 'epl') and (../ce-vlan-pcp-preservation = 'true'))" {
               error-message "For EPL, CE-VLAN ID CoS Preservation must be enabled.";
               description
-                "MEF 6.2 [R30] For EPL, CE-VLAN ID CoS Preservation must be enabled.";
+                "For EPL, CE-VLAN ID CoS Preservation must be enabled.";
+              reference "[MEF6.2] [R30].";
             }
             must "(. != 'evpl') or ((. = 'evpl') and (count(/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/../mef-services:end-points/mef-services:end-point/mef-services:uni-id][mef-interfaces:uni-id/../mef-interfaces:all-to-one-bundling-enabled = 'true']) = 0))" {
               error-message "For EVPL, All-to-One Bundling must be disabled for all UNIs in the EVC UNI List.";
               description
-                "MEF 6.2 [R31] For EVPL, All-to-One Bundling must be disabled for all UNIs in the EVC UNI List.";
+                "For EVPL, All-to-One Bundling must be disabled for all UNIs in the EVC UNI List.";
+              reference "[MEF6.2] [R31].";
             }
             must "(. != 'evpl') or ((. = 'evpl') and ((../unicast-frame-delivery != 'unconditional') or (../multicast-frame-delivery != 'unconditional') or (../broadcast-frame-delivery != 'unconditional') or count(../end-points/end-point[source-mac-address-limit-enabled = 'true']) = 0))" {
               error-message "For EVPL, Source MAC Address Limit must be disabled for all UNIs in the EVC per UNI List if all 3 -svc-frm-delivery values are unconditional.";
               description
-                "MEF 6.2 [R32] For EVPL, Source MAC Address Limit must be disabled for all UNIs in the EVC per UNI List if all 3 -svc-frm-delivery values are unconditional.";
+                "For EVPL, Source MAC Address Limit must be disabled for all UNIs in the EVC per UNI List if all 3 -svc-frm-delivery values are unconditional.";
+              reference "[MEF6.2] [R32].";
             }
             must "(. != 'evpl') or ((. = 'evpl') and (../connection-type = 'point-to-point'))" {
               error-message "For EVPL, EVC Type must be Point-to-Point.";
               description
-                "MEF 6.2 [R33] For EVPL, EVC Type must be Point-to-Point.";
+                "For EVPL, EVC Type must be Point-to-Point.";
+              reference "[MEF6.2] [R33].";
             }
             must "(. != 'eplan') or ((. = 'eplan') and (count(/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/../mef-services:end-points/mef-services:end-point/mef-services:uni-id][mef-interfaces:uni-id/../mef-interfaces:service-multiplexing-enabled = 'true']) = 0))" {
               error-message "For EP-LAN, Service Multiplexing must be disabled for all UNIs in the EVC UNI List.";
               description
-                "MEF 6.2 [R34] For EP-LAN, Service Multiplexing must be disabled for all UNIs in the EVC UNI List.";
+                "For EP-LAN, Service Multiplexing must be disabled for all UNIs in the EVC UNI List.";
+              reference "[MEF6.2] [R34].";
             }
             must "(. != 'eplan') or ((. = 'eplan') and (count(/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/../mef-services:end-points/mef-services:end-point/mef-services:uni-id][mef-interfaces:uni-id/../mef-interfaces:bundling-enabled = 'true']) = 0))" {
               error-message "For EP-LAN, Bundling must be disabled for all UNIs in the EVC UNI List.";
               description
-                "MEF 6.2 [R35] For EP-LAN, Bundling must be disabled for all UNIs in the EVC UNI List.";
+                "For EP-LAN, Bundling must be disabled for all UNIs in the EVC UNI List.";
+              reference "[MEF6.2] [R35].";
             }
             must "(. != 'eplan') or ((. = 'eplan') and (count(/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/../mef-services:end-points/mef-services:end-point/mef-services:uni-id][mef-interfaces:uni-id/../mef-interfaces:all-to-one-bundling-enabled = 'false']) = 0))" {
               error-message "For EP-LAN, All-to-One Bundling must be enabled for all UNIs in the EVC UNI List.";
               description
-                "MEF 6.2 [R36] For EP-LAN, All-to-One Bundling must be enabled for all UNIs in the EVC UNI List.";
+                "For EP-LAN, All-to-One Bundling must be enabled for all UNIs in the EVC UNI List.";
+              reference "[MEF6.2] [R36].";
             }
             must "(. != 'eplan') or ((. = 'eplan') and (count(/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/../mef-services:end-points/mef-services:end-point/mef-services:uni-id][mef-interfaces:uni-id/../mef-interfaces:max-num-of-evcs != 1]) = 0))" {
               error-message "For EP-LAN, Max EVC Count must be 1 for all UNIs in the EVC UNI List.";
               description
-                "MEF 6.2 [R37] For EP-LAN, Max EVC Count must be 1 for all UNIs in the EVC UNI List.";
+                "For EP-LAN, Max EVC Count must be 1 for all UNIs in the EVC UNI List.";
+              reference "[MEF6.2] [R37].";
             }
             must "(. != 'eplan') or ((. = 'eplan') and (../connection-type = 'multipoint-to-multipoint'))" {
               error-message "For EP-LAN, EVC Type must be Multipoint-to-Multipoint.";
               description
-                "MEF 6.2 [R38] For EP-LAN, EVC Type must be Multipoint-to-Multipoint.";
+                "For EP-LAN, EVC Type must be Multipoint-to-Multipoint.";
+              reference "[MEF6.2] [R38].";
             }
             must "(. != 'eplan') or ((. = 'eplan') and (../ce-vlan-id-preservation = 'true'))" {
               error-message "For EP-LAN, CE-VLAN ID Preservation must be enabled.";
               description
-                "MEF 6.2 [R39] For EP-LAN, CE-VLAN ID Preservation must be enabled.";
+                "For EP-LAN, CE-VLAN ID Preservation must be enabled.";
+              reference "[MEF6.2] [R39].";
             }
             must "(. != 'eplan') or ((. = 'eplan') and (../ce-vlan-pcp-preservation = 'true'))" {
               error-message "For EP-LAN, CE-VLAN ID CoS Preservation must be enabled.";
               description
-                "MEF 6.2 [R40] For EP-LAN, CE-VLAN ID CoS Preservation must be enabled.";
+                "For EP-LAN, CE-VLAN ID CoS Preservation must be enabled.";
+              reference "[MEF6.2] [R40].";
             }
             must "(. != 'evplan') or ((. = 'evplan') and (../connection-type = 'multipoint-to-multipoint'))" {
               error-message "For EVP-LAN, EVC Type must be Multipoint-to-Multipoint.";
               description
-                "MEF 6.2 [R42] For EVP-LAN, EVC Type must be Multipoint-to-Multipoint.";
+                "For EVP-LAN, EVC Type must be Multipoint-to-Multipoint.";
+              reference "[MEF6.2] [R42].";
             }
             must "(. != 'evplan') or ((. = 'evplan') and (count(/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/../mef-services:end-points/mef-services:end-point/mef-services:uni-id][mef-interfaces:uni-id/../mef-interfaces:all-to-one-bundling-enabled = 'true']) = 0))" {
               error-message "For EVP-LAN, All-to-One Bundling must be disabled for all UNIs in the EVC UNI List.";
               description
-                "MEF 6.2 [R41] For EVP-LAN, All-to-One Bundling must be disabled for all UNIs in the EVC UNI List.";
+                "For EVP-LAN, All-to-One Bundling must be disabled for all UNIs in the EVC UNI List.";
+              reference "[MEF6.2] [R41].";
             }
             must "(. != 'eptree') or ((. = 'eptree') and (count(/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/../mef-services:end-points/mef-services:end-point/mef-services:uni-id][mef-interfaces:uni-id/../mef-interfaces:service-multiplexing-enabled = 'true']) = 0))" {
               error-message "For EP-TREE, Service Multiplexing must be disabled for all UNIs in the EVC UNI List.";
               description
-                "MEF 6.2 [R43] For EP-TREE, Service Multiplexing must be disabled for all UNIs in the EVC UNI List.";
+                "For EP-TREE, Service Multiplexing must be disabled for all UNIs in the EVC UNI List.";
+              reference "[MEF6.2] [R43].";
             }
             must "(. != 'eptree') or ((. = 'eptree') and (count(/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/../mef-services:end-points/mef-services:end-point/mef-services:uni-id][mef-interfaces:uni-id/../mef-interfaces:bundling-enabled = 'true']) = 0))" {
               error-message "For EP-TREE, Bundling must be disabled for all UNIs in the EVC UNI List.";
               description
-                "MEF 6.2 [R44] For EP-TREE, Bundling must be disabled for all UNIs in the EVC UNI List.";
+                "For EP-TREE, Bundling must be disabled for all UNIs in the EVC UNI List.";
+              reference "[MEF6.2] [R44].";
             }
             must "(. != 'eptree') or ((. = 'eptree') and (count(/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/../mef-services:end-points/mef-services:end-point/mef-services:uni-id][mef-interfaces:uni-id/../mef-interfaces:all-to-one-bundling-enabled = 'false']) = 0))" {
               error-message "For EP-TREE, All-to-One Bundling must be enabled for all UNIs in the EVC UNI List.";
               description
-                "MEF 6.2 [R45] For EP-TREE, All-to-One Bundling must be enabled for all UNIs in the EVC UNI List.";
+                "For EP-TREE, All-to-One Bundling must be enabled for all UNIs in the EVC UNI List.";
+              reference "[MEF6.2] [R45].";
             }
             must "(. != 'eptree') or ((. = 'eptree') and (count(/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/../mef-services:end-points/mef-services:end-point/mef-services:uni-id][mef-interfaces:uni-id/../mef-interfaces:max-num-of-evcs != 1]) = 0))" {
               error-message "For EP-TREE, Max EVC Count must be 1 for all UNIs in the EVC UNI List.";
               description
-                "MEF 6.2 [R46] For EP-TREE, Max EVC Count must be 1 for all UNIs in the EVC UNI List.";
+                "For EP-TREE, Max EVC Count must be 1 for all UNIs in the EVC UNI List.";
+              reference "[MEF6.2] [R46].";
             }
             must "(. != 'eptree') or ((. = 'eptree') and (../connection-type = 'rooted-multipoint'))" {
               error-message "For EP-TREE, EVC Type must be Rooted-Multipoint.";
               description
-                "MEF 6.2 [R47] For EP-TREE, EVC Type must be Rooted-Multipoint.";
+                "For EP-TREE, EVC Type must be Rooted-Multipoint.";
+              reference "[MEF6.2] [R47].";
             }
             must "(. != 'eptree') or ((. = 'eptree') and (../ce-vlan-id-preservation = 'true'))" {
               error-message "For EP-TREE, CE-VLAN ID Preservation must be enabled.";
               description
-                "MEF 6.2 [R49] For EP-TREE, CE-VLAN ID Preservation must be enabled.";
+                "For EP-TREE, CE-VLAN ID Preservation must be enabled.";
+              reference "[MEF6.2] [R49].";
             }
             must "(. != 'eptree') or ((. = 'eptree') and (../ce-vlan-pcp-preservation = 'true'))" {
               error-message "For EP-TREE, CE-VLAN ID CoS Preservation must be enabled.";
               description
-                "MEF 6.2 [R50] For EP-TREE, CE-VLAN ID CoS Preservation must be enabled.";
+                "For EP-TREE, CE-VLAN ID CoS Preservation must be enabled.";
+              reference "[MEF6.2] [R50].";
             }
             must "(. != 'evptree') or ((. = 'evptree') and (count(/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/../mef-services:end-points/mef-services:end-point/mef-services:uni-id][mef-interfaces:uni-id/../mef-interfaces:all-to-one-bundling-enabled = 'true']) = 0))" {
               error-message "For EVP-TREE, All-to-One Bundling must be disabled for all UNIs in the EVC UNI List.";
               description
-                "MEF 6.2 [R51] For EVP-TREE, All-to-One Bundling must be disabled for all UNIs in the EVC UNI List.";
+                "For EVP-TREE, All-to-One Bundling must be disabled for all UNIs in the EVC UNI List.";
+              reference "[MEF6.2] [R51].";
             }
             must "(. != 'evptree') or ((. = 'evptree') and (../connection-type = 'rooted-multipoint'))" {
               error-message "For EVP-TREE, EVC Type must be Rooted-Multipoint.";
               description
-                "MEF 6.2 [R52] For EVP-TREE, EVC Type must be Rooted-Multipoint.";
+                "For EVP-TREE, EVC Type must be Rooted-Multipoint.";
+              reference "[MEF6.2] [R52].";
             }
             default "other";
             description

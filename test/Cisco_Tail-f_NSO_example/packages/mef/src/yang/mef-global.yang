@@ -378,6 +378,7 @@ module mef-global {
                           error-message "The value of chli-consecutive-small-time-intervals must be less than consecutive-small-time-intervals (where p < n) if both are defined.";
                           description
                             "The value of chli-consecutive-small-time-intervals must be less than consecutive-small-time-intervals (where p < n) if both are defined.";
+                          reference "[MEF 10.3].";
                         }
                         mandatory true;
                         description
