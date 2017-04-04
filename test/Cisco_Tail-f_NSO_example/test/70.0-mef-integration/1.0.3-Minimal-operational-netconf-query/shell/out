@@ -4475,7 +4475,11 @@
 >>>>>>> 406a708  Updates to MEF Services to add additional containers to the top level and rename mef-service to evc.
             <status>
               <operational-state>false</operational-state>
+<<<<<<< Upstream, based on origin/master
               <evc-end-point-id/>
+=======
+              <service-state>pending</service-state>
+>>>>>>> 4295e28 First set of updates for MEF 7.3 review.
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -4591,7 +4595,11 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+<<<<<<< Upstream, based on origin/master
               <evc-end-point-id/>
+=======
+              <service-state>pending</service-state>
+>>>>>>> 4295e28 First set of updates for MEF 7.3 review.
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -4764,7 +4772,11 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+<<<<<<< Upstream, based on origin/master
               <evc-end-point-id/>
+=======
+              <service-state>pending</service-state>
+>>>>>>> 4295e28 First set of updates for MEF 7.3 review.
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -4893,7 +4905,11 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+<<<<<<< Upstream, based on origin/master
               <evc-end-point-id/>
+=======
+              <service-state>pending</service-state>
+>>>>>>> 4295e28 First set of updates for MEF 7.3 review.
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -4999,7 +5015,11 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+<<<<<<< Upstream, based on origin/master
               <evc-end-point-id/>
+=======
+              <service-state>pending</service-state>
+>>>>>>> 4295e28 First set of updates for MEF 7.3 review.
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -5207,7 +5227,11 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+<<<<<<< Upstream, based on origin/master
               <evc-end-point-id/>
+=======
+              <service-state>pending</service-state>
+>>>>>>> 4295e28 First set of updates for MEF 7.3 review.
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -5587,7 +5611,11 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+<<<<<<< Upstream, based on origin/master
               <evc-end-point-id/>
+=======
+              <service-state>pending</service-state>
+>>>>>>> 4295e28 First set of updates for MEF 7.3 review.
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -5768,6 +5796,7 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+              <service-state>pending</service-state>
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -5883,6 +5912,7 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+              <service-state>pending</service-state>
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -6034,6 +6064,7 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+              <service-state>pending</service-state>
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -6178,6 +6209,7 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+              <service-state>pending</service-state>
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -6303,7 +6335,11 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+<<<<<<< Upstream, based on origin/master
               <evc-end-point-id/>
+=======
+              <service-state>pending</service-state>
+>>>>>>> 4295e28 First set of updates for MEF 7.3 review.
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -6439,7 +6475,11 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+<<<<<<< Upstream, based on origin/master
               <evc-end-point-id/>
+=======
+              <service-state>pending</service-state>
+>>>>>>> 4295e28 First set of updates for MEF 7.3 review.
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -9686,7 +9726,11 @@
 >>>>>>> 406a708  Updates to MEF Services to add additional containers to the top level and rename mef-service to evc.
             <status>
               <operational-state>false</operational-state>
+<<<<<<< Upstream, based on origin/master
               <evc-end-point-id/>
+=======
+              <service-state>pending</service-state>
+>>>>>>> 4295e28 First set of updates for MEF 7.3 review.
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>

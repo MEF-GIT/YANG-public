@@ -118,7 +118,7 @@ module mef-services {
           "The EVC ID must be unique across all EVCs in the CEN. " +
           "The EVC ID must be non-NULL.";
         reference "[MEF10.3] Section 8.2 [R7]. " +
-        		"[MEF7.3] Section 11.1.1, Section 12.2.2.";
+        		"[MEF7.3] Section 7.2.";
       }
 
       container cos-names {
@@ -140,7 +140,7 @@ module mef-services {
         description
           "EVC Per User Network Interface(UNI) Configuration " +
           "and Status.";
-        list end-point {
+         list end-point {
           must "not(ce-vlans/ce-vlan[2]) or ../../" +
           		"ce-vlan-id-preservation = 'true'" {
             error-message "When more than one CE-VLAN-ID is mapped" +
@@ -250,7 +250,7 @@ module mef-services {
             "roles of each UNI in the Service. One UNI " +
             "can be used by 0 or more EVCs.";
           reference "[MEF10.3] Section 8.3. " +
-          		"[MEF7.3] Section 12.2.2.";
+          		"[MEF7.3] Section 7.4.";
           container ce-vlans {
             description
               "EVC Per UNI CE-VLAN IDs.";
@@ -261,7 +261,7 @@ module mef-services {
                 "for this EVC.";
               reference "[MEF10.3] Section 8.6.1, " +
               		"[R24] [R25], Section 9.10.2, Section 9.12," +
-              		" [R76], [R81].";
+              		" [R76], [R81]. [MEF7.3] Section 7.5.";
               leaf vid {
                 type leafref {
                   path "/mef-interfaces:mef-interfaces/" +
@@ -557,7 +557,7 @@ module mef-services {
               description
                 "EVC Per UNI: Operational Status of the Virtual" +
                 " Connection as Enabled/Disabled.";
-              reference "[MEF15]. [MEF7.3] Section 11.2.1.";
+              reference "[MEF15]. [MEF7.3] Section 7.4.";
             }
             leaf evc-end-point-id {
               type mef-types:identifier90;
@@ -567,7 +567,7 @@ module mef-services {
                 "EVC Per UNI: This is 90 character long string " +
                 "(max) containing the concatenation of the " +
                 "evc-id and uni-id keys for this end-point";
-              reference "[MEF7.3]";
+              reference "[MEF7.3] Section 7.5";
             }
           }
           leaf uni-id {
@@ -580,7 +580,7 @@ module mef-services {
               "EVC Per UNI: The UNI ID paired with the EVC ID" +
               " in the containing list.";
             reference "[MEF10.3] Section 8.3, " +
-            		"Section 10.1.  [MEF7.3] Section 12.1.2.";
+            		"Section 10.1.  [MEF7.3] Section 7.5.";
           }
           leaf role {
             type mef-types:evc-uni-role-type;
@@ -589,14 +589,14 @@ module mef-services {
               "EVC Per UNI: The UNI Role MUST have the value " +
               "of either 'root' or 'leaf'.";
             reference "[MEF10.3] [R4], [R5], [R10], [R11]," +
-            		" [R12]. [MEF7.3] Section 12.2.2.";
+            		" [R12]. [MEF7.3] Section 7.5.";
           }
           leaf admin-state {
             type boolean;
             default "true";
             description
               "EVC Per UNI: false= Locked/ true = Unlocked";
-            reference "[MEF15]. [MEF7.3] Section 11.2.1.";
+            reference "[MEF15]. [MEF7.3] Section 7.4.";
           }
           leaf color-identifier {
             type mef-types:evc-color-identifier-type;
@@ -604,7 +604,7 @@ module mef-services {
               "EVC Per UNI: The Color Identifier for Service " +
               "Frames.";
             reference "[MEF10.3] Section 10.3. " +
-            		"[MEF7.3] Section 12.1.2.";
+            		"[MEF7.3] Section 7.4.";
           }
           leaf cos-identifier {
             type leafref {
@@ -866,8 +866,7 @@ module mef-services {
               "Enable / Disable. If Enabled, the values" +
               " for the Source MAC Address Limit and " +
               "Source MAC Address Interval must be set.";
-            reference "[MEF10.3] Section 10.9. " +
-            		"[MEF7.3] Section 12.1.2.";
+            reference "[MEF10.3] Section 10.9. [MEF7.3] Section 8.1.13.";
           }
           leaf source-mac-address-limit {
             type uint32 {
@@ -877,7 +876,7 @@ module mef-services {
               "EVC Per UNI: Source MAC Address Limit. " +
               "This value is used when the Source MAC " +
               "Address Limit Enabled is true.";
-            reference "[MEF10.3] Section 10.9.";
+            reference "[MEF10.3] Section 10.9. [MEF7.3] Section 7.4.";
           }
           leaf source-mac-address-limit-time-interval {
             type yang:timeticks;
@@ -886,7 +885,7 @@ module mef-services {
               "EVC Per UNI: Source MAC Address Limit Interval. " +
               "This value is used when the Source MAC Address " +
               "Limit Enabled is true.";
-            reference "[MEF10.3] Section 10.9.";
+            reference "[MEF10.3] Section 10.9. [MEF7.3] Section 8.1.13.";
           }
           leaf test-meg-enabled {
             type boolean;
@@ -894,7 +893,13 @@ module mef-services {
             description
               "EVC Per UNI: Test MEG Enabled / Disabled.";
             reference "[MEF10.3] Section 10.10. " +
-            		"[MEF7.3] Section 12.1.2.";
+            		"[MEF7.3] Section 7.5.";
+          }
+          leaf user-label {
+            type mef-types:identifier1023;
+             description
+              "EVC Per UNI: User Label.";
+            reference "[MEF7.3] Section 7.5.";
           }
           leaf subscriber-meg-mip-enabled {
             type boolean;
@@ -903,7 +908,7 @@ module mef-services {
               "EVC Per UNI: Subscriber MEG MIP Enabled / " +
               "Disabled.";
             reference "[MEF10.3] Section 10.11. " +
-            		"[MEF7.3] Section 12.1.2.";
+            		"[MEF7.3] Section 7.5";
           }
         }
       }
@@ -918,8 +923,16 @@ module mef-services {
           description
             "EVC Operational Status of the Virtual Connection " +
             "as Enabled/Disabled.";
-          reference "[MEF7.3] Section 11.1.1.";
+          reference "[MEF7.3] Section 7.1.";
         }
+       leaf service-state {
+          type mef-types:service-state-type;
+          default "pending";
+          config false;
+          description
+            "EVC Service State.";
+          reference "[MEF7.3] Section 7.1.";
+        }      
       }
       container carrier-ethernet-sls {
         description
@@ -1472,7 +1485,7 @@ module mef-services {
           "Rooted-Multipoint.";
         reference "[MEF10.3] Section 8.1, [R4], [R5], [R10], " +
         		"[R11], [R12], [R13] and [R14]." +
-        		"[MEF7.3] Section 12.2.2.";
+        		"[MEF7.3] Section 7.1.";
       }
       leaf admin-state {
         type boolean;
@@ -1480,7 +1493,19 @@ module mef-services {
         description
           "EVC: Locked/Unlocked is inconsistent with " +
           "Oper Status and will be confusing.";
-        reference "[MEF15]. [MEF7.3] Section 11.1.1.";
+        reference "[MEF15]. [MEF7.3] Section 7.1.";
+      }
+      leaf user-label {
+            type mef-types:identifier1023;
+             description
+              "EVC: User Label.";
+            reference "[MEF7.3] Section 7.1.";
+      }
+      leaf max-frame-size {
+        type mef-types:max-svc-frame-size-type;
+        description
+          "EVC: Maximum Frame Size in bytes.";
+        reference "[MEF10.3] Section 8.9.[MEF7.3] Section 7.1.";
       }
       leaf max-num-of-evc-end-point {
         type uint32 {
@@ -1517,7 +1542,7 @@ module mef-services {
           "the max-num-of-evc-end-point value must be " +
           "at least 3. This value must be 2 for " +
           "point-to-point mode.";
-        reference "[MEF10.3] [R14]. [MEF7.3] Section 12.2.2.";
+        reference "[MEF10.3] [R14]. [MEF7.3] Section 7.2.";
       }
       leaf ce-vlan-id-preservation {
         type boolean;
@@ -1527,7 +1552,7 @@ module mef-services {
         reference "[MEF10.3] Section 8.6.1, " +
         		"[R24] [R25], Section 9.10.2, " +
         		"Section 9.12, [R81], Figure 20. " +
-        		"[MEF7.3] Section 12.2.2.";
+        		"[MEF7.3] Section 7.2.";
       }
       leaf ce-vlan-pcp-preservation {
         type boolean;
@@ -1536,7 +1561,7 @@ module mef-services {
           "EVC: Enables CE-VLAN PCP (CoS) preservation " +
           "for the EVC, as described in MEF 10.3 section 8.6.2).";
         reference "[MEF10.3] Section 8.6.2, [R26]. " +
-        		"[MEF7.3] Section 12.2.2.";
+        		"[MEF7.3] Section 7.1.";
       }
       leaf ce-vlan-dei-preservation {
         type boolean;
@@ -1549,7 +1574,7 @@ module mef-services {
           "has the same value as the DEI bit in the " +
           "ingress frame.";
         reference "[MEF10.3] Section 8.6.2, [R26]. " +
-        		"[MEF7.3] Section 12.2.2.";
+        		"[MEF7.3] Section 7.1.";
       }
       leaf unicast-frame-delivery {
         type mef-types:data-svc-frame-delivery-type;
@@ -1559,7 +1584,7 @@ module mef-services {
           "(unconditional[default], conditional, or discard).";
         reference "[MEF10.3] Section 8.5.2,[R16], [R17]," +
         		" Section 8.8, Section 11. " +
-        		"[MEF7.3] Section 12.2.2.";
+        		"[MEF7.3] Section 7.1.";
       }
       leaf multicast-frame-delivery {
         type mef-types:data-svc-frame-delivery-type;
@@ -1570,7 +1595,7 @@ module mef-services {
           "conditional, or discard).";
         reference "[MEF10.3] Section 8.5.2, " +
         		"[R16], [R18], Section 8.8, Section 11. " +
-        		"[MEF7.3] Section 12.2.2.";
+        		"[MEF7.3] Section 7.1.";
       }
       leaf broadcast-frame-delivery {
         type mef-types:data-svc-frame-delivery-type;
@@ -1580,7 +1605,7 @@ module mef-services {
           "(unconditional[default], conditional, or discard).";
         reference "[MEF10.3] Section 8.5.2, [R16], " +
         		"[R19], Section 8.8, Section 11. " +
-        		"[MEF7.3] Section 12.2.2.";
+        		"[MEF7.3] Section 7.1.";
       }
       leaf svc-type {
         type mef-types:mef-service-type;
