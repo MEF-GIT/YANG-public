@@ -4425,6 +4425,7 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+              <service-state>pending</service-state>
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -4540,6 +4541,7 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+              <service-state>pending</service-state>
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -4712,6 +4714,7 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+              <service-state>pending</service-state>
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -4840,6 +4843,7 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+              <service-state>pending</service-state>
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -4945,6 +4949,7 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+              <service-state>pending</service-state>
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -5152,6 +5157,7 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+              <service-state>pending</service-state>
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -5531,6 +5537,7 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+              <service-state>pending</service-state>
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -5711,6 +5718,7 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+              <service-state>pending</service-state>
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -5826,6 +5834,7 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+              <service-state>pending</service-state>
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -5977,6 +5986,7 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+              <service-state>pending</service-state>
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -6121,6 +6131,7 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+              <service-state>pending</service-state>
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -6246,6 +6257,7 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+              <service-state>pending</service-state>
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -6381,6 +6393,7 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+              <service-state>pending</service-state>
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>
@@ -7800,6 +7813,7 @@
             </end-points>
             <status>
               <operational-state>false</operational-state>
+              <service-state>pending</service-state>
             </status>
             <carrier-ethernet-sls>
               <sls-id>MEF103_Table25</sls-id>

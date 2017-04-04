@@ -391,6 +391,21 @@ module mef-service-types {
 	      "the <delete> character (0.7f) despite the current MEF " +
 	      "specification not disallowing it.";
 	    reference "[MEF10.3] [R8], [R9]. [RFC2579]. [RFC854].";
+	  }
+  typedef identifier1023 {
+	    type string {
+	      length "min..1023";
+	      pattern "[ -~]+";
+	    }
+	    description
+	      "This type definition is intended for use with user-labels." +
+	      "This type definition accepts any visible ASCII character " +
+	      "plus the <space> character.The string must be an RFC 2579 " +
+	      "Display String (RFC 854 ASCII 0.00-0.7f) but not contain " +
+	      "the characters 0.00 through 0.1f. It does not accept " +
+	      "the <delete> character (0.7f) despite the current MEF " +
+	      "specification not disallowing it.";
+	    reference "[MEF10.3] [R8], [R9]. [RFC2579]. [RFC854]. [MEF7.3] Section 7.1.";
 	  }  
   typedef max-svc-frame-size-type {
     type uint16 {
@@ -399,8 +414,8 @@ module mef-service-types {
     units "bytes";
     description
       "Max Frame Size Type in bytes. Service Frames larger than " +
-      "this size will be discarded.";
-    reference "[MEF 10.3] Section 8.9 and Section 9.7.";
+      "this size will be discarded. For OVC, the minimum value is 1526.";
+    reference "[MEF 10.3] Section 8.9 and Section 9.7. [MEF7.3] Section 7.1.";
   }
 
   typedef sls-type {
@@ -582,6 +597,26 @@ module mef-service-types {
     description
       "This object type of resiliency mechanism for a " +
       "specific UNI.";
+  }
+
+  typedef service-state-type {
+    type enumeration {
+      enum "pending" {
+        description
+          "Pending.";
+      }
+      enum "active" {
+        description
+          "Active.";
+      }
+      enum "inactive" {
+        description
+          "Inactive.";
+      }
+    }
+    description
+      "This type reflects the dynamic state of " +
+      "specific EVC.";
   }
 
   typedef evc-cos-identifier-field-type {

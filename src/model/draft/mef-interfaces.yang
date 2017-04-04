@@ -106,7 +106,7 @@ module mef-interfaces {
         container physical-layers {
           description
             "Physical Layer configuration";
-          reference "[MEF10.3] Section 9.2, [R61], [R62]";
+          reference "[MEF10.3] Section 9.2, [R61], [R62]. [MEF7.3] Section 7.7.";
           container links {
             description
               "The Physical Layer for each physical link " +
@@ -187,7 +187,7 @@ module mef-interfaces {
                   "Enabled or Disabled for each physical link " +
                   "implementing the UNI.";
                 reference "[MEF10.3] Section 9.3. [MEF6.2] " +
-                		"Section 8.2.2. [MEF7.3] Section 10.2.2.";
+                		"Section 8.2.2. [MEF7.3] Section 7.8.";
               }
               leaf clock-accuracy {
                 type decimal64 {
@@ -219,7 +219,7 @@ module mef-interfaces {
             default "1";
             description
               "The number of links configured in the links list.";
-            reference "[MEF10.3] [R63]. [MEF7.3] Section 10.2.2.";
+            reference "[MEF10.3] [R63]. [MEF7.3] Section 7.7.";
           }
         }
         container ce-vlans {
@@ -237,7 +237,7 @@ module mef-interfaces {
           list ce-vlan {
             key "vid";
             description
-              "A list of all CE-VLANs allowed ingres or egress " +
+              "A list of all CE-VLANs allowed  or egress " +
               "on the UNI. This is the UNI-specific CE-VLAN ID " +
               "listing as part of the Service Level " +
               "CE-VLAN ID / EVC Map.";
@@ -533,7 +533,7 @@ module mef-interfaces {
             description
               "Operational Status of the Link as " +
               "Enabled/Disabled.";
-            reference "[MEF15]. [MEF7.3] Section 10.1.1.";
+            reference "[MEF15]. [MEF7.3] Section 7.7.";
           }
           leaf number-of-links {
             type uint32;
@@ -558,7 +558,7 @@ module mef-interfaces {
           description
             "Locked/Unlocked is inconsistent with Oper Status " +
             "and will be confusing.";
-          reference "MEF 15. MEF 7.3 Section 10.1.1.";
+          reference "MEF 15. MEF 7.3 Section 7.7.";
         }
         leaf mac-address {
           type yang:mac-address;
@@ -599,7 +599,7 @@ module mef-interfaces {
           description
             "UNI Resiliency.";
           reference "[MEF10.3] Section 9.5 [R64], [R65], [R66], " +
-          		"[R67]. [MEF6.2] Section 8.2.2.";
+          		"[R67]. [MEF6.2] Section 8.2.2. [MEF7.3] Section 7.7.";
         }
         leaf max-svc-frame-size {
           type mef-types:max-svc-frame-size-type;
@@ -609,7 +609,7 @@ module mef-interfaces {
             "size for the UNI.";
           reference "[MEF10.3] Section 9.7, [R71], MEF 6.2 " +
           		"Section 8.2.2 and MEF 22.1: [D2]. " +
-          		"[MEF7.3] Section 10.2.2.";
+          		"[MEF7.3] Section 7.8.1.";
         }
         leaf service-multiplexing-enabled {
           type boolean;
@@ -618,7 +618,7 @@ module mef-interfaces {
             "Service Multiplexing Enable - Enable if to support " +
             "multiple EVCs per UNI.";
           reference "[MEF10.3] Section 9.8. " +
-          		"[MEF7.3] Section 10.2.2.";
+          		"[MEF7.3] Section 7.8.1.";
         }
         leaf bundling-enabled {
           type boolean;
@@ -630,7 +630,7 @@ module mef-interfaces {
             "CE-VLAN-ID is mapped to an EVC at a UNI, the " +
             "EVC have CE-VLAN ID Preservation enabled";
           reference "[MEF10.3] Section 9.12, [R25], [R77], " +
-          		"[R78], [R80]. [MEF7.3] Section 10.2.2.";
+          		"[R78], [R80]. [MEF7.3] Section 7.8.1.";
         }
         leaf all-to-one-bundling-enabled {
           type boolean;
@@ -648,7 +648,7 @@ module mef-interfaces {
             "applicable.";
           reference "[MEF10.3] Section 9.13, Table 12 " +
           		"(5 valid combinations), [R82], [R83]. " +
-          		"[MEF7.3] Section 10.2.2.";
+          		"[MEF7.3] Section 7.8.1.";
         }
         leaf default-ce-vlan-id {
           type mef-types:vlan-id-type;
@@ -657,7 +657,7 @@ module mef-interfaces {
             "The default ce-vlan-id is not applicable " +
             "if All in One Bundling is enabled.";
           reference "[MEF10.3] Section 9.9, [R73], [R74], " +
-          		"[R75]. [MEF7.3] Section 10.2.2.";
+          		"[R75]. [MEF7.3] Section 7.8.1.";
         }
         leaf max-num-of-evcs {
           type uint32 {
@@ -668,7 +668,7 @@ module mef-interfaces {
             "The Maximum Number of EVCs that can be supported " +
             "by this UNI (Default 1).";
           reference "[MEF10.3] Section 9.11, [R79]. " +
-          		"[MEF7.3] Section 10.2.2.";
+          		"[MEF7.3] Section 7.8.1.";
         }
         leaf token-share-enabled {
           type boolean;
@@ -678,7 +678,7 @@ module mef-interfaces {
             "whether a given UNI is capable of sharing tokens " +
             "across Bandwidth Profile Flows in an envelope.";
           reference "[MEF6.2] Section 8.2.1, [R2], [D1], [R3]. MEF 10.3 Section 12." +
-          		"[MEF7.3] Section 10.2.2.";
+          		"[MEF7.3] Section 7.8.1.";
         }
         leaf link-oam-enabled {
           type boolean;
@@ -687,7 +687,7 @@ module mef-interfaces {
             "Link OAM Enabled/Disabled.";
           reference "[MEF10.3] Section 9.16, [R86]. " +
           		"[MEF6.2] Section 8.2.2, [D3]. " +
-          		"[MEF7.3] Section 10.2.2.";
+          		"[MEF7.3] Section 7.7.";
         }
         leaf uni-meg-enabled {
           type boolean;
@@ -696,7 +696,7 @@ module mef-interfaces {
             "Enables / Disables the Maintenance Entity Group (MEG).";
           reference "[MEF10.3] Section 9.17, [R87]. " +
           		"[MEF30.1] Section 7.9. [MEF6.2] Section 8.2.2, " +
-          		"[D4]. [MEF7.3] Section 10.2.2.";
+          		"[D4]. [MEF7.3] Section 7.8.";
         }
         leaf elmi-enabled {
           type boolean;
@@ -715,7 +715,7 @@ module mef-interfaces {
             "Enabled / Disabled.";
           reference "[MEF10.3] Section 9.18, [R88]. " +
           		"[MEF16]. [MEF6.2] Section 8.2.2, [D5]. " +
-          		"[MEF7.3] Section 10.2.2.";
+          		"[MEF7.3] Section 7.8.";
         }
         leaf elmi-service-attribute {
           type boolean;
@@ -737,7 +737,7 @@ module mef-interfaces {
           reference "[MEF10.3] Section 9.19. " +
           		"[MEF45] Section 8.1, [R2] through [R9]. " +
           		"[MEF6.2] Section 8.2.2, [R1]. " +
-          		"[MEF45] Section 8.1.";
+          		"[MEF45] Section 8.1. [MEF7.3] Section 7.8.1.";
         }
         leaf l2cp-peering {
           type leafref {
@@ -752,7 +752,7 @@ module mef-interfaces {
             "the UNI (as opposed to being passed or discarded).";
           reference "[MEF10.3] Section 9.19. " +
           		"[MEF45] Section 8.2. " +
-          		"[MEF7.3] Section 10.2.2.";
+          		"[MEF7.3] Section 7.8.1.";
         }
       }
     }

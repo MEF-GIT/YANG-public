@@ -5824,7 +5824,8 @@
               ]
             },
             "status": {
-              "operational-state": false
+              "operational-state": false,
+              "service-state": "pending"
             },
             "carrier-ethernet-sls": {
               "sls-id": "MEF103_Table25",
@@ -5942,7 +5943,8 @@
               ]
             },
             "status": {
-              "operational-state": false
+              "operational-state": false,
+              "service-state": "pending"
             },
             "carrier-ethernet-sls": {
               "sls-id": "MEF103_Table25",
@@ -6126,7 +6128,8 @@
               ]
             },
             "status": {
-              "operational-state": false
+              "operational-state": false,
+              "service-state": "pending"
             },
             "carrier-ethernet-sls": {
               "sls-id": "MEF103_Table25",
@@ -6257,7 +6260,8 @@
               ]
             },
             "status": {
-              "operational-state": false
+              "operational-state": false,
+              "service-state": "pending"
             },
             "carrier-ethernet-sls": {
               "sls-id": "MEF103_Table25",
@@ -6358,7 +6362,8 @@
               ]
             },
             "status": {
-              "operational-state": false
+              "operational-state": false,
+              "service-state": "pending"
             },
             "carrier-ethernet-sls": {
               "sls-id": "MEF103_Table25",
@@ -6584,7 +6589,8 @@
               ]
             },
             "status": {
-              "operational-state": false
+              "operational-state": false,
+              "service-state": "pending"
             },
             "carrier-ethernet-sls": {
               "sls-id": "MEF103_Table25",
@@ -6990,7 +6996,8 @@
               ]
             },
             "status": {
-              "operational-state": false
+              "operational-state": false,
+              "service-state": "pending"
             },
             "carrier-ethernet-sls": {
               "sls-id": "MEF103_Table25",
@@ -7190,7 +7197,8 @@
               ]
             },
             "status": {
-              "operational-state": false
+              "operational-state": false,
+              "service-state": "pending"
             },
             "carrier-ethernet-sls": {
               "sls-id": "MEF103_Table25",
@@ -7308,7 +7316,8 @@
               ]
             },
             "status": {
-              "operational-state": false
+              "operational-state": false,
+              "service-state": "pending"
             },
             "carrier-ethernet-sls": {
               "sls-id": "MEF103_Table25",
@@ -7471,7 +7480,8 @@
               ]
             },
             "status": {
-              "operational-state": false
+              "operational-state": false,
+              "service-state": "pending"
             },
             "carrier-ethernet-sls": {
               "sls-id": "MEF103_Table25",
@@ -7626,7 +7636,8 @@
               ]
             },
             "status": {
-              "operational-state": false
+              "operational-state": false,
+              "service-state": "pending"
             },
             "carrier-ethernet-sls": {
               "sls-id": "MEF103_Table25",
@@ -7746,7 +7757,8 @@
               ]
             },
             "status": {
-              "operational-state": false
+              "operational-state": false,
+              "service-state": "pending"
             },
             "carrier-ethernet-sls": {
               "sls-id": "MEF103_Table25",
@@ -7884,7 +7896,8 @@
               ]
             },
             "status": {
-              "operational-state": false
+              "operational-state": false,
+              "service-state": "pending"
             },
             "carrier-ethernet-sls": {
               "sls-id": "MEF103_Table25",

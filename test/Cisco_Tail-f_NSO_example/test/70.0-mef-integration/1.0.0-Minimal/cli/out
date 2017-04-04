@@ -4263,6 +4263,7 @@ MMPOP1-ce0-Slot0-Port3  false        -
 MMPOP1-ce1-Slot1-Port3  false        -      
 
  status operational-state false
+ status service-state pending
                                      EVC    
                                      END    
                         OPERATIONAL  POINT  
@@ -4272,6 +4273,7 @@ MMPOP1-ce0-Slot0-Port1  false        -
 MMPOP1-ce1-Slot1-Port1  false        -      
 
  status operational-state false
+ status service-state pending
                                      EVC    
                                      END    
                         OPERATIONAL  POINT  
@@ -4281,6 +4283,7 @@ MMPOP1-ce0-Slot0-Port3  false        -
 MMPOP1-ce1-Slot1-Port3  false        -      
 
  status operational-state false
+ status service-state pending
                                      EVC    
                                      END    
                         OPERATIONAL  POINT  
@@ -4290,6 +4293,7 @@ MMPOP1-ce0-Slot0-Port3  false        -
 MMPOP1-ce2-Slot2-Port3  false        -      
 
  status operational-state false
+ status service-state pending
                                      EVC    
                                      END    
                         OPERATIONAL  POINT  
@@ -4300,6 +4304,7 @@ MMPOP1-ce6-Slot6-Port1  false        -
 MMPOP1-ce7-Slot7-Port1  false        -      
 
  status operational-state false
+ status service-state pending
                                      EVC    
                                      END    
                         OPERATIONAL  POINT  
@@ -4311,6 +4316,7 @@ MMPOP1-ce7-Slot7-Port2  false        -
 MMPOP1-ce8-Slot8-Port2  false        -      
 
  status operational-state false
+ status service-state pending
                                      EVC    
                                      END    
                         OPERATIONAL  POINT  
@@ -4322,6 +4328,7 @@ MMPOP1-ce7-Slot7-Port3  false        -
 MMPOP1-ce8-Slot8-Port3  false        -      
 
  status operational-state false
+ status service-state pending
                                      EVC    
                                      END    
                         OPERATIONAL  POINT  
@@ -4331,6 +4338,7 @@ MMPOP1-ce1-Slot0-Port2  false        -
 MMPOP1-ce2-Slot0-Port1  false        -      
 
  status operational-state false
+ status service-state pending
                                      EVC    
                                      END    
                         OPERATIONAL  POINT  
@@ -4340,6 +4348,7 @@ MMPOP1-ce4-Slot4-Port3  false        -
 MMPOP1-ce5-Slot5-Port6  false        -      
 
  status operational-state false
+ status service-state pending
                                      EVC    
                                      END    
                         OPERATIONAL  POINT  
@@ -4349,6 +4358,7 @@ MMPOP1-ce1-Slot0-Port2  false        -
 MMPOP1-ce2-Slot0-Port1  false        -      
 
  status operational-state false
+ status service-state pending
                                      EVC    
                                      END    
                         OPERATIONAL  POINT  
@@ -4358,6 +4368,7 @@ MMPOP1-ce1-Slot0-Port2  false        -
 MMPOP1-ce3-Slot0-Port3  false        -      
 
  status operational-state false
+ status service-state pending
                                      EVC    
                                      END    
                         OPERATIONAL  POINT  
@@ -4369,6 +4380,7 @@ MMPOP1-ce7-Slot7-Port3  false        -
 MMPOP1-ce8-Slot8-Port3  false        -      
 
  status operational-state false
+ status service-state pending
                                      EVC    
                                      END    
                         OPERATIONAL  POINT  
@@ -4378,3 +4390,4 @@ MMPOP1-ce0-Slot0-Port2  false        -
 MMPOP1-ce2-Slot0-Port3  false        -      
 
  status operational-state false
+ status service-state pending
