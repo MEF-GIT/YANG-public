@@ -15,7 +15,7 @@ module mef-service-types {
   description
     "This module defines the YANG Type Definitions and shared 
      (templated) groupings of data elements used by MEF Services
-	  YANG Modules.
+     YANG Modules.
      
      Reference Overview:
      A number of base documents have been used to create 
@@ -59,41 +59,37 @@ module mef-service-types {
      Network(EoT/MEN)' March 2007";
 
   revision 2017-01-10 {
- 	    description
- 	      "Updated to address CFC1 Review Comments.";
- 	    reference
- 	      "EVC Ethernet Services Definitions YANG Modules 
- 	       (MEF XX), TBD";
+    description
+      "Updated to address CFC1 Review Comments.";
+    reference
+      "EVC Ethernet Services Definitions YANG Modules 
+       (MEF XX), TBD";
   }
   revision 2016-07-01 {
     description
-         "Updated to better align with MEF 7.3 and
-          MEF Common Information Model attributes";
-    reference "EVC Ethernet Services Definitions YANG Modules
-            	    	      (MEF XX), TBD";
+      "Updated to better align with MEF 7.3 and
+       MEF Common Information Model attributes";
+    reference
+      "EVC Ethernet Services Definitions YANG Modules
+         \t      (MEF XX), TBD";
   }
-
-
   revision 2016-04-17 {
     description
       "First set of updates to better align with
        MEF Common Information Model names";
-    reference "EVC Ethernet Services Definitions YANG Modules 
-    	      (MEF XX), TBD";
+    reference
+      "EVC Ethernet Services Definitions YANG Modules 
+       (MEF XX), TBD";
   }
-
   revision 2015-05-26 {
     description
       "Formal Project Review Draft 1.";
-    reference "EVC Ethernet Services Definitions YANG Modules " +
-    		"(MEF XX), TBD";
+    reference "EVC Ethernet Services Definitions YANG Modules (MEF XX), TBD";
   }
 
   identity ieee-8023-interface-type {
     description
-      "Base identity from which specific IEEE 802.3-2012 " +
-      "interface types are derived. This list was taken " +
-      "from Section 1.4 'Definitions'.";
+      "Base identity from which specific IEEE 802.3-2012 interface types are derived. This list was taken from Section 1.4 'Definitions'.";
   }
 
   identity ieee8023-10BASE2 {
@@ -354,76 +350,56 @@ module mef-service-types {
       pattern "[ -~]+";
     }
     description
-      "This type definition accepts any visible ASCII character " +
-      "plus the <space> character.The string must be an RFC 2579 " +
-      "Display String (RFC 854 ASCII 0.00-0.7f) but not contain " +
-      "the characters 0.00 through 0.1f. It does not accept " +
-      "the <delete> character (0.7f) despite the current MEF " +
-      "specification not disallowing it.";
+      "This type definition accepts any visible ASCII character plus the <space> character.The string must be an RFC 2579 Display String (RFC 854 ASCII 0.00-0.7f) but not contain the characters 0.00 through 0.1f. It does not accept the <delete> character (0.7f) despite the current MEF specification not disallowing it.";
     reference "[MEF10.3] [R8], [R9]. [RFC2579]. [RFC854].";
   }
+
   typedef identifier90 {
-	    type string {
-	      length "min..90";
-	      pattern "[ -~]+";
-	    }
-	    description
-	      "This type definition is intended for use EVC End Point ID." +
-	      "This type definition accepts any visible ASCII character " +
-	      "plus the <space> character.The string must be an RFC 2579 " +
-	      "Display String (RFC 854 ASCII 0.00-0.7f) but not contain " +
-	      "the characters 0.00 through 0.1f. It does not accept " +
-	      "the <delete> character (0.7f) despite the current MEF " +
-	      "specification not disallowing it.";
-	    reference "[MEF10.3] [R8], [R9]. [RFC2579]. [RFC854].";
-	  }
+    type string {
+      length "min..90";
+      pattern "[ -~]+";
+    }
+    description
+      "This type definition is intended for use EVC End Point ID.This type definition accepts any visible ASCII character plus the <space> character.The string must be an RFC 2579 Display String (RFC 854 ASCII 0.00-0.7f) but not contain the characters 0.00 through 0.1f. It does not accept the <delete> character (0.7f) despite the current MEF specification not disallowing it.";
+    reference "[MEF10.3] [R8], [R9]. [RFC2579]. [RFC854].";
+  }
+
   typedef identifier255 {
-	    type string {
-	      length "min..255";
-	      pattern "[ -~]+";
-	    }
-	    description
-	      "This type definition is intended for use EVC End Point ID." +
-	      "This type definition accepts any visible ASCII character " +
-	      "plus the <space> character.The string must be an RFC 2579 " +
-	      "Display String (RFC 854 ASCII 0.00-0.7f) but not contain " +
-	      "the characters 0.00 through 0.1f. It does not accept " +
-	      "the <delete> character (0.7f) despite the current MEF " +
-	      "specification not disallowing it.";
-	    reference "[MEF10.3] [R8], [R9]. [RFC2579]. [RFC854].";
-	  }
+    type string {
+      length "min..255";
+      pattern "[ -~]+";
+    }
+    description
+      "This type definition is intended for use EVC End Point ID.This type definition accepts any visible ASCII character plus the <space> character.The string must be an RFC 2579 Display String (RFC 854 ASCII 0.00-0.7f) but not contain the characters 0.00 through 0.1f. It does not accept the <delete> character (0.7f) despite the current MEF specification not disallowing it.";
+    reference "[MEF10.3] [R8], [R9]. [RFC2579]. [RFC854].";
+  }
+
   typedef identifier1023 {
-	    type string {
-	      length "min..1023";
-	      pattern "[ -~]+";
-	    }
-	    description
-	      "This type definition is intended for use with user-labels." +
-	      "This type definition accepts any visible ASCII character " +
-	      "plus the <space> character.The string must be an RFC 2579 " +
-	      "Display String (RFC 854 ASCII 0.00-0.7f) but not contain " +
-	      "the characters 0.00 through 0.1f. It does not accept " +
-	      "the <delete> character (0.7f) despite the current MEF " +
-	      "specification not disallowing it.";
-	    reference "[MEF10.3] [R8], [R9]. [RFC2579]. [RFC854]. [MEF7.3] Section 7.1.";
-	  }  
+    type string {
+      length "min..1023";
+      pattern "[ -~]+";
+    }
+    description
+      "This type definition is intended for use with user-labels.This type definition accepts any visible ASCII character plus the <space> character.The string must be an RFC 2579 Display String (RFC 854 ASCII 0.00-0.7f) but not contain the characters 0.00 through 0.1f. It does not accept the <delete> character (0.7f) despite the current MEF specification not disallowing it.";
+    reference "[MEF10.3] [R8], [R9]. [RFC2579]. [RFC854]. [MEF7.3] Section 7.1.";
+  }
+
   typedef max-svc-frame-size-type {
     type uint16 {
       range "1522..16384";
     }
     units "bytes";
     description
-      "Max Frame Size Type in bytes. Service Frames larger than " +
-      "this size will be discarded. For OVC, the minimum value is 1526.";
+      "Max Frame Size Type in bytes. Service Frames larger than this size will be discarded. For OVC, the minimum value is 1526.";
     reference "[MEF 10.3] Section 8.9 and Section 9.7. [MEF7.3] Section 7.1.";
   }
 
   typedef sls-type {
-	    type identifier45;
-	    description
-	      "SLS Type";
-	    reference "[MEF10.3].";
-	  }
+    type identifier45;
+    description
+      "SLS Type";
+    reference "[MEF10.3].";
+  }
 
   typedef evc-id-type {
     type identifier45;
@@ -437,7 +413,8 @@ module mef-service-types {
       fraction-digits 2;
       range "0.00 .. 100.00";
     }
-    description "Percent.";
+    description
+      "Percent.";
   }
 
   typedef vlan-id-type {
@@ -445,10 +422,7 @@ module mef-service-types {
       range "1..4094";
     }
     description
-      "The VLAN-ID that uniquely identifies a VLAN.  This is the " +
-      "12-bit  VLAN-ID used in the VLAN Tag header. The range " +
-      "is defined by the REFERENCED specification. VLAN ID 0 is " +
-      "used for VLAN Unaware Mode.";
+      "The VLAN-ID that uniquely identifies a VLAN.  This is the 12-bit  VLAN-ID used in the VLAN Tag header. The range is defined by the REFERENCED specification. VLAN ID 0 is used for VLAN Unaware Mode.";
     reference "[802.1Q]";
   }
 
@@ -533,15 +507,11 @@ module mef-service-types {
     type enumeration {
       enum "root" {
         description
-          "Root Role for UNI. Valid setting for all service " +
-          "types. A UNI set to this value may send frames " +
-          "to UNIs configured as 'root' or 'leaf'.";
+          "Root Role for UNI. Valid setting for all service types. A UNI set to this value may send frames to UNIs configured as 'root' or 'leaf'.";
       }
       enum "leaf" {
         description
-          "Leaf Role for UNI. Valid setting for Root-Multipoint " +
-          "EVCs only. A UNI set to this value may send frames " +
-          "to UNIs 'root'.";
+          "Leaf Role for UNI. Valid setting for Root-Multipoint EVCs only. A UNI set to this value may send frames to UNIs 'root'.";
       }
     }
     description
@@ -572,8 +542,7 @@ module mef-service-types {
       }
     }
     description
-      "A MEF service can have one of three different " +
-      "delivery types.";
+      "A MEF service can have one of three different delivery types.";
   }
 
   typedef interface-resiliency-type {
@@ -595,8 +564,7 @@ module mef-service-types {
       }
     }
     description
-      "This object type of resiliency mechanism for a " +
-      "specific UNI.";
+      "This object type of resiliency mechanism for a specific UNI.";
   }
 
   typedef service-state-type {
@@ -615,38 +583,25 @@ module mef-service-types {
       }
     }
     description
-      "This type reflects the dynamic state of " +
-      "specific EVC.";
+      "This type reflects the dynamic state of specific EVC.";
   }
 
   typedef evc-cos-identifier-field-type {
     type enumeration {
       enum "evc" {
         description
-          "The EVC ID, depends on the CE-VLAN ID / EVC Mapping " +
-          "at the UNI, will be used to map Service Frames to " +
-          "CoS Names/Labels.";
-        reference "MEF 10.3 Section 10.2.1.1 for " +
-        		"Data Service Frames.";
+          "The EVC ID, depends on the CE-VLAN ID / EVC Mapping at the UNI, will be used to map Service Frames to CoS Names/Labels.";
+        reference "MEF 10.3 Section 10.2.1.1 for Data Service Frames.";
       }
       enum "pcp" {
         description
-          "The Priority Code Point(PCP) value within the " +
-          "CE-VLAN Tag will be used to map Service Frames " +
-          "to CoS Names/Labels.";
-        reference "MEF 10.3 Section 10.2.1.2: Priority Code " +
-        		"Point (PCP) Field in the Customer VLAN Tag " +
-        		"in a Tagged Service Frame. ";
+          "The Priority Code Point(PCP) value within the CE-VLAN Tag will be used to map Service Frames to CoS Names/Labels.";
+        reference "MEF 10.3 Section 10.2.1.2: Priority Code Point (PCP) Field in the Customer VLAN Tag in a Tagged Service Frame. ";
       }
       enum "dscp" {
         description
-          "The Differentiated Services Code Point(DSCP) value " +
-          "from the IP Packet's IP Header Differentiated " +
-          "Services Group, associated with the Service Frame, " +
-          "will be used to map Service Frames to CoS Names/Labels.";
-        reference "MEF 10.3 Section 10.2.1.3: AKA Internet " +
-        		"Protocol. For a Data Service Frame carrying an " +
-        		"IPv4 or and IPv6 packet.";
+          "The Differentiated Services Code Point(DSCP) value from the IP Packet's IP Header Differentiated Services Group, associated with the Service Frame, will be used to map Service Frames to CoS Names/Labels.";
+        reference "MEF 10.3 Section 10.2.1.3: AKA Internet Protocol. For a Data Service Frame carrying an IPv4 or and IPv6 packet.";
       }
     }
     description
@@ -657,6 +612,7 @@ module mef-service-types {
     type enumeration {
       enum "pcp" {
         description
+<<<<<<< Upstream, based on origin/master
 <<<<<<< Upstream, based on origin/master
           "The Priority Code Point(PCP) value within the " +
           "CE-VLAN Tag will be used to map Service Frames " +
@@ -670,9 +626,14 @@ module mef-service-types {
         reference "MEF 10.3 Section 10.4.1.1: Egress Equivalance " +
         		"Class Identifier Based on CE-VLAN CoS.";
 >>>>>>> 2ca60b4 Updating develop branch
+=======
+          "The CE-VLAN CoS used to map Service Frames to Egress Equivalance Class.";
+        reference "MEF 10.3 Section 10.4.1.1: Egress Equivalance Class Identifier Based on CE-VLAN CoS.";
+>>>>>>> 2c77bcd Removed java formated multiline strings and fixed indentation.
       }
       enum "dscp" {
         description
+<<<<<<< Upstream, based on origin/master
           "The Differentiated Services Code Point(DSCP) value " +
           "from the IP Packet's IP Header Differentiated " +
           "Services Group, associated with the Service Frame, " +
@@ -688,6 +649,10 @@ module mef-service-types {
         		"Equivalance Class Identifier Based on Internet " +
         		"Protocol.";
 >>>>>>> 2ca60b4 Updating develop branch
+=======
+          "The Differentiated Services Code Point(DSCP) value from the IP Packet's IP Header Differentiated Services Group, associated with the Service Frame, will be used to map Service Frames to Egress Equivalance. Class.";
+        reference "MEF 10.3 Section 10.4.1.2: Egress Equivalance Class Identifier Based on Internet Protocol.";
+>>>>>>> 2c77bcd Removed java formated multiline strings and fixed indentation.
       }
     }
     description
@@ -698,6 +663,7 @@ module mef-service-types {
     type enumeration {
       enum "evc" {
         description
+<<<<<<< Upstream, based on origin/master
 <<<<<<< Upstream, based on origin/master
           "The EVC ID, depends on the CE-VLAN ID / EVC Mapping " +
           "at the UNI, will be used to map Service Frames to " +
@@ -710,9 +676,14 @@ module mef-service-types {
         reference "MEF 10.3 Section 10.3.1: Color " +
         		"Identifier Based on EVC.";
 >>>>>>> 2ca60b4 Updating develop branch
+=======
+          "All Service Frames mapped to the EVC have the same color.";
+        reference "MEF 10.3 Section 10.3.1: Color Identifier Based on EVC.";
+>>>>>>> 2c77bcd Removed java formated multiline strings and fixed indentation.
       }
       enum "pcp" {
         description
+<<<<<<< Upstream, based on origin/master
 <<<<<<< Upstream, based on origin/master
           "The Priority Code Point(PCP) value within the " +
           "CE-VLAN Tag will be used to map Service Frames " +
@@ -726,21 +697,19 @@ module mef-service-types {
         reference "MEF 10.3 Section 10.3.3: Color Identifier" +
                   "Based on CE-VLAN CoS";
 >>>>>>> 2ca60b4 Updating develop branch
+=======
+          "When the Color Identifier is based on CE-VLANCoS.";
+        reference "MEF 10.3 Section 10.3.3: Color IdentifierBased on CE-VLAN CoS";
+>>>>>>> 2c77bcd Removed java formated multiline strings and fixed indentation.
       }
       enum "dei" {
         description
-          "When the Color Identifier is based on CE-VLAN" +
-          "Drop Eligible Indicator(DEI) field of the CE-VLAN Tag.";
+          "When the Color Identifier is based on CE-VLANDrop Eligible Indicator(DEI) field of the CE-VLAN Tag.";
       }
       enum "dscp" {
         description
-          "The Differentiated Services Code Point(DSCP) value " +
-          "from the IP Packet's IP Header Differentiated " +
-          "Services Group, associated with the Service " +
-          "Frame";
-        reference "MEF 10.3 Section 10.2.1.3: AKA Internet " +
-        		"Protocol. For a Data Service Frame carrying " +
-        		"an IPv4 or and IPv6 packet.";
+          "The Differentiated Services Code Point(DSCP) value from the IP Packet's IP Header Differentiated Services Group, associated with the Service Frame";
+        reference "MEF 10.3 Section 10.2.1.3: AKA Internet Protocol. For a Data Service Frame carrying an IPv4 or and IPv6 packet.";
       }
     }
     description
@@ -768,8 +737,7 @@ module mef-service-types {
     type uint32;
     units "bps";
     description
-      "Bandwidth Profile Information Rate in " +
-      "Bits Per Second.";
+      "Bandwidth Profile Information Rate in Bits Per Second.";
     reference "[MEF10.3] [R143], [R144].";
   }
 
@@ -786,8 +754,7 @@ module mef-service-types {
       range "2 .. 10";
     }
     description
-      "The count of consecutive ELMI status polling errors " +
-      "before raising an error.";
+      "The count of consecutive ELMI status polling errors before raising an error.";
     reference "[MEF16] Section 5.6.1.";
   }
 
@@ -796,10 +763,7 @@ module mef-service-types {
       range "5 .. 30";
     }
     description
-      "The type used for a timer started after tranmitting " +
-      "a Status Enquiry. If the timer expires, record " +
-      "the error if a STATUS message not received and " +
-      "resend Status Enquiry.";
+      "The type used for a timer started after tranmitting a Status Enquiry. If the timer expires, record the error if a STATUS message not received and resend Status Enquiry.";
     reference "[MEF16] Section 5.6.1.";
   }
 
@@ -808,9 +772,7 @@ module mef-service-types {
       range "5 .. 30";
     }
     description
-      "The type used for a timer started after tranmitting " +
-      "a Status Message. If a Status Enquiry is received before " +
-      "this timer expires, record the error.";
+      "The type used for a timer started after tranmitting a Status Message. If a Status Enquiry is received before this timer expires, record the error.";
     reference "[MEF16] Section 5.6.1.";
   }
 
@@ -818,27 +780,22 @@ module mef-service-types {
     type enumeration {
       enum "color-blind" {
         description
-          "Color Blind. Do not use CoS Color Configuration for " +
-          "this Bandwidth Profile.";
+          "Color Blind. Do not use CoS Color Configuration for this Bandwidth Profile.";
       }
       enum "color-aware" {
         description
-          "Color Aware. Use CoS Color Configuration for this " +
-          "Bandwidth Profile.";
+          "Color Aware. Use CoS Color Configuration for this Bandwidth Profile.";
       }
     }
     description
-      "This attribute describes the color mode (CM) to be " +
-      "applied as \"color-blind mode\" or \"color-aware mode\".";
+      "This attribute describes the color mode (CM) to be applied as \"color-blind mode\" or \"color-aware mode\".";
     reference "[MEF10.3] Section 10.3, [R151].";
   }
 
   typedef bwp-coupling-flag-type {
     type boolean;
     description
-      "The Bandwidth Profile parameter that determines whether " +
-      "or not overflow tokens not used for Service Frames " +
-      "declared Green can be used as Yellow tokens.";
+      "The Bandwidth Profile parameter that determines whether or not overflow tokens not used for Service Frames declared Green can be used as Yellow tokens.";
     reference "[MEF10.3] Section 12.1. [MEF23.1] Section 8.1.";
   }
 
@@ -846,30 +803,20 @@ module mef-service-types {
     type enumeration {
       enum "cta" {
         description
-          "C-VLAN Tag Aware (CTA), for VLAN-based services where" +
-          " the CE-VLAN ID is used to map a frame to a service.";
+          "C-VLAN Tag Aware (CTA), for VLAN-based services where the CE-VLAN ID is used to map a frame to a service.";
       }
       enum "blind-ctb" {
         description
-          "C-VLAN Tag Blind (CTB), for Port-based services where " +
-          "the CE-VLAN ID is not used to map a frame to a service.";
+          "C-VLAN Tag Blind (CTB), for Port-based services where the CE-VLAN ID is not used to map a frame to a service.";
       }
       enum "option2-blind-ctb2" {
         description
-          "C-VLAN Tag Blind Option 2 (CTB-2), for point-to-point " +
-          "Port-based services that support the EPL Option 2 " +
-          "L2CP processing.";
+          "C-VLAN Tag Blind Option 2 (CTB-2), for point-to-point Port-based services that support the EPL Option 2 L2CP processing.";
       }
     }
     description
-      "The L2CP Address Set Service Attribute specifies the " +
-      "subset of the Bridge Reserved Addresses that are " +
-      "filtered (i.e. L2CP Frames with this destination " +
-      "address are Peered or Discarded but not Passed) " +
-      "at a L2CP Decision Point.";
-    reference "[MEF10.3] Section 9.19. [MEF45] Section 8.1, " +
-    		"[R2] through [R9]. [MEF6.2] Section 8.2.2, [R1]. " +
-    		"[MEF45] Section 8.1.";
+      "The L2CP Address Set Service Attribute specifies the subset of the Bridge Reserved Addresses that are filtered (i.e. L2CP Frames with this destination address are Peered or Discarded but not Passed) at a L2CP Decision Point.";
+    reference "[MEF10.3] Section 9.19. [MEF45] Section 8.1, [R2] through [R9]. [MEF6.2] Section 8.2.2, [R1]. [MEF45] Section 8.1.";
   }
 
   typedef l2cp-peering-protocol-field-type {
@@ -884,13 +831,11 @@ module mef-service-types {
       }
       enum "other" {
         description
-          "Other: Not using LLC nor Ethertype to specify " +
-          "the Protocol ID.";
+          "Other: Not using LLC nor Ethertype to specify the Protocol ID.";
       }
     }
     description
-      "The Peering Protocol Identifier is one of Ethertype, " +
-      "LLC, or Other.";
+      "The Peering Protocol Identifier is one of Ethertype, LLC, or Other.";
     reference "[MEF45] Section 7.";
   }
 
@@ -898,38 +843,31 @@ module mef-service-types {
     type enumeration {
       enum "epl" {
         description
-          "Ethernet Private Line Service (EPL) Point-to-Point " +
-          "EVC, all to one bundling";
+          "Ethernet Private Line Service (EPL) Point-to-Point EVC, all to one bundling";
       }
       enum "evpl" {
         description
-          "Ethernet Virtual Private Line (EVPL) Point-to-Point " +
-          "EVC, bundling and/or multiplexing";
+          "Ethernet Virtual Private Line (EVPL) Point-to-Point EVC, bundling and/or multiplexing";
       }
       enum "eplan" {
         description
-          "Ethernet Private LAN Service (EP-LAN) " +
-          "Multipoint-to-Multipoint EVC, all to one bundling";
+          "Ethernet Private LAN Service (EP-LAN) Multipoint-to-Multipoint EVC, all to one bundling";
       }
       enum "evplan" {
         description
-          "Ethernet Virtual Private LAN Service (EVP-LAN) " +
-          "Multipoint-to-Multipoint EVC, bundling and/or " +
-          "multiplexing";
+          "Ethernet Virtual Private LAN Service (EVP-LAN) Multipoint-to-Multipoint EVC, bundling and/or multiplexing";
       }
       enum "eptree" {
         description
-          "Ethernet Private Tree Service (EP-Tree) " +
-          "Rooted-Multipoint EVC, all to one bundling";
+          "Ethernet Private Tree Service (EP-Tree) Rooted-Multipoint EVC, all to one bundling";
       }
       enum "evptree" {
         description
-          "Ethernet Virtual Private Tree Service (EVP-Tree) " +
-          "Rooted-Multipoint EVC, bundling and/or multiplexing";
+          "Ethernet Virtual Private Tree Service (EVP-Tree) Rooted-Multipoint EVC, bundling and/or multiplexing";
       }
       enum "other" {
-    	  description
-    	    "Use Other MEF Service if one of the existing enumerations does not apply";
+        description
+          "Use Other MEF Service if one of the existing enumerations does not apply";
       }
     }
     description
