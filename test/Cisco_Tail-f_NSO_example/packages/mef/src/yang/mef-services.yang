@@ -162,10 +162,10 @@ module mef-services {
                   "If both Bundling and All-to-One Bundling are disabled for a UNI, only one CE VLAN ID can be configured for a specific EVC on that UNI.";
                 reference "[MEF10.3] [R77].";
               }
-              must "(/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/mef-services:uni-id][mef-interfaces:uni-id/../mef-interfaces:all-to-one-bundling-enabled = 'false']) or (count(/mef-services:mef-services/carrier-ethernet/subscriber-services/evc/end-points/end-point[uni-id = current()/uni-id]) = 1)" {
-                error-message "If All-to-One Bundling is enabled for any UNI in an EVC, all CE-VLAN IDs mapped to any EVC for that UNI must map to the same EVC ID.";
+              must "(/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/mef-services:uni-id][mef-interfaces:uni-id/../mef-interfaces:all-to-one-bundling-enabled = 'false']) or ((count(/mef-services:mef-services/carrier-ethernet/subscriber-services/evc/end-points/end-point[uni-id = current()/uni-id]) = 1) and (count(/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/mef-services:uni-id]/mef-interfaces:ce-vlans/mef-interfaces:ce-vlan[not(mef-interfaces:vid = current()/mef-services:ce-vlans/mef-services:ce-vlan/mef-services:vid)]) = 0))" {
+                error-message "If All-to-One Bundling is enabled for any UNI in an EVC, all CE-VLAN IDs for that UNI must map to a single EVC.";
                 description
-                  "If All-to-One Bundling is enabled for any UNI in an EVC, all CE-VLAN IDs mapped to any EVC for that UNI must map to the same EVC ID.";
+                  "If All-to-One Bundling is enabled for any UNI in an EVC, all CE-VLAN IDs for that UNI must map to a single EVC.";
                 reference "[MEF10.3] [R82].";
               }
               must "((/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/mef-services:uni-id][mef-interfaces:uni-id/../mef-interfaces:ingress-bw-profile-per-uni]) or (/mef-services:mef-services/carrier-ethernet/subscriber-services/evc/end-points/end-point[uni-id = current()/mef-services:uni-id]/ingress-bwp-flows-per-cos) or (/mef-services:mef-services/carrier-ethernet/subscriber-services/evc/end-points/end-point[uni-id = current()/mef-services:uni-id]/ingress-bw-profile-per-evc)) or not(/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/mef-services:uni-id]/mef-interfaces:ingress-envelopes)" {

@@ -404,7 +404,7 @@ else
    echo 'Test MEF 10.3 [R81]: PASS';
 fi
 
-# Test for MEF 10.3 [R82].  This test should fail to commit with "If All-to-One Bundling is enabled for any UNI in an EVC, all CE-VLAN IDs mapped to any EVC for that UNI must map to the same EVC ID.".
+# Test for MEF 10.3 [R82A].  This test should fail to commit with "If All-to-One Bundling is enabled for any UNI in an EVC, all CE-VLAN IDs for that UNI must map to a single EVC.".
 { ncs_cli -u admin -C << EOF;
 config
 mef-services carrier-ethernet subscriber-services evc EVC-1101898-ACME-MEGAMART svc-type epl connection-type point-to-point max-num-of-evc-end-point 2 ce-vlan-id-preservation true ce-vlan-pcp-preservation true
@@ -415,11 +415,26 @@ commit
 end no-confirm
 exit
 EOF
-} | grep 'Aborted:.*all CE-VLAN IDs mapped to any EVC for that UNI must map to the same EVC ID.'
+} | grep 'Aborted:.*If All-to-One Bundling is enabled for any UNI in an EVC, all CE-VLAN IDs for that UNI must map to a single EVC.'
 if [ $? != 0 ]; then
-   echo 'Test MEF 10.3 [R82]: FAIL - commit did not fail or did not fail as expected'; exit 1;
+   echo 'Test MEF 10.3 [R82A]: FAIL - commit did not fail or did not fail as expected'; exit 1;
 else
-   echo 'Test MEF 10.3 [R82]: PASS';
+   echo 'Test MEF 10.3 [R82A]: PASS';
+fi
+
+# Test for MEF 10.3 [R82B].  This test should fail to commit with "If All-to-One Bundling is enabled for any UNI in an EVC, all CE-VLAN IDs for that UNI must map to a single EVC.".
+{ ncs_cli -u admin -C << EOF;
+config
+mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 ce-vlans ce-vlan 1
+commit
+end no-confirm
+exit
+EOF
+} | grep 'Aborted:.*If All-to-One Bundling is enabled for any UNI in an EVC, all CE-VLAN IDs for that UNI must map to a single EVC.'
+if [ $? != 0 ]; then
+   echo 'Test MEF 10.3 [R82B]: FAIL - commit did not fail or did not fail as expected'; exit 1;
+else
+   echo 'Test MEF 10.3 [R82B]: PASS';
 fi
 
 # Test for MEF 10.3 [R88].  This test should fail to commit with "ELMI Service Attribute must be Enabled.".

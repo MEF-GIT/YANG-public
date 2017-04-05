@@ -44,8 +44,10 @@ Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME
 Test 10.3 R77: PASS
 Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 ce-vlans ce-vlan 103 vid' (value "103"): If more than one CE-VLAN ID is configured for a UNI as part of an EVC, every CE VLAN-ID mapped to that EVC must be configured for all UNIs within that EVC.
 Test MEF 10.3 [R81]: PASS
-Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-1101898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1' : If All-to-One Bundling is enabled for any UNI in an EVC, all CE-VLAN IDs mapped to any EVC for that UNI must map to the same EVC ID.
-Test MEF 10.3 [R82]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-1101898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1' : If All-to-One Bundling is enabled for any UNI in an EVC, all CE-VLAN IDs for that UNI must map to a single EVC.
+Test MEF 10.3 [R82A]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1' : If All-to-One Bundling is enabled for any UNI in an EVC, all CE-VLAN IDs for that UNI must map to a single EVC.
+Test MEF 10.3 [R82B]: PASS
 Aborted: 'mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 elmi-enabled' (value "true"): ELMI Service Attribute must be Enabled.
 Test MEF 10.3 [R88]: PASS
 Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 cos-identifier' (value "MEF103_Table13"): When the Class of Service Identifier is based on PCP for a given EVC at a given UNI, the Color Identifier must be based on either DEI or PCP.
