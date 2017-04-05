@@ -189,9 +189,10 @@ module mef-services {
                   "Container for the list of CE-VLAN IDs that map to this EVC End Point.";
                 list ce-vlan {
                   key "vid";
+                  min-elements "1";
                   description
-                    "A list of the CE-VLAN IDs mapped to this UNI for this EVC.";
-                  reference "[MEF10.3] Section 8.6.1, [R24] [R25], Section 9.10.2, Section 9.12, [R76], [R81]. [MEF7.3] Section 7.5.";
+                    "The list of CE-VLAN IDs that map to this EVC End Point - that is, that map to this EVC at the associated UNI.";
+                  reference "[MEF10.3] Section 9.10. [MEF7.3] Section 7.5.";
                   leaf vid {
                     type leafref {
                       path "/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/../../../uni-id]/mef-interfaces:ce-vlans/mef-interfaces:ce-vlan/mef-interfaces:vid";
