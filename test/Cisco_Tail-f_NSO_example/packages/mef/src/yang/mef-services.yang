@@ -162,11 +162,11 @@ module mef-services {
               }
               key "uni-id";
               description
-                "EVC End Points and EVC-UNI List defines the roles of each UNI in the Service. One UNI can be used by 0 or more EVCs.";
-              reference "[MEF10.3] Section 8.3 and Section 10. [MEF7.3] Section 7.4 and Section 7.5.";
+                "List of EVC End Points for the EVC. Each EVC End Point in the EVC is associated with a distinct UNI, and contains the EVC per UNI attributes described in MEF 10.3.";
+              reference "[MEF10.3] Section 8.3, Section 9.10, and Section 10. [MEF7.3] Section 7.4 and Section 7.5.";
               container ce-vlans {
                 description
-                  "EVC Per UNI CE-VLAN IDs.";
+                  "Container for the list of CE-VLAN IDs that map to this EVC End Point.";
                 list ce-vlan {
                   key "vid";
                   description
