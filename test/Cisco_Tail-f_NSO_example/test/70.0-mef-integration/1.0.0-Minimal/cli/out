@@ -2236,8 +2236,6 @@ mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1
  physical-layers links link ce0 GigabitEthernet0/1
   ieee8023-phy ieee8023-1000BASE-SX
  !
- ce-vlans ce-vlan 1
- !
  ce-vlans ce-vlan 100
  !
  ce-vlans ce-vlan 101
@@ -2260,8 +2258,6 @@ mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1
 mef-interfaces unis uni MMPOP1-ce0-Slot0-Port2
  physical-layers links link ce0 GigabitEthernet0/2
   ieee8023-phy ieee8023-1000BASE-SX
- !
- ce-vlans ce-vlan 8
  !
  ce-vlans ce-vlan 800
  !
@@ -2389,8 +2385,6 @@ mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1
  physical-layers links link ce1 GigabitEthernet0/1
   ieee8023-phy ieee8023-1000BASE-SX
  !
- ce-vlans ce-vlan 1
- !
  ce-vlans ce-vlan 100
  !
  ce-vlans ce-vlan 101
@@ -2509,8 +2503,6 @@ mef-interfaces unis uni MMPOP1-ce2-Slot0-Port1
 mef-interfaces unis uni MMPOP1-ce2-Slot0-Port3
  physical-layers links link ce2 GigabitEthernet0/3
   ieee8023-phy ieee8023-1000BASE-SX
- !
- ce-vlans ce-vlan 8
  !
  ce-vlans ce-vlan 800
  !
@@ -2680,8 +2672,6 @@ mef-interfaces unis uni MMPOP1-ce4-Slot4-Port3
  physical-layers links link ce4 GigabitEthernet0/3
   ieee8023-phy ieee8023-1000BASE-SX
  !
- ce-vlans ce-vlan 1
- !
  ce-vlans ce-vlan 100
  !
  ce-vlans ce-vlan 101
@@ -2828,8 +2818,6 @@ mef-interfaces unis uni MMPOP1-ce5-Slot5-Port4
 mef-interfaces unis uni MMPOP1-ce5-Slot5-Port6
  physical-layers links link ce5 GigabitEthernet0/6
   ieee8023-phy ieee8023-1000BASE-SX
- !
- ce-vlans ce-vlan 1
  !
  ce-vlans ce-vlan 100
  !

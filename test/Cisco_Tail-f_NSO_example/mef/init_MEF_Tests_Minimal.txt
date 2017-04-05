@@ -927,8 +927,6 @@ mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 admin-state false max-svc-frame-s
 !
 mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 physical-layers links link ce0 GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
 !
-mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 ce-vlans ce-vlan 1
-!
 mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 ce-vlans ce-vlan 100
 !
 mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 ce-vlans ce-vlan 101
@@ -946,8 +944,6 @@ mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 l2cp-address-set option2-blind-ct
 mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 admin-state false max-svc-frame-size 1600 max-num-of-evcs 1 all-to-one-bundling-enabled true
 !
 mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 physical-layers links link ce1 GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
-!
-mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 ce-vlans ce-vlan 1
 !
 mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 ce-vlans ce-vlan 100
 !
@@ -1012,8 +1008,6 @@ mef-interfaces unis uni MMPOP1-ce4-Slot4-Port3 admin-state false max-svc-frame-s
 !
 mef-interfaces unis uni MMPOP1-ce4-Slot4-Port3 physical-layers links link ce4 GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
 !
-mef-interfaces unis uni MMPOP1-ce4-Slot4-Port3 ce-vlans ce-vlan 1
-!
 mef-interfaces unis uni MMPOP1-ce4-Slot4-Port3 ce-vlans ce-vlan 100
 !
 mef-interfaces unis uni MMPOP1-ce4-Slot4-Port3 ce-vlans ce-vlan 101
@@ -1031,8 +1025,6 @@ mef-interfaces unis uni MMPOP1-ce4-Slot4-Port3 l2cp-address-set option2-blind-ct
 mef-interfaces unis uni MMPOP1-ce5-Slot5-Port6 admin-state false max-svc-frame-size 1600 max-num-of-evcs 1 all-to-one-bundling-enabled true
 !
 mef-interfaces unis uni MMPOP1-ce5-Slot5-Port6 physical-layers links link ce5 GigabitEthernet0/6 ieee8023-phy ieee8023-1000BASE-SX
-!
-mef-interfaces unis uni MMPOP1-ce5-Slot5-Port6 ce-vlans ce-vlan 1
 !
 mef-interfaces unis uni MMPOP1-ce5-Slot5-Port6 ce-vlans ce-vlan 100
 !
@@ -1858,8 +1850,6 @@ mef-interfaces unis uni MMPOP1-ce0-Slot0-Port2 admin-state false max-svc-frame-s
 !
 mef-interfaces unis uni MMPOP1-ce0-Slot0-Port2 physical-layers links link ce0 GigabitEthernet0/2 ieee8023-phy ieee8023-1000BASE-SX
 !
-mef-interfaces unis uni MMPOP1-ce0-Slot0-Port2 ce-vlans ce-vlan 8
-!
 mef-interfaces unis uni MMPOP1-ce0-Slot0-Port2 ce-vlans ce-vlan 800
 !
 mef-interfaces unis uni MMPOP1-ce0-Slot0-Port2 ce-vlans ce-vlan 801
@@ -1877,8 +1867,6 @@ mef-interfaces unis uni MMPOP1-ce0-Slot0-Port2 l2cp-address-set option2-blind-ct
 mef-interfaces unis uni MMPOP1-ce2-Slot0-Port3 admin-state false max-svc-frame-size 1600 max-num-of-evcs 1 all-to-one-bundling-enabled true
 !
 mef-interfaces unis uni MMPOP1-ce2-Slot0-Port3 physical-layers links link ce2 GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
-!
-mef-interfaces unis uni MMPOP1-ce2-Slot0-Port3 ce-vlans ce-vlan 8
 !
 mef-interfaces unis uni MMPOP1-ce2-Slot0-Port3 ce-vlans ce-vlan 800
 !

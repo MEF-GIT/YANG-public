@@ -2383,9 +2383,6 @@
           </physical-layers>
           <ce-vlans>
             <ce-vlan>
-              <vid>1</vid>
-            </ce-vlan>
-            <ce-vlan>
               <vid>100</vid>
             </ce-vlan>
             <ce-vlan>
@@ -2431,9 +2428,6 @@
             <number-of-links wd:default="true">1</number-of-links>
           </physical-layers>
           <ce-vlans>
-            <ce-vlan>
-              <vid>8</vid>
-            </ce-vlan>
             <ce-vlan>
               <vid>800</vid>
             </ce-vlan>
@@ -2684,9 +2678,6 @@
             <number-of-links wd:default="true">1</number-of-links>
           </physical-layers>
           <ce-vlans>
-            <ce-vlan>
-              <vid>1</vid>
-            </ce-vlan>
             <ce-vlan>
               <vid>100</vid>
             </ce-vlan>
@@ -2959,9 +2950,6 @@
             <number-of-links wd:default="true">1</number-of-links>
           </physical-layers>
           <ce-vlans>
-            <ce-vlan>
-              <vid>8</vid>
-            </ce-vlan>
             <ce-vlan>
               <vid>800</vid>
             </ce-vlan>
@@ -3386,9 +3374,6 @@
           </physical-layers>
           <ce-vlans>
             <ce-vlan>
-              <vid>1</vid>
-            </ce-vlan>
-            <ce-vlan>
               <vid>100</vid>
             </ce-vlan>
             <ce-vlan>
@@ -3710,9 +3695,6 @@
             <number-of-links wd:default="true">1</number-of-links>
           </physical-layers>
           <ce-vlans>
-            <ce-vlan>
-              <vid>1</vid>
-            </ce-vlan>
             <ce-vlan>
               <vid>100</vid>
             </ce-vlan>
@@ -7645,9 +7627,6 @@
           </physical-layers>
           <ce-vlans>
             <ce-vlan>
-              <vid>1</vid>
-            </ce-vlan>
-            <ce-vlan>
               <vid>100</vid>
             </ce-vlan>
             <ce-vlan>
@@ -7693,9 +7672,6 @@
             <number-of-links wd:default="true">1</number-of-links>
           </physical-layers>
           <ce-vlans>
-            <ce-vlan>
-              <vid>1</vid>
-            </ce-vlan>
             <ce-vlan>
               <vid>100</vid>
             </ce-vlan>

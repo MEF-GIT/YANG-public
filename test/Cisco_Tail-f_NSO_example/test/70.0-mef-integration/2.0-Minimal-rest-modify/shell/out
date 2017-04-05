@@ -3430,9 +3430,6 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "ce-vlans": {
             "ce-vlan": [
               {
-                "vid": 1
-              },
-              {
                 "vid": 100
               },
               {
@@ -3471,9 +3468,6 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           },
           "ce-vlans": {
             "ce-vlan": [
-              {
-                "vid": 8
-              },
               {
                 "vid": 800
               },
@@ -3736,9 +3730,6 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "ce-vlans": {
             "ce-vlan": [
               {
-                "vid": 1
-              },
-              {
                 "vid": 100
               },
               {
@@ -4000,9 +3991,6 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           },
           "ce-vlans": {
             "ce-vlan": [
-              {
-                "vid": 8
-              },
               {
                 "vid": 800
               },
@@ -4386,9 +4374,6 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           "ce-vlans": {
             "ce-vlan": [
               {
-                "vid": 1
-              },
-              {
                 "vid": 100
               },
               {
@@ -4683,9 +4668,6 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
           },
           "ce-vlans": {
             "ce-vlan": [
-              {
-                "vid": 1
-              },
               {
                 "vid": 100
               },
