@@ -40,6 +40,8 @@ Aborted: 'mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 link-aggregation' (valu
 Test 10.3 R65: PASS
 Aborted: 'mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 link-aggregation' (value "other"): If link-aggregation is 'other', number-of-links must be 3 or greater.
 Test 10.3 R67: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0002343-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot0-Port2 ce-vlans ce-vlan 33 vid' (value "33"): At each UNI there MUST be a mapping of each CE-VLAN ID to at most one EVC.
+Test 10.3 R76: PASS
 Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3' : If both Bundling and All-to-One Bundling are disabled for a UNI, only one CE VLAN ID can be configured for a specific EVC on that UNI.
 Test 10.3 R77: PASS
 Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 ce-vlans ce-vlan 103 vid' (value "103"): If more than one CE-VLAN ID is configured for a UNI as part of an EVC, every CE VLAN-ID mapped to that EVC must be configured for all UNIs within that EVC.

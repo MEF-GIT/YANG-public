@@ -371,6 +371,22 @@ else
    echo 'Test 10.3 R67: PASS';
 fi
 
+# Test for MEF 10.3 [R76]. This test should fail to commit with "At each UNI there MUST be a mapping of each CE-VLAN ID to at most one EVC.".
+{ ncs_cli -u admin -C << EOF;
+config
+no mef-services carrier-ethernet subscriber-services evc EVC-0002343-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot0-Port2 ce-vlans ce-vlan 1343
+mef-services carrier-ethernet subscriber-services evc EVC-0002343-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot0-Port2 ce-vlans ce-vlan 33
+commit
+end no-confirm
+exit
+EOF
+} | grep 'Aborted:.*At each UNI there MUST be a mapping of each CE-VLAN ID to at most one EVC.'
+if [ $? != 0 ]; then
+   echo 'Test 10.3 R76: FAIL - commit did not fail or did not fail as expected'; exit 1;
+else
+   echo 'Test 10.3 R76: PASS';
+fi
+
 # Test for MEF 10.3 [R77]. This test should fail to commit with "If both Bundling and All-to-One Bundling are disabled for a UNI, only one CE VLAN ID can be configured for a specific EVC on that UNI.".
 { ncs_cli -u admin -C << EOF;
 config
