@@ -203,8 +203,14 @@ module mef-services {
                         "If more than one CE-VLAN ID is configured for a UNI as part of an EVC, every CE VLAN-ID mapped to that EVC must be configured for all UNIs within that EVC.";
                       reference "[MEF10.3] [R81].";
                     }
+                    must "count(/mef-services:mef-services/carrier-ethernet/subscriber-services/evc/end-points/end-point[uni-id = current()/../../../uni-id]/mef-services:ce-vlans/mef-services:ce-vlan[mef-services:vid = current()]) = 1" {
+                      error-message "At each UNI there MUST be a mapping of each CE-VLAN ID to at most one EVC.";
+                      description
+                        "At each UNI there MUST be a mapping of each CE-VLAN ID to at most one EVC.";
+                      reference "[MEF10.3] [R76].";
+                    }
                     description
-                      "VLAN Identifier.";
+                      "CE-VLAN Identifier that maps to this EVC End Point.";
                   }
                 }
               }
@@ -380,7 +386,7 @@ module mef-services {
                   default "false";
                   config false;
                   description
-                    "EVC Per UNI: Operational Status of the Virtual Connection as Enabled/Disabled.";
+                    "EVC Per UNI: Operational Status of the EVC, which is either Enabled (if the value is true) or Disabled (if the value is false).";
                   reference "[MEF15]. [MEF7.3] Section 7.4.";
                 }
                 leaf evc-end-point-id {
@@ -396,7 +402,7 @@ module mef-services {
                   path "/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni/mef-interfaces:uni-id";
                 }
                 description
-                  "EVC Per UNI: The UNI ID paired with the EVC ID in the containing list.";
+                  "EVC Per UNI: UNI ID of the UNI where this EVC End Point is located.";
                 reference "[MEF10.3] Section 8.3, Section 10.1.  [MEF7.3] Section 7.5.";
               }
               leaf role {
