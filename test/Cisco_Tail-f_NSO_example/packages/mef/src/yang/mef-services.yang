@@ -172,13 +172,13 @@ module mef-services {
                 error-message "If no Ingress Bandwidth Profiles are specified for this UNI (BW Profile Per UNI, BWP Flows Per CoS, nor BW Profile Per EVC), then the UNI Ingress Envelopes list must be empty.";
                 description
                   "If no Ingress Bandwidth Profiles are specified for this UNI (BW Profile Per UNI, BWP Flows Per CoS, nor BW Profile Per EVC), then the UNI Ingress Envelopes list must be empty.";
-                reference "MEF 6.2 [R4A].";
+                reference "MEF 6.2 [R4].";
               }
               must "((/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/mef-services:uni-id][mef-interfaces:uni-id/../mef-interfaces:egress-bw-profile-per-uni]) or (/mef-services:mef-services/carrier-ethernet/subscriber-services/evc/end-points/end-point[uni-id = current()/mef-services:uni-id]/egress-bwp-flows-per-eec) or (/mef-services:mef-services/carrier-ethernet/subscriber-services/evc/end-points/end-point[uni-id = current()/mef-services:uni-id]/egress-bw-profile-per-evc)) or not(/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/mef-services:uni-id]/mef-interfaces:egress-envelopes)" {
                 error-message "If no Egress Bandwidth Profiles are specied for this UNI (BW Profile Per UNI, BWP Flows Per EEC, nor BW Profile Per EVC), then the UNI Egress Envelopes list must be empty.";
                 description
                   "If no Egress Bandwidth Profiles are specied for this UNI (BW Profile Per UNI, BWP Flows Per EEC, nor BW Profile Per EVC), then the UNI Egress Envelopes list must be empty.";
-                reference "[MEF10.3] [R4B].";
+                reference "[MEF10.3] [R4].";
               }
               key "uni-id";
               description
@@ -281,7 +281,7 @@ module mef-services {
                         path "/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/../../uni-id]/mef-interfaces:ingress-envelopes/mef-interfaces:envelope/mef-interfaces:envelope-id";
                       }
                       description
-                        "EVC Per UNI: Ingress Bandwidth Profile Envelope Per EVC. If this parameter is not configured (ie. 'No') this setting is configured else at the UNI Level.";
+                        "EVC Per UNI: Ingress Bandwidth Profile Per EVC. If this parameter is not configured, there is no ingress Bandwidth Profile per EVC.";
                       reference "[MEF10.3] Section 10.5. [MEF7.3] Section 12.1.2.";
                     }
                     leaf bw-profile {
@@ -363,7 +363,7 @@ module mef-services {
                         path "/mef-interfaces:mef-interfaces/mef-interfaces:unis/mef-interfaces:uni[mef-interfaces:uni-id = current()/../../uni-id]/mef-interfaces:egress-envelopes/mef-interfaces:envelope/mef-interfaces:envelope-id";
                       }
                       description
-                        "EVC Per UNI: Egress Bandwidth Profile Envelope Per EVC. If this parameter is not configured (ie. 'No') this setting is configured else at the UNI Level.";
+                        "EVC Per UNI: Egress Bandwidth Profile Per EVC. If this parameter is not configured, there is no egress Bandwidth Profile per EVC.";
                       reference "[MEF10.3] Section 10.7. [MEF7.3] Section 12.1.2.";
                     }
                     leaf bw-profile {
@@ -409,21 +409,21 @@ module mef-services {
                 type mef-types:evc-uni-role-type;
                 mandatory true;
                 description
-                  "EVC Per UNI: The UNI Role MUST have the value of either 'root' or 'leaf'.";
-                reference "[MEF10.3] [R4], [R5], [R10], [R11], [R12]. [MEF7.3] Section 7.5.";
+                  "EVC Per UNI: The UNI Role MUST have the value of either 'root' or 'leaf'. A root role UNI may be connected to multiple other UNI in the EVC while a leaf role UNI may only connect to one other UNI.";
+                reference "[MEF10.3] Section 8.3. [MEF7.3] Section 7.5.";
               }
               leaf admin-state {
                 type boolean;
                 default "true";
                 description
-                  "EVC Per UNI: false= Locked/ true = Unlocked";
-                reference "[MEF15]. [MEF7.3] Section 7.4.";
+                  "EVC Per UNI: Indicates whether the EVC End Point is adminstratively locked (if the value is false) or unlocked (if the value if true).";
+                reference "[MEF7.3] Section 7.4.";
               }
               leaf color-identifier {
                 type mef-types:evc-color-identifier-type;
                 description
                   "EVC Per UNI: The Color Identifier for Service Frames.";
-                reference "[MEF10.3] Section 10.3. [MEF7.3] Section 7.4.";
+                reference "[MEF10.3] Section 10.3. [MEF7.3] Section 7.4 and Section 7.13.";
               }
               leaf cos-identifier {
                 type leafref {
@@ -475,18 +475,18 @@ module mef-services {
                   error-message "When the Class of Service Identifier is based on PCP for a given EVC at a given UNI, the Color Identifier must be based on either DEI or PCP.";
                   description
                     "When the Class of Service Identifier is based on PCP for a given EVC at a given UNI, the Color Identifier must be based on either DEI or PCP.";
-                  reference "[MEF10.3] [R111A].";
+                  reference "[MEF10.3] [R111].";
                 }
                 must "not(/mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-dscp) or ((/mef-global:mef-global/mef-global:profiles/mef-global:cos/mef-global:cos-profile[mef-global:id = current()]/mef-global:cos-dscp) and (../color-identifier = 'dscp'))" {
                   error-message "When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, the Color Identifier must be based DSCP.";
                   description
                     "When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, the Color Identifier must be based DSCP.";
-                  reference "[MEF10.3] [R112B].";
+                  reference "[MEF10.3] [R112].";
                 }
                 mandatory true;
                 description
-                  "EVC Per UNI: Ingress Data Service Frame CoS Profile.";
-                reference "[MEF10.3] Section 8.8, Section 10.2. [MEF7.3] Section 12.1.2.";
+                  "EVC Per UNI: Reference to a global CoS Profile that specifies how to assign CoS Names to ingress frames at this EVC End Point based on fields in the frame.";
+                reference "[MEF10.3] Section 10.2. [MEF7.3] Section 7.11.";
               }
               leaf eec-identifier {
                 type leafref {
@@ -531,18 +531,18 @@ module mef-services {
                   error-message "When the Egress Equivalence Class Identifier is based on PCP for a given EVC at a given UNI, the Color Identifier must be based on either DEI or PCP.";
                   description
                     "When the Egress Equivalence Class Identifier is based on PCP for a given EVC at a given UNI, the Color Identifier must be based on either DEI or PCP.";
-                  reference "[MEF10.3] [R111B].";
+                  reference "[MEF10.3] [R111].";
                 }
                 must "not(/mef-global:mef-global/mef-global:profiles/mef-global:eec/mef-global:eec-profile[mef-global:id = current()]/mef-global:eec-dscp) or ((/mef-global:mef-global/mef-global:profiles/mef-global:eec/mef-global:eec-profile[mef-global:id = current()]/mef-global:eec-dscp) and (../color-identifier = 'dscp'))" {
                   error-message "When the Egress Equivalence Class Identifier is based on DSCP for a given EVC at a given UNI, the Color Identifier must be based DSCP.";
                   description
                     "When the Egress Equivalence Class Identifier is based on DSCP for a given EVC at a given UNI, the Color Identifier must be based DSCP.";
-                  reference "[MEF10.3] [R112B].";
+                  reference "[MEF10.3] [R112].";
                 }
                 mandatory true;
                 description
-                  "EVC Per UNI: Egress Data Service Frame Processing.";
-                reference "[MEF10.3] Section 10.4. [MEF7.3] Section 12.1.2.";
+                  "EVC Per UNI: Reference to a global EEC Profile that specifies how to assign EEC Names to egress frames at this EVC End Point based on fields in the frame.";
+                reference "[MEF10.3] Section 10.4. [MEF7.3] Section 7.11.";
               }
               leaf source-mac-address-limit-enabled {
                 type boolean;
@@ -671,7 +671,7 @@ module mef-services {
                           error-message "The EVC Performance SLS Exclusions and Inclusions List cannot both be configured for an EVC.";
                           description
                             "The EVC Performance SLS Exclusions and Inclusions List cannot both be configured for an EVC.";
-                          reference "[MEF10.3] [R32A].";
+                          reference "[MEF10.3] [R32].";
                         }
                         must "(../../../../../../../connection-type != 'rooted-multipoint') or ((../../../../../../../connection-type = 'rooted-multipoint') and not(sls-uni-exclusions) )" {
                           error-message "If EVC Type is Rooted-Multipoint, sls-uni-inclusions must be used instead of sls-uni-exclusions.";
@@ -696,7 +696,7 @@ module mef-services {
                               error-message "The two UNI IDs for a given inclusion cannot be the same.";
                               description
                                 "The two UNI IDs for a given inclusion cannot be the same.";
-                              reference "[MEF10.3] [R32B].";
+                              reference "[MEF10.3] [R32].";
                             }
                             must "(../../../../../../../../../connection-type != 'rooted-multipoint') or ((../../../../../../../../../connection-type = 'rooted-multipoint') and not((../../../../../../../../../end-points/end-point[uni-id = current()/end-point1]/role = 'leaf') and (../../../../../../../../../end-points/end-point[uni-id = current()/end-point2]/role = 'leaf')))" {
                               error-message "If EVC Type is Rooted-Multipoint, sls-uni-inclusion UNI Pairs cannot both be role 'leaf'.";
@@ -713,7 +713,7 @@ module mef-services {
                               }
                               description
                                 "EVC: The UNI ID paired with the EVC ID in the containing list.";
-                              reference "[MEF10.3] Section 8.3, Section 10.1.  [MEF7.3] Section 12.1.2.";
+                              reference "[MEF10.3] Section 8.3, Section 10.1.  [MEF7.3] Section 7.11.";
                             }
                             leaf end-point2 {
                               type leafref {
@@ -721,7 +721,7 @@ module mef-services {
                               }
                               description
                                 "EVC: The UNI ID paired with the EVC ID in the containing list.";
-                              reference "[MEF10.3] Section 8.3, Section 10.1.  [MEF7.3] Section 12.1.2.";
+                              reference "[MEF10.3] Section 8.3, Section 10.1.  [MEF7.3] Section 7.11.";
                             }
                           }
                         }
@@ -734,7 +734,7 @@ module mef-services {
                               error-message "The two UNI IDs for a given exclusion cannot be the same.";
                               description
                                 "The two UNI IDs for a given exclusion cannot be the same as these pairs are invalid as defined in MEF 10.3.";
-                              reference "[MEF10.3] [R32C].";
+                              reference "[MEF10.3] [R32].";
                             }
                             key "end-point1 end-point2";
                             description
@@ -745,7 +745,7 @@ module mef-services {
                               }
                               description
                                 "EVC: The UNI ID paired with the EVC ID in the containing list.";
-                              reference "[MEF10.3] Section 8.3, Section 10.1.  [MEF7.3] Section 12.1.2.";
+                              reference "[MEF10.3] Section 8.3, Section 10.1.  [MEF7.3] Section 7.11.";
                             }
                             leaf end-point2 {
                               type leafref {
@@ -753,7 +753,7 @@ module mef-services {
                               }
                               description
                                 "EVC: The UNI ID paired with the EVC ID in the containing list.";
-                              reference "[MEF10.3] Section 8.3, Section 10.1.  [MEF7.3] Section 12.1.2.";
+                              reference "[MEF10.3] Section 8.3, Section 10.1.  [MEF7.3] Section 7.11.";
                             }
                           }
                         }
@@ -768,13 +768,13 @@ module mef-services {
                         error-message "The EVC Performance SLS Exclusions and Inclusions List cannot both be configured for an EVC.";
                         description
                           "The EVC Performance SLS Exclusions and Inclusions List cannot both be configured for an EVC.";
-                        reference "[MEF10.3] [R37A].";
+                        reference "[MEF10.3] [R37].";
                       }
                       must "(../../../../../../connection-type != 'rooted-multipoint') or ((../../../../../../connection-type = 'rooted-multipoint') and not(sls-uni-exclusions) )" {
                         error-message "If EVC Type is Rooted-Multipoint, sls-uni-inclusions must be used instead of sls-uni-exclusions.";
                         description
                           "If EVC Type is Rooted-Multipoint, sls-uni-inclusions must be used instead of sls-uni-exclusions.";
-                        reference "[MEF10.3] [R37A].";
+                        reference "[MEF10.3] [R37].";
                       }
                       description
                         "End Point Pairs";
@@ -793,7 +793,7 @@ module mef-services {
                             error-message "If EVC Type is Rooted-Multipoint, sls-uni-inclusion UNI Pairs cannot both be role 'leaf'.";
                             description
                               "If EVC Type is Rooted-Multipoint, sls-uni-inclusion UNI Pairs cannot both be role 'leaf'.";
-                            reference "[MEF10.3] [R37B].";
+                            reference "[MEF10.3] [R37].";
                           }
                           key "end-point1 end-point2";
                           description
@@ -804,7 +804,7 @@ module mef-services {
                             }
                             description
                               "EVC: The UNI ID paired with the EVC ID in the containing list.";
-                            reference "[MEF10.3] Section 8.3, Section 10.1.  [MEF7.3] Section 12.1.2.";
+                            reference "[MEF10.3] Section 8.3, Section 10.1.  [MEF7.3] Section 7.11.";
                           }
                           leaf end-point2 {
                             type leafref {
@@ -812,7 +812,7 @@ module mef-services {
                             }
                             description
                               "EVC: The UNI ID paired with the EVC ID in the containing list.";
-                            reference "[MEF10.3] Section 8.3, Section 10.1.  [MEF7.3] Section 12.1.2.";
+                            reference "[MEF10.3] Section 8.3, Section 10.1.  [MEF7.3] Section 7.11.";
                           }
                         }
                       }
@@ -836,7 +836,7 @@ module mef-services {
                             }
                             description
                               "EVC: The UNI ID paired with the EVC ID in the containing list.";
-                            reference "[MEF10.3] Section 8.3, Section 10.1.  [MEF7.3] Section 12.1.2.";
+                            reference "[MEF10.3] Section 8.3, Section 10.1.  [MEF7.3] Section 7.11.";
                           }
                           leaf end-point2 {
                             type leafref {
@@ -844,7 +844,7 @@ module mef-services {
                             }
                             description
                               "EVC: The UNI ID paired with the EVC ID in the containing list.";
-                            reference "[MEF10.3] Section 8.3, Section 10.1.  [MEF7.3] Section 12.1.2.";
+                            reference "[MEF10.3] Section 8.3, Section 10.1.  [MEF7.3] Section 7.11.";
                           }
                         }
                       }
@@ -860,13 +860,13 @@ module mef-services {
               error-message "If EVC Type is Point-to-Point, all UNI Roles must be root.";
               description
                 "If EVC Type is Point-to-Point, all UNI Roles must be root.";
-              reference "[MEF10.3] [R12A PP].";
+              reference "[MEF10.3] [R12].";
             }
             must "(. != 'multipoint-to-multipoint') or ((. = 'multipoint-to-multipoint') and (count(../end-points/end-point[role = 'leaf']) = 0))" {
               error-message "If EVC Type is Multipoint-to-Multipoint, all UNI Roles must be root.";
               description
                 "If EVC Type is Multipoint-to-Multipoint, all UNI Roles must be root.";
-              reference "[MEF10.3] [R12A MM].";
+              reference "[MEF10.3] [R12].";
             }
             must "(. != 'rooted-multipoint') or ((. = 'rooted-multipoint') and (count(../end-points/end-point[role = 'root']) > 0) )" {
               error-message "If EVC Type is Rooted-Multipoint, one or more UNI Roles must be root.";
@@ -878,37 +878,37 @@ module mef-services {
               error-message "If EVC Type is Point-to-Point, there must be exactly 2 UNI configured for the EVC.";
               description
                 "If EVC Type is Point-to-Point, there must be exactly 2 UNI configured for the EVC.";
-              reference "[MEF10.3] [R9 B PP].";
+              reference "[MEF10.3] [R9].";
             }
             must "(. != 'multipoint-to-multipoint') or ((. = 'multipoint-to-multipoint') and (count(../end-points/end-point) > 1) and (count(../end-points/end-point) <= ../max-num-of-evc-end-point))" {
               error-message "If EVC Type is Multipoint-to-Multipoint, there must be 2 or more UNI configured for the EVC.";
               description
                 "If EVC Type is Multipoint-to-Multipoint, there must be 2 or more UNI configured for the EVC.";
-              reference "[MEF10.3] [R9 B MM].";
+              reference "[MEF10.3] [R9].";
             }
             must "(. != 'rooted-multipoint') or ((. = 'rooted-multipoint') and (count(../end-points/end-point) > 1) and (count(../end-points/end-point) <= ../max-num-of-evc-end-point))" {
               error-message "If EVC Type is Rooted-Multipoint, there must be 2 or more UNI configured for the EVC.";
               description
                 "If EVC Type is Rooted-Multipoint, there must be 2 or more UNI configured for the EVC.";
-              reference "[MEF10.3] [R9 B RM].";
+              reference "[MEF10.3] [R9].";
             }
             must "(. != 'point-to-point') or ((. = 'point-to-point') and (../max-num-of-evc-end-point = 2))" {
               error-message "If EVC Type is Point-to-Point, the value of max-num-of-evc-end-point must be 2.";
               description
                 "If EVC Type is Point-to-Point, the value of max-num-of-evc-end-point must be 2.";
-              reference "[MEF10.3] [R9 B PP].";
+              reference "[MEF10.3] [R9].";
             }
             must "(. != 'multipoint-to-multipoint') or ((. = 'multipoint-to-multipoint') and (../max-num-of-evc-end-point > 2))" {
               error-message "If EVC Type is Multipoint-to-Multipoint, the value of max-num-of-evc-end-point must be at least 3.";
               description
                 "If EVC Type is Multipoint-to-Multipoint, the value of max-num-of-evc-end-point must be at least 3.";
-              reference "[MEF10.3] [R9 B MM].";
+              reference "[MEF10.3] [R9].";
             }
             must "(. != 'rooted-multipoint') or ((. = 'rooted-multipoint') and (../max-num-of-evc-end-point > 2))" {
               error-message "If EVC Type is Rooted-Multipoint, the value of max-num-of-evc-end-point must be at least 3.";
               description
                 "MEF 10.3 [R9 B RM] If EVC Type is Rooted-Multipoint, the value of max-num-of-evc-end-point must be at least 3.";
-              reference "[MEF10.3] [R9 B RM].";
+              reference "[MEF10.3] [R9].";
             }
             mandatory true;
             description
