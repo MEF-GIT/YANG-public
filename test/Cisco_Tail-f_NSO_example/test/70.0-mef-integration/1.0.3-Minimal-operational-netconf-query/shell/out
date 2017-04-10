@@ -4420,8 +4420,6 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -4448,8 +4446,6 @@
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table13</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -4543,8 +4539,6 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -4569,8 +4563,6 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -4718,8 +4710,6 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -4746,8 +4736,6 @@
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table14</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -4851,8 +4839,6 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -4879,8 +4865,6 @@
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table13</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -4949,7 +4933,7 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -4969,7 +4953,7 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -4989,7 +4973,7 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -5093,7 +5077,7 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -5129,7 +5113,7 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -5165,7 +5149,7 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -5201,7 +5185,7 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -5381,7 +5365,7 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -5449,7 +5433,7 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -5517,7 +5501,7 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -5585,7 +5569,7 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -5734,8 +5718,6 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -5770,8 +5752,6 @@
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table13</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -5860,8 +5840,6 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF62_ApdxA_CoS</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -5886,8 +5864,6 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF62_ApdxA_CoS</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -6002,8 +5978,6 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -6038,8 +6012,6 @@
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table14</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -6147,8 +6119,6 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -6183,8 +6153,6 @@
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table13</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -6249,7 +6217,7 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -6269,7 +6237,7 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -6289,7 +6257,7 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -6309,7 +6277,7 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -6423,8 +6391,6 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -6449,8 +6415,6 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -9667,8 +9631,6 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -9693,8 +9655,6 @@
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>

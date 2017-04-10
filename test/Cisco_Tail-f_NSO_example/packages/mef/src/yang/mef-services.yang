@@ -544,26 +544,20 @@ module mef-services {
                   "EVC Per UNI: Reference to a global EEC Profile that specifies how to assign EEC Names to egress frames at this EVC End Point based on fields in the frame.";
                 reference "[MEF10.3] Section 10.4. [MEF7.3] Section 7.11.";
               }
-              leaf source-mac-address-limit-enabled {
-                type boolean;
-                default "false";
-                description
-                  "EVC Per UNI: Source MAC Address Limit Enable / Disable. If Enabled, the values for the Source MAC Address Limit and Source MAC Address Interval must be set.";
-                reference "[MEF10.3] Section 10.9. [MEF7.3] Section 8.1.13.";
-              }
               leaf source-mac-address-limit {
                 type uint32 {
                   range "1..max";
                 }
                 description
-                  "EVC Per UNI: Source MAC Address Limit. This value is used when the Source MAC Address Limit Enabled is true.";
+                  "EVC Per UNI: Source MAC Address Limit.";
                 reference "[MEF10.3] Section 10.9. [MEF7.3] Section 7.4.";
               }
               leaf source-mac-address-limit-time-interval {
+                when "../source-mac-address-limit";
                 type yang:timeticks;
                 default "0";
                 description
-                  "EVC Per UNI: Source MAC Address Limit Interval. This value is used when the Source MAC Address Limit Enabled is true.";
+                  "EVC Per UNI: Source MAC Address Limit Interval. This value is used when the Source MAC Address Limit has been configured.";
                 reference "[MEF10.3] Section 10.9. [MEF7.3] Section 8.1.13.";
               }
               leaf test-meg-enabled {
@@ -596,7 +590,7 @@ module mef-services {
               default "false";
               config false;
               description
-                "EVC Operational Status of the Virtual Connection as Enabled/Disabled.";
+                "EVC Operational Status: The value is either Enabled (if the value is 'true') or Disabled (if the value is 'false').";
               reference "[MEF7.3] Section 7.1.";
             }
 <<<<<<< Upstream, based on origin/master
@@ -1029,7 +1023,7 @@ module mef-services {
                 "For EPL, Egress Bandwidth Profile per Egress Equivalence Class cannot be set for all UNIs in the EVC per UNI List.";
               reference "[MEF6.2] [R23].";
             }
-            must "(. != 'epl') or ((. = 'epl') and (count(../end-points/end-point[source-mac-address-limit-enabled = 'true']) = 0) )" {
+            must "(. != 'epl') or ((. = 'epl') and (count(../end-points/end-point[source-mac-address-limit]) = 0) )" {
               error-message "For EPL, Source MAC Address Limit must be disabled.";
               description
                 "For EPL, Source MAC Address Limit must be disabled.";
@@ -1076,7 +1070,7 @@ module mef-services {
                 "For EVPL, All-to-One Bundling must be disabled for all UNIs in the EVC UNI List.";
               reference "[MEF6.2] [R31].";
             }
-            must "(. != 'evpl') or ((. = 'evpl') and ((../unicast-frame-delivery != 'unconditional') or (../multicast-frame-delivery != 'unconditional') or (../broadcast-frame-delivery != 'unconditional') or count(../end-points/end-point[source-mac-address-limit-enabled = 'true']) = 0))" {
+            must "(. != 'evpl') or ((. = 'evpl') and ((../unicast-frame-delivery != 'unconditional') or (../multicast-frame-delivery != 'unconditional') or (../broadcast-frame-delivery != 'unconditional') or count(../end-points/end-point[source-mac-address-limit]) = 0))" {
               error-message "For EVPL, Source MAC Address Limit must be disabled for all UNIs in the EVC per UNI List if all 3 -svc-frm-delivery values are unconditional.";
               description
                 "For EVPL, Source MAC Address Limit must be disabled for all UNIs in the EVC per UNI List if all 3 -svc-frm-delivery values are unconditional.";

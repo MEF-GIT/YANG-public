@@ -3120,12 +3120,11 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART
   ingress-bw-profile-per-evc bw-profile high1-bwp-uni
   egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART
   egress-bw-profile-per-evc bw-profile high1-bwp-uni
-  role                             root
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled false
+  role             root
+  admin-state      false
+  color-identifier dscp
+  cos-identifier   MEF103_Table23
+  eec-identifier   MEF103_Table23
  !
  end-points end-point MMPOP1-ce1-Slot1-Port3
   ce-vlans ce-vlan 17
@@ -3134,12 +3133,11 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART
   ingress-bw-profile-per-evc bw-profile high2-bwp-uni
   egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI113_EVC-0001343-ACME-MEGAMART
   egress-bw-profile-per-evc bw-profile high2-bwp-uni
-  role                             root
-  admin-state                      false
-  color-identifier                 pcp
-  cos-identifier                   MEF103_Table13
-  eec-identifier                   MEF62_ApdxA
-  source-mac-address-limit-enabled false
+  role             root
+  admin-state      false
+  color-identifier pcp
+  cos-identifier   MEF103_Table13
+  eec-identifier   MEF62_ApdxA
  !
  carrier-ethernet-sls sls-id MEF103_Table25
  carrier-ethernet-sls start-time 2016-06-18T12:00:00+00:00
@@ -3177,12 +3175,11 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART
   !
   ce-vlans ce-vlan 102
   !
-  role                             root
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled false
+  role             root
+  admin-state      false
+  color-identifier dscp
+  cos-identifier   MEF103_Table23
+  eec-identifier   MEF103_Table23
  !
  end-points end-point MMPOP1-ce1-Slot1-Port1
   ce-vlans ce-vlan 100
@@ -3191,12 +3188,11 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART
   !
   ce-vlans ce-vlan 102
   !
-  role                             root
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled false
+  role             root
+  admin-state      false
+  color-identifier dscp
+  cos-identifier   MEF103_Table23
+  eec-identifier   MEF103_Table23
  !
  carrier-ethernet-sls sls-id MEF103_Table25
  carrier-ethernet-sls start-time 2016-06-18T12:00:00+00:00
@@ -3259,12 +3255,11 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART
   ingress-bw-profile-per-evc bw-profile low1-bwp-uni
   egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART
   egress-bw-profile-per-evc bw-profile low1-bwp-uni
-  role                             root
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled false
+  role             root
+  admin-state      false
+  color-identifier dscp
+  cos-identifier   MEF103_Table23
+  eec-identifier   MEF103_Table23
  !
  end-points end-point MMPOP1-ce1-Slot1-Port3
   ce-vlans ce-vlan 22
@@ -3273,12 +3268,11 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART
   ingress-bw-profile-per-evc bw-profile low2-bwp-uni
   egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI113_EVC-0001899-ACME-MEGAMART
   egress-bw-profile-per-evc bw-profile low2-bwp-uni
-  role                             root
-  admin-state                      false
-  color-identifier                 pcp
-  cos-identifier                   MEF103_Table14
-  eec-identifier                   MEF62_ApdxA
-  source-mac-address-limit-enabled false
+  role             root
+  admin-state      false
+  color-identifier pcp
+  cos-identifier   MEF103_Table14
+  eec-identifier   MEF62_ApdxA
  !
  carrier-ethernet-sls sls-id MEF103_Table25
  carrier-ethernet-sls start-time 2016-06-18T12:00:00+00:00
@@ -3322,12 +3316,11 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART
   ingress-bw-profile-per-evc bw-profile medium1-bwp-uni
   egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI003_EVC-0001900-ACME-MEGAMART
   egress-bw-profile-per-evc bw-profile medium1-bwp-uni
-  role                             root
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled false
+  role             root
+  admin-state      false
+  color-identifier dscp
+  cos-identifier   MEF103_Table23
+  eec-identifier   MEF103_Table23
  !
  end-points end-point MMPOP1-ce2-Slot2-Port3
   ce-vlans ce-vlan 33
@@ -3336,12 +3329,11 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART
   ingress-bw-profile-per-evc bw-profile medium3-bwp-uni
   egress-bw-profile-per-evc envelope-id eenv_EVPL_UNI223_EVC-0001900-ACME-MEGAMART
   egress-bw-profile-per-evc bw-profile medium3-bwp-uni
-  role                             root
-  admin-state                      false
-  color-identifier                 pcp
-  cos-identifier                   MEF103_Table13
-  eec-identifier                   MEF62_ApdxA
-  source-mac-address-limit-enabled false
+  role             root
+  admin-state      false
+  color-identifier pcp
+  cos-identifier   MEF103_Table13
+  eec-identifier   MEF62_ApdxA
  !
  carrier-ethernet-sls sls-id MEF103_Table25
  carrier-ethernet-sls start-time 2016-06-18T12:00:00+00:00
@@ -3369,32 +3361,32 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001901-ACME-MEGAMART
  end-points end-point MMPOP1-ce5-Slot5-Port1
   ce-vlans ce-vlan 1
   !
-  role                             root
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled true
+  role                     root
+  admin-state              false
+  color-identifier         dscp
+  cos-identifier           MEF103_Table23
+  eec-identifier           MEF103_Table23
+  source-mac-address-limit 10
  !
  end-points end-point MMPOP1-ce6-Slot6-Port1
   ce-vlans ce-vlan 1
   !
-  role                             root
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled true
+  role                     root
+  admin-state              false
+  color-identifier         dscp
+  cos-identifier           MEF103_Table23
+  eec-identifier           MEF103_Table23
+  source-mac-address-limit 10
  !
  end-points end-point MMPOP1-ce7-Slot7-Port1
   ce-vlans ce-vlan 1
   !
-  role                             root
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled true
+  role                     root
+  admin-state              false
+  color-identifier         dscp
+  cos-identifier           MEF103_Table23
+  eec-identifier           MEF103_Table23
+  source-mac-address-limit 10
  !
  carrier-ethernet-sls sls-id MEF103_Table25
  carrier-ethernet-sls start-time 2016-06-18T12:00:00+00:00
@@ -3442,12 +3434,12 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART
    envelope-id eenv_EPTREE_UNI552_EVC-0001911_Sophomore
    bw-profile  etest-bwp1
   !
-  role                             root
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled true
+  role                     root
+  admin-state              false
+  color-identifier         dscp
+  cos-identifier           MEF103_Table23
+  eec-identifier           MEF103_Table23
+  source-mac-address-limit 10
  !
  end-points end-point MMPOP1-ce6-Slot6-Port2
   ce-vlans ce-vlan 1
@@ -3462,12 +3454,12 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART
    envelope-id eenv_EPTREE_UNI662_EVC-0001911_Sophomore
    bw-profile  etest-bwp2
   !
-  role                             leaf
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled true
+  role                     leaf
+  admin-state              false
+  color-identifier         dscp
+  cos-identifier           MEF103_Table23
+  eec-identifier           MEF103_Table23
+  source-mac-address-limit 10
  !
  end-points end-point MMPOP1-ce7-Slot7-Port2
   ce-vlans ce-vlan 1
@@ -3482,12 +3474,12 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART
    envelope-id eenv_EPTREE_UNI772_EVC-0001911_Sophomore
    bw-profile  etest-bwp1
   !
-  role                             leaf
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled true
+  role                     leaf
+  admin-state              false
+  color-identifier         dscp
+  cos-identifier           MEF103_Table23
+  eec-identifier           MEF103_Table23
+  source-mac-address-limit 10
  !
  end-points end-point MMPOP1-ce8-Slot8-Port2
   ce-vlans ce-vlan 1
@@ -3502,12 +3494,12 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART
    envelope-id eenv_EPTREE_UNI882_EVC-0001911_Sophomore
    bw-profile  etest-bwp2
   !
-  role                             leaf
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled true
+  role                     leaf
+  admin-state              false
+  color-identifier         dscp
+  cos-identifier           MEF103_Table23
+  eec-identifier           MEF103_Table23
+  source-mac-address-limit 10
  !
  carrier-ethernet-sls sls-id MEF103_Table25
  carrier-ethernet-sls start-time 2016-06-18T12:00:00+00:00
@@ -3595,12 +3587,12 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART
    envelope-id eenv_EVPLAN_UNI553_EVC-0001944_Neon
    bw-profile  low2-bwp-uni
   !
-  role                             root
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled true
+  role                     root
+  admin-state              false
+  color-identifier         dscp
+  cos-identifier           MEF103_Table23
+  eec-identifier           MEF103_Table23
+  source-mac-address-limit 10
  !
  end-points end-point MMPOP1-ce6-Slot6-Port3
   ce-vlans ce-vlan 53
@@ -3639,12 +3631,12 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART
    envelope-id eenv_EVPLAN_UNI663_EVC-0001944_Neon
    bw-profile  low2-bwp-uni
   !
-  role                             root
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled true
+  role                     root
+  admin-state              false
+  color-identifier         dscp
+  cos-identifier           MEF103_Table23
+  eec-identifier           MEF103_Table23
+  source-mac-address-limit 10
  !
  end-points end-point MMPOP1-ce7-Slot7-Port3
   ce-vlans ce-vlan 53
@@ -3683,12 +3675,12 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART
    envelope-id eenv_EVPLAN_UNI773_EVC-0001944_Neon
    bw-profile  low2-bwp-uni
   !
-  role                             root
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled true
+  role                     root
+  admin-state              false
+  color-identifier         dscp
+  cos-identifier           MEF103_Table23
+  eec-identifier           MEF103_Table23
+  source-mac-address-limit 10
  !
  end-points end-point MMPOP1-ce8-Slot8-Port3
   ce-vlans ce-vlan 53
@@ -3727,12 +3719,12 @@ mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART
    envelope-id eenv_EVPLAN_UNI883_EVC-0001944_Neon
    bw-profile  low2-bwp-uni
   !
-  role                             root
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled true
+  role                     root
+  admin-state              false
+  color-identifier         dscp
+  cos-identifier           MEF103_Table23
+  eec-identifier           MEF103_Table23
+  source-mac-address-limit 10
  !
  carrier-ethernet-sls sls-id MEF103_Table25
  carrier-ethernet-sls start-time 2016-06-18T12:00:00+00:00
@@ -3801,12 +3793,11 @@ mef-services carrier-ethernet subscriber-services evc EVC-0002343-ACME-MEGAMART
    envelope-id eenv_EVPL_UNI003_EVC-0002343-ACME-MEGAMART
    bw-profile  high1-bwp-uni
   !
-  role                             root
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled false
+  role             root
+  admin-state      false
+  color-identifier dscp
+  cos-identifier   MEF103_Table23
+  eec-identifier   MEF103_Table23
  !
  end-points end-point MMPOP1-ce2-Slot0-Port1
   ce-vlans ce-vlan 17
@@ -3821,12 +3812,11 @@ mef-services carrier-ethernet subscriber-services evc EVC-0002343-ACME-MEGAMART
    envelope-id eenv_EVPL_UNI113_EVC-0002343-ACME-MEGAMART
    bw-profile  high2-bwp-uni
   !
-  role                             root
-  admin-state                      false
-  color-identifier                 pcp
-  cos-identifier                   MEF103_Table13
-  eec-identifier                   MEF62_ApdxA
-  source-mac-address-limit-enabled false
+  role             root
+  admin-state      false
+  color-identifier pcp
+  cos-identifier   MEF103_Table13
+  eec-identifier   MEF62_ApdxA
  !
  carrier-ethernet-sls sls-id MEF103_Table25
  carrier-ethernet-sls start-time 2016-06-18T12:00:00+00:00
@@ -3864,12 +3854,11 @@ mef-services carrier-ethernet subscriber-services evc EVC-0002898-ACME-MEGAMART
   !
   ce-vlans ce-vlan 102
   !
-  role                             root
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF62_ApdxA_CoS
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled false
+  role             root
+  admin-state      false
+  color-identifier dscp
+  cos-identifier   MEF62_ApdxA_CoS
+  eec-identifier   MEF103_Table23
  !
  end-points end-point MMPOP1-ce5-Slot5-Port6
   ce-vlans ce-vlan 100
@@ -3878,12 +3867,11 @@ mef-services carrier-ethernet subscriber-services evc EVC-0002898-ACME-MEGAMART
   !
   ce-vlans ce-vlan 102
   !
-  role                             root
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF62_ApdxA_CoS
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled false
+  role             root
+  admin-state      false
+  color-identifier dscp
+  cos-identifier   MEF62_ApdxA_CoS
+  eec-identifier   MEF103_Table23
  !
  carrier-ethernet-sls sls-id MEF103_Table25
  carrier-ethernet-sls start-time 2016-06-18T12:00:00+00:00
@@ -3938,12 +3926,11 @@ mef-services carrier-ethernet subscriber-services evc EVC-0002899-ACME-MEGAMART
    envelope-id eenv_EVPL_UNI003_EVC-0002899-ACME-MEGAMART
    bw-profile  low1-bwp-uni
   !
-  role                             root
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled false
+  role             root
+  admin-state      false
+  color-identifier dscp
+  cos-identifier   MEF103_Table23
+  eec-identifier   MEF103_Table23
  !
  end-points end-point MMPOP1-ce2-Slot0-Port1
   ce-vlans ce-vlan 22
@@ -3958,12 +3945,11 @@ mef-services carrier-ethernet subscriber-services evc EVC-0002899-ACME-MEGAMART
    envelope-id eenv_EVPL_UNI113_EVC-0002899-ACME-MEGAMART
    bw-profile  low2-bwp-uni
   !
-  role                             root
-  admin-state                      false
-  color-identifier                 pcp
-  cos-identifier                   MEF103_Table14
-  eec-identifier                   MEF62_ApdxA
-  source-mac-address-limit-enabled false
+  role             root
+  admin-state      false
+  color-identifier pcp
+  cos-identifier   MEF103_Table14
+  eec-identifier   MEF62_ApdxA
  !
  carrier-ethernet-sls sls-id MEF103_Table25
  carrier-ethernet-sls start-time 2016-06-18T12:00:00+00:00
@@ -4013,12 +3999,11 @@ mef-services carrier-ethernet subscriber-services evc EVC-0002900-ACME-MEGAMART
    envelope-id eenv_EVPL_UNI003_EVC-0002900-ACME-MEGAMART
    bw-profile  medium1-bwp-uni
   !
-  role                             root
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled false
+  role             root
+  admin-state      false
+  color-identifier dscp
+  cos-identifier   MEF103_Table23
+  eec-identifier   MEF103_Table23
  !
  end-points end-point MMPOP1-ce3-Slot0-Port3
   ce-vlans ce-vlan 33
@@ -4033,12 +4018,11 @@ mef-services carrier-ethernet subscriber-services evc EVC-0002900-ACME-MEGAMART
    envelope-id eenv_EVPL_UNI223_EVC-0002900-ACME-MEGAMART
    bw-profile  medium3-bwp-uni
   !
-  role                             root
-  admin-state                      false
-  color-identifier                 pcp
-  cos-identifier                   MEF103_Table13
-  eec-identifier                   MEF62_ApdxA
-  source-mac-address-limit-enabled false
+  role             root
+  admin-state      false
+  color-identifier pcp
+  cos-identifier   MEF103_Table13
+  eec-identifier   MEF62_ApdxA
  !
  carrier-ethernet-sls sls-id MEF103_Table25
  carrier-ethernet-sls start-time 2016-06-18T12:00:00+00:00
@@ -4066,42 +4050,42 @@ mef-services carrier-ethernet subscriber-services evc EVC-0002947-ACME-MEGAMART
  end-points end-point MMPOP1-ce5-Slot5-Port4
   ce-vlans ce-vlan 153
   !
-  role                             root
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled true
+  role                     root
+  admin-state              false
+  color-identifier         dscp
+  cos-identifier           MEF103_Table23
+  eec-identifier           MEF103_Table23
+  source-mac-address-limit 10
  !
  end-points end-point MMPOP1-ce6-Slot6-Port3
   ce-vlans ce-vlan 153
   !
-  role                             leaf
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled true
+  role                     leaf
+  admin-state              false
+  color-identifier         dscp
+  cos-identifier           MEF103_Table23
+  eec-identifier           MEF103_Table23
+  source-mac-address-limit 10
  !
  end-points end-point MMPOP1-ce7-Slot7-Port3
   ce-vlans ce-vlan 153
   !
-  role                             leaf
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled true
+  role                     leaf
+  admin-state              false
+  color-identifier         dscp
+  cos-identifier           MEF103_Table23
+  eec-identifier           MEF103_Table23
+  source-mac-address-limit 10
  !
  end-points end-point MMPOP1-ce8-Slot8-Port3
   ce-vlans ce-vlan 153
   !
-  role                             leaf
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled true
+  role                     leaf
+  admin-state              false
+  color-identifier         dscp
+  cos-identifier           MEF103_Table23
+  eec-identifier           MEF103_Table23
+  source-mac-address-limit 10
  !
  carrier-ethernet-sls sls-id MEF103_Table25
  carrier-ethernet-sls start-time 2016-06-18T12:00:00+00:00
@@ -4149,12 +4133,11 @@ mef-services carrier-ethernet subscriber-services evc EVC-0009898-ACME-MEGAMART
   !
   ce-vlans ce-vlan 802
   !
-  role                             root
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled false
+  role             root
+  admin-state      false
+  color-identifier dscp
+  cos-identifier   MEF103_Table23
+  eec-identifier   MEF103_Table23
  !
  end-points end-point MMPOP1-ce2-Slot0-Port3
   ce-vlans ce-vlan 800
@@ -4163,12 +4146,11 @@ mef-services carrier-ethernet subscriber-services evc EVC-0009898-ACME-MEGAMART
   !
   ce-vlans ce-vlan 802
   !
-  role                             root
-  admin-state                      false
-  color-identifier                 dscp
-  cos-identifier                   MEF103_Table23
-  eec-identifier                   MEF103_Table23
-  source-mac-address-limit-enabled false
+  role             root
+  admin-state      false
+  color-identifier dscp
+  cos-identifier   MEF103_Table23
+  eec-identifier   MEF103_Table23
  !
  carrier-ethernet-sls sls-id MEF103_Table25
  carrier-ethernet-sls start-time 2016-06-18T12:00:00+00:00

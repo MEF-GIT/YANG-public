@@ -37,7 +37,7 @@
               },
               "role": "root",
               "admin-state": false,
-              "source-mac-address-limit-enabled": true
+              "source-mac-address-limit": 10
             },
             {
               "uni-id": "MMPOP1-ce6-Slot6-Port1",
@@ -50,7 +50,7 @@
               },
               "role": "root",
               "admin-state": false,
-              "source-mac-address-limit-enabled": true
+              "source-mac-address-limit": 10
             },
             {
               "uni-id": "MMPOP1-ce7-Slot7-Port1",
@@ -63,7 +63,7 @@
               },
               "role": "root",
               "admin-state": false,
-              "source-mac-address-limit-enabled": true
+              "source-mac-address-limit": 10
             }
           ]
         },
