@@ -3798,7 +3798,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce1-Slot1-Port3</uni-id>
@@ -3820,7 +3819,6 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table13</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
             </end-points>
             <carrier-ethernet-sls>
@@ -3895,7 +3893,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce1-Slot1-Port1</uni-id>
@@ -3915,7 +3912,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
             </end-points>
             <carrier-ethernet-sls>
@@ -4046,7 +4042,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce1-Slot1-Port3</uni-id>
@@ -4068,7 +4063,6 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table14</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
             </end-points>
             <carrier-ethernet-sls>
@@ -4154,7 +4148,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce2-Slot2-Port3</uni-id>
@@ -4176,7 +4169,6 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table13</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
             </end-points>
             <carrier-ethernet-sls>
@@ -4227,7 +4219,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce6-Slot6-Port1</uni-id>
@@ -4241,7 +4233,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce7-Slot7-Port1</uni-id>
@@ -4255,7 +4247,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
             </end-points>
             <carrier-ethernet-sls>
@@ -4342,7 +4334,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce6-Slot6-Port2</uni-id>
@@ -4372,7 +4364,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce7-Slot7-Port2</uni-id>
@@ -4402,7 +4394,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce8-Slot8-Port2</uni-id>
@@ -4432,7 +4424,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
             </end-points>
             <carrier-ethernet-sls>
@@ -4595,7 +4587,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce6-Slot6-Port3</uni-id>
@@ -4657,7 +4649,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce7-Slot7-Port3</uni-id>
@@ -4719,7 +4711,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce8-Slot8-Port3</uni-id>
@@ -4781,7 +4773,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
             </end-points>
             <carrier-ethernet-sls>
@@ -4912,7 +4904,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce2-Slot0-Port1</uni-id>
@@ -4942,7 +4933,6 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table13</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
             </end-points>
             <carrier-ethernet-sls>
@@ -5017,7 +5007,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF62_ApdxA_CoS</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce5-Slot5-Port6</uni-id>
@@ -5037,7 +5026,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF62_ApdxA_CoS</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
             </end-points>
             <carrier-ethernet-sls>
@@ -5139,7 +5127,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce2-Slot0-Port1</uni-id>
@@ -5169,7 +5156,6 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table14</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
             </end-points>
             <carrier-ethernet-sls>
@@ -5263,7 +5249,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce3-Slot0-Port3</uni-id>
@@ -5293,7 +5278,6 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table13</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
             </end-points>
             <carrier-ethernet-sls>
@@ -5344,7 +5328,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce6-Slot6-Port3</uni-id>
@@ -5358,7 +5342,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce7-Slot7-Port3</uni-id>
@@ -5372,7 +5356,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce8-Slot8-Port3</uni-id>
@@ -5386,7 +5370,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
             </end-points>
             <carrier-ethernet-sls>
@@ -5481,7 +5465,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce2-Slot0-Port3</uni-id>
@@ -5501,7 +5484,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
             </end-points>
             <carrier-ethernet-sls>
@@ -10595,8 +10577,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -10620,8 +10600,6 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table13</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -10703,8 +10681,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -10726,8 +10702,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -10864,8 +10838,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -10889,8 +10861,6 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table14</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -10983,8 +10953,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -11008,8 +10976,6 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table13</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -11067,7 +11033,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -11084,7 +11050,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -11101,7 +11067,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -11194,7 +11160,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -11227,7 +11193,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -11260,7 +11226,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -11293,7 +11259,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -11462,7 +11428,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -11527,7 +11493,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -11592,7 +11558,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -11657,7 +11623,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -11795,8 +11761,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -11828,8 +11792,6 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table13</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -11911,8 +11873,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF62_ApdxA_CoS</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -11934,8 +11894,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF62_ApdxA_CoS</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -12043,8 +12001,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -12076,8 +12032,6 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table14</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -12178,8 +12132,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -12211,8 +12163,6 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table13</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -12270,7 +12220,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -12287,7 +12237,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -12304,7 +12254,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -12321,7 +12271,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
                 <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
@@ -12424,8 +12374,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -12447,8 +12395,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
-                <source-mac-address-limit-time-interval wd:default="true">0</source-mac-address-limit-time-interval>
                 <test-meg-enabled wd:default="true">false</test-meg-enabled>
                 <subscriber-meg-mip-enabled wd:default="true">false</subscriber-meg-mip-enabled>
               </end-point>
@@ -16306,7 +16252,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce1-Slot1-Port1</uni-id>
@@ -16326,7 +16271,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
             </end-points>
             <carrier-ethernet-sls>
@@ -16533,7 +16477,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce6-Slot6-Port1</uni-id>
@@ -16547,7 +16491,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce7-Slot7-Port1</uni-id>
@@ -16561,7 +16505,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
             </end-points>
             <carrier-ethernet-sls>
@@ -16838,7 +16782,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce6-Slot6-Port2</uni-id>
@@ -16868,7 +16812,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce7-Slot7-Port2</uni-id>
@@ -16898,7 +16842,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce8-Slot8-Port2</uni-id>
@@ -16928,7 +16872,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
             </end-points>
             <carrier-ethernet-sls>
@@ -17336,7 +17280,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce1-Slot1-Port3</uni-id>
@@ -17358,7 +17301,6 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table14</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
             </end-points>
             <carrier-ethernet-sls>
@@ -17444,7 +17386,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce2-Slot2-Port3</uni-id>
@@ -17466,7 +17407,6 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table13</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
             </end-points>
             <carrier-ethernet-sls>
@@ -17534,7 +17474,6 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce1-Slot1-Port3</uni-id>
@@ -17556,7 +17495,6 @@ MEF GET Config ALLs
                 <color-identifier>pcp</color-identifier>
                 <cos-identifier>MEF103_Table13</cos-identifier>
                 <eec-identifier>MEF62_ApdxA</eec-identifier>
-                <source-mac-address-limit-enabled>false</source-mac-address-limit-enabled>
               </end-point>
             </end-points>
             <carrier-ethernet-sls>
@@ -18080,7 +18018,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce6-Slot6-Port3</uni-id>
@@ -18142,7 +18080,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce7-Slot7-Port3</uni-id>
@@ -18204,7 +18142,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce8-Slot8-Port3</uni-id>
@@ -18266,7 +18204,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
             </end-points>
             <carrier-ethernet-sls>
@@ -18708,7 +18646,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce6-Slot6-Port3</uni-id>
@@ -18722,7 +18660,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce7-Slot7-Port3</uni-id>
@@ -18736,7 +18674,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
               <end-point>
                 <uni-id>MMPOP1-ce8-Slot8-Port3</uni-id>
@@ -18750,7 +18688,7 @@ MEF GET Config ALLs
                 <color-identifier>dscp</color-identifier>
                 <cos-identifier>MEF103_Table23</cos-identifier>
                 <eec-identifier>MEF103_Table23</eec-identifier>
-                <source-mac-address-limit-enabled>true</source-mac-address-limit-enabled>
+                <source-mac-address-limit>10</source-mac-address-limit>
               </end-point>
             </end-points>
             <carrier-ethernet-sls>

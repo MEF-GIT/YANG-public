@@ -73,7 +73,7 @@ config
 !
 mef-interfaces unis uni MMPOP1-ce8-Slot8-Port1 admin-state false max-svc-frame-size 1600 max-num-of-evcs 1 all-to-one-bundling-enabled true physical-layers links link ce8 GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
 mef-interfaces unis uni MMPOP1-ce8-Slot8-Port1  ce-vlans ce-vlan 1
-mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port1 role leaf cos-identifier MEF103_Table23 color-identifier dscp eec-identifier MEF103_Table23 source-mac-address-limit-enabled true ce-vlans ce-vlan 1 
+mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART end-points end-point MMPOP1-ce8-Slot8-Port1 role leaf cos-identifier MEF103_Table23 color-identifier dscp eec-identifier MEF103_Table23 source-mac-address-limit 10 ce-vlans ce-vlan 1 
 commit
 end no-confirm
 exit
@@ -425,8 +425,8 @@ fi
 config
 mef-services carrier-ethernet subscriber-services evc EVC-1101898-ACME-MEGAMART svc-type epl connection-type point-to-point max-num-of-evc-end-point 2 ce-vlan-id-preservation true ce-vlan-pcp-preservation true
 mef-services carrier-ethernet subscriber-services evc EVC-1101898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 start-time 2016-06-18T12:00:00Z
-mef-services carrier-ethernet subscriber-services evc EVC-1101898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 role root cos-identifier MEF103_Table23 color-identifier dscp eec-identifier MEF103_Table23 source-mac-address-limit-enabled false ce-vlans ce-vlan 100
-mef-services carrier-ethernet subscriber-services evc EVC-1101898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 role root cos-identifier MEF103_Table23 color-identifier dscp eec-identifier MEF103_Table23 source-mac-address-limit-enabled false ce-vlans ce-vlan 100
+mef-services carrier-ethernet subscriber-services evc EVC-1101898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 role root cos-identifier MEF103_Table23 color-identifier dscp eec-identifier MEF103_Table23 ce-vlans ce-vlan 100
+mef-services carrier-ethernet subscriber-services evc EVC-1101898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 role root cos-identifier MEF103_Table23 color-identifier dscp eec-identifier MEF103_Table23 ce-vlans ce-vlan 100
 commit
 end no-confirm
 exit
@@ -1028,7 +1028,7 @@ fi
 # Test for MEF 6.2 [R24].  This test should fail to commit with "For EPL, Source MAC Address Limit must be disabled.".
 { ncs_cli -u admin -C << EOF;
 config
-mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 source-mac-address-limit-enabled true
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 source-mac-address-limit 10
 commit
 end no-confirm
 exit
@@ -1160,7 +1160,7 @@ fi
 # Test for MEF 6.2 [R32].  This test should fail to commit with "For EVPL, Source MAC Address Limit must be disabled for all UNIs in the EVC per UNI List if all 3 -svc-frm-delivery values are unconditional.".
 { ncs_cli -u admin -C << EOF;
 config
-mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port3 source-mac-address-limit-enabled true
+mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port3 source-mac-address-limit 10
 commit
 end no-confirm
 exit

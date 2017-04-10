@@ -41,8 +41,7 @@
               "admin-state": false,
               "color-identifier": "dscp",
               "cos-identifier": "MEF103_Table23",
-              "eec-identifier": "MEF103_Table23",
-              "source-mac-address-limit-enabled": false
+              "eec-identifier": "MEF103_Table23"
             },
             {
               "uni-id": "MMPOP1-ce1-Slot1-Port1",
@@ -63,8 +62,7 @@
               "admin-state": false,
               "color-identifier": "dscp",
               "cos-identifier": "MEF103_Table23",
-              "eec-identifier": "MEF103_Table23",
-              "source-mac-address-limit-enabled": false
+              "eec-identifier": "MEF103_Table23"
             }
           ]
         },

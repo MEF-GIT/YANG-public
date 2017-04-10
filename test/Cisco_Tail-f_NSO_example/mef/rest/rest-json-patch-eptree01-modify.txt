@@ -89,7 +89,7 @@
                   "color-identifier": "dscp",
                   "cos-identifier": "MEF103_Table23",
                   "eec-identifier": "MEF103_Table23",
-                  "source-mac-address-limit-enabled": true
+                  "source-mac-address-limit": 10
                 },
                 {
                   "uni-id": "MMPOP1-ce6-Slot6-Port2",
@@ -125,7 +125,7 @@
                   "color-identifier": "dscp",
                   "cos-identifier": "MEF103_Table23",
                   "eec-identifier": "MEF103_Table23",
-                  "source-mac-address-limit-enabled": true
+                  "source-mac-address-limit": 10
                 },
                 {
                   "uni-id": "MMPOP1-ce7-Slot7-Port2",
@@ -161,7 +161,7 @@
                   "color-identifier": "dscp",
                   "cos-identifier": "MEF103_Table23",
                   "eec-identifier": "MEF103_Table23",
-                  "source-mac-address-limit-enabled": true
+                  "source-mac-address-limit": 10
                 },
                 {
                   "uni-id": "MMPOP1-ce8-Slot8-Port2",
@@ -197,7 +197,7 @@
                   "color-identifier": "dscp",
                   "cos-identifier": "MEF103_Table23",
                   "eec-identifier": "MEF103_Table23",
-                  "source-mac-address-limit-enabled": true
+                  "source-mac-address-limit": 10
                 }
               ]
             },
