@@ -60,15 +60,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               }
             ]
           },
-          "role": "pe",
-          "operations": {
-            "check-sync": "/api/running/mef-topology/devices/device/CSR-1_0/_operations/check-sync",
-            "deep-check-sync": "/api/running/mef-topology/devices/device/CSR-1_0/_operations/deep-check-sync",
-            "re-deploy": "/api/running/mef-topology/devices/device/CSR-1_0/_operations/re-deploy",
-            "reactive-re-deploy": "/api/running/mef-topology/devices/device/CSR-1_0/_operations/reactive-re-deploy",
-            "get-modifications": "/api/running/mef-topology/devices/device/CSR-1_0/_operations/get-modifications",
-            "un-deploy": "/api/running/mef-topology/devices/device/CSR-1_0/_operations/un-deploy"
-          }
+          "role": "pe"
         },
         {
           "dev-id": "CSR-2_0",
@@ -116,15 +108,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               }
             ]
           },
-          "role": "pe",
-          "operations": {
-            "check-sync": "/api/running/mef-topology/devices/device/CSR-2_0/_operations/check-sync",
-            "deep-check-sync": "/api/running/mef-topology/devices/device/CSR-2_0/_operations/deep-check-sync",
-            "re-deploy": "/api/running/mef-topology/devices/device/CSR-2_0/_operations/re-deploy",
-            "reactive-re-deploy": "/api/running/mef-topology/devices/device/CSR-2_0/_operations/reactive-re-deploy",
-            "get-modifications": "/api/running/mef-topology/devices/device/CSR-2_0/_operations/get-modifications",
-            "un-deploy": "/api/running/mef-topology/devices/device/CSR-2_0/_operations/un-deploy"
-          }
+          "role": "pe"
         },
         {
           "dev-id": "CSR-3_0",
@@ -172,15 +156,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               }
             ]
           },
-          "role": "pe",
-          "operations": {
-            "check-sync": "/api/running/mef-topology/devices/device/CSR-3_0/_operations/check-sync",
-            "deep-check-sync": "/api/running/mef-topology/devices/device/CSR-3_0/_operations/deep-check-sync",
-            "re-deploy": "/api/running/mef-topology/devices/device/CSR-3_0/_operations/re-deploy",
-            "reactive-re-deploy": "/api/running/mef-topology/devices/device/CSR-3_0/_operations/reactive-re-deploy",
-            "get-modifications": "/api/running/mef-topology/devices/device/CSR-3_0/_operations/get-modifications",
-            "un-deploy": "/api/running/mef-topology/devices/device/CSR-3_0/_operations/un-deploy"
-          }
+          "role": "pe"
         },
         {
           "dev-id": "CSR-4_0",
@@ -228,15 +204,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               }
             ]
           },
-          "role": "pe",
-          "operations": {
-            "check-sync": "/api/running/mef-topology/devices/device/CSR-4_0/_operations/check-sync",
-            "deep-check-sync": "/api/running/mef-topology/devices/device/CSR-4_0/_operations/deep-check-sync",
-            "re-deploy": "/api/running/mef-topology/devices/device/CSR-4_0/_operations/re-deploy",
-            "reactive-re-deploy": "/api/running/mef-topology/devices/device/CSR-4_0/_operations/reactive-re-deploy",
-            "get-modifications": "/api/running/mef-topology/devices/device/CSR-4_0/_operations/get-modifications",
-            "un-deploy": "/api/running/mef-topology/devices/device/CSR-4_0/_operations/un-deploy"
-          }
+          "role": "pe"
         },
         {
           "dev-id": "ce0",
@@ -268,15 +236,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "role": "ce",
-          "@role": {"annotation": "EPL Use Case 1"},
-          "operations": {
-            "check-sync": "/api/running/mef-topology/devices/device/ce0/_operations/check-sync",
-            "deep-check-sync": "/api/running/mef-topology/devices/device/ce0/_operations/deep-check-sync",
-            "re-deploy": "/api/running/mef-topology/devices/device/ce0/_operations/re-deploy",
-            "reactive-re-deploy": "/api/running/mef-topology/devices/device/ce0/_operations/reactive-re-deploy",
-            "get-modifications": "/api/running/mef-topology/devices/device/ce0/_operations/get-modifications",
-            "un-deploy": "/api/running/mef-topology/devices/device/ce0/_operations/un-deploy"
-          }
+          "@role": {"annotation": "EPL Use Case 1"}
         },
         {
           "dev-id": "ce1",
@@ -309,15 +269,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "role": "ce",
-          "@role": {"annotation": "EPL Use Case 1"},
-          "operations": {
-            "check-sync": "/api/running/mef-topology/devices/device/ce1/_operations/check-sync",
-            "deep-check-sync": "/api/running/mef-topology/devices/device/ce1/_operations/deep-check-sync",
-            "re-deploy": "/api/running/mef-topology/devices/device/ce1/_operations/re-deploy",
-            "reactive-re-deploy": "/api/running/mef-topology/devices/device/ce1/_operations/reactive-re-deploy",
-            "get-modifications": "/api/running/mef-topology/devices/device/ce1/_operations/get-modifications",
-            "un-deploy": "/api/running/mef-topology/devices/device/ce1/_operations/un-deploy"
-          }
+          "@role": {"annotation": "EPL Use Case 1"}
         },
         {
           "dev-id": "ce10",
@@ -342,15 +294,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "role": "ce",
-          "@role": {"annotation": "c10 link to pe1"},
-          "operations": {
-            "check-sync": "/api/running/mef-topology/devices/device/ce10/_operations/check-sync",
-            "deep-check-sync": "/api/running/mef-topology/devices/device/ce10/_operations/deep-check-sync",
-            "re-deploy": "/api/running/mef-topology/devices/device/ce10/_operations/re-deploy",
-            "reactive-re-deploy": "/api/running/mef-topology/devices/device/ce10/_operations/reactive-re-deploy",
-            "get-modifications": "/api/running/mef-topology/devices/device/ce10/_operations/get-modifications",
-            "un-deploy": "/api/running/mef-topology/devices/device/ce10/_operations/un-deploy"
-          }
+          "@role": {"annotation": "c10 link to pe1"}
         },
         {
           "dev-id": "ce2",
@@ -373,15 +317,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "role": "ce",
-          "@role": {"annotation": "EVPL Use Case 2"},
-          "operations": {
-            "check-sync": "/api/running/mef-topology/devices/device/ce2/_operations/check-sync",
-            "deep-check-sync": "/api/running/mef-topology/devices/device/ce2/_operations/deep-check-sync",
-            "re-deploy": "/api/running/mef-topology/devices/device/ce2/_operations/re-deploy",
-            "reactive-re-deploy": "/api/running/mef-topology/devices/device/ce2/_operations/reactive-re-deploy",
-            "get-modifications": "/api/running/mef-topology/devices/device/ce2/_operations/get-modifications",
-            "un-deploy": "/api/running/mef-topology/devices/device/ce2/_operations/un-deploy"
-          }
+          "@role": {"annotation": "EVPL Use Case 2"}
         },
         {
           "dev-id": "ce3",
@@ -399,15 +335,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "role": "ce",
-          "@role": {"annotation": "EVPL Use Case 2"},
-          "operations": {
-            "check-sync": "/api/running/mef-topology/devices/device/ce3/_operations/check-sync",
-            "deep-check-sync": "/api/running/mef-topology/devices/device/ce3/_operations/deep-check-sync",
-            "re-deploy": "/api/running/mef-topology/devices/device/ce3/_operations/re-deploy",
-            "reactive-re-deploy": "/api/running/mef-topology/devices/device/ce3/_operations/reactive-re-deploy",
-            "get-modifications": "/api/running/mef-topology/devices/device/ce3/_operations/get-modifications",
-            "un-deploy": "/api/running/mef-topology/devices/device/ce3/_operations/un-deploy"
-          }
+          "@role": {"annotation": "EVPL Use Case 2"}
         },
         {
           "dev-id": "ce4",
@@ -425,15 +353,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "role": "ce",
-          "@role": {"annotation": "EPL Use Case 2"},
-          "operations": {
-            "check-sync": "/api/running/mef-topology/devices/device/ce4/_operations/check-sync",
-            "deep-check-sync": "/api/running/mef-topology/devices/device/ce4/_operations/deep-check-sync",
-            "re-deploy": "/api/running/mef-topology/devices/device/ce4/_operations/re-deploy",
-            "reactive-re-deploy": "/api/running/mef-topology/devices/device/ce4/_operations/reactive-re-deploy",
-            "get-modifications": "/api/running/mef-topology/devices/device/ce4/_operations/get-modifications",
-            "un-deploy": "/api/running/mef-topology/devices/device/ce4/_operations/un-deploy"
-          }
+          "@role": {"annotation": "EPL Use Case 2"}
         },
         {
           "dev-id": "ce5",
@@ -476,15 +396,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "role": "ce",
-          "@role": {"annotation": "EP-LAN Use Case 1"},
-          "operations": {
-            "check-sync": "/api/running/mef-topology/devices/device/ce5/_operations/check-sync",
-            "deep-check-sync": "/api/running/mef-topology/devices/device/ce5/_operations/deep-check-sync",
-            "re-deploy": "/api/running/mef-topology/devices/device/ce5/_operations/re-deploy",
-            "reactive-re-deploy": "/api/running/mef-topology/devices/device/ce5/_operations/reactive-re-deploy",
-            "get-modifications": "/api/running/mef-topology/devices/device/ce5/_operations/get-modifications",
-            "un-deploy": "/api/running/mef-topology/devices/device/ce5/_operations/un-deploy"
-          }
+          "@role": {"annotation": "EP-LAN Use Case 1"}
         },
         {
           "dev-id": "ce6",
@@ -513,15 +425,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "role": "ce",
-          "@role": {"annotation": "EP-LAN Use Case 1"},
-          "operations": {
-            "check-sync": "/api/running/mef-topology/devices/device/ce6/_operations/check-sync",
-            "deep-check-sync": "/api/running/mef-topology/devices/device/ce6/_operations/deep-check-sync",
-            "re-deploy": "/api/running/mef-topology/devices/device/ce6/_operations/re-deploy",
-            "reactive-re-deploy": "/api/running/mef-topology/devices/device/ce6/_operations/reactive-re-deploy",
-            "get-modifications": "/api/running/mef-topology/devices/device/ce6/_operations/get-modifications",
-            "un-deploy": "/api/running/mef-topology/devices/device/ce6/_operations/un-deploy"
-          }
+          "@role": {"annotation": "EP-LAN Use Case 1"}
         },
         {
           "dev-id": "ce7",
@@ -550,15 +454,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "role": "ce",
-          "@role": {"annotation": "EP-LAN Use Case 1"},
-          "operations": {
-            "check-sync": "/api/running/mef-topology/devices/device/ce7/_operations/check-sync",
-            "deep-check-sync": "/api/running/mef-topology/devices/device/ce7/_operations/deep-check-sync",
-            "re-deploy": "/api/running/mef-topology/devices/device/ce7/_operations/re-deploy",
-            "reactive-re-deploy": "/api/running/mef-topology/devices/device/ce7/_operations/reactive-re-deploy",
-            "get-modifications": "/api/running/mef-topology/devices/device/ce7/_operations/get-modifications",
-            "un-deploy": "/api/running/mef-topology/devices/device/ce7/_operations/un-deploy"
-          }
+          "@role": {"annotation": "EP-LAN Use Case 1"}
         },
         {
           "dev-id": "ce8",
@@ -587,15 +483,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "role": "ce",
-          "@role": {"annotation": "Used for Negative Tests"},
-          "operations": {
-            "check-sync": "/api/running/mef-topology/devices/device/ce8/_operations/check-sync",
-            "deep-check-sync": "/api/running/mef-topology/devices/device/ce8/_operations/deep-check-sync",
-            "re-deploy": "/api/running/mef-topology/devices/device/ce8/_operations/re-deploy",
-            "reactive-re-deploy": "/api/running/mef-topology/devices/device/ce8/_operations/reactive-re-deploy",
-            "get-modifications": "/api/running/mef-topology/devices/device/ce8/_operations/get-modifications",
-            "un-deploy": "/api/running/mef-topology/devices/device/ce8/_operations/un-deploy"
-          }
+          "@role": {"annotation": "Used for Negative Tests"}
         },
         {
           "dev-id": "ce9",
@@ -620,6 +508,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             ]
           },
           "role": "ce",
+<<<<<<< Upstream, based on origin/master
 <<<<<<< Upstream, based on origin/master
           "@role": {"annotation": "c9 link to pe1"}
         },
@@ -1009,6 +898,9 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             "un-deploy": "/api/running/mef-topology/devices/device/ce9/_operations/un-deploy"
           }
 >>>>>>> 1739e12 Updated the test application to include the new mef-device(presto) NED developed at the MEF16 Hackathon. Updated test files.
+=======
+          "@role": {"annotation": "c9 link to pe1"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
         },
         {
           "dev-id": "p0",
@@ -1028,15 +920,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               }
             ]
           },
-          "role": "p",
-          "operations": {
-            "check-sync": "/api/running/mef-topology/devices/device/p0/_operations/check-sync",
-            "deep-check-sync": "/api/running/mef-topology/devices/device/p0/_operations/deep-check-sync",
-            "re-deploy": "/api/running/mef-topology/devices/device/p0/_operations/re-deploy",
-            "reactive-re-deploy": "/api/running/mef-topology/devices/device/p0/_operations/reactive-re-deploy",
-            "get-modifications": "/api/running/mef-topology/devices/device/p0/_operations/get-modifications",
-            "un-deploy": "/api/running/mef-topology/devices/device/p0/_operations/un-deploy"
-          }
+          "role": "p"
         },
         {
           "dev-id": "p1",
@@ -1056,15 +940,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               }
             ]
           },
-          "role": "p",
-          "operations": {
-            "check-sync": "/api/running/mef-topology/devices/device/p1/_operations/check-sync",
-            "deep-check-sync": "/api/running/mef-topology/devices/device/p1/_operations/deep-check-sync",
-            "re-deploy": "/api/running/mef-topology/devices/device/p1/_operations/re-deploy",
-            "reactive-re-deploy": "/api/running/mef-topology/devices/device/p1/_operations/reactive-re-deploy",
-            "get-modifications": "/api/running/mef-topology/devices/device/p1/_operations/get-modifications",
-            "un-deploy": "/api/running/mef-topology/devices/device/p1/_operations/un-deploy"
-          }
+          "role": "p"
         },
         {
           "dev-id": "p2",
@@ -1084,15 +960,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               }
             ]
           },
-          "role": "p",
-          "operations": {
-            "check-sync": "/api/running/mef-topology/devices/device/p2/_operations/check-sync",
-            "deep-check-sync": "/api/running/mef-topology/devices/device/p2/_operations/deep-check-sync",
-            "re-deploy": "/api/running/mef-topology/devices/device/p2/_operations/re-deploy",
-            "reactive-re-deploy": "/api/running/mef-topology/devices/device/p2/_operations/reactive-re-deploy",
-            "get-modifications": "/api/running/mef-topology/devices/device/p2/_operations/get-modifications",
-            "un-deploy": "/api/running/mef-topology/devices/device/p2/_operations/un-deploy"
-          }
+          "role": "p"
         },
         {
           "dev-id": "p3",
@@ -1112,15 +980,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               }
             ]
           },
-          "role": "p",
-          "operations": {
-            "check-sync": "/api/running/mef-topology/devices/device/p3/_operations/check-sync",
-            "deep-check-sync": "/api/running/mef-topology/devices/device/p3/_operations/deep-check-sync",
-            "re-deploy": "/api/running/mef-topology/devices/device/p3/_operations/re-deploy",
-            "reactive-re-deploy": "/api/running/mef-topology/devices/device/p3/_operations/reactive-re-deploy",
-            "get-modifications": "/api/running/mef-topology/devices/device/p3/_operations/get-modifications",
-            "un-deploy": "/api/running/mef-topology/devices/device/p3/_operations/un-deploy"
-          }
+          "role": "p"
         },
         {
           "dev-id": "pe0",
@@ -1140,15 +1000,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               }
             ]
           },
-          "role": "pe",
-          "operations": {
-            "check-sync": "/api/running/mef-topology/devices/device/pe0/_operations/check-sync",
-            "deep-check-sync": "/api/running/mef-topology/devices/device/pe0/_operations/deep-check-sync",
-            "re-deploy": "/api/running/mef-topology/devices/device/pe0/_operations/re-deploy",
-            "reactive-re-deploy": "/api/running/mef-topology/devices/device/pe0/_operations/reactive-re-deploy",
-            "get-modifications": "/api/running/mef-topology/devices/device/pe0/_operations/get-modifications",
-            "un-deploy": "/api/running/mef-topology/devices/device/pe0/_operations/un-deploy"
-          }
+          "role": "pe"
         },
         {
           "dev-id": "pe1",
@@ -1168,15 +1020,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               }
             ]
           },
-          "role": "pe",
-          "operations": {
-            "check-sync": "/api/running/mef-topology/devices/device/pe1/_operations/check-sync",
-            "deep-check-sync": "/api/running/mef-topology/devices/device/pe1/_operations/deep-check-sync",
-            "re-deploy": "/api/running/mef-topology/devices/device/pe1/_operations/re-deploy",
-            "reactive-re-deploy": "/api/running/mef-topology/devices/device/pe1/_operations/reactive-re-deploy",
-            "get-modifications": "/api/running/mef-topology/devices/device/pe1/_operations/get-modifications",
-            "un-deploy": "/api/running/mef-topology/devices/device/pe1/_operations/un-deploy"
-          }
+          "role": "pe"
         },
         {
           "dev-id": "pe2",
@@ -1196,15 +1040,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               }
             ]
           },
-          "role": "pe",
-          "operations": {
-            "check-sync": "/api/running/mef-topology/devices/device/pe2/_operations/check-sync",
-            "deep-check-sync": "/api/running/mef-topology/devices/device/pe2/_operations/deep-check-sync",
-            "re-deploy": "/api/running/mef-topology/devices/device/pe2/_operations/re-deploy",
-            "reactive-re-deploy": "/api/running/mef-topology/devices/device/pe2/_operations/reactive-re-deploy",
-            "get-modifications": "/api/running/mef-topology/devices/device/pe2/_operations/get-modifications",
-            "un-deploy": "/api/running/mef-topology/devices/device/pe2/_operations/un-deploy"
-          }
+          "role": "pe"
         },
         {
           "dev-id": "pe3",
@@ -1227,6 +1063,7 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
               }
             ]
           },
+<<<<<<< Upstream, based on origin/master
 <<<<<<< Upstream, based on origin/master
           "role": "pe"
         },
@@ -1396,6 +1233,9 @@ Pull the the Running Config so we can check for the changes like: Deep Dish Pizz
             "un-deploy": "/api/running/mef-topology/devices/device/pe3/_operations/un-deploy"
           }
 >>>>>>> 1739e12 Updated the test application to include the new mef-device(presto) NED developed at the MEF16 Hackathon. Updated test files.
+=======
+          "role": "pe"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
         }
       ]
     },

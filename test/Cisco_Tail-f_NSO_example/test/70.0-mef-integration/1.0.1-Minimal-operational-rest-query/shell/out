@@ -4,84 +4,117 @@
       "device": [
         {
           "dev-id": "CSR-1_0",
-          "device-modifications": "",
-          "commit-queue": {
-            "operations": {
-              "clear": "/api/operational/mef-topology/devices/device/CSR-1_0/commit-queue/_operations/clear",
-              "purge": "/api/operational/mef-topology/devices/device/CSR-1_0/commit-queue/_operations/purge"
-            }
-          },
           "interfaces": {
             "interface": [
               {
                 "phy": "GigabitEthernet1",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet10",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet2",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet3",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet4",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet5",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet6",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet7",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet8",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet9",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               }
             ]
           },
@@ -89,84 +122,117 @@
         },
         {
           "dev-id": "CSR-2_0",
-          "device-modifications": "",
-          "commit-queue": {
-            "operations": {
-              "clear": "/api/operational/mef-topology/devices/device/CSR-2_0/commit-queue/_operations/clear",
-              "purge": "/api/operational/mef-topology/devices/device/CSR-2_0/commit-queue/_operations/purge"
-            }
-          },
           "interfaces": {
             "interface": [
               {
                 "phy": "GigabitEthernet1",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet10",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet2",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet3",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet4",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet5",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet6",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet7",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet8",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet9",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               }
             ]
           },
@@ -174,84 +240,117 @@
         },
         {
           "dev-id": "CSR-3_0",
-          "device-modifications": "",
-          "commit-queue": {
-            "operations": {
-              "clear": "/api/operational/mef-topology/devices/device/CSR-3_0/commit-queue/_operations/clear",
-              "purge": "/api/operational/mef-topology/devices/device/CSR-3_0/commit-queue/_operations/purge"
-            }
-          },
           "interfaces": {
             "interface": [
               {
                 "phy": "GigabitEthernet1",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet10",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet2",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet3",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet4",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet5",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet6",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet7",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet8",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet9",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               }
             ]
           },
@@ -259,84 +358,117 @@
         },
         {
           "dev-id": "CSR-4_0",
-          "device-modifications": "",
-          "commit-queue": {
-            "operations": {
-              "clear": "/api/operational/mef-topology/devices/device/CSR-4_0/commit-queue/_operations/clear",
-              "purge": "/api/operational/mef-topology/devices/device/CSR-4_0/commit-queue/_operations/purge"
-            }
-          },
           "interfaces": {
             "interface": [
               {
                 "phy": "GigabitEthernet1",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet10",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet2",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet3",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet4",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet5",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet6",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet7",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet8",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet9",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-X",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               }
             ]
           },
@@ -344,51 +476,60 @@
         },
         {
           "dev-id": "ce0",
-          "device-modifications": "",
-          "commit-queue": {
-            "operations": {
-              "clear": "/api/operational/mef-topology/devices/device/ce0/commit-queue/_operations/clear",
-              "purge": "/api/operational/mef-topology/devices/device/ce0/commit-queue/_operations/purge"
-            }
-          },
           "interfaces": {
             "interface": [
               {
                 "phy": "GigabitEthernet0/1",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/2",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EPL Use Case 2"},
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+                "@ieee8023-phy": {"annotation": "EPL Use Case 2"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/3",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EVPL Use Case 1"},
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+                "@ieee8023-phy": {"annotation": "EVPL Use Case 1"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/4",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "c0 link to pe0"},
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+                "@ieee8023-phy": {"annotation": "c0 link to pe0"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
-                "phy": "Loopback0",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "Loopback0"
               }
             ]
           },
@@ -397,21 +538,18 @@
         },
         {
           "dev-id": "ce1",
-          "device-modifications": "",
-          "commit-queue": {
-            "operations": {
-              "clear": "/api/operational/mef-topology/devices/device/ce1/commit-queue/_operations/clear",
-              "purge": "/api/operational/mef-topology/devices/device/ce1/commit-queue/_operations/purge"
-            }
-          },
           "interfaces": {
             "interface": [
               {
                 "phy": "GigabitEthernet0/1",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/2",
@@ -419,27 +557,41 @@
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
 =======
                 "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+<<<<<<< Upstream, based on origin/master
                 "@ieee8023-phy": {"annotation": "EVPL Use Case 2"},
 >>>>>>> 21c31ff Added the 2 remaining BWP Test cases and updated mef-services.yang with a fix to an issue found in testing.
                 "status": {
                   "speed": 0
                 }
+=======
+                "@ieee8023-phy": {"annotation": "EVPL Use Case 2"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/3",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EVPL Use Case 1"},
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+                "@ieee8023-phy": {"annotation": "EVPL Use Case 1"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/4",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "c1 link to pe0"},
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+                "@ieee8023-phy": {"annotation": "c1 link to pe0"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               }
             ]
           },
@@ -448,42 +600,51 @@
         },
         {
           "dev-id": "ce10",
-          "device-modifications": "",
-          "commit-queue": {
-            "operations": {
-              "clear": "/api/operational/mef-topology/devices/device/ce10/commit-queue/_operations/clear",
-              "purge": "/api/operational/mef-topology/devices/device/ce10/commit-queue/_operations/purge"
-            }
-          },
           "interfaces": {
             "interface": [
               {
                 "phy": "fe-3-1",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-100BASE-TX",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "fe-3-2",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-100BASE-TX",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "fe-4-1",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-100BASE-TX",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "fe-4-2",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-100BASE-TX",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               }
             ]
           },
@@ -492,37 +653,44 @@
         },
         {
           "dev-id": "ce2",
-          "device-modifications": "",
-          "commit-queue": {
-            "operations": {
-              "clear": "/api/operational/mef-topology/devices/device/ce2/commit-queue/_operations/clear",
-              "purge": "/api/operational/mef-topology/devices/device/ce2/commit-queue/_operations/purge"
-            }
-          },
           "interfaces": {
             "interface": [
               {
                 "phy": "GigabitEthernet0/1",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/2",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "c2 link to pe0"},
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+                "@ieee8023-phy": {"annotation": "c2 link to pe0"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/3",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EVPL Use Case 1 and EPL Use Case 2"},
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+                "@ieee8023-phy": {"annotation": "EVPL Use Case 1 and EPL Use Case 2"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               }
             ]
           },
@@ -531,29 +699,31 @@
         },
         {
           "dev-id": "ce3",
-          "device-modifications": "",
-          "commit-queue": {
-            "operations": {
-              "clear": "/api/operational/mef-topology/devices/device/ce3/commit-queue/_operations/clear",
-              "purge": "/api/operational/mef-topology/devices/device/ce3/commit-queue/_operations/purge"
-            }
-          },
           "interfaces": {
             "interface": [
               {
                 "phy": "GigabitEthernet0/3",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/4",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "c3 link to pe1"},
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+                "@ieee8023-phy": {"annotation": "c3 link to pe1"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               }
             ]
           },
@@ -562,29 +732,31 @@
         },
         {
           "dev-id": "ce4",
-          "device-modifications": "",
-          "commit-queue": {
-            "operations": {
-              "clear": "/api/operational/mef-topology/devices/device/ce4/commit-queue/_operations/clear",
-              "purge": "/api/operational/mef-topology/devices/device/ce4/commit-queue/_operations/purge"
-            }
-          },
           "interfaces": {
             "interface": [
               {
                 "phy": "GigabitEthernet0/3",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/4",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "c4 link to pe2"},
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+                "@ieee8023-phy": {"annotation": "c4 link to pe2"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               }
             ]
           },
@@ -593,53 +765,70 @@
         },
         {
           "dev-id": "ce5",
-          "device-modifications": "",
-          "commit-queue": {
-            "operations": {
-              "clear": "/api/operational/mef-topology/devices/device/ce5/commit-queue/_operations/clear",
-              "purge": "/api/operational/mef-topology/devices/device/ce5/commit-queue/_operations/purge"
-            }
-          },
           "interfaces": {
             "interface": [
               {
                 "phy": "GigabitEthernet0/1",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/2",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EP-TREE Use Case 1"},
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+                "@ieee8023-phy": {"annotation": "EP-TREE Use Case 1"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/3",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EVP-LAN Use Case 1"},
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+                "@ieee8023-phy": {"annotation": "EVP-LAN Use Case 1"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/4",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EVP-TREE Use Case 1"},
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+                "@ieee8023-phy": {"annotation": "EVP-TREE Use Case 1"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/5",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "c5 link to pe2"},
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+                "@ieee8023-phy": {"annotation": "c5 link to pe2"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/6",
@@ -647,11 +836,15 @@
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
 =======
                 "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+<<<<<<< Upstream, based on origin/master
                 "@ieee8023-phy": {"annotation": "EPL Use Case 2"},
 >>>>>>> 698f766 Added last of the 13 new CoS/EEC Negative tests.
                 "status": {
                   "speed": 0
                 }
+=======
+                "@ieee8023-phy": {"annotation": "EPL Use Case 2"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               }
             ]
           },
@@ -660,45 +853,57 @@
         },
         {
           "dev-id": "ce6",
-          "device-modifications": "",
-          "commit-queue": {
-            "operations": {
-              "clear": "/api/operational/mef-topology/devices/device/ce6/commit-queue/_operations/clear",
-              "purge": "/api/operational/mef-topology/devices/device/ce6/commit-queue/_operations/purge"
-            }
-          },
           "interfaces": {
             "interface": [
               {
                 "phy": "GigabitEthernet0/1",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/2",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EP-TREE Use Case 1"},
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+                "@ieee8023-phy": {"annotation": "EP-TREE Use Case 1"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/3",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EVP-LAN Use Case 1 and EVP-TREE Use Case 1"},
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+                "@ieee8023-phy": {"annotation": "EVP-LAN Use Case 1 and EVP-TREE Use Case 1"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/4",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "c6 link to pe3"},
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+                "@ieee8023-phy": {"annotation": "c6 link to pe3"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               }
             ]
           },
@@ -707,45 +912,57 @@
         },
         {
           "dev-id": "ce7",
-          "device-modifications": "",
-          "commit-queue": {
-            "operations": {
-              "clear": "/api/operational/mef-topology/devices/device/ce7/commit-queue/_operations/clear",
-              "purge": "/api/operational/mef-topology/devices/device/ce7/commit-queue/_operations/purge"
-            }
-          },
           "interfaces": {
             "interface": [
               {
                 "phy": "GigabitEthernet0/1",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/2",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EP-TREE Use Case 1"},
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+                "@ieee8023-phy": {"annotation": "EP-TREE Use Case 1"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/3",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EVP-LAN Use Case 1 and EVP-TREE Use Case 1"},
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+                "@ieee8023-phy": {"annotation": "EVP-LAN Use Case 1 and EVP-TREE Use Case 1"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/4",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "c7 link to pe3"},
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+                "@ieee8023-phy": {"annotation": "c7 link to pe3"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               }
             ]
           },
@@ -754,45 +971,57 @@
         },
         {
           "dev-id": "ce8",
-          "device-modifications": "",
-          "commit-queue": {
-            "operations": {
-              "clear": "/api/operational/mef-topology/devices/device/ce8/commit-queue/_operations/clear",
-              "purge": "/api/operational/mef-topology/devices/device/ce8/commit-queue/_operations/purge"
-            }
-          },
           "interfaces": {
             "interface": [
               {
                 "phy": "GigabitEthernet0/1",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/2",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EP-TREE Use Case 1"},
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+                "@ieee8023-phy": {"annotation": "EP-TREE Use Case 1"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/3",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "EVP-LAN Use Case 1 and EVP-TREE Use Case 1"},
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+                "@ieee8023-phy": {"annotation": "EVP-LAN Use Case 1 and EVP-TREE Use Case 1"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "GigabitEthernet0/4",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX",
                 "@ieee8023-phy": {"annotation": "C8 link to pe3"},
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX",
+                "@ieee8023-phy": {"annotation": "C8 link to pe3"}
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               }
             ]
           },
@@ -801,42 +1030,51 @@
         },
         {
           "dev-id": "ce9",
-          "device-modifications": "",
-          "commit-queue": {
-            "operations": {
-              "clear": "/api/operational/mef-topology/devices/device/ce9/commit-queue/_operations/clear",
-              "purge": "/api/operational/mef-topology/devices/device/ce9/commit-queue/_operations/purge"
-            }
-          },
           "interfaces": {
             "interface": [
               {
                 "phy": "fe-3-1",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-100BASE-TX",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "fe-3-2",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-100BASE-TX",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "fe-4-1",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-100BASE-TX",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               },
               {
                 "phy": "fe-4-2",
+<<<<<<< Upstream, based on origin/master
                 "ieee8023-phy": "mef-types:ieee8023-100BASE-TX",
                 "status": {
                   "speed": 0
                 }
+=======
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               }
             ]
           },
@@ -1476,38 +1714,19 @@
 =======
 >>>>>>> 1739e12 Updated the test application to include the new mef-device(presto) NED developed at the MEF16 Hackathon. Updated test files.
           "dev-id": "p0",
-          "device-modifications": "",
-          "commit-queue": {
-            "operations": {
-              "clear": "/api/operational/mef-topology/devices/device/p0/commit-queue/_operations/clear",
-              "purge": "/api/operational/mef-topology/devices/device/p0/commit-queue/_operations/purge"
-            }
-          },
           "interfaces": {
             "interface": [
               {
-                "phy": "TenGig1/0/1",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "TenGig1/0/1"
               },
               {
-                "phy": "TenGig1/0/2",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "TenGig1/0/2"
               },
               {
-                "phy": "TenGig1/0/3",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "TenGig1/0/3"
               },
               {
-                "phy": "TenGig1/0/4",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "TenGig1/0/4"
               }
             ]
           },
@@ -1515,38 +1734,19 @@
         },
         {
           "dev-id": "p1",
-          "device-modifications": "",
-          "commit-queue": {
-            "operations": {
-              "clear": "/api/operational/mef-topology/devices/device/p1/commit-queue/_operations/clear",
-              "purge": "/api/operational/mef-topology/devices/device/p1/commit-queue/_operations/purge"
-            }
-          },
           "interfaces": {
             "interface": [
               {
-                "phy": "TenGig0/0/1",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "TenGig0/0/1"
               },
               {
-                "phy": "TenGig0/0/2",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "TenGig0/0/2"
               },
               {
-                "phy": "TenGig0/0/3",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "TenGig0/0/3"
               },
               {
-                "phy": "TenGig0/0/4",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "TenGig0/0/4"
               }
             ]
           },
@@ -1554,38 +1754,19 @@
         },
         {
           "dev-id": "p2",
-          "device-modifications": "",
-          "commit-queue": {
-            "operations": {
-              "clear": "/api/operational/mef-topology/devices/device/p2/commit-queue/_operations/clear",
-              "purge": "/api/operational/mef-topology/devices/device/p2/commit-queue/_operations/purge"
-            }
-          },
           "interfaces": {
             "interface": [
               {
-                "phy": "TenGig0/0/1",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "TenGig0/0/1"
               },
               {
-                "phy": "TenGig0/0/2",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "TenGig0/0/2"
               },
               {
-                "phy": "TenGig0/0/3",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "TenGig0/0/3"
               },
               {
-                "phy": "TenGig0/0/4",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "TenGig0/0/4"
               }
             ]
           },
@@ -1593,38 +1774,19 @@
         },
         {
           "dev-id": "p3",
-          "device-modifications": "",
-          "commit-queue": {
-            "operations": {
-              "clear": "/api/operational/mef-topology/devices/device/p3/commit-queue/_operations/clear",
-              "purge": "/api/operational/mef-topology/devices/device/p3/commit-queue/_operations/purge"
-            }
-          },
           "interfaces": {
             "interface": [
               {
-                "phy": "TenGig1/0/1",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "TenGig1/0/1"
               },
               {
-                "phy": "TenGig1/0/2",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "TenGig1/0/2"
               },
               {
-                "phy": "TenGig1/0/3",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "TenGig1/0/3"
               },
               {
-                "phy": "TenGig1/0/4",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "TenGig1/0/4"
               }
             ]
           },
@@ -1632,38 +1794,19 @@
         },
         {
           "dev-id": "pe0",
-          "device-modifications": "",
-          "commit-queue": {
-            "operations": {
-              "clear": "/api/operational/mef-topology/devices/device/pe0/commit-queue/_operations/clear",
-              "purge": "/api/operational/mef-topology/devices/device/pe0/commit-queue/_operations/purge"
-            }
-          },
           "interfaces": {
             "interface": [
               {
-                "phy": "GigabitEthernet0/0/0/1",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "GigabitEthernet0/0/0/1"
               },
               {
-                "phy": "GigabitEthernet0/0/0/2",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "GigabitEthernet0/0/0/2"
               },
               {
-                "phy": "GigabitEthernet0/0/0/3",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "GigabitEthernet0/0/0/3"
               },
               {
-                "phy": "GigabitEthernet0/0/0/4",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "GigabitEthernet0/0/0/4"
               }
             ]
           },
@@ -1671,38 +1814,19 @@
         },
         {
           "dev-id": "pe1",
-          "device-modifications": "",
-          "commit-queue": {
-            "operations": {
-              "clear": "/api/operational/mef-topology/devices/device/pe1/commit-queue/_operations/clear",
-              "purge": "/api/operational/mef-topology/devices/device/pe1/commit-queue/_operations/purge"
-            }
-          },
           "interfaces": {
             "interface": [
               {
-                "phy": "GigabitEthernet0/0/0/1",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "GigabitEthernet0/0/0/1"
               },
               {
-                "phy": "GigabitEthernet0/0/0/2",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "GigabitEthernet0/0/0/2"
               },
               {
-                "phy": "GigabitEthernet0/0/0/3",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "GigabitEthernet0/0/0/3"
               },
               {
-                "phy": "GigabitEthernet0/0/0/4",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "GigabitEthernet0/0/0/4"
               }
             ]
           },
@@ -1710,38 +1834,19 @@
         },
         {
           "dev-id": "pe2",
-          "device-modifications": "",
-          "commit-queue": {
-            "operations": {
-              "clear": "/api/operational/mef-topology/devices/device/pe2/commit-queue/_operations/clear",
-              "purge": "/api/operational/mef-topology/devices/device/pe2/commit-queue/_operations/purge"
-            }
-          },
           "interfaces": {
             "interface": [
               {
-                "phy": "xe-0/0/0",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "xe-0/0/0"
               },
               {
-                "phy": "xe-0/0/1",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "xe-0/0/1"
               },
               {
-                "phy": "xe-0/0/2",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "xe-0/0/2"
               },
               {
-                "phy": "xe-0/0/3",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "xe-0/0/3"
               }
             ]
           },
@@ -1749,40 +1854,22 @@
         },
         {
           "dev-id": "pe3",
-          "device-modifications": "",
-          "commit-queue": {
-            "operations": {
-              "clear": "/api/operational/mef-topology/devices/device/pe3/commit-queue/_operations/clear",
-              "purge": "/api/operational/mef-topology/devices/device/pe3/commit-queue/_operations/purge"
-            }
-          },
           "interfaces": {
             "interface": [
               {
-                "phy": "GigabitEthernet0/0/0/1",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "GigabitEthernet0/0/0/1"
               },
               {
-                "phy": "GigabitEthernet0/0/0/2",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "GigabitEthernet0/0/0/2"
               },
               {
-                "phy": "GigabitEthernet0/0/0/3",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "GigabitEthernet0/0/0/3"
               },
               {
-                "phy": "GigabitEthernet0/0/0/4",
-                "status": {
-                  "speed": 0
-                }
+                "phy": "GigabitEthernet0/0/0/4"
               },
               {
+<<<<<<< Upstream, based on origin/master
                 "phy": "GigabitEthernet0/0/0/5",
 <<<<<<< Upstream, based on origin/master
                 "status": {
@@ -2045,6 +2132,9 @@
                 "status": {
                   "speed": 0
                 }
+=======
+                "phy": "GigabitEthernet0/0/0/5"
+>>>>>>> 2c6a90f Updated test output and mef-topology to account for removal of mef-device package
               }
             ]
           },

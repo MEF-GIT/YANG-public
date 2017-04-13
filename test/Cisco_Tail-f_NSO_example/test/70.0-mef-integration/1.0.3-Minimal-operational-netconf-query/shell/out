@@ -7435,76 +7435,155 @@
       <devices>
         <device>
           <dev-id>CSR-1_0</dev-id>
-          <device-modifications/>
           <interfaces>
             <interface>
               <phy>GigabitEthernet1</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet10</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet2</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet3</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet4</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet5</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet6</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet7</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet8</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet9</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
           </interfaces>
@@ -7512,76 +7591,155 @@
         </device>
         <device>
           <dev-id>CSR-2_0</dev-id>
-          <device-modifications/>
           <interfaces>
             <interface>
               <phy>GigabitEthernet1</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet10</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet2</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet3</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet4</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet5</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet6</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet7</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet8</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet9</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
           </interfaces>
@@ -7589,76 +7747,155 @@
         </device>
         <device>
           <dev-id>CSR-3_0</dev-id>
-          <device-modifications/>
           <interfaces>
             <interface>
               <phy>GigabitEthernet1</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet10</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet2</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet3</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet4</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet5</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet6</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet7</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet8</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet9</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
           </interfaces>
@@ -7666,76 +7903,155 @@
         </device>
         <device>
           <dev-id>CSR-4_0</dev-id>
-          <device-modifications/>
           <interfaces>
             <interface>
               <phy>GigabitEthernet1</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet10</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet2</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet3</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet4</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet5</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet6</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet7</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet8</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet9</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-X</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
           </interfaces>
@@ -7743,40 +8059,79 @@
         </device>
         <device>
           <dev-id>ce0</dev-id>
-          <device-modifications/>
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/1</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/2</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EPL Use Case 2">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/3</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVPL Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/4</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="c0 link to pe0">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>Loopback0</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
           </interfaces>
@@ -7784,13 +8139,20 @@
         </device>
         <device>
           <dev-id>ce1</dev-id>
-          <device-modifications/>
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/1</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
@@ -7801,21 +8163,45 @@
               <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EVPL Use Case 2">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
 >>>>>>> 21c31ff Added the 2 remaining BWP Test cases and updated mef-services.yang with a fix to an issue found in testing.
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/3</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVPL Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/4</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="c1 link to pe0">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
           </interfaces>
@@ -7823,34 +8209,65 @@
         </device>
         <device>
           <dev-id>ce10</dev-id>
-          <device-modifications/>
           <interfaces>
             <interface>
               <phy>fe-3-1</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-TX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>fe-3-2</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-TX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>fe-4-1</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-TX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>fe-4-2</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-TX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
           </interfaces>
@@ -7858,27 +8275,50 @@
         </device>
         <device>
           <dev-id>ce2</dev-id>
-          <device-modifications/>
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/1</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/2</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="c2 link to pe0">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/3</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVPL Use Case 1 and EPL Use Case 2">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
           </interfaces>
@@ -7886,20 +8326,35 @@
         </device>
         <device>
           <dev-id>ce3</dev-id>
-          <device-modifications/>
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/3</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/4</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="c3 link to pe1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
           </interfaces>
@@ -7907,20 +8362,35 @@
         </device>
         <device>
           <dev-id>ce4</dev-id>
-          <device-modifications/>
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/3</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/4</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="c4 link to pe2">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
           </interfaces>
@@ -7928,41 +8398,80 @@
         </device>
         <device>
           <dev-id>ce5</dev-id>
-          <device-modifications/>
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/1</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/2</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/3</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVP-LAN Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/4</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/5</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="c5 link to pe2">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
@@ -7973,7 +8482,15 @@
               <ieee8023-phy xmlns:mef-service-types="urn:mef:xid:mef-service-types" annotation="EPL Use Case 2">mef-service-types:ieee8023-1000BASE-SX</ieee8023-phy>
 >>>>>>> 698f766 Added last of the 13 new CoS/EEC Negative tests.
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
           </interfaces>
@@ -7981,34 +8498,65 @@
         </device>
         <device>
           <dev-id>ce6</dev-id>
-          <device-modifications/>
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/1</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/2</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/3</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVP-LAN Use Case 1 and EVP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/4</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="c6 link to pe3">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
           </interfaces>
@@ -8016,34 +8564,65 @@
         </device>
         <device>
           <dev-id>ce7</dev-id>
-          <device-modifications/>
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/1</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/2</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/3</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVP-LAN Use Case 1 and EVP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/4</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="c7 link to pe3">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
           </interfaces>
@@ -8051,34 +8630,65 @@
         </device>
         <device>
           <dev-id>ce8</dev-id>
-          <device-modifications/>
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/1</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/2</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/3</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="EVP-LAN Use Case 1 and EVP-TREE Use Case 1">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/4</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types" annotation="C8 link to pe3">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
           </interfaces>
@@ -8086,34 +8696,65 @@
         </device>
         <device>
           <dev-id>ce9</dev-id>
-          <device-modifications/>
           <interfaces>
             <interface>
               <phy>fe-3-1</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-TX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>fe-3-2</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-TX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>fe-4-1</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-TX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>fe-4-2</phy>
               <ieee8023-phy xmlns:mef-types="urn:mef:yang:mef-types">mef-types:ieee8023-100BASE-TX</ieee8023-phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
           </interfaces>
@@ -8742,30 +9383,61 @@
 =======
 >>>>>>> 1739e12 Updated the test application to include the new mef-device(presto) NED developed at the MEF16 Hackathon. Updated test files.
           <dev-id>p0</dev-id>
-          <device-modifications/>
           <interfaces>
             <interface>
               <phy>TenGig1/0/1</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>TenGig1/0/2</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>TenGig1/0/3</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>TenGig1/0/4</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
           </interfaces>
@@ -8773,30 +9445,61 @@
         </device>
         <device>
           <dev-id>p1</dev-id>
-          <device-modifications/>
           <interfaces>
             <interface>
               <phy>TenGig0/0/1</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>TenGig0/0/2</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>TenGig0/0/3</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>TenGig0/0/4</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
           </interfaces>
@@ -8804,30 +9507,61 @@
         </device>
         <device>
           <dev-id>p2</dev-id>
-          <device-modifications/>
           <interfaces>
             <interface>
               <phy>TenGig0/0/1</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>TenGig0/0/2</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>TenGig0/0/3</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>TenGig0/0/4</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
           </interfaces>
@@ -8835,30 +9569,61 @@
         </device>
         <device>
           <dev-id>p3</dev-id>
-          <device-modifications/>
           <interfaces>
             <interface>
               <phy>TenGig1/0/1</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>TenGig1/0/2</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>TenGig1/0/3</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>TenGig1/0/4</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
           </interfaces>
@@ -8866,30 +9631,61 @@
         </device>
         <device>
           <dev-id>pe0</dev-id>
-          <device-modifications/>
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/0/0/1</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/2</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/3</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/4</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
           </interfaces>
@@ -8897,30 +9693,61 @@
         </device>
         <device>
           <dev-id>pe1</dev-id>
-          <device-modifications/>
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/0/0/1</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/2</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/3</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/4</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
           </interfaces>
@@ -8928,30 +9755,61 @@
         </device>
         <device>
           <dev-id>pe2</dev-id>
-          <device-modifications/>
           <interfaces>
             <interface>
               <phy>xe-0/0/0</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>xe-0/0/1</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>xe-0/0/2</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>xe-0/0/3</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
           </interfaces>
@@ -8959,30 +9817,61 @@
         </device>
         <device>
           <dev-id>pe3</dev-id>
-          <device-modifications/>
           <interfaces>
             <interface>
               <phy>GigabitEthernet0/0/0/1</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/2</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/3</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
               <phy>GigabitEthernet0/0/0/4</phy>
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
             <interface>
@@ -9240,7 +10129,15 @@
 =======
 >>>>>>> 1739e12 Updated the test application to include the new mef-device(presto) NED developed at the MEF16 Hackathon. Updated test files.
               <status>
-                <speed>0</speed>
+                <rpc-error xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+                  <error-type>application</error-type>
+                  <error-tag>operation-failed</error-tag>
+                  <error-severity>error</error-severity>
+                  <error-message xml:lang="en">application communication failure</error-message>
+                  <error-info>
+                    <bad-element>speed</bad-element>
+                  </error-info>
+                </rpc-error>
               </status>
             </interface>
           </interfaces>
