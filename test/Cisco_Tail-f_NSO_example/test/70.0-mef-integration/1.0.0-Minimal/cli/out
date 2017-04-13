@@ -67,14 +67,6 @@ sync-result {
     result true
 }
 sync-result {
-    device mef-device_0
-    result true
-}
-sync-result {
-    device mef-device_1
-    result true
-}
-sync-result {
     device p0
     result true
 }

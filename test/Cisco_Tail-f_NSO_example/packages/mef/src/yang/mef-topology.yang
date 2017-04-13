@@ -139,9 +139,6 @@ module mef-topology {
               "Device Identifier.";
           }
         
-        uses ncs:service-data;
-        ncs:servicepoint "mef-topology-servicepoint";
-        
         container interfaces {
           description
             "Physical Ports/Interfaces associated with this " +
