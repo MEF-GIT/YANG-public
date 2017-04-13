@@ -1,6 +1,6 @@
 # The order of packages is significant as there are dependencies between
 # the packages. Typically generated namespaces are used by other packages.
-PACKAGES = l3vpn l3vpnui mef mef-device
+PACKAGES = l3vpn l3vpnui mef
 
 # The create-network argument to ncs-netsim
 NETWORK = create-network cisco-ios 9 ce \
@@ -13,7 +13,6 @@ NETWORK = create-network cisco-ios 9 ce \
           	  create-network ./packages/cisco-ios 1 CSR-2_ \
           	  create-network ./packages/cisco-ios 1 CSR-3_ \
           	  create-network ./packages/cisco-ios 1 CSR-4_ \
-		  create-network ./packages/mef-device 2 mef-device_ \
 		  create-network cisco-iosxr 4 p
 
 NETSIM_DIR = netsim
