@@ -1,5 +1,5 @@
-module mef-global {
-  namespace "urn:mef:xid:mef-global";
+module mef-sof-global {
+  namespace "urn:mef:yang:mef-sof-global";
   prefix mef-global;
 
   import ietf-yang-types {
@@ -245,9 +245,9 @@ module mef-global {
                     "This is a friendly name for specific performance profile.";
                 }
                 choice one-way-performance-metric {
+                  mandatory true;
                   description
                     "Choice of different One-Way Performance Objectives";
-                  mandatory true;
                   case fd {
                     container one-way-frame-delay-pm {
                       description
@@ -532,7 +532,11 @@ module mef-global {
                         description
                           "This attribute identifies the name of a class of service (CoS).";
                       }
+                      description
+                        "List of subtypes.";
                     }
+                    description
+                      "Container for list of subtypes configured.";
                   }
                 }
                 case simple-option {
@@ -544,6 +548,8 @@ module mef-global {
                       "This attribute identifies the name of a class of service (CoS).";
                   }
                 }
+                description
+                  "Simple or subtype choice.";
               }
             }
           }
@@ -600,7 +606,11 @@ module mef-global {
                         description
                           "This attribute identifies the name of a Egress Equivalence Class (EEC).";
                       }
+                      description
+                        "List of subtypes.";
                     }
+                    description
+                      "Container for subtypes.";
                   }
                 }
                 case simple-option {
@@ -612,6 +622,8 @@ module mef-global {
                       "This attribute identifies the name of a Egress Equivalence Class (EEC).";
                   }
                 }
+                description
+                  "Choice of simple or subytpe configuration ";
               }
             }
           }

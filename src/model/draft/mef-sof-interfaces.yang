@@ -1,5 +1,5 @@
-module mef-interfaces {
-  namespace "urn:mef:xid:mef-interfaces";
+module mef-sof-interfaces {
+  namespace "urn:mef:yang:mef-sof-interfaces";
   prefix mef-interfaces;
 
   import ietf-yang-types {
@@ -8,7 +8,7 @@ module mef-interfaces {
   import mef-service-types {
     prefix mef-types;
   }
-  import mef-global {
+  import mef-sof-global {
     prefix mef-global;
   }
   import mef-topology {
@@ -205,7 +205,6 @@ module mef-interfaces {
         choice ingress-bwp-options {
           description
             "Choice to ensure one cannot configure BWP per-uni and envelopes at the same time.";
-          mandatory false;
           case ingress-envelopes-options {
             container ingress-envelopes {
               presence "Ingress Bandwidth Profile Envelopes configured.";
@@ -286,7 +285,6 @@ module mef-interfaces {
         choice egress-bwp-options {
           description
             "Choice to ensure one cannot configure BWP per-uni and envelopes at the same time.";
-          mandatory false;
           case egress-envelopes-options {
             container egress-envelopes {
               presence "Egress Bandwidth Profile Envelopes configured.";
