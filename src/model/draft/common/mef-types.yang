@@ -1,5 +1,5 @@
-module mef-service-types {
-  namespace "urn:mef:xid:mef-service-types";
+module mef-types {
+  namespace "urn:mef:yang:mef-types";
   prefix mef-service-types;
 
   organization "MEF Forum";

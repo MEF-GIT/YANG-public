@@ -1,17 +1,17 @@
-module mef-sof-services {
-  namespace "urn:mef:yang:mef-sof-services";
+module mef-legato-services {
+  namespace "urn:mef:yang:mef-legato-services";
   prefix mef-services;
 
   import ietf-yang-types {
     prefix yang;
   }
-  import mef-service-types {
+  import mef-types {
     prefix mef-types;
   }
-  import mef-sof-global {
+  import mef-legato-global {
     prefix mef-global;
   }
-  import mef-sof-interfaces {
+  import mef-legato-interfaces {
     prefix mef-interfaces;
   }
 
@@ -40,9 +40,6 @@ module mef-sof-services {
       Version 2 (SMIv2) MIB Modules to YANG Modules', 2011-11-25  
       [802.1AB] refers to 'Station and Media Access Control
       Connectivity Discovery', IEEE 802.1AB-2009, September 2009
-      [802.1q] refers to IEEE 802.1Q-2011 'IEEE Standard for Local
-      and metropolitan area networks --Media Access Control (MAC)
-      Bridges and Virtual Bridged Local Area Networks, August 2011
       [802-2001] refers to 'IEEE Standard for Local and Metropolitan
       Area Networks: Overview and Architecture', IEEE 802-2001,
       February 2002
@@ -53,8 +50,6 @@ module mef-sof-services {
       [MEF40] refers to MEF 40 
       'UNI and EVC Definition of Managed Objects', April 2013
       [MEF45] refers to MEF 45 'Multi-CEN L2CP', August 2014
-      [MEF7.2] refers to MEF 7.2 
-      'Carrier Ethernet Management Information Model', April 2013
       [MEF7.3] refers to MEF 7.3 
       'Carrier Ethernet Management Information Model',
       Working Draft #1 2015
@@ -63,10 +58,7 @@ module mef-sof-services {
       [RFC 2863] refers to IETF RFC 2863 'The Interfaces Group MIB',
       June 2000
       [RFC 3419] refers to IETF RFC 3419 
-      'Textual Conventions for Transport Addresses', December 2002
-      [Y.1731] refers to ITU-T Y.1731 
-      'OAM functions and mechanisms for Ethernet based networks',
-      July 2011
+      'Textual Conventions for Transport Addresses', December 2002,
       [Q.840.1] refers to ITU-T Q.840.1 
       'Requirements and analysis for NMS-EMS management interface
       of Ethernet over Transport and Metro Ethernet 
@@ -95,13 +87,13 @@ module mef-sof-services {
 
   container mef-services {
     description
-      "MEF Services Configuration and Status";
+      "Container for all MEF Services including Configuration and Status";
     container carrier-ethernet {
       description
-        "MEF Services for Carrier EthernetConfiguration and Status";
+        "MEF Services for Carrier Ethernet Configuration and Status";
       container subscriber-services {
         description
-          "MEF Subscriber ServicesConfiguration and Status";
+          "MEF Subscriber Services Configuration and Status";
         list evc {
           key "evc-id";
           description
@@ -109,8 +101,10 @@ module mef-sof-services {
           leaf evc-id {
             type mef-types:evc-id-type;
             description
-              "An identifier for the EVC, that is unique across all the EVCs in the Service Provider's CEN";
-            reference "[MEF10.3] Section 8.2 [R7]. [MEF7.3] Section 7.2.";
+              "An identifier for the EVC, that is unique across all 
+               the EVCs in the Service Provider's CEN";
+            reference 
+            	"[MEF10.3] Section 8.2 [R7]. [MEF7.3] Section 7.2.";
           }
           container cos-names {
             description
@@ -128,7 +122,9 @@ module mef-sof-services {
           }
           container end-points {
             description
-              "EVC End Point configuration and status. Note that EVC End Points contain the EVC per UNI attributes from MEF 10.3.";
+              "EVC End Point configuration and status. Note that 
+               EVC End Points contain the EVC per UNI attributes 
+               from MEF 10.3.";
             list end-point {
               must "not(ce-vlans/ce-vlan[2]) or ../../ce-vlan-id-preservation = 'true'" {
                 error-message "When more than one CE-VLAN-ID is mapped to an EVC at a UNI, the EVC must have CE-VLAN ID Preservation Enabled.";

@@ -5,15 +5,12 @@ module mef-topology {
   import tailf-common {
 	  prefix tailf;
   }
-<<<<<<< Upstream, based on origin/master
-=======
   import tailf-ncs {
     prefix ncs;
   }
-  import mef-service-types {
+  import mef-types {
 	    prefix mef-types;
   }
->>>>>>> 0d751f3 Updates to address Action Items from CFC1 Review Meetings. All modules modified but mostly mef-global.
   organization "MEF Forum";
   contact
     "Web URL: http://mef.net/ \\
@@ -79,8 +76,6 @@ module mef-topology {
      of Ethernet over Transport and Metro Ethernet 
      Network(EoT/MEN)' March 2007";
 
-<<<<<<< Upstream, based on origin/master
-=======
   revision 2017-01-10 {
  	    description
  	      "Updated to address CFC1 Review Comments.";
@@ -88,27 +83,22 @@ module mef-topology {
  	      "EVC Ethernet Services Definitions YANG Modules 
  	       (MEF XX), TBD";
   }
-     
->>>>>>> 0d751f3 Updates to address Action Items from CFC1 Review Meetings. All modules modified but mostly mef-global.
+
   revision 2016-07-01 {
      description
-        	      "Updated to better align with MEF 7.3 and
-        	       MEF Common Information Model attributes";
-     reference "EVC Ethernet Services Definitions YANG Modules
-        	    	      (MEF XX), TBD";
+        "Updated to better align with MEF 7.3 and
+         MEF Common Information Model attributes";
+     reference 
+    	 "EVC Ethernet Services Definitions YANG Modules
+          (MEF XX), TBD";
   }
 
   revision 2016-04-01 {
-<<<<<<< Upstream, based on origin/master
-   	    description
+   	 description
    	      "Added Operational Status output for interface " +
    	      "maximum data rate";
-=======
-   	description
-   	      "Added Operational Status output for interface maximum data rate";
-   	reference "EVC Ethernet Services Definitions YANG Modules
+   	 reference "EVC Ethernet Services Definitions YANG Modules
 	      (MEF XX), TBD";
->>>>>>> dd18f25 Fixed some of the errors found in yangvalidator.com
   }  
      
   revision 2015-05-26 {
