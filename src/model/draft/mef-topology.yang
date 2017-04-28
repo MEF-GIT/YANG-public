@@ -1,5 +1,5 @@
 module mef-topology {
-  namespace "urn:mef:xid:mef-topology";
+  namespace "urn:mef:yang:mef-topology";
   prefix mef-topology;
   
   import tailf-common {
@@ -8,7 +8,7 @@ module mef-topology {
   import tailf-ncs {
     prefix ncs;
   }
-  import mef-service-types {
+  import mef-types {
 	    prefix mef-types;
   }
   organization "MEF Forum";

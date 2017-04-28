@@ -1,14 +1,14 @@
-module mef-sof-interfaces {
-  namespace "urn:mef:yang:mef-sof-interfaces";
+module mef-legato-interfaces {
+  namespace "urn:mef:yang:mef-legato-interfaces";
   prefix mef-interfaces;
 
   import ietf-yang-types {
     prefix yang;
   }
-  import mef-service-types {
+  import mef-types {
     prefix mef-types;
   }
-  import mef-sof-global {
+  import mef-legato-global {
     prefix mef-global;
   }
   import mef-topology {

@@ -1,5 +1,5 @@
 module mef-device {
-  namespace "urn:mef:xid:mef-device";
+  namespace "urn:mef:yang:mef-device";
   prefix mef-device;
 
   import ietf-interfaces {
