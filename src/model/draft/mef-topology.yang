@@ -5,11 +5,8 @@ module mef-topology {
   import tailf-common {
 	  prefix tailf;
   }
-  import tailf-ncs {
-    prefix ncs;
-  }
   import mef-types {
-	    prefix mef-types;
+	prefix mef-types;
   }
   organization "MEF Forum";
   contact
@@ -118,10 +115,14 @@ module mef-topology {
           leaf success {
             type boolean;
             mandatory true;
+        	description
+          	  "Did the action succeed?";
           }
           leaf message {
             type string;
             mandatory true;
+        	description
+          	  "Any message associated with the output.";
           }
         }
       }    

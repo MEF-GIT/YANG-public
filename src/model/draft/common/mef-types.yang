@@ -50,8 +50,6 @@ module mef-types {
      June 2000
      [RFC 3419] refers to IETF RFC 3419 
      'Textual Conventions for Transport Addresses', 2015
-     [G.8013] refers to ITU-T G.8013 
-     'OAM functions and mechanisms for Ethernet based networks',
      July 2011
      [Q.840.1] refers to ITU-T Q.840.1 
      'Requirements and analysis for NMS-EMS management interface

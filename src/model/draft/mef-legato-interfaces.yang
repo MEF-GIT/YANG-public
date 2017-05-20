@@ -33,42 +33,14 @@ module mef-legato-interfaces {
      A number of base documents have been used to create 
      the MEF Interfaces YANG Module. The following are the 
      abbreviations for the baseline documents:
-     [RFC 6991] refers to IETF RFC 6991 'Common YANG Data Types',
-     2013-07-15  
-     [RFC 6643] refers to IETF RFC 6643 'Translation of Structure
-     of Management Information
-     Version 2 (SMIv2) MIB Modules to YANG Modules', 2011-11-25  
-     [802.1AB] refers to 'Station and Media Access Control
-     Connectivity Discovery', IEEE 802.1AB-2009, September 2009
-     [802.1q] refers to IEEE 802.1Q-2011 'IEEE Standard for Local
-     and metropolitan area networks --Media Access Control (MAC)
-     Bridges and Virtual Bridged Local Area Networks, August 2011
-     [802-2001] refers to 'IEEE Standard for Local and Metropolitan
-     Area Networks: Overview and Architecture', IEEE 802-2001,
-     February 2002
      [MEF10.3] refers to MEF 10.3 
      'Ethernet Services Attributes Phase 3', October 2013
      [MEF6.2] refers to MEF 6.2 
      'EVC Ethernet Services Defintions Phase 3', August 2014
-     [MEF40] refers to MEF 40 
-     'UNI and EVC Definition of Managed Objects', April 2013
      [MEF45] refers to MEF 45 'Multi-CEN L2CP', August 2014
      [MEF7.3] refers to MEF 7.3 
      'Carrier Ethernet Management Information Model',
-     Working Draft #1 2015
-     [RFC 2737] refers to IETF RFC 2737 'Entity MIB (Version 2)',
-     December 1999
-     [RFC 2863] refers to IETF RFC 2863 'The Interfaces Group MIB',
-     June 2000
-     [RFC 3419] refers to IETF RFC 3419 
-     'Textual Conventions for Transport Addresses', December 2002
-     [Y.1731] refers to ITU-T Y.1731 
-     'OAM functions and mechanisms for Ethernet based networks',
-     July 2011
-     [Q.840.1] refers to ITU-T Q.840.1 
-     'Requirements and analysis for NMS-EMS management interface
-     of Ethernet over Transport and Metro Ethernet 
-     Network(EoT/MEN)' March 2007";
+     Working Draft #1 2015";
 
   revision 2017-01-10 {
     description
@@ -229,7 +201,9 @@ module mef-legato-interfaces {
                     reference "[MEF10.3] Section 12.1. [MEF6.2] Section 10.1. [MEF6.2] Section 8.2.1, [R3]. ";
                     leaf bw-profile {
                       type leafref {
-                        path "/mef-global:mef-global/mef-global:profiles/mef-global:bwp-flows-parameter-set/mef-global:bwp-flow-parameter-set/mef-global:bwp-flow-parameter-set-id";
+                        path "/mef-global:mef-global/mef-global:bwp-flows-parameter-set/" +
+                             "mef-global:bwp-flow-parameter-set/" +
+                        	 "mef-global:id";
                       }
                       must "(../../../../../token-share-enabled = 'true') or ((../../../../../token-share-enabled = 'false') and (count(../../bwp-flow) = 1))" {
                         error-message "A UNI with Token Share Disabled MUST have exactly one Bandwidth Profile Flow per envelope.";
@@ -237,7 +211,10 @@ module mef-legato-interfaces {
                           "A UNI with Token Share Disabled MUST have exactly one Bandwidth Profile Flow per envelope.";
                         reference "[MEF 10.3] [R3].";
                       }
-                      must "(../../../coupling-enabled = 'false') or (/mef-global:mef-global/mef-global:profiles/mef-global:bwp-flows-parameter-set/mef-global:bwp-flow-parameter-set[mef-global:bwp-flow-parameter-set-id = current()]/mef-global:coupling-enabled = 'false')" {
+                      must "(../../../coupling-enabled = 'false') or " +
+                      "(/mef-global:mef-global/mef-global:bwp-flows-parameter-set/" +
+                      "mef-global:bwp-flow-parameter-set[mef-global:id = " +
+                      "current()]/mef-global:coupling-enabled = 'false')" {
                         error-message "If an Ingress Envelope's Coupling Flag is Enabled, then the Coupling Flags must be disabled for all Bandwidth Profile Flows mapped to the Envelope.";
                         description
                           "If an Ingress Envelope's Coupling Flag is Enabled, then the Coupling Flags must be disabled for all Bandwidth Profile Flows mapped to the Envelope.";
@@ -274,7 +251,9 @@ module mef-legato-interfaces {
           case ingress-per-uni-option {
             leaf ingress-bw-profile-per-uni {
               type leafref {
-                path "/mef-global:mef-global/mef-global:profiles/mef-global:bwp-flows-parameter-set/mef-global:bwp-flow-parameter-set/mef-global:bwp-flow-parameter-set-id";
+                path "/mef-global:mef-global/mef-global:bwp-flows-parameter-set/" +
+                     "mef-global:bwp-flow-parameter-set/" +
+                     "mef-global:id";
               }
               description
                 "Ingress Bandwidth Profile for this UNI.";
@@ -309,15 +288,24 @@ module mef-legato-interfaces {
                     reference "[MEF10.3] Section 12.1. [MEF6.2] Section 10.1. [MEF6.2] Section 8.2.1, [R3]. ";
                     leaf bw-profile {
                       type leafref {
-                        path "/mef-global:mef-global/mef-global:profiles/mef-global:bwp-flows-parameter-set/mef-global:bwp-flow-parameter-set/mef-global:bwp-flow-parameter-set-id";
+                        path "/mef-global:mef-global/mef-global:bwp-flows-parameter-set/" +
+                             "mef-global:bwp-flow-parameter-set/" +
+                             "mef-global:id";
                       }
-                      must "(../../../../../token-share-enabled = 'true') or ((../../../../../token-share-enabled = 'false') and (count(../../bwp-flow) = 1))" {
-                        error-message "A UNI with Token Share Disabled must have exactly one Bandwidth Profile Flow per envelope.";
+                      must "(../../../../../token-share-enabled = 'true') or " +
+                      "((../../../../../token-share-enabled = 'false') and " +
+                      "(count(../../bwp-flow) = 1))" {
+                        error-message "A UNI with Token Share Disabled must have 
+                        	exactly one Bandwidth Profile Flow per envelope.";
                         description
-                          "A UNI with Token Share Disabled must have exactly one Bandwidth Profile Flow per envelope.";
+                          "A UNI with Token Share Disabled must have exactly one 
+                           Bandwidth Profile Flow per envelope.";
                         reference "[MEF 6.2] [R3].";
                       }
-                      must "(../../../coupling-enabled = 'false') or (/mef-global:mef-global/mef-global:profiles/mef-global:bwp-flows-parameter-set/mef-global:bwp-flow-parameter-set[mef-global:bwp-flow-parameter-set-id = current()]/mef-global:coupling-enabled = 'false')" {
+                      must "(../../../coupling-enabled = 'false') or " +
+                      "(/mef-global:mef-global/mef-global:bwp-flows-parameter-set/" +
+                      "mef-global:bwp-flow-parameter-set[mef-global:id = " +
+                      "current()]/mef-global:coupling-enabled = 'false')" {
                         error-message "If an Egress Envelope's Coupling Flag is Enabled, then the Coupling Flags must be disabled for all Bandwidth Profile Flows mapped to the Envelope.";
                         description
                           "If an Egress Envelope's Coupling Flag is Enabled, then the Coupling Flags must be disabled for all Bandwidth Profile Flows mapped to the Envelope.";
@@ -354,7 +342,9 @@ module mef-legato-interfaces {
           case egress-per-uni-option {
             leaf egress-bw-profile-per-uni {
               type leafref {
-                path "/mef-global:mef-global/mef-global:profiles/mef-global:bwp-flows-parameter-set/mef-global:bwp-flow-parameter-set/mef-global:bwp-flow-parameter-set-id";
+                path "/mef-global:mef-global/mef-global:bwp-flows-parameter-set/" +
+                     "mef-global:bwp-flow-parameter-set/" +
+                     "mef-global:id";
               }
               description
                 "Egress Bandwidth Profile Flow for this UNI.";
@@ -514,12 +504,12 @@ module mef-legato-interfaces {
           type mef-types:l2cp-address-set-type;
           default "cta";
           description
-            "The L2CP Address Set Service Attribute specifies the subset of the Bridge Reserved Addresses that are filtered (i.e. L2CP Frames with this destination address are Peered or Discarded but not Passed) at a L2CP Decision Point.";
+            "The L2CP Address Set Service Attribute specifies the subset of the Bridge Reserved Addrßesses that are filtered (i.e. L2CP Frames with this destination address are Peered or Discarded but not Passed) at a L2CP Decision Point.";
           reference "[MEF10.3] Section 9.19. [MEF45] Section 8.1, [R2] through [R9]. [MEF6.2] Section 8.2.2, [R1]. [MEF45] Section 8.1. [MEF7.3] Section 7.8.1.";
         }
         leaf l2cp-peering {
           type leafref {
-            path "/mef-global:mef-global/mef-global:profiles/mef-global:l2cp-peering/mef-global:profile/mef-global:id";
+            path "/mef-global:mef-global/mef-global:l2cp-peering-profiles/mef-global:profile/mef-global:id";
           }
           description
             "L2CP Peering Profile for this UNI. This profile may contain groups of L2CP Destination MAC Addresses and protocols to be peered at the UNI (as opposed to being passed or discarded).";
