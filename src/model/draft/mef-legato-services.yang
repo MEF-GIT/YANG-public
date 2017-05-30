@@ -201,7 +201,7 @@ module mef-legato-services {
               }
               leaf color-identifier {
                 type leafref {
-                  path "/mef-global:mef-global/mef-global:color-mappings/mef-global:color-mapping/mef-global:id";
+                  path "/mef-global:mef-global/mef-global:color-mapping-profiles/mef-global:color-mapping-profile/mef-global:id";
                 }
                 mandatory true;
                 description
@@ -317,18 +317,18 @@ module mef-legato-services {
                 must "not(/mef-global:mef-global/mef-global:cos-profiles/" +
                           "mef-global:cos-profile[mef-global:id = current()]/" +
                           "mef-global:cos-pcp) or " +
-                     "/mef-global:mef-global/mef-global:color-mappings/" +
-                       "mef-global:color-mapping[" +
+                     "/mef-global:mef-global/mef-global:color-mapping-profiles/" +
+                       "mef-global:color-mapping-profile[" +
                            "mef-global:id = current()/../color-identifier]/" +
                        "mef-global:color-pcp/" +
                        "mef-global:default-pcp-color-name or " +
-                     "/mef-global:mef-global/mef-global:color-mappings/" +
-                       "mef-global:color-mapping[" +
+                     "/mef-global:mef-global/mef-global:color-mapping-profiles/" +
+                       "mef-global:color-mapping-profile[" +
                            "mef-global:id = current()/../color-identifier]/" +
                        "mef-global:color-pcp/" +
                        "mef-global:pcps/mef-global:pcp[0] or " +
-                     "/mef-global:mef-global/mef-global:color-mappings/" +
-                       "mef-global:color-mapping[" +
+                     "/mef-global:mef-global/mef-global:color-mapping-profiles/" +
+                       "mef-global:color-mapping-profile[" +
                            "mef-global:id = current()/../color-identifier]/" +
                        "mef-global:color-dei/mef-global:dei" {
                   error-message "When the Class of Service Identifier is 
@@ -343,18 +343,18 @@ module mef-legato-services {
                 must "not(/mef-global:mef-global/mef-global:cos-profiles/" +
                           "mef-global:cos-profile[mef-global:id = current()]/" +
                           "mef-global:cos-dscp) or " +
-                     "/mef-global:mef-global/mef-global:color-mappings/" +
-                       "mef-global:color-mapping[" +
+                     "/mef-global:mef-global/mef-global:color-mapping-profiles/" +
+                       "mef-global:color-mapping-profile[" +
                            "mef-global:id = current()/../color-identifier]/" +
                        "mef-global:color-dscp/" +
                        "mef-global:default-dscp-color-name or " +
-                     "/mef-global:mef-global/mef-global:color-mappings/" +
-                       "mef-global:color-mapping[" +
+                     "/mef-global:mef-global/mef-global:color-mapping-profiles/" +
+                       "mef-global:color-mapping-profile[" +
                            "mef-global:id = current()/../color-identifier]/" +
                        "mef-global:color-dscp/mef-global:ipv4-dscps/" +
                        "mef-global:ipv4-dscp[0] or " +
-                     "/mef-global:mef-global/mef-global:color-mappings/" +
-                       "mef-global:color-mapping[" +
+                     "/mef-global:mef-global/mef-global:color-mapping-profiles/" +
+                       "mef-global:color-mapping-profile[" +
                            "mef-global:id = current()/../color-identifier]/" +
                        "mef-global:color-dscp/mef-global:ipv6-dscps/" +
                        "mef-global:ipv6-dscp[0]" {

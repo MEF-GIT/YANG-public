@@ -1201,10 +1201,10 @@ module mef-legato-global {
         }
       }
     }
-    container color-mappings {
+    container color-mapping-profiles {
       description
         "Color Mapping Profiles, for mapping Service Frames to a Color ID.";
-      list color-mapping {
+      list color-mapping-profile {
         key "id";
         description
           "List of Color Mapping Profiles";
