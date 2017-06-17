@@ -464,23 +464,23 @@ module mef-legato-global {
       }
     }
     
-	container cos-names-profiles {
-	  description
-	    "Container for global list of CoS names.";
-	  list cos-name {
-	    key "name";
-	    description        
-	      "List of all CoS Names used in any EVC.  This list is 
-	       referred to in many other places in the model.";
-	    leaf name {
-	      type string {
-	    	length "1..1024";
-	      }
-	      description
-	        "CoS Name.";
-	    }
+    container cos-names-profiles {
+      description
+        "Container for global list of CoS names.";
+      list cos-name {
+        key "name";
+        description        
+          "List of all CoS Names used in any EVC.  This list is 
+           referred to in many other places in the model.";
+        leaf name {
+          type string {
+            length "1..1024";
+          }
+          description
+        	"CoS Name.";
+        }
       }
-	}
+    }
 	
     container bwp-flows-parameter-set {
       description
@@ -1195,6 +1195,205 @@ module mef-legato-global {
                     }
                   }
                 }
+              }
+            }
+          }
+        }
+      }
+    }
+    
+    container color-mapping-profiles {
+      description
+        "Color Mapping Profiles, for mapping Service Frames to a Color ID.";
+      list color-mapping-profile {
+        key "id";
+        description
+          "List of Color Mapping Profiles";
+        reference "[MEF10.3] section 10.3, [MEF7.3] section 7.13";
+        leaf id {
+          type string;
+          description
+            "This attribute identifies a Color Mapping Profile.";
+        }
+        
+        choice color-id {
+          mandatory true;
+          description
+            "Color identifier, which specifies how Service Frames
+             are mapped to a color, i.e. to Green or Yellow.";
+          reference "[MEF10.3] section 10.3, [MEF7.3] section 7.13";
+          
+          case evc {
+            description
+              "If this case is selected, the Color ID is based on the EVC.";
+            reference "[MEF10.3] section 10.3.1, [MEF7.3] section 7.13.1";
+            container color-evc {
+              description
+                "Parameters used when all Service Frames for the EVC
+                 are mapped to the same color.";
+              leaf evc-color-name {
+                type mef-types:color-type;
+                mandatory true;
+                description
+                  "Color to which all Service Frames for the EVC are 
+                   mapped.";
+                reference "[MEF10.3] section 10.3.1, [MEF7.3] section 7.13.1";
+              }
+            }
+          }
+          
+          case dei {
+            description
+              "If this case is selected, the Color ID is based on the DEI.
+               Frames with DEI 0 are mapped to green and frames with DEI 1
+               are mapped to yellow.";
+            reference "[MEF10.3] section 10.3.2, [MEF7.3] section 7.13.3";
+            container color-dei {
+              description
+                "Parameters used when Service Frames for the EVC
+                 are mapped to a color based on the DEI.";
+              leaf dei {
+                type empty;
+                mandatory "true";
+                description
+                  "When set, the Color ID is based on the DEI";
+                reference "[MEF10.3] section 10.3.2, [MEF7.3] section 7.13.3";
+              }
+            }
+          }
+          
+          case pcp {
+            description
+              "If this case is selected, the Color ID is based on the PCP.";
+            reference "[MEF10.3] section 10.3.3, [MEF7.3] section 7.13.2";
+            container color-pcp {
+              description
+                "Parameters used when Service Frames for the EVC
+                 are mapped to a color based on the CE-VLAN PCP field.";
+               reference "[MEF10.3] section 10.3.3, [MEF7.3] section 7.13.2";
+              leaf default-pcp-color-name {
+                type mef-types:color-type;
+                description
+                  "Default value for color when it has not been 
+                   explicitly configured.";
+              }
+              container pcps {
+                description
+                  "Mappings from PCP values to colors";
+                list pcp {
+                  key "pcp-value";
+                  description
+                    "List of mappings from PCP values to colors.";
+                  reference "[MEF10.3] section 10.3.3, [MEF7.3] section 7.13.2";
+                  leaf pcp-value {
+                    type mef-types:ieee8021p-priority-type;
+                    description
+                      "PCP value to map to the given color";
+                  }
+                  leaf color {
+                    type mef-types:color-type;
+                    mandatory true;
+                    description
+                      "Color to which to map frames with the given PCP value.";
+                  }
+                }
+              }
+              must "default-pcp-color-name or count(pcps/pcp) = 8" {
+                error-message "When the Color Identifier is based on the 
+                               CE-VLAN PCP, each possible PCP value must 
+                               map to exactly one color.";
+                description
+                  "When the Color Identifier is based on the 
+                   CE-VLAN PCP, each possible PCP value must 
+                   map to exactly one color.";
+                reference "[MEF10.3] R107";
+              }
+            }
+          }
+          
+          case dscp {
+            description
+              "If this case is selected, the Color ID is based on the DSCP.";
+            reference "[MEF10.3] section 10.3.4, [MEF7.3] section 7.13.4";
+            container color-dscp {
+              description
+                "Parameters used when Service Frames for the EVC
+                 are mapped to a color based on the IP DS field.";
+              reference "[MEF10.3] section 10.3.4, [MEF7.3] section 7.13.4";
+              leaf default-dscp-color-name {
+                type mef-types:color-type;
+                description
+                  "Default value for color for Service Frames carrying 
+                   an IP Packet when the DSCP has not been 
+                   explicitly configured in the color map.";
+              }
+              container ipv4-dscps {
+                description
+                  "Mappings from DSCP values to colors for Service Frames
+                   carrying an IPv4 packet.";
+                list ipv4-dscp {
+                  key "dscp-value";
+                  description
+                    "List of mappings from DSCP values to colors for Service
+                     Frames carrying an IPv4 packet.";
+                  reference "[MEF10.3] section 10.3.4, [MEF7.3] section 7.13.4";
+                  leaf dscp-value {
+                    type inet:dscp;
+                    description
+                      "DSCP value to map to the given color";
+                  }
+                  leaf color {
+                    type mef-types:color-type;
+                    mandatory true;
+                    description
+                      "Color to which to map frames with the given DSCP
+                       value.";
+                  }
+                }
+              }
+              container ipv6-dscps {
+                description
+                  "Mappings from DSCP values to colors for Service Frames
+                   carrying an IPv6 packet.";
+                list ipv6-dscp {
+                  key "dscp-value";
+                  description
+                    "List of mappings from DSCP values to colors for Service
+                     Frames carrying an IPv6 packet.";
+                  reference "[MEF10.3] section 10.3.4, [MEF7.3] section 7.13.4";
+                  leaf dscp-value {
+                    type inet:dscp;
+                    description
+                      "DSCP value to map to the given color";
+                  }
+                  leaf color {
+                    type mef-types:color-type;
+                    mandatory true;
+                    description
+                      "Color to which to map frames with the given DSCP
+                       value.";
+                  }
+                }
+              }
+              must "default-dscp-color-name or count(ipv6-dscps/ipv6-dscp) = 64" {
+                error-message "When the Color Identifier is based on the 
+                               CE-VLAN DSCP, each possible DSCP value must 
+                               map to exactly one color for IPv6.";
+                description
+                  "When the Color Identifier is based on the 
+                   CE-VLAN DSCP, each possible DSCP value must 
+                   map to exactly one color for IPv6.";
+                reference "[MEF10.3] R109";
+              }
+              must "default-dscp-color-name or count(ipv4-dscps/ipv4-dscp) = 64" {
+                error-message "When the Color Identifier is based on the 
+                               CE-VLAN DSCP, each possible DSCP value must 
+                               map to exactly one color for IPv4.";
+                description
+                  "When the Color Identifier is based on the 
+                   CE-VLAN DSCP, each possible DSCP value must 
+                   map to exactly one color for IPv4.";
+                reference "[MEF10.3] R108";
               }
             }
           }

@@ -382,7 +382,7 @@ module mef-types {
     reference "[MEF10.3] [R8], [R9]. [RFC2579]. [RFC854]. [MEF7.3] Section 7.1.";
   }
 
-  typedef max-svc-frame-size-type {
+  typedef max-frame-size-type {
     type uint16 {
       range "1522..16384";
     }
@@ -805,5 +805,22 @@ module mef-types {
     }
     description
       "This object indicates the specific Ethernet service type.";
+  }
+  
+  typedef envelope-type {
+	type enumeration {
+	  enum "per-evc" {
+	    description
+	      "Add description here.";
+	  }
+	  enum "per-cos" {
+	    description
+	      "Add description here.";
+	  }
+	  enum "per-eec" {
+	    description
+	      "Add description here.";
+	  }
+	}
   }
 }
