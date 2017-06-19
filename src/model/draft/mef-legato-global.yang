@@ -464,23 +464,23 @@ module mef-legato-global {
       }
     }
     
-	container cos-names-profiles {
-	  description
-	    "Container for global list of CoS names.";
-	  list cos-name {
-	    key "name";
-	    description        
-	      "List of all CoS Names used in any EVC.  This list is 
-	       referred to in many other places in the model.";
-	    leaf name {
-	      type string {
-	    	length "1..1024";
-	      }
-	      description
-	        "CoS Name.";
-	    }
+    container cos-names-profiles {
+      description
+        "Container for global list of CoS names.";
+      list cos-name {
+        key "name";
+        description        
+          "List of all CoS Names used in any EVC.  This list is 
+           referred to in many other places in the model.";
+        leaf name {
+          type string {
+            length "1..1024";
+          }
+          description
+        	"CoS Name.";
+        }
       }
-	}
+    }
 	
     container bwp-flows-parameter-set {
       description
@@ -1201,6 +1201,7 @@ module mef-legato-global {
         }
       }
     }
+    
     container color-mapping-profiles {
       description
         "Color Mapping Profiles, for mapping Service Frames to a Color ID.";
@@ -1214,12 +1215,14 @@ module mef-legato-global {
           description
             "This attribute identifies a Color Mapping Profile.";
         }
+        
         choice color-id {
           mandatory true;
           description
             "Color identifier, which specifies how Service Frames
              are mapped to a color, i.e. to Green or Yellow.";
           reference "[MEF10.3] section 10.3, [MEF7.3] section 7.13";
+          
           case evc {
             description
               "If this case is selected, the Color ID is based on the EVC.";
@@ -1238,6 +1241,7 @@ module mef-legato-global {
               }
             }
           }
+          
           case dei {
             description
               "If this case is selected, the Color ID is based on the DEI.
@@ -1257,6 +1261,7 @@ module mef-legato-global {
               }
             }
           }
+          
           case pcp {
             description
               "If this case is selected, the Color ID is based on the PCP.";
@@ -1305,6 +1310,7 @@ module mef-legato-global {
               }
             }
           }
+          
           case dscp {
             description
               "If this case is selected, the Color ID is based on the DSCP.";
