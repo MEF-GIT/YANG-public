@@ -809,18 +809,22 @@ module mef-types {
   
   typedef envelope-type {
 	type enumeration {
+	  enum "per-uni" {
+	    description
+	      "The envelope contains Bandwidth Profile flows per UNI";
+	  }
 	  enum "per-evc" {
 	    description
-	      "Add description here.";
+	      "The envelope contains Bandwidth Profile flows per EVC End Point.";
 	  }
-	  enum "per-cos" {
+	  enum "per-cos-or-eec" {
 	    description
-	      "Add description here.";
-	  }
-	  enum "per-eec" {
-	    description
-	      "Add description here.";
+	      "The envelope contains Bandwidth Profile flows per CoS Name or per
+	       Egress Equivalence Class Name.";
 	  }
 	}
+	description
+	  "Type that describes the sort of bandwidth profile flows that can be
+	   contained in a particular envelope.";
   }
 }
