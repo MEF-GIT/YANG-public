@@ -14,6 +14,10 @@ make start # to run the tests
 make settest # to run some more tests
 make test    # to run yet more tests
 
+If you do not have access to NSO, and just want to build the models, then just run the following command. You will still need pyang with swagger plugin, both of which are publicly available.
+
+make models
+
 ## Usage
 
 
