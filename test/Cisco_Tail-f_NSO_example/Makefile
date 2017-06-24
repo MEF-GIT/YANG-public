@@ -22,7 +22,7 @@ NETSIM_DIR = netsim
 all: build-all $(NETSIM_DIR)
 
 #	cp ../../src/model/draft/mef*.yang ./packages/mef/src/yang
-build-all:
+build-all: models
 	for i in $(PACKAGES); do \
 		$(MAKE) -C packages/$${i}/src all || exit 1; \
 	done
@@ -48,6 +48,19 @@ $(NETSIM_DIR): packages/cisco-ios packages/cisco-iosxr packages/juniper-junos
 	cp initial_data/device-icons.xml ncs-cdb
 	ncs-netsim ncs-xml-init > ncs-cdb/netsim_devices_init.xml
 
+models: ../../src/model/draft/mef-legato-global.yang ../../src/model/draft/mef-legato-services.yang ../../src/model/draft/mef-legato-interfaces.yang
+	sed -e"s/YYYY-MM-DD/$(shell date +%Y-%m-%d)/" ../../src/model/draft/mef-legato-global.yang  > ../../src/model/draft/mef-legato-global\@$(shell date +%Y-%m-%d).yang
+	sed -e"s/YYYY-MM-DD/$(shell date +%Y-%m-%d)/" ../../src/model/draft/mef-legato-services.yang  > ../../src/model/draft/mef-legato-services\@$(shell date +%Y-%m-%d).yang
+	sed -e"s/YYYY-MM-DD/$(shell date +%Y-%m-%d)/" ../../src/model/draft/mef-legato-interfaces.yang  > ../../src/model/draft/mef-legato-interfaces\@$(shell date +%Y-%m-%d).yang
+	sed -e"s/YYYY-MM-DD/$(shell date +%Y-%m-%d)/" ../../src/model/draft/common/mef-types.yang  > ../../src/model/draft/common/mef-types\@$(shell date +%Y-%m-%d).yang
+
+	ln -fs ../../../../../../src/model/draft/mef-legato-global\@$(shell date +%Y-%m-%d).yang packages/mef/src/yang/mef-legato-global.yang
+	ln -fs ../../../../../../src/model/draft/mef-legato-services\@$(shell date +%Y-%m-%d).yang packages/mef/src/yang/mef-legato-services.yang
+	ln -fs ../../../../../../src/model/draft/mef-legato-interfaces\@$(shell date +%Y-%m-%d).yang packages/mef/src/yang/mef-legato-interfaces.yang
+	ln -fs ../../../../../../src/model/draft/common/mef-types\@$(shell date +%Y-%m-%d).yang packages/mef/src/yang/mef-types.yang
+
+	cd ../../src/model/draft; ./gen-trees.sh;
+
 #Patch to add ios-stats
 packages/cisco-ios:
 	ln -s $(NCS_DIR)/packages/neds/cisco-ios packages/cisco-ios
@@ -68,6 +81,12 @@ clean:
 	rm -f packages/cisco-iosxr
 	rm -rf bin
 	rm -rf ncs-cdb/*.xml
+	-rm ../../src/model/draft/mef-*\@$(shell date +%Y-%m-%d).yang
+	-rm ../../src/model/draft/common/mef-*\@$(shell date +%Y-%m-%d).yang
+	-rm -rf ../../src/model/draft/mef-*-tree.txt
+	-rm -rf ../../src/model/draft/mef-*.json
+	-rm -rf packages/mef/src/yang/mef-legato-*.yang
+	-rm -rf packages/mef/src/yang/mef-types.yang
 
 .PHONY: package-archives
 package-archives: all

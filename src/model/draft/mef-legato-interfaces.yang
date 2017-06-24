@@ -38,9 +38,9 @@ module mef-legato-interfaces {
      'Carrier Ethernet Management Information Model',
      Working Draft #1 2015";
 
-  revision 2017-01-10 {
+  revision YYYY-MM-DD {
     description
-      "Updated to address CFC1 Review Comments.";
+      "Initial Version.";
     reference
       "EVC Ethernet Services Definitions YANG Modules 
        (MEF XX), TBD";

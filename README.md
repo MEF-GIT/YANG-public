@@ -5,11 +5,14 @@ This document specifies the YANG modules for MEF 6.2 EVC based Services and MEF 
 
 ## Installation
 
-To run the tests in the project, you need to have an installation of NSO installed and running on the device where this git is cloned.
+To run the tests in the project, you need to have an installation of NSO installed and running on the device where this git is cloned. In addition, you will need a version of pyang that supports the swagger plugin. See https://github.com/ict-strauss/COP/tree/master/pyang_plugins
 
-cd test
+cd test/Cisco_Tail-f_NSO_example
+make clean
 make
-make start # to run the tests 
+make start # to run the tests
+make settest # to run some more tests
+make test    # to run yet more tests
 
 ## Usage
 
@@ -28,7 +31,7 @@ TODO: Write history
 
 ## Credits
 
-TODO: Write credits
+This work would not have been possible without the work of Mahesh Jethanandani, David Ball, Jim Boucher and several others.
 
 ## License
 

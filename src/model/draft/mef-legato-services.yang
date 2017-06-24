@@ -41,9 +41,9 @@ module mef-legato-services {
       [MEF7.3] refers to MEF 7.3 
       'Carrier Ethernet Management Information Model'";
 
-  revision 2017-01-10 {
+  revision YYYY-MM-DD {
     description
-      "Updated to address CFC1 Review Comments.";
+      "Initial Version.";
     reference
       "EVC Ethernet Services Definitions YANG Modules 
        (MEF XX), TBD";
