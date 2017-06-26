@@ -99,8 +99,8 @@ module mef-legato-interfaces {
                     base mef-types:ieee-8023-interface-type;
                   }
                   mandatory true;
-                  must "(. != 'mef-types:ieee8023-1000BASE-PX-D') and 
-                        (. != 'mef-types:ieee8023-1000BASE-PX-U')" {
+                  must ". != 'mef-types:ieee8023-1000BASE-PX-D' and " +
+                       ". != 'mef-types:ieee8023-1000BASE-PX-U'" {
                     error-message 
                       "The Physical Layer for each physical link 
                        implementing the UNI cannot be 1000BASE-PX-D and 1000BASE-PX-U.";
@@ -145,8 +145,8 @@ module mef-legato-interfaces {
               reference "[MEF10.3] Section 12.1, [MEF6.2] Section 8.2.2,
                          [MEF7.3] Section 7.8, 7.16.";
 
-              must "(../../token-share-enabled = 'true')
-                    or (count(bwp-flows/bwp-flow) = 1)" {
+              must "../../token-share-enabled = 'true' or " +
+                   "count(bwp-flows/bwp-flow) = 1" {
                 error-message
                   "A UNI with Token Share Disabled MUST have
                    exactly one Bandwidth Profile Flow per envelope.";
@@ -246,12 +246,12 @@ module mef-legato-interfaces {
                        [MEF7.3] Section 7.16.2.";
                   }
 
-                  must "(../../coupling-enabled = 'false') or " +
-                       "(/mef-global:mef-global/" +
+                  must "../../coupling-enabled = 'false' or " +
+                       "/mef-global:mef-global/" +
                         "mef-global:bwp-flows-parameter-set/" +
                         "mef-global:bwp-flow-parameter-set[" +
                                             "mef-global:id = current()]/" +
-                        "mef-global:coupling-enabled = 'false')" {
+                        "mef-global:coupling-enabled = 'false'" {
                     error-message
                       "If an Ingress Envelope's Coupling Flag is Enabled,
                        then the Coupling Flags must be disabled for all
@@ -263,7 +263,7 @@ module mef-legato-interfaces {
                     reference "[MEF 10.3] [R150].";
                   }
 
-                  must "(../../type != 'per-uni') or " +
+                  must "../../type != 'per-uni' or " +
                        "(../../../../ingress-bw-profile-per-uni/" +
                          "envelope-id = ../../id and " +
                         "../../../../ingress-bw-profile-per-uni/" +
@@ -302,8 +302,8 @@ module mef-legato-interfaces {
               reference "[MEF10.3] Section 12.1, [MEF6.2] Section 8.2.2,
                          [MEF7.3] Section 7.8, 7.16.";
 
-              must "(../../token-share-enabled = 'true')
-                    or (count(bwp-flows/bwp-flow) = 1)" {
+              must "../../token-share-enabled = 'true' or " +
+                   "count(bwp-flows/bwp-flow) = 1" {
                 error-message
                   "A UNI with Token Share Disabled MUST have
                    exactly one Bandwidth Profile Flow per envelope.";
@@ -403,12 +403,12 @@ module mef-legato-interfaces {
                        [MEF7.3] Section 7.16.2.";
                   }
 
-                  must "(../../coupling-enabled = 'false') or " +
-                       "(/mef-global:mef-global/" +
+                  must "../../coupling-enabled = 'false' or " +
+                       "/mef-global:mef-global/" +
                         "mef-global:bwp-flows-parameter-set/" +
                         "mef-global:bwp-flow-parameter-set[" +
                                             "mef-global:id = current()]/" +
-                        "mef-global:coupling-enabled = 'false')" {
+                        "mef-global:coupling-enabled = 'false'" {
                     error-message
                       "If an Egress Envelope's Coupling Flag is Enabled,
                        then the Coupling Flags must be disabled for all
@@ -420,7 +420,7 @@ module mef-legato-interfaces {
                     reference "[MEF 10.3] [R150].";
                   }
 
-                  must "(../../type != 'per-uni') or " +
+                  must "../../type != 'per-uni' or " +
                        "(../../../../egress-bw-profile-per-uni/" +
                          "envelope-id = ../../id and " +
                         "../../../../egress-bw-profile-per-uni/" +
@@ -619,28 +619,31 @@ module mef-legato-interfaces {
 
           leaf link-aggregation {
             type mef-types:interface-resiliency-type;
-            must "(. != 'none') or ((. = 'none') and 
-                  (count(../physical-layers/links) = 1))" {
-              error-message "If link-aggregation is 'none', number-of-links must be 1.";
+            must ". != 'none' or " +
+                 "count(../physical-layers/links) = 1" {
+              error-message
+                "If link-aggregation is 'none', number-of-links must be 1.";
               description
                 "If link-aggregation is 'none', number-of-links must be 1.";
               reference "[MEF 10.3] [R64].";
             }
-            must "(. != 'dual-link-aggregation') or ((. = 'dual-link-aggregation') and 
-                  (count(../physical-layers/links) = 2))" {
-              error-message "If link-aggregation is 'dual-link-aggregation', 
-                             number-of-links must be 2.";
+            must ". != 'dual-link-aggregation' or " +
+                 "count(../physical-layers/links) = 2" {
+              error-message
+                "If link-aggregation is 'dual-link-aggregation',
+                 number-of-links must be 2.";
               description
-                "If link-aggregation is 'dual-link-aggregation', 
+                "If link-aggregation is 'dual-link-aggregation',
                  number-of-links must be 2.";
               reference "[MEF 10.3] [R65].";
             }
-            must "(. != 'other') or ((. = 'other') and 
-                  (count(../physical-layers/links) > 2))" {
-              error-message "If link-aggregation is 'other', 
-                             number-of-links must be 3 or greater.";
+            must ". != 'other' or " +
+                 "count(../physical-layers/links) > 2" {
+              error-message
+                "If link-aggregation is 'other',
+                 number-of-links must be 3 or greater.";
               description
-                "If link-aggregation is 'other', number-of-links 
+                "If link-aggregation is 'other', number-of-links
                  must be 3 or greater.";
               reference "[MEF 10.3] [R67].";
             }
@@ -681,7 +684,7 @@ module mef-legato-interfaces {
                When all-to-one-bundling-enabled = true, all other UNIs in 
                the EVC associating this UNI must have all-to-one-bundling-enabled 
                = true. If this values is true, the value of 
-               untagged-and-priority-tagged-ce-vlan-id is not applicable.";
+               default-ce-vlan-id is not applicable.";
             reference "[MEF10.3] Section 9.13, Table 12 (5 valid combinations), 
                        [R82], [R83]. [MEF7.3] Section 7.8.1.";
           }
@@ -732,25 +735,11 @@ module mef-legato-interfaces {
           }
           leaf elmi-enabled {
             type boolean;
-            must "(. = 'false') or (. = 'true' and (../elmi-service-attribute = 'true'))" {
-              error-message "ELMI Service Attribute must be Enabled.";
-              description
-                "Ethernet Local Management Interface(ELMI) Profile ID must 
-                 be set if ELMI is Enabled.";
-              reference "[MEF 10.3] [R88].";
-            }
             default "false";
             description
               "Ethernet Local Management Interface(ELMI) Enabled / Disabled.";
             reference "[MEF10.3] Section 9.18, [R88]. [MEF16]. 
                        [MEF6.2] Section 8.2.2, [D5]. [MEF7.3] Section 7.8.";
-          }
-          leaf elmi-service-attribute {
-            type boolean;
-            description
-              "The ELMI Profile is only applicable when ELMI is enabled.";
-            reference "[MEF10.3] Section 9.18. [MEF7.3] Section 10.2.2.
-                       [MEF10.3] [R88]. [MEF16].";
           }
           leaf l2cp-address-set {
             type mef-types:l2cp-address-set-type;
