@@ -41,9 +41,9 @@ module mef-legato-services {
       [MEF7.3] refers to MEF 7.3 
       'Carrier Ethernet Management Information Model'";
 
-  revision 2017-01-10 {
+  revision YYYY-MM-DD {
     description
-      "Updated to address CFC1 Review Comments.";
+      "Initial Version.";
     reference
       "EVC Ethernet Services Definitions YANG Modules 
        (MEF XX), TBD";
@@ -1290,6 +1290,7 @@ module mef-legato-services {
                     reference
                       "[MEF10.3] Section 10.7, [MEF7.3] Section 7.4";
                     choice egress-bw-profile-per-evc {
+                      mandatory true;
                       description
                         "This choice can be used to specify either a
                          standalone Bandwidth Profile Flow, or a

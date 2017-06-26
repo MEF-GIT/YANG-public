@@ -56,9 +56,9 @@ module mef-types {
      of Ethernet over Transport and Metro Ethernet 
      Network(EoT/MEN)' March 2007";
 
-  revision 2017-01-10 {
+  revision YYYY-MM-DD {
     description
-      "Updated to address CFC1 Review Comments.";
+      "Initial Version.";
     reference
       "EVC Ethernet Services Definitions YANG Modules 
        (MEF XX), TBD";
