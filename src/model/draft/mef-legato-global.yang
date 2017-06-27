@@ -335,13 +335,14 @@ module mef-legato-global {
                       leaf consecutive-number-p {
                         type uint8;
                         must ". < ../../../../consecutive-interval-n" {
-                          error-message "The value of chli-consecutive-small-time-intervals 
-                        	             must be less than consecutive-small-time-intervals 
-                        	             (p < n) if both are defined.";
+                          error-message
+                            "The value of chli-consecutive-small-time-intervals 
+                             must be less than consecutive-small-time-intervals 
+                             (p < n) if both are defined.";
                           description
                             "The value of chli-consecutive-small-time-intervals 
-                        	  must be less than consecutive-small-time-intervals 
-                        	  (p < n) if both are defined.";
+                             must be less than consecutive-small-time-intervals 
+                             (p < n) if both are defined.";
                           reference "[MEF 10.3] Section 8.8.5";
                         }
                         mandatory true;
@@ -873,7 +874,15 @@ module mef-legato-global {
             reference
               "[MEF10.3] Section 10.4.1.1, [MEF7.3] Section 7.12.2.";
             container eec-pcp {
-              must "(default-pcp-eec-name) or (count(pcp) = '8')";
+              must "default-pcp-eec-name or count(pcp) = 8" {
+                error-message
+                  "An EEC Name must be specified for all 8 PCP values if
+                   no default EEC name is specified.";
+                description
+                  "An EEC Name must be specified for all 8 PCP values if
+                   no default EEC name is specified.";
+                reference "[MEF10.3] [R115]";
+              }
               description
                 "Parameters for mapping Data Service Frames to EEC Names when 
                  the mapping is based on the CE-VLAN PCP field.";
@@ -913,8 +922,16 @@ module mef-legato-global {
             reference
               "[MEF10.3] Section 10.4.1.2, [MEF7.3] Section 7.12.3.";
             container eec-dscp {
-              must "(((default-ipv4-eec-name) or (count(ipv4-dscp) = '64')) or 
-                    ((default-ipv6-eec-name) or (count(ipv6-dscp) = '64')))";
+              must "(default-ipv4-eec-name or count(ipv4-dscp) = 64) and " +
+                   "(default-ipv6-eec-name or count(ipv6-dscp) = 64)" {
+                error-message
+                  "An EEC Name must be specified for all 64 DSCP values if
+                   no default EEC name is specified.";
+                description
+                  "An EEC Name must be specified for all 64 DSCP values if
+                   no default EEC name is specified.";
+                reference "[MEF10.3] [R117] and [R118]";
+              }
               description
                 "Parameters for mapping Data Service Frames to EEC Names when 
                  the mapping is based on the IP DS field.";
@@ -1254,9 +1271,9 @@ module mef-legato-global {
                  are mapped to a color based on the DEI.";
               leaf dei {
                 type empty;
-                mandatory "true";
+                mandatory true;
                 description
-                  "When set, the Color ID is based on the DEI";
+                  "When set, the Color ID is based on the DEI.";
                 reference "[MEF10.3] section 10.3.2, [MEF7.3] section 7.13.3";
               }
             }
@@ -1299,12 +1316,13 @@ module mef-legato-global {
                 }
               }
               must "default-pcp-color-name or count(pcps/pcp) = 8" {
-                error-message "When the Color Identifier is based on the 
-                               CE-VLAN PCP, each possible PCP value must 
-                               map to exactly one color.";
+                error-message
+                  "When the Color Identifier is based on the
+                   CE-VLAN PCP, each possible PCP value must
+                   map to exactly one color.";
                 description
-                  "When the Color Identifier is based on the 
-                   CE-VLAN PCP, each possible PCP value must 
+                  "When the Color Identifier is based on the
+                   CE-VLAN PCP, each possible PCP value must
                    map to exactly one color.";
                 reference "[MEF10.3] R107";
               }
@@ -1375,23 +1393,27 @@ module mef-legato-global {
                   }
                 }
               }
-              must "default-dscp-color-name or count(ipv6-dscps/ipv6-dscp) = 64" {
-                error-message "When the Color Identifier is based on the 
-                               CE-VLAN DSCP, each possible DSCP value must 
-                               map to exactly one color for IPv6.";
+              must "default-dscp-color-name or " +
+                   "count(ipv6-dscps/ipv6-dscp) = 64" {
+                error-message
+                  "When the Color Identifier is based on the
+                   CE-VLAN DSCP, each possible DSCP value must
+                   map to exactly one color for IPv6.";
                 description
-                  "When the Color Identifier is based on the 
-                   CE-VLAN DSCP, each possible DSCP value must 
+                  "When the Color Identifier is based on the
+                   CE-VLAN DSCP, each possible DSCP value must
                    map to exactly one color for IPv6.";
                 reference "[MEF10.3] R109";
               }
-              must "default-dscp-color-name or count(ipv4-dscps/ipv4-dscp) = 64" {
-                error-message "When the Color Identifier is based on the 
-                               CE-VLAN DSCP, each possible DSCP value must 
-                               map to exactly one color for IPv4.";
+              must "default-dscp-color-name or " +
+                   "count(ipv4-dscps/ipv4-dscp) = 64" {
+                error-message
+                  "When the Color Identifier is based on the
+                   CE-VLAN DSCP, each possible DSCP value must
+                   map to exactly one color for IPv4.";
                 description
-                  "When the Color Identifier is based on the 
-                   CE-VLAN DSCP, each possible DSCP value must 
+                  "When the Color Identifier is based on the
+                   CE-VLAN DSCP, each possible DSCP value must
                    map to exactly one color for IPv4.";
                 reference "[MEF10.3] R108";
               }
