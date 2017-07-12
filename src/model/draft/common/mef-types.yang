@@ -1,6 +1,6 @@
 module mef-types {
   namespace "urn:mef:yang:mef-types";
-  prefix mef-service-types;
+  prefix mef-types;
 
   organization "MEF Forum";
   contact
@@ -50,17 +50,15 @@ module mef-types {
      June 2000
      [RFC 3419] refers to IETF RFC 3419 
      'Textual Conventions for Transport Addresses', 2015
-     [G.8013] refers to ITU-T G.8013 
-     'OAM functions and mechanisms for Ethernet based networks',
      July 2011
      [Q.840.1] refers to ITU-T Q.840.1 
      'Requirements and analysis for NMS-EMS management interface
      of Ethernet over Transport and Metro Ethernet 
      Network(EoT/MEN)' March 2007";
 
-  revision 2017-01-10 {
+  revision YYYY-MM-DD {
     description
-      "Updated to address CFC1 Review Comments.";
+      "Initial Version.";
     reference
       "EVC Ethernet Services Definitions YANG Modules 
        (MEF XX), TBD";
@@ -384,7 +382,7 @@ module mef-types {
     reference "[MEF10.3] [R8], [R9]. [RFC2579]. [RFC854]. [MEF7.3] Section 7.1.";
   }
 
-  typedef max-svc-frame-size-type {
+  typedef max-frame-size-type {
     type uint16 {
       range "1522..16384";
     }
@@ -807,5 +805,26 @@ module mef-types {
     }
     description
       "This object indicates the specific Ethernet service type.";
+  }
+  
+  typedef envelope-type {
+	type enumeration {
+	  enum "per-uni" {
+	    description
+	      "The envelope contains Bandwidth Profile flows per UNI";
+	  }
+	  enum "per-evc" {
+	    description
+	      "The envelope contains Bandwidth Profile flows per EVC End Point.";
+	  }
+	  enum "per-cos-or-eec" {
+	    description
+	      "The envelope contains Bandwidth Profile flows per CoS Name or per
+	       Egress Equivalence Class Name.";
+	  }
+	}
+	description
+	  "Type that describes the sort of bandwidth profile flows that can be
+	   contained in a particular envelope.";
   }
 }
