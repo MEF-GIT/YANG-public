@@ -483,11 +483,11 @@ module mef-legato-global {
       }
     }
 	
-    container bwp-flows-parameter-set {
+    container bwp-flow-parameter-profiles {
       description
         "Container for a list of Bandwidth Profile Flow parameter
          sets.";
-      list bwp-flow-parameter-set {
+      list profile {
           key "id";
           description
             "Bandwidth Profile parameter set.";
@@ -838,7 +838,7 @@ module mef-legato-global {
     container eec-profiles {
       description
         "Egress Equivalence Class (EEC) Profiles.";
-      list eec-profile {
+      list profile {
         key "id";
         description
           "List of EEC profile";
@@ -999,7 +999,7 @@ module mef-legato-global {
     container cos-profiles {
       description
         "Class of Service (CoS) Profiles.";
-      list cos-profile {
+      list profile {
         key "id";
         description
           "List of CoS Profiles.";
@@ -1222,7 +1222,7 @@ module mef-legato-global {
     container color-mapping-profiles {
       description
         "Color Mapping Profiles, for mapping Service Frames to a Color ID.";
-      list color-mapping-profile {
+      list profile {
         key "id";
         description
           "List of Color Mapping Profiles";

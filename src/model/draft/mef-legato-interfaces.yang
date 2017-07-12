@@ -144,7 +144,7 @@ module mef-legato-interfaces {
                  R5).";
               reference "[MEF10.3] Section 12.1, [MEF6.2] Section 8.2.2,
                          [MEF7.3] Section 7.8, 7.16.";
-
+            	  
               must "../../token-share-enabled = 'true' or " +
                    "count(bwp-flows/bwp-flow) = 1" {
                 error-message
@@ -233,8 +233,8 @@ module mef-legato-interfaces {
                   leaf parameters {
                     type leafref {
                       path "/mef-global:mef-global/" +
-                           "mef-global:bwp-flows-parameter-set/" +
-                           "mef-global:bwp-flow-parameter-set/mef-global:id";
+                           "mef-global:bwp-flow-parameter-profiles/" +
+                           "mef-global:profile/mef-global:id";
                     }
                     mandatory true;
                     description
@@ -248,8 +248,8 @@ module mef-legato-interfaces {
 
                   must "../../coupling-enabled = 'false' or " +
                        "/mef-global:mef-global/" +
-                        "mef-global:bwp-flows-parameter-set/" +
-                        "mef-global:bwp-flow-parameter-set[" +
+                        "mef-global:bwp-flow-parameter-profiles/" +
+                        "mef-global:profile[" +
                                             "mef-global:id = current()]/" +
                         "mef-global:coupling-enabled = 'false'" {
                     error-message
@@ -264,9 +264,9 @@ module mef-legato-interfaces {
                   }
 
                   must "../../type != 'per-uni' or " +
-                       "(../../../../ingress-bw-profile-per-uni/" +
+                       "(../../../../ingress-bwp-per-uni/" +
                          "envelope-id = ../../id and " +
-                        "../../../../ingress-bw-profile-per-uni/" +
+                        "../../../../ingress-bwp-per-uni/" +
                          "rank = ./rank)" {
                     error-message
                       "If there is a per-UNI Ingress Bandwidth Profile
@@ -390,8 +390,8 @@ module mef-legato-interfaces {
                   leaf parameters {
                     type leafref {
                       path "/mef-global:mef-global/" +
-                           "mef-global:bwp-flows-parameter-set/" +
-                           "mef-global:bwp-flow-parameter-set/mef-global:id";
+                           "mef-global:bwp-flow-parameter-profiles/" +
+                           "mef-global:profile/mef-global:id";
                     }
                     mandatory true;
                     description
@@ -405,8 +405,8 @@ module mef-legato-interfaces {
 
                   must "../../coupling-enabled = 'false' or " +
                        "/mef-global:mef-global/" +
-                        "mef-global:bwp-flows-parameter-set/" +
-                        "mef-global:bwp-flow-parameter-set[" +
+                        "mef-global:bwp-flow-parameter-profiles/" +
+                        "mef-global:profile[" +
                                             "mef-global:id = current()]/" +
                         "mef-global:coupling-enabled = 'false'" {
                     error-message
@@ -441,10 +441,10 @@ module mef-legato-interfaces {
             }
           }
 
-          container ingress-bw-profile-per-uni {
+          container ingress-bwp-per-uni {
             description
               "Ingress Bandwidth Profile per UNI";
-            choice ingress-bw-profile-per-uni-options {
+            choice options {
               description
                 "This choice can be used to specify either a standalone
                  Bandwidth Profile Flow, or a Bandwidth Profile Flow
@@ -464,8 +464,8 @@ module mef-legato-interfaces {
                 leaf bw-profile-flow-parameters {
                   type leafref {
                     path "/mef-global:mef-global/" +
-                         "mef-global:bwp-flows-parameter-set/" +
-                         "mef-global:bwp-flow-parameter-set/mef-global:id";
+                         "mef-global:bwp-flow-parameter-profiles/" +
+                         "mef-global:profile/mef-global:id";
                   }
                   mandatory true;
                   description
@@ -517,7 +517,7 @@ module mef-legato-interfaces {
           container egress-bw-profile-per-uni {
             description
               "Egress Bandwidth Profile per UNI";
-            choice egress-bw-profile-per-uni-options {
+            choice options {
               description
                 "This choice can be used to specify either a standalone
                  Bandwidth Profile Flow, or a Bandwidth Profile Flow
@@ -537,8 +537,8 @@ module mef-legato-interfaces {
                 leaf bw-profile-flow-parameters {
                   type leafref {
                     path "/mef-global:mef-global/" +
-                         "mef-global:bwp-flows-parameter-set/" +
-                         "mef-global:bwp-flow-parameter-set/mef-global:id";
+                         "mef-global:bwp-flow-parameter-profiles/" +
+                         "mef-global:profile/mef-global:id";
                   }
                   mandatory true;
                   description
@@ -793,7 +793,7 @@ module mef-legato-interfaces {
               description
                 "Conatains a list of mappings from VLAN IDs to physical links.";
               reference "MEF 10.3 section 6, MEF 7.3 sections 7.7 and 7.8";
-              list portconf-map-entry {
+              list portconv-map-entry {
                 key vid;
                 description
                   "List of mappings from VLAN ID to physical links";

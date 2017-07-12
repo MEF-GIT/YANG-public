@@ -178,7 +178,7 @@ module mef-legato-services {
                          "mef-interfaces:uni[" +
                            "mef-interfaces:uni-id = " +
                              "current()/uni-id]/" +
-                         "mef-interfaces:ingress-bw-profile-per-uni/" +
+                         "mef-interfaces:ingress-bwp-per-uni/" +
                          "mef-interfaces:bw-profile-flow-parameters) and " +
                     "not(/mef-interfaces:mef-interfaces/" +
                          "mef-interfaces:carrier-ethernet/" +
@@ -186,7 +186,7 @@ module mef-legato-services {
                          "mef-interfaces:uni[" +
                            "mef-interfaces:uni-id = " +
                              "current()/uni-id]/" +
-                         "mef-interfaces:ingress-bw-profile-per-uni/" +
+                         "mef-interfaces:ingress-bwp-per-uni/" +
                          "mef-interfaces:envelope-id))" {
                 error-message
                   "If there is an Ingress Bandwidth Profile per CoS Name or
@@ -370,7 +370,7 @@ module mef-legato-services {
                    be deduced that each BWP flow is also refered to at
                    least once.  This is part of enforcing MEF 10.3 R134,
                    and also enforces MEF 6.2 R4.";
-                  reference "[MEF10.3] [R134], [MEF6.2] [R4]";
+                reference "[MEF10.3] [R134], [MEF6.2] [R4]";
               }
 
               key "uni-id";
@@ -414,7 +414,7 @@ module mef-legato-services {
               leaf color-identifier {
                 type leafref {
                   path "/mef-global:mef-global/mef-global:color-mapping-profiles/" +
-                       "mef-global:color-mapping-profile/mef-global:id";
+                       "mef-global:profile/mef-global:id";
                 }
                 mandatory true;
                 description
@@ -425,13 +425,13 @@ module mef-legato-services {
               leaf cos-identifier {
                 type leafref {
                   path "/mef-global:mef-global/mef-global:cos-profiles/" +
-                       "mef-global:cos-profile/mef-global:id";
+                       "mef-global:profile/mef-global:id";
                 }
                 must "not(/mef-global:mef-global/mef-global:cos-profiles/" +
-                          "mef-global:cos-profile[mef-global:id = current()]/" +
+                          "mef-global:profile[mef-global:id = current()]/" +
                           "mef-global:cos-pcp) or " +
                      "count(/mef-global:mef-global/mef-global:cos-profiles/" +
-                            "mef-global:cos-profile[mef-global:id = " +
+                            "mef-global:profile[mef-global:id = " +
                                                               "current()]/" +
                             "mef-global:cos-pcp/mef-global:pcp[" +
                                "not(mef-global:cos-name = " +
@@ -448,10 +448,10 @@ module mef-legato-services {
                      CoS Names must be in the the EVC Cos Names List.";
                 }
                 must "not(/mef-global:mef-global/mef-global:cos-profiles/" +
-                          "mef-global:cos-profile[mef-global:id = current()]/" +
+                          "mef-global:profile[mef-global:id = current()]/" +
                           "mef-global:cos-dscp) or " +
                      "count(/mef-global:mef-global/mef-global:cos-profiles/" +
-                            "mef-global:cos-profile[mef-global:id = " +
+                            "mef-global:profile[mef-global:id = " +
                                                              "current()]/" +
                             "mef-global:cos-dscp/mef-global:ipv4-dscp[" +
                                "not(mef-global:cos-name = " +
@@ -469,10 +469,10 @@ module mef-legato-services {
                      List.";
                 }
                 must "not(/mef-global:mef-global/mef-global:cos-profiles/" +
-                          "mef-global:cos-profile[mef-global:id = current()]/" +
+                          "mef-global:profile[mef-global:id = current()]/" +
                           "mef-global:cos-dscp) or " +
                      "count(/mef-global:mef-global/mef-global:cos-profiles/" +
-                            "mef-global:cos-profile[mef-global:id = " +
+                            "mef-global:profile[mef-global:id = " +
                                                              "current()]/" +
                             "mef-global:cos-dscp/mef-global:ipv6-dscp[" +
                                "not(mef-global:cos-name = " +
@@ -490,12 +490,12 @@ module mef-legato-services {
                      Cos Names List.";
                 }
                 must "not(/mef-global:mef-global/mef-global:cos-profiles/" +
-                          "mef-global:cos-profile[mef-global:id = current()]/" +
+                          "mef-global:profile[mef-global:id = current()]/" +
                           "mef-global:cos-pcp) or " +
                      "(../../../cos-names/cos-name[" +
                           "name = /mef-global:mef-global/" +
                                   "mef-global:cos-profiles/" +
-                                  "mef-global:cos-profile[mef-global:id = " +
+                                  "mef-global:profile[mef-global:id = " +
                                                                "current()]/" +
                                   "mef-global:cos-pcp/" +
                                   "mef-global:default-pcp-cos-name])" {
@@ -511,12 +511,12 @@ module mef-legato-services {
                      Names List.";
                 }
                 must "not(/mef-global:mef-global/mef-global:cos-profiles/" +
-                          "mef-global:cos-profile[mef-global:id = current()]/" +
+                          "mef-global:profile[mef-global:id = current()]/" +
                           "mef-global:cos-evc) or " +
                      "(../../../cos-names/cos-name[" +
                           "name = /mef-global:mef-global/" +
                                   "mef-global:cos-profiles/" +
-                                  "mef-global:cos-profile[mef-global:id = " +
+                                  "mef-global:profile[mef-global:id = " +
                                                                "current()]/" +
                                   "mef-global:cos-evc/" +
                                   "mef-global:evc-cos-name])" {
@@ -530,12 +530,12 @@ module mef-legato-services {
                      Name must be in the the EVC Cos Names List.";
                 }
                 must "not(/mef-global:mef-global/mef-global:cos-profiles/" +
-                          "mef-global:cos-profile[mef-global:id = current()]/" +
+                          "mef-global:profile[mef-global:id = current()]/" +
                           "mef-global:cos-dscp) or " +
                      "(../../../cos-names/cos-name[" +
                           "name = /mef-global:mef-global/" +
                                   "mef-global:cos-profiles/" +
-                                  "mef-global:cos-profile[mef-global:id = " +
+                                  "mef-global:profile[mef-global:id = " +
                                                                "current()]/" +
                                   "mef-global:cos-dscp/" +
                                   "mef-global:default-ipv4-cos-name])" {
@@ -551,12 +551,12 @@ module mef-legato-services {
                      Names List.";
                 }
                 must "not(/mef-global:mef-global/mef-global:cos-profiles/" +
-                          "mef-global:cos-profile[mef-global:id = current()]/" +
+                          "mef-global:profile[mef-global:id = current()]/" +
                           "mef-global:cos-dscp) or " +
                      "(../../../cos-names/cos-name[" +
                           "name = /mef-global:mef-global/" +
                                   "mef-global:cos-profiles/" +
-                                  "mef-global:cos-profile[mef-global:id = " +
+                                  "mef-global:profile[mef-global:id = " +
                                                                "current()]/" +
                                   "mef-global:cos-dscp/" +
                                   "mef-global:default-ipv6-cos-name])" {
@@ -572,14 +572,14 @@ module mef-legato-services {
                      Names List.";
                 }
                 must "not(/mef-global:mef-global/mef-global:cos-profiles/" +
-                          "mef-global:cos-profile[mef-global:id = current()]/" +
+                          "mef-global:profile[mef-global:id = current()]/" +
                           "mef-global:l2cp-cos-id) or " +
                      "count(/mef-global:mef-global/" +
                             "mef-global:l2cp-cos-map-profiles/" +
                             "mef-global:profile[mef-global:id = " +
                                "/mef-global:mef-global/" +
                                 "mef-global:cos-profiles/" +
-                                "mef-global:cos-profile[" +
+                                "mef-global:profile[" +
                                     "mef-global:id = current()]/" +
                                 "mef-global:l2cp-cos-id]/" +
                                 "mef-global:map-entries/" +
@@ -598,14 +598,14 @@ module mef-legato-services {
                      must be in the the EVC Cos Names List.";
                 }
                 must "not(/mef-global:mef-global/mef-global:cos-profiles/" +
-                          "mef-global:cos-profile[mef-global:id = current()]/" +
+                          "mef-global:profile[mef-global:id = current()]/" +
                           "mef-global:l2cp-cos-id) or " +
                      "count(/mef-global:mef-global/" +
                             "mef-global:l2cp-cos-map-profiles/" +
                             "mef-global:profile[mef-global:id = " +
                                "/mef-global:mef-global/" +
                                 "mef-global:cos-profiles/" +
-                                "mef-global:cos-profile[" +
+                                "mef-global:profile[" +
                                     "mef-global:id = current()]/" +
                                 "mef-global:l2cp-cos-id]/" +
                                 "mef-global:map-entries/" +
@@ -624,23 +624,23 @@ module mef-legato-services {
                      must be in the the EVC Cos Names List.";
                 }
                 must "not(/mef-global:mef-global/mef-global:cos-profiles/" +
-                          "mef-global:cos-profile[mef-global:id = current()]/" +
+                          "mef-global:profile[mef-global:id = current()]/" +
                           "mef-global:cos-pcp) or " +
                      "/mef-global:mef-global/" +
                       "mef-global:color-mapping-profiles/" +
-                      "mef-global:color-mapping-profile[" +
+                      "mef-global:profile[" +
                            "mef-global:id = current()/../color-identifier]/" +
                       "mef-global:color-pcp/" +
                       "mef-global:default-pcp-color-name or " +
                      "/mef-global:mef-global/" +
                       "mef-global:color-mapping-profiles/" +
-                      "mef-global:color-mapping-profile[" +
+                      "mef-global:profile[" +
                            "mef-global:id = current()/../color-identifier]/" +
                       "mef-global:color-pcp/" +
                       "mef-global:pcps/mef-global:pcp[0] or " +
                      "/mef-global:mef-global/" +
                       "mef-global:color-mapping-profiles/" +
-                      "mef-global:color-mapping-profile[" +
+                      "mef-global:profile[" +
                            "mef-global:id = current()/../color-identifier]/" +
                       "mef-global:color-dei/mef-global:dei" {
                   error-message "When the Class of Service Identifier is 
@@ -653,23 +653,23 @@ module mef-legato-services {
                   reference "[MEF10.3] [R111].";
                 }
                 must "not(/mef-global:mef-global/mef-global:cos-profiles/" +
-                          "mef-global:cos-profile[mef-global:id = current()]/" +
+                          "mef-global:profile[mef-global:id = current()]/" +
                           "mef-global:cos-dscp) or " +
                      "/mef-global:mef-global/" +
                       "mef-global:color-mapping-profiles/" +
-                      "mef-global:color-mapping-profile[" +
+                      "mef-global:profile[" +
                            "mef-global:id = current()/../color-identifier]/" +
                       "mef-global:color-dscp/" +
                       "mef-global:default-dscp-color-name or " +
                      "/mef-global:mef-global/" +
                       "mef-global:color-mapping-profiles/" +
-                      "mef-global:color-mapping-profile[" +
+                      "mef-global:profile[" +
                            "mef-global:id = current()/../color-identifier]/" +
                       "mef-global:color-dscp/mef-global:ipv4-dscps/" +
                       "mef-global:ipv4-dscp[0] or " +
                      "/mef-global:mef-global/" +
                       "mef-global:color-mapping-profiles/" +
-                      "mef-global:color-mapping-profile[" +
+                      "mef-global:profile[" +
                            "mef-global:id = current()/../color-identifier]/" +
                       "mef-global:color-dscp/mef-global:ipv6-dscps/" +
                       "mef-global:ipv6-dscp[0]" {
@@ -692,7 +692,7 @@ module mef-legato-services {
               leaf eec-identifier {
                 type leafref {
                   path "/mef-global:mef-global/mef-global:eec-profiles/" +
-                       "mef-global:eec-profile/mef-global:id";
+                       "mef-global:profile/mef-global:id";
                 }
                 mandatory true;
                 description
@@ -839,8 +839,8 @@ module mef-legato-services {
                           leaf bw-profile-flow-parameters {
                             type leafref {
                               path "/mef-global:mef-global/" +
-                                   "mef-global:bwp-flows-parameter-set/" +
-                                   "mef-global:bwp-flow-parameter-set/" +
+                                   "mef-global:bwp-flow-parameter-profiles/" +
+                                   "mef-global:profile/" +
                                    "mef-global:id";
                             }
                             mandatory true;
@@ -997,8 +997,8 @@ module mef-legato-services {
                         leaf bw-profile-flow-parameters {
                           type leafref {
                             path "/mef-global:mef-global/" +
-                                 "mef-global:bwp-flows-parameter-set/" +
-                                 "mef-global:bwp-flow-parameter-set/" +
+                                 "mef-global:bwp-flow-parameter-profiles/" +
+                                 "mef-global:profile/" +
                                  "mef-global:id";
                           }
                           mandatory true;
@@ -1155,8 +1155,8 @@ module mef-legato-services {
                           leaf bw-profile-flow-parameters {
                             type leafref {
                               path "/mef-global:mef-global/" +
-                                   "mef-global:bwp-flows-parameter-set/" +
-                                   "mef-global:bwp-flow-parameter-set/" +
+                                   "mef-global:bwp-flow-parameter-profiles/" +
+                                   "mef-global:profile/" +
                                    "mef-global:id";
                             }
                             mandatory true;
@@ -1312,8 +1312,8 @@ module mef-legato-services {
                         leaf bw-profile-flow-parameters {
                           type leafref {
                             path "/mef-global:mef-global/" +
-                                 "mef-global:bwp-flows-parameter-set/" +
-                                 "mef-global:bwp-flow-parameter-set/" +
+                                 "mef-global:bwp-flow-parameter-profiles/" +
+                                 "mef-global:profile/" +
                                  "mef-global:id";
                           }
                           mandatory true;
@@ -2121,14 +2121,14 @@ module mef-legato-services {
                        "mef-interfaces:subscriber-interfaces/" +
                        "mef-interfaces:uni[mef-interfaces:uni-id = " +
                          "current()/../end-points/end-point/uni-id]/" +
-                       "mef-interfaces:ingress-bw-profile-per-uni/" +
+                       "mef-interfaces:ingress-bwp-per-uni/" +
                        "mef-interfaces:bw-profile-flow-parameters) and " +
                   "not(/mef-interfaces:mef-interfaces/" +
                        "mef-interfaces:carrier-ethernet/" +
                        "mef-interfaces:subscriber-interfaces/" +
                        "mef-interfaces:uni[mef-interfaces:uni-id = " +
                          "current()/../end-points/end-point/uni-id]/" +
-                       "mef-interfaces:ingress-bw-profile-per-uni/" +
+                       "mef-interfaces:ingress-bwp-per-uni/" +
                        "mef-interfaces:envelope-id) and " +
                   "not(/mef-interfaces:mef-interfaces/" +
                        "mef-interfaces:carrier-ethernet/" +
