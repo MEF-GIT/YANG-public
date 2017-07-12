@@ -1,0 +1,78 @@
+{
+"data": {
+  "mef-interfaces:mef-interfaces": {
+    "unis": {
+    	"uni": [
+    	    {
+    		    "uni-id": "MMPOP1-ce0-Slot0-Port3",
+    		    "max-svc-frame-size": 1670
+          },
+          {
+            "uni-id": "MMPOP1-ce1-Slot1-Port3",
+           "max-svc-frame-size": 1679
+           },
+           {
+               "uni-id": "MMPOP1-ce2-Slot2-Port3",
+               "max-svc-frame-size": 1679
+           }
+      ]
+    }
+  },
+  "mef-services:mef-services": {
+	  "carrier-ethernet": {
+      "subscriber-services": {	  
+	   "evc": [
+	    {
+        "evc-id": "EVC-0001343-ACME-MEGAMART",
+           "cos-names": {
+              "cos-name": [
+                {
+                  "name": "Argon"
+                },
+                {
+                  "name": "Krypton"
+                },
+                {
+                  "name": "Neon"
+                }
+              ]
+            },
+            "carrier-ethernet-sls": {
+              "sls-id": "MEF103_Table25",
+              "start-time": "2016-06-18T12:00:00+00:00",
+              "cos-entries": {
+                "cos-entry": [
+                  {
+                    "cos-name": "Neon",
+                    "pm-entries": {
+                      "pm-entry": [
+                        {
+                          "pm-entry-id": "SLS_Neon_Test2",
+                          "end-point-pairs": {
+                            "sls-uni-exclusions": {
+                              "end-point-pair": [
+                                {
+                                  "end-point1": "MMPOP1-ce1-Slot1-Port3",
+                                  "end-point2": "MMPOP1-ce0-Slot0-Port3"
+                                }
+                              ]
+                            }
+                          }
+                        }
+                      ]
+                    }
+                  }
+                ]
+              }
+            },
+        "connection-type": "point-to-point",
+        "admin-state": false,
+        "ce-vlan-id-preservation": false,
+        "svc-type": "evpl"
+        }
+     ]
+   }
+   }
+   } 
+ }
+}

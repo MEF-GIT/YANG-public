@@ -1,0 +1,436 @@
+{
+"data": {
+  "mef-interfaces:mef-interfaces": {
+    "unis": {
+    	"uni": [
+    	    {
+    	        "uni-id": "MMPOP1-ce5-Slot5-Port2",
+    	        "physical-layers": {
+    	          "links": {
+    	            "link": [
+    	              {
+    	                "device": "ce5",
+    	                "interface": "GigabitEthernet0/2",
+    	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+    	              }
+    	            ]
+    	          }
+    	        },
+    	        "ce-vlans": {
+    	          "ce-vlan": [
+    	            {
+    	              "vid": 1
+    	            }
+    	          ]
+    	        },
+    	        "ingress-envelopes": {
+    	          "envelope": [
+    	            {
+    	              "envelope-id": "ienv_EPTREE_UNI552_57913_Krypton",
+    	              "bwp-flows": {
+    	                "bwp-flow": [
+    	                  {
+    	                    "bw-profile": "itest-bwp1"
+    	                  }
+    	                ]
+    	              },
+    	              "coupling-enabled": false
+    	            }
+    	          ]
+    	        },
+    	        "egress-envelopes": {
+    	          "envelope": [
+    	            {
+    	              "envelope-id": "eenv_EPTREE_UNI552_57913_Sophomore",
+    	              "bwp-flows": {
+    	                "bwp-flow": [
+    	                  {
+    	                    "bw-profile": "etest-bwp1"
+    	                  }
+    	                ]
+    	              },
+    	              "coupling-enabled": false
+    	            }
+    	          ]
+    	        },
+    	        "cen-id": "ACME-MEGAMART",
+    	        "subscriber": "MegaMart",
+    	        "admin-state-enabled": false,
+    	        "max-svc-frame-size": 1600,
+    	        "all-to-one-bundling-enabled": true,
+    	        "max-evc-count": 1,
+    	        "elmi-enabled": true,
+    	        "elmi-profile": "elmi-test1"
+          },
+          {
+        	    "uni-id": "MMPOP1-ce6-Slot6-Port2",
+        	    "physical-layers": {
+        	      "links": {
+        	        "link": [
+        	          {
+        	            "device": "ce6",
+        	            "interface": "GigabitEthernet0/2",
+        	            "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+        	          }
+        	        ]
+        	      }
+        	    },
+        	    "ce-vlans": {
+        	      "ce-vlan": [
+        	        {
+        	          "vid": 1
+        	        }
+        	      ]
+        	    },
+        	    "ingress-envelopes": {
+        	      "envelope": [
+        	        {
+        	          "envelope-id": "ienv_EPTREE_UNI662_57913_Krypton",
+        	          "bwp-flows": {
+        	            "bwp-flow": [
+        	              {
+        	                "bw-profile": "itest-bwp2"
+        	              }
+        	            ]
+        	          },
+        	          "coupling-enabled": false
+        	        }
+        	      ]
+        	    },
+        	    "egress-envelopes": {
+        	      "envelope": [
+        	        {
+        	          "envelope-id": "eenv_EPTREE_UNI662_57913_Sophomore",
+        	          "bwp-flows": {
+        	            "bwp-flow": [
+        	              {
+        	                "bw-profile": "etest-bwp2"
+        	              }
+        	            ]
+        	          },
+        	          "coupling-enabled": false
+        	        }
+        	      ]
+        	    },
+        	    "cen-id": "ACME-MEGAMART",
+        	    "subscriber": "MegaMart",
+        	    "admin-state-enabled": false,
+        	    "max-svc-frame-size": 1600,
+        	    "all-to-one-bundling-enabled": true,
+        	    "max-evc-count": 1
+
+          },
+          {
+        	    "uni-id": "MMPOP1-ce7-Slot7-Port2",
+        	    "physical-layers": {
+        	      "links": {
+        	        "link": [
+        	          {
+        	            "device": "ce7",
+        	            "interface": "GigabitEthernet0/2",
+        	            "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+        	          }
+        	        ]
+        	      }
+        	    },
+        	    "ce-vlans": {
+        	      "ce-vlan": [
+        	        {
+        	          "vid": 1
+        	        }
+        	      ]
+        	    },
+        	    "ingress-envelopes": {
+        	      "envelope": [
+        	        {
+        	          "envelope-id": "ienv_EPTREE_UNI772_57913_Krypton",
+        	          "bwp-flows": {
+        	            "bwp-flow": [
+        	              {
+        	                "bw-profile": "itest-bwp1"
+        	              }
+        	            ]
+        	          },
+        	          "coupling-enabled": false
+        	        }
+        	      ]
+        	    },
+        	    "egress-envelopes": {
+        	      "envelope": [
+        	        {
+        	          "envelope-id": "eenv_EPTREE_UNI772_57913_Sophomore",
+        	          "bwp-flows": {
+        	            "bwp-flow": [
+        	              {
+        	                "bw-profile": "etest-bwp1"
+        	              }
+        	            ]
+        	          },
+        	          "coupling-enabled": false
+        	        }
+        	      ]
+        	    },
+        	    "cen-id": "ACME-MM-HQ",
+        	    "subscriber": "MegaMart",
+        	    "admin-state-enabled": false,
+        	    "max-svc-frame-size": 1600,
+        	    "all-to-one-bundling-enabled": true,
+        	    "max-evc-count": 1
+            },
+            {
+            	   "uni-id": "MMPOP1-ce8-Slot8-Port2",
+            	    "physical-layers": {
+            	      "links": {
+            	        "link": [
+            	          {
+            	            "device": "ce8",
+            	            "interface": "GigabitEthernet0/2",
+            	            "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+            	          }
+            	        ]
+            	      }
+            	    },
+            	    "ce-vlans": {
+            	      "ce-vlan": [
+            	        {
+            	          "vid": 1
+            	        }
+            	      ]
+            	    },
+            	    "ingress-envelopes": {
+            	      "envelope": [
+            	        {
+            	          "envelope-id": "ienv_EPTREE_UNI882_57913_Krypton",
+            	          "bwp-flows": {
+            	            "bwp-flow": [
+            	              {
+            	                "bw-profile": "itest-bwp2"
+            	              }
+            	            ]
+            	          },
+            	          "coupling-enabled": false
+            	        }
+            	      ]
+            	    },
+            	    "egress-envelopes": {
+            	      "envelope": [
+            	        {
+            	          "envelope-id": "eenv_EPTREE_UNI882_57913_Sophomore",
+            	          "bwp-flows": {
+            	            "bwp-flow": [
+            	              {
+            	                "bw-profile": "etest-bwp2"
+            	              }
+            	            ]
+            	          },
+            	          "coupling-enabled": false
+            	        }
+            	      ]
+            	    },
+            	    "cen-id": "ACME-MM-HQ",
+            	    "subscriber": "MegaMart",
+            	    "admin-state-enabled": false,
+            	    "max-svc-frame-size": 1600,
+            	    "all-to-one-bundling-enabled": true,
+            	    "max-evc-count": 1
+              }
+      ]
+    }
+  },
+  "mef-services:mef-services": {
+	   "mef-service": [
+	    {	  
+	    	  "svc-id": 57913,
+	    	    "evc": {
+	    	      "unis": {
+	    	        "uni": [
+	    	          {
+	    	            "uni-id": "MMPOP1-ce5-Slot5-Port2",
+	    	            "evc-uni-ce-vlans": {
+	    	              "evc-uni-ce-vlan": [
+	    	                {
+	    	                  "vid": 1
+	    	                }
+	    	              ]
+	    	            },
+	    	            "ingress-bwp-flows-per-cos": {
+	    	              "coupling-enabled": false,
+	    	              "bwp-flow-per-cos": [
+	    	                {
+	    	                  "cos-name": "Krypton",
+	    	                  "bw-profile": "ienv_EPTREE_UNI552_57913_Krypton"
+	    	                }
+	    	              ]
+	    	            },
+	    	            "egress-bwp-flows-per-eec": {
+	    	              "coupling-enabled": false,
+	    	              "bwp-flow-per-eec": [
+	    	                {
+	    	                  "eec-name": "Sophomore",
+	    	                  "bw-profile": "eenv_EPTREE_UNI552_57913_Sophomore"
+	    	                }
+	    	              ]
+	    	            },
+	    	            "role": "root",
+	    	            "admin-state-enabled": false,
+	    	            "src-mac-addr-limit-enabled": true
+	    	          },
+	    	          {
+	    	            "uni-id": "MMPOP1-ce6-Slot6-Port2",
+	    	            "evc-uni-ce-vlans": {
+	    	              "evc-uni-ce-vlan": [
+	    	                {
+	    	                  "vid": 1
+	    	                }
+	    	              ]
+	    	            },
+	    	            "ingress-bwp-flows-per-cos": {
+	    	              "coupling-enabled": false,
+	    	              "bwp-flow-per-cos": [
+	    	                {
+	    	                  "cos-name": "Krypton",
+	    	                  "bw-profile": "ienv_EPTREE_UNI662_57913_Krypton"
+	    	                }
+	    	              ]
+	    	            },
+	    	            "egress-bwp-flows-per-eec": {
+	    	              "coupling-enabled": false,
+	    	              "bwp-flow-per-eec": [
+	    	                {
+	    	                  "eec-name": "Sophomore",
+	    	                  "bw-profile": "eenv_EPTREE_UNI662_57913_Sophomore"
+	    	                }
+	    	              ]
+	    	            },
+	    	            "role": "leaf",
+	    	            "admin-state-enabled": false,
+	    	            "src-mac-addr-limit-enabled": true
+	    	          },
+	    	          {
+	    	            "uni-id": "MMPOP1-ce7-Slot7-Port2",
+	    	            "evc-uni-ce-vlans": {
+	    	              "evc-uni-ce-vlan": [
+	    	                {
+	    	                  "vid": 1
+	    	                }
+	    	              ]
+	    	            },
+	    	            "ingress-bwp-flows-per-cos": {
+	    	              "coupling-enabled": false,
+	    	              "bwp-flow-per-cos": [
+	    	                {
+	    	                  "cos-name": "Krypton",
+	    	                  "bw-profile": "ienv_EPTREE_UNI772_57913_Krypton"
+	    	                }
+	    	              ]
+	    	            },
+	    	            "egress-bwp-flows-per-eec": {
+	    	              "coupling-enabled": false,
+	    	              "bwp-flow-per-eec": [
+	    	                {
+	    	                  "eec-name": "Sophomore",
+	    	                  "bw-profile": "eenv_EPTREE_UNI772_57913_Sophomore"
+	    	                }
+	    	              ]
+	    	            },
+	    	            "role": "leaf",
+	    	            "admin-state-enabled": false,
+	    	            "src-mac-addr-limit-enabled": true
+	    	          },
+	    	          {
+	    	            "uni-id": "MMPOP1-ce8-Slot8-Port2",
+	    	            "evc-uni-ce-vlans": {
+	    	              "evc-uni-ce-vlan": [
+	    	                {
+	    	                  "vid": 1
+	    	                }
+	    	              ]
+	    	            },
+	    	            "ingress-bwp-flows-per-cos": {
+	    	              "coupling-enabled": false,
+	    	              "bwp-flow-per-cos": [
+	    	                {
+	    	                  "cos-name": "Krypton",
+	    	                  "bw-profile": "ienv_EPTREE_UNI882_57913_Krypton"
+	    	                }
+	    	              ]
+	    	            },
+	    	            "egress-bwp-flows-per-eec": {
+	    	              "coupling-enabled": false,
+	    	              "bwp-flow-per-eec": [
+	    	                {
+	    	                  "eec-name": "Sophomore",
+	    	                  "bw-profile": "eenv_EPTREE_UNI882_57913_Sophomore"
+	    	                }
+	    	              ]
+	    	            },
+	    	            "role": "leaf",
+	    	            "admin-state-enabled": false,
+	    	            "src-mac-addr-limit-enabled": true
+	    	          }
+	    	        ]
+	    	      },
+	    	      "sls-inclusions-by-cos": {
+	    	        "sls-inclusion-by-cos": [
+	    	          {
+	    	            "cos-name": "Neon"
+	    	          }
+	    	        ]
+	    	      },
+	    	      "sls-uni-inclusions": {
+	    	        "sls-uni-inclusion-set": [
+	    	          {
+	    	            "pm-type": "one-way-frame-delay-performance",
+	    	            "pm-id": "Neon",
+	    	            "uni-id1": "MMPOP1-ce5-Slot5-Port2",
+	    	            "uni-id2": "MMPOP1-ce6-Slot6-Port2"
+	    	          },
+	    	          {
+	    	            "pm-type": "one-way-frame-delay-performance",
+	    	            "pm-id": "Neon",
+	    	            "uni-id1": "MMPOP1-ce5-Slot5-Port2",
+	    	            "uni-id2": "MMPOP1-ce7-Slot7-Port2"
+	    	          },
+	    	          {
+	    	            "pm-type": "one-way-frame-delay-performance",
+	    	            "pm-id": "Neon",
+	    	            "uni-id1": "MMPOP1-ce5-Slot5-Port2",
+	    	            "uni-id2": "MMPOP1-ce8-Slot8-Port2"
+	    	          },
+	    	          {
+	    	            "pm-type": "one-way-frame-delay-performance",
+	    	            "pm-id": "Neon",
+	    	            "uni-id1": "MMPOP1-ce6-Slot6-Port2",
+	    	            "uni-id2": "MMPOP1-ce5-Slot5-Port2"
+	    	          },
+	    	          {
+	    	            "pm-type": "one-way-frame-delay-performance",
+	    	            "pm-id": "Neon",
+	    	            "uni-id1": "MMPOP1-ce7-Slot7-Port2",
+	    	            "uni-id2": "MMPOP1-ce5-Slot5-Port2"
+	    	          },
+	    	          {
+	    	            "pm-type": "one-way-frame-delay-performance",
+	    	            "pm-id": "Neon",
+	    	            "uni-id1": "MMPOP1-ce8-Slot8-Port2",
+	    	            "uni-id2": "MMPOP1-ce5-Slot5-Port2"
+	    	          }
+	    	        ]
+	    	      },
+	    	      "evc-id": "EVC-0001911-ACME-MEGAMART",
+	    	      "evc-type": "rooted-multipoint",
+	    	      "admin-state-enabled": false,
+	    	      "max-uni-count": 4,
+	    	      "preserve-ce-vlan-id": true,
+	    	      "cos-preserve-ce-vlan-id": true,
+	    	      "evc-performance-sls": "MEF103_Table25",
+	    	      "unicast-svc-frm-delivery": "conditional",
+	    	      "max-svc-frame-size": 1600
+	    	    },
+	    	    "sp-id": "Acme",
+	    	    "svc-type": "eptree",
+	  }
+	 ]
+  }
+ }
+}

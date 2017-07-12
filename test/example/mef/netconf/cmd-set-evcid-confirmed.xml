@@ -1,0 +1,90 @@
+ <?xml version="1.0" encoding="UTF-8"?> 
+ <hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">  
+ <capabilities>  
+ 	<capability>urn:ietf:params:netconf:base:1.0</capability>
+	<capability>urn:ietf:params:netconf:capability:writable-running:1.0</capability>
+	<capability>urn:ietf:params:netconf:capability:candidate:1.0</capability>
+	<capability>urn:ietf:params:netconf:capability:confirmed-commit:1.0</capability>
+	<capability>urn:ietf:params:netconf:capability:xpath:1.0</capability>
+	<capability>urn:ietf:params:netconf:capability:url:1.0?scheme=ftp,file</capability>
+	<capability>urn:ietf:params:netconf:capability:validate:1.0</capability>
+	<capability>urn:ietf:params:netconf:capability:rollback-on-error:1.0</capability>
+	<capability>urn:ietf:params:netconf:capability:notification:1.0</capability>
+	<capability>urn:ietf:params:netconf:capability:partial-lock:1.0</capability>
+ </capabilities> 
+ </hello>]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="111">
+      <lock>
+         <target>
+           <running/>
+         </target>
+       </lock>
+  </rpc>]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+ <rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="112">
+      <lock>
+         <target>
+           <candidate/>
+         </target>
+       </lock>
+  </rpc>]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+ <rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="113">
+  <discard-changes/>
+  </rpc>]]>]]>
+ <?xml version="1.0" encoding="UTF-8"?> 
+ <rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="114">  
+ 	<edit-config>  
+ 		<target>  
+ 			<candidate/>  
+		</target>  
+ 		<config>  
+ 	           <mef-services xmlns="urn:mef:xid:mef-services" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">  
+                       <mef-service>
+                         <svc-id>12345</svc-id>
+                       </mef-service>  
+ 	</mef-services>  
+ 		</config>  
+	 </edit-config>  
+ </rpc>]]>]]>
+<?xml version="1.0" encoding="UTF-8"?> 
+ <rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="115">  
+          <validate>
+         <source>
+           <candidate/>
+         </source>
+       </validate>
+ </rpc>]]>]]>
+<?xml version="1.0" encoding="UTF-8"?> 
+ <rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="116">  
+ 	<commit>
+      <confirmed/>
+        <confirm-timeout>60</confirm-timeout>
+    </commit>
+ </rpc>]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+ <rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="117">
+      <unlock>
+         <target>
+           <candidate/>
+         </target>
+       </unlock>
+  </rpc>]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+ <rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="118">
+      <unlock>
+         <target>
+           <running/>
+         </target>
+       </unlock>
+  </rpc>]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+ <rpc  xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="119">
+       <commit/>
+ </rpc>]]>]]>
+<?xml version="1.0" encoding="UTF-8"?> 
+ <rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="120">  
+ <close-session/> 
+ </rpc>
+

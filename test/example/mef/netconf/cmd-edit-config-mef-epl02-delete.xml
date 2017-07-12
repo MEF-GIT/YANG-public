@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <capabilities>
+    <capability>urn:ietf:params:netconf:base:1.0</capability>
+  </capabilities>
+</hello>
+]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1">
+ <edit-config>
+    <target>
+      <running/>
+    </target>
+    <config>
+      <mef-interfaces xmlns="urn:mef:xid:mef-interfaces" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" >
+        <unis>
+          <uni nc:operation="delete">
+            <uni-id>MMPOP1-ce0-Slot0-Port2</uni-id>
+          </uni>
+          <uni nc:operation="delete">
+            <uni-id>MMPOP1-ce2-Slot0-Port3</uni-id>
+          </uni>
+        </unis>
+      </mef-interfaces>
+    <mef-services xmlns="urn:mef:xid:mef-services"   xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" >
+           <carrier-ethernet>
+           <subscriber-services>          
+      <evc nc:operation="delete">
+        <evc-id>EVC-0009898-ACME-MEGAMART</evc-id>
+      </evc>
+           </subscriber-services>             
+           </carrier-ethernet>
+    </mef-services>
+      <mef-interfaces xmlns="urn:mef:xid:mef-interfaces" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" >
+        <unis>
+          <uni nc:operation="delete">
+            <uni-id>MMPOP1-ce2-Slot2-Port1</uni-id>
+          </uni>
+          <uni nc:operation="delete">
+            <uni-id>CYPOP1-ce4-Slot4-Port3</uni-id>
+          </uni>
+          <uni nc:operation="delete">
+            <uni-id>CYPOP1-ce4-Slot4-Port4</uni-id>
+          </uni>
+          <uni nc:operation="delete">
+            <uni-id>CYPOP1-ce3-Slot3-Port4</uni-id>
+          </uni>
+          <uni nc:operation="delete">
+            <uni-id>CYPOP1-ce3-Slot3-Port3</uni-id>
+          </uni>
+          <uni nc:operation="delete">
+            <uni-id>MMPOP1-ce4-Slot4-Port4</uni-id>
+          </uni>
+        </unis>
+      </mef-interfaces>
+   </config>
+  </edit-config>
+  </rpc>
+]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2">
+  <close-session/>
+</rpc>

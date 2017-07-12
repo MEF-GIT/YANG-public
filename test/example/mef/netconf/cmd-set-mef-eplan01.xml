@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <capabilities>
+    <capability>urn:ietf:params:netconf:base:1.0</capability>
+  </capabilities>
+</hello>
+]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1">
+ <edit-config>
+    <target>
+      <running/>
+    </target>
+    <config>
+    <mef-interfaces xmlns="urn:mef:xid:mef-interfaces"  xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+    <unis>
+      <uni>
+        <uni-id>MMPOP1-ce5-Slot5-Port1</uni-id>
+        <physical-layers>
+          <links>
+            <link>
+              <device>ce5</device>
+              <interface>GigabitEthernet0/1</interface>
+              <ieee8023-phy xmlns:mef-types="urn:mef:xid:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            </link>
+          </links>
+        </physical-layers>
+        <ce-vlans>
+          <ce-vlan>
+            <vid>1</vid>
+          </ce-vlan>
+        </ce-vlans>
+        <cen-id annotation="EP-LAN Use Case 1:">ACME-MEGAMART</cen-id>
+        <subscriber>MegaMart</subscriber>
+        <admin-state-enabled annotation="EP-LAN Use Case 1:">false</admin-state-enabled>
+        <max-svc-frame-size>1600</max-svc-frame-size>
+        <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
+        <max-evc-count>1</max-evc-count>
+        <ingress-bw-profile-per-uni>medium1-bwp-uni</ingress-bw-profile-per-uni>
+        <egress-bw-profile-per-uni>medium2-bwp-uni</egress-bw-profile-per-uni>
+        <elmi-enabled>true</elmi-enabled>
+        <elmi-profile>elmi-test1</elmi-profile>
+        <l2cp-address-set>blind-ctb</l2cp-address-set>
+        <l2cp-peering-profile>L2CP_Peering_Profile1</l2cp-peering-profile>
+      </uni>
+      <uni>
+        <uni-id>MMPOP1-ce6-Slot6-Port1</uni-id>
+        <physical-layers>
+          <links>
+            <link>
+              <device>ce6</device>
+              <interface>GigabitEthernet0/1</interface>
+              <ieee8023-phy xmlns:mef-types="urn:mef:xid:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            </link>
+          </links>
+        </physical-layers>
+        <ce-vlans>
+          <ce-vlan>
+            <vid>1</vid>
+          </ce-vlan>
+        </ce-vlans>
+        <cen-id>ACME-MEGAMART</cen-id>
+        <subscriber>MegaMart</subscriber>
+        <admin-state-enabled>false</admin-state-enabled>
+        <max-svc-frame-size>1600</max-svc-frame-size>
+        <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
+        <max-evc-count>1</max-evc-count>
+        <ingress-bw-profile-per-uni>low1-bwp-uni</ingress-bw-profile-per-uni>
+        <egress-bw-profile-per-uni>low2-bwp-uni</egress-bw-profile-per-uni>
+        <l2cp-address-set>blind-ctb</l2cp-address-set>
+        <l2cp-peering-profile>L2CP_Peering_Profile1</l2cp-peering-profile>
+      </uni>
+      <uni>
+        <uni-id>MMPOP1-ce7-Slot7-Port1</uni-id>
+        <physical-layers>
+          <links>
+            <link>
+              <device>ce7</device>
+              <interface>GigabitEthernet0/1</interface>
+              <ieee8023-phy xmlns:mef-types="urn:mef:xid:mef-types">mef-types:ieee8023-1000BASE-SX</ieee8023-phy>
+            </link>
+          </links>
+        </physical-layers>
+        <ce-vlans>
+          <ce-vlan>
+            <vid>1</vid>
+          </ce-vlan>
+        </ce-vlans>
+        <cen-id>ACME-MM-HQ</cen-id>
+        <subscriber>MegaMart</subscriber>
+        <admin-state-enabled>false</admin-state-enabled>
+        <max-svc-frame-size>1600</max-svc-frame-size>
+        <all-to-one-bundling-enabled>true</all-to-one-bundling-enabled>
+        <max-evc-count>1</max-evc-count>
+        <ingress-bw-profile-per-uni>high1-bwp-uni</ingress-bw-profile-per-uni>
+        <egress-bw-profile-per-uni>high2-bwp-uni</egress-bw-profile-per-uni>
+        <l2cp-address-set>blind-ctb</l2cp-address-set>
+        <l2cp-peering-profile>L2CP_Peering_Profile1</l2cp-peering-profile>
+      </uni>
+    </unis>
+  </mef-interfaces>
+  <mef-services xmlns="urn:mef:xid:mef-services">
+    <mef-service>
+      <svc-id>13591</svc-id>
+      <evc>
+        <unis>
+          <uni>
+            <uni-id>MMPOP1-ce5-Slot5-Port1</uni-id>
+            <evc-uni-ce-vlans>
+              <evc-uni-ce-vlan>
+                <vid>1</vid>
+              </evc-uni-ce-vlan>
+            </evc-uni-ce-vlans>
+            <role>root</role>
+            <admin-state-enabled>false</admin-state-enabled>
+            <src-mac-addr-limit-enabled>true</src-mac-addr-limit-enabled>
+          </uni>
+          <uni>
+            <uni-id>MMPOP1-ce6-Slot6-Port1</uni-id>
+            <evc-uni-ce-vlans>
+              <evc-uni-ce-vlan>
+                <vid>1</vid>
+              </evc-uni-ce-vlan>
+            </evc-uni-ce-vlans>
+            <role>root</role>
+            <admin-state-enabled>false</admin-state-enabled>
+            <src-mac-addr-limit-enabled>true</src-mac-addr-limit-enabled>
+          </uni>
+          <uni>
+            <uni-id>MMPOP1-ce7-Slot7-Port1</uni-id>
+            <evc-uni-ce-vlans>
+              <evc-uni-ce-vlan>
+                <vid>1</vid>
+              </evc-uni-ce-vlan>
+            </evc-uni-ce-vlans>
+            <role>root</role>
+            <admin-state-enabled>false</admin-state-enabled>
+            <src-mac-addr-limit-enabled>true</src-mac-addr-limit-enabled>
+          </uni>
+        </unis>
+        <sls-inclusions-by-cos>
+          <sls-inclusion-by-cos>
+            <cos-name>Argon</cos-name>
+          </sls-inclusion-by-cos>
+          <sls-inclusion-by-cos>
+            <cos-name>Krypton</cos-name>
+          </sls-inclusion-by-cos>
+        </sls-inclusions-by-cos>
+        <evc-id>EVC-0001901-ACME-MEGAMART</evc-id>
+        <evc-type>multipoint-to-multipoint</evc-type>
+        <admin-state-enabled>false</admin-state-enabled>
+        <max-uni-count>3</max-uni-count>
+        <preserve-ce-vlan-id>true</preserve-ce-vlan-id>
+        <cos-preserve-ce-vlan-id>true</cos-preserve-ce-vlan-id>
+        <evc-performance-sls>MEF103_Table25</evc-performance-sls>
+        <unicast-svc-frm-delivery>conditional</unicast-svc-frm-delivery>
+        <max-svc-frame-size>1600</max-svc-frame-size>
+      </evc>
+      <sp-id>Acme</sp-id>
+      <svc-type>eplan</svc-type>
+    </mef-service>
+    </mef-services>
+   </config>
+  </edit-config>
+  </rpc>
+]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2">
+  <close-session/>
+</rpc>

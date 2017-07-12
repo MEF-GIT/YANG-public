@@ -1,0 +1,118 @@
+module mef-device {
+  namespace "urn:mef:yang:mef-device";
+  prefix mef-device;
+
+  import ietf-interfaces {
+    prefix if;
+  }
+
+  organization "MEF Forum";
+  contact
+    "Web URL: http://mef.net/
+     E-mail:  namespace@mef.net
+     Postal:  MEF Forum
+              6033 W. Century Boulevard, Suite 1107
+              Los Angeles, CA 90045
+              U.S.A.
+     Phone:   +1 310-642-2800
+     Fax:     +1 310-642-2808";
+  description
+    "This module implements the Network Equipment (NE) side 
+     EVC and UNI functionality specified 
+     in MEF 10.3, MEF 6.2, and MEF 7.3.
+     
+     Reference Overview: 
+     A number of base documents have been used to create 
+     the MEF Device YANG Module. The following are the 
+     abbreviations for the baseline documents:
+     [RFC 6991] refers to IETF RFC 6991 'Common YANG Data Types',
+     2013-07-15  
+     [RFC 6643] refers to IETF RFC 6643 'Translation of Structure
+     of Management Information
+     Version 2 (SMIv2) MIB Modules to YANG Modules', 2011-11-25  
+     [802.1AB] refers to 'Station and Media Access Control
+     Connectivity Discovery', IEEE 802.1AB-2009, September 2009
+     [802.1q] refers to IEEE 802.1Q-2011 'IEEE Standard for Local
+     and metropolitan area networks --Media Access Control (MAC)
+     Bridges and Virtual Bridged Local Area Networks, August 2011
+     [802-2001] refers to 'IEEE Standard for Local and Metropolitan
+     Area Networks: Overview and Architecture', IEEE 802-2001,
+     February 2002
+     [MEF10.3] refers to MEF 10.3 
+     'Ethernet Services Attributes Phase 3', October 2013
+     [MEF6.2] refers to MEF 6.2 
+     'EVC Ethernet Services Defintions Phase 3', August 2014
+     [MEF40] refers to MEF 40 
+     'UNI and EVC Definition of Managed Objects', April 2013
+     [MEF45] refers to MEF 45 'Multi-CEN L2CP', August 2014
+     [MEF7.2] refers to MEF 7.2 
+     'Carrier Ethernet Management Information Model', April 2013
+     [MEF7.3] refers to MEF 7.3 
+     'Carrier Ethernet Management Information Model',
+     Working Draft #1 2015
+     [RFC 2737] refers to IETF RFC 2737 'Entity MIB (Version 2)',
+     December 1999
+     [RFC 2863] refers to IETF RFC 2863 'The Interfaces Group MIB',
+     June 2000
+     [RFC 3419] refers to IETF RFC 3419 
+     'Textual Conventions for Transport Addresses', December 2002
+     [Y.1731] refers to ITU-T Y.1731 
+     'OAM functions and mechanisms for Ethernet based networks',
+     July 2011
+     [Q.840.1] refers to ITU-T Q.840.1 
+     'Requirements and analysis for NMS-EMS management interface
+     of Ethernet over Transport and Metro Ethernet 
+     Network(EoT/MEN)' March 2007";
+
+  revision 2016-04-17 {
+    description
+      "First set of updates to better align with
+       MEF Common Information Model names";
+    reference "EVC Ethernet Services Definitions YANG Modules 
+    	      (MEF XX), TBD";
+  }
+
+  revision 2015-06-26 {
+    description
+      "Empty Shell file created for discussion purposes.";
+    reference "MEF Device YANG Module " +
+    		"(MEF XX), TBD";
+  }
+
+  container mef-device {
+    description
+      "MEF Device";
+    container interfaces {
+      description
+        "MEF Device Interfaces.";
+      list interface {
+         key name;
+
+         leaf name {
+           type leafref {
+             path "/if:interfaces/if:interface/if:name";
+           }
+           description
+        	   "A reference to the interface in question.";
+         }
+   	     description
+		     "List of interfaces that the device is dealing with.";
+      }
+      
+      list interfaces {
+          key name;
+          config false;
+          leaf name {
+            type leafref {
+              path "/if:interfaces-state/if:interface/if:name";
+            }
+            description
+            	"A reference to the interface state leafs.";
+          }
+    	  description
+    		  "List of interfaces to keep track of interface state.";
+       }      
+      
+    }
+  } /* mef-device */
+}

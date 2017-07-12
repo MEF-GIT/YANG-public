@@ -1,0 +1,69 @@
+module mef {
+  namespace "http://tail-f.com/mef-evc-service";
+  prefix mef-evc-service;
+
+  import tailf-common {
+    prefix tailf;
+  }
+  import tailf-ncs {
+    prefix ncs;
+  }
+
+  organization "Metro Ethernet Forum";
+  contact
+    "Web URL: http://metroethernetforum.org/ \\
+     E-mail:  mibs@metroethernetforum.org \\
+     Postal:  Metro Ethernet Forum \\
+              6033 W. Century Boulevard, Suite 830 \\
+              Los Angeles, CA 90045 \\
+              U.S.A. \\
+     Phone:   +1 310-642-2800 \\
+     Fax:     +1 310-642-2808";
+  description
+    "THIS NEEDS TO BE UPDATED This module models a MEF EVC service based on MEF 10.3.
+     
+     Reference Overview:
+      A number of base documents have been used to create the CFM YANG. The
+      following are the abbreviations for the baseline documents:
+      [802.1AB] refers to 'Station and Media Access Control Connectivity
+          Discovery', IEEE 802.1AB-2009, September 2009
+      [802.1q] refers to IEEE 802.1Q-2011 'IEEE Standard for Local and metropolitan
+          area networks --Media Access Control (MAC) Bridges and Virtual
+          Bridged Local Area Networks, August 2011
+      [802-2001] refers to 'IEEE Standard for Local and Metropolitan Area
+          Networks: Overview and Architecture', IEEE 802-2001, February 2002
+      [MEF30] refers to MEF 30 'Service OAM Fault Management Implementation
+          Agreement', January 2011
+      [RFC 2737] refers to IETF RFC 2737 'Entity MIB (Version 2)', December 1999
+      [RFC 2863] refers to IETF RFC 2863 'The Interfaces Group MIB', June 2000
+      [RFC 3419] refers to IETF RFC 3419 'Textual Conventions for Transport
+          Addresses', December 2002
+      [Y.1731] refers to ITU-T Y.1731 'OAM functions and mechanisms for Ethernet 
+          based networks', July 2011";
+
+  revision 2015-02-13 {
+    description
+      "Initial revision";
+    reference "THIS NEEDS TO BE UPDATED Service OAM Fault Management YANG Modules (MEF XX), April 2012";
+  }
+
+  container mef-evc-service {
+	description
+	  "MEF EVC Services";	  
+    list ethernet-virtual-connection {
+      key "identifier";
+      leaf identifier {
+        type string;
+        description
+          "This attribute identifies the name of an EVC instance.";
+      }
+      uses ncs:service-data;
+      tailf:callpoint "ncs-rfs-service-hook" {
+        tailf:transaction-hook "subtree" {
+          tailf:invocation-mode "per-transaction";
+        }
+      }
+      ncs:servicepoint "mef-evc-servicepoint";
+    }
+  }
+}

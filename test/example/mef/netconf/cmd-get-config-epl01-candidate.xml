@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <capabilities>
+    <capability>urn:ietf:params:netconf:base:1.0</capability>
+  </capabilities>
+</hello>
+]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="98">
+  <get-config>
+          <source>
+             <candidate/>
+          </source>
+          <filter xmlns="urn:mef:xid:mef-services">
+             <mef-services>
+               <mef-service>
+                  <svc-id>12345</svc-id>
+               </mef-service>
+             </mef-services>
+          </filter>
+  </get-config>
+  </rpc>
+]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="99">
+  <close-session/>
+</rpc>

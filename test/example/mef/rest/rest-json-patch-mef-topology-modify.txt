@@ -1,0 +1,19 @@
+{
+  "mef-topology:mef-topology": {
+    "devices": {
+      "device": [
+        {
+          "dev-id": "ce0",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "GigabitEthernet0/1",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX"
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

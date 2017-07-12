@@ -1,0 +1,199 @@
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART connection-type' (value "rooted-multipoint"): If EVC Type is Rooted-Multipoint, one or more UNI Roles must be root.
+Test 10.3 R4: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART connection-type' (value "point-to-point"): If EVC Type is Point-to-Point, there must be exactly 2 UNI configured for the EVC.
+Test 10.3 R9B P2P: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001901-ACME-MEGAMART connection-type' (value "multipoint-to-multipoint"): If EVC Type is Multipoint-to-Multipoint, there must be 2 or more UNI configured for the EVC.
+Test 10.3 R9B M2M1: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001901-ACME-MEGAMART connection-type' (value "multipoint-to-multipoint"): If EVC Type is Multipoint-to-Multipoint, there must be 2 or more UNI configured for the EVC.
+Test 10.3 R9B M2M2: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART connection-type' (value "rooted-multipoint"): If EVC Type is Rooted-Multipoint, there must be 2 or more UNI configured for the EVC.
+Test 10.3 R9B RM1: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART connection-type' (value "rooted-multipoint"): If EVC Type is Rooted-Multipoint, there must be 2 or more UNI configured for the EVC.
+Test 10.3 R9B RM2: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART connection-type' (value "point-to-point"): If EVC Type is Point-to-Point, all UNI Roles must be root.
+Test 10.3 R12A P2P: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001901-ACME-MEGAMART connection-type' (value "multipoint-to-multipoint"): If EVC Type is Multipoint-to-Multipoint, all UNI Roles must be root.
+Test 10.3 R12A M2M: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART connection-type' (value "point-to-point"): If EVC Type is Point-to-Point, the value of max-num-of-evc-end-point must be 2.
+Test 10.3 R13: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001901-ACME-MEGAMART connection-type' (value "multipoint-to-multipoint"): If EVC Type is Multipoint-to-Multipoint, the value of max-num-of-evc-end-point must be at least 3.
+Test 10.3 R14: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port3' : When more than one CE-VLAN-ID is mapped to an EVC at a UNI, the EVC must have CE-VLAN ID Preservation Enabled.
+Test 10.3 R25: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART carrier-ethernet-sls cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 end-point-pairs' : The EVC Performance SLS Exclusions and Inclusions List cannot both be configured for an EVC.
+Test 10.3 R32A: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART carrier-ethernet-sls cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce1-Slot1-Port1 MMPOP1-ce1-Slot1-Port1' : The two UNI IDs for a given inclusion cannot be the same.
+Test 10.3 R32B: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART carrier-ethernet-sls cos-entries cos-entry Neon pm-entries pm-entry SLS_Neon_Test2 end-point-pairs sls-uni-exclusions end-point-pair MMPOP1-ce1-Slot1-Port3 MMPOP1-ce1-Slot1-Port3' : The two UNI IDs for a given exclusion cannot be the same.
+Test 10.3 R32C: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART carrier-ethernet-sls cos-entries cos-entry Neon pm-entries pm-entry SLS_Neon_Test2 end-point-pairs' : If EVC Type is Rooted-Multipoint, sls-uni-inclusions must be used instead of sls-uni-exclusions.
+Test 10.3 R37A: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART carrier-ethernet-sls cos-entries cos-entry Neon pm-entries pm-entry SLS_Neon_Test2 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce6-Slot6-Port2 MMPOP1-ce7-Slot7-Port2' : If EVC Type is Rooted-Multipoint, sls-uni-inclusion UNI Pairs cannot both be role 'leaf'.
+Test 10.3 R37B: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART connection-type' (value "rooted-multipoint"): If EVC Type is Rooted-Multipoint, one or more UNI Roles must be root.
+Test 10.3 R54: PASS
+Aborted: 'mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 physical-layers links link ce1 GigabitEthernet0/1 sync-mode' (value "true"): The quality of the clock reference must be set if Synchronous Mode is enabled.
+Test 10.3 R62: PASS
+Aborted: 'mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 link-aggregation' (value "none"): If link-aggregation is 'none', number-of-links must be 1.
+Test 10.3 R64: PASS
+Aborted: 'mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 link-aggregation' (value "dual-link-aggregation"): If link-aggregation is 'dual-link-aggregation', number-of-links must be 2.
+Test 10.3 R65: PASS
+Aborted: 'mef-interfaces unis uni MMPOP1-ce1-Slot1-Port1 link-aggregation' (value "other"): If link-aggregation is 'other', number-of-links must be 3 or greater.
+Test 10.3 R67: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0002343-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot0-Port2 ce-vlans ce-vlan 33 vid' (value "33"): At each UNI there MUST be a mapping of each CE-VLAN ID to at most one EVC.
+Test 10.3 R76: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3' : If both Bundling and All-to-One Bundling are disabled for a UNI, only one CE VLAN ID can be configured for a specific EVC on that UNI.
+Test 10.3 R77: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 ce-vlans ce-vlan 103 vid' (value "103"): If more than one CE-VLAN ID is configured for a UNI as part of an EVC, every CE VLAN-ID mapped to that EVC must be configured for all UNIs within that EVC.
+Test MEF 10.3 [R81]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-1101898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1' : If All-to-One Bundling is enabled for any UNI in an EVC, all CE-VLAN IDs for that UNI must map to a single EVC.
+Test MEF 10.3 [R82A]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1' : If All-to-One Bundling is enabled for any UNI in an EVC, all CE-VLAN IDs for that UNI must map to a single EVC.
+Test MEF 10.3 [R82B]: PASS
+Aborted: 'mef-interfaces unis uni MMPOP1-ce0-Slot0-Port1 elmi-enabled' (value "true"): ELMI Service Attribute must be Enabled.
+Test MEF 10.3 [R88]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 cos-identifier' (value "MEF103_Table13"): When the Class of Service Identifier is based on PCP for a given EVC at a given UNI, the Color Identifier must be based on either DEI or PCP.
+Test MEF 10.3 [R111A]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 eec-identifier' (value "MEF62_ApdxA"): When the Egress Equivalence Class Identifier is based on PCP for a given EVC at a given UNI, the Color Identifier must be based on either DEI or PCP.
+Test MEF 10.3 [R111B]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port3 cos-identifier' (value "MEF103_Table23"): When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, the Color Identifier must be based DSCP.
+Test MEF 10.3 [R112A]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port3 eec-identifier' (value "MEF103_Table23"): When the Egress Equivalence Class Identifier is based on DSCP for a given EVC at a given UNI, the Color Identifier must be based DSCP.
+Test MEF 10.3 [R112B]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 ingress-bwp-flows-per-cos bwp-flow-per-cos Neon envelope-id' (value "ienv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART"): All EVCs sharing a Ingress Bandwidth Profile Envelope for a UNI must use the same BWP Method ( Per-EVC or Per-CoS).
+Test MEF 10.3 [R135AI]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001900-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 egress-bwp-flows-per-eec bwp-flow-per-eec Neon envelope-id' (value "eenv_EVPL_UNI003_EVC-0001343-ACME-MEGAMART"): All EVCs sharing a Egress Bandwidth Profile Envelope for a UNI must use the same BWP Method ( Per-EVC or Per-CoS).
+Test MEF 10.3 [R135AE]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0002900-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot0-Port2 ingress-bw-profile-per-evc envelope-id' (value "ienv_EVPL_UNI003_EVC-0002343-ACME-MEGAMART"): All EVCs sharing a Ingress Bandwidth Profile Envelope for a UNI must use the same BWP Method (Per-CoS or Per-EVC).
+Test MEF 10.3 [R135BI]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0002900-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot0-Port2 egress-bw-profile-per-evc envelope-id' (value "eenv_EVPL_UNI003_EVC-0002343-ACME-MEGAMART"): All EVCs sharing a Egress Bandwidth Profile Envelope for a UNI must use the same BWP Method (Per-CoS or Per-EVC).
+Test MEF 10.3 [R135BE]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port3 cos-identifier' (value "MEF103_Table13"): When the Class of Service Identifier is based on PCP for a given EVC at a given UNI, all cos-pcp CoS Names must be in the the EVC Cos Names List.
+Test MEF 10.3 [EVC CoS1]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 cos-identifier' (value "MEF103_Table23"): When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, all IPv4 cos-dscp CoS Names must be in the the EVC Cos Names List.
+Test MEF 10.3 [EVC CoS2]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 cos-identifier' (value "MEF103_Table23"): When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, all IPv6 cos-dscp CoS Names must be in the the EVC Cos Names List.
+Test MEF 10.3 [EVC CoS3]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port3 cos-identifier' (value "MEF103_Table13"): When the Class of Service Identifier is based on PCP for a given EVC at a given UNI, the default-pcp-cos-name must be in the the EVC Cos Names List.
+Test MEF 10.3 [EVC CoS4]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 cos-identifier' (value "MEF103_Table23"): When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv4-cos-name must be in the the EVC Cos Names List.
+Test MEF 10.3 [EVC CoS5]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 cos-identifier' (value "MEF103_Table23"): When the Class of Service Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv6-cos-name must be in the the EVC Cos Names List.
+Test MEF 10.3 [EVC CoS6]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0002898-ACME-MEGAMART end-points end-point MMPOP1-ce4-Slot4-Port3 cos-identifier' (value "MEF62_ApdxA_CoS"): When the Class of Service Identifier is based on EVC for a given EVC at a given UNI, the default-evc-cos-name must be in the the EVC Cos Names List.
+Test MEF 10.3 [EVC CoS7]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port3 eec-identifier' (value "MEF62_ApdxA"): When the EEC Identifier is based on PCP for a given EVC at a given UNI, all eec-pcp CoS Names must be in the the EVC Cos Names List.
+Test MEF 10.3 [EVC EEC1]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 eec-identifier' (value "MEF103_Table23"): When the EEC Identifier is based on DSCP for a given EVC at a given UNI, all IPv4 eec-dscp CoS Names must be in the the EVC Cos Names List.
+Test MEF 10.3 [EVC EEC2]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 eec-identifier' (value "MEF103_Table23"): When the EEC Identifier is based on DSCP for a given EVC at a given UNI, all IPv6 eec-dscp CoS Names must be in the the EVC Cos Names List.
+Test MEF 10.3 [EVC EEC3]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port3 eec-identifier' (value "MEF62_ApdxA"): When the EEC Identifier is based on PCP for a given EVC at a given UNI, the default-pcp-eec-name must be in the the EVC Cos Names List.
+Test MEF 10.3 [EVC EEC4]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 eec-identifier' (value "MEF103_Table23"): When the EEC Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv4-eec-name must be in the the EVC Cos Names List.
+Test MEF 10.3 [EVC EEC5]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001343-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port3 eec-identifier' (value "MEF103_Table23"): When the EEC Identifier is based on DSCP for a given EVC at a given UNI, the default-ipv6-eec-name must be in the the EVC Cos Names List.
+Test MEF 10.3 [EVC EEC6]: PASS
+Aborted: 'mef-interfaces unis uni MMPOP1-ce2-Slot2-Port1 ingress-envelopes envelope MM_EPL_Medium coupling-enabled' (value "true"): When only one Bandwidth Profile Flow is mapped to an envelope, Envelope Coupling must be Disabled.
+Test MEF 10.3 [R142A]: PASS
+Aborted: 'mef-interfaces unis uni MMPOP1-ce2-Slot2-Port1 egress-envelopes envelope eMM_EPL_Medium coupling-enabled' (value "true"): When only one Bandwidth Profile Flow is mapped to an envelope, Envelope Coupling must be Disabled.
+Test MEF 10.3 [R142B]: PASS
+Aborted: 'mef-interfaces unis uni MMPOP1-ce2-Slot2-Port1 egress-envelopes envelope eMM_EPL_Medium bwp-flows bwp-flow high2-bwp-uni bw-profile' (value "high2-bwp-uni"): If an Egress Envelope's Coupling Flag is Enabled, then the Coupling Flags must be disabled for all Bandwidth Profile Flows mapped to the Envelope.
+Test MEF 10.3 [R150A]: PASS
+Aborted: 'mef-interfaces unis uni MMPOP1-ce2-Slot2-Port1 ingress-envelopes envelope MM_EPL_Medium bwp-flows bwp-flow high1-bwp-uni bw-profile' (value "high1-bwp-uni"): If an Ingress Envelope's Coupling Flag is Enabled, then the Coupling Flags must be disabled for all Bandwidth Profile Flows mapped to the Envelope.
+Test MEF 10.3 [R150B]: PASS
+
+MEF 6.2 EPL Testing
+
+Aborted: 'mef-interfaces unis uni MMPOP1-ce0-Slot0-Port3 ingress-envelopes envelope ienv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART bwp-flows bwp-flow high1-bwp-uni bw-profile' (value "high1-bwp-uni"): A UNI with Token Share Disabled MUST have exactly one Bandwidth Profile Flow per envelope.
+Test MEF 6.2 [R3A]: PASS
+Aborted: 'mef-interfaces unis uni MMPOP1-ce0-Slot0-Port3 egress-envelopes envelope eenv_EVPL_UNI003_EVC-0001899-ACME-MEGAMART bwp-flows bwp-flow high1-bwp-uni bw-profile' (value "high1-bwp-uni"): A UNI with Token Share Disabled must have exactly one Bandwidth Profile Flow per envelope.
+Test MEF 6.2 [R3B]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0002947-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port4' : If no Ingress Bandwidth Profiles are specified for this UNI (BW Profile Per UNI, BWP Flows Per CoS, nor BW Profile Per EVC), then the UNI Ingress Envelopes list must be empty.
+Test MEF 6.2 [R4A]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0002947-ACME-MEGAMART end-points end-point MMPOP1-ce5-Slot5-Port4' : If no Egress Bandwidth Profiles are specied for this UNI (BW Profile Per UNI, BWP Flows Per EEC, nor BW Profile Per EVC), then the UNI Egress Envelopes list must be empty.
+Test MEF 6.2 [R4B]: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART svc-type' (value "epl"): For EPL, Service Multiplexing must be disabled for all UNIs in the EVC UNI List.
+Test 6.2 R19: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART svc-type' (value "epl"): For EPL, Bundling must be disabled for all UNIs in the EVC UNI List.
+Test 6.2 R20: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART svc-type' (value "epl"): For EPL, All-to-One Bundling must be enabled for all UNIs in the EVC UNI List.
+Test 6.2 R21: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART svc-type' (value "epl"): For EPL, Max EVC Count must be 1 for all UNIs in the EVC UNI List.
+Test 6.2 R22: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART svc-type' (value "epl"): For EPL, Egress Bandwidth Profile per Egress Equivalence Class cannot be set for all UNIs in the EVC per UNI List.
+Test 6.2 R23: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART svc-type' (value "epl"): For EPL, Source MAC Address Limit must be disabled.
+Test 6.2 R24: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART svc-type' (value "epl"): For EPL, EVC Type must be Point-to-Point.
+Test 6.2 R25: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART svc-type' (value "epl"): For EPL, unicast-frame-delivery must be unconditional.
+Test 6.2 R26: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART svc-type' (value "epl"): For EPL, multicast-frame-delivery must be unconditional.
+Test 6.2 R27: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART svc-type' (value "epl"): For EPL, broadcast-frame-delivery must be unconditional.
+Test 6.2 R28: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART svc-type' (value "epl"): For EPL, CE-VLAN ID Preservation must be enabled.
+Test 6.2 R29: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART svc-type' (value "epl"): For EPL, CE-VLAN ID CoS Preservation must be enabled.
+Test 6.2 R30: PASS
+
+MEF 6.2 EVPL Testing
+
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART svc-type' (value "evpl"): For EVPL, All-to-One Bundling must be disabled for all UNIs in the EVC UNI List.
+Test 6.2 R31: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART svc-type' (value "evpl"): For EVPL, Source MAC Address Limit must be disabled for all UNIs in the EVC per UNI List if all 3 -svc-frm-delivery values are unconditional.
+Test 6.2 R32: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001899-ACME-MEGAMART svc-type' (value "evpl"): For EVPL, EVC Type must be Point-to-Point.
+Test 6.2 R33: PASS
+
+MEF 6.2 EP-LAN Testing
+
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001901-ACME-MEGAMART svc-type' (value "eplan"): For EP-LAN, Service Multiplexing must be disabled for all UNIs in the EVC UNI List.
+Test 6.2 R34: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001901-ACME-MEGAMART svc-type' (value "eplan"): For EP-LAN, Bundling must be disabled for all UNIs in the EVC UNI List.
+Test 6.2 R35: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001901-ACME-MEGAMART svc-type' (value "eplan"): For EP-LAN, All-to-One Bundling must be enabled for all UNIs in the EVC UNI List.
+Test 6.2 R36: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001901-ACME-MEGAMART svc-type' (value "eplan"): For EP-LAN, Max EVC Count must be 1 for all UNIs in the EVC UNI List.
+Test 6.2 R37: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001901-ACME-MEGAMART svc-type' (value "eplan"): For EP-LAN, EVC Type must be Multipoint-to-Multipoint.
+Test 6.2 R38: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001901-ACME-MEGAMART svc-type' (value "eplan"): For EP-LAN, CE-VLAN ID Preservation must be enabled.
+Test 6.2 R39: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001901-ACME-MEGAMART svc-type' (value "eplan"): For EP-LAN, CE-VLAN ID CoS Preservation must be enabled.
+Test 6.2 R40: PASS
+
+MEF 6.2 EVP-LAN Testing
+
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART svc-type' (value "evplan"): For EVP-LAN, All-to-One Bundling must be disabled for all UNIs in the EVC UNI List.
+Test 6.2 R41: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001944-ACME-MEGAMART svc-type' (value "evplan"): For EVP-LAN, EVC Type must be Multipoint-to-Multipoint.
+Test 6.2 R42: PASS
+
+MEF 6.2 EP-TREE Testing
+
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART svc-type' (value "eptree"): For EP-TREE, Service Multiplexing must be disabled for all UNIs in the EVC UNI List.
+Test 6.2 R43: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART svc-type' (value "eptree"): For EP-TREE, Bundling must be disabled for all UNIs in the EVC UNI List.
+Test 6.2 R44: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART svc-type' (value "eptree"): For EP-TREE, All-to-One Bundling must be enabled for all UNIs in the EVC UNI List.
+Test 6.2 R45: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART svc-type' (value "eptree"): For EP-TREE, Max EVC Count must be 1 for all UNIs in the EVC UNI List.
+Test 6.2 R46: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART svc-type' (value "eptree"): For EP-TREE, EVC Type must be Rooted-Multipoint.
+Test 6.2 R47: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART svc-type' (value "eptree"): For EP-TREE, CE-VLAN ID Preservation must be enabled.
+Test 6.2 R49: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0001911-ACME-MEGAMART svc-type' (value "eptree"): For EP-TREE, CE-VLAN ID CoS Preservation must be enabled.
+Test 6.2 R50: PASS
+
+MEF 6.2 EVP-TREE Testing
+
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0002947-ACME-MEGAMART svc-type' (value "evptree"): For EVP-TREE, All-to-One Bundling must be disabled for all UNIs in the EVC UNI List.
+Test 6.2 R51: PASS
+Aborted: 'mef-services carrier-ethernet subscriber-services evc EVC-0002947-ACME-MEGAMART svc-type' (value "evptree"): For EVP-TREE, EVC Type must be Rooted-Multipoint.
+Test 6.2 R52: PASS
+
+MEF 6.2 Testing Complete
+

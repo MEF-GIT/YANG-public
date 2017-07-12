@@ -1,0 +1,110 @@
+{
+"data": {
+  "mef-interfaces:mef-interfaces": {
+    "unis": {
+    	"uni": [
+    	    {
+    		    "uni-id": "MMPOP1-ce5-Slot5-Port1",
+     		    "max-svc-frame-size": 1670
+          },
+          {
+            "uni-id": "MMPOP1-ce6-Slot6-Port1",
+            "max-svc-frame-size": 1679
+           },
+           {
+             "uni-id": "MMPOP1-ce7-Slot7-Port1",
+             "max-svc-frame-size": 1679
+           }
+      ]
+    }
+  },
+  "mef-services:mef-services": {
+	  "carrier-ethernet": {
+      "subscriber-services": {	  
+	   "evc": [
+	    {
+       "evc-id": "EVC-0001901-ACME-MEGAMART",
+        "end-points": {
+          "end-point": [
+            {
+              "uni-id": "MMPOP1-ce5-Slot5-Port1",
+              "ce-vlans": {
+                "ce-vlan": [
+                  {
+                    "vid": 1
+                  }
+                ]
+              },
+              "role": "root",
+              "admin-state": false,
+              "source-mac-address-limit": 10
+            },
+            {
+              "uni-id": "MMPOP1-ce6-Slot6-Port1",
+              "ce-vlans": {
+                "ce-vlan": [
+                  {
+                    "vid": 1
+                  }
+                ]
+              },
+              "role": "root",
+              "admin-state": false,
+              "source-mac-address-limit": 10
+            },
+            {
+              "uni-id": "MMPOP1-ce7-Slot7-Port1",
+              "ce-vlans": {
+                "ce-vlan": [
+                  {
+                    "vid": 1
+                  }
+                ]
+              },
+              "role": "root",
+              "admin-state": false,
+              "source-mac-address-limit": 10
+            }
+          ]
+        },
+        "carrier-ethernet-sls": {
+          "sls-id": "MEF103_Table25",
+          "cos-entries": {
+            "cos-entry": [
+              {
+                "cos-name": "Argon",
+                "pm-entries": {
+                  "pm-entry": [
+                    {
+                      "pm-entry-id": "SLS_Argon_Test1"
+                    }
+                  ]
+                }
+              },
+              {
+                "cos-name": "Krypton",
+                "pm-entries": {
+                  "pm-entry": [
+                    {
+                      "pm-entry-id": "SLS_Krypton_Test3"
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        "connection-type": "multipoint-to-multipoint",
+        "admin-state": false,
+        "max-num-of-evc-end-point": 3,
+        "ce-vlan-id-preservation": true,
+        "ce-vlan-pcp-preservation": true,
+        "unicast-frame-delivery": "conditional",
+        "svc-type": "eplan"
+      }
+	 ]
+  }
+  }
+  }
+ }
+}

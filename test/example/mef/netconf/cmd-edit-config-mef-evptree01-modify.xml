@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <capabilities>
+    <capability>urn:ietf:params:netconf:base:1.0</capability>
+  </capabilities>
+</hello>
+]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1">
+ <edit-config>
+    <target>
+      <running/>
+    </target>
+    <config>
+    <mef-interfaces xmlns="urn:mef:xid:mef-interfaces">
+    <unis>
+    <uni>
+      <uni-id>MMPOP1-ce5-Slot5-Port4</uni-id>
+      <max-svc-frame-size>1600</max-svc-frame-size>
+    </uni>
+    <uni>
+      <uni-id>MMPOP1-ce6-Slot6-Port3</uni-id>
+    </uni>
+    <uni>
+      <uni-id>MMPOP1-ce7-Slot7-Port3</uni-id>
+    </uni>
+    <uni>
+      <uni-id>MMPOP1-ce8-Slot8-Port3</uni-id>
+    </uni>      
+  </unis>
+    </mef-interfaces>
+    <mef-services xmlns="urn:mef:xid:mef-services">
+          <carrier-ethernet>
+           <subscriber-services>
+      <evc>
+         <evc-id>EVC-0002947-ACME-MEGAMART</evc-id>
+         <end-points>
+          <end-point>
+                      <uni-id>MMPOP1-ce5-Slot5-Port4</uni-id>        
+          </end-point>
+          <end-point>
+            <uni-id>MMPOP1-ce6-Slot6-Port3</uni-id>
+          </end-point>
+          <end-point>
+            <uni-id>MMPOP1-ce7-Slot7-Port3</uni-id>
+          </end-point>
+          <end-point>
+            <uni-id>MMPOP1-ce8-Slot8-Port3</uni-id>
+            </end-point>
+          </end-points>  
+        </evc>
+           </subscriber-services>             
+           </carrier-ethernet>        
+     </mef-services>              
+   </config>
+  </edit-config>
+  </rpc>
+]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2">
+  <close-session/>
+</rpc>

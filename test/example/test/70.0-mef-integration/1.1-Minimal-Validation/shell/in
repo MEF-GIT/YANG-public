@@ -1,0 +1,6 @@
+../mef/MEF_Negative_Tests_Minimal.sh
+
+
+# Use this command for remote ssh 
+# ssh -p 22 datavision@96.86.165.79 "/bin/sh /home/datavision/test/Cisco_Tail-f_NSO_example/mef/MEF_Negative_Tests_Minimal.sh"
+

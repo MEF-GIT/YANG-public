@@ -1,0 +1,25 @@
+<data xmlns:y="http://tail-f.com/ns/rest">
+<mef-interfaces xmlns="http://metroethernetforum.org/ns/yang/mef-interfaces">
+<unis>
+  <uni>
+    <uni-id>MMPOP1-ce0-Slot0-Port1</uni-id>
+    <max-svc-frame-size>1600</max-svc-frame-size>
+    <admin-state-enabled>true</admin-state-enabled>        
+  </uni>
+</unis>
+</mef-interfaces>
+<mef-services xmlns="http://metroethernetforum.org/ns/yang/mef-services">
+  <evc>
+    <svc-id>12345</svc-id>
+    <evc>
+      <admin-state-enabled>true</admin-state-enabled>        
+      <unis>
+        <uni>
+          <uni-id>MMPOP1-ce0-Slot0-Port1</uni-id>        
+          <admin-state-enabled>true</admin-state-enabled>
+        </uni>
+      </unis> 
+    </evc>
+    </evc>
+ </mef-services>  
+</data>

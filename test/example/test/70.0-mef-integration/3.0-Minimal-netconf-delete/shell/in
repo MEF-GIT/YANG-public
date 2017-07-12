@@ -1,0 +1,25 @@
+#!/bin/sh
+
+NCUSER=admin
+NCPASSWD=admin
+NCHOST=localhost
+NCPORT=2022
+
+echo ... cmd-edit-config-mef-epl02-delete.xml
+netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 ../mef/netconf/cmd-edit-config-mef-epl02-delete.xml
+echo ... cmd-edit-config-mef-evptree01-delete.xml
+netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 ../mef/netconf/cmd-edit-config-mef-evptree01-delete.xml
+echo ... cmd-edit-config-mef-eptree01-delete.xml
+netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 ../mef/netconf/cmd-edit-config-mef-eptree01-delete.xml
+echo ... cmd-edit-config-mef-evplan01-delete.xml
+netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 ../mef/netconf/cmd-edit-config-mef-evplan01-delete.xml
+echo ... cmd-edit-config-mef-eplan01-delete.xml
+netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 ../mef/netconf/cmd-edit-config-mef-eplan01-delete.xml
+echo ... cmd-edit-config-mef-evpl01-delete.xml
+netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 ../mef/netconf/cmd-edit-config-mef-evpl01-delete.xml
+echo ... cmd-edit-config-mef-epl01-delete.xml
+netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 ../mef/netconf/cmd-edit-config-mef-epl01-delete.xml
+echo ... cmd-edit-config-mef-global-delete.xml
+netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 ../mef/netconf/cmd-edit-config-mef-global-delete.xml
+echo ... cmd-edit-config-mef-topology-delete.xml
+netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 ../mef/netconf/cmd-edit-config-mef-topology-delete.xml

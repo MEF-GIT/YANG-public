@@ -1,0 +1,57 @@
+#!/bin/sh
+
+RESTCRED=admin:admin
+RESTURL=http
+NSOHOST=localhost
+RESTPORT=10888
+RESTSEC=
+
+# (REST-JSON is broken for NSO 4.1.1 for mef-topology as it uses identityref. This bug was fixed in NSO 4.1.1.1)
+#echo REST/JSON examples for mef-topology 
+#echo ... rest-json-patch-mef-topology.txt
+#curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-json-patch-mef-topology.txt $RESTURL://$NSOHOST:$RESTPORT/api/running -H "Content-#Type: application/vnd.yang.data+json"
+#echo ... rest-json-patch-mef-topology-modify.txt
+#curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-json-patch-mef-topology-modify.txt $RESTURL://$NSOHOST:$RESTPORT/api/running -H #"Content-Type: application/vnd.yang.data+json"
+echo REST/JSON examples for mef-global
+echo ... rest-json-patch-mef-global-modify.txt
+curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-json-patch-mef-global-modify.txt $RESTURL://$NSOHOST:$RESTPORT/api/running -H "Content-Type: application/vnd.yang.data+json"
+#echo ... rest-json-patch-mef-global.txt
+#curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-json-patch-mef-global.txt $RESTURL://$NSOHOST:$RESTPORT/api/running -H "Content-Type: application/vnd.yang.data+json"
+echo REST/JSON examples for mef-services
+echo ... rest-json-patch-epl01-modify.txt
+curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-json-patch-epl01-modify.txt $RESTURL://$NSOHOST:$RESTPORT/api/running -H "Content-Type: application/vnd.yang.data+json"
+#echo ... rest-json-patch-epl01.txt
+#curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-json-patch-epl01.txt $RESTURL://$NSOHOST:$RESTPORT/api/running -H "Content-Type: application/vnd.yang.data+json"
+echo ... rest-json-patch-eplan01-modify.txt
+curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-json-patch-eplan01-modify.txt $RESTURL://$NSOHOST:$RESTPORT/api/running -H "Content-Type: application/vnd.yang.data+json"
+#echo ... rest-json-patch-eplan01.txt
+#curl -u $RESTCRED -X PATCH -T ../mef/rest/rest-json-patch-eplan01.txt $RESTURL://$NSOHOST:$RESTPORT/api/running -H "Content-Type: application/vnd.yang.data+json"
+echo ... rest-json-patch-eptree01-modify.txt
+curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-json-patch-eptree01-modify.txt $RESTURL://$NSOHOST:$RESTPORT/api/running -H "Content-Type: application/vnd.yang.data+json"
+#echo ... rest-json-patch-eptree01.txt
+#curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-json-patch-eptree01.txt $RESTURL://$NSOHOST:$RESTPORT/api/running -H "Content-Type: application/vnd.yang.data+json"
+echo ... rest-json-patch-evpl01-modify.txt
+curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-json-patch-evpl01-modify.txt $RESTURL://$NSOHOST:$RESTPORT/api/running -H "Content-Type: application/vnd.yang.data+json"
+#echo ... rest-json-patch-evpl01.txt
+#curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-json-patch-evpl01.txt $RESTURL://$NSOHOST:$RESTPORT/api/running -H "Content-Type: application/vnd.yang.data+json"
+echo ... rest-json-patch-evplan01-modify.txt
+curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-json-patch-evplan01-modify.txt $RESTURL://$NSOHOST:$RESTPORT/api/running -H "Content-Type: application/vnd.yang.data+json"
+#echo ... rest-json-patch-evplan01.txt
+#curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-json-patch-evplan01.txt $RESTURL://$NSOHOST:$RESTPORT/api/running -H "Content-Type: application/vnd.yang.data+json"
+echo ... rest-json-patch-evptree01-modify.txt
+curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-json-patch-evptree01-modify.txt $RESTURL://$NSOHOST:$RESTPORT/api/running -H "Content-Type: application/vnd.yang.data+json"
+#echo ... rest-json-patch-evptree01.txt
+#curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-json-patch-evptree01.txt $RESTURL://$NSOHOST:$RESTPORT/api/running -H "Content-Type: application/vnd.yang.data+json"
+
+echo REST/XML examples
+echo ... rest-xml-patch-mef-topology.txt
+curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-xml-patch-mef-topology.txt $RESTURL://$NSOHOST:$RESTPORT/api/running -H "Content-Type: application/vnd.yang.data+xml"
+#curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-xml-patch-mef-global.txt $RESTURL://$NSOHOST:$RESTPORT/api/running -H "Content-Type: application/vnd.yang.data+xml"
+#curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-xml-patch-epl01.txt $RESTURL://$NSOHOST:$RESTPORT/api/running/mef-services/service/epl01 -H "Content-Type: application/vnd.yang.data+xml"
+#curl $RESTSEC -u $RESTCRED -X PATCH -T ../mef/rest/rest-xml-patch-epl01-modify.txt $RESTURL://$NSOHOST:$RESTPORT/api/running/mef-services/service/epl01 -H "Content-Type: application/vnd.yang.data+xml"
+
+echo Pull the the Running Config so we can check for the changes like: Deep Dish Pizza Tunnel
+curl $RESTSEC -u $RESTCRED  -H "Accept:application/vnd.yang.data+json" $RESTURL://$NSOHOST:$RESTPORT/api/running/mef-topology?deep
+curl $RESTSEC -u $RESTCRED  -H "Accept:application/vnd.yang.data+json" $RESTURL://$NSOHOST:$RESTPORT/api/running/mef-global?deep
+curl $RESTSEC -u $RESTCRED  -H "Accept:application/vnd.yang.data+json" $RESTURL://$NSOHOST:$RESTPORT/api/running/mef-interfaces?deep
+curl $RESTSEC -u $RESTCRED  -H "Accept:application/vnd.yang.data+json" $RESTURL://$NSOHOST:$RESTPORT/api/running/mef-services?deep

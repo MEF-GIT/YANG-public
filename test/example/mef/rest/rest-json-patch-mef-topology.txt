@@ -1,0 +1,618 @@
+{
+  "mef-topology:mef-topology": {
+    "devices": {
+      "device": [
+        {
+          "dev-id": "CSR-1_0",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "GigabitEthernet1",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet10",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet2",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet3",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet4",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet5",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet6",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet7",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet8",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet9",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              }
+            ]
+          },
+          "role": "pe"
+        },
+        {
+          "dev-id": "CSR-2_0",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "GigabitEthernet1",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet10",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet2",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet3",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet4",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet5",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet6",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet7",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet8",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet9",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              }
+            ]
+          },
+          "role": "pe"
+        },
+        {
+          "dev-id": "CSR-3_0",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "GigabitEthernet1",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet10",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet2",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet3",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet4",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet5",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet6",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet7",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet8",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet9",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              }
+            ]
+          },
+          "role": "pe"
+        },
+        {
+          "dev-id": "CSR-4_0",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "GigabitEthernet1",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet10",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet2",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet3",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet4",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet5",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet6",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet7",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet8",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              },
+              {
+                "phy": "GigabitEthernet9",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-X"
+              }
+            ]
+          },
+          "role": "pe"
+        },
+        {
+          "dev-id": "ce0",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "GigabitEthernet0/1",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/2",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/3",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/4",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "Loopback0"
+              }
+            ]
+          },
+          "role": "ce"
+        },
+        {
+          "dev-id": "ce1",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "GigabitEthernet0/1",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/2",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/3",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/4",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              }
+            ]
+          },
+          "role": "ce"
+        },
+        {
+          "dev-id": "ce10",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "fe-3-1",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX"
+              },
+              {
+                "phy": "fe-3-2",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX"
+              },
+              {
+                "phy": "fe-4-1",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX"
+              },
+              {
+                "phy": "fe-4-2",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX"
+              }
+            ]
+          },
+          "role": "ce"
+        },
+        {
+          "dev-id": "ce2",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "GigabitEthernet0/1",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/2",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/3",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              }
+            ]
+          },
+          "role": "ce"
+        },
+        {
+          "dev-id": "ce3",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "GigabitEthernet0/3",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/4",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              }
+            ]
+          },
+          "role": "ce"
+        },
+        {
+          "dev-id": "ce4",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "GigabitEthernet0/3",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/4",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              }
+            ]
+          },
+          "role": "ce"
+        },
+        {
+          "dev-id": "ce5",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "GigabitEthernet0/1",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/2",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/3",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/4",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/5",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/6",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              }
+            ]
+          },
+          "role": "ce"
+        },
+        {
+          "dev-id": "ce6",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "GigabitEthernet0/1",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/2",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/3",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/4",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              }
+            ]
+          },
+          "role": "ce"
+        },
+        {
+          "dev-id": "ce7",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "GigabitEthernet0/1",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/2",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/3",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/4",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              }
+            ]
+          },
+          "role": "ce"
+        },
+        {
+          "dev-id": "ce8",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "GigabitEthernet0/1",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/2",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/3",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              },
+              {
+                "phy": "GigabitEthernet0/4",
+                "ieee8023-phy": "mef-service-types:ieee8023-1000BASE-SX"
+              }
+            ]
+          },
+          "role": "ce"
+        },
+        {
+          "dev-id": "ce9",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "fe-3-1",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX"
+              },
+              {
+                "phy": "fe-3-2",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX"
+              },
+              {
+                "phy": "fe-4-1",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX"
+              },
+              {
+                "phy": "fe-4-2",
+                "ieee8023-phy": "mef-service-types:ieee8023-100BASE-TX"
+              }
+            ]
+          },
+          "role": "ce"
+        },
+        {
+          "dev-id": "p0",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "TenGig1/0/1"
+              },
+              {
+                "phy": "TenGig1/0/2"
+              },
+              {
+                "phy": "TenGig1/0/3"
+              },
+              {
+                "phy": "TenGig1/0/4"
+              }
+            ]
+          },
+          "role": "p"
+        },
+        {
+          "dev-id": "p1",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "TenGig0/0/1"
+              },
+              {
+                "phy": "TenGig0/0/2"
+              },
+              {
+                "phy": "TenGig0/0/3"
+              },
+              {
+                "phy": "TenGig0/0/4"
+              }
+            ]
+          },
+          "role": "p"
+        },
+        {
+          "dev-id": "p2",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "TenGig0/0/1"
+              },
+              {
+                "phy": "TenGig0/0/2"
+              },
+              {
+                "phy": "TenGig0/0/3"
+              },
+              {
+                "phy": "TenGig0/0/4"
+              }
+            ]
+          },
+          "role": "p"
+        },
+        {
+          "dev-id": "p3",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "TenGig1/0/1"
+              },
+              {
+                "phy": "TenGig1/0/2"
+              },
+              {
+                "phy": "TenGig1/0/3"
+              },
+              {
+                "phy": "TenGig1/0/4"
+              }
+            ]
+          },
+          "role": "p"
+        },
+        {
+          "dev-id": "pe0",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "GigabitEthernet0/0/0/1"
+              },
+              {
+                "phy": "GigabitEthernet0/0/0/2"
+              },
+              {
+                "phy": "GigabitEthernet0/0/0/3"
+              },
+              {
+                "phy": "GigabitEthernet0/0/0/4"
+              }
+            ]
+          },
+          "role": "pe"
+        },
+        {
+          "dev-id": "pe1",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "GigabitEthernet0/0/0/1"
+              },
+              {
+                "phy": "GigabitEthernet0/0/0/2"
+              },
+              {
+                "phy": "GigabitEthernet0/0/0/3"
+              },
+              {
+                "phy": "GigabitEthernet0/0/0/4"
+              }
+            ]
+          },
+          "role": "pe"
+        },
+        {
+          "dev-id": "pe2",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "xe-0/0/0"
+              },
+              {
+                "phy": "xe-0/0/1"
+              },
+              {
+                "phy": "xe-0/0/2"
+              },
+              {
+                "phy": "xe-0/0/3"
+              }
+            ]
+          },
+          "role": "pe"
+        },
+        {
+          "dev-id": "pe3",
+          "interfaces": {
+            "interface": [
+              {
+                "phy": "GigabitEthernet0/0/0/1"
+              },
+              {
+                "phy": "GigabitEthernet0/0/0/2"
+              },
+              {
+                "phy": "GigabitEthernet0/0/0/3"
+              },
+              {
+                "phy": "GigabitEthernet0/0/0/4"
+              },
+              {
+                "phy": "GigabitEthernet0/0/0/5"
+              }
+            ]
+          },
+          "role": "pe"
+        }
+      ]
+    }
+  }
+}

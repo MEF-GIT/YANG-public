@@ -1,0 +1,13 @@
+#!/bin/sh
+
+RESTCRED=admin:admin
+RESTURL=http
+NSOHOST=localhost
+RESTPORT=10888
+RESTSEC=
+
+curl $RESTSEC -u $RESTCRED  -H "Accept:application/vnd.yang.data+json" $RESTURL://$NSOHOST:$RESTPORT/api/running/mef-topology?deep
+curl $RESTSEC -u $RESTCRED  -H "Accept:application/vnd.yang.data+json" $RESTURL://$NSOHOST:$RESTPORT/api/running/mef-global?deep
+curl $RESTSEC -u $RESTCRED  -H "Accept:application/vnd.yang.data+json" $RESTURL://$NSOHOST:$RESTPORT/api/running/mef-interfaces?deep
+curl $RESTSEC -u $RESTCRED  -H "Accept:application/vnd.yang.data+json" $RESTURL://$NSOHOST:$RESTPORT/api/running/mef-services?deep
+

@@ -1,0 +1,39 @@
+#!/bin/sh
+
+NCUSER=admin
+NCPASSWD=admin
+NCHOST=localhost
+NCPORT=2022
+
+#echo Common GET ALLs --Takes Too Long
+#echo ... cmd-get-all.xml
+#netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 -s pretty ../common/netconf/cmd-get-all.xml
+#echo ... cmd-get-all-with-defaults.xml
+#netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 -s pretty ../common/netconf/cmd-get-all-with-defaults.xml
+
+echo ... cmd-get-mef-all-with-defaults.xml
+netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 -s pretty ../mef/netconf/cmd-get-mef-all-with-defaults.xml
+
+echo ... cmd-get-mef-epl01-with-defaults.xml
+netconf-console -u $NCUSER -p $NCPASSWD --host $NCHOST --port $NCPORT -v 1.0 -s pretty ../mef/netconf/cmd-get-mef-epl01-with-defaults.xml
+
+
+#save running config to file
+#netconf-console -u admin -p admin --host 127.0.0.1 --port 830 -v 1.0 ../common/netconf/cmd-copy-config-all-from.xml
+
+#Restore from file
+#netconf-console -u admin -p admin --host 127.0.0.1 --port 830 -v 1.0 ../common/netconf/cmd-copy-config-all-to.xml
+
+#cmd-copy-config-all-from-ftp.xml
+#cmd-copy-config-all-from-sftp.xml
+#cmd-copy-config-all-from.xml
+#cmd-copy-config-all-to-candidate.xml
+#cmd-copy-config-all-to-ftp.xml
+#cmd-copy-config-all-to-sftp.xml
+#cmd-copy-config-all-to.xml
+
+#cmd-get-ietf-netconf-monitoring-with-defaults.xml
+#cmd-get-schema-ietf-inet-types.xml
+#cmd-rpc-get-schema-ietf-inet-types.xml
+#netconf_replay.xml
+#netconf_subscribe.xml

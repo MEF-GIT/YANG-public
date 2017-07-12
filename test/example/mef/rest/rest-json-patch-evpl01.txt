@@ -1,0 +1,549 @@
+{
+"data": {
+  "mef-interfaces:mef-interfaces": {
+    "unis": {
+    	"uni": [
+    	    {
+    	        "uni-id": "MMPOP1-ce0-Slot0-Port3",
+    	        "physical-layers": {
+    	          "links": {
+    	            "link": [
+    	              {
+    	                "device": "ce0",
+    	                "interface": "GigabitEthernet0/3",
+    	                "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+    	              }
+    	            ]
+    	          }
+    	        },
+    	        "ce-vlans": {
+    	          "ce-vlan": [
+    	            {
+    	              "vid": 22
+    	            },
+    	            {
+    	              "vid": 33
+    	            },
+    	            {
+    	              "vid": 1343
+    	            }
+    	          ]
+    	        },
+    	        "ingress-envelopes": {
+    	          "envelope": [
+    	            {
+    	              "envelope-id": "ienv_EVPL_UNI003_56789",
+    	              "bwp-flows": {
+    	                "bwp-flow": [
+    	                  {
+    	                    "bw-profile": "low1-bwp-uni"
+    	                  }
+    	                ]
+    	              },
+    	              "coupling-enabled": false
+    	            },
+    	            {
+    	              "envelope-id": "ienv_EVPL_UNI003_56790",
+    	              "bwp-flows": {
+    	                "bwp-flow": [
+    	                  {
+    	                    "bw-profile": "medium1-bwp-uni"
+    	                  }
+    	                ]
+    	              },
+    	              "coupling-enabled": false
+    	            },
+    	            {
+    	              "envelope-id": "ienv_EVPL_UNI003_56799",
+    	              "bwp-flows": {
+    	                "bwp-flow": [
+    	                  {
+    	                    "bw-profile": "high1-bwp-uni"
+    	                  }
+    	                ]
+    	              },
+    	              "coupling-enabled": false
+    	            }
+    	          ]
+    	        },
+    	        "egress-envelopes": {
+    	          "envelope": [
+    	            {
+    	              "envelope-id": "eenv_EVPL_UNI003_56789",
+    	              "bwp-flows": {
+    	                "bwp-flow": [
+    	                  {
+    	                    "bw-profile": "low1-bwp-uni"
+    	                  }
+    	                ]
+    	              },
+    	              "coupling-enabled": false
+    	            },
+    	            {
+    	              "envelope-id": "eenv_EVPL_UNI003_56790",
+    	              "bwp-flows": {
+    	                "bwp-flow": [
+    	                  {
+    	                    "bw-profile": "medium1-bwp-uni"
+    	                  }
+    	                ]
+    	              },
+    	              "coupling-enabled": false
+    	            },
+    	            {
+    	              "envelope-id": "eenv_EVPL_UNI003_56799",
+    	              "bwp-flows": {
+    	                "bwp-flow": [
+    	                  {
+    	                    "bw-profile": "high1-bwp-uni"
+    	                  }
+    	                ]
+    	              },
+    	              "coupling-enabled": false
+    	            }
+    	          ]
+    	        },
+    	        "cen-id": "ACME-MEGAMART",
+    	        "subscriber": "MegaMart",
+    	        "admin-state-enabled": false,
+    	        "max-svc-frame-size": 1600,
+    	        "svc-mux-enabled": true,
+    	        "ce-vlan-id-for-untagged-and-priority": 22,
+    	        "max-evc-count": 2,
+    	        "elmi-enabled": true,
+    	        "elmi-profile": "elmi-test2",
+    	        "l2cp-address-set": "aware-cta",
+    	        "l2cp-peering-profile": "L2CP_Peering_Profile1"
+          },
+          {
+        	    "uni-id": "MMPOP1-ce1-Slot1-Port3",
+        	    "physical-layers": {
+        	      "links": {
+        	        "link": [
+        	          {
+        	            "device": "ce1",
+        	            "interface": "GigabitEthernet0/3",
+        	            "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+        	          }
+        	        ]
+        	      }
+        	    },
+        	    "ce-vlans": {
+        	      "ce-vlan": [
+        	        {
+        	          "vid": 17
+        	        },
+        	        {
+        	          "vid": 22
+        	        }
+        	      ]
+        	    },
+        	    "ingress-envelopes": {
+        	      "envelope": [
+        	        {
+        	          "envelope-id": "ienv_EVPL_UNI113_56789",
+        	          "bwp-flows": {
+        	            "bwp-flow": [
+        	              {
+        	                "bw-profile": "low2-bwp-uni"
+        	              }
+        	            ]
+        	          },
+        	          "coupling-enabled": false
+        	        },
+        	        {
+        	          "envelope-id": "ienv_EVPL_UNI113_56790",
+        	          "bwp-flows": {
+        	            "bwp-flow": [
+        	              {
+        	                "bw-profile": "medium2-bwp-uni"
+        	              }
+        	            ]
+        	          },
+        	          "coupling-enabled": false
+        	        },
+        	        {
+        	          "envelope-id": "ienv_EVPL_UNI113_56799",
+        	          "bwp-flows": {
+        	            "bwp-flow": [
+        	              {
+        	                "bw-profile": "high2-bwp-uni"
+        	              }
+        	            ]
+        	          },
+        	          "coupling-enabled": false
+        	        }
+        	      ]
+        	    },
+        	    "egress-envelopes": {
+        	      "envelope": [
+        	        {
+        	          "envelope-id": "eenv_EVPL_UNI113_56789",
+        	          "bwp-flows": {
+        	            "bwp-flow": [
+        	              {
+        	                "bw-profile": "low2-bwp-uni"
+        	              }
+        	            ]
+        	          },
+        	          "coupling-enabled": false
+        	        },
+        	        {
+        	          "envelope-id": "eenv_EVPL_UNI113_56790",
+        	          "bwp-flows": {
+        	            "bwp-flow": [
+        	              {
+        	                "bw-profile": "medium2-bwp-uni"
+        	              }
+        	            ]
+        	          },
+        	          "coupling-enabled": false
+        	        },
+        	        {
+        	          "envelope-id": "eenv_EVPL_UNI113_56799",
+        	          "bwp-flows": {
+        	            "bwp-flow": [
+        	              {
+        	                "bw-profile": "high2-bwp-uni"
+        	              }
+        	            ]
+        	          },
+        	          "coupling-enabled": false
+        	        }
+        	      ]
+        	    },
+        	    "cen-id": "ACME-MEGAMART",
+        	    "subscriber": "MegaMart",
+        	    "admin-state-enabled": false,
+        	    "max-svc-frame-size": 1600,
+        	    "svc-mux-enabled": true,
+        	    "ce-vlan-id-for-untagged-and-priority": 17,
+        	    "max-evc-count": 1,
+        	    "l2cp-address-set": "aware-cta",
+        	    "l2cp-peering-profile": "L2CP_Peering_Profile1"
+
+          },
+          {
+        	   "uni-id": "MMPOP1-ce2-Slot2-Port3",
+        	    "physical-layers": {
+        	      "links": {
+        	        "link": [
+        	          {
+        	            "device": "ce2",
+        	            "interface": "GigabitEthernet0/3",
+        	            "ieee8023-phy": "mef-types:ieee8023-1000BASE-SX"
+        	          }
+        	        ]
+        	      }
+        	    },
+        	    "ce-vlans": {
+        	      "ce-vlan": [
+        	        {
+        	          "vid": 1
+        	        },
+        	        {
+        	          "vid": 33
+        	        }
+        	      ]
+        	    },
+        	    "ingress-envelopes": {
+        	      "envelope": [
+        	        {
+        	          "envelope-id": "ienv_EVPL_UNI223_56789",
+        	          "bwp-flows": {
+        	            "bwp-flow": [
+        	              {
+        	                "bw-profile": "low3-bwp-uni"
+        	              }
+        	            ]
+        	          },
+        	          "coupling-enabled": false
+        	        },
+        	        {
+        	          "envelope-id": "ienv_EVPL_UNI223_56790",
+        	          "bwp-flows": {
+        	            "bwp-flow": [
+        	              {
+        	                "bw-profile": "medium3-bwp-uni"
+        	              }
+        	            ]
+        	          },
+        	          "coupling-enabled": false
+        	        },
+        	        {
+        	          "envelope-id": "ienv_EVPL_UNI223_56799",
+        	          "bwp-flows": {
+        	            "bwp-flow": [
+        	              {
+        	                "bw-profile": "high3-bwp-uni"
+        	              }
+        	            ]
+        	          },
+        	          "coupling-enabled": false
+        	        }
+        	      ]
+        	    },
+        	    "egress-envelopes": {
+        	      "envelope": [
+        	        {
+        	          "envelope-id": "eenv_EVPL_UNI223_56789",
+        	          "bwp-flows": {
+        	            "bwp-flow": [
+        	              {
+        	                "bw-profile": "low3-bwp-uni"
+        	              }
+        	            ]
+        	          },
+        	          "coupling-enabled": false
+        	        },
+        	        {
+        	          "envelope-id": "eenv_EVPL_UNI223_56790",
+        	          "bwp-flows": {
+        	            "bwp-flow": [
+        	              {
+        	                "bw-profile": "medium3-bwp-uni"
+        	              }
+        	            ]
+        	          },
+        	          "coupling-enabled": false
+        	        },
+        	        {
+        	          "envelope-id": "eenv_EVPL_UNI223_56799",
+        	          "bwp-flows": {
+        	            "bwp-flow": [
+        	              {
+        	                "bw-profile": "high3-bwp-uni"
+        	              }
+        	            ]
+        	          },
+        	          "coupling-enabled": false
+        	        }
+        	      ]
+        	    },
+        	    "cen-id": "ACME-MEGAMART",
+        	    "subscriber": "MegaMart",
+        	    "admin-state-enabled": false,
+        	    "max-svc-frame-size": 1600,
+        	    "svc-mux-enabled": false,
+        	    "ce-vlan-id-for-untagged-and-priority": 1,
+        	    "max-evc-count": 1,
+        	    "l2cp-address-set": "aware-cta",
+        	    "l2cp-peering-profile": "L2CP_Peering_Profile1"
+            }
+      ]
+    }
+  },
+  "mef-services:mef-services": {
+	   "mef-service": [
+	    {	  
+	    "svc-id": 12345,
+	    "evc": {
+	      "unis": {
+	        "uni": [
+	          {
+	            "uni-id": "MMPOP1-ce0-Slot0-Port1",
+	            "evc-uni-ce-vlans": {
+	              "evc-uni-ce-vlan": [
+	                {
+	                  "vid": 100
+	                },
+	                {
+	                  "vid": 101
+	                },
+	                {
+	                  "vid": 102
+	                }
+	              ]
+	            },
+	            "role": "root",
+	            "admin-state-enabled": false,
+	            "color-id": "dscp",
+	            "data-svc-frm-cos": "MEF103_Table23",
+	            "l2cp-svc-frm-cos": "MEF103_Table3PlusCoS",
+	            "soam-svc-frm-cos": "MEF103_Table23",
+	            "data-svc-frm-eec": "MEF103_Table23",
+	            "l2cp-svc-frm-eec": "MEF103_Table3PlusEEC",
+	            "soam-svc-frm-eec": "MEF103_Table23",
+	            "src-mac-addr-limit-enabled": false
+	          },
+	          {
+	            "uni-id": "MMPOP1-ce1-Slot1-Port1",
+	            "evc-uni-ce-vlans": {
+	              "evc-uni-ce-vlan": [
+	                {
+	                  "vid": 100
+	                },
+	                {
+	                  "vid": 101
+	                },
+	                {
+	                  "vid": 102
+	                }
+	              ]
+	            },
+	            "role": "root",
+	            "admin-state-enabled": false,
+	            "color-id": "dscp",
+	            "data-svc-frm-cos": "MEF103_Table23",
+	            "l2cp-svc-frm-cos": "MEF103_Table3PlusCoS",
+	            "soam-svc-frm-cos": "MEF103_Table23",
+	            "data-svc-frm-eec": "MEF103_Table23",
+	            "l2cp-svc-frm-eec": "MEF103_Table3PlusEEC",
+	            "soam-svc-frm-eec": "MEF103_Table23",
+	            "src-mac-addr-limit-enabled": false
+	          }
+	        ]
+	      },
+	      "sls-inclusions-by-cos": {
+	        "sls-inclusion-by-cos": [
+	          {
+	            "cos-name": "Argon"
+	          },
+	          {
+	            "cos-name": "Krypton"
+	          },
+	          {
+	            "cos-name": "Neon"
+	          }
+	        ]
+	      },
+	      "sls-uni-inclusions": {
+	        "sls-uni-inclusion-set": [
+	          {
+	            "pm-type": "one-way-frame-delay-performance",
+	            "pm-id": "Argon",
+	            "uni-id1": "MMPOP1-ce0-Slot0-Port1",
+	            "uni-id2": "MMPOP1-ce1-Slot1-Port1"
+	          },
+	          {
+	            "pm-type": "one-way-frame-delay-performance",
+	            "pm-id": "Argon",
+	            "uni-id1": "MMPOP1-ce1-Slot1-Port1",
+	            "uni-id2": "MMPOP1-ce0-Slot0-Port1"
+	          },
+	          {
+	            "pm-type": "one-way-frame-delay-performance",
+	            "pm-id": "Krypton",
+	            "uni-id1": "MMPOP1-ce0-Slot0-Port1",
+	            "uni-id2": "MMPOP1-ce1-Slot1-Port1"
+	          },
+	          {
+	            "pm-type": "one-way-frame-delay-performance",
+	            "pm-id": "Krypton",
+	            "uni-id1": "MMPOP1-ce1-Slot1-Port1",
+	            "uni-id2": "MMPOP1-ce0-Slot0-Port1"
+	          },
+	          {
+	            "pm-type": "one-way-frame-delay-performance",
+	            "pm-id": "Neon",
+	            "uni-id1": "MMPOP1-ce0-Slot0-Port1",
+	            "uni-id2": "MMPOP1-ce1-Slot1-Port1"
+	          },
+	          {
+	            "pm-type": "one-way-frame-delay-performance",
+	            "pm-id": "Neon",
+	            "uni-id1": "MMPOP1-ce1-Slot1-Port1",
+	            "uni-id2": "MMPOP1-ce0-Slot0-Port1"
+	          },
+	          {
+	            "pm-type": "one-way-inter-frame-delay-variation-performance",
+	            "pm-id": "Krypton",
+	            "uni-id1": "MMPOP1-ce0-Slot0-Port1",
+	            "uni-id2": "MMPOP1-ce1-Slot1-Port1"
+	          },
+	          {
+	            "pm-type": "one-way-inter-frame-delay-variation-performance",
+	            "pm-id": "Krypton",
+	            "uni-id1": "MMPOP1-ce1-Slot1-Port1",
+	            "uni-id2": "MMPOP1-ce0-Slot0-Port1"
+	          },
+	          {
+	            "pm-type": "one-way-frame-loss-ratio-performance",
+	            "pm-id": "Argon",
+	            "uni-id1": "MMPOP1-ce0-Slot0-Port1",
+	            "uni-id2": "MMPOP1-ce1-Slot1-Port1"
+	          },
+	          {
+	            "pm-type": "one-way-frame-loss-ratio-performance",
+	            "pm-id": "Argon",
+	            "uni-id1": "MMPOP1-ce1-Slot1-Port1",
+	            "uni-id2": "MMPOP1-ce0-Slot0-Port1"
+	          },
+	          {
+	            "pm-type": "one-way-frame-loss-ratio-performance",
+	            "pm-id": "Krypton",
+	            "uni-id1": "MMPOP1-ce0-Slot0-Port1",
+	            "uni-id2": "MMPOP1-ce1-Slot1-Port1"
+	          },
+	          {
+	            "pm-type": "one-way-frame-loss-ratio-performance",
+	            "pm-id": "Krypton",
+	            "uni-id1": "MMPOP1-ce1-Slot1-Port1",
+	            "uni-id2": "MMPOP1-ce0-Slot0-Port1"
+	          },
+	          {
+	            "pm-type": "one-way-frame-loss-ratio-performance",
+	            "pm-id": "Neon",
+	            "uni-id1": "MMPOP1-ce0-Slot0-Port1",
+	            "uni-id2": "MMPOP1-ce1-Slot1-Port1"
+	          },
+	          {
+	            "pm-type": "one-way-frame-loss-ratio-performance",
+	            "pm-id": "Neon",
+	            "uni-id1": "MMPOP1-ce1-Slot1-Port1",
+	            "uni-id2": "MMPOP1-ce0-Slot0-Port1"
+	          },
+	          {
+	            "pm-type": "one-way-availability-performance",
+	            "pm-id": "Argon",
+	            "uni-id1": "MMPOP1-ce0-Slot0-Port1",
+	            "uni-id2": "MMPOP1-ce1-Slot1-Port1"
+	          },
+	          {
+	            "pm-type": "one-way-availability-performance",
+	            "pm-id": "Argon",
+	            "uni-id1": "MMPOP1-ce1-Slot1-Port1",
+	            "uni-id2": "MMPOP1-ce0-Slot0-Port1"
+	          },
+	          {
+	            "pm-type": "one-way-availability-performance",
+	            "pm-id": "Krypton",
+	            "uni-id1": "MMPOP1-ce0-Slot0-Port1",
+	            "uni-id2": "MMPOP1-ce1-Slot1-Port1"
+	          },
+	          {
+	            "pm-type": "one-way-availability-performance",
+	            "pm-id": "Krypton",
+	            "uni-id1": "MMPOP1-ce1-Slot1-Port1",
+	            "uni-id2": "MMPOP1-ce0-Slot0-Port1"
+	          },
+	          {
+	            "pm-type": "one-way-availability-performance",
+	            "pm-id": "Neon",
+	            "uni-id1": "MMPOP1-ce0-Slot0-Port1",
+	            "uni-id2": "MMPOP1-ce1-Slot1-Port1"
+	          },
+	          {
+	            "pm-type": "one-way-availability-performance",
+	            "pm-id": "Neon",
+	            "uni-id1": "MMPOP1-ce1-Slot1-Port1",
+	            "uni-id2": "MMPOP1-ce0-Slot0-Port1"
+	          }
+	        ]
+	      },
+	      "evc-id": "EVC-0001898-ACME-MEGAMART",
+	      "evc-type": "point-to-point",
+	      "admin-state-enabled": false,
+	      "max-uni-count": 2,
+	      "preserve-ce-vlan-id": true,
+	      "cos-preserve-ce-vlan-id": true,
+	      "evc-performance-sls": "MEF103_Table25",
+	      "max-svc-frame-size": 1600
+	    },
+	    "sp-id": "Acme",
+	    "svc-type": "epl",
+	  }
+	 ]
+  }
+ }
+}

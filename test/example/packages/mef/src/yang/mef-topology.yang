@@ -169,8 +169,8 @@ module mef-topology {
               tailf:callpoint interface-status;
               leaf speed {
                 type uint64;
-                default 0;
                 units "bits-per-second";
+                default 0;
                 description
                 "The operational status value indicating " +
                 "the maximum data rate of the interface in " +

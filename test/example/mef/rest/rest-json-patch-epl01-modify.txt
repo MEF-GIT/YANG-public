@@ -1,0 +1,81 @@
+{
+"data": {
+  "mef-interfaces:mef-interfaces": {
+    "unis": {
+    	"uni": [
+    	    {
+    		    "uni-id": "MMPOP1-ce0-Slot0-Port1",
+    		    "max-svc-frame-size": 1670
+          },
+          {
+            "uni-id": "MMPOP1-ce1-Slot1-Port1",
+            "max-svc-frame-size": 1679
+           }
+      ]
+    }
+  },
+  "mef-services:mef-services": {
+	  "carrier-ethernet": {
+      "subscriber-services": {	  
+	   "evc": [
+	    {
+       "evc-id": "EVC-0001898-ACME-MEGAMART",
+        "end-points": {
+          "end-point": [
+            {
+              "uni-id": "MMPOP1-ce0-Slot0-Port1",
+              "ce-vlans": {
+                "ce-vlan": [
+                  {
+                    "vid": 100
+                  },
+                  {
+                    "vid": 101
+                  },
+                  {
+                    "vid": 102
+                  }
+                ]
+              },
+              "role": "root",
+              "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23"
+            },
+            {
+              "uni-id": "MMPOP1-ce1-Slot1-Port1",
+              "ce-vlans": {
+                "ce-vlan": [
+                  {
+                    "vid": 100
+                  },
+                  {
+                    "vid": 101
+                  },
+                  {
+                    "vid": 102
+                  }
+                ]
+              },
+              "role": "root",
+              "admin-state": false,
+              "color-identifier": "dscp",
+              "cos-identifier": "MEF103_Table23",
+              "eec-identifier": "MEF103_Table23"
+            }
+          ]
+        },
+        "connection-type": "point-to-point",
+        "admin-state": false,
+        "max-num-of-evc-end-point": 2,
+        "ce-vlan-id-preservation": true,
+        "ce-vlan-pcp-preservation": true,
+        "svc-type": "epl"
+        }
+      ]
+      }
+	  }
+ }
+}
+}

@@ -1,0 +1,2536 @@
+{
+  "mef-global:mef-global": {
+    "sls-profiless": {
+      "sls-profile": [
+        {
+          "sls-id": "MEF103_Table25",
+          "time-interval": 2592000,
+          "pm-cos-name-entries": {
+            "pm-cos-name-entry": [
+              {
+                "cos-name": "Argon",
+                "delta-t": 1,
+                "threshold-c": "50.0",
+                "consecutive-interval-n": 10,
+                "pm-entries": {
+                  "pm-entry": [
+                    {
+                      "pm-entry-id": "SLS_Argon_Test1",
+                      "one-way-frame-delay-pm": {
+                        "pm-percentile": "99.0",
+                        "pm-objective": 300
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_Argon_Test2",
+                      "one-way-frame-loss-ratio-pm": {
+                        "pm-percentile": 39.0
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_Argon_Test3",
+                      "one-way-availability-pm": {
+                        "pm-percentile": 94.0
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "cos-name": "Krypton",
+                "delta-t": 1,
+                "threshold-c": "50.0",
+                "consecutive-interval-n": 10,
+                "pm-entries": {
+                  "pm-entry": [
+                    {
+                      "pm-entry-id": "SLS_Krypton_Test1",
+                      "one-way-frame-delay-pm": {
+                        "pm-percentile": "99.9",
+                        "pm-objective": 200
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_Krypton_Test2",
+                      "one-way-frame-loss-ratio-pm": {
+                        "pm-percentile": 29.0
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_Krypton_Test3",
+                      "one-way-inter-frame-delay-variation-pm": {
+                        "pm-percentile": "99.9",
+                        "frame-pair-separation": 1,
+                        "pm-objective": 250
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_Krypton_Test4",
+                      "one-way-availability-pm": {
+                        "pm-percentile": 96
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "cos-name": "Neon",
+                "delta-t": 1,
+                "threshold-c": "50.0",
+                "consecutive-interval-n": 10,
+                "pm-entries": {
+                  "pm-entry": [
+                    {
+                      "pm-entry-id": "SLS_Neon_GA_Test",
+                      "one-way-group-availability-pm": {
+                        "min-number-of-uni-pair-sets": 1,
+                        "pm-objective": 300
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_Neon_Test1",
+                      "one-way-frame-delay-pm": {
+                        "pm-percentile": "95.0",
+                        "pm-objective": 400
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_Neon_Test2",
+                      "one-way-frame-loss-ratio-pm": {
+                        "pm-percentile": 49.0
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_Neon_Test3",
+                      "one-way-availability-pm": {
+                        "pm-percentile": 92.0
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_Neon_Test5",
+                      "one-way-frame-delay-range-pm": {
+                        "pm-percentile": "98.0",
+                        "pm-objective": 150
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_Neon_Test6",
+                      "one-way-mean-frame-delay-pm": {
+                        "pm-objective": 300
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_Neon_Test7",
+                      "one-way-high-loss-interval-pm": {
+                        "pm-objective": 220
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_Neon_Test8",
+                      "one-way-consecutive-high-loss-interval-pm": {
+                        "consecutive-number-p": 9,
+                        "pm-objective": 257
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_Neon_Test9",
+                      "one-way-composite-pm": {
+                        "cpi-threshold-u": "90.6",
+                        "frame-loss-indicator": true,
+                        "frame-delay-indicator": true,
+                        "ifdv-indicator": true,
+                        "one-way-fd-threshold": 42,
+                        "one-way-ifdv-threshold": 55,
+                        "pm-objective": 300
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        },
+        {
+          "sls-id": "SLS_Example",
+          "time-interval": 1292000,
+          "pm-cos-name-entries": {
+            "pm-cos-name-entry": [
+              {
+                "cos-name": "H",
+                "delta-t": 1,
+                "threshold-c": "50.0",
+                "consecutive-interval-n": 10,
+                "pm-entries": {
+                  "pm-entry": [
+                    {
+                      "pm-entry-id": "SLS_H_GA_Test",
+                      "one-way-group-availability-pm": {
+                        "min-number-of-uni-pair-sets": 1,
+                        "pm-objective": 300
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_H_Test1",
+                      "one-way-frame-delay-pm": {
+                        "pm-percentile": "99.9",
+                        "pm-objective": 200
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_H_Test2",
+                      "one-way-frame-loss-ratio-pm": {
+                        "pm-percentile": 29.0
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_H_Test3",
+                      "one-way-inter-frame-delay-variation-pm": {
+                        "pm-percentile": "99.9",
+                        "frame-pair-separation": 1,
+                        "pm-objective": 250
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_H_Test4",
+                      "one-way-availability-pm": {
+                        "pm-percentile": 96.0
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_H_Test5",
+                      "one-way-frame-delay-range-pm": {
+                        "pm-percentile": "98.0",
+                        "pm-objective": 150
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_H_Test6",
+                      "one-way-mean-frame-delay-pm": {
+                        "pm-objective": 300
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_H_Test7",
+                      "one-way-high-loss-interval-pm": {
+                        "pm-objective": 220
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_H_Test8",
+                      "one-way-consecutive-high-loss-interval-pm": {
+                        "consecutive-number-p": 9,
+                        "pm-objective": 257
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_H_Test9",
+                      "one-way-composite-pm": {
+                        "cpi-threshold-u": "90.6",
+                        "frame-loss-indicator": true,
+                        "frame-delay-indicator": true,
+                        "ifdv-indicator": true,
+                        "one-way-fd-threshold": 42,
+                        "one-way-ifdv-threshold": 55,
+                        "pm-objective": 300
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "cos-name": "L",
+                "delta-t": 1,
+                "threshold-c": "50.0",
+                "consecutive-interval-n": 10,
+                "pm-entries": {
+                  "pm-entry": [
+                    {
+                      "pm-entry-id": "SLS_L_Test1",
+                      "one-way-frame-delay-pm": {
+                        "pm-percentile": "95.0",
+                        "pm-objective": 400
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_L_Test2",
+                      "one-way-frame-loss-ratio-pm": {
+                        "pm-objective": 490
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_L_Test3",
+                      "one-way-availability-pm": {
+                        "pm-objective": 92
+                      }
+                    }
+                  ]
+                }
+              },
+              {
+                "cos-name": "M",
+                "delta-t": 1,
+                "threshold-c": "50.0",
+                "consecutive-interval-n": 10,
+                "pm-entries": {
+                  "pm-entry": [
+                    {
+                      "pm-entry-id": "SLS_M_Test1",
+                      "one-way-frame-delay-pm": {
+                        "pm-percentile": "99.0",
+                        "pm-objective": 300
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_M_Test2",
+                      "one-way-frame-loss-ratio-pm": {
+                        "pm-objective": 390
+                      }
+                    },
+                    {
+                      "pm-entry-id": "SLS_M_Test3",
+                      "one-way-availability-pm": {
+                        "pm-objective": 94
+                      }
+                    }
+                  ]
+                }
+              }
+            ]
+          }
+        }
+      ]
+    },
+    "profiles": {
+      "cos-names": {
+        "cos-name": [
+          {
+            "name": "Argon"
+          },
+          {
+            "name": "BUSINESS-CRITICAL"
+          },
+          {
+            "name": "Bronze"
+          },
+          {
+            "name": "BronzeEnhanced"
+          },
+          {
+            "name": "BronzePlus"
+          },
+          {
+            "name": "Control"
+          },
+          {
+            "name": "Discard"
+          },
+          {
+            "name": "Freshman"
+          },
+          {
+            "name": "Gold"
+          },
+          {
+            "name": "H"
+          },
+          {
+            "name": "Junior"
+          },
+          {
+            "name": "Krypton"
+          },
+          {
+            "name": "L"
+          },
+          {
+            "name": "M"
+          },
+          {
+            "name": "MISSION-CRITICAL"
+          },
+          {
+            "name": "Neon"
+          },
+          {
+            "name": "Platinum"
+          },
+          {
+            "name": "REALTIME"
+          },
+          {
+            "name": "Senior"
+          },
+          {
+            "name": "Silver"
+          },
+          {
+            "name": "SilverPlus"
+          },
+          {
+            "name": "Sophomore"
+          },
+          {
+            "name": "control"
+          },
+          {
+            "name": "gold"
+          },
+          {
+            "name": "mpls-bronze"
+          },
+          {
+            "name": "pccwg_bronze"
+          },
+          {
+            "name": "pccwg_gold"
+          },
+          {
+            "name": "pccwg_silver"
+          },
+          {
+            "name": "pccwg_silverplus"
+          },
+          {
+            "name": "silver"
+          },
+          {
+            "name": "silver+"
+          }
+        ]
+      },
+      "eec-names": {
+        "eec-name": [
+          {
+            "name": "Bronze"
+          },
+          {
+            "name": "BronzeEnhanced"
+          },
+          {
+            "name": "BronzePlus"
+          },
+          {
+            "name": "Control"
+          },
+          {
+            "name": "Discard"
+          },
+          {
+            "name": "EEC-Argon"
+          },
+          {
+            "name": "EEC-Krypton"
+          },
+          {
+            "name": "EEC-Neon"
+          },
+          {
+            "name": "Freshman"
+          },
+          {
+            "name": "Gold"
+          },
+          {
+            "name": "H"
+          },
+          {
+            "name": "Junior"
+          },
+          {
+            "name": "L"
+          },
+          {
+            "name": "M"
+          },
+          {
+            "name": "Platinum"
+          },
+          {
+            "name": "Senior"
+          },
+          {
+            "name": "Silver"
+          },
+          {
+            "name": "SilverPlus"
+          },
+          {
+            "name": "Sophomore"
+          },
+          {
+            "name": "control"
+          },
+          {
+            "name": "gold"
+          },
+          {
+            "name": "mpls-bronze"
+          },
+          {
+            "name": "pccwg_bronze"
+          },
+          {
+            "name": "pccwg_gold"
+          },
+          {
+            "name": "pccwg_silver"
+          },
+          {
+            "name": "pccwg_silverplus"
+          },
+          {
+            "name": "silver"
+          },
+          {
+            "name": "silver+"
+          }
+        ]
+      },
+      "ingress-bwp-flows-parameter-set": {
+        "bwp-flow-parameter-set": [
+          {
+            "bw-profile": "INGRESS_BWP_100mbps",
+            "cir": 100000,
+            "cir-max": 200000,
+            "cbs": 12800,
+            "eir": 50000,
+            "eir-max": 0,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "INGRESS_BWP_200kbps",
+            "cir": 200,
+            "cir-max": 4000,
+            "cbs": 32000,
+            "eir": 0,
+            "eir-max": 30000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "INGRESS_BWP_2mbps",
+            "cir": 2000,
+            "cir-max": 4000,
+            "cbs": 32000,
+            "eir": 0,
+            "eir-max": 30000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "INGRESS_BWP_70mbps",
+            "cir": 70000,
+            "cir-max": 200000,
+            "cbs": 12800,
+            "eir": 50000,
+            "eir-max": 0,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "INGRESS_BWP_800kbps",
+            "cir": 800,
+            "cir-max": 4000,
+            "cbs": 32000,
+            "eir": 0,
+            "eir-max": 30000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "chicago-bwp-evc",
+            "cir": 400000,
+            "cbs": 9000,
+            "eir": 10000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "chicago-bwp-uni",
+            "cir": 10000000,
+            "cbs": 12000,
+            "eir": 10000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "denver-bwp-evc",
+            "cir": 400000,
+            "cbs": 9000,
+            "eir": 10000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "denver-bwp-uni",
+            "cir": 2000000,
+            "cbs": 10000,
+            "eir": 10000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "high1-bwp-uni",
+            "cir": 20000,
+            "cir-max": 20000,
+            "cbs": 64000,
+            "eir": 0,
+            "eir-max": 50000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "high2-bwp-uni",
+            "cir": 10000000,
+            "cbs": 12000,
+            "eir": 0,
+            "ebs": 0,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "high3-bwp-uni",
+            "cir": 20000,
+            "cir-max": 20000,
+            "cbs": 64000,
+            "eir": 0,
+            "eir-max": 50000,
+            "ebs": 0,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "itest-bwp1",
+            "cir": 5000,
+            "cir-max": 20000,
+            "cbs": 12800,
+            "eir": 50000,
+            "eir-max": 0,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "itest-bwp2",
+            "cir": 14000,
+            "cir-max": 20000,
+            "cbs": 32000,
+            "eir": 0,
+            "eir-max": 30000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "low1-bwp-uni",
+            "cir": 5000,
+            "cir-max": 20000,
+            "cbs": 12800,
+            "eir": 50000,
+            "eir-max": 0,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "low2-bwp-uni",
+            "cir": 400000,
+            "cbs": 9000,
+            "eir": 10000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "low3-bwp-uni",
+            "cir": 5000,
+            "cir-max": 20000,
+            "cbs": 12800,
+            "eir": 50000,
+            "eir-max": 0,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "medium1-bwp-uni",
+            "cir": 14000,
+            "cir-max": 20000,
+            "cbs": 32000,
+            "eir": 0,
+            "eir-max": 30000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "medium2-bwp-uni",
+            "cir": 2000000,
+            "cbs": 10000,
+            "eir": 10000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "medium3-bwp-uni",
+            "cir": 14000,
+            "cir-max": 20000,
+            "cbs": 32000,
+            "eir": 0,
+            "eir-max": 30000,
+            "ebs": 0,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          }
+        ]
+      },
+      "egress-bwp-flows-parameter-set": {
+        "bwp-flow-parameter-set": [
+          {
+            "bw-profile": "EGRESS_BWP_100mbps",
+            "cir": 100000,
+            "cir-max": 20000,
+            "cbs": 12800,
+            "eir": 50000,
+            "eir-max": 0,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "EGRESS_BWP_200kbps",
+            "cir": 200,
+            "cir-max": 4000,
+            "cbs": 32000,
+            "eir": 0,
+            "eir-max": 30000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "EGRESS_BWP_2mbps",
+            "cir": 2000,
+            "cir-max": 4000,
+            "cbs": 32000,
+            "eir": 0,
+            "eir-max": 30000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "EGRESS_BWP_70mbps",
+            "cir": 70000,
+            "cir-max": 20000,
+            "cbs": 12800,
+            "eir": 50000,
+            "eir-max": 0,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "EGRESS_BWP_800kbps",
+            "cir": 800,
+            "cir-max": 4000,
+            "cbs": 32000,
+            "eir": 0,
+            "eir-max": 30000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "chicago-bwp-evc",
+            "cir": 400000,
+            "cbs": 9000,
+            "eir": 10000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "chicago-bwp-uni",
+            "cir": 10000000,
+            "cbs": 12000,
+            "eir": 10000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "denver-bwp-evc",
+            "cir": 400000,
+            "cbs": 9000,
+            "eir": 10000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "denver-bwp-uni",
+            "cir": 2000000,
+            "cbs": 10000,
+            "eir": 10000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "etest-bwp1",
+            "cir": 5000,
+            "cir-max": 20000,
+            "cbs": 12800,
+            "eir": 50000,
+            "eir-max": 0,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "etest-bwp2",
+            "cir": 14000,
+            "cir-max": 20000,
+            "cbs": 32000,
+            "eir": 0,
+            "eir-max": 30000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "high1-bwp-uni",
+            "cir": 20000,
+            "cir-max": 20000,
+            "cbs": 64000,
+            "eir": 0,
+            "eir-max": 50000,
+            "ebs": 0,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "high2-bwp-uni",
+            "cir": 10000000,
+            "cbs": 12000,
+            "eir": 0,
+            "ebs": 0,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "high3-bwp-uni",
+            "cir": 20000,
+            "cir-max": 20000,
+            "cbs": 64000,
+            "eir": 0,
+            "eir-max": 0,
+            "ebs": 0,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "low1-bwp-uni",
+            "cir": 5000,
+            "cir-max": 20000,
+            "cbs": 12800,
+            "eir": 50000,
+            "eir-max": 0,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "low2-bwp-uni",
+            "cir": 400000,
+            "cbs": 9000,
+            "eir": 10000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "low3-bwp-uni",
+            "cir": 5000,
+            "cir-max": 20000,
+            "cbs": 12800,
+            "eir": 50000,
+            "eir-max": 0,
+            "ebs": 2000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "medium1-bwp-uni",
+            "cir": 14000,
+            "cir-max": 20000,
+            "cbs": 32000,
+            "eir": 0,
+            "eir-max": 0,
+            "ebs": 0,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "medium2-bwp-uni",
+            "cir": 2000000,
+            "cbs": 10000,
+            "eir": 10000,
+            "ebs": 10000,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          },
+          {
+            "bw-profile": "medium3-bwp-uni",
+            "cir": 14000,
+            "cir-max": 20000,
+            "cbs": 32000,
+            "eir": 0,
+            "eir-max": 0,
+            "ebs": 0,
+            "coupling-enabled": false,
+            "color-mode": "color-blind",
+            "coupling-flag": false
+          }
+        ]
+      },
+      "l2cp-cos": {
+        "profile": [
+          {
+            "id": "MEF103_Table3PlusCoS",
+            "cos-maps": {
+              "cos-map": [
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:00",
+                  "peering-proto-name": "STP/RSTP/MSTP",
+                  "protocol": "llc",
+                  "protocol-id": "42",
+                  "cos-name": "Krypton",
+                  "handling": "pass"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:01",
+                  "peering-proto-name": "802.3 MAC Control Pause",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:08",
+                  "cos-name": "Krypton",
+                  "handling": "discard",
+                  "subtype": ["00:01"]
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:02",
+                  "peering-proto-name": "ESMC",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:09",
+                  "cos-name": "Krypton",
+                  "handling": "pass",
+                  "subtype": ["0a"]
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:02",
+                  "peering-proto-name": "Link OAM",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:09",
+                  "cos-name": "Krypton",
+                  "handling": "pass",
+                  "subtype": ["03"]
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:03",
+                  "peering-proto-name": "Port Authentication",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:8e",
+                  "cos-name": "Krypton",
+                  "handling": "peer"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:07",
+                  "peering-proto-name": "E-LMI",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:ee",
+                  "cos-name": "Krypton",
+                  "handling": "peer"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:0e",
+                  "peering-proto-name": "LLDP",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:cc",
+                  "cos-name": "Krypton",
+                  "handling": "peer"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:0e",
+                  "peering-proto-name": "PTP Peer Delay",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:f7",
+                  "cos-name": "Krypton",
+                  "handling": "peer"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:32",
+                  "peering-proto-name": "Example3 of a custom MAC",
+                  "protocol": "ethertype",
+                  "cos-name": "Neon",
+                  "handling": "pass"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:3f",
+                  "peering-proto-name": "Example of SOAM Service Frame",
+                  "protocol": "ethertype",
+                  "protocol-id": "89:02",
+                  "cos-name": "Neon",
+                  "handling": "peer"
+                }
+              ]
+            },
+            "user-label": "Ingress L2CP Profile with CoS Names"
+          },
+          {
+            "id": "PCCWG_L2CP_CoS",
+            "cos-maps": {
+              "cos-map": [
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:00",
+                  "peering-proto-name": "STP/RSTP/MSTP",
+                  "protocol": "llc",
+                  "protocol-id": "42",
+                  "cos-name": "pccwg_gold",
+                  "handling": "pass"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:01",
+                  "peering-proto-name": "802.3 MAC Control Pause",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:08",
+                  "cos-name": "pccwg_gold",
+                  "handling": "discard",
+                  "subtype": ["00:01"]
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:02",
+                  "peering-proto-name": "ESMC",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:09",
+                  "cos-name": "pccwg_gold",
+                  "handling": "pass",
+                  "subtype": ["0a"]
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:02",
+                  "peering-proto-name": "Link OAM",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:09",
+                  "cos-name": "pccwg_gold",
+                  "handling": "pass",
+                  "subtype": ["03"]
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:03",
+                  "peering-proto-name": "Port Authentication",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:8e",
+                  "cos-name": "pccwg_gold",
+                  "handling": "peer"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:07",
+                  "peering-proto-name": "E-LMI",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:ee",
+                  "cos-name": "pccwg_gold",
+                  "handling": "peer"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:0e",
+                  "peering-proto-name": "LLDP",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:cc",
+                  "cos-name": "pccwg_gold",
+                  "handling": "peer"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:0e",
+                  "peering-proto-name": "PTP Peer Delay",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:f7",
+                  "cos-name": "pccwg_gold",
+                  "handling": "peer"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:32",
+                  "peering-proto-name": "Example3 of a custom MAC",
+                  "protocol": "ethertype",
+                  "cos-name": "pccwg_bronze",
+                  "handling": "pass"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:3f",
+                  "peering-proto-name": "Example of SOAM Service Frame",
+                  "protocol": "ethertype",
+                  "protocol-id": "89:02",
+                  "cos-name": "pccwg_bronze",
+                  "handling": "peer"
+                }
+              ]
+            },
+            "user-label": "Ingress L2CP Profile with CoS Names"
+          }
+        ]
+      },
+      "l2cp-eec": {
+        "profile": [
+          {
+            "id": "MEF103_Table3PlusEEC",
+            "eec-maps": {
+              "eec-map": [
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:00",
+                  "peering-proto-name": "STP/RSTP/MSTP",
+                  "protocol": "llc",
+                  "protocol-id": "42",
+                  "eec-name": "EEC-Krypton",
+                  "handling": "pass"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:01",
+                  "peering-proto-name": "802.3 MAC Control Pause",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:08",
+                  "eec-name": "EEC-Krypton",
+                  "handling": "discard",
+                  "subtype": ["00:01"]
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:02",
+                  "peering-proto-name": "ESMC",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:09",
+                  "eec-name": "EEC-Krypton",
+                  "handling": "pass",
+                  "subtype": ["0a"]
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:02",
+                  "peering-proto-name": "Link OAM",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:09",
+                  "eec-name": "EEC-Krypton",
+                  "handling": "pass",
+                  "subtype": ["03"]
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:03",
+                  "peering-proto-name": "Port Authentication",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:8e",
+                  "eec-name": "EEC-Krypton",
+                  "handling": "peer"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:07",
+                  "peering-proto-name": "E-LMI",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:ee",
+                  "eec-name": "EEC-Krypton",
+                  "handling": "peer"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:0e",
+                  "peering-proto-name": "LLDP",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:cc",
+                  "eec-name": "EEC-Krypton",
+                  "handling": "peer"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:0e",
+                  "peering-proto-name": "PTP Peer Delay",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:f7",
+                  "eec-name": "EEC-Krypton",
+                  "handling": "peer"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:32",
+                  "peering-proto-name": "Example3 of a custom MAC",
+                  "protocol": "ethertype",
+                  "eec-name": "EEC-Neon",
+                  "handling": "pass"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:3f",
+                  "peering-proto-name": "Example of SOAM Service Frame",
+                  "protocol": "ethertype",
+                  "protocol-id": "89:02",
+                  "eec-name": "EEC-Neon",
+                  "handling": "peer"
+                }
+              ]
+            },
+            "user-label": "Egress L2CP Profile with EEC Names"
+          },
+          {
+            "id": "PCCWG_L2CP_EEC",
+            "eec-maps": {
+              "eec-map": [
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:00",
+                  "peering-proto-name": "STP/RSTP/MSTP",
+                  "protocol": "llc",
+                  "protocol-id": "42",
+                  "eec-name": "pccwg_gold",
+                  "handling": "pass"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:01",
+                  "peering-proto-name": "802.3 MAC Control Pause",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:08",
+                  "eec-name": "pccwg_gold",
+                  "handling": "discard",
+                  "subtype": ["00:01"]
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:02",
+                  "peering-proto-name": "ESMC",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:09",
+                  "eec-name": "pccwg_gold",
+                  "handling": "pass",
+                  "subtype": ["0a"]
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:02",
+                  "peering-proto-name": "Link OAM",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:09",
+                  "eec-name": "pccwg_gold",
+                  "handling": "pass",
+                  "subtype": ["03"]
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:03",
+                  "peering-proto-name": "Port Authentication",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:8e",
+                  "eec-name": "pccwg_gold",
+                  "handling": "peer"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:07",
+                  "peering-proto-name": "E-LMI",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:ee",
+                  "eec-name": "pccwg_gold",
+                  "handling": "peer"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:0e",
+                  "peering-proto-name": "LLDP",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:cc",
+                  "eec-name": "pccwg_gold",
+                  "handling": "peer"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:0e",
+                  "peering-proto-name": "PTP Peer Delay",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:f7",
+                  "eec-name": "pccwg_gold",
+                  "handling": "peer"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:32",
+                  "peering-proto-name": "Example3 of a custom MAC",
+                  "protocol": "ethertype",
+                  "eec-name": "pccwg_bronze",
+                  "handling": "pass"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:3f",
+                  "peering-proto-name": "Example of SOAM Service Frame",
+                  "protocol": "ethertype",
+                  "protocol-id": "89:02",
+                  "eec-name": "pccwg_bronze",
+                  "handling": "peer"
+                }
+              ]
+            },
+            "user-label": "Egress L2CP Profile with EEC Names"
+          }
+        ]
+      },
+      "l2cp-peering": {
+        "profile": [
+          {
+            "id": "L2CP_Peering_Profile1",
+            "peering-maps": {
+              "peering-map": [
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:03",
+                  "peering-proto-name": "Port Authentication",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:8e"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:07",
+                  "peering-proto-name": "E-LMI",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:ee"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:0e",
+                  "peering-proto-name": "LLDP",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:cc"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:0e",
+                  "peering-proto-name": "PTP Peer Delay",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:f7"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:3f",
+                  "peering-proto-name": "Example of SOAM Service Frame",
+                  "protocol": "ethertype",
+                  "protocol-id": "89:02"
+                }
+              ]
+            },
+            "user-label": "L2CP Peering Profile #1"
+          },
+          {
+            "id": "PCCWG_L2CP_Peering_Profile1",
+            "peering-maps": {
+              "peering-map": [
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:03",
+                  "peering-proto-name": "Port Authentication",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:8e"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:07",
+                  "peering-proto-name": "E-LMI",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:ee"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:0e",
+                  "peering-proto-name": "LLDP",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:cc"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:0e",
+                  "peering-proto-name": "PTP Peer Delay",
+                  "protocol": "ethertype",
+                  "protocol-id": "88:f7"
+                },
+                {
+                  "dest-mac-addr": "01:80:c2:00:00:3f",
+                  "peering-proto-name": "Example of SOAM Service Frame",
+                  "protocol": "ethertype",
+                  "protocol-id": "89:02"
+                }
+              ]
+            },
+            "user-label": "L2CP Peering Profile #1"
+          }
+        ]
+      },
+      "elmi": {
+        "elmi-profile": [
+          {
+            "id": "elmi-test1",
+            "status-error-threshold": 7,
+            "polling-timer": 22,
+            "polling-verification-timer": 23
+          },
+          {
+            "id": "elmi-test2",
+            "status-error-threshold": 6,
+            "polling-timer": 20,
+            "polling-verification-timer": 21
+          },
+          {
+            "id": "pccwg-elmi-test1",
+            "status-error-threshold": 7,
+            "polling-timer": 22,
+            "polling-verification-timer": 23
+          },
+          {
+            "id": "pccwg-elmi-test2",
+            "status-error-threshold": 6,
+            "polling-timer": 20,
+            "polling-verification-timer": 21
+          }
+        ]
+      },
+      "eec": {
+        "eec-profile": [
+          {
+            "id": "EEC_DSCP_1",
+            "eec-dscp": {
+              "default-ipv4-eec-name": "pccwg_bronze",
+              "default-ipv4-color": "yellow",
+              "ipv4-dscp": [
+                {
+                  "dscp-value": 0,
+                  "discard-value": false,
+                  "eec-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 8,
+                  "discard-value": false,
+                  "eec-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 10,
+                  "discard-value": false,
+                  "eec-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 12,
+                  "discard-value": false,
+                  "eec-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 14,
+                  "discard-value": false,
+                  "eec-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 16,
+                  "discard-value": false,
+                  "eec-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 18,
+                  "discard-value": false,
+                  "eec-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 20,
+                  "discard-value": false,
+                  "eec-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 22,
+                  "discard-value": false,
+                  "eec-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 24,
+                  "discard-value": false,
+                  "eec-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 26,
+                  "discard-value": false,
+                  "eec-name": "pccwg_silver",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 28,
+                  "discard-value": false,
+                  "eec-name": "pccwg_silver",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 30,
+                  "discard-value": false,
+                  "eec-name": "pccwg_silver",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 32,
+                  "discard-value": false,
+                  "eec-name": "pccwg_silverplus",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 34,
+                  "discard-value": false,
+                  "eec-name": "pccwg_silverplus",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 36,
+                  "discard-value": false,
+                  "eec-name": "pccwg_silverplus",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 38,
+                  "discard-value": false,
+                  "eec-name": "pccwg_silverplus",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 40,
+                  "discard-value": false,
+                  "eec-name": "pccwg_gold",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 46,
+                  "discard-value": false,
+                  "eec-name": "pccwg_gold",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 48,
+                  "discard-value": false,
+                  "eec-name": "pccwg_gold",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 56,
+                  "discard-value": false,
+                  "eec-name": "pccwg_gold",
+                  "color": "green"
+                }
+              ]
+            }
+          },
+          {
+            "id": "EEC_DSCP_2",
+            "eec-dscp": {
+              "default-ipv4-eec-name": "pccwg_bronze",
+              "default-ipv4-color": "yellow",
+              "ipv4-dscp": [
+                {
+                  "dscp-value": 0,
+                  "discard-value": false,
+                  "eec-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 8,
+                  "discard-value": false,
+                  "eec-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 10,
+                  "discard-value": false,
+                  "eec-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 12,
+                  "discard-value": false,
+                  "eec-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 14,
+                  "discard-value": false,
+                  "eec-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 16,
+                  "discard-value": false,
+                  "eec-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 18,
+                  "discard-value": false,
+                  "eec-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 20,
+                  "discard-value": false,
+                  "eec-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 22,
+                  "discard-value": false,
+                  "eec-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 24,
+                  "discard-value": false,
+                  "eec-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 26,
+                  "discard-value": false,
+                  "eec-name": "pccwg_silver",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 28,
+                  "discard-value": false,
+                  "eec-name": "pccwg_silver",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 30,
+                  "discard-value": false,
+                  "eec-name": "pccwg_silver",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 32,
+                  "discard-value": false,
+                  "eec-name": "pccwg_silverplus",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 34,
+                  "discard-value": false,
+                  "eec-name": "pccwg_silverplus",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 36,
+                  "discard-value": false,
+                  "eec-name": "pccwg_silverplus",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 38,
+                  "discard-value": false,
+                  "eec-name": "pccwg_gold",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 40,
+                  "discard-value": false,
+                  "eec-name": "pccwg_gold",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 46,
+                  "discard-value": false,
+                  "eec-name": "pccwg_gold",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 48,
+                  "discard-value": false,
+                  "eec-name": "pccwg_gold",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 56,
+                  "discard-value": false,
+                  "eec-name": "pccwg_gold",
+                  "color": "green"
+                }
+              ]
+            }
+          },
+          {
+            "id": "EEC_PCP_1",
+            "eec-pcp": {
+              "default-pcp-eec-name": "pccwg_bronze",
+              "default-pcp-color": "yellow",
+              "pcp": [
+                {
+                  "pcp-value": 0,
+                  "eec-name": "pccwg_bronze",
+                  "color": "yellow"
+                },
+                {
+                  "pcp-value": 3,
+                  "eec-name": "pccwg_silver",
+                  "color": "green"
+                },
+                {
+                  "pcp-value": 4,
+                  "eec-name": "pccwg_silverplus",
+                  "color": "green"
+                },
+                {
+                  "pcp-value": 5,
+                  "eec-name": "pccwg_gold",
+                  "color": "yellow"
+                },
+                {
+                  "pcp-value": 6,
+                  "eec-name": "pccwg_bronze",
+                  "color": "yellow"
+                },
+                {
+                  "pcp-value": 7,
+                  "eec-name": "pccwg_bronze",
+                  "color": "yellow"
+                }
+              ]
+            }
+          },
+          {
+            "id": "EEC_PCP_2",
+            "eec-pcp": {
+              "default-pcp-eec-name": "pccwg_bronze",
+              "default-pcp-color": "yellow",
+              "pcp": [
+                {
+                  "pcp-value": 0,
+                  "eec-name": "pccwg_bronze",
+                  "color": "yellow"
+                },
+                {
+                  "pcp-value": 3,
+                  "eec-name": "pccwg_silver",
+                  "color": "green"
+                },
+                {
+                  "pcp-value": 4,
+                  "eec-name": "pccwg_silverplus",
+                  "color": "green"
+                },
+                {
+                  "pcp-value": 5,
+                  "eec-name": "pccwg_gold",
+                  "color": "yellow"
+                },
+                {
+                  "pcp-value": 6,
+                  "eec-name": "pccwg_gold",
+                  "color": "yellow"
+                },
+                {
+                  "pcp-value": 7,
+                  "eec-name": "pccwg_gold",
+                  "color": "yellow"
+                }
+              ]
+            }
+          },
+          {
+            "id": "MEF103_Table23",
+            "eec-dscp": {
+              "default-ipv4-eec-name": "Freshman",
+              "default-ipv4-color": "green",
+              "default-ipv6-eec-name": "Freshman",
+              "default-ipv6-color": "green",
+              "ipv4-dscp": [
+                {
+                  "dscp-value": 8,
+                  "discard-value": false,
+                  "eec-name": "Senior",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 10,
+                  "discard-value": false,
+                  "eec-name": "Senior",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 11,
+                  "discard-value": false,
+                  "eec-name": "Sophomore",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 12,
+                  "discard-value": false,
+                  "eec-name": "Senior",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 37,
+                  "discard-value": false,
+                  "eec-name": "Sophomore",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 45,
+                  "discard-value": false,
+                  "eec-name": "Sophomore",
+                  "color": "green"
+                }
+              ],
+              "ipv6-dscp": [
+                {
+                  "dscp-value": 11,
+                  "discard-value": false,
+                  "eec-name": "Sophomore",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 37,
+                  "discard-value": false,
+                  "eec-name": "Sophomore",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 38,
+                  "discard-value": false,
+                  "eec-name": "Junior",
+                  "color": "yellow"
+                },
+                {
+                  "dscp-value": 45,
+                  "discard-value": false,
+                  "eec-name": "Sophomore",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 63,
+                  "discard-value": false,
+                  "eec-name": "Junior",
+                  "color": "yellow"
+                }
+              ]
+            }
+          },
+          {
+            "id": "MEF62_ApdxA",
+            "eec-pcp": {
+              "default-pcp-eec-name": "EEC-Neon",
+              "default-pcp-color": "green",
+              "pcp": [
+                {
+                  "pcp-value": 1,
+                  "eec-name": "EEC-Neon",
+                  "color": "yellow"
+                },
+                {
+                  "pcp-value": 3,
+                  "eec-name": "EEC-Argon",
+                  "color": "green"
+                },
+                {
+                  "pcp-value": 5,
+                  "eec-name": "EEC-Krypton",
+                  "color": "green"
+                }
+              ]
+            }
+          }
+        ]
+      },
+      "cos": {
+        "cos-profile": [
+          {
+            "id": "AcmePCP",
+            "cos-pcp": {
+              "default-pcp-cos-name": "Argon",
+              "default-pcp-color": "green",
+              "pcp": [
+                {
+                  "pcp-value": 0,
+                  "discard-value": true,
+                  "color": "yellow"
+                },
+                {
+                  "pcp-value": 1,
+                  "cos-name": "Neon",
+                  "color": "yellow"
+                },
+                {
+                  "pcp-value": 2,
+                  "discard-value": true,
+                  "color": "yellow"
+                },
+                {
+                  "pcp-value": 3,
+                  "cos-name": "Argon",
+                  "color": "green"
+                },
+                {
+                  "pcp-value": 4,
+                  "discard-value": true,
+                  "color": "green"
+                },
+                {
+                  "pcp-value": 5,
+                  "cos-name": "Krypton",
+                  "color": "green"
+                },
+                {
+                  "pcp-value": 6,
+                  "discard-value": true,
+                  "color": "green"
+                },
+                {
+                  "pcp-value": 7,
+                  "discard-value": true,
+                  "color": "green"
+                }
+              ]
+            }
+          },
+          {
+            "id": "COS_DSCP_1",
+            "cos-dscp": {
+              "default-ipv4-cos-name": "pccwg_bronze",
+              "default-ipv4-color": "yellow",
+              "ipv4-dscp": [
+                {
+                  "dscp-value": 0,
+                  "discard-value": false,
+                  "cos-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 8,
+                  "discard-value": false,
+                  "cos-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 10,
+                  "discard-value": false,
+                  "cos-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 12,
+                  "discard-value": false,
+                  "cos-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 14,
+                  "discard-value": false,
+                  "cos-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 16,
+                  "discard-value": false,
+                  "cos-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 18,
+                  "discard-value": false,
+                  "cos-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 20,
+                  "discard-value": false,
+                  "cos-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 22,
+                  "discard-value": false,
+                  "cos-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 24,
+                  "discard-value": false,
+                  "cos-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 26,
+                  "discard-value": false,
+                  "cos-name": "pccwg_silver",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 28,
+                  "discard-value": false,
+                  "cos-name": "pccwg_silver",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 30,
+                  "discard-value": false,
+                  "cos-name": "pccwg_silver",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 32,
+                  "discard-value": false,
+                  "cos-name": "pccwg_silverplus",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 34,
+                  "discard-value": false,
+                  "cos-name": "pccwg_silverplus",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 36,
+                  "discard-value": false,
+                  "cos-name": "pccwg_silverplus",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 38,
+                  "discard-value": false,
+                  "cos-name": "pccwg_silverplus",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 40,
+                  "discard-value": false,
+                  "cos-name": "pccwg_gold",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 46,
+                  "discard-value": false,
+                  "cos-name": "pccwg_gold",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 48,
+                  "discard-value": false,
+                  "cos-name": "pccwg_gold",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 56,
+                  "discard-value": false,
+                  "cos-name": "pccwg_gold",
+                  "color": "green"
+                }
+              ]
+            }
+          },
+          {
+            "id": "COS_DSCP_2",
+            "cos-dscp": {
+              "default-ipv4-cos-name": "pccwg_bronze",
+              "default-ipv4-color": "yellow",
+              "ipv4-dscp": [
+                {
+                  "dscp-value": 0,
+                  "discard-value": false,
+                  "cos-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 8,
+                  "discard-value": false,
+                  "cos-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 10,
+                  "discard-value": false,
+                  "cos-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 12,
+                  "discard-value": false,
+                  "cos-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 14,
+                  "discard-value": false,
+                  "cos-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 16,
+                  "discard-value": false,
+                  "cos-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 18,
+                  "discard-value": false,
+                  "cos-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 20,
+                  "discard-value": false,
+                  "cos-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 22,
+                  "discard-value": false,
+                  "cos-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 24,
+                  "discard-value": false,
+                  "cos-name": "pccwg_bronze",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 26,
+                  "discard-value": false,
+                  "cos-name": "pccwg_silver",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 28,
+                  "discard-value": false,
+                  "cos-name": "pccwg_silver",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 30,
+                  "discard-value": false,
+                  "cos-name": "pccwg_silver",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 32,
+                  "discard-value": false,
+                  "cos-name": "pccwg_silverplus",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 34,
+                  "discard-value": false,
+                  "cos-name": "pccwg_silverplus",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 36,
+                  "discard-value": false,
+                  "cos-name": "pccwg_silverplus",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 38,
+                  "discard-value": false,
+                  "cos-name": "pccwg_silverplus",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 40,
+                  "discard-value": false,
+                  "cos-name": "pccwg_gold",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 46,
+                  "discard-value": false,
+                  "cos-name": "pccwg_gold",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 48,
+                  "discard-value": false,
+                  "cos-name": "pccwg_gold",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 56,
+                  "discard-value": false,
+                  "cos-name": "pccwg_gold",
+                  "color": "green"
+                }
+              ]
+            }
+          },
+          {
+            "id": "COS_PCP_1",
+            "cos-pcp": {
+              "default-pcp-cos-name": "pccwg_bronze",
+              "default-pcp-color": "yellow",
+              "pcp": [
+                {
+                  "pcp-value": 0,
+                  "cos-name": "pccwg_bronze",
+                  "color": "yellow"
+                },
+                {
+                  "pcp-value": 3,
+                  "cos-name": "pccwg_silver",
+                  "color": "green"
+                },
+                {
+                  "pcp-value": 4,
+                  "cos-name": "pccwg_silverplus",
+                  "color": "green"
+                },
+                {
+                  "pcp-value": 5,
+                  "cos-name": "pccwg_gold",
+                  "color": "yellow"
+                },
+                {
+                  "pcp-value": 6,
+                  "cos-name": "pccwg_bronze",
+                  "color": "yellow"
+                },
+                {
+                  "pcp-value": 7,
+                  "cos-name": "pccwg_bronze",
+                  "color": "yellow"
+                }
+              ]
+            }
+          },
+          {
+            "id": "COS_PCP_2",
+            "cos-pcp": {
+              "default-pcp-cos-name": "pccwg_bronze",
+              "default-pcp-color": "yellow",
+              "pcp": [
+                {
+                  "pcp-value": 0,
+                  "cos-name": "pccwg_bronze",
+                  "color": "yellow"
+                },
+                {
+                  "pcp-value": 3,
+                  "cos-name": "pccwg_silver",
+                  "color": "green"
+                },
+                {
+                  "pcp-value": 4,
+                  "cos-name": "pccwg_silverplus",
+                  "color": "green"
+                },
+                {
+                  "pcp-value": 5,
+                  "cos-name": "pccwg_gold",
+                  "color": "yellow"
+                },
+                {
+                  "pcp-value": 6,
+                  "cos-name": "pccwg_gold",
+                  "color": "yellow"
+                },
+                {
+                  "pcp-value": 7,
+                  "cos-name": "pccwg_gold",
+                  "color": "yellow"
+                }
+              ]
+            }
+          },
+          {
+            "id": "MEF103_Figure25_BWP1",
+            "cos-pcp": {
+              "pcp": [
+                {
+                  "pcp-value": 0
+                },
+                {
+                  "pcp-value": 1
+                },
+                {
+                  "pcp-value": 2
+                },
+                {
+                  "pcp-value": 3
+                }
+              ]
+            }
+          },
+          {
+            "id": "MEF103_Figure25_BWP2",
+            "cos-pcp": {
+              "pcp": [
+                {
+                  "pcp-value": 4
+                },
+                {
+                  "pcp-value": 5
+                }
+              ]
+            }
+          },
+          {
+            "id": "MEF103_Figure25_BWP3",
+            "cos-pcp": {
+              "pcp": [
+                {
+                  "pcp-value": 6
+                },
+                {
+                  "pcp-value": 7
+                }
+              ]
+            }
+          },
+          {
+            "id": "MEF103_Table13",
+            "cos-pcp": {
+              "default-pcp-cos-name": "Gold",
+              "default-pcp-color": "green",
+              "pcp": [
+                {
+                  "pcp-value": 0,
+                  "cos-name": "Silver",
+                  "color": "green"
+                },
+                {
+                  "pcp-value": 1,
+                  "discard-value": true,
+                  "cos-name": "Discard"
+                },
+                {
+                  "pcp-value": 2,
+                  "discard-value": true,
+                  "cos-name": "Discard"
+                },
+                {
+                  "pcp-value": 3,
+                  "cos-name": "Silver",
+                  "color": "yellow"
+                },
+                {
+                  "pcp-value": 4,
+                  "cos-name": "Gold",
+                  "color": "green"
+                },
+                {
+                  "pcp-value": 5,
+                  "cos-name": "Gold",
+                  "color": "green"
+                },
+                {
+                  "pcp-value": 6,
+                  "cos-name": "Gold",
+                  "color": "green"
+                },
+                {
+                  "pcp-value": 7,
+                  "cos-name": "Gold",
+                  "color": "green"
+                }
+              ]
+            }
+          },
+          {
+            "id": "MEF103_Table14",
+            "cos-pcp": {
+              "default-pcp-cos-name": "Gold",
+              "default-pcp-color": "green",
+              "pcp": [
+                {
+                  "pcp-value": 0,
+                  "cos-name": "Gold",
+                  "color": "yellow"
+                },
+                {
+                  "pcp-value": 1,
+                  "cos-name": "Gold",
+                  "color": "yellow"
+                },
+                {
+                  "pcp-value": 2,
+                  "cos-name": "Gold",
+                  "color": "yellow"
+                },
+                {
+                  "pcp-value": 3,
+                  "cos-name": "Gold",
+                  "color": "green"
+                },
+                {
+                  "pcp-value": 4,
+                  "cos-name": "Gold",
+                  "color": "green"
+                },
+                {
+                  "pcp-value": 5,
+                  "cos-name": "Gold",
+                  "color": "green"
+                },
+                {
+                  "pcp-value": 6,
+                  "cos-name": "Gold",
+                  "color": "green"
+                },
+                {
+                  "pcp-value": 7,
+                  "cos-name": "Platinum",
+                  "color": "green"
+                }
+              ]
+            }
+          },
+          {
+            "id": "MEF103_Table23",
+            "cos-dscp": {
+              "default-ipv4-cos-name": "L",
+              "default-ipv4-color": "yellow",
+              "default-ipv6-cos-name": "Freshman",
+              "default-ipv6-color": "yellow",
+              "ipv4-dscp": [
+                {
+                  "dscp-value": 8,
+                  "discard-value": false,
+                  "cos-name": "Senior",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 10,
+                  "discard-value": false,
+                  "cos-name": "Senior",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 11,
+                  "discard-value": false,
+                  "cos-name": "Sophomore",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 12,
+                  "discard-value": false,
+                  "cos-name": "Senior",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 37,
+                  "discard-value": false,
+                  "cos-name": "Sophomore",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 45,
+                  "discard-value": false,
+                  "cos-name": "Sophomore",
+                  "color": "green"
+                }
+              ],
+              "ipv6-dscp": [
+                {
+                  "dscp-value": 11,
+                  "discard-value": false,
+                  "cos-name": "Sophomore",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 37,
+                  "discard-value": false,
+                  "cos-name": "Sophomore",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 38,
+                  "discard-value": false,
+                  "cos-name": "Freshman",
+                  "color": "yellow"
+                },
+                {
+                  "dscp-value": 45,
+                  "discard-value": false,
+                  "cos-name": "Sophomore",
+                  "color": "green"
+                },
+                {
+                  "dscp-value": 63,
+                  "discard-value": false,
+                  "cos-name": "Freshman",
+                  "color": "yellow"
+                }
+              ]
+            }
+          },
+          {
+            "id": "MEF213",
+            "cos-pcp": {
+              "default-pcp-cos-name": "L",
+              "default-pcp-color": "green",
+              "pcp": [
+                {
+                  "pcp-value": 3,
+                  "cos-name": "M"
+                }
+              ]
+            }
+          },
+          {
+            "id": "MEF231",
+            "cos-pcp": {
+              "pcp": [
+                {
+                  "pcp-value": 7,
+                  "cos-name": "H"
+                }
+              ]
+            }
+          },
+          {
+            "id": "MEF62_ApdxA_CoS",
+            "cos-evc": {
+              "default-evc-cos-name": "Krypton",
+              "default-evc-color": "green"
+            }
+          }
+        ]
+      }
+    }
+  }
+}

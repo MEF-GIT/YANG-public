@@ -1,0 +1,4 @@
+source ../mef/init_MEF_Tests_Minimal.txt
+
+! Use this command for remote ssh 
+! ssh -p 2024 admin@96.86.165.79 "source /home/datavision/test/Cisco_Tail-f_NSO_example/mef/init_MEF_Tests_Minimal.txt"

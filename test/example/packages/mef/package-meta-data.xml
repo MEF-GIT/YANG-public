@@ -1,0 +1,20 @@
+<ncs-package xmlns="http://tail-f.com/ns/ncs-packages">
+  <name>mef</name>
+  <package-version>1.0</package-version>
+  <description>MEF test of a resource facing service - RFS</description>
+  <ncs-min-version>3.0</ncs-min-version>
+
+  <!-- It's possible to add more components to the -->
+  <!-- same package, multiple services, data providers etc -->
+  <component>
+    <name>mef</name>
+    <callback>
+      <java-class-name>com.example.mef.mefRFS</java-class-name>
+    </callback>
+  </component>
+  <component>
+    <name>interface-status</name>
+    <callback>
+      <java-class-name>com.example.mef.MefInterfaceStatus</java-class-name>
+    </callback>
+  </component></ncs-package>
