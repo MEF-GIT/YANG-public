@@ -50,8 +50,7 @@ module mef-legato-global {
     description
       "Initial Version.";
     reference
-      "EVC Ethernet Services Definitions YANG Modules 
-       (MEF XX), TBD";
+      "Legato - Services YANG SCA (MEF XX)";
   }
 
   revision 2016-04-17 {

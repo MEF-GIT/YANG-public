@@ -45,24 +45,9 @@ module mef-legato-services {
     description
       "Initial Version.";
     reference
-      "EVC Ethernet Services Definitions YANG Modules 
-       (MEF XX), TBD";
+      "Legato - Services YANG SCA (MEF XX)";
   }
-  revision 2016-07-01 {
-    description
-      "Updated to better align with MEF 7.3 and
-       MEF Common Information Model attributes";
-    reference
-      "EVC Ethernet Services Definitions YANG Modules 
-       (MEF XX), TBD";
-  }
-  revision 2015-05-26 {
-    description
-      "Formal Project Review Draft 1.";
-    reference 
-      "EVC Ethernet Services Definitions YANG Modules (MEF XX), TBD";
-  }
-
+  
   container mef-services {
     description
       "Container for all MEF Services (including configuration 
