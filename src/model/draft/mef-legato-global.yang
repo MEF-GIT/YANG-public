@@ -628,7 +628,7 @@ module mef-legato-global {
               description
                 "The Protocol Identifier is the protocol specific value 
                  associated with the protocol and take the form of a
-                 uint16 value such as 0x08100 or 0x88a8.";
+                 uint16 value such as 0x8100 or 0x88a8.";
             }
             choice simple-or-subtypes {
               case subtypes-option {

@@ -112,7 +112,34 @@
             <name>neon</name>
           </cos-name>
         </cos-names-profiles>
+        <l2cp-cos-map-profiles>
+          <profile>
+            <id>EPL1_L2CP</id>
+            <map-entries>
+              <map-entry>
+                <protocol>Ethertype</protocol>
+                <protocol-id>0x8100</protocol-id>
+                <simple-or-subtypes>
+                  <simple-option>
+                    <cos-name>krypton</cos-name>
+                  </simple-option>
+                </simple-or-subtypes>
+              </map-entry>
+            </map-entries>
+          </profile>
+        </l2cp-cos-map-profiles>
         <cos-profiles>
+          <profile>
+            <id>EPL1L2CPCoS</id>
+            <l2cp-cos-id>??</l2cp-cos-id>
+            <cos-id>
+              <evc-or-pcp-or-dscp>
+                <cos-evc>
+                  <evc-cos-name>??</evc-cos-name>
+                </cos-evc>
+              </evc-or-pcp-or-dscp>
+            </cos-id>
+          </profile>
           <profile>
             <id>EPL1CoS</id>
             <cos-id>
