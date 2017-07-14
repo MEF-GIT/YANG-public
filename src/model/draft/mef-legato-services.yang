@@ -45,24 +45,9 @@ module mef-legato-services {
     description
       "Initial Version.";
     reference
-      "EVC Ethernet Services Definitions YANG Modules 
-       (MEF XX), TBD";
+      "Legato - Services YANG SCA (MEF XX)";
   }
-  revision 2016-07-01 {
-    description
-      "Updated to better align with MEF 7.3 and
-       MEF Common Information Model attributes";
-    reference
-      "EVC Ethernet Services Definitions YANG Modules 
-       (MEF XX), TBD";
-  }
-  revision 2015-05-26 {
-    description
-      "Formal Project Review Draft 1.";
-    reference 
-      "EVC Ethernet Services Definitions YANG Modules (MEF XX), TBD";
-  }
-
+  
   container mef-services {
     description
       "Container for all MEF Services (including configuration 
@@ -747,12 +732,6 @@ module mef-legato-services {
                   "[MEF10.3] Section 9.10, [MEF7.3] Section 7.5";
                 leaf-list ce-vlan {
                   type mef-types:vlan-id-type;
-                  min-elements "1";
-                  description
-                    "The leaf-list of CE-VLAN IDs that map to this EVC End Point - 
-                     that is, that map to this EVC at the associated UNI.";
-                  reference 
-                    "[MEF10.3] Section 9.10. [MEF7.3] Section 7.5.";
 
                   must "not(current()/../../ce-vlans/ce-vlan[2]) or " +
                        "count(../../../../end-points/end-point/ce-vlans/" +
@@ -783,6 +762,13 @@ module mef-legato-services {
                        ID to at most one EVC.";
                     reference "[MEF10.3] [R76].";
                   }
+
+                  min-elements "1";
+                  description
+                    "The leaf-list of CE-VLAN IDs that map to this EVC End Point - 
+                     that is, that map to this EVC at the associated UNI.";
+                  reference 
+                    "[MEF10.3] Section 9.10. [MEF7.3] Section 7.5.";
                 }
               }
 
@@ -798,6 +784,28 @@ module mef-legato-services {
                     reference
                       "[MEF10.3] Section 10.6, [MEF7.3] Section 7.4, 7.11";
                     list bwp-flow-per-cos {
+                      must "(../../../../svc-type = 'other') or " +
+                           "not(envelope-id) or " +
+                           "count(/mef-interfaces:mef-interfaces/" +
+                           "mef-interfaces:carrier-ethernet/" +
+                           "mef-interfaces:subscriber-interfaces/" +
+                           "mef-interfaces:uni[" +
+                           "mef-interfaces:uni-id = " +
+                           "current()/../../uni-id]/" +
+                           "mef-interfaces:ingress-envelopes/" +
+                           "mef-interfaces:envelope[" +
+                           "mef-interfaces:id = " +
+                           "current()/envelope-id]/" +
+                           "mef-interfaces:bwp-flows/" +
+                           "mef-interfaces:bwp-flow) >= 2" {
+                        error-message
+                          "For a MEF 6.2 service, every Envelope must
+                           contain at least 2 Bandwidth Profile Flows.";
+                        description
+                          "For a MEF 6.2 service, every Envelope must
+                           contain at least 2 Bandwidth Profile Flows.";
+                        reference "[MEF6.2] [R5]";
+                      }
                       key "cos-name";
                       description
                         "The list of Ingress Bandwidth Profile Flows per
@@ -868,20 +876,17 @@ module mef-legato-services {
                                     "mef-interfaces:envelope/" +
                                     "mef-interfaces:id";
                             }
-                            mandatory true;
-                            description
-                              "Reference to an ingress Bandwidth Profile
-                               Envelope on the UNI.";
+                            
                             must "/mef-interfaces:mef-interfaces/" +
-                                  "mef-interfaces:carrier-ethernet/" +
-                                  "mef-interfaces:subscriber-interfaces/" +
-                                  "mef-interfaces:uni[" +
-                                     "mef-interfaces:uni-id = " +
-                                     "current()/../../../uni-id]/" +
-                                  "mef-interfaces:ingress-envelopes/" +
-                                  "mef-interfaces:envelope[" +
-                                    "mef-interfaces:id = current()]/" +
-                                  "mef-interfaces:type = 'per-cos-or-eec'" {
+                                 "mef-interfaces:carrier-ethernet/" +
+                                 "mef-interfaces:subscriber-interfaces/" +
+                                 "mef-interfaces:uni[" +
+                                 "mef-interfaces:uni-id = " +
+                                 "current()/../../../uni-id]/" +
+                                 "mef-interfaces:ingress-envelopes/" +
+                                 "mef-interfaces:envelope[" +
+                                 "mef-interfaces:id = current()]/" +
+                                 "mef-interfaces:type = 'per-cos-or-eec'" {
                               error-message
                                 "A bandwidth profile per CoS Name can
                                  only refer to an Envelope with type
@@ -892,15 +897,15 @@ module mef-legato-services {
                                  per-cos-or-eec.  This is used to
                                  enforce MEF 10.3 R135.";
                               reference "[MEF10.3] [R135]";
-                            }
+                            }  
                             must "count(/mef-services/carrier-ethernet/" +
-                                        "subscriber-services/evc/end-points/" +
-                                        "end-point[uni-id = " +
-                                           "current()/../../../uni-id]/" +
-                                        "ingress-bwp-per-cos/" +
-                                        "bwp-flow-per-cos" +
-                                          "[envelope-id = current()]" +
-                                          "[rank = current()/../rank]) = 1" {
+                                 "subscriber-services/evc/end-points/" +
+                                 "end-point[uni-id = " +
+                                 "current()/../../../uni-id]/" +
+                                 "ingress-bwp-per-cos/" +
+                                 "bwp-flow-per-cos" +
+                                 "[envelope-id = current()]" +
+                                 "[rank = current()/../rank]) = 1" {
                               error-message
                                 "For an ingress envelope with type
                                  per-cos-or-eec, there must be exactly
@@ -915,8 +920,12 @@ module mef-legato-services {
                                  Points on this UNI, that refer to the
                                  same envelope and rank as this one is
                                  one, i.e. this one is the only one.";
-                               reference "[MEF10.3] [R134]";
+                              reference "[MEF10.3] [R134]";
                             }
+                            mandatory true;
+                            description
+                              "Reference to an ingress Bandwidth Profile
+                               Envelope on the UNI.";
                           }
 
                           leaf rank {
@@ -941,29 +950,6 @@ module mef-legato-services {
                                the given Envelope.";
                           }
                         }
-                      }
-
-                      must "(../../../../svc-type = 'other') or " +
-                           "not(envelope-id) or " +
-                           "count(/mef-interfaces:mef-interfaces/" +
-                                  "mef-interfaces:carrier-ethernet/" +
-                                  "mef-interfaces:subscriber-interfaces/" +
-                                  "mef-interfaces:uni[" +
-                                    "mef-interfaces:uni-id = " +
-                                      "current()/../../uni-id]/" +
-                                  "mef-interfaces:ingress-envelopes/" +
-                                  "mef-interfaces:envelope[" +
-                                    "mef-interfaces:id = " +
-                                      "current()/envelope-id]/" +
-                                  "mef-interfaces:bwp-flows/" +
-                                  "mef-interfaces:bwp-flow) >= 2" {
-                        error-message
-                          "For a MEF 6.2 service, every Envelope must
-                           contain at least 2 Bandwidth Profile Flows.";
-                        description
-                          "For a MEF 6.2 service, every Envelope must
-                           contain at least 2 Bandwidth Profile Flows.";
-                        reference "[MEF6.2] [R5]";
                       }
                     }
                   }
@@ -1026,20 +1012,17 @@ module mef-legato-services {
                                   "mef-interfaces:envelope/" +
                                   "mef-interfaces:id";
                           }
-                          mandatory true;
-                          description
-                            "Reference to an ingress Bandwidth Profile
-                             Envelope on the UNI.";
+                          
                           must "/mef-interfaces:mef-interfaces/" +
-                                "mef-interfaces:carrier-ethernet/" +
-                                "mef-interfaces:subscriber-interfaces/" +
-                                  "mef-interfaces:uni[" +
-                                     "mef-interfaces:uni-id = " +
-                                     "current()/../../uni-id]/" +
-                                "mef-interfaces:ingress-envelopes/" +
-                                "mef-interfaces:envelope[" +
-                                  "mef-interfaces:id = current()]/" +
-                                "mef-interfaces:type = 'per-evc'" {
+                               "mef-interfaces:carrier-ethernet/" +
+                               "mef-interfaces:subscriber-interfaces/" +
+                                 "mef-interfaces:uni[" +
+                                    "mef-interfaces:uni-id = " +
+                                    "current()/../../uni-id]/" +
+                               "mef-interfaces:ingress-envelopes/" +
+                               "mef-interfaces:envelope[" +
+                                 "mef-interfaces:id = current()]/" +
+                               "mef-interfaces:type = 'per-evc'" {
                             error-message
                               "A bandwidth profile per EVC can
                                only refer to an Envelope with type
@@ -1052,14 +1035,14 @@ module mef-legato-services {
                             reference "[MEF10.3] [R135]";
                           }
                           must "count(/mef-services/carrier-ethernet/" +
-                                      "subscriber-services/evc/end-points/" +
-                                      "end-point" +
-                                        "[uni-id = " +
-                                           "current()/../../uni-id]" +
-                                        "[ingress-bwp-per-evc/" +
-                                         "envelope-id = current()]" +
-                                        "[ingress-bwp-per-evc/" +
-                                         "rank = current()/../rank]) = 1" {
+                               "subscriber-services/evc/end-points/" +
+                               "end-point" +
+                               "[uni-id = " +
+                               "current()/../../uni-id]" +
+                               "[ingress-bwp-per-evc/" +
+                               "envelope-id = current()]" +
+                               "[ingress-bwp-per-evc/" +
+                               "rank = current()/../rank]) = 1" {
                             error-message
                               "For an ingress envelope with type
                                per-evc, there must be exactly
@@ -1076,6 +1059,10 @@ module mef-legato-services {
                                one, i.e. this one is the only one.";
                             reference "[MEF10.3] [R134]";
                           }
+                          mandatory true;
+                          description
+                            "Reference to an ingress Bandwidth Profile
+                             Envelope on the UNI.";
                         }
                         leaf rank {
                           type leafref {
@@ -1116,6 +1103,28 @@ module mef-legato-services {
                     reference
                       "[MEF10.3] Section 10.8, [MEF7.3] Section 7.4, 7.12";
                     list bwp-flow-per-eec {
+                      must "(../../../../svc-type = 'other') or " +
+                           "not(envelope-id) or " +
+                           "count(/mef-interfaces:mef-interfaces/" +
+                           "mef-interfaces:carrier-ethernet/" +
+                           "mef-interfaces:subscriber-interfaces/" +
+                           "mef-interfaces:uni[" +
+                           "mef-interfaces:uni-id = " +
+                           "current()/../../uni-id]/" +
+                           "mef-interfaces:egress-envelopes/" +
+                           "mef-interfaces:envelope[" + 
+                           "mef-interfaces:id = " +
+                           "current()/envelope-id]/" +
+                           "mef-interfaces:bwp-flows/" +
+                           "mef-interfaces:bwp-flow) >= 2" {
+                        error-message
+                          "For a MEF 6.2 service, every Envelope must
+                           contain at least 2 Bandwidth Profile Flows.";
+                        description
+                          "For a MEF 6.2 service, every Envelope must
+                           contain at least 2 Bandwidth Profile Flows.";
+                        reference "[MEF6.2] [R5]";
+                      }
                       key "eec-name";
                       description
                         "The list of Egress Bandwidth Profile Flows per
@@ -1184,10 +1193,7 @@ module mef-legato-services {
                                     "mef-interfaces:envelope/" +
                                     "mef-interfaces:id";
                             }
-                            mandatory true;
-                            description
-                              "Reference to an egress Bandwidth Profile
-                               Envelope on the UNI.";
+
                             must "/mef-interfaces:mef-interfaces/" +
                                   "mef-interfaces:carrier-ethernet/" +
                                   "mef-interfaces:subscriber-interfaces/" +
@@ -1233,6 +1239,10 @@ module mef-legato-services {
                                  one, i.e. this one is the only one.";
                               reference "[MEF10.3] [R134]";
                             }
+                            mandatory true;
+                            description
+                              "Reference to an egress Bandwidth Profile
+                               Envelope on the UNI.";
                           }
                           leaf rank {
                             type leafref {
@@ -1256,29 +1266,6 @@ module mef-legato-services {
                                the given Envelope.";
                           }
                         }
-                      }
-
-                      must "(../../../../svc-type = 'other') or " +
-                           "not(envelope-id) or " +
-                           "count(/mef-interfaces:mef-interfaces/" +
-                                  "mef-interfaces:carrier-ethernet/" +
-                                  "mef-interfaces:subscriber-interfaces/" +
-                                  "mef-interfaces:uni[" +
-                                    "mef-interfaces:uni-id = " +
-                                      "current()/../../uni-id]/" +
-                                  "mef-interfaces:egress-envelopes/" +
-                                  "mef-interfaces:envelope[" +
-                                    "mef-interfaces:id = " +
-                                      "current()/envelope-id]/" +
-                                  "mef-interfaces:bwp-flows/" +
-                                  "mef-interfaces:bwp-flow) >= 2" {
-                        error-message
-                          "For a MEF 6.2 service, every Envelope must
-                           contain at least 2 Bandwidth Profile Flows.";
-                        description
-                          "For a MEF 6.2 service, every Envelope must
-                           contain at least 2 Bandwidth Profile Flows.";
-                        reference "[MEF6.2] [R5]";
                       }
                     }
                   }
@@ -1341,10 +1328,7 @@ module mef-legato-services {
                                   "mef-interfaces:envelope/" +
                                   "mef-interfaces:id";
                           }
-                          mandatory true;
-                          description
-                            "Reference to an egress Bandwidth Profile
-                             Envelope on the UNI.";
+
                           must "/mef-interfaces:mef-interfaces/" +
                                 "mef-interfaces:carrier-ethernet/" +
                                 "mef-interfaces:subscriber-interfaces/" +
@@ -1391,6 +1375,10 @@ module mef-legato-services {
                                one, i.e. this one is the only one.";
                             reference "[MEF10.3] [R134]";
                           }
+                          mandatory true;
+                          description
+                            "Reference to an egress Bandwidth Profile
+                             Envelope on the UNI.";
                         }
 
                         leaf rank {

@@ -81,13 +81,12 @@ clean:
 	rm -f packages/cisco-iosxr
 	rm -rf bin
 	rm -rf ncs-cdb/*.xml
-	-rm -rf ../../src/model/draft/mef-*\@*.yang
-	-rm -rf ../../src/model/draft/common/mef-*\@*.yang
+	-rm ../../src/model/draft/mef-*\@$(shell date +%Y-%m-%d).yang
+	-rm ../../src/model/draft/common/mef-*\@$(shell date +%Y-%m-%d).yang
 	-rm -rf ../../src/model/draft/mef-*-tree.txt
 	-rm -rf ../../src/model/draft/mef-*.json
 	-rm -rf packages/mef/src/yang/mef-legato-*.yang
 	-rm -rf packages/mef/src/yang/mef-types.yang
-	-rm -rf Legato-YANG-Machinefiles*
 
 .PHONY: package-archives
 package-archives: all
@@ -121,11 +120,3 @@ test:
 settest:
 	test/run_tests.sh --set-out
 
-zip:
-	mkdir -p Legato-YANG-Machinefiles
-	-rm -rf  Legato-YANG-Machinefiles.zip
-	cp ../../src/model/draft/mef-*\@$(shell date +%Y-%m-%d)*.* Legato-YANG-Machinefiles
-	cp ../../src/model/draft/common/mef-*\@$(shell date +%Y-%m-%d).yang Legato-YANG-Machinefiles
-	cp appendix-a-1.xml Legato-YANG-Machinefiles
-	zip -r Legato-YANG-Machinefiles.zip Legato-YANG-Machinefiles
-        
