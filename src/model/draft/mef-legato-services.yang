@@ -81,7 +81,7 @@ module mef-legato-services {
               leaf name {
                 type leafref {
                   path "/mef-global:mef-global/mef-global:cos-names-profiles/" +
-                        "mef-global:cos-name/mef-global:name";
+                        "mef-global:profile/mef-global:name";
                 }
                 description
                   "CoS Name.";

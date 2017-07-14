@@ -53,23 +53,6 @@ module mef-legato-global {
       "Legato - Services YANG SCA (MEF XX)";
   }
 
-  revision 2016-04-17 {
-    description
-      "First set of updates to better align with
-       MEF Common Information Model names";
-    reference
-      "EVC Ethernet Services Definitions YANG Modules 
-       (MEF XX), TBD";
-  }
-
-  revision 2015-05-26 {
-    description
-      "Formal Project Review Draft 1.";
-    reference
-      "EVC Ethernet Services Definitions YANG Modules 
-       (MEF XX), TBD";
-  }
-
   container mef-global {
     description
       "MEF Global Profiles. This container includes 
@@ -115,7 +98,7 @@ module mef-legato-global {
                by Class of Service Names";
             leaf cos-name {
               type leafref {
-                path "/mef-global:mef-global/cos-names-profiles/cos-name/name";
+                path "/mef-global:mef-global/cos-names-profiles/profile/name";
               }
               description
                 "CoS Name Identifier.";
@@ -467,7 +450,7 @@ module mef-legato-global {
     container cos-names-profiles {
       description
         "Container for global list of CoS names.";
-      list cos-name {
+      list profile {
         key "name";
         description        
           "List of all CoS Names used in any EVC.  This list is 
@@ -628,7 +611,10 @@ module mef-legato-global {
               description
                 "The Protocol Identifier is the protocol specific value 
                  associated with the protocol and take the form of a
-                 uint16 value such as 0x8100 or 0x88a8.";
+                 uint16 value such as 0x8100 or 0x88a8.
+            	  
+                 A value of 0xFFFF implies a wildcard, and means that
+                 all values will be peered.";
             }
             choice simple-or-subtypes {
               case subtypes-option {
@@ -643,7 +629,7 @@ module mef-legato-global {
                     }
                     leaf cos-name {
                       type leafref {
-                        path "/mef-global:mef-global/cos-names-profiles/cos-name/name";
+                        path "/mef-global:mef-global/cos-names-profiles/profile/name";
                       }
                       mandatory "true";
                       description
@@ -661,7 +647,7 @@ module mef-legato-global {
               case simple-option {
                 leaf cos-name {
                   type leafref {
-                    path "/mef-global:mef-global/cos-names-profiles/cos-name/name";
+                    path "/mef-global:mef-global/cos-names-profiles/profile/name";
                   }
                   description
                     "The Class of Service (CoS) Name to which L2CP frame with the 
@@ -717,7 +703,11 @@ module mef-legato-global {
               description
                 "The Protocol Identifier is the protocol specific value 
                  associated with the protocol and take the form of a
-                 uint16 value such as 0x08100 or 0x88a8.";
+                 uint16 value such as 0x08100 or 0x88a8.
+            	  
+                 A value of 0xFFFF implies a wildcard, and means that
+                 all frames with this values will get the same class of
+                 service.";
             }
             choice simple-or-subtypes {
               case subtypes-option {
@@ -818,7 +808,10 @@ module mef-legato-global {
               type uint16;
               description
                 "The Protocol Identifier is the protocol specific value associated 
-                 with the protocol in a uint16 format such as 0x8100.";
+                 with the protocol in a uint16 format such as 0x8100.
+            	  
+                 A value of 0xFFFF implies a wildcard, and means that
+                 all values will be peered.";
             }
             leaf-list subtype {
               type uint8;
@@ -1044,7 +1037,7 @@ module mef-legato-global {
                 "[MEF10.3] Section 10.2.1.1.";
               leaf evc-cos-name {
                 type leafref {
-                  path "/mef-global:mef-global/cos-names-profiles/cos-name/name";
+                  path "/mef-global:mef-global/cos-names-profiles/profile/name";
                 }
                 mandatory "true";
                 description
@@ -1066,7 +1059,7 @@ module mef-legato-global {
                 "[MEF10.3] Section 10.2.1.2.";
               leaf default-pcp-cos-name {
                 type leafref {
-                	path "/mef-global:mef-global/cos-names-profiles/cos-name/name";
+                	path "/mef-global:mef-global/cos-names-profiles/profile/name";
                 }
                 description
                   "Default value for CoS Name for PCP when it has not been explicitly configured.";
@@ -1098,7 +1091,7 @@ module mef-legato-global {
                   case cos-name {
                     leaf cos-name {
                       type leafref {
-                    	path "/mef-global:mef-global/cos-names-profiles/cos-name/name";
+                    	path "/mef-global:mef-global/cos-names-profiles/profile/name";
                       }
                       description
                         "If selected, this attribute identifies the name of a 
@@ -1122,7 +1115,7 @@ module mef-legato-global {
                 "[MEF10.3] Section 10.2.1.3.";
               leaf default-ipv4-cos-name {
                 type leafref {
-                  path "/mef-global:mef-global/cos-names-profiles/cos-name/name";
+                  path "/mef-global:mef-global/cos-names-profiles/profile/name";
                 }
                 description
                   "Default CoS Name for Data Service Frames carrying IPv4 
@@ -1131,7 +1124,7 @@ module mef-legato-global {
               }
               leaf default-ipv6-cos-name {
                 type leafref {
-                  path "/mef-global:mef-global/cos-names-profiles/cos-name/name";
+                  path "/mef-global:mef-global/cos-names-profiles/profile/name";
                 }
                 description
                   "Default CoS Name for Data Service Frames carrying IPv6 
@@ -1166,7 +1159,7 @@ module mef-legato-global {
                   case cos-name {
                     leaf cos-name {
                       type leafref {
-                    	path "/mef-global:mef-global/cos-names-profiles/cos-name/name";
+                    	path "/mef-global:mef-global/cos-names-profiles/profile/name";
                       }
                       description
                         "If selected this attribute identifies the name of a 
@@ -1203,7 +1196,7 @@ module mef-legato-global {
                   case cos-name {
                     leaf cos-name {
                       type leafref {
-                    	path "/mef-global:mef-global/cos-names-profiles/cos-name/name";
+                    	path "/mef-global:mef-global/cos-names-profiles/profile/name";
                       }
                       description
                         "If selected this attribute identifies the name of a 
