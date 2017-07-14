@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0">
+  <capabilities>
+    <capability>urn:ietf:params:netconf:base:1.0</capability>
+  </capabilities>
+</hello>
+]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1">
+ <edit-config>
+    <target>
+      <running/>
+    </target>
+    <config>
+    <mef-global xmlns="urn:mef:xid:mef-global"
+      xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">
+      <profiles>
+      <bwp-flows-parameter-set>
+        <bwp-flow-parameter-set>
+          <bwp-flow-parameter-set-id>chicago-bwp-evc</bwp-flow-parameter-set-id>
+          <cir>300000</cir>
+        </bwp-flow-parameter-set>
+        </bwp-flows-parameter-set>
+        <l2cp-cos>
+          <profile>
+            <id>MEF103_Table3PlusCoS</id>
+            <cos-maps>
+              <cos-map>
+                <protocol>ethertype</protocol>
+                <protocol-id>88:08</protocol-id>
+                <subtypes>
+                  <subtype>
+                    <subtype-id>00:02</subtype-id>
+                    <cos-name>Krypton</cos-name>
+                  </subtype>
+                </subtypes>
+              </cos-map>
+            </cos-maps>
+          </profile>
+        </l2cp-cos>
+        <l2cp-peering nc:operation="replace">
+          <profile>
+            <id>L2CP_Peering_Profile1</id>
+            <peering-maps>
+              <peering-map>
+                <dest-mac-addr>01:80:c2:00:00:03</dest-mac-addr>
+                <protocol>llc</protocol>
+                <protocol-id>42</protocol-id>
+              </peering-map>
+              <peering-map>
+                <dest-mac-addr>01:80:c2:00:00:07</dest-mac-addr>
+                <protocol>ethertype</protocol>
+                <protocol-id>88:ef</protocol-id>
+              </peering-map>
+              <peering-map>
+                <dest-mac-addr>01:80:c2:00:00:0e</dest-mac-addr>
+                <protocol>llc</protocol>
+                <protocol-id>43</protocol-id>
+              </peering-map>
+            </peering-maps>
+           </profile>
+        </l2cp-peering>
+        <cos>
+          <cos-profile>
+            <id>MEF103_Table14</id>
+            <cos-pcp>
+              <pcp  nc:operation="delete">
+                <pcp-value>5</pcp-value>
+              </pcp>
+            </cos-pcp>
+          </cos-profile>
+        </cos>  
+      </profiles>
+    </mef-global>
+   </config>
+  </edit-config>
+  </rpc>
+]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2">
+  <close-session/>
+</rpc>

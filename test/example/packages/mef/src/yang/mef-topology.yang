@@ -1,0 +1,268 @@
+module mef-topology {
+  namespace "urn:mef:yang:mef-topology";
+  prefix mef-topology;
+  
+  import tailf-common {
+	  prefix tailf;
+  }
+  import mef-types {
+	prefix mef-types;
+  }
+  organization "MEF Forum";
+  contact
+    "Web URL: http://mef.net/ \\
+     E-mail:  namespace@mef.net \\
+     Postal:  Metro Ethernet Forum \\
+              6033 W. Century Boulevard, Suite 1107 \\
+              Los Angeles, CA 90045 \\
+              U.S.A. \\
+     Phone:   +1 310-642-2800 \\
+     Fax:     +1 310-642-2808";
+  description
+    "This module models the NMS level view of the network devices, 
+     their physical interfaces, and the network topology. 
+     When the NMS discovers a network device,it is to pull the 
+     device configuration and operational status as expected for 
+     an NMS. Once the NMS has a network device's configuration, 
+     it creates the /mef-topology/devices/device{} entry and 
+     populates the list of physical interfaces. The Peers entries 
+     are populated as configuration to reflect physical cabling 
+     interconnections.Hints could be detected from LLDP Neighbor 
+     information[802.1AB].
+     
+     Reference Overview:
+     A number of base documents have been used to create 
+     the MEF Topology YANG Module. The following are the 
+     abbreviations for the baseline documents:
+     [RFC 6991] refers to IETF RFC 6991 'Common YANG Data Types',
+     2013-07-15  
+     [RFC 6643] refers to IETF RFC 6643 'Translation of Structure
+     of Management Information
+     Version 2 (SMIv2) MIB Modules to YANG Modules', 2011-11-25  
+     [802.1AB] refers to 'Station and Media Access Control
+     Connectivity Discovery', IEEE 802.1AB-2009, September 2009
+     [802.1q] refers to IEEE 802.1Q-2011 'IEEE Standard for Local
+     and metropolitan area networks --Media Access Control (MAC)
+     Bridges and Virtual Bridged Local Area Networks, August 2011
+     [802-2001] refers to 'IEEE Standard for Local and Metropolitan
+     Area Networks: Overview and Architecture', IEEE 802-2001,
+     February 2002
+     [MEF10.3] refers to MEF 10.3 
+     'Ethernet Services Attributes Phase 3', October 2013
+     [MEF6.2] refers to MEF 6.2 
+     'EVC Ethernet Services Defintions Phase 3', August 2014
+     [MEF40] refers to MEF 40 
+     'UNI and EVC Definition of Managed Objects', April 2013
+     [MEF45] refers to MEF 45 'Multi-CEN L2CP', August 2014
+     [MEF7.2] refers to MEF 7.2 
+     'Carrier Ethernet Management Information Model', April 2013
+     [MEF7.3] refers to MEF 7.3 
+     'Carrier Ethernet Management Information Model',
+     Working Draft #1 2015
+     [RFC 2737] refers to IETF RFC 2737 'Entity MIB (Version 2)',
+     December 1999
+     [RFC 2863] refers to IETF RFC 2863 'The Interfaces Group MIB',
+     June 2000
+     [RFC 3419] refers to IETF RFC 3419 
+     'Textual Conventions for Transport Addresses', December 2002
+     [Y.1731] refers to ITU-T Y.1731 
+     'OAM functions and mechanisms for Ethernet based networks',
+     July 2011
+     [Q.840.1] refers to ITU-T Q.840.1 
+     'Requirements and analysis for NMS-EMS management interface
+     of Ethernet over Transport and Metro Ethernet 
+     Network(EoT/MEN)' March 2007";
+
+  revision 2017-01-10 {
+ 	    description
+ 	      "Updated to address CFC1 Review Comments.";
+ 	    reference
+ 	      "EVC Ethernet Services Definitions YANG Modules 
+ 	       (MEF XX), TBD";
+  }
+  revision 2016-07-01 {
+     description
+        "Updated to better align with MEF 7.3 and
+         MEF Common Information Model attributes";
+     reference 
+    	 "EVC Ethernet Services Definitions YANG Modules
+          (MEF XX), TBD";
+  }
+
+  revision 2016-04-01 {
+   	description
+   	      "Added Operational Status output for interface maximum data rate";
+   	reference "EVC Ethernet Services Definitions YANG Modules
+	      (MEF XX), TBD";
+  }  
+     
+  revision 2015-05-26 {
+    description
+      "Formal Project Review Draft 1.";
+    reference "EVC Ethernet Services Definitions YANG Modules " +
+    		"(MEF XX), TBD";
+  }     
+     
+  container mef-topology {
+    description
+      "MEF Topology";
+    
+    tailf:action self-test {
+        tailf:actionpoint mef-topology-self-test-point;
+        input {
+        }
+        output {
+          leaf success {
+            type boolean;
+            mandatory true;
+        	description
+          	  "Did the action succeed?";
+          }
+          leaf message {
+            type string;
+            mandatory true;
+        	description
+          	  "Any message associated with the output.";
+          }
+        }
+      }    
+    
+    container devices {
+      description
+        "Network Devices in the CEN.";
+      list device {
+        key "dev-id";
+        description
+          "Network Device List.";
+        leaf dev-id {
+            type mef-types:identifier45;
+            description
+              "Device Identifier.";
+          }
+        
+        container interfaces {
+          description
+            "Physical Ports/Interfaces associated with this " +
+            "Network Device.";
+          list interface {
+            key "phy";
+            description
+              "External Interface for the Network Device.";
+            leaf phy {
+              type mef-types:identifier45;
+              description
+                "The Phy Name for the Physical Port.";
+            }
+            leaf ieee8023-phy {
+              type identityref {
+                base mef-types:ieee-8023-interface-type;
+              }
+              description
+                "The Physical Layer for each physical link " +
+                "implementing the UNI MUST be one of the PHYs " +
+                "listed in IEEE Std 802.3–2012 but excluding " +
+                "1000BASE-PX-D and 1000BASE-PX-U.";
+              reference "[MEF10.3] Section 9.2 [R60].";
+            }
+            container status {
+              config false;
+              tailf:callpoint interface-status;
+              leaf speed {
+                type uint64;
+                units "bits-per-second";
+                default 0;
+                description
+                "The operational status value indicating " +
+                "the maximum data rate of the interface in " +
+                "bits-per-second.";               
+              }
+              description
+                "The operational status information available " +
+                "for this interface.";
+            }
+          }
+        }
+        leaf role {
+          type device-role;
+          default "ce";
+          description
+            "The role of this device in the network.";
+        }
+      }
+    }
+    container connections {
+      description
+        "Physical Network Connections";    	
+      list connection {
+        key "name";
+        leaf name {
+          type mef-types:identifier45;
+          description
+            "The name of the connection.";
+        }
+        container endpoint-1 {
+          description
+            "End Point 1";
+          leaf device {
+      	    type leafref {
+      	        path "../../../../devices/device/dev-id";
+      	    }
+            description
+              "Hostname or IP Address for the End Point's Device.";
+          }
+          leaf interface {
+        	type leafref {
+          	  path "../../../../devices/device[dev-id = " +
+          	  		"current()/../device]/interfaces/interface/phy";
+          	}
+            description
+              "The Phy Name for the End Point's Physical Port.";
+          }
+        }
+        container endpoint-2 {
+          description
+            "End Point 2";
+          leaf device {
+          	type leafref {
+          	  path "../../../../devices/device/dev-id";
+          	}
+            description
+              "Hostname or IP Address for the End Point's Device.";
+          }
+          leaf interface {
+            type leafref {
+              path "../../../../devices/device[dev-id = " +
+              		"current()/../device]/interfaces/interface/phy";
+            }
+            description
+              "The Phy Name for the End Point's Physical Port.";
+          }
+        }
+        description
+          "List of physical network connections";
+      }
+    }
+  }
+  typedef device-role {
+		type enumeration {
+		  enum "ce" {
+		    description "Customer Edge(CE) Access Device";
+		  }
+		  enum "pe" {
+		    description "Provider Edge(PE) (AKA Aggregation) Router";
+		  }
+		  enum "p" {
+		    description "Provider Core Router";
+		  }
+		  enum "cgn" {
+			    description "Customer Gateway Natting Router";
+			  }
+		  enum "switch" {
+			    description "Customer Endpoint to PE Switch";
+			  }
+		}
+	    description
+		    "The role of the device. Is it a Customer Edge, " +
+	        "Aggregation Router or a Core Router";
+	  }
+}

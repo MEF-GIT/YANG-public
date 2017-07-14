@@ -269,11 +269,30 @@ module mef-cfm {
 
   typedef fault-alarm-defect-bits-type {
     type bits {
-      bit remote-rdi;
-      bit remote-mac-error;
-      bit remote-invalid-ccm;
-      bit invalid-ccm;
-      bit cross-connect-ccm;
+      bit remote-rdi {
+          description "Indicates the aggregate health of the remote MEPs.";
+      }
+      bit remote-mac-error {
+          description "Indicates that one or more of the remote MEPs is
+                       reporting a failure in its Port Status TLV or
+                       Interface Status TLV.";
+
+      }
+      bit remote-invalid-ccm {
+          description "Indicates that at least one of the Remote MEP
+                       state machines is not receiving valid CCMs
+                       from its remote MEP.";
+      }
+      bit invalid-ccm {
+          description "Indicates that one or more invalid CCMs has been
+                       received and that 3.5 times that CCMs transmission
+                       interval has not yet expired.";
+      }
+      bit cross-connect-ccm {
+          description "Indicates that one or more cross connect CCMs has been
+                       received and that 3.5 times of at least one of those
+                       CCMs transmission interval has not yet expired.";
+      }
     }
 
     description

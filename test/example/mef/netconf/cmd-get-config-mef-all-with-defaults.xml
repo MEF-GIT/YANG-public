@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:mef-topology="urn:mef:xid:mef-topology" xmlns:mef-global="urn:mef:xid:mef-global" xmlns:mef-interfaces="urn:mef:xid:mef-interfaces" xmlns:mef-services="urn:mef:xid:mef-services">
+  <capabilities>
+    <capability>urn:ietf:params:netconf:base:1.0</capability>
+  </capabilities>
+</hello>
+]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1">
+  <get-config>
+          <source>
+           <running/>
+         </source>
+          <filter>
+          	<mef-global xmlns="urn:mef:xid:mef-global"></mef-global>
+          	<mef-topology xmlns="urn:mef:xid:mef-topology"></mef-topology>
+          	<mef-interfaces xmlns="urn:mef:xid:mef-interfaces"></mef-interfaces>
+          	<mef-services xmlns="urn:mef:xid:mef-services"></mef-services>
+          </filter>
+            <with-defaults xmlns="urn:ietf:params:xml:ns:yang:ietf-netconf-with-defaults">report-all-tagged</with-defaults>          
+  </get-config>
+  </rpc>
+]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2">
+  <close-session/>
+</rpc>

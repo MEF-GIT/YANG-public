@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<hello xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:mef-topology="urn:mef:xid:mef-topology" xmlns:mef-global="urn:mef:xid:mef-global" xmlns:mef-interfaces="urn:mef:xid:mef-interfaces" xmlns:mef-services="urn:mef:xid:mef-services">
+  <capabilities>
+    <capability>urn:ietf:params:netconf:base:1.0</capability>
+  </capabilities>
+</hello>
+]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="1" with-defaults="true">
+  <get-config>
+          <source>
+           <running/>
+         </source>
+          <filter xmlns="urn:mef:xid:mef-global">
+          	<mef-global></mef-global>
+          </filter>
+    </get-config>
+  </rpc>
+]]>]]>
+<?xml version="1.0" encoding="UTF-8"?>
+<rpc xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="2">
+  <close-session/>
+</rpc>
