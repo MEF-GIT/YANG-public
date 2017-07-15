@@ -49,17 +49,18 @@ $(NETSIM_DIR): packages/cisco-ios packages/cisco-iosxr packages/juniper-junos
 	ncs-netsim ncs-xml-init > ncs-cdb/netsim_devices_init.xml
 
 models: ../../src/model/draft/mef-legato-global.yang ../../src/model/draft/mef-legato-services.yang ../../src/model/draft/mef-legato-interfaces.yang
-	sed -e"s/YYYY-MM-DD/$(shell date +%Y-%m-%d)/" ../../src/model/draft/mef-legato-global.yang  > ../../src/model/draft/mef-legato-global\@$(shell date +%Y-%m-%d).yang
-	sed -e"s/YYYY-MM-DD/$(shell date +%Y-%m-%d)/" ../../src/model/draft/mef-legato-services.yang  > ../../src/model/draft/mef-legato-services\@$(shell date +%Y-%m-%d).yang
-	sed -e"s/YYYY-MM-DD/$(shell date +%Y-%m-%d)/" ../../src/model/draft/mef-legato-interfaces.yang  > ../../src/model/draft/mef-legato-interfaces\@$(shell date +%Y-%m-%d).yang
-	sed -e"s/YYYY-MM-DD/$(shell date +%Y-%m-%d)/" ../../src/model/draft/common/mef-types.yang  > ../../src/model/draft/common/mef-types\@$(shell date +%Y-%m-%d).yang
+	mkdir -p ../../build
+	sed -e"s/YYYY-MM-DD/$(shell date +%Y-%m-%d)/" ../../src/model/draft/mef-legato-global.yang  > ../../build/mef-legato-global\@$(shell date +%Y-%m-%d).yang
+	sed -e"s/YYYY-MM-DD/$(shell date +%Y-%m-%d)/" ../../src/model/draft/mef-legato-services.yang  > ../../build/mef-legato-services\@$(shell date +%Y-%m-%d).yang
+	sed -e"s/YYYY-MM-DD/$(shell date +%Y-%m-%d)/" ../../src/model/draft/mef-legato-interfaces.yang  > ../../build/mef-legato-interfaces\@$(shell date +%Y-%m-%d).yang
+	sed -e"s/YYYY-MM-DD/$(shell date +%Y-%m-%d)/" ../../src/model/draft/common/mef-types.yang  > ../../build/mef-types\@$(shell date +%Y-%m-%d).yang
 
-	ln -fs ../../../../../../src/model/draft/mef-legato-global\@$(shell date +%Y-%m-%d).yang packages/mef/src/yang/mef-legato-global.yang
-	ln -fs ../../../../../../src/model/draft/mef-legato-services\@$(shell date +%Y-%m-%d).yang packages/mef/src/yang/mef-legato-services.yang
-	ln -fs ../../../../../../src/model/draft/mef-legato-interfaces\@$(shell date +%Y-%m-%d).yang packages/mef/src/yang/mef-legato-interfaces.yang
-	ln -fs ../../../../../../src/model/draft/common/mef-types\@$(shell date +%Y-%m-%d).yang packages/mef/src/yang/mef-types.yang
+	ln -fs ../../../../../../build/mef-legato-global\@$(shell date +%Y-%m-%d).yang packages/mef/src/yang/mef-legato-global.yang
+	ln -fs ../../../../../../build/mef-legato-services\@$(shell date +%Y-%m-%d).yang packages/mef/src/yang/mef-legato-services.yang
+	ln -fs ../../../../../../build/mef-legato-interfaces\@$(shell date +%Y-%m-%d).yang packages/mef/src/yang/mef-legato-interfaces.yang
+	ln -fs ../../../../../../build/mef-types\@$(shell date +%Y-%m-%d).yang packages/mef/src/yang/mef-types.yang
 
-	cd ../../src/model/draft; ./gen-trees.sh;
+	cd ../../build; ./gen-trees.sh;
 
 #Patch to add ios-stats
 packages/cisco-ios:
@@ -81,13 +82,12 @@ clean:
 	rm -f packages/cisco-iosxr
 	rm -rf bin
 	rm -rf ncs-cdb/*.xml
-	-rm -rf ../../src/model/draft/mef-*\@*.yang
-	-rm -rf ../../src/model/draft/common/mef-*\@*.yang
-	-rm -rf ../../src/model/draft/mef-*-tree.txt
-	-rm -rf ../../src/model/draft/mef-*.json
+	-rm -rf ../../build/mef-*\@*.yang
+	-rm -rf ../../build/mef-*-tree.txt
+	-rm -rf ../../build/mef-*.json
 	-rm -rf packages/mef/src/yang/mef-legato-*.yang
 	-rm -rf packages/mef/src/yang/mef-types.yang
-	-rm -rf Legato-YANG-Machinefiles*
+	-rm -rf ../../build/Legato-YANG-Machinefiles*
 
 .PHONY: package-archives
 package-archives: all
@@ -122,10 +122,9 @@ settest:
 	test/run_tests.sh --set-out
 
 zip:
-	mkdir -p Legato-YANG-Machinefiles
-	-rm -rf  Legato-YANG-Machinefiles.zip
-	cp ../../src/model/draft/mef-*\@$(shell date +%Y-%m-%d)*.* Legato-YANG-Machinefiles
-	cp ../../src/model/draft/common/mef-*\@$(shell date +%Y-%m-%d).yang Legato-YANG-Machinefiles
-	cp appendix-a-1.xml Legato-YANG-Machinefiles
-	zip -r Legato-YANG-Machinefiles.zip Legato-YANG-Machinefiles
+	mkdir -p ../../build/Legato-YANG-Machinefiles
+	-rm -rf  ../../build/Legato-YANG-Machinefiles.zip
+	cp ../../build/mef-*\@$(shell date +%Y-%m-%d)*.* ../../build/Legato-YANG-Machinefiles
+	cp appendix-a-1.xml ../../build/Legato-YANG-Machinefiles
+	zip -r ../../build/Legato-YANG-Machinefiles.zip ../../build/Legato-YANG-Machinefiles
         
