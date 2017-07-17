@@ -70,7 +70,7 @@ module mef-legato-global {
         description
           "List of SLS profiles.";
         leaf id {
-          type mef-types:sls-type;
+          type string;
           description
             "The SLS profile ID identifies a specific 
         	  Service Level Specification offered by a 

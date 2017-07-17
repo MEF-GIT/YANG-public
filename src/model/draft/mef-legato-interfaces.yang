@@ -29,8 +29,8 @@ module mef-legato-interfaces {
      abbreviations for the baseline documents:
      [MEF10.3] refers to MEF 10.3 
      'Ethernet Services Attributes Phase 3', October 2013
-	 [MEF10.3.2] refers to MEF 10.3.2
-	 'Amendment to MEF 10.3 - UNI Resiliency Enhancement',
+     [MEF10.3.2] refers to MEF 10.3.2
+     'Amendment to MEF 10.3 - UNI Resiliency Enhancement',
      [MEF6.2] refers to MEF 6.2 
      'EVC Ethernet Services Defintions Phase 3', August 2014
      [MEF45] refers to MEF 45 'Multi-CEN L2CP', August 2014
@@ -601,33 +601,33 @@ module mef-legato-interfaces {
 
           leaf link-aggregation {
             type mef-types:interface-resiliency-type;
+            must ". == 'none' or " +
+                 "count(../physical-layers/links) > 1" {
+              error-message
+                "If there is one link, link-aggregation must be 'none'.";
+              description
+                "If there is one link, link-aggregation must be 'none'.";
+              reference "[MEF10.3.2] [A1-R1].";
+            }
             must ". != 'none' or " +
-                 "count(../physical-layers/links) = 1" {
+                 "count(../physical-layers/links) == 1" {
               error-message
-                "If link-aggregation is 'none', number-of-links must be 1.";
+                "If there are two (or more) links, link-aggregation
+                 must not be 'none'.";
               description
-                "If link-aggregation is 'none', number-of-links must be 1.";
-              reference "[MEF 10.3] [R64].";
+                "If there are two (or more) links, link-aggregation
+                 must not be 'none'.";
+              reference "[MEF10.3.2] [A1-R2].";
             }
-            must ". != 'dual-link-aggregation' or " +
-                 "count(../physical-layers/links) = 2" {
+            must ". == 'all-active' or . == 'other' or " +
+                 "count(../physical-layers/links) <= 2" {
               error-message
-                "If link-aggregation is 'dual-link-aggregation',
-                 number-of-links must be 2.";
+                "If there are three (or more) links, link-aggregation
+                 must be 'all-active' or 'other'.";
               description
-                "If link-aggregation is 'dual-link-aggregation',
-                 number-of-links must be 2.";
-              reference "[MEF 10.3] [R65].";
-            }
-            must ". != 'other' or " +
-                 "count(../physical-layers/links) > 2" {
-              error-message
-                "If link-aggregation is 'other',
-                 number-of-links must be 3 or greater.";
-              description
-                "If link-aggregation is 'other', number-of-links
-                 must be 3 or greater.";
-              reference "[MEF 10.3] [R67].";
+                "If there are three (or more) links, link-aggregation
+                 must be 'all-active' or 'other'.";
+              reference "[MEF10.3.2] [A1-R3].";
             }
             default "none";
             description
