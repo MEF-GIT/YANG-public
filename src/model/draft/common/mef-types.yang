@@ -319,7 +319,8 @@ module mef-types {
        (RFC 854 ASCII 0x00-0x7f) but not contain the characters 0x00
        through 0x1f. It does not accept the <delete> character (0x7f)
        despite the current MEF specification not disallowing it.";
-    reference "[MEF10.3] [R8], [R9], [R58], [R59], [R138], [R140]; [RFC2579]";
+    reference "[MEF10.3] [R8], [R9], [R58], [R59], [R138], [R140];
+               [RFC2579]";
   }
 
   typedef identifier90 {
@@ -337,23 +338,9 @@ module mef-types {
     reference "[RFC2579]";
   }
 
-  typedef identifier255 {
+  typedef identifier1024 {
     type string {
-      length "min..255";
-      pattern "[ -~]+";
-    }
-    description
-      "This type definition accepts any visible ASCII character plus the
-       <space> character. The string must be an RFC 2579 Display String
-       (RFC 854 ASCII 0x00-0x7f) but not contain the characters 0x00
-       through 0x1f. It does not accept the <delete> character (0x7f)
-       despite the current MEF specification not disallowing it.";
-    reference "[RFC2579]";
-  }
-
-  typedef identifier1023 {
-    type string {
-      length "min..1023";
+      length "min..1024";
       pattern "[ -~]+";
     }
     description
@@ -573,7 +560,8 @@ module mef-types {
       }
     }
     description
-      "This attribute describes the color mode (CM) to be applied as \"color-blind mode\" or \"color-aware mode\".";
+      "This attribute describes the color mode (CM) to be applied as
+       \"color-blind mode\" or \"color-aware mode\".";
     reference "[MEF10.3] Section 12.1";
   }
 
@@ -625,11 +613,13 @@ module mef-types {
       }
       enum "other" {
         description
-          "Other: Not using LLC nor Ethertype to specify the Protocol ID.";
+          "Other: Not using LLC nor Ethertype to specify the Protocol
+           ID.";
       }
     }
     description
-      "The Peering Protocol Identifier is one of Ethertype, LLC, or Other.";
+      "The Peering Protocol Identifier is one of Ethertype, LLC, or
+       Other.";
     reference "[MEF45] Section 7.";
   }
 
