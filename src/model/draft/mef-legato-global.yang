@@ -44,7 +44,7 @@ module mef-legato-global {
      'EVC Ethernet Services Defintions Phase 3', August 2014
      [MEF45] refers to MEF 45 'Multi-CEN L2CP', August 2014
      [MEF7.3] refers to MEF 7.3
-     'Carrier Ethernet Management Information Model'";
+     'Carrier Ethernet Management Information Model', February 2017";
 
   revision YYYY-MM-DD {
     description
