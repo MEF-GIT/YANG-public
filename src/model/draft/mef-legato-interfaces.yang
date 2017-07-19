@@ -643,7 +643,7 @@ module mef-legato-interfaces {
 
           leaf link-aggregation {
             type mef-types:interface-resiliency-type;
-            must ". == 'none' or " +
+            must ". = 'none' or " +
                  "count(../physical-layers/links) > 1" {
               error-message
                 "If there is one link, link-aggregation must be
@@ -655,7 +655,7 @@ module mef-legato-interfaces {
                 "[MEF10.3.2] [A1-R1].";
             }
             must ". != 'none' or " +
-                 "count(../physical-layers/links) == 1" {
+                 "count(../physical-layers/links) = 1" {
               error-message
                 "If there are two (or more) links, link-aggregation
                  must not be 'none'.";
@@ -665,7 +665,7 @@ module mef-legato-interfaces {
               reference
                 "[MEF10.3.2] [A1-R2].";
             }
-            must ". == 'all-active' or . == 'other' or " +
+            must ". = 'all-active' or . = 'other' or " +
                  "count(../physical-layers/links) <= 2" {
               error-message
                 "If there are three (or more) links, link-aggregation
@@ -725,7 +725,7 @@ module mef-legato-interfaces {
               "[MEF10.3] Section 9.13, [MEF7.3] Section 7.8.";
           }
           leaf default-ce-vlan-id {
-            when "../all-to-one-bundling-enabled == false";
+            when "../all-to-one-bundling-enabled = 'false'";
             type mef-types:vlan-id-type;
             mandatory true;
             description

@@ -111,12 +111,12 @@ module mef-legato-global {
               mandatory true;
               description
                 "The time interval over which loss is measured
-                for the purpose of calculating Availability and
-                related performance metrics.  This is much smaller
-                than the time period over which SLS objectives are
-                evaluated ('T').";
+                 for the purpose of calculating Availability and
+                 related performance metrics.  This is much smaller
+                 than the time period over which SLS objectives are
+                 evaluated ('T').";
               reference
-                 "[MEF10.3] Section 8.8";
+                "[MEF10.3] Section 8.8";
             }
             leaf threshold-c {
               type mef-types:simple-percent;
@@ -126,7 +126,7 @@ module mef-legato-global {
                 "Unavailability frame loss ratio threshold expressed
                  in percentage.";
               reference
-                 "[MEF10.3] Section 8.8";
+                "[MEF10.3] Section 8.8";
             }
             leaf consecutive-interval-n {
               type uint8;
@@ -134,7 +134,7 @@ module mef-legato-global {
               description
                 "Number of consecutive small time intervals to assess.";
               reference
-                 "[MEF10.3] Section 8.8";
+                "[MEF10.3] Section 8.8";
             }
             container pm-entries {
               description
@@ -152,7 +152,7 @@ module mef-legato-global {
                    Performance Metric, but two objectives for the same
                    metric must not be functionally identical.";
                 reference
-                   "[MEF10.3] Section 8.8";
+                  "[MEF10.3] Section 8.8";
                 leaf id {
                   type mef-types:identifier1024;
                   description
@@ -176,7 +176,7 @@ module mef-legato-global {
                         description
                           "Frame Delay Performance Percentile.";
                         reference
-                           "[MEF10.3] Section 8.8.1";
+                          "[MEF10.3] Section 8.8.1";
                       }
                       leaf objective {
                         type uint64;
@@ -185,7 +185,7 @@ module mef-legato-global {
                         description
                           "Frame Delay Performance Objective.";
                         reference
-                           "[MEF10.3] Section 8.8.1";
+                          "[MEF10.3] Section 8.8.1";
                       }
                     }
                   }
@@ -194,7 +194,7 @@ module mef-legato-global {
                       description
                         "One-Way Mean Frame Delay (MFD).";
                       reference
-                         "[MEF10.3] Section 8.8.1.";
+                        "[MEF10.3] Section 8.8.1.";
                       leaf objective {
                         type uint64;
                         units "ms";
@@ -209,7 +209,7 @@ module mef-legato-global {
                       description
                         "One-Way Frame Delay Range (FDR)";
                       reference
-                         "[MEF10.3] Section 8.8.1";
+                        "[MEF10.3] Section 8.8.1";
                       leaf percentile {
                         type mef-types:simple-percent;
                         units "percent";
@@ -217,7 +217,7 @@ module mef-legato-global {
                         description
                           "Frame Delay Range Performance Percentile.";
                         reference
-                           "[MEF10.3] Section 8.8.1";
+                          "[MEF10.3] Section 8.8.1";
                       }
                       leaf objective {
                         type uint64;
@@ -226,7 +226,7 @@ module mef-legato-global {
                         description
                           "Frame Delay Range Performance Objective.";
                         reference
-                           "[MEF10.3] Section 8.8.1";
+                          "[MEF10.3] Section 8.8.1";
                       }
                     }
                   }
@@ -235,7 +235,7 @@ module mef-legato-global {
                       description
                         "One-Way Inter-Frame Delay Variation (IFDV).";
                       reference
-                         "[MEF10.3] Section 8.8.2";
+                        "[MEF10.3] Section 8.8.2";
                       leaf percentile {
                         type mef-types:simple-percent;
                         units "percent";
@@ -244,7 +244,7 @@ module mef-legato-global {
                           "Inter-Frame Delay Variation Performance
                            Percentile.";
                         reference
-                           "[MEF10.3] Section 8.8.2";
+                          "[MEF10.3] Section 8.8.2";
                       }
                       leaf frame-pair-separation {
                         type uint64;
@@ -435,7 +435,7 @@ module mef-legato-global {
                       description
                         "One-Way Group Availability";
                       reference
-                         "[MEF10.3] Section 8.8.6.";
+                        "[MEF10.3] Section 8.8.6.";
                       leaf min-number-of-uni-pair-sets {
                         type uint16;
                         mandatory true;
