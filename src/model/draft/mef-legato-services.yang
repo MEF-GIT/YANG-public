@@ -713,7 +713,7 @@ module mef-legato-services {
                 reference "[MEF10.3] Section 10.10. [MEF7.3] Section 7.5.";
               }
               leaf user-label {
-                type mef-types:identifier1023;
+                type mef-types:identifier1024;
                 description
                   "EVC Per UNI: User Label.";
                 reference "[MEF7.3] Section 7.5.";
@@ -2022,7 +2022,7 @@ module mef-legato-services {
               "[MEF15]. [MEF7.3] Section 7.1.";
           }
           leaf user-label {
-            type mef-types:identifier1023;
+            type mef-types:identifier1024;
             description
               "EVC: User Label.";
             reference 
