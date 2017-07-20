@@ -70,7 +70,7 @@ module mef-legato-global {
         description
           "List of SLS profiles.";
         leaf id {
-          type string;
+          type mef-types:identifier1024;
           description
             "The SLS profile ID identifies an SLS profile
              that can be referenced from one or more specific
