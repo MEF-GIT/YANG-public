@@ -122,18 +122,9 @@ settest:
 	test/run_tests.sh --set-out
 
 zip:
-<<<<<<< HEAD
 	mkdir -p ../../build/Legato-YANG-Machinefiles
 	-rm -rf  ../../build/Legato-YANG-Machinefiles.zip
 	cp ../../build/mef-*\@$(shell date +%Y-%m-%d)*.* ../../build/Legato-YANG-Machinefiles
-	cp appendix-a-1.xml ../../build/Legato-YANG-Machinefiles
+	cp MEF6.2-a1-example.xml ../../build/Legato-YANG-Machinefiles
 	zip -r ../../build/Legato-YANG-Machinefiles.zip ../../build/Legato-YANG-Machinefiles
-=======
-	mkdir -p Legato-YANG-Machinefiles
-	-rm -rf  Legato-YANG-Machinefiles.zip
-	cp ../../src/model/draft/mef-*\@$(shell date +%Y-%m-%d)*.* Legato-YANG-Machinefiles
-	cp ../../src/model/draft/common/mef-*\@$(shell date +%Y-%m-%d).yang Legato-YANG-Machinefiles
-	cp MEF6.2-a1-example.xml Legato-YANG-Machinefiles
-	zip -r Legato-YANG-Machinefiles.zip Legato-YANG-Machinefiles
->>>>>>> refs/remotes/MEF-GIT/master
         
