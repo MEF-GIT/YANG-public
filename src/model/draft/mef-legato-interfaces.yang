@@ -5,7 +5,7 @@ module mef-legato-interfaces {
   import mef-types {
     prefix mef-types;
   }
-  import mef-legato-global {
+  import mef-global {
     prefix mef-global;
   }
 

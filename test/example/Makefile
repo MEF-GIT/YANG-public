@@ -48,13 +48,13 @@ $(NETSIM_DIR): packages/cisco-ios packages/cisco-iosxr packages/juniper-junos
 	cp initial_data/device-icons.xml ncs-cdb
 	ncs-netsim ncs-xml-init > ncs-cdb/netsim_devices_init.xml
 
-models: ../../src/model/draft/mef-legato-global.yang ../../src/model/draft/mef-legato-services.yang ../../src/model/draft/mef-legato-interfaces.yang
-	sed -e"s/YYYY-MM-DD/$(shell date +%Y-%m-%d)/" ../../src/model/draft/mef-legato-global.yang  > ../../src/model/draft/mef-legato-global\@$(shell date +%Y-%m-%d).yang
+models: ../../src/model/draft/mef-global.yang ../../src/model/draft/mef-legato-services.yang ../../src/model/draft/mef-legato-interfaces.yang
+	sed -e"s/YYYY-MM-DD/$(shell date +%Y-%m-%d)/" ../../src/model/draft/mef-global.yang  > ../../src/model/draft/mef-global\@$(shell date +%Y-%m-%d).yang
 	sed -e"s/YYYY-MM-DD/$(shell date +%Y-%m-%d)/" ../../src/model/draft/mef-legato-services.yang  > ../../src/model/draft/mef-legato-services\@$(shell date +%Y-%m-%d).yang
 	sed -e"s/YYYY-MM-DD/$(shell date +%Y-%m-%d)/" ../../src/model/draft/mef-legato-interfaces.yang  > ../../src/model/draft/mef-legato-interfaces\@$(shell date +%Y-%m-%d).yang
 	sed -e"s/YYYY-MM-DD/$(shell date +%Y-%m-%d)/" ../../src/model/draft/common/mef-types.yang  > ../../src/model/draft/common/mef-types\@$(shell date +%Y-%m-%d).yang
 
-	ln -fs ../../../../../../src/model/draft/mef-legato-global\@$(shell date +%Y-%m-%d).yang packages/mef/src/yang/mef-legato-global.yang
+	ln -fs ../../../../../../src/model/draft/mef-global\@$(shell date +%Y-%m-%d).yang packages/mef/src/yang/mef-global.yang
 	ln -fs ../../../../../../src/model/draft/mef-legato-services\@$(shell date +%Y-%m-%d).yang packages/mef/src/yang/mef-legato-services.yang
 	ln -fs ../../../../../../src/model/draft/mef-legato-interfaces\@$(shell date +%Y-%m-%d).yang packages/mef/src/yang/mef-legato-interfaces.yang
 	ln -fs ../../../../../../src/model/draft/common/mef-types\@$(shell date +%Y-%m-%d).yang packages/mef/src/yang/mef-types.yang

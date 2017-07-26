@@ -8,7 +8,7 @@ module mef-legato-services {
   import mef-types {
     prefix mef-types;
   }
-  import mef-legato-global {
+  import mef-global {
     prefix mef-global;
   }
   import mef-legato-interfaces {
