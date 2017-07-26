@@ -1,5 +1,5 @@
-module mef-legato-global {
-  namespace "urn:mef:yang:mef-legato-global";
+module mef-global {
+  namespace "urn:mef:yang:mef-global";
   prefix mef-global;
 
   import ietf-yang-types {

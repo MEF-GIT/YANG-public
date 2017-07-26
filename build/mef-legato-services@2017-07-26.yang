@@ -45,7 +45,7 @@ module mef-legato-services {
       'Composite Performance Metric (CPM) Amendment to MEF 10.3',
       February 2015";
 
-  revision YYYY-MM-DD {
+  revision 2017-07-26 {
     description
       "Initial Version.";
     reference

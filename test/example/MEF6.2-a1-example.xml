@@ -7,7 +7,7 @@
     <test-option>test-then-set</test-option>
     <error-option>rollback-on-error</error-option>
     <config>
-      <mef-global xmlns="urn:mef:yang:mef-legato-global">
+      <mef-global xmlns="urn:mef:yang:mef-global">
         <sls-profiles>
           <profile>
             <id>SLS-EPL1</id>
