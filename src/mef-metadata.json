@@ -42,7 +42,7 @@
                 "revision": "2017-07-15", 
                 "source-file": {
                     "owner": "mjethanandani", 
-                    "path": "build/mef-legato-services@2017-07-15.yang", 
+                    "path": "build/mef-legato-interfaces@2017-07-15.yang", 
                     "repository": "YANG-public"
                 }
             },

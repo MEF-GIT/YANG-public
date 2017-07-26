@@ -1,4 +1,4 @@
-#!/bin/sh -xv
+#!/bin/sh
 
 for i in mef-*\@$(date +%Y-%m-%d).yang
 do
