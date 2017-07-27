@@ -704,6 +704,9 @@ module mef-global {
                 }
               }
             }
+            description
+              "Choice of any (and all) EtherTypes or specify the ones
+               that need to be handled.";
           }
         }
       }
@@ -809,6 +812,9 @@ module mef-global {
                 }
               }
             }
+            description
+              "Choice of any (and all) EtherTypes or specify the ones
+               that need to be handled.";
           }
         }
       }
