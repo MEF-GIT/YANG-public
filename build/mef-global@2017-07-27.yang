@@ -46,7 +46,7 @@ module mef-global {
      [MEF7.3] refers to MEF 7.3
      'Carrier Ethernet Management Information Model', February 2017";
 
-  revision 2017-07-26 {
+  revision 2017-07-27 {
     description
       "Initial Version.";
     reference
@@ -704,6 +704,9 @@ module mef-global {
                 }
               }
             }
+            description
+              "Choice of any (and all) EtherTypes or specify the ones
+               that need to be handled.";
           }
         }
       }
@@ -809,6 +812,9 @@ module mef-global {
                 }
               }
             }
+            description
+              "Choice of any (and all) EtherTypes or specify the ones
+               that need to be handled.";
           }
         }
       }

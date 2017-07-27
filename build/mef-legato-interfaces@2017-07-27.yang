@@ -38,7 +38,7 @@ module mef-legato-interfaces {
      [MEF7.3] refers to MEF 7.3
      'Carrier Ethernet Management Information Model', February 2017";
 
-  revision 2017-07-26 {
+  revision 2017-07-27 {
     description
       "Initial Version.";
     reference

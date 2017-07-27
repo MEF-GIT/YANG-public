@@ -41,7 +41,7 @@ module mef-types {
      [RFC2579] refers to IETF RFC 2579 'Textual Conventions for SMIv2',
      April 1999";
 
-  revision 2017-07-26 {
+  revision 2017-07-27 {
     description
       "Initial Version.";
     reference
