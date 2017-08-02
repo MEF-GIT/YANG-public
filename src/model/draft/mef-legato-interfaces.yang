@@ -204,7 +204,7 @@ module mef-legato-interfaces {
                        "/mef-global:mef-global/" +
                        "mef-global:bwp-flow-parameter-profiles/" +
                        "mef-global:profile[" +
-                       "mef-global:id = current()]/" +
+                       "mef-global:id = current()/parameters]/" +
                        "mef-global:coupling-enabled = 'false'" {
                     error-message
                       "If an Ingress Envelope's Coupling Flag is
@@ -370,7 +370,7 @@ module mef-legato-interfaces {
                        "/mef-global:mef-global/" +
                        "mef-global:bwp-flow-parameter-profiles/" +
                        "mef-global:profile[" +
-                                      "mef-global:id = current()]/" +
+                       "mef-global:id = current()/parameters]/" +
                        "mef-global:coupling-enabled = 'false'" {
                     error-message
                       "If an Egress Envelope's Coupling Flag is Enabled,

@@ -31,7 +31,32 @@ make models
 
 ## History
 
-TODO: Write history
+620027_005_Leagato-YANG-Machinefiles: Submitted for Letter Ballot
+
+### Errata
+
+    index fc42a56..55759b9 100644
+    --- a/src/model/draft/mef-legato-interfaces.yang
+    +++ b/src/model/draft/mef-legato-interfaces.yang
+    @@ -204,7 +204,7 @@ module mef-legato-interfaces {
+                            "/mef-global:mef-global/" +
+                            "mef-global:bwp-flow-parameter-profiles/" +
+                            "mef-global:profile[" +
+    -                       "mef-global:id = current()]/" +
+    +                       "mef-global:id = current()/parameters]/" +
+                            "mef-global:coupling-enabled = 'false'" {
+                         error-message
+                           "If an Ingress Envelope's Coupling Flag is
+    @@ -370,7 +370,7 @@ module mef-legato-interfaces {
+                            "/mef-global:mef-global/" +
+                            "mef-global:bwp-flow-parameter-profiles/" +
+                            "mef-global:profile[" +
+    -                                      "mef-global:id = current()]/" +
+    +                       "mef-global:id = current()/parameters]/" + 
+                            "mef-global:coupling-enabled = 'false'" {
+                         error-message
+                           "If an Egress Envelope's Coupling Flag is Enabled,
+
 
 ## Credits
 
