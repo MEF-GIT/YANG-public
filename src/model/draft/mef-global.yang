@@ -618,10 +618,21 @@ module mef-global {
             "Identifies a specific profile for mapping L2CP protocols to
              CoS names.";
         }
+        leaf cos-name {
+          type leafref {
+            path "/mef-global:mef-global/cos-names-profiles/" +
+                 "profile/name";
+          }
+          mandatory true;
+          description
+            "The Class of Service (CoS) Name to which L2CP frame
+             with the given protocol ID and subtype are mapped.";
+        }
         container map-entries {
           description
             "Layer 2 Control Protocol (L2CP) Classes of Service (CoS).";
           choice any-or-map-entries {
+            mandatory true;
             case any {
               leaf all {
                 type empty;
@@ -670,35 +681,20 @@ module mef-global {
                             "L2CP Subtype for this protocol and protocol
                              ID.";
                         }
-                        leaf cos-name {
-                          type leafref {
-                            path "/mef-global:mef-global/" +
-                                 "cos-names-profiles/profile/name";
-                          }
-                          mandatory true;
-                          description
-                            "The Class of Service (CoS) Name to which L2CP
-                             frames with the given protocol ID and subtype
-                             are mapped.";
-                        }
                         description
                           "List of mapping from subtypes to cos-name for a
                            given protocol and protocol-id.";
                       }
                       description
-                        "Container for list of subtypes configured.";
+                      "Container for list of subtypes configured.";
                     }
                   }
                   case simple-option {
-                    leaf cos-name {
-                      type leafref {
-                        path "/mef-global:mef-global/cos-names-profiles/" +
-                             "profile/name";
-                      }
-                      mandatory true;
+                    leaf simple-option {
+                      type empty;
                       description
-                        "The Class of Service (CoS) Name to which L2CP frame
-                         with the given protocol ID are mapped.";
+                        "The option where the protocol and protocol-id map
+                         directly to a CoS.";
                     }
                   }
                 }
@@ -729,6 +725,14 @@ module mef-global {
           description
             "Identifies a specific profile for mapping L2CP protocols to
              EEC names.";
+        }
+        leaf eec-name {
+          type string;
+          mandatory true;
+          description
+            "The Egress Equivalance Class (EEC) Name to
+             which L2CP frames with the given protocol ID
+             and subtype are mapped.";
         }
         container map-entries {
           description
@@ -784,14 +788,6 @@ module mef-global {
                             "L2CP Subtype for this protocol and protocol
                              ID.";
                         }
-                        leaf eec-name {
-                          type string;
-                          mandatory true;
-                          description
-                            "The Egress Equivalance Class (EEC) Name to
-                             which L2CP frames with the given protocol ID
-                             and subtype are mapped.";
-                        }
                         description
                           "List of mapping from subtypes to EEC names for a
                            given protocol and protocol-id.";
@@ -801,12 +797,12 @@ module mef-global {
                     }
                   }
                   case simple-option {
-                    leaf eec-name {
-                      type string;
-                      mandatory true;
+                    leaf simple-option {
+                      type empty;
                       description
-                        "The EEC Name to which L2CP frames with the
-                         given protocol ID are mapped.";
+                        "The simple case, where there are no subtypes and 
+                         the protocol and protocol-id map directly to an 
+                         EEC Name.";
                     }
                   }
                 }
