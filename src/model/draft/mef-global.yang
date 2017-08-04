@@ -686,7 +686,7 @@ module mef-global {
                            given protocol and protocol-id.";
                       }
                       description
-                      "Container for list of subtypes configured.";
+                        "Container for list of subtypes configured.";
                     }
                   }
                   case simple-option {
