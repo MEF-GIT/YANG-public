@@ -627,8 +627,10 @@ module mef-legato-services {
                                 "mef-global:cos-profiles/" +
                                 "mef-global:profile[" +
                                     "mef-global:id = current()]/" +
-                                "mef-global:l2cp-cos-id]" +
-                                  "[mef-global:cos-name]" +
+                                "mef-global:l2cp-cos-id]/" +
+                                "mef-global:map-entries/" +
+                                "mef-global:map-entry" +
+                                "[mef-global:cos-name]" +
                                   "[not(mef-global:cos-name = " +
                                         "current()/../../../" +
                                         "cos-names/cos-name/" +
@@ -654,7 +656,10 @@ module mef-legato-services {
                                 "mef-global:cos-profiles/" +
                                 "mef-global:profile[" +
                                     "mef-global:id = current()]/" +
-                                "mef-global:l2cp-cos-id]" +
+                                "mef-global:l2cp-cos-id]/" +
+                                "mef-global:map-entries/" +
+                                "mef-global:map-entry[mef-global:subtypes]/" +
+                                "mef-global:subtypes/mef-global:subtype" +
                                   "[not(mef-global:cos-name = " +
                                         "current()/../../../" +
                                         "cos-names/cos-name/" +

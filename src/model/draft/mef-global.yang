@@ -618,91 +618,80 @@ module mef-global {
             "Identifies a specific profile for mapping L2CP protocols to
              CoS names.";
         }
-        leaf cos-name {
-          type leafref {
-            path "/mef-global:mef-global/cos-names-profiles/" +
-                 "profile/name";
-          }
-          mandatory true;
-          description
-            "The Class of Service (CoS) Name to which L2CP frame
-             with the given protocol ID and subtype are mapped.";
-        }
         container map-entries {
           description
             "Layer 2 Control Protocol (L2CP) Classes of Service (CoS).";
-          choice any-or-map-entries {
-            mandatory true;
-            case any {
-              leaf all {
-                type empty;
-                description
-                  "All Protocol Identifiers are accepted.";
-              }
+          list map-entry {
+            key "protocol protocol-id";
+            min-elements 1;
+            description
+              "List of mapping entries that map L2CP protocols to CoS
+               Names. This map is applied to ingress L2CP Frames in
+               order to determine the correct CoS Name to apply.";
+            reference
+              "[MEF10.3] Section 10.2.2. [MEF45] Section 6.2.";
+            leaf protocol {
+              type mef-types:l2cp-peering-protocol-field-type;
+              description
+                "The Protocol is one of Ethertype, LLC, or Other.";
             }
-            case map-entries {
-              list map-entry {
-                key "protocol protocol-id";
-                min-elements 1;
-                description
-                  "List of mapping entries that map L2CP protocols to CoS
-                   Names. This map is applied to ingress L2CP Frames in
-                   order to determine the correct CoS Name to apply.";
-                reference
-                  "[MEF10.3] Section 10.2.2. [MEF45] Section 6.2.";
-                leaf protocol {
-                  type mef-types:l2cp-peering-protocol-field-type;
+            leaf protocol-id {
+              type uint16;
+              description
+                "The Protocol Identifier is the protocol specific value
+                 associated with the protocol and take the form of a
+                 uint16 value such as 0x8100 or 0x88a8.";
+            }
+            choice simple-or-subtypes {
+              mandatory true;
+              description
+                "Simple or subtype choice.  In the simple case, there
+                 are no subtypes and the protocol and protocol-id map
+                 directly to a CoS Name.  Otherwise, a list of subtypes
+                 is given where each subtype can map to a different CoS
+                 Name.";
+              case subtypes-option {
+                container subtypes {
+                  list subtype {
+                    key "id";
+                    min-elements 1;
+                    leaf id {
+                      type uint8;
+                      description
+                        "L2CP Subtype for this protocol and protocol
+                         ID.";
+                    }
+                    leaf cos-name {
+                      type leafref {
+                        path "/mef-global:mef-global/cos-names-profiles/" +
+                             "profile/name";
+                      }
+                      mandatory true;
+                      description
+                        "The Class of Service (CoS) Name to which L2CP frame
+                         with the given protocol ID and subtype are mapped.";
+                    }
+                    description
+                      "List of mapping from subtypes to cos-name for a
+                       given protocol and protocol-id.";
+                  }
                   description
-                    "The Protocol is one of Ethertype, LLC, or Other.";
+                    "Container for list of subtypes configured.";
                 }
-                leaf protocol-id {
-                  type uint16;
-                  description
-                    "The Protocol Identifier is the protocol specific value
-                     associated with the protocol and take the form of a
-                     uint16 value such as 0x8100 or 0x88a8.";
-                }
-                choice simple-or-subtypes {
+              }
+              case simple-option {
+                leaf cos-name {
+                  type leafref {
+                    path "/mef-global:mef-global/cos-names-profiles/" +
+                         "profile/name";
+                  }
                   mandatory true;
                   description
-                    "Simple or subtype choice.  In the simple case, there
-                     are no subtypes and the protocol and protocol-id map
-                     directly to a CoS Name.  Otherwise, a list of subtypes
-                     is given where each subtype can map to a different CoS
-                     Name.";
-                  case subtypes-option {
-                    container subtypes {
-                      list subtype {
-                        key "id";
-                        min-elements 1;
-                        leaf id {
-                          type uint8;
-                          description
-                            "L2CP Subtype for this protocol and protocol
-                             ID.";
-                        }
-                        description
-                          "List of mapping from subtypes to cos-name for a
-                           given protocol and protocol-id.";
-                      }
-                      description
-                        "Container for list of subtypes configured.";
-                    }
-                  }
-                  case simple-option {
-                    leaf simple-option {
-                      type empty;
-                      description
-                        "The option where the protocol and protocol-id map
-                         directly to a CoS.";
-                    }
-                  }
+                    "The Class of Service (CoS) Name to which L2CP frame
+                     with the given protocol ID and subtype are mapped.";
                 }
               }
             }
-            description
-              "Choice of any (and all) EtherTypes or specify the ones
-               that need to be handled.";
           }
         }
       }
@@ -726,91 +715,81 @@ module mef-global {
             "Identifies a specific profile for mapping L2CP protocols to
              EEC names.";
         }
-        leaf eec-name {
-          type string;
-          mandatory true;
-          description
-            "The Egress Equivalance Class (EEC) Name to
-             which L2CP frames with the given protocol ID
-             and subtype are mapped.";
-        }
         container map-entries {
           description
-            "Layer 2 Control Protocol (L2CP)
+            "Layer 2 Control Protocol (L2CP) 
              Egress Equivalance Class (EEC) Mappings.";
-          choice any-or-map-entries {
-            case any {
-              leaf all {
-                type empty;
-                description
-                  "All Protocol Identifiers will be accepted.";
-              }
-            }
-            case map-entries {
-              list map-entry {
-                key "protocol protocol-id";
-                min-elements 1;
-                description
-                  "List of mapping entries that map L2CP protocols to EEC
-                   Names. This map is applied to egress L2CP Frames in order
-                   to determine the correct EEC Name to apply.";
-
-                reference
-                  "[MEF10.3] Section 10.4.2. [MEF6.2] Section 6.2.";
-                leaf protocol {
-                  type mef-types:l2cp-peering-protocol-field-type;
-                  description
-                    "The Protocol is one of Ethertype, LLC, or Other.";
-                }
-                leaf protocol-id {
-                  type uint16;
-                  description
-                    "The Protocol Identifier is the protocol specific value
-                     associated with the protocol and take the form of a
-                     uint16 value such as 0x08100 or 0x88a8.";
-                }
-                choice simple-or-subtypes {
-                  mandatory true;
-                  description
-                    "Simple or subtype choice.  In the simple case, there
-                     are no subtypes and the protocol and protocol-id map
-                     directly to an EEC Name.  Otherwise, a list of subtypes
-                     is given where each subtype can map to a different EEC
-                     Name.";
-                  case subtypes-option {
-                    container subtypes {
-                      list subtype {
-                        key "id";
-                        min-elements 1;
-                        leaf id {
-                          type uint8;
-                          description
-                            "L2CP Subtype for this protocol and protocol
-                             ID.";
-                        }
-                        description
-                          "List of mapping from subtypes to EEC names for a
-                           given protocol and protocol-id.";
-                      }
-                      description
-                        "Container for list of subtypes configured.";
-                    }
-                  }
-                  case simple-option {
-                    leaf simple-option {
-                      type empty;
-                      description
-                        "The simple case, where there are no subtypes and 
-                         the protocol and protocol-id map directly to an 
-                         EEC Name.";
-                    }
-                  }
-                }
-              }
-            }
+          list map-entry {
+            key "protocol protocol-id";
+            min-elements 1;
             description
-              "Choice of any (and all) EtherTypes or specify the ones
-               that need to be handled.";
+              "List of mapping entries that map L2CP protocols to EEC
+               Names. This map is applied to egress L2CP Frames in order
+               to determine the correct EEC Name to apply.";
+
+            reference
+              "[MEF10.3] Section 10.4.2. [MEF6.2] Section 6.2.";
+            leaf protocol {
+              type mef-types:l2cp-peering-protocol-field-type;
+              description
+                "The Protocol is one of Ethertype, LLC, or Other.";
+            }
+            leaf protocol-id {
+              type uint16;
+              description
+                "The Protocol Identifier is the protocol specific value
+                 associated with the protocol and take the form of a
+                 uint16 value such as 0x08100 or 0x88a8.";
+            }
+            choice simple-or-subtypes {
+              mandatory true;
+              description
+                "Simple or subtype choice.  In the simple case, there
+                 are no subtypes and the protocol and protocol-id map
+                 directly to an EEC Name.  Otherwise, a list of subtypes
+                 is given where each subtype can map to a different EEC
+                 Name.";
+              case subtypes-option {
+                container subtypes {
+                  list subtype {
+                    key "id";
+                    min-elements 1;
+                    leaf id {
+                      type uint8;
+                      description
+                        "L2CP Subtype for this protocol and protocol
+                         ID.";
+                    }
+                    leaf eec-name {
+                      type string;
+                      mandatory "true";
+                      description
+                        "The Egress Equivalance Class (EEC) Name to which L2CP
+                         frame with the given protocol ID and subtype are mapped.";
+                    }
+                    description
+                      "List of subtypes.";
+                  }
+                  description
+                    "Container for list of subtypes configured.";
+                }
+              }
+              case simple-option {
+            	leaf eec-name {
+                  type string;
+                  mandatory "true";
+                  description
+                    "The Egress Equivalance Class (EEC) Name to which L2CP
+                     frame with the given protocol ID and subtype are mapped.";
+                }
+                description
+                  "Simple or subtype choice. The choice node itself
+                   is mandatory to make sure one of the options
+               	   are selected. Further in the subtype option of
+               	   the choice, the user must specify the eec-name
+                   along with id (which is a key).";
+              }
+            }
           }
         }
       }
