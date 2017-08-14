@@ -630,7 +630,7 @@ module mef-legato-services {
                                 "mef-global:l2cp-cos-id]/" +
                                 "mef-global:map-entries/" +
                                 "mef-global:map-entry" +
-                                "[mef-global:cos-name]" +
+                                 "[mef-global:cos-name]" +
                                   "[not(mef-global:cos-name = " +
                                         "current()/../../../" +
                                         "cos-names/cos-name/" +
@@ -658,8 +658,10 @@ module mef-legato-services {
                                     "mef-global:id = current()]/" +
                                 "mef-global:l2cp-cos-id]/" +
                                 "mef-global:map-entries/" +
-                                "mef-global:map-entry[mef-global:subtypes]/" +
-                                "mef-global:subtypes/mef-global:subtype" +
+                                "mef-global:map-entry" +
+                                 "[mef-global:subtypes]/" +
+                                "mef-global:subtypes/" +
+                                 "mef-global:subtype" +
                                   "[not(mef-global:cos-name = " +
                                         "current()/../../../" +
                                         "cos-names/cos-name/" +
@@ -2288,16 +2290,6 @@ module mef-legato-services {
           }
           leaf max-frame-size {
             type mef-types:max-frame-size-type;
-            must "current() >= 1522" {
-              error-message
-                "The value of the EVC Maximum Service Frame Size 
-                 MUST be at least 1522 bytes.";
-              description
-                "The value of the EVC Maximum Service Frame Size 
-                 MUST be at least 1522 bytes.";
-              reference
-                "[MEF10.3] [R55]";
-            }
             must "current() <= " +
                       "/mef-interfaces:mef-interfaces/" +
                        "mef-interfaces:carrier-ethernet/" +
