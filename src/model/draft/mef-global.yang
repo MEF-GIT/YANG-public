@@ -688,7 +688,7 @@ module mef-global {
                   }
                   mandatory true;
                   description
-                    "The Class of Service (CoS) Name to which L2CP frame
+                    "The Class of Service (CoS) Name to which L2CP frames
                      with the given protocol ID are mapped.";
                 }
               }
@@ -765,8 +765,8 @@ module mef-global {
                       type string;
                       mandatory true;
                       description
-                        "The Egress Equivalance Class (EEC) Name to 
-                         which L2CP frame with the given protocol ID 
+                        "The Egress Equivalance Class (EEC) Name to
+                         which L2CP frames with the given protocol ID
                          and subtype are mapped.";
                     }
                     description
@@ -782,7 +782,7 @@ module mef-global {
                   type string;
                   mandatory true;
                   description
-                    "The EEC Name to which L2CP frames with the 
+                    "The EEC Name to which L2CP frames with the
                      given protocol ID are mapped.";
                 }
               }
