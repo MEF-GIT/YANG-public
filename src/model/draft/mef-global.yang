@@ -663,13 +663,14 @@ module mef-global {
                     }
                     leaf cos-name {
                       type leafref {
-                        path "/mef-global:mef-global/cos-names-profiles/" +
-                             "profile/name";
+                        path "/mef-global:mef-global/" +
+                             "cos-names-profiles/profile/name";
                       }
                       mandatory true;
                       description
-                        "The Class of Service (CoS) Name to which L2CP frame
-                         with the given protocol ID and subtype are mapped.";
+                        "The Class of Service (CoS) Name to which L2CP
+                         frames with the given protocol ID and subtype 
+                         are mapped.";
                     }
                     description
                       "List of mapping from subtypes to cos-name for a
@@ -764,30 +765,26 @@ module mef-global {
                       type string;
                       mandatory true;
                       description
-                        "The Egress Equivalance Class (EEC) Name to which L2CP
-                         frame with the given protocol ID and subtype are mapped.";
+                        "The Egress Equivalance Class (EEC) Name to 
+                         which L2CP frame with the given protocol ID 
+                         and subtype are mapped.";
                     }
                     description
-                      "List of subtypes.";
+                      "List of mapping from subtypes to EEC names for a
+                       given protocol and protocol-id.";
                   }
                   description
                     "Container for list of subtypes configured.";
                 }
               }
               case simple-option {
-            	leaf eec-name {
+                leaf eec-name {
                   type string;
                   mandatory true;
                   description
-                    "The Egress Equivalance Class (EEC) Name to which L2CP
-                     frame with the given protocol ID are mapped.";
+                    "The EEC Name to which L2CP frames with the 
+                     given protocol ID are mapped.";
                 }
-                description
-                  "Simple or subtype choice. The choice node itself
-                   is mandatory to make sure one of the options
-                   are selected. Further in the subtype option of
-                   the choice, the user must specify the eec-name
-                   along with id (which is a key).";
               }
             }
           }
