@@ -57,7 +57,8 @@ make models
                          error-message
                            "If an Egress Envelope's Coupling Flag is Enabled,
 
-
+and the following pull request:
+    https://github.com/MEF-GIT/YANG-public/pull/4/files
 ## Credits
 
 This work would not have been possible without the work of Mahesh Jethanandani, David Ball, Jim Boucher and several others.
