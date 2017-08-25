@@ -644,7 +644,7 @@ module mef-legato-interfaces {
           leaf link-aggregation {
             type mef-types:interface-resiliency-type;
             must ". = 'none' or " +
-                 "count(../physical-layers/links) > 1" {
+                 "count(../physical-layers/links/link) > 1" {
               error-message
                 "If there is one link, link-aggregation must be
                  'none'.";
@@ -655,7 +655,7 @@ module mef-legato-interfaces {
                 "[MEF10.3.2] [A1-R1].";
             }
             must ". != 'none' or " +
-                 "count(../physical-layers/links) = 1" {
+                 "count(../physical-layers/links/link) = 1" {
               error-message
                 "If there are two (or more) links, link-aggregation
                  must not be 'none'.";
@@ -666,7 +666,7 @@ module mef-legato-interfaces {
                 "[MEF10.3.2] [A1-R2].";
             }
             must ". = 'all-active' or . = 'other' or " +
-                 "count(../physical-layers/links) <= 2" {
+                 "count(../physical-layers/links/link) <= 2" {
               error-message
                 "If there are three (or more) links, link-aggregation
                  must be 'all-active' or 'other'.";

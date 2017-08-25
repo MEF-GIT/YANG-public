@@ -1,3 +1,5 @@
+#!/bin/sh
+
 for i in mef-*\@$(date +%Y-%m-%d).yang
 do
 	name=$(echo $i | cut -f 1 -d '.')
