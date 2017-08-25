@@ -19,7 +19,9 @@ If you do not have access to NSO, and just want to build the models, then just r
 make models
 
 ## Usage
+To add the models to yangcatalog.org, edit src/metadata.json file and use the command to submit the update - curl -u <yangcatalog username>:<yangcatalog password> -H 'Content-Type: application/json' -X PUT -d @mef-metadata.json https://yangcatalog.org:8443/modules > metadata.out
 
+See yangcatalog.org/contribute.php for details on how to request an account.
 
 ## Contributing
 
