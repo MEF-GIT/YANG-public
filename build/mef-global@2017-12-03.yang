@@ -46,7 +46,7 @@ module mef-global {
      [MEF7.3] refers to MEF 7.3
      'Carrier Ethernet Management Information Model', February 2017";
 
-  revision 2017-08-30 {
+  revision 2017-12-03 {
     description
       "Initial Version.";
     reference

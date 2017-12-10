@@ -41,7 +41,7 @@ module mef-types {
      [RFC2579] refers to IETF RFC 2579 'Textual Conventions for SMIv2',
      April 1999";
 
-  revision 2017-08-30 {
+  revision 2017-12-03 {
     description
       "Initial Version.";
     reference
@@ -531,7 +531,7 @@ module mef-types {
   }
 
   typedef bwp-ir-type {
-    type uint32;
+    type uint64;
     units "bps";
     description
       "Bandwidth Profile Information Rate in Bits Per Second.";
