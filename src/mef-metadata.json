@@ -8,11 +8,12 @@
                 "maturity-level": "ratified", 
                 "name": "mef-legato-global", 
                 "organization": "mef", 
-                "reference": "https://www.mef.net/Assets/Technical_Specifications/PDF/MEF_XX.pdf", 
-                "revision": "2017-07-26", 
+                "reference": "https://www.mef.net/Assets/Technical_Specifications/PDF/MEF_XX.pdf",
+                "module-classification": "network-service",
+                "revision": "2017-08-30", 
                 "source-file": {
                     "owner": "mjethanandani", 
-                    "path": "build/mef-global@2017-07-26.yang", 
+                    "path": "build/mef-global@2017-08-30.yang", 
                     "repository": "YANG-public"
                 }
             }, 
@@ -24,10 +25,11 @@
                 "name": "mef-legato-services", 
                 "organization": "mef", 
                 "reference": "https://www.mef.net/Assets/Technical_Specifications/PDF/MEF_XX.pdf", 
-                "revision": "2017-07-26", 
+                "module-classification": "network-service",
+                "revision": "2017-08-30", 
                 "source-file": {
                     "owner": "mjethanandani", 
-                    "path": "build/mef-legato-services@2017-07-26.yang", 
+                    "path": "build/mef-legato-services@2017-08-30.yang", 
                     "repository": "YANG-public"
                 }
             }, 
@@ -39,10 +41,11 @@
                 "name": "mef-legato-interfaces", 
                 "organization": "mef", 
                 "reference": "https://www.mef.net/Assets/Technical_Specifications/PDF/MEF_XX.pdf", 
-                "revision": "2017-07-26", 
+                "module-classification": "network-service",
+                "revision": "2017-08-30", 
                 "source-file": {
                     "owner": "mjethanandani", 
-                    "path": "build/mef-legato-interfaces@2017-07-26.yang", 
+                    "path": "build/mef-legato-interfaces@2017-08-30.yang", 
                     "repository": "YANG-public"
                 }
             },
@@ -54,10 +57,11 @@
                 "name": "mef-types", 
                 "organization": "mef", 
                 "reference": "https://www.mef.net/Assets/Technical_Specifications/PDF/MEF_XX.pdf", 
-                "revision": "2017-07-26", 
+                "module-classification": "network-service",
+                "revision": "2017-08-30", 
                 "source-file": {
                     "owner": "mjethanandani", 
-                    "path": "build/mef-types@2017-07-26.yang", 
+                    "path": "build/mef-types@2017-08-30.yang", 
                     "repository": "YANG-public"
                 }
             }
