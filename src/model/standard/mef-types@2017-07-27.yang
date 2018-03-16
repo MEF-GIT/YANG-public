@@ -45,7 +45,7 @@ module mef-types {
     description
       "Initial Version.";
     reference
-      "Legato - Services YANG SCA (MEF XX)";
+      "Legato - Services YANG SCA (MEF 58)";
   }
 
   identity ieee-8023-interface-type {

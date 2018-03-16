@@ -47,9 +47,16 @@ module mef-legato-services {
 
   revision YYYY-MM-DD {
     description
+      "Revision to fix bugs found in integration.";
+    reference
+      "Legato - Services YANG SCA (MEF 58)";
+  }
+
+  revision 2017-07-27 {
+    description
       "Initial Version.";
     reference
-      "Legato - Services YANG SCA (MEF XX)";
+      "Legato - Services YANG SCA (MEF 58)";
   }
 
   container mef-services {
@@ -2038,7 +2045,7 @@ module mef-legato-services {
                                           "uni-id = " +
                                               "current()/end-point1]/" +
                                         "role = 'leaf') and " +
-                                       "(/mef-services/carrier-etherent/" +
+                                       "(/mef-services/carrier-ethernet/" +
                                          "subscriber-services/evc/" +
                                           "end-points/end-point[" +
                                           "uni-id = " +

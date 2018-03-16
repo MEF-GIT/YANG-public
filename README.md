@@ -34,33 +34,14 @@ See yangcatalog.org/contribute.php for details on how to request an account.
 ## History
 
 620027_005_Leagato-YANG-Machinefiles: Submitted for Letter Ballot
+2017-07-27 Models published as standard.
 
 ### Errata
 
-    index fc42a56..55759b9 100644
-    --- a/src/model/draft/mef-legato-interfaces.yang
-    +++ b/src/model/draft/mef-legato-interfaces.yang
-    @@ -204,7 +204,7 @@ module mef-legato-interfaces {
-                            "/mef-global:mef-global/" +
-                            "mef-global:bwp-flow-parameter-profiles/" +
-                            "mef-global:profile[" +
-    -                       "mef-global:id = current()]/" +
-    +                       "mef-global:id = current()/parameters]/" +
-                            "mef-global:coupling-enabled = 'false'" {
-                         error-message
-                           "If an Ingress Envelope's Coupling Flag is
-    @@ -370,7 +370,7 @@ module mef-legato-interfaces {
-                            "/mef-global:mef-global/" +
-                            "mef-global:bwp-flow-parameter-profiles/" +
-                            "mef-global:profile[" +
-    -                                      "mef-global:id = current()]/" +
-    +                       "mef-global:id = current()/parameters]/" + 
-                            "mef-global:coupling-enabled = 'false'" {
-                         error-message
-                           "If an Egress Envelope's Coupling Flag is Enabled,
+Please see
+https://wiki.mef.net/display/LSO/EVC+YANG+-+Errata+and+Gaps (Login required)
 
-and the following pull request:
-    https://github.com/MEF-GIT/YANG-public/pull/4/files
+
 ## Credits
 
 This work would not have been possible without the work of Mahesh Jethanandani, David Ball, Jim Boucher and several others.

@@ -42,7 +42,7 @@ module mef-legato-interfaces {
     description
       "Initial Version.";
     reference
-      "Legato - Services YANG SCA (MEF XX)";
+      "Legato - Services YANG SCA (MEF 58)";
   }
 
   container mef-interfaces {
