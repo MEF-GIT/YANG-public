@@ -43,7 +43,7 @@ module mef-types {
 
   revision YYYY-MM-DD {
     description
-      "Revision to address bugs found in integration..";
+      "Revision to address bugs found during integration..";
     reference
       "Legato - Services YANG SCA (MEF 58)";
   }
