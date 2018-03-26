@@ -3,65 +3,65 @@
         "module": [
             {
                 "author-email": "namespace@mef.net", 
-                "document-name": "MEF XX <https://www.mef.net/Assets/Technical_Specifications/PDF/MEF_XX.pdf>",
+                "document-name": "MEF 58 <https://www.mef.net/Assets/Technical_Specifications/PDF/MEF_58.pdf>",
                 "generated-from": "not-applicable", 
                 "maturity-level": "ratified", 
                 "name": "mef-legato-global", 
                 "organization": "mef", 
-                "reference": "https://www.mef.net/Assets/Technical_Specifications/PDF/MEF_XX.pdf",
+                "reference": "https://www.mef.net/Assets/Technical_Specifications/PDF/MEF_58.pdf",
                 "module-classification": "network-service",
-                "revision": "2017-08-30", 
+                "revision": "2017-07-27", 
                 "source-file": {
-                    "owner": "mjethanandani", 
-                    "path": "build/mef-global@2017-08-30.yang", 
+                    "owner": "MEF-GIT", 
+                    "path": "src/model/standard/mef-global@2017-07-27.yang", 
                     "repository": "YANG-public"
                 }
             }, 
             {
                 "author-email": "namespace@mef.net", 
-                "document-name": "MEF XX <https://www.mef.net/Assets/Technical_Specifications/PDF/MEF_XX.pdf>",
+                "document-name": "MEF 58 <https://www.mef.net/Assets/Technical_Specifications/PDF/MEF_58.pdf>",
                 "generated-from": "not-applicable", 
                 "maturity-level": "ratified", 
                 "name": "mef-legato-services", 
                 "organization": "mef", 
-                "reference": "https://www.mef.net/Assets/Technical_Specifications/PDF/MEF_XX.pdf", 
+                "reference": "https://www.mef.net/Assets/Technical_Specifications/PDF/MEF_58.pdf", 
                 "module-classification": "network-service",
-                "revision": "2017-08-30", 
+                "revision": "2017-07-27", 
                 "source-file": {
-                    "owner": "mjethanandani", 
-                    "path": "build/mef-legato-services@2017-08-30.yang", 
+                    "owner": "MEF-GIT", 
+                    "path": "src/model/standard/mef-legato-services@2017-07-27.yang", 
                     "repository": "YANG-public"
                 }
             }, 
             {
                 "author-email": "namespace@mef.net", 
-                "document-name": "MEF XX <https://www.mef.net/Assets/Technical_Specifications/PDF/MEF_XX.pdf>",
+                "document-name": "MEF 58 <https://www.mef.net/Assets/Technical_Specifications/PDF/MEF_58.pdf>",
                 "generated-from": "not-applicable", 
                 "maturity-level": "ratified", 
                 "name": "mef-legato-interfaces", 
                 "organization": "mef", 
-                "reference": "https://www.mef.net/Assets/Technical_Specifications/PDF/MEF_XX.pdf", 
+                "reference": "https://www.mef.net/Assets/Technical_Specifications/PDF/MEF_58.pdf", 
                 "module-classification": "network-service",
-                "revision": "2017-08-30", 
+                "revision": "2017-07-27", 
                 "source-file": {
-                    "owner": "mjethanandani", 
-                    "path": "build/mef-legato-interfaces@2017-08-30.yang", 
+                    "owner": "MEF-GIT", 
+                    "path": "src/model/standard/mef-legato-interfaces@2017-07-27.yang", 
                     "repository": "YANG-public"
                 }
             },
             {
                 "author-email": "namespace@mef.net", 
-                "document-name": "MEF XX <https://www.mef.net/Assets/Technical_Specifications/PDF/MEF_XX.pdf>",
+                "document-name": "MEF 58 <https://www.mef.net/Assets/Technical_Specifications/PDF/MEF_58.pdf>",
                 "generated-from": "not-applicable", 
                 "maturity-level": "ratified", 
                 "name": "mef-types", 
                 "organization": "mef", 
-                "reference": "https://www.mef.net/Assets/Technical_Specifications/PDF/MEF_XX.pdf", 
-                "module-classification": "network-service",
-                "revision": "2017-08-30", 
+                "reference": "https://www.mef.net/Assets/Technical_Specifications/PDF/MEF_58.pdf", 
+                "module-classification": "not-applicable",
+                "revision": "2017-07-27", 
                 "source-file": {
-                    "owner": "mjethanandani", 
-                    "path": "build/mef-types@2017-08-30.yang", 
+                    "owner": "MEF-GIT", 
+                    "path": "src/model/standard/mef-types@2017-07-27.yang", 
                     "repository": "YANG-public"
                 }
             }
