@@ -502,8 +502,7 @@ module mef-legato-interfaces {
                    Envelopes.";
                 leaf envelope-id {
                   type leafref {
-                    path "../../ingress-envelopes/" +
-                         "envelope/id";
+                    path "../../ingress-envelopes/envelope/id";
                   }
                   must "../../ingress-envelopes/" +
                        "envelope[id = current()]/type = 'per-uni'" {
@@ -524,8 +523,8 @@ module mef-legato-interfaces {
                 }
                 leaf rank {
                   type leafref {
-                    path "../../ingress-envelopes/envelope[id = " +
-                         "current()/../envelope-id]/" +
+                    path "../../ingress-envelopes/" +
+                         "envelope[id = current()/../envelope-id]/" +
                          "bwp-flows/bwp-flow/rank";
                   }
                   mandatory true;
@@ -550,7 +549,7 @@ module mef-legato-interfaces {
                  other Bandwidth Profile Flows, has no Envelope ID and
                  does not appear in the list of Bandwidth Profile
                  Envelopes for the UNI
-                 (../../../../egress-envelopes/envelope).";
+                 (../../egress-envelopes/envelope).";
               reference
                 "[MEF10.3] sections 9.15 and 12.
                  [MEF7.3] sections 7.8.1 and 7.16.";
@@ -582,8 +581,8 @@ module mef-legato-interfaces {
                   type leafref {
                     path "../../egress-envelopes/envelope/id";
                   }
-                  must "../../egress-envelopes/envelope[id = " +
-                       "current()]/type = 'per-uni'" {
+                  must "../../egress-envelopes/" +
+                       "envelope[id = current()]/type = 'per-uni'" {
                     error-message
                       "A bandwidth profile per UNI can only refer to an
                        Envelope with type per-uni.";
