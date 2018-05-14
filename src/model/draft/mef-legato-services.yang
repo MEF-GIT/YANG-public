@@ -921,9 +921,7 @@ module mef-legato-services {
                          [MEF7.3] Section 7.4, 7.11";
                       leaf cos-name {
                         type leafref {
-                          path "/mef-services/carrier-ethernet/" +
-	                       "subscriber-services/evc/cos-names/" +
-                               "cos-name/name";
+                          path "../../../../../cos-names/cos-name/name";
                         }
                         description
                           "Class of Service Name for this Bandwidth
@@ -1857,9 +1855,9 @@ module mef-legato-services {
                                    Availability metric is calculated.";
                                 leaf end-point1 {
                                   type leafref {
-                                    path "/mef-services/carrier-ethernet/" +
-                                         "subscriber-services/evc/" +
-                                         "end-points/end-point/uni-id";
+                                    path "../../../../../../../../../" +
+                                         "../end-points/end-point/" +
+                                         "uni-id";
                                   }
                                   description
                                     "The first end point in an ordered
@@ -1871,9 +1869,9 @@ module mef-legato-services {
                                 }
                                 leaf end-point2 {
                                   type leafref {
-                                    path "/mef-services/carrier-ethernet/" +
-                                         "subscriber-services/evc/" +
-                                         "end-points/end-point/uni-id";
+                                    path "../../../../../../../../../" +
+                                         "../end-points/end-point/" +
+                                         "uni-id";
                                   }
                                   description
                                     "The second end point in an ordered
@@ -1933,9 +1931,9 @@ module mef-legato-services {
                                    metric is calculated.";
                                 leaf end-point1 {
                                   type leafref {
-                                    path "/mef-services/carrier-ethernet/" +
-                                         "subscriber-services/evc/" +
-                                         "end-points/end-point/uni-id";
+                                    path "../../../../../../../../../" +
+                                         "../end-points/end-point/" +
+                                         "uni-id";
                                   }
                                   description
                                     "The first end point in an ordered
@@ -1947,9 +1945,9 @@ module mef-legato-services {
                                 }
                                 leaf end-point2 {
                                   type leafref {
-                                    path "/mef-services/carrier-ethernet/" +
-                                         "subscriber-services/evc/" +
-                                         "end-points/end-point/uni-id";
+                                    path "../../../../../../../../../" +
+                                         "../end-points/end-point/" +
+                                         "uni-id";
                                   }
                                   description
                                     "The second end point in an ordered
@@ -2039,15 +2037,13 @@ module mef-legato-services {
                               must "(../../../../../../../../" +
                                     "connection-type != " +
                                         "'rooted-multipoint') or " +
-                                   "not((/mef-services/carrier-ethernet/" +
-                                         "subscriber-services/evc/" +
-                                         "end-points/end-point[" +
+                                   "not((../../../../../../../../" +
+                                        "end-points/end-point[" +
                                           "uni-id = " +
                                               "current()/end-point1]/" +
                                         "role = 'leaf') and " +
-                                       "(/mef-services/carrier-ethernet/" +
-                                         "subscriber-services/evc/" +
-                                          "end-points/end-point[" +
+                                        "(../../../../../../../../" +
+                                        "end-points/end-point[" +
                                           "uni-id = " +
                                               "current()/end-point2]/" +
                                         "role = 'leaf'))" {
@@ -2073,8 +2069,7 @@ module mef-legato-services {
                                  is calculated.";
                               leaf end-point1 {
                                 type leafref {
-                                  path "/mef-services/carrier-ethernet/" +
-                                       "subscriber-services/evc/" +
+                                  path "../../../../../../../../../" +
                                        "end-points/end-point/uni-id";
                                 }
                                 description
@@ -2144,8 +2139,7 @@ module mef-legato-services {
                                  metric is calculated.";
                               leaf end-point1 {
                                 type leafref {
-                                  path "/mef-services/carrier-ethernet/" +
-                                       "subscriber-services/evc/" +
+                                  path "../../../../../../../../../" +
                                        "end-points/end-point/uni-id";
                                 }
                                 description
@@ -2157,8 +2151,7 @@ module mef-legato-services {
                               }
                               leaf end-point2 {
                                 type leafref {
-                                  path "/mef-services/carrier-ethernet/" +
-                                       "subscriber-services/evc/" +
+                                  path "../../../../../../../../../" +
                                        "end-points/end-point/uni-id";
                                 }
                                 description
