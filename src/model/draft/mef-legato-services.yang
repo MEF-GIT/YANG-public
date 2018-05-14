@@ -2042,7 +2042,7 @@ module mef-legato-services {
                                           "uni-id = " +
                                               "current()/end-point1]/" +
                                         "role = 'leaf') and " +
-                                        "(../../../../../../../../" +
+                                       "(../../../../../../../../" +
                                         "end-points/end-point[" +
                                           "uni-id = " +
                                               "current()/end-point2]/" +
@@ -2081,8 +2081,7 @@ module mef-legato-services {
                               }
                               leaf end-point2 {
                                 type leafref {
-                                  path "/mef-services/carrier-ethernet/" +
-                                       "subscriber-services/evc/" +
+                                  path "../../../../../../../../../" +
                                        "end-points/end-point/uni-id";
                                 }
                                 description
