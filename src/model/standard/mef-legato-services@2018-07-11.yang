@@ -45,11 +45,18 @@ module mef-legato-services {
       'Composite Performance Metric (CPM) Amendment to MEF 10.3',
       February 2015";
 
-  revision 2017-08-30 {
+  revision 2018-07-11 {
+    description
+      "Revision to fix bugs found in integration.";
+    reference
+      "Legato - Services YANG SCA (MEF 58)";
+  }
+
+  revision 2017-07-27 {
     description
       "Initial Version.";
     reference
-      "Legato - Services YANG SCA (MEF XX)";
+      "Legato - Services YANG SCA (MEF 58)";
   }
 
   container mef-services {

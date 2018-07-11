@@ -43,9 +43,16 @@ module mef-types {
 
   revision YYYY-MM-DD {
     description
+      "Revision to address bugs found during integration..";
+    reference
+      "Legato - Services YANG SCA (MEF 58)";
+  }
+
+  revision 2017-07-27 {
+    description
       "Initial Version.";
     reference
-      "Legato - Services YANG SCA (MEF XX)";
+      "Legato - Services YANG SCA (MEF 58)";
   }
 
   identity ieee-8023-interface-type {

@@ -10,7 +10,6 @@ module mef-global {
   }
   import mef-types {
     prefix mef-types;
-    revision-date 2017-12-15;
   }
 
   organization "MEF Forum";
@@ -47,11 +46,18 @@ module mef-global {
      [MEF7.3] refers to MEF 7.3
      'Carrier Ethernet Management Information Model', February 2017";
 
-  revision 2017-12-15 {
+  revision 2018-07-11 {
+    description
+      "Revision to fix bugs found in integration.";
+    reference
+      "Legato - Services YANG SCA (MEF 58)";
+  }
+
+  revision 2017-07-27 {
     description
       "Initial Version.";
     reference
-      "Legato - Services YANG SCA (MEF XX)";
+      "Legato - Services YANG SCA (MEF 58)";
   }
 
   container mef-global {
