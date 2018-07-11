@@ -1,0 +1,14 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "version": "1.0.0",
+        "description": "mef-types API generated from mef-types@2018-07-11.yang",
+        "title": "mef-types API"
+    },
+    "host": "localhost:8080",
+    "basePath": "/restconf",
+    "schemes": [
+        "http"
+    ],
+    "definitions": {}
+}

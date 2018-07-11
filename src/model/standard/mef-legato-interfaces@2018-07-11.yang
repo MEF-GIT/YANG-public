@@ -1,0 +1,901 @@
+module mef-legato-interfaces {
+  namespace "urn:mef:yang:mef-legato-interfaces";
+  prefix mef-interfaces;
+
+  import mef-types {
+    prefix mef-types;
+  }
+  import mef-global {
+    prefix mef-global;
+  }
+
+  organization "MEF Forum";
+  contact
+    "Web URL: http://mef.net/
+     E-mail:  namespace@mef.net
+     Postal:  MEF Forum
+              6033 W. Century Boulevard, Suite 1107
+              Los Angeles, CA 90045
+              U.S.A.
+     Phone:   +1 310-642-2800
+     Fax:     +1 310-642-2808";
+  description
+    "This module implements the UNI functionality specified
+     in MEF 10.3 and MEF 6.2.
+
+     Reference Overview:
+     A number of base documents have been used to create
+     the MEF Interfaces YANG Module. The following are the
+     abbreviations for the baseline documents:
+     [MEF10.3] refers to MEF 10.3
+     'Ethernet Services Attributes Phase 3', October 2013
+     [MEF10.3.2] refers to MEF 10.3.2
+     'Amendment to MEF 10.3 - UNI Resiliency Enhancement',
+     October 2015
+     [MEF6.2] refers to MEF 6.2
+     'EVC Ethernet Services Defintions Phase 3', August 2014
+     [MEF45] refers to MEF 45 'Multi-CEN L2CP', August 2014
+     [MEF7.3] refers to MEF 7.3
+     'Carrier Ethernet Management Information Model', February 2017";
+
+  revision 2018-07-11 {
+    description
+      "Revision to fix bugs found during integration..";
+    reference
+      "Legato - Services YANG SCA (MEF 58)";
+  }
+
+  revision 2017-07-27 {
+    description
+      "Initial Version.";
+    reference
+      "Legato - Services YANG SCA (MEF 58)";
+  }
+
+  container mef-interfaces {
+    description
+      "MEF Interfaces";
+    container carrier-ethernet {
+      description
+       "Carrier Ethernet Services within MEF Interfaces.";
+      container subscriber-interfaces {
+        description
+          "Subscriber view of the MEF Interfaces supporting
+           Carrier Ethernet Services.";
+        list uni {
+          key "uni-id";
+          description
+            "List of User Network Interfaces (UNI).";
+          reference
+            "[MEF10.3] Section 9.";
+          container physical-layers {
+            description
+              "Physical Layer configuration";
+            reference
+              "[MEF10.3] Section 9.2.";
+            container links {
+              description
+                "Container for a list of physical links that are part of
+                 the UNI";
+              reference
+                "[MEF10.3] Section 9.2.";
+              list link {
+                key "link-number";
+                min-elements 1;
+                description
+                  "A list of all the physical ports associated with this
+                   Link Layer.";
+                leaf link-number {
+                  type uint32;
+                  description
+                    "Unique link number for a physical link
+                     implementing the UNI.";
+                }
+                leaf ieee8023-phy {
+                  type identityref {
+                    base mef-types:ieee-8023-interface-type;
+                  }
+                  must ". != 'mef-types:ieee8023-1000BASE-PX-D' and " +
+                       ". != 'mef-types:ieee8023-1000BASE-PX-U'" {
+                    error-message
+                      "The Physical Layer for each physical link
+                       implementing the UNI cannot be 1000BASE-PX-D and
+                       1000BASE-PX-U.";
+                    description
+                      "The Physical Layer for each physical link
+                       implementing the UNI cannot be 1000BASE-PX-D and
+                       1000BASE-PX-U.";
+                    reference
+                      "[MEF10.3] [R60].";
+                  }
+                  mandatory true;
+                  description
+                    "The Physical Layer for each physical link that is
+                     part of the UNI.";
+                  reference
+                    "[MEF10.3] Section 9.2, [MEF7.3] Section 7.7.";
+                }
+                leaf sync-mode {
+                  type boolean;
+                  default "false";
+                  description
+                    "Indicates whether Synchronous mode is Enabled (if
+                     the value is true) or Disabled (if the value is
+                     false) for the physical link.";
+                  reference
+                    "[MEF10.3] Section 9.3, [MEF7.3] Section 7.8.";
+                }
+              }
+            }
+          }
+
+          container ingress-envelopes {
+            description
+              "List of Bandwidth Profile Envelopes used on this UNI for
+               Ingress Bandwidth Profiles.";
+            reference
+              "[MEF10.3] Section 12.1, [MEF6.2] Section 8.2.2,
+               [MEF7.3] Section 7.8, 7.16.";
+            list envelope {
+              must "../../token-share-enabled = 'true' or " +
+                   "count(bwp-flows/bwp-flow) = 1" {
+                error-message
+                  "A UNI with Token Share Disabled MUST have
+                   exactly one Bandwidth Profile Flow per envelope.";
+                description
+                  "A UNI with Token Share Disabled MUST have exactly one
+                   Bandwidth Profile Flow per envelope.";
+                reference
+                  "[MEF6.2] [R3].";
+              }
+              key "id";
+              description
+                "List of Bandwidth Profile Envelopes used on this UNI
+                 for Ingress Bandwidth Profiles.  Note that Envelopes
+                 that contain only a single Bandwidth Profile Flow might
+                 or might not be included in this list (but must not be
+                 included, in the case of MEF 6.2 services, per MEF 6.2
+                 R5).";
+              reference
+                "[MEF10.3] Section 12.1, [MEF6.2] Section 8.2.2,
+                 [MEF7.3] Section 7.8, 7.16.";
+
+              leaf id {
+                type mef-types:identifier45;
+                description
+                  "Bandwidth Profile Envelope ID";
+                reference
+                  "[MEF10.3] Section 12.1.";
+              }
+
+              leaf type {
+                type mef-types:envelope-type;
+                mandatory true;
+                description
+                  "Indicates what type of Bandwidth Profile Flows this
+                   Envelope contains.";
+              }
+
+              leaf coupling-enabled {
+                type boolean;
+                must "(../bwp-flows/bwp-flow[2]) or (. = 'false')" {
+                  error-message
+                    "When only one Bandwidth Profile Flow is mapped to
+                     an envelope, Envelope Coupling must be Disabled.";
+                  description
+                    "When only one Bandwidth Profile Flow is mapped to
+                     an Envelope, Envelope Coupling must be Disabled.";
+                  reference
+                    "[MEF10.3] [R142].";
+                }
+                mandatory true;
+                description
+                  "The Envelope Coupling Flag (CF^0).  A value of
+                   'false' corresponds to setting the coupling flag to
+                   0, i.e. unused green tokens from the lowest ranked
+                   flow are discarded.  A value of 'true' corresponds to
+                   setting the coupling flag to 1, i.e. unused green
+                   tokens from the lowest ranked flow are converted to
+                   yellow tokens for the highest ranked flow.";
+                reference
+                  "[MEF10.3] Section 12.1.";
+              }
+
+              container bwp-flows {
+                description
+                  "Ingress Bandwidth Profile Flows in this Envelope.";
+                reference
+                  "[MEF10.3] Section 12.1, [MEF7.3] Section 7.16.";
+                list bwp-flow {
+                  must "../../coupling-enabled = 'false' or " +
+                       "/mef-global:mef-global/" +
+                       "mef-global:bwp-flow-parameter-profiles/" +
+                       "mef-global:profile[" +
+                       "mef-global:id = current()/parameters]/" +
+                       "mef-global:coupling-enabled = 'false'" {
+                    error-message
+                      "If an Ingress Envelope's Coupling Flag is
+                       Enabled, then the Coupling Flags must be disabled
+                       for all Bandwidth Profile Flows mapped to the
+                       Envelope.";
+                    description
+                      "If an Ingress Envelope's Coupling Flag is
+                       Enabled, then the Coupling Flags must be disabled
+                       for all Bandwidth Profile Flows mapped to the
+                       Envelope.";
+                    reference
+                      "[MEF10.3] [R150].";
+                  }
+
+                  must "../../type != 'per-uni' or " +
+                       "(../../../../ingress-bwp-per-uni/" +
+                       "envelope-id = ../../id and " +
+                       "../../../../ingress-bwp-per-uni/" +
+                       "rank = ./rank)" {
+                    error-message
+                      "If there is a per-UNI Ingress Bandwidth Profile
+                       Envelope, then there must be an Ingress Bandwidth
+                       Profile per UNI that references it.";
+                    description
+                      "If there is a per-UNI Ingress Bandwidth Profile
+                       Envelopes, then there must be an Ingress
+                       Bandwidth Profile per UNI that references it.
+                       This is part of enforcing MEF 10.3 R134.";
+                    reference
+                      "[MEF10.3] [R134]";
+                  }
+                  key "rank";
+                  min-elements 1;
+                  description
+                    "List of Ingress Bandwidth Profile Flows in this
+                     Envelope.";
+                  reference
+                    "[MEF10.3] Section 12.1. [MEF7.3] Section 7.16.";
+
+                  leaf rank {
+                    type uint8;
+                    must ". >= 1 and . <= count(..)" {
+                      error-message
+                        "The rank of a Bandwidth Profile Flow must be
+                         between 1 and n, where n is the number of flows
+                         in the Envelope";
+                      description
+                        "The rank of a Bandwidth Profile Flow must be
+                         between 1 and n, where n is the number of flows
+                         in the Envelope";
+                      reference
+                        "[MEF10.3] [R152]";
+                    }
+                    description
+                      "Rank of the Bandwidth Profile flow within the
+                       Envelope. Rank 1 is the lowest priority flow,
+                       rank n is the highest priority, where n is the
+                       number of flows in the Envelope.";
+                    reference
+                      "[MEF10.3] Section 12.1. [MEF7.3] Section 7.16.";
+                  }
+
+                  leaf parameters {
+                    type leafref {
+                      path "/mef-global:mef-global/" +
+                           "mef-global:bwp-flow-parameter-profiles/" +
+                           "mef-global:profile/mef-global:id";
+                    }
+                    mandatory true;
+                    description
+                      "A reference to the set of Bandwidth Profile Flow
+                       parameters that are used for this Bandwidth
+                       Profile Flow.";
+                    reference
+                      "[MEF10.3] Section 12.1, [R84], [R134],
+                       [MEF7.3] Section 7.16.2.";
+                  }
+                }
+              }
+            }
+          }
+
+          container egress-envelopes {
+            description
+              "List of Bandwidth Profile Envelopes used on this UNI for
+               Egress Bandwidth Profiles.";
+            reference
+              "[MEF10.3] Section 12.1, [MEF6.2] Section 8.2.2,
+               [MEF7.3] Section 7.8, 7.16.";
+            list envelope {
+              must "../../token-share-enabled = 'true' or " +
+                   "count(bwp-flows/bwp-flow) = 1" {
+                error-message
+                  "A UNI with Token Share Disabled MUST have
+                   exactly one Bandwidth Profile Flow per envelope.";
+                description
+                 "A UNI with Token Share Disabled MUST have exactly one
+                  Bandwidth Profile Flow per envelope.";
+                reference
+                  "[MEF6.2] [R3].";
+              }
+              key "id";
+              description
+                "List of Bandwidth Profile Envelopes used on this UNI
+                 for Egress Bandwidth Profiles.  Note that Envelopes
+                 that contain only a single Bandwidth Profile Flow might
+                 or might not be included in this list (but must not be
+                 included, in the case of MEF 6.2 services, per MEF 6.2
+                 R5).";
+              reference
+                "[MEF10.3] Section 12.1, [MEF6.2] Section 8.2.2,
+                 [MEF7.3] Section 7.8, 7.16.";
+
+              leaf id {
+                type mef-types:identifier45;
+                description
+                  "Bandwidth Profile Envelope ID";
+                reference
+                  "[MEF10.3] Section 12.1.";
+              }
+
+              leaf type {
+                type mef-types:envelope-type;
+                mandatory true;
+                description
+                  "Indicates what type of Bandwidth Profile Flows this
+                   Envelope contains.";
+              }
+
+              leaf coupling-enabled {
+                type boolean;
+                must "(../bwp-flows/bwp-flow[2]) or (. = 'false')" {
+                  error-message
+                    "When only one Bandwidth Profile Flow is mapped to
+                     an envelope, Envelope Coupling must be Disabled.";
+                  description
+                    "When only one Bandwidth Profile Flow is mapped to
+                     an Envelope, Envelope Coupling must be Disabled.";
+                  reference
+                    "[MEF10.3] [R142].";
+                }
+                mandatory true;
+                description
+                  "The Envelope Coupling Flag (CF^0).  A value of
+                   'false' corresponds to setting the coupling flag to
+                   0, i.e. unused green tokens from the lowest ranked
+                   flow are discarded.  A value of 'true' corresponds to
+                   setting the coupling flag to 1, i.e. unused green
+                   tokens from the lowest ranked flow are converted to
+                   yellow tokens for the highest ranked flow.";
+                reference
+                  "[MEF10.3] Section 12.1.";
+              }
+
+              container bwp-flows {
+                description
+                  "Egress Bandwidth Profile Flows in this Envelope.";
+                reference
+                  "[MEF10.3] Section 12.1, [MEF7.3] Section 7.16.";
+                list bwp-flow {
+                  must "../../coupling-enabled = 'false' or " +
+                       "/mef-global:mef-global/" +
+                       "mef-global:bwp-flow-parameter-profiles/" +
+                       "mef-global:profile[" +
+                       "mef-global:id = current()/parameters]/" +
+                       "mef-global:coupling-enabled = 'false'" {
+                    error-message
+                      "If an Egress Envelope's Coupling Flag is Enabled,
+                       then the Coupling Flags must be disabled for all
+                       Bandwidth Profile Flows mapped to the Envelope.";
+                    description
+                      "If an Egress Envelope's Coupling Flag is Enabled,
+                       then the Coupling Flags must be disabled for all
+                       Bandwidth Profile Flows mapped to the Envelope.";
+                    reference
+                      "[MEF10.3] [R150].";
+                  }
+
+                  must "../../type != 'per-uni' or " +
+                       "(../../../../egress-bw-profile-per-uni/" +
+                       "envelope-id = ../../id and " +
+                       "../../../../egress-bw-profile-per-uni/" +
+                       "rank = ./rank)" {
+                    error-message
+                      "If there is a per-UNI Engress Bandwidth Profile
+                       Envelope, then there must be an Egress Bandwidth
+                       Profile per UNI that references it.";
+                    description
+                      "If there is a per-UNI Egress Bandwidth Profile
+                       Envelopes, then there must be an Egress Bandwidth
+                       Profile per UNI that references it.  This is part
+                       of enforcing MEF 10.3 R134.";
+                    reference
+                      "[MEF10.3] [R134]";
+                  }
+                  key "rank";
+                  min-elements 1;
+                  description
+                    "List of Egress Bandwidth Profile Flows in this
+                     Envelope.";
+                  reference
+                    "[MEF10.3] Section 12.1. [MEF7.3] Section 7.16.";
+
+                  leaf rank {
+                    type uint8;
+                    must ". >= 1 and . <= count(..)" {
+                      error-message
+                        "The rank of a Bandwidth Profile Flow must be
+                         between 1 and n, where n is the number of flows
+                         in the Envelope";
+                      description
+                        "The rank of a Bandwidth Profile Flow must be
+                         between 1 and n, where n is the number of flows
+                         in the Envelope";
+                      reference
+                        "[MEF10.3] [R152]";
+                    }
+                    description
+                      "Rank of the Bandwidth Profile flow within the
+                       Envelope. Rank 1 is the lowest priority flow,
+                       rank n is the highest priority, where n is the
+                       number of flows in the Envelope.";
+                    reference
+                      "[MEF10.3] Section 12.1. [MEF7.3] Section 7.16.";
+                  }
+
+                  leaf parameters {
+                    type leafref {
+                      path "/mef-global:mef-global/" +
+                           "mef-global:bwp-flow-parameter-profiles/" +
+                           "mef-global:profile/mef-global:id";
+                    }
+                    mandatory true;
+                    description
+                      "A reference to the set of Bandwidth Profile Flow
+                       parameters that are used for this Bandwidth
+                       Profile Flow.";
+                    reference
+                      "[MEF10.3] Section 12.1, [R84], [R134],
+                       [MEF7.3] Section 7.16.2.";
+                  }
+                }
+              }
+            }
+          }
+
+          container ingress-bwp-per-uni {
+            description
+              "Ingress Bandwidth Profile per UNI";
+            choice options {
+              description
+                "This choice can be used to specify either a standalone
+                 Bandwidth Profile Flow, or a Bandwidth Profile Flow
+                 within a specified Bandwidth Profile Envelope.  Note
+                 that in the former case, the Bandwidth Profile Flow can
+                 be thought of as being in an Envelope that contains no
+                 other Bandwidth Profile Flows, has no Envelope ID and
+                 does not appear in the list of Bandwidth Profile
+                 Envelopes for the UNI
+                 (../../ingress-envelopes/envelope).";
+              reference
+                "[MEF10.3] sections 9.15 and 12.
+                 [MEF7.3] sections 7.8.1 and 7.16.";
+              case standalone {
+                description
+                  "A standalone Bandwidth Profile Flow is being
+                   specified. Note that this case allows for backwards
+                   compatibility with MEF 10.2 (see MEF 10.3 section
+                   12.2)";
+                leaf bw-profile-flow-parameters {
+                  type leafref {
+                    path "/mef-global:mef-global/" +
+                         "mef-global:bwp-flow-parameter-profiles/" +
+                         "mef-global:profile/mef-global:id";
+                  }
+                  mandatory true;
+                  description
+                    "Reference to a global set of Bandwidth Profile Flow
+                     parameters for this Bandwidth Profile Flow.";
+                }
+              }
+              case envelope {
+                description
+                  "An Ingress Bandwidth Profile per UNI is being
+                   specified with reference to a Bandwidth Profile
+                   Envelope in the UNI List of Ingress Bandwidth Profile
+                   Envelopes.";
+                leaf envelope-id {
+                  type leafref {
+                    path "../../ingress-envelopes/envelope/id";
+                  }
+                  must "../../ingress-envelopes/" +
+                       "envelope[id = current()]/type = 'per-uni'" {
+                    error-message
+                      "A bandwidth profile per UNI can only refer to an
+                       Envelope with type per-uni.";
+                    description
+                      "A bandwidth profile per UNI can only refer to an
+                       Envelope with type per-uni.  This is used to
+                       enforce MEF 10.3 R135.";
+                    reference
+                      "[MEF10.3] [R135]";
+                  }
+                  mandatory true;
+                  description
+                    "Reference to an ingress Bandwidth Profile Envelope
+                     on the UNI";
+                }
+                leaf rank {
+                  type leafref {
+                    path "../../ingress-envelopes/" +
+                         "envelope[id = current()/../envelope-id]/" +
+                         "bwp-flows/bwp-flow/rank";
+                  }
+                  mandatory true;
+                  description
+                    "Reference to a Bandwidth Profile Flow the given
+                     Envelope.";
+                }
+              }
+            }
+          }
+
+          container egress-bw-profile-per-uni {
+            description
+              "Egress Bandwidth Profile per UNI";
+            choice options {
+              description
+                "This choice can be used to specify either a standalone
+                 Bandwidth Profile Flow, or a Bandwidth Profile Flow
+                 within a specified Bandwidth Profile Envelope.  Note
+                 that in the former case, the Bandwidth Profile Flow can
+                 be thought of as being in an Envelope that contains no
+                 other Bandwidth Profile Flows, has no Envelope ID and
+                 does not appear in the list of Bandwidth Profile
+                 Envelopes for the UNI
+                 (../../egress-envelopes/envelope).";
+              reference
+                "[MEF10.3] sections 9.15 and 12.
+                 [MEF7.3] sections 7.8.1 and 7.16.";
+              case standalone {
+                description
+                  "A standalone Bandwidth Profile Flow is being
+                   specified. Note that this case allows for backwards
+                   compatibility with MEF 10.2 (see MEF 10.3 section
+                   12.2)";
+                leaf bw-profile-flow-parameters {
+                  type leafref {
+                    path "/mef-global:mef-global/" +
+                         "mef-global:bwp-flow-parameter-profiles/" +
+                         "mef-global:profile/mef-global:id";
+                  }
+                  mandatory true;
+                  description
+                    "Reference to a global set of Bandwidth Profile Flow
+                     parameters for this Bandwidth Profile Flow.";
+                }
+              }
+              case envelope {
+                description
+                  "An Egress Bandwidth Profile per UNI is being
+                   specified with reference to a Bandwidth Profile
+                   Envelope in the UNI List of Egress Bandwidth Profile
+                   Envelopes.";
+                leaf envelope-id {
+                  type leafref {
+                    path "../../egress-envelopes/envelope/id";
+                  }
+                  must "../../egress-envelopes/" +
+                       "envelope[id = current()]/type = 'per-uni'" {
+                    error-message
+                      "A bandwidth profile per UNI can only refer to an
+                       Envelope with type per-uni.";
+                    description
+                      "A bandwidth profile per UNI can only refer to an
+                       Envelope with type per-uni.  This is used to
+                       enforce MEF 10.3 R135.";
+                    reference
+                      "[MEF10.3] [R135]";
+                  }
+                  mandatory true;
+                  description
+                    "Reference to an egress Bandwidth Profile Envelope
+                     on the UNI";
+                }
+                leaf rank {
+                  type leafref {
+                    path "../../egress-envelopes/" +
+                         "envelope[id = current()/../envelope-id]/" +
+                         "bwp-flows/bwp-flow/rank";
+                  }
+                  mandatory true;
+                  description
+                    "Reference to a Bandwidth Profile Flow the given
+                     Envelope.";
+                }
+              }
+            }
+          }
+
+          container status {
+            config false;
+            description
+              "Operational status for the UNI";
+            leaf operational-state {
+              type boolean;
+              default "false";
+              description
+                "Operational Status of the UNI: either Enabled (if the
+                 value is 'true') or Disabled (if the value is
+                 'false').";
+              reference
+                "[MEF7.3] Section 7.7, 7.8.";
+            }
+          }
+
+          leaf uni-id {
+            type mef-types:identifier45;
+            description
+              "A unique identifier for the UNI.";
+            reference
+              "[MEF10.3] Section 9.1, [MEF7.3] Section 7.8.1.";
+          }
+
+          leaf admin-state {
+            type boolean;
+            default "true";
+            description
+              "Indicates whether the UNI is administratively
+               locked (if the value is false) or unlocked (if the value
+               is true).";
+            reference
+              "[MEF7.3] Section 7.7, 7.8.";
+          }
+
+          leaf link-aggregation {
+            type mef-types:interface-resiliency-type;
+            must ". = 'none' or " +
+                 "count(../physical-layers/links/link) > 1" {
+              error-message
+                "If there is one link, link-aggregation must be
+                 'none'.";
+              description
+                "If there is one link, link-aggregation must be
+                 'none'.";
+              reference
+                "[MEF10.3.2] [A1-R1].";
+            }
+            must ". != 'none' or " +
+                 "count(../physical-layers/links/link) = 1" {
+              error-message
+                "If there are two (or more) links, link-aggregation
+                 must not be 'none'.";
+              description
+                "If there are two (or more) links, link-aggregation
+                 must not be 'none'.";
+              reference
+                "[MEF10.3.2] [A1-R2].";
+            }
+            must ". = 'all-active' or . = 'other' or " +
+                 "count(../physical-layers/links/link) <= 2" {
+              error-message
+                "If there are three (or more) links, link-aggregation
+                 must be 'all-active' or 'other'.";
+              description
+                "If there are three (or more) links, link-aggregation
+                 must be 'all-active' or 'other'.";
+              reference
+                "[MEF10.3.2] [A1-R3].";
+            }
+            default "none";
+            description
+              "UNI Resiliency.";
+            reference
+              "[MEF10.3.2] Section 6, [MEF7.3] Section 7.7, 7.8.";
+          }
+          leaf max-frame-size {
+            type mef-types:max-frame-size-type;
+            mandatory true;
+            description
+              "This attribute describes the maximum service frame size
+               for the UNI.";
+            reference
+              "[MEF10.3] Section 9.7, [MEF7.3] Section 7.8.";
+          }
+          leaf service-multiplexing-enabled {
+            type boolean;
+            default "false";
+            description
+              "Indicates whether Service Multiplexing is enabled (if the
+               value is true) or disabled (if the value is false).  When
+               enabled, more than one EVC End Point can be associated
+               with the UNI.";
+            reference
+              "[MEF10.3] Section 9.8. [MEF7.3] Section 7.8.";
+          }
+          leaf bundling-enabled {
+            type boolean;
+            default "false";
+            description
+              "Indicates whether Bundling is enabled (if the value is
+               true) or disabled (if the value is false).  When enabled,
+               more than one CE-VLAN ID can be mapped to each EVC End
+               Point associated with this UNI.";
+            reference
+              "[MEF10.3] Section 9.12, [MEF7.3] Section 7.8.";
+          }
+          leaf all-to-one-bundling-enabled {
+            type boolean;
+            default "false";
+            description
+              "Indicates whether All-to-one Bundling is enabled (if the
+               value is true) or disabled (if the value is false).  When
+               enabled, all CE-VLAN IDs are mapped to a single EVC End
+               Point at this UNI.";
+            reference
+              "[MEF10.3] Section 9.13, [MEF7.3] Section 7.8.";
+          }
+          leaf default-ce-vlan-id {
+            when "../all-to-one-bundling-enabled = 'false'";
+            type mef-types:vlan-id-type;
+            mandatory true;
+            description
+              "The default CE-VLAN ID is the CE-VLAN ID to which
+               untagged and priority-tagged Service Frames are
+               considered to belong at this UNI, for the purpose of
+               mapping them to an EVC End Point.  Note that it is not
+               relevant when all-to-one bundling is enabled, because in
+               that case all Service Frames are mapped to the same EVC
+               End Point.";
+            reference
+              "[MEF10.3] Section 9.9, [MEF7.3] Section 7.8.";
+          }
+          leaf max-num-of-evcs {
+            type uint32 {
+              range "1..max";
+            }
+            mandatory true;
+            description
+              "The Maximum Number of EVCs that can be supported by this
+               UNI.";
+            reference
+              "[MEF10.3] Section 9.11. [MEF7.3] Section 7.8.";
+          }
+          leaf token-share-enabled {
+            type boolean;
+            default "true";
+            description
+              "Indicates whether token sharing is enabled (if the value
+               is 'true') or disabled (if the value is 'false').  When
+               token sharing is disabled, Bandwidth Profile envelopes
+               can each contain only a single bandwidth profile flow.";
+            reference
+              "[MEF6.2] Section 8.2.1, [MEF7.3] Section 7.8.";
+          }
+          leaf link-oam-enabled {
+            type boolean;
+            default "false";
+            description
+              "Link OAM Enabled/Disabled.";
+            reference
+              "[MEF10.3] Section 9.16, [MEF7.3] Section 7.8.";
+          }
+          leaf uni-meg-enabled {
+            type boolean;
+            default "false";
+            description
+              "Indicates that a SOAM Maintenance Entity Group (MEG) is
+               enabled (if true) or disabled (if false) across the
+               UNI.";
+            reference
+              "[MEF10.3] Section 9.17, [MEF7.3] Section 7.8.";
+          }
+          leaf elmi-enabled {
+            type boolean;
+            default "false";
+            description
+              "Ethernet Local Management Interface(ELMI) Enabled /
+               Disabled.";
+            reference
+              "[MEF10.3] Section 9.18, [MEF7.3] Section 7.8.";
+          }
+          leaf l2cp-address-set {
+            type mef-types:l2cp-address-set-type;
+            mandatory true;
+            description
+              "The L2CP Address Set Service Attribute specifies the
+               subset of the Bridge Reserved Addresses that are filtered
+               (i.e. L2CP Frames with this destination address are
+               Peered or Discarded but not Passed) at a L2CP Decision
+               Point.";
+            reference
+              "[MEF10.3] Section 9.19, [MEF45] Section 8.1 and Table 4,
+               [MEF7.3] Section 7.8.";
+          }
+          leaf l2cp-peering {
+            type leafref {
+              path "/mef-global:mef-global/" +
+                   "mef-global:l2cp-peering-profiles/" +
+                   "mef-global:profile/mef-global:id";
+            }
+            description
+              "L2CP Peering Profile for this UNI. This profile may
+               contain groups of L2CP Destination MAC Addresses and
+               protocols to be peered at the UNI (as opposed to being
+               passed or discarded).";
+            reference
+              "[MEF10.3] Section 9.19. [MEF45] Section 8.2 and Table 4.
+               [MEF7.3] Section 7.8.";
+          }
+
+          container port-convid-to-agglink-map {
+            when "../link-aggregation = 'all-active'";
+            description
+              "Port Conversation ID to Aggregation Link Map.  This
+               contains a list of mappings from VLAN IDs to physical
+               links.";
+            reference
+              "[MEF10.3.2] Section 6, [MEF7.3] Sections 7.7 and 7.8";
+            container default-links {
+              description
+                "Ordered list of links to use for all VLAN IDs not
+                 explicitly listed in the map below.";
+              reference
+                "[MEF10.3.2] Section 6, [MEF7.3] Sections 7.7 and 7.8";
+              leaf-list default-link {
+                type leafref {
+                  path ../../../physical-layers/links/link/link-number;
+                }
+                min-elements 1;
+                ordered-by user;
+                description
+                  "Ordered list of links to use for all VLAN IDs not
+                   explicitly listed in the map below.  The first
+                   element in the list has the highest priority.";
+                reference
+                  "[MEF10.3.2] Section 6.
+                   [MEF7.3] Sections 7.7 and 7.8.";
+              }
+            }
+
+            container portconv-map-entries {
+              description
+                "Contains a list of mappings from VLAN IDs to physical
+                 links.";
+              reference
+                "[MEF10.3.2] Section 6, [MEF7.3] Sections 7.7 and 7.8";
+              list portconv-map-entry {
+                key vid;
+                description
+                  "List of mappings from VLAN ID to physical links";
+                reference
+                  "[MEF10.3.2] Section 6.
+                   [MEF7.3] Sections 7.7 and 7.8.";
+                leaf vid {
+                  type mef-types:vlan-id-type;
+                  description
+                    "The CE-VLAN ID (used as a port conversation ID) to
+                     map.";
+                }
+
+                container links {
+                  description
+                    "Ordered list of links to use for the given VLAN
+                     ID.";
+                  leaf-list link {
+                    type leafref {
+                      path "../../../../../physical-layers/links/" +
+                           "link/link-number";
+                    }
+                    min-elements 1;
+                    ordered-by user;
+                    description
+                      "Ordered list of links to use for the given VLAN
+                       ID. The first element in the list has the highest
+                       priority.";
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
