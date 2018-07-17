@@ -1,0 +1,1523 @@
+module mef-global {
+  namespace "urn:mef:yang:mef-global";
+  prefix mef-global;
+
+  import ietf-yang-types {
+    prefix yang;
+  }
+  import ietf-inet-types {
+    prefix inet;
+  }
+  import mef-types {
+    prefix mef-types;
+  }
+
+  organization "MEF Forum";
+  contact
+    "Web URL: http://mef.net/
+     E-mail:  namespace@mef.net
+     Postal:  MEF Forum
+              6033 W. Century Boulevard, Suite 1107
+              Los Angeles, CA 90045
+              U.S.A.
+     Phone:   +1 310-642-2800
+     Fax:     +1 310-642-2808";
+  description
+    "This module defines the shared profiles and related lists
+     to be referenced when configuring MEF Services. Service
+     Providers are expected to define a set of profiles for
+     Service Attributes associated with Bandwidth, L2CP, CoS,
+     and so on. These are expected to be slowly changing as
+     they reflect the Products offered by the Service Providers
+     to their Subscribers.
+
+     Reference Overview:
+     A number of base documents have been used to create
+     the MEF Global YANG Module. The following are the
+     abbreviations for the baseline documents:
+     [MEF10.3] refers to MEF 10.3
+     'Ethernet Services Attributes Phase 3', October 2013
+     [MEF10.3.1] refers to MEF 10.3.1
+     'Composite Performance Metric (CPM) Amendment to MEF 10.3',
+     February 2015
+     [MEF6.2] refers to MEF 6.2
+     'EVC Ethernet Services Defintions Phase 3', August 2014
+     [MEF45] refers to MEF 45 'Multi-CEN L2CP', August 2014
+     [MEF7.3] refers to MEF 7.3
+     'Carrier Ethernet Management Information Model', February 2017";
+
+  revision 2018-07-11 {
+    description
+      "Revision to fix bugs found in integration.";
+    reference
+      "Legato - Services YANG SCA (MEF 58)";
+  }
+
+  revision 2017-07-27 {
+    description
+      "Initial Version.";
+    reference
+      "Legato - Services YANG SCA (MEF 58)";
+  }
+
+  container mef-global {
+    description
+      "MEF Global Profiles. This container includes
+       profiles for SLSs, CoS Name, Bandwidth Profile
+       parameter Sets, CoS and EEC ID Mappings etc.
+       These can be refered to from individual services
+       to save repeating the same information for each
+       service.";
+
+    container sls-profiles {
+      description
+        "Container for a list of SLS Profiles";
+      list profile {
+        key "id";
+        description
+          "List of SLS profiles.";
+        leaf id {
+          type mef-types:identifier1024;
+          description
+            "The SLS profile ID identifies an SLS profile
+             that can be referenced from one or more specific
+             services.";
+        }
+        leaf time-interval {
+          type uint64;
+          units "seconds";
+          mandatory true;
+          description
+            "The time period, in seconds, over which SLS
+             performance metrics are evaluated.  This is
+             often denoted 'T'.";
+          reference
+             "[MEF10.3], Section 8.8, [R32]";
+        }
+        container pm-cos-name-entries {
+          description
+            "Container for a list of CoS-Name-specific SLS
+             parameters";
+          list pm-cos-name-entry {
+            key "cos-name";
+            min-elements 1;
+            description
+              "List of Performance Metrics based SLS entries
+               by Class of Service Names";
+            leaf cos-name {
+              type leafref {
+                path "/mef-global:mef-global/cos-names-profiles/" +
+                     "profile/name";
+              }
+              description
+                "CoS Name Identifier.";
+            }
+            leaf delta-t {
+              type uint64;
+              units "ms";
+              mandatory true;
+              description
+                "The time interval over which loss is measured
+                 for the purpose of calculating Availability and
+                 related performance metrics.  This is much smaller
+                 than the time period over which SLS objectives are
+                 evaluated ('T').";
+              reference
+                "[MEF10.3] Section 8.8";
+            }
+            leaf threshold-c {
+              type mef-types:simple-percent;
+              units "percent";
+              mandatory true;
+              description
+                "Unavailability frame loss ratio threshold expressed
+                 in percentage.";
+              reference
+                "[MEF10.3] Section 8.8";
+            }
+            leaf consecutive-interval-n {
+              type uint8;
+              mandatory true;
+              description
+                "Number of consecutive small time intervals to assess.";
+              reference
+                "[MEF10.3] Section 8.8";
+            }
+            container pm-entries {
+              description
+                "Container for a list of performance objectives for
+                 this CoS Name and SLS Profile.";
+              list pm-entry {
+                key "id";
+                min-elements 1;
+                description
+                  "List of performance objectives for this CoS Name that
+                   form part of this SLS Profile.  Each performance
+                   objective pertains to a particular Performance Metric
+                   and has a number of other parameters.  Zero, one or
+                   more performance objectives may be specified for each
+                   Performance Metric, but two objectives for the same
+                   metric must not be functionally identical.";
+                reference
+                  "[MEF10.3] Section 8.8";
+                leaf id {
+                  type mef-types:identifier1024;
+                  description
+                    "Identifier for specific performance profile.";
+                }
+                choice one-way-performance-metric {
+                  mandatory true;
+                  description
+                    "Choice of different One-Way Performance
+                     Objectives";
+                  case fd {
+                    container one-way-frame-delay-pm {
+                      description
+                        "One-Way Frame Delay (FD).";
+                      reference
+                         "[MEF10.3] Section 8.8.1";
+                      leaf percentile {
+                        type mef-types:simple-percent;
+                        units "percent";
+                        mandatory true;
+                        description
+                          "Frame Delay Performance Percentile.";
+                        reference
+                          "[MEF10.3] Section 8.8.1";
+                      }
+                      leaf objective {
+                        type uint64;
+                        units "ms";
+                        mandatory true;
+                        description
+                          "Frame Delay Performance Objective.";
+                        reference
+                          "[MEF10.3] Section 8.8.1";
+                      }
+                    }
+                  }
+                  case mfd {
+                    container one-way-mean-frame-delay-pm {
+                      description
+                        "One-Way Mean Frame Delay (MFD).";
+                      reference
+                        "[MEF10.3] Section 8.8.1.";
+                      leaf objective {
+                        type uint64;
+                        units "ms";
+                        mandatory true;
+                        description
+                          "Mean Frame Delay Performance Objective.";
+                      }
+                    }
+                  }
+                  case fdr {
+                    container one-way-frame-delay-range-pm {
+                      description
+                        "One-Way Frame Delay Range (FDR)";
+                      reference
+                        "[MEF10.3] Section 8.8.1";
+                      leaf percentile {
+                        type mef-types:simple-percent;
+                        units "percent";
+                        mandatory true;
+                        description
+                          "Frame Delay Range Performance Percentile.";
+                        reference
+                          "[MEF10.3] Section 8.8.1";
+                      }
+                      leaf objective {
+                        type uint64;
+                        units "ms";
+                        mandatory true;
+                        description
+                          "Frame Delay Range Performance Objective.";
+                        reference
+                          "[MEF10.3] Section 8.8.1";
+                      }
+                    }
+                  }
+                  case ifdv {
+                    container one-way-inter-frame-delay-variation-pm {
+                      description
+                        "One-Way Inter-Frame Delay Variation (IFDV).";
+                      reference
+                        "[MEF10.3] Section 8.8.2";
+                      leaf percentile {
+                        type mef-types:simple-percent;
+                        units "percent";
+                        mandatory true;
+                        description
+                          "Inter-Frame Delay Variation Performance
+                           Percentile.";
+                        reference
+                          "[MEF10.3] Section 8.8.2";
+                      }
+                      leaf frame-pair-separation {
+                        type uint64;
+                        units "ms";
+                        mandatory true;
+                        description
+                          "Inter-Frame Delay Variation frame pair
+                           separation interval.";
+                        reference
+                          "[MEF10.3] Section 8.8.2";
+                      }
+                      leaf objective {
+                        type uint64;
+                        units "ms";
+                        mandatory true;
+                        description
+                          "Inter-Frame Delay Variation Performance
+                           Objective.";
+                        reference
+                          "[MEF10.3] Section 8.8.2";
+                      }
+                    }
+                  }
+                  case flr {
+                    container one-way-frame-loss-ratio-pm {
+                      description
+                        "One-Way Frame Loss Ration (FLR)";
+                      reference
+                         "[MEF10.3] Section 8.8.3.";
+                      leaf objective {
+                        type mef-types:simple-percent;
+                        units "percent";
+                        mandatory true;
+                        description
+                          "Frame Loss Ratio Performance Objective";
+                        reference
+                          "[MEF10.3] Section 8.8.3.";
+                      }
+                    }
+                  }
+                  case availability {
+                    container one-way-availability-pm {
+                      description
+                        "One-Way Availability";
+                      leaf objective {
+                        type mef-types:simple-percent;
+                        units "percent";
+                        mandatory true;
+                        description
+                          "Availability Performance Metric Objective";
+                        reference
+                          "[MEF10.3] Section 8.8.4.";
+                      }
+                    }
+                  }
+                  case hli {
+                    container one-way-high-loss-interval-pm {
+                      description
+                        "One-Way High Loss Intervals Count (HLI).";
+                      leaf objective {
+                        type uint64;
+                        mandatory true;
+                        description
+                          "HLI Performance Objective expressed as an
+                           integer.";
+                        reference
+                          "[MEF10.3] Section 8.8.5.";
+                      }
+                    }
+                  }
+                  case chli {
+                    container one-way-consecutive-high-loss-interval-pm {
+                      description
+                        "One-Way Consecutive High Loss Intervals Count
+                         (CHLI)";
+                      reference
+                        "[MEF10.3] Section 8.8.5.";
+                      leaf consecutive-number-p {
+                        type uint8;
+                        must ". < ../../../../consecutive-interval-n" {
+                          error-message
+                            "The value of
+                             chli-consecutive-small-time-intervals must
+                             be less than
+                             consecutive-small-time-intervals (p < n) if
+                             both are defined.";
+                          description
+                            "The value of
+                             chli-consecutive-small-time-intervals must
+                             be less than
+                             consecutive-small-time-intervals (p < n) if
+                             both are defined.";
+                          reference
+                            "[MEF10.3] Section 8.8.5";
+                        }
+                        mandatory true;
+                        description
+                          "Number of consecutive small time intervals
+                           for assessing CHLI.";
+                        reference
+                          "[MEF10.3] Table 10.";
+                      }
+                      leaf objective {
+                        type uint64;
+                        mandatory true;
+                        description
+                          "Consecutive HLI Performance Objective
+                           expressed as an integer.";
+                        reference
+                          "[MEF10.3] Section 8.8.5.";
+                      }
+                    }
+                  }
+                  case cpm {
+                    container one-way-composite-pm {
+                      description
+                        "One-Way Composite Peformance Metric (CPM)";
+                      reference
+                         "[MEF10.3.1] Section 8.8.7";
+                      leaf cpi-threshold-u {
+                        type uint8 {
+                           range "0..1";
+                        }
+                        mandatory true;
+                        description
+                          "The Composite Performance Indicator threshold
+                           which if exceeded suggests a severe errored
+                           time interval.";
+                        reference
+                          "[MEF10.3.1], Section 3";
+                      }
+                      leaf frame-loss-indicator {
+                        type boolean;
+                        mandatory true;
+                        description
+                          "The indicator for frame loss
+                           characteristics";
+                        reference
+                          "[MEF10.3.1], Section 3";
+                      }
+                      leaf frame-delay-indicator {
+                        type boolean;
+                        mandatory true;
+                        description
+                          "The indicator for frame delay
+                           characteristics";
+                        reference
+                          "[MEF10.3.1], Section 3";
+                      }
+                      leaf ifdv-indicator {
+                        type boolean;
+                        mandatory true;
+                        description
+                          "The indicator for inter-frame delay variation
+                           characteristics";
+                        reference
+                          "[MEF10.3.1], Section 3";
+                      }
+                      leaf one-way-fd-threshold {
+                        type uint64;
+                        mandatory true;
+                        description
+                          "One way frame delay threshold";
+                        reference
+                          "[MEF10.3.1], Section 3";
+                      }
+                      leaf one-way-ifdv-threshold {
+                        type uint64;
+                        mandatory true;
+                        description
+                          "One way inter-frame delay threshold";
+                        reference
+                          "[MEF10.3.1], Section 3";
+                      }
+                      leaf objective {
+                        type mef-types:simple-percent;
+                        mandatory true;
+                        description
+                          "Composite Performance Metric Objective
+                           expressed as a percentage";
+                        reference
+                          "[MEF10.3.1], Section 3";
+                      }
+                    }
+                  }
+                  case group-avail {
+                    container one-way-group-availability-pm {
+                      description
+                        "One-Way Group Availability";
+                      reference
+                        "[MEF10.3] Section 8.8.6.";
+                      leaf min-number-of-uni-pair-sets {
+                        type uint16;
+                        mandatory true;
+                        description
+                          "Minimum number of sets of ordered UNI
+                           pairs that must be available";
+                        reference
+                          "[MEF10.3] Section 8.8.6.";
+                      }
+                      leaf objective {
+                        type mef-types:simple-percent;
+                        units "percent";
+                        mandatory true;
+                        description
+                          "Group Availability Performance Objective
+                           expressed as a percentage.";
+                        reference
+                          "[MEF10.3] Section 8.8.6.";
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    container cos-names-profiles {
+      description
+        "Container for global list of CoS names.";
+      list profile {
+        key "name";
+        description
+          "List of all CoS Names used in any EVC.  This list is
+           referred to in many other places in the model.";
+        leaf name {
+          type mef-types:identifier1024;
+          description
+           "CoS Name.";
+        }
+      }
+    }
+
+    container bwp-flow-parameter-profiles {
+      description
+        "Container for a list of Bandwidth Profile Flow parameter
+         sets.";
+      list profile {
+          key "id";
+          description
+            "Bandwidth Profile parameter set.";
+          reference
+            "[MEF10.3] Section 12.1.";
+          leaf id {
+            type mef-types:identifier1024;
+            description
+              "Identifier for a Bandwidth Profile Parameter Set.";
+          }
+          leaf cir {
+            type mef-types:bwp-ir-type;
+            units "bits-per-sec";
+            mandatory true;
+            description
+              "This attribute identifies the Committed Information
+               Rate (CIR) in bits per second for one BWP flow.";
+            reference
+              "[MEF10.3] Section 12.1.";
+          }
+          leaf cir-max {
+            type mef-types:bwp-ir-type;
+            units "bits-per-sec";
+            mandatory true;
+            description
+              "This attribute identifies the Maximum Committed
+               Information Rate (CIR). This parameter limits
+               the rate of tokens added to the committed token bucket.";
+            reference
+              "[MEF10.3] Section 12.1.";
+          }
+          leaf cbs {
+            type mef-types:bwp-bs-type;
+            units "bytes";
+            mandatory true;
+            description
+              "This attribute identifies the Committed Burst Size (CBS)
+               in bytes for one BWP flow. This parameter limits
+               the maximum number of bytes available for a burst of
+               Service Frames sent at the UNI line rate that will
+               be declared Green by the Bandwidth Profile.";
+            reference
+              "[MEF10.3] Section 12.1.";
+          }
+          leaf eir {
+            type mef-types:bwp-ir-type;
+            units "bits-per-sec";
+            mandatory true;
+            description
+              "This attribute identifies the Excess Information
+               Rate (EIR) in bits per second for one BWP flow.
+               This parameter limits the average rate in bits
+               per second of Service Frames that will be declared
+               Yellow by the Bandwidth Profile.";
+            reference
+              "[MEF10.3] Section 12.1.";
+          }
+          leaf eir-max {
+            type mef-types:bwp-ir-type;
+            units "bits-per-sec";
+            mandatory true;
+            description
+              "This attribute identifies the Maximum Excess
+               Information Rate (EIR) in bits per second for
+               one BWP flow. This parameter limits the rate of
+               tokens added to the excess token bucket.";
+            reference
+              "[MEF10.3] Section 12.1.";
+          }
+          leaf ebs {
+            type mef-types:bwp-bs-type;
+            units "bytes";
+            mandatory true;
+            description
+              "This attribute identifies the Excess Burst Size
+               (EBS) in bytes for one BWP flow.
+               This parameter limits the maximum number of
+               bytes available for a burst of Service Frames
+               sent at the UNI line rate that will be declared
+               Yellow by the Bandwidth Profile.";
+             reference
+               "[MEF10.3] Section 12.1.";
+          }
+          leaf coupling-enabled {
+            type boolean;
+            default "false";
+            description
+              "The Per Bandwidth Profile Coupling Flag (CF) attribute.
+               This parameter determines whether or not overflow
+               tokens not used for Service Frames declared Green
+               can be used as Yellow tokens.
+
+               A value of 'false' corresponds to setting the coupling
+               flag to 0, i.e. unused green tokens flow down to the
+               Bandwidth Profile Flow at the next lowest rank
+               within the same Bandwidth Profile Envelope.
+               A value of 'true' corresponds to setting the coupling
+               flag to 1, i.e. unused green tokens are converted to
+               yellow tokens for the same Bandwidth Profile Flow.";
+            reference
+              "[MEF10.3] Section 12.1 [R149].";
+          }
+          leaf color-mode {
+            type mef-types:bwp-color-mode-type;
+            default "color-blind";
+            description
+              "This attribute describes the color mode (CM) to
+               be applied as 'color-blind mode' or 'color-aware mode'.";
+            reference
+              "[MEF10.3] Section 12.1, [R151].";
+          }
+      }
+    }
+
+    container l2cp-cos-map-profiles {
+      description
+        "Container for L2CP CoS Profiles that map L2CP Protocols to CoS
+         Names.";
+      list profile {
+        key "id";
+        description
+          "Profiles for the Ingress map from L2CP Protocol to CoS
+           names.";
+        reference
+          "[MEF10.3] Section 10.2.2";
+
+        leaf id {
+          type mef-types:identifier1024;
+          description
+            "Identifies a specific profile for mapping L2CP protocols to
+             CoS names.";
+        }
+        container map-entries {
+          description
+            "Layer 2 Control Protocol (L2CP) Classes of Service (CoS).";
+          list map-entry {
+            key "protocol protocol-id";
+            min-elements 1;
+            description
+              "List of mapping entries that map L2CP protocols to CoS
+               Names. This map is applied to ingress L2CP Frames in
+               order to determine the correct CoS Name to apply.";
+            reference
+              "[MEF10.3] Section 10.2.2. [MEF45] Section 6.2.";
+            leaf protocol {
+              type mef-types:l2cp-peering-protocol-field-type;
+              description
+                "The Protocol is one of Ethertype, LLC, or Other.";
+            }
+            leaf protocol-id {
+              type uint16;
+              description
+                "The Protocol Identifier is the protocol specific value
+                 associated with the protocol and take the form of a
+                 uint16 value such as 0x8100 or 0x88a8.";
+            }
+            choice simple-or-subtypes {
+              mandatory true;
+              description
+                "Simple or subtype choice.  In the simple case, there
+                 are no subtypes and the protocol and protocol-id map
+                 directly to a CoS Name.  Otherwise, a list of subtypes
+                 is given where each subtype can map to a different CoS
+                 Name.";
+              case subtypes-option {
+                container subtypes {
+                  list subtype {
+                    key "id";
+                    min-elements 1;
+                    leaf id {
+                      type uint8;
+                      description
+                        "L2CP Subtype for this protocol and protocol
+                         ID.";
+                    }
+                    leaf cos-name {
+                      type leafref {
+                        path "/mef-global:mef-global/" +
+                             "cos-names-profiles/profile/name";
+                      }
+                      mandatory true;
+                      description
+                        "The Class of Service (CoS) Name to which L2CP
+                         frames with the given protocol ID and subtype 
+                         are mapped.";
+                    }
+                    description
+                      "List of mapping from subtypes to cos-name for a
+                       given protocol and protocol-id.";
+                  }
+                  description
+                    "Container for list of subtypes configured.";
+                }
+              }
+              case simple-option {
+                leaf cos-name {
+                  type leafref {
+                    path "/mef-global:mef-global/cos-names-profiles/" +
+                         "profile/name";
+                  }
+                  mandatory true;
+                  description
+                    "The Class of Service (CoS) Name to which L2CP frames
+                     with the given protocol ID are mapped.";
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    container l2cp-eec-profiles {
+      description
+        "Container for L2CP EEC Profiles that map L2CP Protocols to EEC
+         Names.";
+      list profile {
+        key "id";
+        description
+          "Profiles for the Egress map from L2CP Protocols to
+           Egress Equivalance Class (EEC) names.";
+        reference
+          "[MEF10.3] Section 10.4.2";
+
+        leaf id {
+          type mef-types:identifier1024;
+          description
+            "Identifies a specific profile for mapping L2CP protocols to
+             EEC names.";
+        }
+        container map-entries {
+          description
+            "Layer 2 Control Protocol (L2CP)
+             Egress Equivalance Class (EEC) Mappings.";
+          list map-entry {
+            key "protocol protocol-id";
+            min-elements 1;
+            description
+              "List of mapping entries that map L2CP protocols to EEC
+               Names. This map is applied to egress L2CP Frames in order
+               to determine the correct EEC Name to apply.";
+
+            reference
+              "[MEF10.3] Section 10.4.2. [MEF6.2] Section 6.2.";
+            leaf protocol {
+              type mef-types:l2cp-peering-protocol-field-type;
+              description
+                "The Protocol is one of Ethertype, LLC, or Other.";
+            }
+            leaf protocol-id {
+              type uint16;
+              description
+                "The Protocol Identifier is the protocol specific value
+                 associated with the protocol and take the form of a
+                 uint16 value such as 0x08100 or 0x88a8.";
+            }
+            choice simple-or-subtypes {
+              mandatory true;
+              description
+                "Simple or subtype choice.  In the simple case, there
+                 are no subtypes and the protocol and protocol-id map
+                 directly to an EEC Name.  Otherwise, a list of subtypes
+                 is given where each subtype can map to a different EEC
+                 Name.";
+              case subtypes-option {
+                container subtypes {
+                  list subtype {
+                    key "id";
+                    min-elements 1;
+                    leaf id {
+                      type uint8;
+                      description
+                        "L2CP Subtype for this protocol and protocol
+                         ID.";
+                    }
+                    leaf eec-name {
+                      type string;
+                      mandatory true;
+                      description
+                        "The Egress Equivalance Class (EEC) Name to
+                         which L2CP frames with the given protocol ID
+                         and subtype are mapped.";
+                    }
+                    description
+                      "List of mapping from subtypes to EEC names for a
+                       given protocol and protocol-id.";
+                  }
+                  description
+                    "Container for list of subtypes configured.";
+                }
+              }
+              case simple-option {
+                leaf eec-name {
+                  type string;
+                  mandatory true;
+                  description
+                    "The EEC Name to which L2CP frames with the
+                     given protocol ID are mapped.";
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    container l2cp-peering-profiles {
+      description
+        "Conatiner for profiles for Layer 2 Control Protocol (L2CP)
+         Peering Configuration.";
+      list profile {
+        key "id";
+        description
+          "A list of global profiles for Layer 2 Control Protocol
+           Peering.";
+        reference
+          "[MEF10.3] Section 8.5. [MEF45] Section 8.2.";
+        leaf id {
+          type mef-types:identifier1024;
+          description
+            "The L2CP ID identifies a specific profile for Layer 2
+            Control Protocol Peering.";
+        }
+        container l2cp-peerings {
+          description
+            "An L2CP Peering profile containing a list of Destination
+             MACs and protocols to be peered.";
+          list l2cp-peering {
+            key "dest-mac-addr protocol protocol-id";
+            min-elements 1;
+            description
+              "List of Destination MAC Addresses and Protocol IDs
+               (and optionally Subtypes) that specifies L2CP protocols
+               to be peered.";
+            reference
+              "[MEF10.3] Section 8.5. [MEF45] Section 8.2.";
+            leaf dest-mac-addr {
+              type yang:mac-address;
+              description
+                "The Destination MAC Address for the Layer 2 Control
+                 Protocol.";
+            }
+            leaf protocol {
+              type mef-types:l2cp-peering-protocol-field-type;
+              description
+                "The Protocol is one of Ethertype, LLC, or Other.";
+            }
+            leaf protocol-id {
+              type uint16;
+              description
+                "The Protocol Identifier is the protocol specific value
+                 associated with the protocol in a uint16 format such as
+                 0x8100.";
+            }
+            leaf-list subtype {
+              type uint8;
+              description
+                "If one or more Subtypes are specified, only L2CP frames
+                 with the given Destination MAC, Protocol ID and Subtype
+                 are peered.  If this list is empty, all L2CP frames
+                 with the given Destination MAC and Protocol ID are
+                 peered.";
+            }
+          }
+        }
+      }
+    }
+
+    container eec-profiles {
+      description
+        "Egress Equivalence Class (EEC) Profiles.";
+      list profile {
+        key "id";
+        description
+          "List of EEC profile";
+        leaf id {
+          type mef-types:identifier1024;
+          description
+            "This attribute identifies the EEC profile.";
+        }
+        leaf l2cp-eec-id {
+          type leafref {
+            path "/mef-global:mef-global/l2cp-eec-profiles/profile/id";
+          }
+          description
+            "L2CP EEC mapping profile identifier.  If set, this
+             identifies a profile that specifies how certain L2CP
+             frames are mapped to EEC Names within this EEC Profile.
+             If unset, it is treated as if the mapping were empty,
+             i.e. all L2CP frames are mapped to EEC Names as if
+             they were data frames.";
+          reference
+            "[MEF10.3] Section 10.4.2";
+        }
+        choice eec-id {
+          mandatory true;
+          description
+            "EEC Identifier, which specifies how Data Service Frames are
+             mapped to EEC Names.";
+          reference
+            "[MEF10.3] Section 10.4.1.";
+          case pcp {
+            description
+              "If this case is selected, the EEC ID is based on the
+               PCP.";
+            reference
+              "[MEF10.3] Section 10.4.1.1, [MEF7.3] Section 7.12.2.";
+            container eec-pcp {
+              must "default-pcp-eec-name or count(pcp) = 8" {
+                error-message
+                  "An EEC Name must be specified for all 8 PCP values if
+                   no default EEC name is specified.";
+                description
+                  "An EEC Name must be specified for all 8 PCP values if
+                   no default EEC name is specified.";
+                reference
+                  "[MEF10.3] [R115]";
+              }
+              description
+                "Parameters for mapping Data Service Frames to EEC Names
+                 when the mapping is based on the CE-VLAN PCP field.";
+              reference
+                "[MEF10.3] Section 10.4.1.1.";
+              leaf default-pcp-eec-name {
+                type string;
+                description
+                  "Default value for EEC Name for PCP when it has not
+                   been explicitly configured.";
+              }
+              list pcp {
+                key "pcp-value";
+                description
+                  "List of mappings from PCP values to EEC Names.";
+                reference
+                  "[MEF10.3] Section 10.4.1.1.";
+                leaf pcp-value {
+                  type mef-types:ieee8021p-priority-type;
+                  description
+                    "PCP value to map to the given EEC Name.";
+                  reference
+                    "[MEF10.3] Section 10.4.1.1.";
+                }
+                leaf eec-name {
+                  type string;
+                  mandatory true;
+                  description
+                    "This attribute identifies the name of a Egress
+                     Equivalence Class instance.";
+                }
+              }
+            }
+          }
+          case dscp {
+            description
+              "If this case is selected, the EEC ID is based on the
+               DSCP.";
+            reference
+              "[MEF10.3] Section 10.4.1.2, [MEF7.3] Section 7.12.3.";
+            container eec-dscp {
+              must "(default-ipv4-eec-name or " +
+                               "count(ipv4-dscp) = 64) and " +
+                   "(default-ipv6-eec-name or " +
+                               "count(ipv6-dscp) = 64)" {
+                error-message
+                  "An EEC Name must be specified for all 64 DSCP values
+                   if no default EEC name is specified.";
+                description
+                  "An EEC Name must be specified for all 64 DSCP values
+                   if no default EEC name is specified.";
+                reference
+                  "[MEF10.3] [R117] and [R118]";
+              }
+              description
+                "Parameters for mapping Data Service Frames to EEC Names
+                 when the mapping is based on the IP DS field.";
+              reference
+                "[MEF10.3] Section 10.4.1.2.";
+              leaf default-ipv4-eec-name {
+                type string;
+                description
+                  "Default EEC Name for Data Service Frames carrying
+                   IPv4 packets when the DSCP value has not been
+                   explicitly configured in the EEC map.";
+              }
+              leaf default-ipv6-eec-name {
+                type string;
+                description
+                  "Default EEC Name for Data Service Frames carrying
+                   IPv6 packets when the DSCP value has not been
+                   explicitly configured in the EEC map.";
+              }
+              list ipv4-dscp {
+                key "dscp-value";
+                description
+                  "List of mappings from DSCP values to EEC Names for
+                   Data Service Frames carrying an IPv4 packet.";
+                leaf dscp-value {
+                  type inet:dscp;
+                  description
+                    "DSCP value to map to the given EEC Name.";
+                  reference
+                    "[MEF10.3] Section 10.4.1.2.";
+                }
+                leaf eec-name {
+                  type string;
+                  mandatory true;
+                  description
+                    "This attribute identifies the name of a Egress
+                     Equivalence Class instance.";
+                }
+              }
+              list ipv6-dscp {
+                key "dscp-value";
+                description
+                  "List of mappings from DSCP values to EEC Names for
+                   Data Service Frames carrying an IPv6 packet.";
+                leaf dscp-value {
+                  type inet:dscp;
+                  description
+                    "DSCP value to map to the given EEC Name.";
+                  reference
+                    "[MEF10.3] Section 10.4.1.2.";
+                }
+                leaf eec-name {
+                  type string;
+                  mandatory true;
+                  description
+                    "This attribute identifies the name of a Egress
+                     Equivalence Class instance.";
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    container cos-profiles {
+      description
+        "Class of Service (CoS) Profiles.";
+      list profile {
+        key "id";
+        description
+          "List of CoS Profiles.  Each profile specifies how to assign a
+           CoS Name to ingress frames.";
+        reference
+          "[MEF10.3] Section 10.2.";
+        leaf id {
+          type mef-types:identifier1024;
+          description
+            "This attribute identifies the CoS profile.";
+        }
+        leaf l2cp-cos-id {
+          type leafref {
+            path "/mef-global:mef-global/l2cp-cos-map-profiles/" +
+                 "profile/id";
+          }
+          description
+            "L2CP CoS mapping profile identifier.  If set, this
+             identifies a profile that specifies how certain L2CP
+             frames are mapped to CoS Names within this CoS Profile.
+             If unset, it is treated as if the mapping were empty,
+             i.e. all L2CP frames are mapped to CoS Names as if
+             they were data frames.";
+          reference
+            "[MEF10.3] Section 10.2.2.";
+        }
+        choice cos-id {
+          mandatory true;
+          description
+            "CoS Identifier, which specifies how Data Service Frames are
+             mapped to CoS Names.";
+          reference
+            "[MEF10.3] Section 10.2.1.";
+          case evc {
+            description
+              "If this case is selected, the CoS ID is based on the
+               EVC.";
+            reference
+              "[MEF10.3] Section 10.2.1.1, [MEF7.3] Section 7.11.1.";
+            container cos-evc {
+              description
+                "Parameters used when all Data Service Frames for the
+                 EVC are mapped to the same CoS Name.";
+              reference
+                "[MEF10.3] Section 10.2.1.1.";
+              leaf evc-cos-name {
+                type leafref {
+                  path "/mef-global:mef-global/cos-names-profiles/" +
+                       "profile/name";
+                }
+                mandatory true;
+                description
+                  "CoS Name to which all ingress Data Service Frames for
+                   the EVC are mapped.";
+              }
+            }
+          }
+          case pcp {
+            description
+              "If this case is selected, the CoS ID is based on the
+               PCP.";
+            reference
+              "[MEF10.3] Section 10.2.1.2, [MEF7.3] Section 7.11.1.";
+            container cos-pcp {
+              must "default-pcp-cos-name or count(pcp) = 8" {
+                error-message
+                  "A CoS Name must be specified for all 8 PCP values if
+                   no default CoS name is specified.";
+                description
+                  "A CoS Name must be specified for all 8 PCP values if
+                   no default CoS name is specified.";
+                reference
+                  "[MEF10.3] [R93]";
+              }
+              description
+                "Parameters for mapping Data Service Frames to CoS Names
+                 when the mapping is based on the CE-VLAN PCP field.";
+              reference
+                "[MEF10.3] Section 10.2.1.2.";
+              leaf default-pcp-cos-name {
+                type leafref {
+                   path "/mef-global:mef-global/cos-names-profiles/" +
+                        "profile/name";
+                }
+                description
+                  "Default value for CoS Name for PCP when it has not
+                   been explicitly configured.";
+              }
+              list pcp {
+                key "pcp-value";
+                description
+                  "List of mappings from PCP values to CoS Names.";
+                reference
+                  "[MEF10.3] Section 10.2.1.2.";
+                leaf pcp-value {
+                  type mef-types:ieee8021p-priority-type;
+                  description
+                    "PCP value to map to the given CoS Name.";
+                  reference
+                    "[MEF10.3] Section 10.2.1.2.";
+                }
+                choice discard-or-cos-name {
+                  mandatory true;
+                  description
+                    "Choice between discarding frames that match the PCP
+                     value or mapping them to the given CoS Name.";
+                  case discard {
+                    leaf discard {
+                      type empty;
+                      description
+                        "If set, discard Service Frames that have
+                         this PCP value.";
+                    }
+                  }
+                  case cos-name {
+                    leaf cos-name {
+                      type leafref {
+                        path "/mef-global:mef-global/" +
+                             "cos-names-profiles/profile/name";
+                      }
+                      description
+                        "If selected, the CoS Name that frames with this
+                         PCP value are mapped to.";
+                    }
+                  }
+                }
+              }
+            }
+          }
+          case dscp {
+            description
+              "If this case is selected, the CoS ID is based on the
+               DSCP.";
+            reference
+              "[MEF10.3] Section 10.2.1.3, [MEF7.3] Section 7.11.3.";
+            container cos-dscp {
+              must "(default-ipv4-cos-name or " +
+                               "count(ipv4-dscp) = 64) and " +
+                   "(default-ipv6-cos-name or " +
+                               "count(ipv6-dscp) = 64)" {
+                error-message
+                  "A CoS Name must be specified for all 64 DSCP values
+                   if no default CoS name is specified.";
+                description
+                  "An CoS Name must be specified for all 64 DSCP values
+                   if no default CoS name is specified.";
+                reference
+                  "[MEF10.3] [R95] and [R96]";
+              }
+              description
+                "Parameters for mapping Data Service Frames to CoS Names
+                 when the mapping is based on the IP DS field.";
+              reference
+                "[MEF10.3] Section 10.2.1.3.";
+              leaf default-ipv4-cos-name {
+                type leafref {
+                  path "/mef-global:mef-global/cos-names-profiles/" +
+                       "profile/name";
+                }
+                description
+                  "Default CoS Name for Data Service Frames carrying
+                   IPv4 packets when the DSCP value has not been
+                   explicitly configured in the CoS map.";
+              }
+              leaf default-ipv6-cos-name {
+                type leafref {
+                  path "/mef-global:mef-global/cos-names-profiles/" +
+                       "profile/name";
+                }
+                description
+                  "Default CoS Name for Data Service Frames carrying
+                   IPv6 packets when the DSCP value has not been
+                   explicitly configured in the CoS map.";
+              }
+              list ipv4-dscp {
+                key "dscp-value";
+                description
+                  "List of mappings from DSCP values to CoS Names for
+                   Data Service Frames carrying an IPv4 packet.";
+                reference
+                  "[MEF10.3] Section 10.2.1.3.";
+                leaf dscp-value {
+                  type inet:dscp;
+                  description
+                    "DSCP value to map to the given CoS Name.";
+                  reference
+                    "[MEF10.3] Section 10.2.1.3.";
+                }
+                choice discard-or-cos-name {
+                  mandatory true;
+                  description
+                   "Choice between discarding frames that match a DSCP
+                    value or mapping them to a given CoS Name.";
+                  case discard {
+                    leaf discard {
+                      type empty;
+                      description
+                        "If set, discard Service Frames that match
+                         this DSCP value.";
+                    }
+                  }
+                  case cos-name {
+                    leaf cos-name {
+                      type leafref {
+                        path "/mef-global:mef-global/" +
+                             "cos-names-profiles/profile/name";
+                      }
+                      description
+                        "If selected, the CoS Name that frames with this
+                         DSCP value are mapped to.";
+                    }
+                  }
+                }
+              }
+              list ipv6-dscp {
+                key "dscp-value";
+                description
+                  "List of mappings from DSCP values to CoS Names for
+                   Data Service Frames carrying an IPv6 packet.";
+                reference
+                  "[MEF10.3] Section 10.2.1.3.";
+                leaf dscp-value {
+                  type inet:dscp;
+                  description
+                    "DSCP value to map to the given CoS Name.";
+                  reference
+                    "[MEF10.3] Section 10.2.1.3.";
+                }
+                choice discard-or-cos-name {
+                  mandatory true;
+                  description
+                    "Choice between discarding frames that match a DSCP
+                     value or mapping them to a given CoS Name.";
+                  case discard {
+                    leaf discard {
+                      type empty;
+                      description
+                        "If set, discard Service Frames that match
+                         this DSCP value.";
+                    }
+                  }
+                  case cos-name {
+                    leaf cos-name {
+                      type leafref {
+                        path "/mef-global:mef-global/" +
+                             "cos-names-profiles/profile/name";
+                      }
+                      description
+                        "If selected, the CoS Name that frames with this
+                         DSCP value are mapped to.";
+                    }
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+
+    container color-mapping-profiles {
+      description
+        "Color Mapping Profiles, for mapping Service Frames to a Color
+         ID.";
+      list profile {
+        key "id";
+        description
+          "List of Color Mapping Profiles";
+        reference
+          "[MEF10.3] section 10.3, [MEF7.3] section 7.13";
+        leaf id {
+          type string;
+          description
+            "This attribute identifies a Color Mapping Profile.";
+        }
+
+        choice color-id {
+          mandatory true;
+          description
+            "Color identifier, which specifies how Service Frames
+             are mapped to a color, i.e. to Green or Yellow.";
+          reference
+            "[MEF10.3] section 10.3, [MEF7.3] section 7.13";
+
+          case evc {
+            description
+              "If this case is selected, the Color ID is based on the
+               EVC.";
+            reference
+              "[MEF10.3] section 10.3.1, [MEF7.3] section 7.13.1";
+            container color-evc {
+              description
+                "Parameters used when all Service Frames for the EVC
+                 are mapped to the same color.";
+              leaf evc-color-name {
+                type mef-types:color-type;
+                mandatory true;
+                description
+                  "Color to which all Service Frames for the EVC are
+                   mapped.";
+                reference
+                  "[MEF10.3] section 10.3.1, [MEF7.3] section 7.13.1";
+              }
+            }
+          }
+
+          case dei {
+            description
+              "If this case is selected, the Color ID is based on the
+               DEI. Frames with DEI 0 are mapped to green and frames
+               with DEI 1 are mapped to yellow.";
+            reference
+              "[MEF10.3] section 10.3.2, [MEF7.3] section 7.13.3";
+            container color-dei {
+              description
+                "Parameters used when Service Frames for the EVC
+                 are mapped to a color based on the DEI.";
+              leaf dei {
+                type empty;
+                mandatory true;
+                description
+                  "When set, the Color ID is based on the DEI.";
+                reference
+                  "[MEF10.3] section 10.3.2, [MEF7.3] section 7.13.3";
+              }
+            }
+          }
+
+          case pcp {
+            description
+              "If this case is selected, the Color ID is based on the
+               PCP.";
+            reference
+              "[MEF10.3] section 10.3.3, [MEF7.3] section 7.13.2";
+            container color-pcp {
+              must "default-pcp-color-name or count(pcps/pcp) = 8" {
+                error-message
+                  "When the Color Identifier is based on the
+                   CE-VLAN PCP, each possible PCP value must
+                   map to exactly one color.";
+                description
+                  "When the Color Identifier is based on the
+                   CE-VLAN PCP, each possible PCP value must
+                   map to exactly one color.";
+                reference
+                  "[MEF10.3] R107";
+              }
+
+              leaf default-pcp-color-name {
+                type mef-types:color-type;
+                description
+                  "Default value for color when it has not been
+                   explicitly configured.";
+              }
+              container pcps {
+                description
+                  "Mappings from PCP values to colors";
+                list pcp {
+                  key "pcp-value";
+                  description
+                    "List of mappings from PCP values to colors.";
+                  reference
+                    "[MEF10.3] section 10.3.3, [MEF7.3] section 7.13.2";
+                  leaf pcp-value {
+                    type mef-types:ieee8021p-priority-type;
+                    description
+                      "PCP value to map to the given color";
+                  }
+                  leaf color {
+                    type mef-types:color-type;
+                    mandatory true;
+                    description
+                      "Color to which to map frames with the given PCP
+                       value.";
+                  }
+                }
+              }
+              description
+                "Parameters used when Service Frames for the EVC
+                 are mapped to a color based on the CE-VLAN PCP field.";
+              reference
+                "[MEF10.3] section 10.3.3, [MEF7.3] section 7.13.2";
+            }
+          }
+
+          case dscp {
+            description
+              "If this case is selected, the Color ID is based on the
+               DSCP.";
+            reference
+              "[MEF10.3] section 10.3.4, [MEF7.3] section 7.13.4";
+            container color-dscp {
+              must "default-dscp-color-name or " +
+                   "count(ipv6-dscps/ipv6-dscp) = 64" {
+                error-message
+                  "When the Color Identifier is based on the
+                   CE-VLAN DSCP, each possible DSCP value must
+                   map to exactly one color for IPv6.";
+                description
+                  "When the Color Identifier is based on the
+                   CE-VLAN DSCP, each possible DSCP value must
+                   map to exactly one color for IPv6.";
+                reference
+                  "[MEF10.3] R109";
+              }
+              must "default-dscp-color-name or " +
+                   "count(ipv4-dscps/ipv4-dscp) = 64" {
+                error-message
+                  "When the Color Identifier is based on the
+                   CE-VLAN DSCP, each possible DSCP value must
+                   map to exactly one color for IPv4.";
+                description
+                   "When the Color Identifier is based on the
+                    CE-VLAN DSCP, each possible DSCP value must
+                    map to exactly one color for IPv4.";
+                reference
+                  "[MEF10.3] R108";
+              }
+              description
+                "Parameters used when Service Frames for the EVC
+                 are mapped to a color based on the IP DS field.";
+              reference
+                "[MEF10.3] section 10.3.4, [MEF7.3] section 7.13.4";
+              leaf default-dscp-color-name {
+                type mef-types:color-type;
+                description
+                  "Default value for color for Service Frames carrying
+                   an IP Packet when the DSCP has not been
+                   explicitly configured in the color map.";
+              }
+              container ipv4-dscps {
+                description
+                  "Mappings from DSCP values to colors for Service
+                   Frames carrying an IPv4 packet.";
+                list ipv4-dscp {
+                  key "dscp-value";
+                  description
+                    "List of mappings from DSCP values to colors for
+                     Service Frames carrying an IPv4 packet.";
+                  reference
+                    "[MEF10.3] section 10.3.4, [MEF7.3] section 7.13.4";
+                  leaf dscp-value {
+                    type inet:dscp;
+                    description
+                      "DSCP value to map to the given color";
+                  }
+                  leaf color {
+                    type mef-types:color-type;
+                    mandatory true;
+                    description
+                      "Color to which to map frames with the given DSCP
+                       value.";
+                  }
+                }
+              }
+              container ipv6-dscps {
+                description
+                  "Mappings from DSCP values to colors for Service
+                   Frames carrying an IPv6 packet.";
+                list ipv6-dscp {
+                  key "dscp-value";
+                  description
+                    "List of mappings from DSCP values to colors for
+                     Service Frames carrying an IPv6 packet.";
+                  reference
+                    "[MEF10.3] section 10.3.4, [MEF7.3] section 7.13.4";
+                  leaf dscp-value {
+                    type inet:dscp;
+                    description
+                      "DSCP value to map to the given color";
+                  }
+                  leaf color {
+                    type mef-types:color-type;
+                    mandatory true;
+                    description
+                      "Color to which to map frames with the given DSCP
+                       value.";
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}

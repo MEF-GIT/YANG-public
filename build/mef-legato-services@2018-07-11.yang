@@ -1,0 +1,2969 @@
+module mef-legato-services {
+  namespace "urn:mef:yang:mef-legato-services";
+  prefix mef-services;
+
+  import ietf-yang-types {
+    prefix yang;
+  }
+  import mef-types {
+    prefix mef-types;
+  }
+  import mef-global {
+    prefix mef-global;
+  }
+  import mef-legato-interfaces {
+    prefix mef-interfaces;
+  }
+
+  organization "MEF Forum";
+  contact
+    "Web URL: http://mef.net/
+     E-mail:  namespace@mef.net
+     Postal:  MEFForum
+              6033 W. Century Boulevard, Suite 1107
+              Los Angeles, CA 90045
+              U.S.A.
+     Phone:   +1 310-642-2800
+     Fax:     +1 310-642-2808";
+  description
+    "This module implements the Carrier Ethernet Services as
+     defined in MEF 10.3 and MEF 6.2.
+
+     Reference Overview:
+      A number of base documents have been used to create the
+      MEF Services YANG Module. The
+      following are the abbreviations for the baseline documents:
+
+      [MEF10.3] refers to MEF 10.3
+      'Ethernet Services Attributes Phase 3', October 2013
+      [MEF6.2] refers to MEF 6.2
+      'EVC Ethernet Services Defintions Phase 3', August 2014
+      [MEF7.3] refers to MEF 7.3
+      'Carrier Ethernet Management Information Model',
+      February 2017
+      [MEF10.3.1] refers to MEF 10.3.1
+      'Composite Performance Metric (CPM) Amendment to MEF 10.3',
+      February 2015";
+
+  revision 2018-07-11 {
+    description
+      "Revision to fix bugs found in integration.";
+    reference
+      "Legato - Services YANG SCA (MEF 58)";
+  }
+
+  revision 2017-07-27 {
+    description
+      "Initial Version.";
+    reference
+      "Legato - Services YANG SCA (MEF 58)";
+  }
+
+  container mef-services {
+    description
+      "Container for all MEF Services (including configuration
+       and status)";
+    container carrier-ethernet {
+      description
+        "MEF Services for Carrier Ethernet Configuration
+         and Status";
+      container subscriber-services {
+        description
+          "MEF Subscriber Services Configuration and Status";
+        list evc {
+          key "evc-id";
+          description
+            "List of Ethernet Virtual Connection services (EVCs).";
+          leaf evc-id {
+            type mef-types:evc-id-type;
+            description
+              "An identifier for the EVC, that is unique across all
+               the EVCs in the Service Provider's CEN";
+            reference
+              "[MEF10.3] Section 8.2. [MEF7.3] Section 7.2.";
+          }
+          container cos-names {
+            description
+              "CoS Names for use by this EVC.";
+            list cos-name {
+              key "name";
+              min-elements 1;
+              description
+                "List of CoS Names used in this EVC.";
+              reference
+                "[MEF7.3] Section 7.1";
+              leaf name {
+                type leafref {
+                  path "/mef-global:mef-global/" +
+                        "mef-global:cos-names-profiles/" +
+                        "mef-global:profile/mef-global:name";
+                }
+                description
+                  "CoS Name from the global list, that is used in this
+                   EVC.";
+              }
+            }
+          }
+          container end-points {
+            description
+              "EVC End Point configuration and status. Note that
+               EVC End Points contain the EVC per UNI attributes
+               from MEF 10.3.";
+            reference
+              "[MEF10.3] Section 10, [MEF7.3] Section 7.4 and 7.5";
+            list end-point {
+              must "not(ce-vlans/ce-vlan[2]) or " +
+                   "../../ce-vlan-id-preservation = 'true'" {
+                error-message
+                  "When more than one CE-VLAN-ID is mapped to an
+                   EVC at a UNI, the EVC must have CE-VLAN ID
+                   Preservation Enabled.";
+                description
+                  "When more than one CE-VLAN-ID is mapped to an
+                   EVC at a UNI, the EVC must have CE-VLAN ID
+                   Preservation Enabled.";
+                reference
+                  "[MEF10.3] [R25].";
+              }
+              must "(/mef-interfaces:mef-interfaces/" +
+                    "mef-interfaces:carrier-ethernet/" +
+                    "mef-interfaces:subscriber-interfaces/" +
+                    "mef-interfaces:uni" +
+                      "[mef-interfaces:uni-id = current()/uni-id]" +
+                      "[mef-interfaces:uni-id/../" +
+                       "mef-interfaces:bundling-enabled = " +
+                           "'true']) or " +
+                   "(/mef-interfaces:mef-interfaces/" +
+                    "mef-interfaces:carrier-ethernet/" +
+                    "mef-interfaces:subscriber-interfaces/" +
+                    "mef-interfaces:uni" +
+                      "[mef-interfaces:uni-id = current()/uni-id]" +
+                      "[mef-interfaces:uni-id/../" +
+                       "mef-interfaces:all-to-one-bundling-enabled = " +
+                           "'true']) or " +
+                   "not(ce-vlans/ce-vlan[2])" {
+                error-message
+                  "If both Bundling and All-to-One
+                   Bundling are disabled for a UNI, only one
+                   CE VLAN ID can be configured for a specific
+                   EVC on that UNI.";
+                description
+                  "If both Bundling and All-to-One Bundling
+                   are disabled for a UNI, only one CE VLAN ID
+                   can be configured for a specific EVC on that UNI.";
+                reference
+                  "[MEF10.3] [R77].";
+              }
+              must "(/mef-interfaces:mef-interfaces/" +
+                     "mef-interfaces:carrier-ethernet/" +
+                     "mef-interfaces:subscriber-interfaces/" +
+                     "mef-interfaces:uni" +
+                       "[mef-interfaces:uni-id = current()/uni-id]" +
+                       "[mef-interfaces:uni-id/../" +
+                        "mef-interfaces:all-to-one-bundling-enabled = " +
+                                                       "'false']) or " +
+                   "(count(ce-vlans/ce-vlan) = 4094)" {
+                error-message
+                  "If All-to-One Bundling is enabled for any UNI in an
+                   EVC, all CE-VLAN IDs for that UNI must map to a
+                   single EVC.";
+                description
+                  "If All-to-One Bundling is enabled for any UNI in an
+                   EVC, all CE-VLAN IDs for that UNI must map to a
+                   single EVC.";
+                reference
+                  "[MEF10.3] [R82].";
+              }
+
+              must "(count(ingress-bwp-per-cos/" +
+                          "bwp-flow-per-cos) = 0 and " +
+                    "not(ingress-bwp-per-evc/" +
+                        "bw-profile-flow-parameters) and "+
+                    "not(ingress-bwp-per-evc/envelope-id)) or " +
+                   "(not(/mef-interfaces:mef-interfaces/" +
+                         "mef-interfaces:carrier-ethernet/" +
+                         "mef-interfaces:subscriber-interfaces/" +
+                         "mef-interfaces:uni[" +
+                           "mef-interfaces:uni-id = " +
+                             "current()/uni-id]/" +
+                         "mef-interfaces:ingress-bwp-per-uni/" +
+                         "mef-interfaces:bw-profile-flow-parameters) " +
+                    "and " +
+                    "not(/mef-interfaces:mef-interfaces/" +
+                         "mef-interfaces:carrier-ethernet/" +
+                         "mef-interfaces:subscriber-interfaces/" +
+                         "mef-interfaces:uni[" +
+                           "mef-interfaces:uni-id = " +
+                             "current()/uni-id]/" +
+                         "mef-interfaces:ingress-bwp-per-uni/" +
+                         "mef-interfaces:envelope-id))" {
+                error-message
+                  "If there is an Ingress Bandwidth Profile per CoS Name
+                   or an Ingress Bandwidth Profile per EVC, there must
+                   not be an Ingress Bandwidth Profile per UNI.";
+                description
+                  "If there is an Ingress Bandwidth Profile per CoS Name
+                   or an Ingress Bandwidth Profile per EVC, there must
+                   not be an Ingress Bandwidth Profile per UNI.";
+                reference
+                  "[MEF10.3] [R137]";
+              }
+
+              must "(count(egress-bwp-per-eec/" +
+                          "bwp-flow-per-eec) = 0 and " +
+                    "not(egress-bwp-per-evc/" +
+                        "bw-profile-flow-parameters) and "+
+                    "not(egress-bwp-per-evc/envelope-id)) or " +
+                   "(not(/mef-interfaces:mef-interfaces/" +
+                         "mef-interfaces:carrier-ethernet/" +
+                         "mef-interfaces:subscriber-interfaces/" +
+                         "mef-interfaces:uni[" +
+                           "mef-interfaces:uni-id = " +
+                             "current()/uni-id]/" +
+                         "mef-interfaces:egress-bw-profile-per-uni/" +
+                         "mef-interfaces:bw-profile-flow-parameters) " +
+                    "and " +
+                    "not(/mef-interfaces:mef-interfaces/" +
+                         "mef-interfaces:carrier-ethernet/" +
+                         "mef-interfaces:subscriber-interfaces/" +
+                         "mef-interfaces:uni[" +
+                           "mef-interfaces:uni-id = " +
+                             "current()/uni-id]/" +
+                         "mef-interfaces:egress-bw-profile-per-uni/" +
+                         "mef-interfaces:envelope-id))" {
+                error-message
+                  "If there is an Egress Bandwidth Profile per EEC Name
+                   or an Egress Bandwidth Profile per EVC, there must
+                   not be an Egress Bandwidth Profile per UNI.";
+                description
+                  "If there is an Egress Bandwidth Profile per EEC Name
+                   or an Egress Bandwidth Profile per EVC, there must
+                   not be an Egress Bandwidth Profile per UNI.";
+                reference
+                  "[MEF10.3] [R137]";
+              }
+
+              must "count(/mef-interfaces:mef-interfaces/" +
+                         "mef-interfaces:carrier-ethernet/" +
+                         "mef-interfaces:subscriber-interfaces/" +
+                         "mef-interfaces:uni[" +
+                           "mef-interfaces:uni-id = " +
+                             "current()/uni-id]/" +
+                         "mef-interfaces:ingress-envelopes/" +
+                         "mef-interfaces:envelope[" +
+                           "mef-interfaces:type = 'per-evc']/" +
+                         "mef-interfaces:bwp-flows/" +
+                         "mef-interfaces:bwp-flow) = " +
+                   "count(/mef-services/carrier-ethernet/" +
+                          "subscriber-services/evc/end-points/" +
+                          "end-point" +
+                            "[uni-id = current()/uni-id]" +
+                            "[ingress-bwp-per-evc/envelope-id])" {
+                error-message
+                  "For an Ingress Bandwidth Profile Envelope with type
+                   'per-evc' every flow must be referenced by an
+                   Ingress Bandwidth Profile per EVC";
+                description
+                  "This must statement, in combination with others,
+                   ensures that every BWP flow in an Ingress Bandwidth
+                   Profile Envelope with type 'per-evc' is referenced
+                   from an EVC End Point.  This is done by checking that
+                   the number of BWP flows in envelopes of this type is
+                   equal to the number of EVC EPs on the UNI that have
+                   an ingress bandwidth profile per EVC that refers to
+                   an envelope.  Note that there are other must
+                   statements that ensure each BWP flow is refered to at
+                   most once, so from this it can be deduced that each
+                   BWP flow is also refered to at least once.  This is
+                   part of enforcing MEF 10.3 R134, and also enforces
+                   MEF 6.2 R4.";
+                 reference
+                   "[MEF10.3] [R134], [MEF6.2] [R4]";
+              }
+
+              must "count(/mef-interfaces:mef-interfaces/" +
+                         "mef-interfaces:carrier-ethernet/" +
+                         "mef-interfaces:subscriber-interfaces/" +
+                         "mef-interfaces:uni[" +
+                           "mef-interfaces:uni-id = " +
+                             "current()/uni-id]/" +
+                         "mef-interfaces:ingress-envelopes/" +
+                         "mef-interfaces:envelope[" +
+                           "mef-interfaces:type = 'per-cos-or-eec']/" +
+                         "mef-interfaces:bwp-flows/" +
+                         "mef-interfaces:bwp-flow) = " +
+                   "count(/mef-services/carrier-ethernet/" +
+                          "subscriber-services/evc/end-points/" +
+                          "end-point[uni-id = current()/uni-id]/" +
+                          "ingress-bwp-per-cos/" +
+                            "bwp-flow-per-cos[envelope-id])" {
+                error-message
+                  "For an Ingress Bandwidth Profile Envelope with type
+                   'per-cos-or-eec' every flow must be referenced by an
+                   Ingress Bandwidth Profile per CoS Name";
+                description
+                  "This must statement, in combination with others,
+                   ensures that every BWP flow in an Ingress Bandwidth
+                   Profile Envelope with type 'per-cos-or-eec' is
+                   referenced from a Bandwidth Profile per CoS Name on
+                   an EVC End Point.  This is done by checking that the
+                   number of BWP flows in envelopes of this type is
+                   equal to the number of BWPs per CoS Name on EVC EPs
+                   on the UNI that refers to an envelope.  Note that
+                   there are other must statements that ensure each BWP
+                   flow is refered to at most once, so from this it can
+                   be deduced that each BWP flow is also refered to at
+                   least once.  This is part of enforcing MEF 10.3 R134,
+                   and also enforces MEF 6.2 R4.";
+                 reference
+                   "[MEF10.3] [R134], [MEF6.2] [R4]";
+              }
+
+              must "count(/mef-interfaces:mef-interfaces/" +
+                         "mef-interfaces:carrier-ethernet/" +
+                         "mef-interfaces:subscriber-interfaces/" +
+                         "mef-interfaces:uni[" +
+                           "mef-interfaces:uni-id = " +
+                             "current()/uni-id]/" +
+                         "mef-interfaces:egress-envelopes/" +
+                         "mef-interfaces:envelope[" +
+                           "mef-interfaces:type = 'per-evc']/" +
+                         "mef-interfaces:bwp-flows/" +
+                         "mef-interfaces:bwp-flow) = " +
+                   "count(/mef-services/carrier-ethernet/" +
+                          "subscriber-services/evc/end-points/" +
+                          "end-point" +
+                            "[uni-id = current()/uni-id]" +
+                            "[egress-bwp-per-evc/envelope-id])" {
+                error-message
+                  "For an Egress Bandwidth Profile Envelope with type
+                   'per-evc' every flow must be referenced by an
+                   Egress Bandwidth Profile per EVC";
+                description
+                  "This must statement, in combination with others,
+                   ensures that every BWP flow in an Egress Bandwidth
+                   Profile Envelope with type 'per-evc' is referenced
+                   from an EVC End Point.  This is done by checking that
+                   the number of BWP flows in envelopes of this type is
+                   equal to the number of EVC EPs on the UNI that have
+                   an egress bandwidth profile per EVC that refers to an
+                   envelope.  Note that there are other must statements
+                   that ensure each BWP flow is refered to at most once,
+                   so from this it can be deduced that each BWP flow is
+                   also refered to at least once.  This is part of
+                   enforcing MEF 10.3 R134, and also enforces MEF 6.2
+                   R4.";
+                reference
+                  "[MEF10.3] [R134], [MEF6.2] [R4]";
+              }
+
+              must "count(/mef-interfaces:mef-interfaces/" +
+                          "mef-interfaces:carrier-ethernet/" +
+                          "mef-interfaces:subscriber-interfaces/" +
+                          "mef-interfaces:uni[" +
+                            "mef-interfaces:uni-id = " +
+                              "current()/uni-id]/" +
+                          "mef-interfaces:egress-envelopes/" +
+                          "mef-interfaces:envelope[" +
+                            "mef-interfaces:type = 'per-cos-or-eec']/" +
+                          "mef-interfaces:bwp-flows/" +
+                          "mef-interfaces:bwp-flow) = " +
+                   "count(/mef-services/carrier-ethernet/" +
+                          "subscriber-services/evc/end-points/" +
+                          "end-point[uni-id = current()/uni-id]/" +
+                          "egress-bwp-per-eec/" +
+                          "bwp-flow-per-eec[envelope-id])" {
+                error-message
+                  "For an Egress Bandwidth Profile Envelope with type
+                   'per-cos-or-eec' every flow must be referenced by an
+                   Egress Bandwidth Profile per EEC Name";
+                description
+                  "This must statement, in combination with others,
+                   ensures that every BWP flow in an Egress Bandwidth
+                   Profile Envelope with type 'per-cos-or-eec' is
+                   referenced from a Bandwidth Profile per EEC Name on
+                   an EVC End Point.  This is done by checking that the
+                   number of BWP flows in envelopes of this type is
+                   equal to the number of BWPs per EEC Name on EVC EPs
+                   on the UNI that refers to an envelope.  Note that
+                   there are other must statements that ensure each BWP
+                   flow is refered to at most once, so from this it can
+                   be deduced that each BWP flow is also refered to at
+                   least once.  This is part of enforcing MEF 10.3 R134,
+                   and also enforces MEF 6.2 R4.";
+                reference
+                  "[MEF10.3] [R134], [MEF6.2] [R4]";
+              }
+
+              key "uni-id";
+              description
+                "List of EVC End Points for the EVC. Each EVC End Point
+                 in the EVC is associated with a distinct UNI, and
+                 contains the EVC per UNI attributes described in MEF
+                 10.3.";
+              reference
+                "[MEF10.3] Section 10,
+                 [MEF7.3] Section 7.4 and Section 7.5.";
+              leaf uni-id {
+                type leafref {
+                  path "/mef-interfaces:mef-interfaces/" +
+                       "mef-interfaces:carrier-ethernet/" +
+                       "mef-interfaces:subscriber-interfaces/" +
+                       "mef-interfaces:uni/mef-interfaces:uni-id";
+                }
+                description
+                  "UNI ID of the UNI where this EVC End
+                   Point is located.";
+                reference
+                  "[MEF10.3] Section 8.3, Section 10.1.
+                   [MEF7.3] Section 7.5.";
+              }
+              leaf role {
+                type mef-types:evc-uni-role-type;
+                default "root";
+                description
+                  "The role of the EVC End Point in the EVC.  For
+                   point-to-point and multipoint-to-multipoint EVCs, the
+                   role is always root.  In a rooted-multipoint EVC, the
+                   role may be root or leaf, to indicate which other EVC
+                   End Points this one may communicate with.";
+                reference
+                  "[MEF10.3] Section 8.3. [MEF7.3] Section 7.5.";
+              }
+              leaf admin-state {
+                type boolean;
+                default "true";
+                description
+                  "Indicates whether the EVC End Point is
+                   adminstratively locked (if the value is false) or
+                   unlocked (if the value if true).";
+                reference
+                  "[MEF7.3] Section 7.4.";
+              }
+              leaf color-identifier {
+                type leafref {
+                  path "/mef-global:mef-global/" +
+                        "mef-global:color-mapping-profiles/" +
+                        "mef-global:profile/mef-global:id";
+                }
+                mandatory true;
+                description
+                  "The Color Identifier for Service Frames.";
+                reference
+                  "[MEF10.3] Section 10.3.
+                   [MEF7.3] Section 7.4 and Section 7.13.";
+              }
+              leaf cos-identifier {
+                type leafref {
+                  path "/mef-global:mef-global/" +
+                        "mef-global:cos-profiles/" +
+                        "mef-global:profile/mef-global:id";
+                }
+                must "not(/mef-global:mef-global/" +
+                          "mef-global:cos-profiles/" +
+                          "mef-global:profile[mef-global:id = " +
+                                                         "current()]/" +
+                          "mef-global:cos-pcp) or " +
+                     "count(/mef-global:mef-global/" +
+                            "mef-global:cos-profiles/" +
+                            "mef-global:profile[mef-global:id = " +
+                                                        "current()]/" +
+                            "mef-global:cos-pcp/mef-global:pcp[" +
+                               "not(mef-global:cos-name = " +
+                                      "current()/../../../cos-names/" +
+                                      "cos-name/name)]) = 0" {
+                  error-message
+                    "When the Class of Service Identifier is
+                     based on PCP for a given EVC at a given UNI, all
+                     cos-pcp CoS Names must be in the the EVC Cos
+                     Names List.";
+                  description
+                    "When the Class of Service Identifier is based on
+                     PCP for a given EVC at a given UNI, all cos-pcp
+                     CoS Names must be in the the EVC Cos Names List.";
+                }
+                must "not(/mef-global:mef-global/" +
+                          "mef-global:cos-profiles/" +
+                          "mef-global:profile[mef-global:id = " +
+                                                         "current()]/" +
+                          "mef-global:cos-dscp) or " +
+                     "count(/mef-global:mef-global/" +
+                            "mef-global:cos-profiles/" +
+                            "mef-global:profile[mef-global:id = " +
+                                                         "current()]/" +
+                            "mef-global:cos-dscp/" +
+                            "mef-global:ipv4-dscp[" +
+                               "not(mef-global:cos-name = " +
+                                      "current()/../../../cos-names/" +
+                                      "cos-name/name)]) = 0" {
+                  error-message
+                    "When the Class of Service Identifier is
+                     based on DSCP for a given EVC at a given UNI, all
+                     IPv4 cos-dscp CoS Names must be in the the EVC
+                     Cos Names List.";
+                  description
+                    "When the Class of Service Identifier is based on
+                     DSCP for a given EVC at a given UNI, all IPv4
+                     cos-dscp CoS Names must be in the the EVC Cos Names
+                     List.";
+                }
+                must "not(/mef-global:mef-global/" +
+                          "mef-global:cos-profiles/" +
+                          "mef-global:profile[mef-global:id = " +
+                                                         "current()]/" +
+                          "mef-global:cos-dscp) or " +
+                     "count(/mef-global:mef-global/" +
+                            "mef-global:cos-profiles/" +
+                            "mef-global:profile[mef-global:id = " +
+                                                         "current()]/" +
+                            "mef-global:cos-dscp/" +
+                            "mef-global:ipv6-dscp[" +
+                               "not(mef-global:cos-name = " +
+                                      "current()/../../../cos-names/" +
+                                      "cos-name/name)]) = 0" {
+                  error-message
+                    "When the Class of Service Identifier is
+                     based on DSCP for a given EVC at a given UNI, all
+                     IPv6 cos-dscp CoS Names must be in the the EVC
+                     Cos Names List.";
+                  description
+                    "When the Class of Service Identifier is based on
+                     DSCP for a given EVC at a given UNI, all IPv6
+                     cos-dscp CoS Names must be in the the EVC
+                     Cos Names List.";
+                }
+                must "not(/mef-global:mef-global/" +
+                          "mef-global:cos-profiles/" +
+                          "mef-global:profile[mef-global:id = " +
+                                                         "current()]/" +
+                          "mef-global:cos-pcp) or " +
+                     "(../../../cos-names/cos-name[" +
+                          "name = /mef-global:mef-global/" +
+                                  "mef-global:cos-profiles/" +
+                                  "mef-global:profile[" +
+                                    "mef-global:id = current()]/" +
+                                  "mef-global:cos-pcp/" +
+                                  "mef-global:default-pcp-cos-name])" {
+                  error-message
+                    "When the Class of Service Identifier is based on
+                     PCP for a given EVC at a given UNI, the
+                     default-pcp-cos-name must be in the the
+                     EVC Cos Names List.";
+                  description
+                    "When the Class of Service Identifier is based on
+                     PCP for a given EVC at a given UNI, the
+                     default-pcp-cos-name must be in the the EVC Cos
+                     Names List.";
+                }
+                must "not(/mef-global:mef-global/" +
+                          "mef-global:cos-profiles/" +
+                          "mef-global:profile[mef-global:id = " +
+                                                         "current()]/" +
+                          "mef-global:cos-evc) or " +
+                     "(../../../cos-names/cos-name[" +
+                          "name = /mef-global:mef-global/" +
+                                  "mef-global:cos-profiles/" +
+                                  "mef-global:profile[" +
+                                    "mef-global:id = current()]/" +
+                                  "mef-global:cos-evc/" +
+                                  "mef-global:evc-cos-name])" {
+                  error-message
+                    "When the Class of Service Identifier is based on
+                     EVC for a given EVC at a given UNI, the EVC CoS
+                     Name must be in the the EVC Cos Names List.";
+                  description
+                    "When the Class of Service Identifier is based on
+                     EVC for a given EVC at a given UNI, the EVC CoS
+                     Name must be in the the EVC Cos Names List.";
+                }
+                must "not(/mef-global:mef-global/" +
+                          "mef-global:cos-profiles/" +
+                          "mef-global:profile[mef-global:id = " +
+                                                         "current()]/" +
+                          "mef-global:cos-dscp) or " +
+                     "(../../../cos-names/cos-name[" +
+                          "name = /mef-global:mef-global/" +
+                                  "mef-global:cos-profiles/" +
+                                  "mef-global:profile[" +
+                                    "mef-global:id = current()]/" +
+                                  "mef-global:cos-dscp/" +
+                                  "mef-global:default-ipv4-cos-name])" {
+                  error-message
+                    "When the Class of Service Identifier is
+                     based on DSCP for a given EVC at a given UNI,
+                     the default-ipv4-cos-name must be in the the
+                     EVC Cos Names List.";
+                  description
+                    "When the Class of Service Identifier is based on
+                     DSCP for a given EVC at a given UNI, the
+                     default-ipv4-cos-name must be in the the EVC Cos
+                     Names List.";
+                }
+                must "not(/mef-global:mef-global/" +
+                          "mef-global:cos-profiles/" +
+                          "mef-global:profile[mef-global:id = " +
+                                                         "current()]/" +
+                          "mef-global:cos-dscp) or " +
+                     "(../../../cos-names/cos-name[" +
+                          "name = /mef-global:mef-global/" +
+                                  "mef-global:cos-profiles/" +
+                                  "mef-global:profile[" +
+                                    "mef-global:id = current()]/" +
+                                  "mef-global:cos-dscp/" +
+                                  "mef-global:default-ipv6-cos-name])" {
+                  error-message
+                    "When the Class of Service Identifier is based
+                     on DSCP for a given EVC at a given UNI, the
+                     default-ipv6-cos-name must be in the the EVC Cos
+                     Names List.";
+                  description
+                    "When the Class of Service Identifier is based on
+                     DSCP for a given EVC at a given UNI, the
+                     default-ipv6-cos-name must be in the the EVC Cos
+                     Names List.";
+                }
+                must "not(/mef-global:mef-global/" +
+                          "mef-global:cos-profiles/" +
+                          "mef-global:profile[mef-global:id = " +
+                                                         "current()]/" +
+                          "mef-global:l2cp-cos-id) or " +
+                     "count(/mef-global:mef-global/" +
+                            "mef-global:l2cp-cos-map-profiles/" +
+                            "mef-global:profile[mef-global:id = " +
+                               "/mef-global:mef-global/" +
+                                "mef-global:cos-profiles/" +
+                                "mef-global:profile[" +
+                                    "mef-global:id = current()]/" +
+                                "mef-global:l2cp-cos-id]/" +
+                                "mef-global:map-entries/" +
+                                "mef-global:map-entry" +
+                                 "[mef-global:cos-name]" +
+                                  "[not(mef-global:cos-name = " +
+                                        "current()/../../../" +
+                                        "cos-names/cos-name/" +
+                                        "name)]) = 0" {
+                  error-message
+                    "When the Class of Service Identifier includes an
+                     L2CP CoS map, the CoS Names used in the L2CP CoS
+                     map must be in the the EVC Cos Names List.";
+                  description
+                    "When the Class of Service Identifier includes an
+                     L2CP CoS map, the CoS Names used in the L2CP CoS
+                     map must be in the the EVC Cos Names List.";
+                }
+                must "not(/mef-global:mef-global/" +
+                          "mef-global:cos-profiles/" +
+                          "mef-global:profile[mef-global:id = " +
+                                                         "current()]/" +
+                          "mef-global:l2cp-cos-id) or " +
+                     "count(/mef-global:mef-global/" +
+                            "mef-global:l2cp-cos-map-profiles/" +
+                            "mef-global:profile[mef-global:id = " +
+                               "/mef-global:mef-global/" +
+                                "mef-global:cos-profiles/" +
+                                "mef-global:profile[" +
+                                    "mef-global:id = current()]/" +
+                                "mef-global:l2cp-cos-id]/" +
+                                "mef-global:map-entries/" +
+                                "mef-global:map-entry" +
+                                 "[mef-global:subtypes]/" +
+                                "mef-global:subtypes/" +
+                                 "mef-global:subtype" +
+                                  "[not(mef-global:cos-name = " +
+                                        "current()/../../../" +
+                                        "cos-names/cos-name/" +
+                                        "name)]) = 0" {
+                  error-message
+                    "When the Class of Service Identifier includes an
+                     L2CP CoS map, the CoS Names used in the L2CP CoS
+                     map must be in the the EVC Cos Names List.";
+                  description
+                    "When the Class of Service Identifier includes an
+                     L2CP CoS map, the CoS Names used in the L2CP CoS
+                     map must be in the the EVC Cos Names List.";
+                }
+                must "not(/mef-global:mef-global/" +
+                          "mef-global:cos-profiles/" +
+                          "mef-global:profile[mef-global:id = " +
+                                                         "current()]/" +
+                          "mef-global:cos-pcp) or " +
+                     "/mef-global:mef-global/" +
+                      "mef-global:color-mapping-profiles/" +
+                      "mef-global:profile[" +
+                        "mef-global:id = " +
+                            "current()/../color-identifier]/" +
+                      "mef-global:color-pcp/" +
+                      "mef-global:default-pcp-color-name or " +
+                     "/mef-global:mef-global/" +
+                      "mef-global:color-mapping-profiles/" +
+                      "mef-global:profile[" +
+                           "mef-global:id = " +
+                               "current()/../color-identifier]/" +
+                      "mef-global:color-pcp/" +
+                      "mef-global:pcps/mef-global:pcp[0] or " +
+                     "/mef-global:mef-global/" +
+                      "mef-global:color-mapping-profiles/" +
+                      "mef-global:profile[" +
+                           "mef-global:id = " +
+                               "current()/../color-identifier]/" +
+                      "mef-global:color-dei/mef-global:dei" {
+                  error-message
+                    "When the Class of Service Identifier is
+                     based on PCP for a given EVC at a given UNI, the
+                     Color Identifier must be based on either DEI or
+                     PCP.";
+                  description
+                    "When the Class of Service Identifier is based on
+                     PCP for a given EVC at a given UNI, the Color
+                     Identifier must be based on either DEI or PCP.";
+                  reference
+                    "[MEF10.3] [R111].";
+                }
+                must "not(/mef-global:mef-global/" +
+                          "mef-global:cos-profiles/" +
+                          "mef-global:profile[mef-global:id = " +
+                                                         "current()]/" +
+                          "mef-global:cos-dscp) or " +
+                     "/mef-global:mef-global/" +
+                      "mef-global:color-mapping-profiles/" +
+                      "mef-global:profile[" +
+                        "mef-global:id = " +
+                           "current()/../color-identifier]/" +
+                      "mef-global:color-dscp/" +
+                      "mef-global:default-dscp-color-name or " +
+                     "/mef-global:mef-global/" +
+                      "mef-global:color-mapping-profiles/" +
+                      "mef-global:profile[" +
+                        "mef-global:id = " +
+                            "current()/../color-identifier]/" +
+                      "mef-global:color-dscp/mef-global:ipv4-dscps/" +
+                      "mef-global:ipv4-dscp[0] or " +
+                     "/mef-global:mef-global/" +
+                      "mef-global:color-mapping-profiles/" +
+                      "mef-global:profile[" +
+                        "mef-global:id = " +
+                            "current()/../color-identifier]/" +
+                      "mef-global:color-dscp/mef-global:ipv6-dscps/" +
+                      "mef-global:ipv6-dscp[0]" {
+                  error-message
+                    "When the Class of Service Identifier is
+                     based on DSCP for a given EVC at a given UNI,
+                     the Color Identifier must be based DSCP.";
+                  description
+                    "When the Class of Service Identifier is based on
+                     DSCP for a given EVC at a given UNI, the Color
+                     Identifier must be based DSCP.";
+                  reference
+                    "[MEF10.3] [R112].";
+                }
+                mandatory true;
+                description
+                  "Reference to a global CoS Profile that
+                   specifies how to assign CoS Names to ingress frames
+                   at this EVC End Point based on fields in the frame.";
+                reference
+                  "[MEF10.3] Section 10.2. [MEF7.3] Section 7.11.";
+              }
+              leaf eec-identifier {
+                type leafref {
+                  path "/mef-global:mef-global/" +
+                        "mef-global:eec-profiles/" +
+                        "mef-global:profile/mef-global:id";
+                }
+                mandatory true;
+                description
+                  "Reference to a global EEC Profile that specifies how
+                   to assign EEC Names to egress frames at this EVC End
+                   Point, based on fields in the frame.";
+                reference
+                  "[MEF10.3] Section 10.4. [MEF7.3] Section 7.12.";
+              }
+              leaf source-mac-address-limit {
+                type uint32 {
+                  range "1..max";
+                }
+                description
+                  "Source MAC Address Limit.";
+                reference
+                  "[MEF10.3] Section 10.9. [MEF7.3] Section 7.4.";
+              }
+              leaf source-mac-address-limit-time-interval {
+                when "../source-mac-address-limit";
+                type yang:timeticks {
+                  range "1..241920000";
+                }
+                mandatory true;
+                description
+                  "Source MAC Address Limit Interval. This
+                   value is used when the Source MAC Address Limit has
+                   been configured.";
+                reference
+                  "[MEF10.3] Section 10.9. [MEF7.3] Section 8.1.13.";
+              }
+              leaf test-meg-enabled {
+                type boolean;
+                default "false";
+                description
+                  "Test MEG Enabled / Disabled.";
+                reference
+                  "[MEF10.3] Section 10.10. [MEF7.3] Section 7.5.";
+              }
+              leaf user-label {
+                type mef-types:identifier1024;
+                description
+                  "User Label.";
+                reference
+                  "[MEF7.3] Section 7.5.";
+              }
+              leaf subscriber-meg-mip-enabled {
+                type boolean;
+                default "false";
+                description
+                  "Subscriber MEG MIP Enabled / Disabled.";
+                reference
+                  "[MEF10.3] Section 10.11. [MEF7.3] Section 7.5";
+              }
+              container ce-vlans {
+                description
+                  "Container for the list of CE-VLAN IDs that map to
+                   this EVC End Point.";
+                reference
+                  "[MEF10.3] Section 9.10, [MEF7.3] Section 7.5";
+                leaf-list ce-vlan {
+                  type mef-types:vlan-id-type;
+
+                  must "not(current()/../../ce-vlans/ce-vlan[2]) or " +
+                       "count(../../../../end-points/end-point/" +
+                             "ce-vlans/ce-vlan[. = current()]) = " +
+                       "count(../../../../end-points/end-point)" {
+                    error-message
+                      "If more than one CE-VLAN ID is configured for a
+                       UNI as part of an EVC, every CE VLAN-ID mapped to
+                       that EVC must be configured for all UNIs within
+                       that EVC.";
+                     description
+                      "If more than one CE-VLAN ID is configured for a
+                       UNI as part of an EVC, every CE VLAN-ID mapped to
+                       that EVC must be configured for all UNIs within
+                       that EVC.";
+                    reference
+                      "[MEF10.3] [R81].";
+                  }
+
+                  must "count(/mef-services/carrier-ethernet/" +
+                              "subscriber-services/evc/end-points/" +
+                              "end-point[uni-id = " +
+                                  "current()/../../uni-id]/" +
+                              "ce-vlans/ce-vlan[. = current()]) = 1" {
+                    error-message
+                      "At each UNI there MUST be a mapping of each
+                       CE-VLAN ID to at most one EVC.";
+                    description
+                      "At each UNI there MUST be a mapping of each
+                       CE-VLAN ID to at most one EVC.";
+                    reference
+                      "[MEF10.3] [R76].";
+                  }
+
+                  min-elements 1;
+                  description
+                    "The leaf-list of CE-VLAN IDs that map to this EVC
+                     End Point - that is, that map to this EVC at the
+                     associated UNI.";
+                  reference
+                    "[MEF10.3] Section 9.10. [MEF7.3] Section 7.5.";
+                }
+              }
+
+              choice ingress-bwp-choices {
+                description
+                  "Choice to ensure one cannot configure BWP per-cos and
+                   per-evc at the same time.";
+                case ingress-bwp-per-cos-option {
+                  container ingress-bwp-per-cos {
+                    description
+                      "EVC Ingress Bandwidth Profiles per Class of
+                       Service Name";
+                    reference
+                      "[MEF10.3] Section 10.6,
+                       [MEF7.3] Section 7.4, 7.11";
+                    list bwp-flow-per-cos {
+                      must "(../../../../svc-type = 'other') or " +
+                           "not(envelope-id) or " +
+                           "count(/mef-interfaces:mef-interfaces/" +
+                                  "mef-interfaces:carrier-ethernet/" +
+                                  "mef-interfaces:" +
+                                     "subscriber-interfaces/" +
+                                  "mef-interfaces:uni[" +
+                                    "mef-interfaces:uni-id = " +
+                                        "current()/../../uni-id]/" +
+                                  "mef-interfaces:ingress-envelopes/" +
+                                  "mef-interfaces:envelope[" +
+                                    "mef-interfaces:id = " +
+                                        "current()/envelope-id]/" +
+                                  "mef-interfaces:bwp-flows/" +
+                                  "mef-interfaces:bwp-flow) >= 2" {
+                        error-message
+                          "For a MEF 6.2 service, every Envelope must
+                           contain at least 2 Bandwidth Profile Flows.";
+                        description
+                          "For a MEF 6.2 service, every Envelope must
+                           contain at least 2 Bandwidth Profile Flows.";
+                        reference
+                          "[MEF6.2] [R5]";
+                      }
+                      key "cos-name";
+                      description
+                        "The list of Ingress Bandwidth Profile Flows per
+                         CoS Name for this EVC End Point";
+                      reference
+                        "[MEF10.3] Section 10.6,
+                         [MEF7.3] Section 7.4, 7.11";
+                      leaf cos-name {
+                        type leafref {
+                          path "../../../../../cos-names/cos-name/name";
+                        }
+                        description
+                          "Class of Service Name for this Bandwidth
+                           Profile Flow.";
+                        reference
+                          "[MEF10.3] Section 10.6,
+                           [MEF7.3] Section 7.4, 7.11";
+                      }
+
+                      choice ingress-bw-profile-per-cos {
+                        mandatory true;
+                        description
+                          "This choice can be used to specify either a
+                           standalone Bandwidth Profile Flow, or a
+                           Bandwidth Profile Flow within a specified
+                           Bandwidth Profile Envelope.  Note that in the
+                           former case, the Bandwidth Profile Flow can
+                           be thought of as being in an Envelope that
+                           contains no other Bandwidth Profile Flows,
+                           has no Envelope ID and does not appear in the
+                           list of Bandwidth Profile Envelopes for the
+                           UNI (/mef-interfaces/carrier-ethernet/
+                           subscriber-interfaces/uni/ingress-envelopes/
+                           envelope).";
+                        reference
+                          "[MEF10.3] sections 10.6 and 12.
+                           [MEF7.3] sections 7.4, 7.11, 7.16.";
+                        case standalone {
+                          description
+                            "A standalone Bandwidth Profile Flow is
+                             being specified. Note that this case allows
+                             for backwards compatibility with MEF 10.2
+                             (see MEF 10.3 section 12.2)";
+                          leaf bw-profile-flow-parameters {
+                            type leafref {
+                              path "/mef-global:mef-global/" +
+                                    "mef-global:" +
+                                      "bwp-flow-parameter-profiles/" +
+                                    "mef-global:profile/" +
+                                    "mef-global:id";
+                            }
+                            mandatory true;
+                            description
+                              "Reference to a global set of Bandwidth
+                               Profile Flow parameters for this
+                               Bandwidth Profile Flow.";
+                          }
+                        }
+                        case envelope {
+                          description
+                            "An Ingress Bandwidth Profile per CoS Name
+                             is being specified with reference to a
+                             Bandwidth Profile Envelope in the UNI List
+                             of Ingress Bandwidth Profile Envelopes.";
+                          leaf envelope-id {
+                            type leafref {
+                              path "/mef-interfaces:mef-interfaces/" +
+                                    "mef-interfaces:carrier-ethernet/" +
+                                    "mef-interfaces:" +
+                                      "subscriber-interfaces/" +
+                                    "mef-interfaces:uni[" +
+                                      "mef-interfaces:uni-id = " +
+                                         "current()/../../../uni-id]/" +
+                                    "mef-interfaces:" +
+                                      "ingress-envelopes/" +
+                                    "mef-interfaces:envelope/" +
+                                    "mef-interfaces:id";
+                            }
+
+                            must "/mef-interfaces:mef-interfaces/" +
+                                  "mef-interfaces:carrier-ethernet/" +
+                                  "mef-interfaces:" +
+                                    "subscriber-interfaces/" +
+                                  "mef-interfaces:uni[" +
+                                    "mef-interfaces:uni-id = " +
+                                        "current()/../../../uni-id]/" +
+                                  "mef-interfaces:ingress-envelopes/" +
+                                  "mef-interfaces:envelope[" +
+                                    "mef-interfaces:id = current()]/" +
+                                  "mef-interfaces:type = " +
+                                      "'per-cos-or-eec'" {
+                              error-message
+                                "A bandwidth profile per CoS Name can
+                                 only refer to an Envelope with type
+                                 per-cos-or-eec.";
+                              description
+                                "A bandwidth profile per CoS Name can
+                                 only refer to an Envelope with type
+                                 per-cos-or-eec.  This is used to
+                                 enforce MEF 10.3 R135.";
+                              reference
+                                "[MEF10.3] [R135]";
+                            }
+
+                            must "count(/mef-services/" +
+                                        "carrier-ethernet/" +
+                                        "subscriber-services/" +
+                                        "evc/end-points/" +
+                                        "end-point[uni-id = " +
+                                            "current()/../../../" +
+                                            "uni-id]/" +
+                                        "ingress-bwp-per-cos/" +
+                                        "bwp-flow-per-cos" +
+                                          "[envelope-id = current()]" +
+                                          "[rank = " +
+                                             "current()/../rank]) = 1" {
+                              error-message
+                                "For an ingress envelope with type
+                                 per-cos-or-eec, there must be exactly
+                                 one Ingress Bandwidth Profile per CoS
+                                 Name that refers to each Bandwidth
+                                 Profile Flow in the Envelope.";
+                              description
+                                "This must statement enforces MEF 10.3
+                                 R134 by ensuring that the
+                                 number of ingress Bandwidth Profiles
+                                 per CoS Name, across all the EVC End
+                                 Points on this UNI, that refer to the
+                                 same envelope and rank as this one is
+                                 one, i.e. this one is the only one.";
+                              reference
+                                "[MEF10.3] [R134]";
+                            }
+                            mandatory true;
+                            description
+                              "Reference to an ingress Bandwidth Profile
+                               Envelope on the UNI.";
+                          }
+
+                          leaf rank {
+                            type leafref {
+                              path "/mef-interfaces:mef-interfaces/" +
+                                    "mef-interfaces:carrier-ethernet/" +
+                                    "mef-interfaces:" +
+                                      "subscriber-interfaces/" +
+                                    "mef-interfaces:uni[" +
+                                      "mef-interfaces:uni-id = " +
+                                      "current()/../../../uni-id]/" +
+                                    "mef-interfaces:" +
+                                      "ingress-envelopes/" +
+                                    "mef-interfaces:envelope[" +
+                                       "mef-interfaces:id = " +
+                                       "current()/../envelope-id]/" +
+                                    "mef-interfaces:bwp-flows/" +
+                                    "mef-interfaces:bwp-flow/" +
+                                    "mef-interfaces:rank";
+                            }
+                            mandatory true;
+                            description
+                              "Reference to a Bandwidth Profile Flow in
+                               the given Envelope.";
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                case ingress-bwp-per-evc-option{
+                  container ingress-bwp-per-evc {
+                    description
+                      "Ingress Bandwidth Profile per EVC.";
+                    reference
+                      "[MEF10.3] Section 10.5, [MEF7.3] Section 7.4";
+                    choice ingress-bw-profile-per-evc {
+                      description
+                        "This choice can be used to specify either a
+                         standalone Bandwidth Profile Flow, or a
+                         Bandwidth Profile Flow within a specified
+                         Bandwidth Profile Envelope.  Note that in the
+                         former case, the Bandwidth Profile Flow can be
+                         thought of as being in an Envelope that
+                         contains no other Bandwidth Profile Flows, has
+                         no Envelope ID and does not appear in the list
+                         of Bandwidth Profile Envelopes for the UNI
+                         (/mef-interfaces/carrier-ethernet/
+                         subscriber-interfaces/uni/ingress-envelopes/
+                         envelope).";
+                      reference
+                        "[MEF10.3] sections 10.5 and 12.
+                         [MEF7.3] sections 7.4 and 7.16.";
+                      case standalone {
+                        description
+                          "A standalone Bandwidth Profile Flow is
+                           being specified. Note that this case allows
+                           for backwards compatibility with MEF 10.2
+                           (see MEF 10.3 section 12.2)";
+                        leaf bw-profile-flow-parameters {
+                          type leafref {
+                            path "/mef-global:mef-global/" +
+                                 "mef-global:" +
+                                   "bwp-flow-parameter-profiles/" +
+                                 "mef-global:profile/" +
+                                 "mef-global:id";
+                          }
+                          mandatory true;
+                          description
+                            "Reference to a global set of Bandwidth
+                             Profile Flow parameters for this Bandwidth
+                             Profile Flow.";
+                        }
+                      }
+                      case envelope {
+                        description
+                          "An Ingress Bandwidth Profile per EVC is being
+                           specified with reference to a Bandwidth
+                           Profile Envelope in the UNI List of Ingress
+                           Bandwidth Profile Envelopes.";
+                         leaf envelope-id {
+                          type leafref {
+                            path "/mef-interfaces:mef-interfaces/" +
+                                  "mef-interfaces:carrier-ethernet/" +
+                                  "mef-interfaces:" +
+                                    "subscriber-interfaces/" +
+                                  "mef-interfaces:uni[" +
+                                    "mef-interfaces:uni-id = " +
+                                    "current()/../../uni-id]/" +
+                                  "mef-interfaces:ingress-envelopes/" +
+                                  "mef-interfaces:envelope/" +
+                                  "mef-interfaces:id";
+                          }
+
+                          must "/mef-interfaces:mef-interfaces/" +
+                                "mef-interfaces:carrier-ethernet/" +
+                                "mef-interfaces:" +
+                                  "subscriber-interfaces/" +
+                                "mef-interfaces:uni[" +
+                                  "mef-interfaces:uni-id = " +
+                                      "current()/../../uni-id]/" +
+                                "mef-interfaces:ingress-envelopes/" +
+                                "mef-interfaces:envelope[" +
+                                  "mef-interfaces:id = current()]/" +
+                                "mef-interfaces:type = 'per-evc'" {
+                            error-message
+                              "A bandwidth profile per EVC can
+                               only refer to an Envelope with type
+                               per-evc.";
+                            description
+                              "A bandwidth profile per EVC can
+                               only refer to an Envelope with type
+                               per-evc.  This is used to
+                               enforce MEF 10.3 R135.";
+                            reference
+                              "[MEF10.3] [R135]";
+                          }
+                          must "count(/mef-services/carrier-ethernet/" +
+                                      "subscriber-services/evc/" +
+                                      "end-points/end-point" +
+                                        "[uni-id = " +
+                                            "current()/../../uni-id]" +
+                                        "[ingress-bwp-per-evc/" +
+                                         "envelope-id = current()]" +
+                                        "[ingress-bwp-per-evc/rank = " +
+                                            "current()/../rank]) = 1" {
+                            error-message
+                              "For an ingress envelope with type
+                               per-evc, there must be exactly
+                               one Ingress Bandwidth Profile per EVC
+                               that refers to each Bandwidth
+                               Profile Flow in the Envelope.";
+                            description
+                              "This must statement enforces MEF 10.3
+                               R134 by ensuring that the
+                               number of ingress Bandwidth Profiles
+                               per EVC, across all the EVC End
+                               Points on this UNI, that refer to the
+                               same envelope and rank as this one is
+                               one, i.e. this one is the only one.";
+                            reference
+                              "[MEF10.3] [R134]";
+                          }
+                          mandatory true;
+                          description
+                            "Reference to an ingress Bandwidth Profile
+                             Envelope on the UNI.";
+                        }
+                        leaf rank {
+                          type leafref {
+                            path "/mef-interfaces:mef-interfaces/" +
+                                  "mef-interfaces:carrier-ethernet/" +
+                                  "mef-interfaces:" +
+                                    "subscriber-interfaces/" +
+                                  "mef-interfaces:uni[" +
+                                     "mef-interfaces:uni-id = " +
+                                     "current()/../../uni-id]/" +
+                                  "mef-interfaces:ingress-envelopes/" +
+                                  "mef-interfaces:envelope[" +
+                                     "mef-interfaces:id = " +
+                                     "current()/../envelope-id]/" +
+                                  "mef-interfaces:bwp-flows/" +
+                                  "mef-interfaces:bwp-flow/" +
+                                  "mef-interfaces:rank";
+                          }
+                          mandatory true;
+                          description
+                            "Reference to a Bandwidth Profile Flow in
+                             the given Envelope.";
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              choice egress-bwp-choices {
+                description
+                  "Choice to ensure one cannot configure BWP per-EEC and
+                   per-EVC at the same time.";
+                case egress-bwp-per-eec-option {
+                  container egress-bwp-per-eec {
+                    description
+                      "EVC Egress Bandwidth Profiles per Egress
+                       Equivalence Class Name";
+                    reference
+                      "[MEF10.3] Section 10.8,
+                       [MEF7.3] Section 7.4, 7.12";
+                    list bwp-flow-per-eec {
+                      must "(../../../../svc-type = 'other') or " +
+                           "not(envelope-id) or " +
+                           "count(/mef-interfaces:mef-interfaces/" +
+                                  "mef-interfaces:carrier-ethernet/" +
+                                  "mef-interfaces:" +
+                                    "subscriber-interfaces/" +
+                                  "mef-interfaces:uni[" +
+                                    "mef-interfaces:uni-id = " +
+                                        "current()/../../uni-id]/" +
+                                  "mef-interfaces:egress-envelopes/" +
+                                  "mef-interfaces:envelope[" +
+                                    "mef-interfaces:id = " +
+                                        "current()/envelope-id]/" +
+                                  "mef-interfaces:bwp-flows/" +
+                                  "mef-interfaces:bwp-flow) >= 2" {
+                        error-message
+                          "For a MEF 6.2 service, every Envelope must
+                           contain at least 2 Bandwidth Profile Flows.";
+                        description
+                          "For a MEF 6.2 service, every Envelope must
+                           contain at least 2 Bandwidth Profile Flows.";
+                        reference
+                          "[MEF6.2] [R5]";
+                      }
+                      key "eec-name";
+                      description
+                        "The list of Egress Bandwidth Profile Flows per
+                         EEC Name for this EVC End Point";
+                      reference
+                        "[MEF10.3] Section 10.8,
+                         [MEF7.3] Section 7.4, 7.12";
+                      leaf eec-name {
+                        type string;
+                        description
+                          "Egress Equivalence Class Name for this
+                           Bandwidth Profile Flow.";
+                        reference
+                          "[MEF10.3] Section 10.8,
+                           [MEF7.3] Section 7.4, 7.12";
+                      }
+
+                      choice egress-bw-profile-per-eec {
+                        mandatory true;
+                        description
+                          "This choice can be used to specify either a
+                           standalone Bandwidth Profile Flow, or a
+                           Bandwidth Profile Flow within a specified
+                           Bandwidth Profile Envelope.  Note that in the
+                           former case, the Bandwidth Profile Flow can
+                           be thought of as being in an Envelope that
+                           contains no other Bandwidth Profile Flows,
+                           has no Envelope ID and does not appear in the
+                           list of Bandwidth Profile Envelopes for the
+                           UNI (/mef-interfaces/carrier-ethernet/
+                           subscriber-interfaces/uni/egress-envelopes/
+                           envelope).";
+                        reference
+                          "[MEF10.3] sections 10.8 and 12.
+                           [MEF7.3] sections 7.4, 7.12, 7.16.";
+                        case standalone {
+                          description
+                            "A standalone Bandwidth Profile Flow is
+                             being specified. Note that this case allows
+                             for backwards compatibility with MEF 10.2
+                             (see MEF 10.3 section 12.2)";
+                          leaf bw-profile-flow-parameters {
+                            type leafref {
+                              path "/mef-global:mef-global/" +
+                                    "mef-global:" +
+                                      "bwp-flow-parameter-profiles/" +
+                                    "mef-global:profile/" +
+                                    "mef-global:id";
+                            }
+                            mandatory true;
+                            description
+                              "Reference to a global set of Bandwidth
+                               Profile Flow parameters for this
+                               Bandwidth Profile Flow.";
+                          }
+                        }
+                        case envelope {
+                          description
+                            "An Egress Bandwidth Profile per EEC Name is
+                             being specified with reference to a
+                             Bandwidth Profile Envelope in the UNI List
+                             of Egress Bandwidth Profile Envelopes.";
+                          leaf envelope-id {
+                            type leafref {
+                              path "/mef-interfaces:mef-interfaces/" +
+                                    "mef-interfaces:carrier-ethernet/" +
+                                    "mef-interfaces:" +
+                                      "subscriber-interfaces/" +
+                                    "mef-interfaces:uni[" +
+                                      "mef-interfaces:uni-id = " +
+                                      "current()/../../../uni-id]/" +
+                                    "mef-interfaces:egress-envelopes/" +
+                                    "mef-interfaces:envelope/" +
+                                    "mef-interfaces:id";
+                            }
+
+                            must "/mef-interfaces:mef-interfaces/" +
+                                  "mef-interfaces:carrier-ethernet/" +
+                                  "mef-interfaces:" +
+                                    "subscriber-interfaces/" +
+                                  "mef-interfaces:uni[" +
+                                    "mef-interfaces:uni-id = " +
+                                        "current()/../../../uni-id]/" +
+                                  "mef-interfaces:egress-envelopes/" +
+                                  "mef-interfaces:envelope[" +
+                                    "mef-interfaces:id = current()]/" +
+                                  "mef-interfaces:type = " +
+                                      "'per-cos-or-eec'" {
+                              error-message
+                                "A bandwidth profile per EEC Name can
+                                 only refer to an Envelope with type
+                                 per-cos-or-eec.";
+                              description
+                                "A bandwidth profile per EEC Name can
+                                 only refer to an Envelope with type
+                                 per-cos-or-eec.  This is used to
+                                 enforce MEF 10.3 R135.";
+                              reference
+                                "[MEF10.3] [R135]";
+                            }
+                            must "count(/mef-services/" +
+                                        "carrier-ethernet/" +
+                                        "subscriber-services/evc/" +
+                                        "end-points/end-point[" +
+                                          "uni-id = " +
+                                              "current()/../../../" +
+                                              "uni-id]/" +
+                                        "egress-bwp-per-eec/" +
+                                        "bwp-flow-per-eec" +
+                                          "[envelope-id = current()]" +
+                                          "[rank = " +
+                                             "current()/../rank]) = 1" {
+                              error-message
+                                "For an egress envelope with type
+                                 per-cos-or-eec, there must be exactly
+                                 one Egress Bandwidth Profile per EEC
+                                 Name that refers to each Bandwidth
+                                 Profile Flow in the Envelope.";
+                              description
+                                "This must statement enforces MEF 10.3
+                                 R134 by ensuring that the
+                                 number of egress Bandwidth Profiles
+                                 per EEC Name, across all the EVC End
+                                 Points on this UNI, that refer to the
+                                 same envelope and rank as this one is
+                                 one, i.e. this one is the only one.";
+                              reference
+                                "[MEF10.3] [R134]";
+                            }
+                            mandatory true;
+                            description
+                              "Reference to an egress Bandwidth Profile
+                               Envelope on the UNI.";
+                          }
+                          leaf rank {
+                            type leafref {
+                              path "/mef-interfaces:mef-interfaces/" +
+                                    "mef-interfaces:carrier-ethernet/" +
+                                    "mef-interfaces:" +
+                                      "subscriber-interfaces/" +
+                                    "mef-interfaces:uni[" +
+                                      "mef-interfaces:uni-id = " +
+                                          "current()/../../../" +
+                                          "uni-id]/" +
+                                    "mef-interfaces:egress-envelopes/" +
+                                    "mef-interfaces:envelope[" +
+                                      "mef-interfaces:id = " +
+                                          "current()/../envelope-id]/" +
+                                    "mef-interfaces:bwp-flows/" +
+                                    "mef-interfaces:bwp-flow/" +
+                                    "mef-interfaces:rank";
+                            }
+                            mandatory true;
+                            description
+                              "Reference to a Bandwidth Profile Flow in
+                               the given Envelope.";
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+                case egress-bwp-per-evc-option{
+                  container egress-bwp-per-evc {
+                    description
+                      "Egress Bandwidth Profile per EVC.";
+                    reference
+                      "[MEF10.3] Section 10.7, [MEF7.3] Section 7.4";
+                    choice egress-bw-profile-per-evc {
+                      description
+                        "This choice can be used to specify either a
+                         standalone Bandwidth Profile Flow, or a
+                         Bandwidth Profile Flow within a specified
+                         Bandwidth Profile Envelope.  Note that in the
+                         former case, the Bandwidth Profile Flow can be
+                         thought of as being in an Envelope that
+                         contains no other Bandwidth Profile Flows, has
+                         no Envelope ID and does not appear in the list
+                         of Bandwidth Profile Envelopes for the UNI
+                         (/mef-interfaces/carrier-ethernet/
+                         subscriber-interfaces/uni/egress-envelopes/
+                         envelope).";
+                      reference
+                        "[MEF10.3] sections 10.7 and 12.
+                         [MEF7.3] sections 7.4 and 7.16.";
+                      case standalone {
+                        description
+                          "A standalone Bandwidth Profile Flow is
+                           being specified. Note that this case allows
+                           for backwards compatibility with MEF 10.2
+                           (see MEF 10.3 section 12.2)";
+                        leaf bw-profile-flow-parameters {
+                          type leafref {
+                            path "/mef-global:mef-global/" +
+                                  "mef-global:" +
+                                    "bwp-flow-parameter-profiles/" +
+                                  "mef-global:profile/" +
+                                  "mef-global:id";
+                          }
+                          mandatory true;
+                          description
+                            "Reference to a global set of Bandwidth
+                             Profile Flow parameters for this Bandwidth
+                             Profile Flow.";
+                        }
+                      }
+                      case envelope {
+                        description
+                          "An Egress Bandwidth Profile per EVC is being
+                           specified with reference to a Bandwidth
+                           Profile Envelope in the UNI List of Egress
+                           Bandwidth Profile Envelopes.";
+                        leaf envelope-id {
+                          type leafref {
+                            path "/mef-interfaces:mef-interfaces/" +
+                                  "mef-interfaces:carrier-ethernet/" +
+                                  "mef-interfaces:" +
+                                    "subscriber-interfaces/" +
+                                  "mef-interfaces:uni[" +
+                                    "mef-interfaces:uni-id = " +
+                                        "current()/../../uni-id]/" +
+                                  "mef-interfaces:egress-envelopes/" +
+                                  "mef-interfaces:envelope/" +
+                                  "mef-interfaces:id";
+                          }
+
+                          must "/mef-interfaces:mef-interfaces/" +
+                                "mef-interfaces:carrier-ethernet/" +
+                                "mef-interfaces:" +
+                                  "subscriber-interfaces/" +
+                                "mef-interfaces:uni[" +
+                                  "mef-interfaces:uni-id = " +
+                                      "current()/../../uni-id]/" +
+                                "mef-interfaces:egress-envelopes/" +
+                                "mef-interfaces:envelope[" +
+                                  "mef-interfaces:id = current()]/" +
+                                "mef-interfaces:type = 'per-evc'" {
+                            error-message
+                              "A bandwidth profile per EVC can
+                               only refer to an Envelope with type
+                               per-evc.";
+                            description
+                              "A bandwidth profile per EVC can
+                               only refer to an Envelope with type
+                               per-evc.  This is used to
+                               enforce MEF 10.3 R135.";
+                            reference
+                              "[MEF10.3] [R135]";
+                          }
+                          must "count(/mef-services/carrier-ethernet/" +
+                                      "subscriber-services/evc/" +
+                                      "end-points/end-point" +
+                                        "[uni-id = " +
+                                            "current()/../../uni-id]" +
+                                        "[egress-bwp-per-evc/" +
+                                         "envelope-id = current()]" +
+                                        "[egress-bwp-per-evc/rank = " +
+                                            "current()/../rank]) = 1" {
+                            error-message
+                              "For an egress envelope with type
+                               per-evc, there must be exactly
+                               one Egress Bandwidth Profile per EVC
+                               that refers to each Bandwidth
+                               Profile Flow in the Envelope.";
+                            description
+                              "This must statement enforces MEF 10.3
+                               R134 by ensuring that the
+                               number of egress Bandwidth Profiles
+                               per EVC, across all the EVC End
+                               Points on this UNI, that refer to the
+                               same envelope and rank as this one is
+                               one, i.e. this one is the only one.";
+                            reference
+                              "[MEF10.3] [R134]";
+                          }
+                          mandatory true;
+                          description
+                            "Reference to an egress Bandwidth Profile
+                             Envelope on the UNI.";
+                        }
+
+                        leaf rank {
+                          type leafref {
+                            path "/mef-interfaces:mef-interfaces/" +
+                                  "mef-interfaces:carrier-ethernet/" +
+                                  "mef-interfaces:" +
+                                    "subscriber-interfaces/" +
+                                  "mef-interfaces:uni[" +
+                                    "mef-interfaces:uni-id = " +
+                                        "current()/../../uni-id]/" +
+                                  "mef-interfaces:egress-envelopes/" +
+                                  "mef-interfaces:envelope[" +
+                                    "mef-interfaces:id = " +
+                                        "current()/../envelope-id]/" +
+                                  "mef-interfaces:bwp-flows/" +
+                                  "mef-interfaces:bwp-flow/" +
+                                  "mef-interfaces:rank";
+                          }
+                          mandatory true;
+                          description
+                            "Reference to a Bandwidth Profile Flow in
+                             the given Envelope.";
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+
+              container status {
+                config false;
+                description
+                  "This container reflects the operational state of the
+                   EVC End Point.";
+                leaf operational-state {
+                  type boolean;
+                  default "false";
+                  description
+                    "Operational Status of the EVC End Point, which
+                     is either Enabled (if the value is true) or
+                     Disabled (if the value is false).";
+                  reference
+                    "[MEF7.3] Section 7.4.";
+                }
+                leaf evc-end-point-id {
+                  type mef-types:identifier90;
+                  description
+                    "This string contains the concatenation of the
+                     evc-id and uni-id keys for this EVC end-point";
+                  reference
+                    "[MEF10.3] Section 10.1, [MEF7.3] Section 7.5";
+                }
+              }
+            }
+          }
+          container status {
+            config false;
+            description
+              "This container reflects the operational state of the
+               EVC.";
+            leaf operational-state {
+              type boolean;
+              default "false";
+              description
+                "Operational Status of the EVC: either Enabled
+                 (if the value is 'true') or Disabled
+                 (if the value is 'false').";
+              reference
+                "[MEF7.3] Section 7.1.";
+            }
+            leaf service-state {
+              type mef-types:service-state-type;
+              default "pending";
+              description
+                "EVC Service State.";
+              reference
+                "[MEF7.3] Section 7.1.";
+            }
+          }
+          container carrier-ethernet-sls {
+            description
+              "Carrier Ethernet Service Level Specification";
+            leaf sls-id {
+              type leafref {
+                path "/mef-global:mef-global/" +
+                     "mef-global:sls-profiles/mef-global:profile/" +
+                     "mef-global:id";
+              }
+              description
+                "The ID for an SLS profile in the global list of SLS
+                 profiles. The CoS Entries and corresponding SLS
+                 objectives in the specified profile are applied to this
+                 EVC if (and only if) they are further referenced below.
+                 In each case, a set of ordered End Point pairs (which
+                 are specific to this EVC) must be specified.  If this
+                 leaf is not set, the EVC does not have any SLS
+                 objectives.";
+            }
+            leaf start-time {
+              when "../sls-id";
+              type yang:date-and-time;
+              mandatory true;
+              description
+                "The start time on which intervals over which the SLS
+                 objectives are evaluated is based. This leaf is used
+                 in conjunction with the time-interval leaf in the given
+                 SLS profile, to specify an infinite series of time
+                 intervals starting at the start time and each
+                 having duration equal to the time interval. The SLS
+                 objectives are evaluated and reported independently for
+                 each such time interval.";
+              reference
+                "[MEF7.3] Section 7.17.1.";
+            }
+            container cos-entries {
+              when "../sls-id";
+              description
+                "Container for the list of SLS CoS Entries that apply to
+                 this EVC.";
+              reference
+                "[MEF7.3] Section 7.17.";
+              list cos-entry {
+                key "cos-name";
+                min-elements 1;
+                description
+                  "The list of SLS CoS entries that apply to this EVC.";
+                reference
+                  "[MEF7.3] Section 7.17.2.";
+                leaf cos-name {
+                  type leafref {
+                    path "/mef-global:mef-global/" +
+                          "mef-global:sls-profiles/" +
+                          "mef-global:profile[mef-global:id = " +
+                              "current()/../../../sls-id]/" +
+                          "mef-global:pm-cos-name-entries/" +
+                          "mef-global:pm-cos-name-entry/" +
+                          "mef-global:cos-name";
+                  }
+                  must "../../../../cos-names/" +
+                       "cos-name[name = current()]" {
+                    error-message
+                      "A CoS Name refer to in the SLS must exist in the
+                       EVC List of CoS Names.";
+                    description
+                      "A CoS Name refer to in the SLS must exist in the
+                       EVC List of CoS Names.";
+                  }
+                  description
+                    "This leaf specifies an SLS CoS Entry in the SLS
+                     Profile identified by the sls-id leaf above.  SLS
+                     Objectives specified within the CoS Entry may be
+                     applied to this EVC if they are referenced below
+                     and associated with a set of ordered end point
+                     pairs.";
+                  reference
+                    "[MEF7.3] Section 7.17.2.";
+                }
+                container pm-entries {
+                  description
+                    "Container for a list of SLS objectives and
+                     associated parameters, that will apply to this
+                     EVC.";
+                  reference
+                    "[MEF7.3] Section 7.17.3, [MEF10.3] Section 8.8,
+                     [MEF10.3.1].";
+                  list pm-entry {
+                    key "pm-entry-id";
+                    min-elements 1;
+                    description
+                      "List of SLS objectives and associated parameters,
+                       that will apply to this EVC.";
+                    reference
+                      "[MEF7.3] Section 7.17.3, [MEF10.3] Section 8.8,
+                       [MEF10.3.1].";
+                    leaf pm-entry-id {
+                      type leafref {
+                        path "/mef-global:mef-global/" +
+                              "mef-global:sls-profiles/" +
+                              "mef-global:profile[mef-global:id = " +
+                                  "current()/../../../../../sls-id]/" +
+                              "mef-global:pm-cos-name-entries/" +
+                              "mef-global:pm-cos-name-entry[" +
+                                "mef-global:cos-name = " +
+                                    "current()/../../../cos-name]/" +
+                              "mef-global:pm-entries/" +
+                              "mef-global:pm-entry/mef-global:id";
+                      }
+                      description
+                        "This leaf identifies a specific SLS performance
+                         objective and associated parameters, within the
+                         SLS Profile and CoS entry specified above. The
+                         objective and parameters are applied to the set
+                         of ordered end point pairs (or the set of sets
+                         of ordered end point pairs in the case of group
+                         availability) specified below.";
+                    }
+                    container sets-of-end-point-pairs {
+                      when "/mef-global:mef-global/" +
+                            "mef-global:sls-profiles/" +
+                            "mef-global:profile[" +
+                              "mef-global:id = " +
+                                  "current()/../../../../../sls-id]/" +
+                            "mef-global:pm-cos-name-entries/" +
+                            "mef-global:pm-cos-name-entry[" +
+                              "mef-global:cos-name = " +
+                                  "current()/../../../cos-name]/" +
+                            "mef-global:pm-entries/" +
+                            "mef-global:pm-entry[" +
+                              "mef-global:id = " +
+                                  "current()/../pm-entry-id]/" +
+                            "mef-global:one-way-group-availability-pm" {
+                        description
+                          "Only visible when
+                           one-way-group-availability-pm is being
+                           configured.";
+                      }
+                      description
+                        "Set of sets of end point pairs.";
+                      reference
+                        "[MEF7.3] Section 7.17.5.12,
+                         [MEF10.3] Section 8.8.6.";
+                      list set-of-end-point-pairs {
+                        must "(../../../../../../../" +
+                              "connection-type != " +
+                                            "'rooted-multipoint') or " +
+                             "not(sls-uni-exclusions)" {
+                          error-message
+                            "If EVC Type is Rooted-Multipoint,
+                             sls-uni-inclusions must be used instead of
+                             sls-uni-exclusions.";
+                          description
+                            "If EVC Type is Rooted-Multipoint,
+                             sls-uni-inclusions must be used instead of
+                             sls-uni-exclusions.";
+                          reference
+                            "[MEF10.3] Section 8.8.";
+                        }
+                        key "index";
+                        min-elements 1;
+                        description
+                          "This list contains sets of end point pairs.
+                           Each set is described either by listing
+                           ordered pairs of end points that are included
+                           in the set, or by considering the set of all
+                           possible ordered end point pairs in the EVC
+                           and listing ordered end point pairs that are
+                           excluded from this set.";
+                        leaf index {
+                          type uint32;
+                          description
+                            "An index value to identify this set of
+                             end-point pairs";
+                        }
+                        choice sls-uni {
+                          mandatory true;
+                          description
+                            "The set of ordered end point pairs can be
+                             specified either by listing the ordered end
+                             point pairs to include, or by considering
+                             the set or all ordered end point pairs, and
+                             listing those to exclude (if any).";
+                          case inclusions {
+                            container sls-uni-inclusions {
+                              description
+                                "Container for a list of ordered end
+                                 point pairs.  This list is used to
+                                 specify all of the end point pairs that
+                                 are included in one of the sets over
+                                 which the Group Availability metric is
+                                 calculated.";
+                              list end-point-pair {
+                                must "end-point1 != end-point2" {
+                                  error-message
+                                    "The two UNI IDs for a given
+                                     inclusion cannot be the same.";
+                                  description
+                                    "The two UNI IDs for a given
+                                     inclusion cannot be the same.";
+                                }
+                                must "(../../../../../../../../../" +
+                                      "connection-type != " +
+                                            "'rooted-multipoint') or " +
+                                     "not((../../../../../../../../" +
+                                          "../end-points/end-point[" +
+                                            "uni-id = " +
+                                              "current()/end-point1]/" +
+                                          "role = 'leaf') and " +
+                                         "(../../../../../../../../" +
+                                          "../end-points/end-point[" +
+                                            "uni-id = " +
+                                              "current()/end-point2]/" +
+                                          "role = 'leaf'))" {
+                                  error-message
+                                    "If EVC Type is Rooted-Multipoint,
+                                     sls-uni-inclusion UNI Pairs cannot
+                                     both be role 'leaf'.";
+                                  description
+                                    "If EVC Type is Rooted-Multipoint,
+                                     sls-uni-inclusion UNI Pairs cannot
+                                     both be role 'leaf'.";
+                                  reference
+                                    "[MEF10.3] [R54].";
+                                }
+                                key "end-point1 end-point2";
+                                min-elements 1;
+                                description
+                                  "List of ordered end point pairs. This
+                                   list is used to specify all of the
+                                   end point pairs that are included in
+                                   one of the sets over which the Group
+                                   Availability metric is calculated.";
+                                leaf end-point1 {
+                                  type leafref {
+                                    path "../../../../../../../../../" +
+                                         "../end-points/end-point/" +
+                                         "uni-id";
+                                  }
+                                  description
+                                    "The first end point in an ordered
+                                     end point pair.";
+                                  reference
+                                    "[MEF10.3] Section 8.8.6,
+                                     [MEF7.3] Section 7.17.5.11 and
+                                     7.17.5.12.";
+                                }
+                                leaf end-point2 {
+                                  type leafref {
+                                    path "../../../../../../../../../" +
+                                         "../end-points/end-point/" +
+                                         "uni-id";
+                                  }
+                                  description
+                                    "The second end point in an ordered
+                                     end point pair.";
+                                  reference
+                                    "[MEF10.3] Section 8.8.6,
+                                     [MEF7.3] Section 7.17.5.11 and
+                                     7.17.5.12.";
+                                }
+                              }
+                            }
+                          }
+                          case exclusions {
+                            container sls-uni-exclusions {
+                              presence
+                                "The presence of this container
+                                 indicates that all possible ordered end
+                                 point pairs in the EVC are included in
+                                 this set of end point pairs, other than
+                                 the ordered end point pairs in the list
+                                 within this container (see below).  If
+                                 the list is empty, then all ordered end
+                                 point pairs are included in the set.
+                                 Note that in an EVC with n end points,
+                                 there are n * (n - 1) possible ordered
+                                 end point pairs.";
+                              description
+                                "Container for a list of ordered end
+                                 point pairs that are excluded from this
+                                 set of ordered end point pairs.  The
+                                 set that is described by taking all the
+                                 possible ordered end point pairs and
+                                 removing those contained in the list
+                                 below is used as one of the sets over
+                                 which One-way Group Availability is
+                                 calculated.";
+                              list end-point-pair {
+                                must "end-point1 != end-point2" {
+                                  error-message
+                                    "The two UNI IDs for a given
+                                     exclusion cannot be the same.";
+                                  description
+                                    "The two end points for a given
+                                     exclusion cannot be the same.";
+                                  reference
+                                    "[MEF10.3] [R32].";
+                                }
+                                key "end-point1 end-point2";
+                                description
+                                  "List of ordered end point pairs. This
+                                   list is used to specify all of the
+                                   end point pairs that are excluded
+                                   from the set of all possible ordered
+                                   end point pairs for the EVC.  The
+                                   result is used as one of the sets
+                                   over which the Group Availability
+                                   metric is calculated.";
+                                leaf end-point1 {
+                                  type leafref {
+                                    path "../../../../../../../../../" +
+                                         "../end-points/end-point/" +
+                                         "uni-id";
+                                  }
+                                  description
+                                    "The first end point in an ordered
+                                     end point pair.";
+                                  reference
+                                    "[MEF10.3] Section 8.8.6,
+                                     [MEF7.3] Sections 7.17.5.11 and
+                                     7.17.5.12.";
+                                }
+                                leaf end-point2 {
+                                  type leafref {
+                                    path "../../../../../../../../../" +
+                                         "../end-points/end-point/" +
+                                         "uni-id";
+                                  }
+                                  description
+                                    "The second end point in an ordered
+                                     end point pair.";
+                                  reference
+                                    "[MEF10.3] Section 8.8.6,
+                                     [MEF7.3] Sections 7.17.5.11 and
+                                     7.17.5.12.";
+                                }
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                    container end-point-pairs {
+                      when "not(/mef-global:mef-global/" +
+                                "mef-global:sls-profiles/" +
+                                "mef-global:profile[" +
+                                  "mef-global:id = " +
+                                      "current()/../../../../../" +
+                                      "sls-id]/" +
+                                "mef-global:pm-cos-name-entries/" +
+                                "mef-global:pm-cos-name-entry[" +
+                                  "mef-global:cos-name = " +
+                                      "current()/../../../cos-name]/" +
+                                "mef-global:pm-entries/" +
+                                "mef-global:pm-entry[" +
+                                  "mef-global:id = " +
+                                      "current()/../pm-entry-id]/" +
+                                "mef-global:" +
+                                  "one-way-group-availability-pm)" {
+                        description
+                          "Only visible when
+                           one-way-group-availability-pm is not
+                           being configured.";
+                      }
+                      must "(../../../../../../connection-type != " +
+                                            "'rooted-multipoint') or " +
+                           "(not(sls-uni-exclusions))" {
+                        error-message
+                          "If EVC Type is Rooted-Multipoint,
+                           sls-uni-inclusions must be used instead of
+                           sls-uni-exclusions.";
+                        description
+                          "If EVC Type is Rooted-Multipoint,
+                           sls-uni-inclusions must be used instead of
+                           sls-uni-exclusions.";
+                      }
+                      description
+                        "Set of end point pairs. The set is described
+                         either by listing ordered pairs of end points
+                         that are included in the set, or by considering
+                         the set of all possible ordered end point pairs
+                         in the EVC and listing ordered end point pairs
+                         that are excluded from this set.";
+                      reference
+                        "[MEF7.3] Section 7.17.5.11,
+                         [MEF10.3] Section 8.8.";
+                      choice sls-uni {
+                        mandatory true;
+                        description
+                          "The set of ordered end point pairs can be
+                           specified either by listing the ordered end
+                           point pairs to include, or by considering the
+                           set or all ordered end point pairs, and
+                           listing those to exclude (if any).";
+                        case inclusions {
+                          container sls-uni-inclusions {
+                            description
+                              "Container for a list of ordered end point
+                               pairs.  This list is used to specify all
+                               of the end point pairs that are included
+                               in the set over which the performance
+                               metric is calculated.";
+                            list end-point-pair {
+                              must "end-point1 != end-point2" {
+                                error-message
+                                  "The two UNI IDs for a given inclusion
+                                   cannot be the same.";
+                                description
+                                  "The two UNI IDs for a given inclusion
+                                   cannot be the same.";
+                                reference
+                                  "[MEF10.3] Section 8.8.";
+                              }
+                              must "(../../../../../../../../" +
+                                    "connection-type != " +
+                                        "'rooted-multipoint') or " +
+                                   "not((../../../../../../../../" +
+                                        "end-points/end-point[" +
+                                          "uni-id = " +
+                                              "current()/end-point1]/" +
+                                        "role = 'leaf') and " +
+                                       "(../../../../../../../../" +
+                                        "end-points/end-point[" +
+                                          "uni-id = " +
+                                              "current()/end-point2]/" +
+                                        "role = 'leaf'))" {
+                                error-message
+                                  "If EVC Type is Rooted-Multipoint,
+                                   sls-uni-inclusion UNI Pairs cannot
+                                   both be role 'leaf'.";
+                                description
+                                  "If EVC Type is Rooted-Multipoint,
+                                   sls-uni-inclusion UNI Pairs cannot
+                                   both be role 'leaf'.";
+                                reference
+                                  "[MEF10.3] R37, R40, R43, R46 and R51,
+                                   [MEF10.3.1] R4A.";
+                              }
+                              key "end-point1 end-point2";
+                              min-elements 1;
+                              description
+                                "List of ordered end point pairs.  This
+                                 list is used to specify all of the end
+                                 point pairs that are included in the
+                                 set over which the performance metric
+                                 is calculated.";
+                              leaf end-point1 {
+                                type leafref {
+                                  path "../../../../../../../../../" +
+                                       "end-points/end-point/uni-id";
+                                }
+                                description
+                                  "The first end point in an ordered end
+                                   point pair.";
+                                reference
+                                  "[MEF10.3] Section 8.8 and
+                                   [MEF7.3] Section 7.17.5.11.";
+                              }
+                              leaf end-point2 {
+                                type leafref {
+                                  path "../../../../../../../../../" +
+                                       "end-points/end-point/uni-id";
+                                }
+                                description
+                                  "The second end point in an ordered
+                                   end point pair.";
+                                reference
+                                  "[MEF10.3] Section 8.8,
+                                   [MEF7.3] Section 7.17.5.11.";
+                              }
+                            }
+                          }
+                        }
+                        case exclusions {
+                          container sls-uni-exclusions {
+                            presence
+                              "The presence of this container indicates
+                               that all possible ordered end point pairs
+                               in the EVC are included in this set of
+                               end point pairs, other than the ordered
+                               end point pairs in the list within this
+                               container (see below).  If the list is
+                               empty, then all ordered end point pairs
+                               are included in the set.  Note that in an
+                               EVC with n end points, there are n * (n -
+                               1) possible ordered end point pairs.";
+                            description
+                              "Container for a list of ordered end point
+                               pairs that are excluded from this set of
+                               ordered end point pairs.  The set that is
+                               described by taking all the possible
+                               ordered end point pairs and removing
+                               those contained in the list below is used
+                               as the set over which the performance
+                               metric is calculated.";
+                            list end-point-pair {
+                              must "end-point1 != end-point2" {
+                                error-message
+                                  "The two UNI IDs for a given exclusion
+                                   cannot be the same.";
+                                description
+                                  "The two end points for a given
+                                   exclusion cannot be the same.";
+                                reference
+                                  "[MEF10.3] Section 8.8.";
+                              }
+                              key "end-point1 end-point2";
+                              description
+                                "List of ordered end point pairs.  This
+                                 list is used to specify all of the end
+                                 point pairs that are excluded from the
+                                 set of all possible ordered end point
+                                 pairs for the EVC.  The result is used
+                                 as the set over which the performance
+                                 metric is calculated.";
+                              leaf end-point1 {
+                                type leafref {
+                                  path "../../../../../../../../../" +
+                                       "end-points/end-point/uni-id";
+                                }
+                                description
+                                  "The first end point in an ordered end
+                                   point pair.";
+                                reference
+                                  "[MEF10.3] Section 8.8,
+                                   [MEF7.3] Section 7.17.5.11.";
+                              }
+                              leaf end-point2 {
+                                type leafref {
+                                  path "../../../../../../../../../" +
+                                       "end-points/end-point/uni-id";
+                                }
+                                description
+                                  "The second end point in an ordered
+                                   end point pair.";
+                                reference
+                                  "[MEF10.3] Section 8.8,
+                                   [MEF7.3] Section 7.17.5.11.";
+                              }
+                            }
+                          }
+                        }
+                      }
+                    }
+                  }
+                }
+              }
+            }
+          }
+          leaf connection-type {
+            type mef-types:connection-type;
+            must ". = 'rooted-multipoint' or " +
+                 "count(../end-points/end-point[role != 'root']) = 0" {
+              error-message
+                "If EVC Type is not Rooted Multipoint, all UNI Roles
+                 must be root.";
+              description
+                "If EVC Type is not Rooted Multipoint, all UNI Roles
+                 must be root.";
+              reference
+                "[MEF10.3] [R12].";
+            }
+            must ". != 'rooted-multipoint' or " +
+                 "count(../end-points/end-point[role = 'root']) > 0" {
+              error-message
+                "If EVC Type is Rooted-Multipoint, one or more UNI Roles
+                 must be root.";
+              description
+                "If EVC Type is Rooted-Multipoint, one or more UNI Roles
+                 must be root.";
+              reference
+                "[MEF10.3] [R4].";
+            }
+            must ". != 'point-to-point' or " +
+                 "count(../end-points/end-point) = 2" {
+              error-message
+                "If EVC Type is Point-to-Point, there must be
+                 exactly 2 UNI configured for the EVC.";
+              description
+                "If EVC Type is Point-to-Point, there must be exactly
+                 2 UNI configured for the EVC.";
+              reference
+                "[MEF10.3] Section 8.1.1.";
+            }
+            must ". != 'multipoint-to-multipoint' or " +
+                 "(count(../end-points/end-point) > 1 and " +
+                  "count(../end-points/end-point) <= " +
+                                    "../max-num-of-evc-end-point)" {
+              error-message
+                "If EVC Type is Multipoint-to-Multipoint, there must be
+                 2 or more End Points configured for the EVC, up to the
+                 maximum specified by the max-num-of-evc-end-points
+                 leaf.";
+              description
+                "If EVC Type is Multipoint-to-Multipoint, there must be
+                 2 or more UNI configured for the EVC.";
+              reference
+                "[MEF10.3] Section 8.1.2.2 and 8.4.";
+            }
+            must ". != 'rooted-multipoint' or " +
+                 "(count(../end-points/end-point) > 1 and " +
+                  "count(../end-points/end-point) <= " +
+                                       "../max-num-of-evc-end-point)" {
+              error-message
+                "If EVC Type is Rooted-Multipoint, there must be 2 or
+                 more End Points configured for the EVC, up to the
+                 maximum specified by the max-num-of-evc-end-points
+                 leaf.";
+              description
+                "If EVC Type is Rooted-Multipoint, there must be 2
+                 or more UNI configured for the EVC.";
+              reference
+                "[MEF10.3] Section 8.1.2.1 and 8.4.";
+            }
+            must ". != 'point-to-point' or " +
+                 "../max-num-of-evc-end-point = 2" {
+              error-message
+                "If EVC Type is Point-to-Point,
+                 the value of max-num-of-evc-end-point must be 2.";
+              description
+                "If EVC Type is Point-to-Point, the value of
+                 max-num-of-evc-end-point must be 2.";
+              reference
+                "[MEF10.3] [R13].";
+            }
+            must ". != 'multipoint-to-multipoint' or " +
+                 "../max-num-of-evc-end-point > 2" {
+              error-message
+                "If EVC Type is Multipoint-to-Multipoint,
+                 the value of max-num-of-evc-end-point must be at least
+                 3.";
+              description
+                "If EVC Type is Multipoint-to-Multipoint,
+                 the value of max-num-of-evc-end-point must be at least
+                 3.";
+              reference
+                "[MEF10.3] [R14].";
+            }
+            must ". != 'rooted-multipoint' or " +
+                 "../max-num-of-evc-end-point > 2" {
+              error-message
+                "If EVC Type is Rooted-Multipoint, the value of
+                 max-num-of-evc-end-point must be at least 3.";
+              description
+                "If EVC Type is Rooted-Multipoint,
+                 the value of max-num-of-evc-end-point must be at least
+                 3.";
+              reference
+                "[MEF10.3] [R14], [MEF6.2] [R54]";
+            }
+            mandatory true;
+            description
+              "This EVC attribute describes the EVC as either
+               Multipoint-To-Multipoint, Point-To-Point, or
+               Rooted-Multipoint.";
+            reference
+              "[MEF10.3] Section 8.1, [MEF7.3] Section 7.1.";
+          }
+          leaf admin-state {
+            type boolean;
+            default "true";
+            description
+              "Indicates whether the EVC is administratively locked (if
+               the value is false) or unlocked (if the value is true).";
+            reference
+              "[MEF7.3] Section 7.1.";
+          }
+          leaf user-label {
+            type mef-types:identifier1024;
+            description
+              "User Label.";
+            reference
+              "[MEF7.3] Section 7.1.";
+          }
+          leaf max-frame-size {
+            type mef-types:max-frame-size-type;
+            must "current() <= " +
+                      "/mef-interfaces:mef-interfaces/" +
+                       "mef-interfaces:carrier-ethernet/" +
+                       "mef-interfaces:subscriber-interfaces/" +
+                       "mef-interfaces:uni[mef-interfaces:uni-id = " +
+                           "current()/../end-points/end-point/" +
+                           "uni-id]/" +
+                       "mef-interfaces:max-frame-size" {
+              error-message
+                "The EVC Maximum Frame Size must be less than or equal
+                 to the UNI Maximum Frame Size for every UNI where this
+                 EVC has an EVC End Point.";
+              description
+                "The EVC Maximum Frame Size must be less than or equal
+                 to the UNI Maximum Frame Size for every UNI where this
+                 EVC has an EVC End Point.";
+              reference
+                "[MEF10.3] [R56]";
+            }
+            mandatory true;
+            description
+              "EVC Maximum Frame Size in bytes.";
+            reference
+              "[MEF10.3] Section 8.9. [MEF7.3] Section 7.1.";
+          }
+          leaf max-num-of-evc-end-point {
+            type uint32 {
+              range "2..max";
+            }
+            mandatory true;
+            description
+              "The Maximum Number of UNIs this EVC can be configured
+               for. If EVC Type is Multipoint-to-Multipoint or
+               Rooted-Multipoint, the max-num-of-evc-end-point value
+               must be at least 3. This value must be 2 for
+               point-to-point mode.";
+            reference
+              "[MEF10.3] Section 8.4, [MEF7.3] Section 7.2.";
+          }
+          leaf ce-vlan-id-preservation {
+            type boolean;
+            default "false";
+            description
+              "Preserve CE-VLAN ID.";
+            reference
+              "[MEF10.3] Section 8.6.1, [MEF7.3] Section 7.2.";
+          }
+          leaf ce-vlan-pcp-preservation {
+            type boolean;
+            default "false";
+            description
+              "Enables CE-VLAN PCP (CoS) preservation for the EVC.";
+            reference
+              "[MEF10.3] Section 8.6.2, [MEF7.3] Section 7.1.";
+          }
+          leaf ce-vlan-dei-preservation {
+            type boolean;
+            default "false";
+            description
+              "Enables CE-VLAN DEI preservation for the EVC.
+               When this is enabled, if a C-tagged ingress Service frame
+               results in a C-tagged egress Service frame, the DEI bit
+               in the egress frame has the same value as the DEI bit in
+               the ingress frame.";
+            reference
+              "[MEF7.3] Section 7.1.";
+          }
+          leaf unicast-frame-delivery {
+            type mef-types:data-svc-frame-delivery-type;
+            default "unconditional";
+            description
+              "Unicast Data Service Frame Delivery Mode
+               (unconditional[default], conditional, or discard).";
+            reference
+              "[MEF10.3] Section 8.5.2, [MEF7.3] Section 7.1.";
+          }
+          leaf multicast-frame-delivery {
+            type mef-types:data-svc-frame-delivery-type;
+            default "unconditional";
+            description
+              "Multicast Data Service Frame Delivery Mode
+               (unconditional[default], conditional, or discard).";
+            reference
+              "[MEF10.3] Section 8.5.2, [MEF7.3] Section 7.1.";
+          }
+          leaf broadcast-frame-delivery {
+            type mef-types:data-svc-frame-delivery-type;
+            default "unconditional";
+            description
+              "Broadcast Data Service Frame Delivery Mode
+               (unconditional[default], conditional, or discard).";
+            reference
+              "[MEF10.3] Section 8.5.2, [MEF7.3] Section 7.1.";
+          }
+          leaf svc-type {
+            type mef-types:mef-service-type;
+
+            must "(. = 'other') or " +
+                 "(not(/mef-interfaces:mef-interfaces/" +
+                       "mef-interfaces:carrier-ethernet/" +
+                       "mef-interfaces:subscriber-interfaces/" +
+                       "mef-interfaces:uni[mef-interfaces:uni-id = " +
+                         "current()/../end-points/end-point/uni-id]/" +
+                       "mef-interfaces:ingress-bwp-per-uni/" +
+                       "mef-interfaces:bw-profile-flow-parameters) " +
+                  "and " +
+                  "not(/mef-interfaces:mef-interfaces/" +
+                       "mef-interfaces:carrier-ethernet/" +
+                       "mef-interfaces:subscriber-interfaces/" +
+                       "mef-interfaces:uni[mef-interfaces:uni-id = " +
+                         "current()/../end-points/end-point/uni-id]/" +
+                       "mef-interfaces:ingress-bwp-per-uni/" +
+                       "mef-interfaces:envelope-id) and " +
+                  "not(/mef-interfaces:mef-interfaces/" +
+                       "mef-interfaces:carrier-ethernet/" +
+                       "mef-interfaces:subscriber-interfaces/" +
+                       "mef-interfaces:uni[mef-interfaces:uni-id = " +
+                         "current()/../end-points/end-point/uni-id]/" +
+                       "mef-interfaces:egress-bw-profile-per-uni/" +
+                       "mef-interfaces:bw-profile-flow-parameters) " +
+                  "and " +
+                  "not(/mef-interfaces:mef-interfaces/" +
+                       "mef-interfaces:carrier-ethernet/" +
+                       "mef-interfaces:subscriber-interfaces/" +
+                       "mef-interfaces:uni[mef-interfaces:uni-id = " +
+                         "current()/../end-points/end-point/uni-id]/" +
+                       "mef-interfaces:egress-bw-profile-per-uni/" +
+                       "mef-interfaces:envelope-id))" {
+              error-message
+                "Ingress or Egress BWP per UNI must not be specified
+                 when there is a MEF 6.2 service associated with the
+                 UNI.";
+              description
+                "Ingress or Egress BWP per UNI must not be specified
+                 when there is a MEF 6.2 service associated with the
+                 UNI.";
+              reference
+                "[MEF6.2] [R6] and [R7]";
+            }
+
+            must "(. = 'other') or " +
+                 "(not(../end-points/end-point/ingress-bwp-per-evc/" +
+                       "bw-profile-flow-parameters) and " +
+                  "not(../end-points/end-point/ingress-bwp-per-evc/" +
+                       "envelope-id) and " +
+                  "not(../end-points/end-point/egress-bwp-per-evc/" +
+                       "bw-profile-flow-parameters) and " +
+                  "not(../end-points/end-point/egress-bwp-per-evc/" +
+                       "envelope-id))" {
+              error-message
+                "Ingress or Egress BWP per EVC must not be specified
+                 when there is a MEF 6.2 service associated with the
+                 UNI.";
+              description
+                "Ingress or Egress BWP per EVC must not be specified
+                 when there is a MEF 6.2 service associated with the
+                 UNI.";
+              reference
+                "[MEF6.2] [R8] and [R9]";
+            }
+
+            must ". != 'epl' or " +
+                 "count(/mef-interfaces:mef-interfaces/" +
+                        "mef-interfaces:carrier-ethernet/" +
+                        "mef-interfaces:subscriber-interfaces/" +
+                        "mef-interfaces:uni" +
+                          "[mef-interfaces:uni-id = " +
+                               "current()/../end-points/end-point/" +
+                               "uni-id]" +
+                          "[mef-interfaces:uni-id/../" +
+                           "mef-interfaces:" +
+                             "service-multiplexing-enabled = " +
+                                 "'true']) = 0" {
+              error-message
+                "For EPL, Service Multiplexing must be
+                 disabled for all UNIs in the EVC UNI List.";
+              description
+                "For EPL, Service Multiplexing must
+                 be disabled for all UNIs in the EVC UNI List.";
+              reference
+                "[MEF6.2] [R19].";
+            }
+            must ". != 'epl' or " +
+                 "count(/mef-interfaces:mef-interfaces/" +
+                        "mef-interfaces:carrier-ethernet/" +
+                        "mef-interfaces:subscriber-interfaces/" +
+                        "mef-interfaces:uni" +
+                          "[mef-interfaces:uni-id = " +
+                               "current()/../end-points/end-point/" +
+                               "uni-id]" +
+                          "[mef-interfaces:uni-id/../" +
+                           "mef-interfaces:bundling-enabled = " +
+                               "'true']) = 0" {
+              error-message
+                "For EPL, Bundling must be disabled for
+                 all UNIs in the EVC UNI List.";
+              description
+                "For EPL, Bundling must be disabled for all UNIs
+                 in the EVC UNI List.";
+              reference
+                "[MEF6.2] [R20].";
+            }
+            must ". != 'epl' or " +
+                 "count(/mef-interfaces:mef-interfaces/" +
+                        "mef-interfaces:carrier-ethernet/" +
+                        "mef-interfaces:subscriber-interfaces/" +
+                        "mef-interfaces:uni" +
+                          "[mef-interfaces:uni-id = " +
+                              "current()/../end-points/end-point/" +
+                              "uni-id]" +
+                          "[mef-interfaces:uni-id/../" +
+                           "mef-interfaces:" +
+                              "all-to-one-bundling-enabled = " +
+                                  "'false']) = 0" {
+              error-message
+                "For EPL, All-to-One Bundling must
+                 be enabled for all UNIs in the EVC UNI List.";
+              description
+                "For EPL, All-to-One Bundling must be enabled
+                 for all UNIs in the EVC UNI List.";
+              reference
+                "[MEF6.2] [R21].";
+            }
+            must ". != 'epl' or " +
+                 "count(/mef-interfaces:mef-interfaces/" +
+                        "mef-interfaces:carrier-ethernet/" +
+                        "mef-interfaces:subscriber-interfaces/" +
+                        "mef-interfaces:uni" +
+                          "[mef-interfaces:uni-id = " +
+                              "current()/../end-points/end-point/" +
+                              "uni-id]" +
+                          "[mef-interfaces:uni-id/../" +
+                           "mef-interfaces:max-num-of-evcs != 1]) = 0" {
+              error-message
+                "For EPL, Max EVC Count must be 1
+                 for all UNIs in the EVC UNI List.";
+              description
+                "For EPL, Max EVC Count must be 1 for all
+                 UNIs in the EVC UNI List.";
+              reference
+                "[MEF6.2] [R22].";
+            }
+            must ". != 'epl' or " +
+                 "count(../end-points/end-point/egress-bwp-per-eec/" +
+                       "bwp-flow-per-eec) = 0" {
+              error-message
+                "For EPL, Egress Bandwidth Profile per Egress
+                 Equivalence Class cannot be set for any UNIs in the EVC
+                 per UNI List.";
+              description
+                "For EPL, Egress Bandwidth Profile per Egress
+                 Equivalence Class cannot be set for any UNIs in the EVC
+                 per UNI List.";
+              reference
+                "[MEF6.2] [R23].";
+            }
+            must ". != 'epl' or " +
+                 "count(../end-points/" +
+                       "end-point[source-mac-address-limit]) = 0" {
+              error-message
+                "For EPL, Source MAC Address Limit must be disabled.";
+              description
+                "For EPL, Source MAC Address Limit must be disabled.";
+              reference
+                "[MEF6.2] [R24].";
+            }
+            must ". != 'epl' or " +
+                 "../connection-type = 'point-to-point'" {
+              error-message
+                "For EPL, EVC Type must be Point-to-Point.";
+              description
+                "For EPL, EVC Type must be Point-to-Point.";
+              reference
+                "[MEF6.2] [R25].";
+            }
+            must ". != 'epl' or " +
+                 "../unicast-frame-delivery = 'unconditional'" {
+              error-message
+                "For EPL, unicast-frame-delivery must be
+                 unconditional.";
+              description
+                "For EPL, unicast-frame-delivery must be
+                 unconditional.";
+              reference
+                "[MEF6.2] [R26].";
+            }
+            must ". != 'epl' or " +
+                 "../multicast-frame-delivery = 'unconditional'" {
+              error-message
+                "For EPL, multicast-frame-delivery must be
+                 unconditional.";
+              description
+                "For EPL, multicast-frame-delivery must be
+                 unconditional.";
+              reference
+                "[MEF6.2] [R27].";
+            }
+            must ". != 'epl' or " +
+                 "../broadcast-frame-delivery = 'unconditional'" {
+              error-message
+                "For EPL, broadcast-frame-delivery
+                 must be unconditional.";
+              description
+                "For EPL, broadcast-frame-delivery must be
+                 unconditional.";
+              reference
+                "[MEF6.2] [R28].";
+            }
+            must ". != 'epl' or " +
+                 "../ce-vlan-id-preservation = 'true'" {
+              error-message
+                "For EPL, CE-VLAN ID Preservation must be enabled.";
+              description
+                "For EPL, CE-VLAN ID Preservation must be enabled.";
+              reference
+                "[MEF6.2] [R29]";
+            }
+            must ". != 'epl' or " +
+                 "../ce-vlan-pcp-preservation = 'true'" {
+              error-message
+                "For EPL, CE-VLAN ID CoS Preservation must be enabled.";
+              description
+                "For EPL, CE-VLAN ID CoS Preservation must be enabled.";
+              reference
+                "[MEF6.2] [R30].";
+            }
+            must ". != 'evpl' or " +
+                 "count(/mef-interfaces:mef-interfaces/" +
+                        "mef-interfaces:carrier-ethernet/" +
+                        "mef-interfaces:subscriber-interfaces/" +
+                        "mef-interfaces:uni" +
+                          "[mef-interfaces:uni-id = " +
+                              "current()/../end-points/end-point/" +
+                              "uni-id]" +
+                          "[mef-interfaces:uni-id/../" +
+                           "mef-interfaces:" +
+                             "all-to-one-bundling-enabled = " +
+                                "'true']) = 0" {
+              error-message
+                "For EVPL, All-to-One Bundling must be
+                 disabled for all UNIs in the EVC UNI List.";
+              description
+                "For EVPL, All-to-One Bundling must be disabled for
+                 all UNIs in the EVC UNI List.";
+              reference
+                "[MEF6.2] [R31].";
+            }
+            must ". != 'evpl' or " +
+                 "../unicast-frame-delivery != 'unconditional' or " +
+                 "../multicast-frame-delivery != 'unconditional' or " +
+                 "../broadcast-frame-delivery != 'unconditional' or " +
+                 "count(../end-points/" +
+                       "end-point[source-mac-address-limit]) = 0" {
+              error-message
+                "For EVPL, Source MAC Address Limit must
+                 be disabled for all UNIs in the EVC per UNI List if
+                 all 3 -svc-frm-delivery values are unconditional.";
+              description
+                "For EVPL, Source MAC Address Limit must be disabled
+                 for all UNIs in the EVC per UNI List if all
+                 3 -svc-frm-delivery values are unconditional.";
+              reference
+                "[MEF6.2] [R32].";
+            }
+            must ". != 'evpl' or " +
+                 "../connection-type = 'point-to-point'" {
+              error-message
+                "For EVPL, EVC Type must be Point-to-Point.";
+              description
+                "For EVPL, EVC Type must be Point-to-Point.";
+              reference
+                "[MEF6.2] [R33].";
+            }
+            must ". != 'eplan' or " +
+                 "count(/mef-interfaces:mef-interfaces/" +
+                        "mef-interfaces:carrier-ethernet/" +
+                        "mef-interfaces:subscriber-interfaces/" +
+                        "mef-interfaces:uni" +
+                          "[mef-interfaces:uni-id = " +
+                              "current()/../end-points/end-point/" +
+                              "uni-id]" +
+                          "[mef-interfaces:uni-id/../" +
+                           "mef-interfaces:" +
+                             "service-multiplexing-enabled = " +
+                                "'true']) = 0" {
+              error-message
+                "For EP-LAN, Service Multiplexing must
+                 be disabled for all UNIs in the EVC UNI List.";
+              description
+                "For EP-LAN, Service Multiplexing must be disabled
+                 for all UNIs in the EVC UNI List.";
+              reference
+                "[MEF6.2] [R34].";
+            }
+            must ". != 'eplan' or " +
+                 "count(/mef-interfaces:mef-interfaces/" +
+                        "mef-interfaces:carrier-ethernet/" +
+                        "mef-interfaces:subscriber-interfaces/" +
+                        "mef-interfaces:uni" +
+                          "[mef-interfaces:uni-id = " +
+                               "current()/../end-points/end-point/" +
+                               "uni-id]" +
+                          "[mef-interfaces:uni-id/../" +
+                           "mef-interfaces:bundling-enabled = " +
+                               "'true']) = 0" {
+              error-message
+                "For EP-LAN, Bundling must be disabled
+                 for all UNIs in the EVC UNI List.";
+              description
+                "For EP-LAN, Bundling must be disabled for all
+                 UNIs in the EVC UNI List.";
+              reference
+                "[MEF6.2] [R35].";
+            }
+            must ". != 'eplan' or " +
+                 "count(/mef-interfaces:mef-interfaces/" +
+                        "mef-interfaces:carrier-ethernet/" +
+                        "mef-interfaces:subscriber-interfaces/" +
+                        "mef-interfaces:uni" +
+                          "[mef-interfaces:uni-id = " +
+                               "current()/../end-points/end-point/" +
+                               "uni-id]" +
+                          "[mef-interfaces:uni-id/../" +
+                           "mef-interfaces:" +
+                             "all-to-one-bundling-enabled = " +
+                                 "'false']) = 0" {
+              error-message
+                "For EP-LAN, All-to-One Bundling must
+                 be enabled for all UNIs in the EVC UNI List.";
+              description
+                "For EP-LAN, All-to-One Bundling must be enabled
+                 for all UNIs in the EVC UNI List.";
+              reference
+                "[MEF6.2] [R36].";
+            }
+            must ". != 'eplan' or " +
+                 "count(/mef-interfaces:mef-interfaces/" +
+                        "mef-interfaces:carrier-ethernet/" +
+                        "mef-interfaces:subscriber-interfaces/" +
+                        "mef-interfaces:uni" +
+                          "[mef-interfaces:uni-id = " +
+                              "current()/../end-points/end-point/" +
+                              "uni-id]" +
+                          "[mef-interfaces:uni-id/../" +
+                           "mef-interfaces:max-num-of-evcs != 1]) = 0" {
+              error-message
+                "For EP-LAN, Max EVC Count must be 1
+                 for all UNIs in the EVC UNI List.";
+              description
+                "For EP-LAN, Max EVC Count must be 1 for all
+                 UNIs in the EVC UNI List.";
+              reference
+                "[MEF6.2] [R37].";
+            }
+            must ". != 'eplan' or " +
+                 "../connection-type = 'multipoint-to-multipoint'" {
+              error-message
+                "For EP-LAN, EVC Type must be
+                 Multipoint-to-Multipoint.";
+              description
+                "For EP-LAN, EVC Type must be
+                 Multipoint-to-Multipoint.";
+              reference
+                "[MEF6.2] [R38].";
+            }
+            must ". != 'eplan' or " +
+                 "../ce-vlan-id-preservation = 'true'" {
+              error-message
+                "For EP-LAN, CE-VLAN ID Preservation must be enabled.";
+              description
+                "For EP-LAN, CE-VLAN ID Preservation must be enabled.";
+              reference
+                "[MEF6.2] [R39].";
+            }
+            must ". != 'eplan' or " +
+                 "../ce-vlan-pcp-preservation = 'true'" {
+              error-message
+                "For EP-LAN, CE-VLAN ID CoS Preservation must be
+                 enabled.";
+              description
+                "For EP-LAN, CE-VLAN ID CoS Preservation must be
+                 enabled.";
+              reference
+                "[MEF6.2] [R40].";
+            }
+            must ". != 'evplan' or " +
+                 "count(/mef-interfaces:mef-interfaces/" +
+                        "mef-interfaces:carrier-ethernet/" +
+                        "mef-interfaces:subscriber-interfaces/" +
+                        "mef-interfaces:uni" +
+                          "[mef-interfaces:uni-id = " +
+                              "current()/../end-points/end-point/" +
+                              "uni-id]" +
+                          "[mef-interfaces:uni-id/../" +
+                           "mef-interfaces:" +
+                             "all-to-one-bundling-enabled = " +
+                                 "'true']) = 0" {
+              error-message
+                "For EVP-LAN, All-to-One Bundling must
+                 be disabled for all UNIs in the EVC UNI List.";
+              description
+                "For EVP-LAN, All-to-One Bundling must be disabled
+                 for all UNIs in the EVC UNI List.";
+              reference
+                "[MEF6.2] [R41].";
+            }
+            must ". != 'evplan' or " +
+                 "../connection-type = 'multipoint-to-multipoint'" {
+              error-message
+                "For EVP-LAN, EVC Type must be
+                 Multipoint-to-Multipoint.";
+              description
+                "For EVP-LAN, EVC Type must be
+                 Multipoint-to-Multipoint.";
+              reference
+                "[MEF6.2] [R42].";
+            }
+            must ". != 'eptree' or " +
+                 "count(/mef-interfaces:mef-interfaces/" +
+                        "mef-interfaces:carrier-ethernet/" +
+                        "mef-interfaces:subscriber-interfaces/" +
+                        "mef-interfaces:uni" +
+                          "[mef-interfaces:uni-id = " +
+                              "current()/../end-points/end-point/" +
+                              "uni-id]" +
+                          "[mef-interfaces:uni-id/../" +
+                           "mef-interfaces:" +
+                             "service-multiplexing-enabled = " +
+                                 "'true']) = 0" {
+              error-message
+                "For EP-TREE, Service Multiplexing must be
+                 disabled for all UNIs in the EVC UNI List.";
+              description
+                "For EP-TREE, Service Multiplexing must be disabled
+                 for all UNIs in the EVC UNI List.";
+              reference
+                "[MEF6.2] [R43].";
+            }
+            must ". != 'eptree' or " +
+                 "count(/mef-interfaces:mef-interfaces/" +
+                        "mef-interfaces:carrier-ethernet/" +
+                        "mef-interfaces:subscriber-interfaces/" +
+                        "mef-interfaces:uni" +
+                          "[mef-interfaces:uni-id = " +
+                              "current()/../end-points/end-point/" +
+                              "uni-id]" +
+                          "[mef-interfaces:uni-id/../" +
+                           "mef-interfaces:bundling-enabled = " +
+                               "'true']) = 0" {
+              error-message
+                "For EP-TREE, Bundling must be
+                 disabled for all UNIs in the EVC UNI List.";
+              description
+                "For EP-TREE, Bundling must be disabled for all UNIs in
+                 the EVC UNI List.";
+              reference
+                "[MEF6.2] [R44].";
+            }
+            must ". != 'eptree' or " +
+                 "count(/mef-interfaces:mef-interfaces/" +
+                        "mef-interfaces:carrier-ethernet/" +
+                        "mef-interfaces:subscriber-interfaces/" +
+                        "mef-interfaces:uni" +
+                          "[mef-interfaces:uni-id = " +
+                              "current()/../end-points/end-point/" +
+                              "uni-id]" +
+                          "[mef-interfaces:uni-id/../" +
+                           "mef-interfaces:" +
+                             "all-to-one-bundling-enabled = " +
+                                 "'false']) = 0" {
+              error-message
+                "For EP-TREE, All-to-One Bundling must
+                 be enabled for all UNIs in the EVC UNI List.";
+              description
+                "For EP-TREE, All-to-One Bundling must be enabled
+                 for all UNIs in the EVC UNI List.";
+              reference
+                "[MEF6.2] [R45].";
+            }
+            must ". != 'eptree' or " +
+                 "count(/mef-interfaces:mef-interfaces/" +
+                        "mef-interfaces:carrier-ethernet/" +
+                        "mef-interfaces:subscriber-interfaces/" +
+                        "mef-interfaces:uni" +
+                          "[mef-interfaces:uni-id = " +
+                              "current()/../end-points/end-point/" +
+                              "uni-id]" +
+                          "[mef-interfaces:uni-id/../" +
+                           "mef-interfaces:max-num-of-evcs != 1]) = 0" {
+              error-message
+                "For EP-TREE, Max EVC Count must be 1
+                 for all UNIs in the EVC UNI List.";
+              description
+                "For EP-TREE, Max EVC Count must be 1 for all
+                 UNIs in the EVC UNI List.";
+              reference
+                "[MEF6.2] [R46].";
+            }
+            must ". != 'eptree' or " +
+                 "../connection-type = 'rooted-multipoint'" {
+              error-message
+                "For EP-TREE, EVC Type must be Rooted-Multipoint.";
+              description
+                "For EP-TREE, EVC Type must be Rooted-Multipoint.";
+              reference
+                "[MEF6.2] [R47].";
+            }
+            must ". != 'eptree' or " +
+                 "../ce-vlan-id-preservation = 'true'" {
+              error-message
+                "For EP-TREE, CE-VLAN ID Preservation must be enabled.";
+              description
+                "For EP-TREE, CE-VLAN ID Preservation must be enabled.";
+              reference
+                "[MEF6.2] [R49].";
+            }
+            must ". != 'eptree' or " +
+                 "../ce-vlan-pcp-preservation = 'true'" {
+              error-message
+                "For EP-TREE, CE-VLAN ID CoS Preservation must be
+                 enabled.";
+              description
+                "For EP-TREE, CE-VLAN ID CoS Preservation must be
+                 enabled.";
+              reference
+                "[MEF6.2] [R50].";
+            }
+            must ". != 'evptree' or " +
+                 "count(/mef-interfaces:mef-interfaces/" +
+                        "mef-interfaces:carrier-ethernet/" +
+                        "mef-interfaces:subscriber-interfaces/" +
+                        "mef-interfaces:uni" +
+                          "[mef-interfaces:uni-id = " +
+                              "current()/../end-points/end-point/" +
+                              "uni-id]" +
+                          "[mef-interfaces:uni-id/../" +
+                           "mef-interfaces:" +
+                             "all-to-one-bundling-enabled = " +
+                                 "'true']) = 0" {
+              error-message
+                "For EVP-TREE, All-to-One Bundling must
+                 be disabled for all UNIs in the EVC UNI List.";
+              description
+                "For EVP-TREE, All-to-One Bundling must be disabled
+                 for all UNIs in the EVC UNI List.";
+              reference
+                "[MEF6.2] [R51].";
+            }
+            must ". != 'evptree' or " +
+                 "../connection-type = 'rooted-multipoint'" {
+              error-message
+                "For EVP-TREE, EVC Type must be Rooted-Multipoint.";
+              description
+                "For EVP-TREE, EVC Type must be Rooted-Multipoint.";
+              reference
+                "[MEF6.2] [R52].";
+            }
+            default "other";
+            description
+              "The MEF Service Type. This is one of the types of service
+               defined in MEF 6.2, or the value 'other' to indicate that
+               this service does not conform to any of the types defined
+               in MEF 6.2.  The six types defined in MEF 6.2 are EPL,
+               EVPL, EP-LAN, EVP-LAN, EP-Tree and EVP-Tree.";
+          }
+        }
+      }
+    }
+  }
+}

@@ -38,7 +38,7 @@ module mef-legato-interfaces {
      [MEF7.3] refers to MEF 7.3
      'Carrier Ethernet Management Information Model', February 2017";
 
-  revision YYYY-MM-DD {
+  revision 2018-07-11 {
     description
       "Revision to fix bugs found during integration..";
     reference
@@ -254,7 +254,7 @@ module mef-legato-interfaces {
 
                   leaf rank {
                     type uint8;
-                    must ". >= 1 and . <= count(../../bwp-flow/rank)" {
+                    must ". >= 1 and . <= count(..)" {
                       error-message
                         "The rank of a Bandwidth Profile Flow must be
                          between 1 and n, where n is the number of flows
@@ -418,7 +418,7 @@ module mef-legato-interfaces {
 
                   leaf rank {
                     type uint8;
-                    must ". >= 1 and . <= count(../../bwp-flow/rank)" {
+                    must ". >= 1 and . <= count(..)" {
                       error-message
                         "The rank of a Bandwidth Profile Flow must be
                          between 1 and n, where n is the number of flows
