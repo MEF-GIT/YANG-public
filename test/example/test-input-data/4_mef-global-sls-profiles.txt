@@ -1,0 +1,47 @@
+! Service Level Specifications
+mef-global sls-profiles profile MEF103_Table25 time-interval 2592000
+mef-global sls-profiles profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Krypton delta-t 1 threshold-c 50.0 consecutive-interval-n 10
+mef-global sls-profiles profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 one-way-frame-delay-pm percentile 99.9 objective 200
+mef-global sls-profiles profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Krypton pm-entries pm-entry SLS_Krypton_Test2 one-way-frame-loss-ratio-pm objective 29.0
+mef-global sls-profiles profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Krypton pm-entries pm-entry SLS_Krypton_Test3 one-way-inter-frame-delay-variation-pm percentile 99.9 frame-pair-separation 1 objective 250
+mef-global sls-profiles profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Krypton pm-entries pm-entry SLS_Krypton_Test4 one-way-availability-pm objective 9.6
+!
+mef-global sls-profiles profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Argon delta-t 1 threshold-c 50.0 consecutive-interval-n 10
+mef-global sls-profiles profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Argon pm-entries pm-entry SLS_Argon_Test1 one-way-frame-delay-pm percentile 99.0 objective 300
+mef-global sls-profiles profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Argon pm-entries pm-entry SLS_Argon_Test2 one-way-frame-loss-ratio-pm objective 39.0
+mef-global sls-profiles profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Argon pm-entries pm-entry SLS_Argon_Test3 one-way-availability-pm objective 9.4
+!
+mef-global sls-profiles profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon delta-t 1 threshold-c 50.0 consecutive-interval-n 10
+mef-global sls-profiles profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test1 one-way-frame-delay-pm percentile 95.0 objective 400
+mef-global sls-profiles profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test2 one-way-frame-loss-ratio-pm objective 49.0
+mef-global sls-profiles profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test3 one-way-availability-pm objective 92.0
+mef-global sls-profiles profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test5 one-way-frame-delay-range percentile 98.0 objective 150
+mef-global sls-profiles profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test6 one-way-mean-frame-delay-pm objective 300
+mef-global sls-profiles profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test7 one-way-high-loss-interval-pm  objective 220
+mef-global sls-profiles profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test8 one-way-consecutive-high-loss-interval-pm consecutive-number-p 9 objective 257
+mef-global sls-profiles profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_Test9 one-way-composite-pm cpi-threshold-u 1 frame-loss-indicator true frame-delay-indicator true ifdv-indicator true one-way-fd-threshold 42 one-way-ifdv-threshold 55 objective 100
+mef-global sls-profiles profile MEF103_Table25 pm-cos-name-entries pm-cos-name-entry Neon pm-entries pm-entry SLS_Neon_GA_Test one-way-group-availability-pm min-number-of-uni-pair-sets 1 objective 100
+!
+mef-global sls-profiles profile SLS_Example time-interval 1292000
+mef-global sls-profiles profile SLS_Example pm-cos-name-entries pm-cos-name-entry H delta-t 1 threshold-c 50.0 consecutive-interval-n 10
+mef-global sls-profiles profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test1 one-way-frame-delay-pm percentile 99.9 objective 200
+mef-global sls-profiles profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test2 one-way-frame-loss-ratio-pm objective 29.0
+mef-global sls-profiles profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test3 one-way-inter-frame-delay-variation-pm percentile 99.9 frame-pair-separation 1 objective 250
+mef-global sls-profiles profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test4 one-way-availability-pm objective 96.0
+mef-global sls-profiles profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test5 one-way-frame-delay-range percentile 98.0 objective 150
+mef-global sls-profiles profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test6 one-way-mean-frame-delay-pm objective 300
+mef-global sls-profiles profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test7 one-way-high-loss-interval-pm  objective 220
+mef-global sls-profiles profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test8 one-way-consecutive-high-loss-interval-pm consecutive-number-p 9 objective 257
+mef-global sls-profiles profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_Test9 one-way-composite-pm cpi-threshold-u 1 frame-loss-indicator true frame-delay-indicator true ifdv-indicator true one-way-fd-threshold 42 one-way-ifdv-threshold 55 objective 100
+mef-global sls-profiles profile SLS_Example pm-cos-name-entries pm-cos-name-entry H pm-entries pm-entry SLS_H_GA_Test one-way-group-availability-pm min-number-of-uni-pair-sets 1 objective 100
+!
+mef-global sls-profiles profile SLS_Example pm-cos-name-entries pm-cos-name-entry M delta-t 1 threshold-c 50.0 consecutive-interval-n 10
+mef-global sls-profiles profile SLS_Example pm-cos-name-entries pm-cos-name-entry M pm-entries pm-entry SLS_M_Test1 one-way-frame-delay-pm percentile 99.0 objective 300
+mef-global sls-profiles profile SLS_Example pm-cos-name-entries pm-cos-name-entry M pm-entries pm-entry SLS_M_Test2 one-way-frame-loss-ratio-pm objective 39.0
+mef-global sls-profiles profile SLS_Example pm-cos-name-entries pm-cos-name-entry M pm-entries pm-entry SLS_M_Test3 one-way-availability-pm objective 94.0
+!
+mef-global sls-profiles profile SLS_Example pm-cos-name-entries pm-cos-name-entry L delta-t 1 threshold-c 50.0 consecutive-interval-n 10
+mef-global sls-profiles profile SLS_Example pm-cos-name-entries pm-cos-name-entry L pm-entries pm-entry SLS_L_Test1 one-way-frame-delay-pm percentile 95.0 objective 400
+mef-global sls-profiles profile SLS_Example pm-cos-name-entries pm-cos-name-entry L pm-entries pm-entry SLS_L_Test2 one-way-frame-loss-ratio-pm objective 49.0
+mef-global sls-profiles profile SLS_Example pm-cos-name-entries pm-cos-name-entry L pm-entries pm-entry SLS_L_Test3 one-way-availability-pm objective 92.0
+!

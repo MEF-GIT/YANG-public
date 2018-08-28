@@ -1,0 +1,22 @@
+mef-global l2cp-eec-profiles profile MEF103_Table3PlusEEC
+mef-global l2cp-eec-profiles profile MEF103_Table3PlusEEC map-entries map-entry llc 42 eec-name EEC-Krypton
+mef-global l2cp-eec-profiles profile MEF103_Table3PlusEEC map-entries map-entry ethertype 42 subtypes subtype 01 eec-name EEC-Krypton
+mef-global l2cp-eec-profiles profile MEF103_Table3PlusEEC map-entries map-entry ethertype 43 subtypes subtype 03 eec-name EEC-Krypton
+mef-global l2cp-eec-profiles profile MEF103_Table3PlusEEC map-entries map-entry ethertype 43 subtypes subtype 04 eec-name EEC-Krypton
+mef-global l2cp-eec-profiles profile MEF103_Table3PlusEEC map-entries map-entry ethertype 44 eec-name EEC-Krypton
+mef-global l2cp-eec-profiles profile MEF103_Table3PlusEEC map-entries map-entry ethertype 45 eec-name EEC-Krypton
+mef-global l2cp-eec-profiles profile MEF103_Table3PlusEEC map-entries map-entry ethertype 46 eec-name EEC-Krypton
+mef-global l2cp-eec-profiles profile MEF103_Table3PlusEEC map-entries map-entry ethertype 47 eec-name EEC-Krypton
+mef-global l2cp-eec-profiles profile MEF103_Table3PlusEEC map-entries map-entry ethertype 48 eec-name EEC-Neon
+!
+mef-global l2cp-eec-profiles profile PCCWG_L2CP_EEC
+mef-global l2cp-eec-profiles profile PCCWG_L2CP_EEC map-entries map-entry llc 42 eec-name pccwg_gold
+mef-global l2cp-eec-profiles profile PCCWG_L2CP_EEC map-entries map-entry ethertype 42 subtypes subtype 01 eec-name pccwg_gold
+mef-global l2cp-eec-profiles profile PCCWG_L2CP_EEC map-entries map-entry ethertype 43 subtypes subtype 03 eec-name pccwg_gold
+mef-global l2cp-eec-profiles profile PCCWG_L2CP_EEC map-entries map-entry ethertype 43 subtypes subtype 04 eec-name pccwg_gold
+mef-global l2cp-eec-profiles profile PCCWG_L2CP_EEC map-entries map-entry ethertype 44 eec-name pccwg_gold
+mef-global l2cp-eec-profiles profile PCCWG_L2CP_EEC map-entries map-entry ethertype 45 eec-name pccwg_gold
+mef-global l2cp-eec-profiles profile PCCWG_L2CP_EEC map-entries map-entry ethertype 46 eec-name pccwg_gold
+mef-global l2cp-eec-profiles profile PCCWG_L2CP_EEC map-entries map-entry ethertype 47 eec-name pccwg_gold
+mef-global l2cp-eec-profiles profile PCCWG_L2CP_EEC map-entries map-entry ethertype 48 eec-name pccwg_bronze
+!

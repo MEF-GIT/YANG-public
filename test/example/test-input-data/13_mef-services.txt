@@ -1,0 +1,35 @@
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART max-frame-size 1526 svc-type evpl connection-type point-to-point admin-state false max-num-of-evc-end-point 2 ce-vlan-id-preservation true ce-vlan-pcp-preservation true
+!
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART cos-names cos-name Krypton
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART cos-names cos-name Argon
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART cos-names cos-name Neon
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART cos-names cos-name Senior
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART cos-names cos-name Junior
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART cos-names cos-name Sophomore
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART cos-names cos-name Freshman
+!
+!
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 role root admin-state false ce-vlans ce-vlan 100
+!
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 cos-identifier MEF103_Table23 color-identifier dscp
+!
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce0-Slot0-Port1 eec-identifier MEF103_Table23 color-identifier dscp
+!
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 role root admin-state false ce-vlans ce-vlan 100
+!
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 cos-identifier MEF103_Table23 color-identifier dscp
+!
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART end-points end-point MMPOP1-ce1-Slot1-Port1 eec-identifier MEF103_Table23 color-identifier dscp
+!
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 start-time 2016-06-18T12:00:00+00:00 cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce0-Slot0-Port1 MMPOP1-ce1-Slot1-Port1
+!
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Krypton pm-entries pm-entry SLS_Krypton_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce1-Slot1-Port1 MMPOP1-ce0-Slot0-Port1
+!
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Argon pm-entries pm-entry SLS_Argon_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce0-Slot0-Port1 MMPOP1-ce1-Slot1-Port1
+!
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Argon pm-entries pm-entry SLS_Argon_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce1-Slot1-Port1 MMPOP1-ce0-Slot0-Port1
+!
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Neon pm-entries pm-entry SLS_Neon_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce0-Slot0-Port1 MMPOP1-ce1-Slot1-Port1
+!
+mef-services carrier-ethernet subscriber-services evc EVC-0001898-ACME-MEGAMART carrier-ethernet-sls sls-id MEF103_Table25 cos-entries cos-entry Neon pm-entries pm-entry SLS_Neon_Test1 end-point-pairs sls-uni-inclusions end-point-pair MMPOP1-ce1-Slot1-Port1 MMPOP1-ce0-Slot0-Port1
+!

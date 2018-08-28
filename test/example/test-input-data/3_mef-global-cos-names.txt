@@ -1,0 +1,69 @@
+! Global CoS Names
+mef-global cos-names-profiles profile Krypton;
+!
+mef-global cos-names-profiles profile Argon;
+!
+mef-global cos-names-profiles profile Neon;
+!
+mef-global cos-names-profiles profile Platinum;
+!
+mef-global cos-names-profiles profile Control;
+!
+mef-global cos-names-profiles profile Gold;
+!
+mef-global cos-names-profiles profile SilverPlus;
+!
+mef-global cos-names-profiles profile Silver;
+!
+mef-global cos-names-profiles profile BronzeEnhanced;
+!
+mef-global cos-names-profiles profile BronzePlus;
+!
+mef-global cos-names-profiles profile Bronze;
+!
+mef-global cos-names-profiles profile H;
+!
+mef-global cos-names-profiles profile M;
+!
+mef-global cos-names-profiles profile L;
+!
+mef-global cos-names-profiles profile Discard;
+!
+mef-global cos-names-profiles profile Senior;
+!
+mef-global cos-names-profiles profile Junior;
+!
+mef-global cos-names-profiles profile Sophomore;
+!
+mef-global cos-names-profiles profile Freshman;
+!
+mef-global cos-names-profiles profile BUSINESS-CRITICAL;
+!
+mef-global cos-names-profiles profile MISSION-CRITICAL;
+!
+mef-global cos-names-profiles profile REALTIME;
+!
+mef-global cos-names-profiles profile pccwg_gold;
+!
+mef-global cos-names-profiles profile pccwg_silverplus;
+!
+mef-global cos-names-profiles profile pccwg_silver;
+!
+mef-global cos-names-profiles profile pccwg_bronze;
+!
+mef-global cos-names-profiles profile control;
+!
+mef-global cos-names-profiles profile gold;
+!
+mef-global cos-names-profiles profile "silver+";
+!
+mef-global cos-names-profiles profile silver;
+!
+mef-global cos-names-profiles profile mpls-bronze;
+!
+mef-global cos-names-profiles profile EEC-Krypton;
+!
+mef-global cos-names-profiles profile EEC-Argon;
+!
+mef-global cos-names-profiles profile EEC-Neon;
+!

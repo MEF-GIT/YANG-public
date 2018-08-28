@@ -1,0 +1,3 @@
+mef-global color-mapping-profiles profile dscp
+ color-dscp default-dscp-color-name green
+!
