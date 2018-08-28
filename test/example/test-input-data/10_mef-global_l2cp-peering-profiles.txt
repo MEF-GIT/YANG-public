@@ -1,0 +1,16 @@
+mef-global l2cp-peering-profiles profile L2CP_Peering_Profile1
+mef-global l2cp-peering-profiles profile L2CP_Peering_Profile1 l2cp-peerings l2cp-peering 01:80:C2:00:00:02 ethertype 43 subtype [ 03 04 ]
+mef-global l2cp-peering-profiles profile L2CP_Peering_Profile1 l2cp-peerings l2cp-peering 01:80:C2:00:00:03 ethertype 44
+mef-global l2cp-peering-profiles profile L2CP_Peering_Profile1 l2cp-peerings l2cp-peering 01:80:C2:00:00:07 ethertype 45
+mef-global l2cp-peering-profiles profile L2CP_Peering_Profile1 l2cp-peerings l2cp-peering 01:80:C2:00:00:0E ethertype 46
+mef-global l2cp-peering-profiles profile L2CP_Peering_Profile1 l2cp-peerings l2cp-peering 01:80:C2:00:00:0E ethertype 47
+mef-global l2cp-peering-profiles profile L2CP_Peering_Profile1 l2cp-peerings l2cp-peering 01:80:C2:00:00:3F ethertype 48
+!
+mef-global l2cp-peering-profiles profile PCCWG_L2CP_Peering_Profile1
+mef-global l2cp-peering-profiles profile PCCWG_L2CP_Peering_Profile1 l2cp-peerings l2cp-peering 01:80:C2:00:00:02 ethertype 43 subtype [ 03 04 ]
+mef-global l2cp-peering-profiles profile PCCWG_L2CP_Peering_Profile1 l2cp-peerings l2cp-peering 01:80:C2:00:00:03 ethertype 44
+mef-global l2cp-peering-profiles profile PCCWG_L2CP_Peering_Profile1 l2cp-peerings l2cp-peering 01:80:C2:00:00:07 ethertype 45
+mef-global l2cp-peering-profiles profile PCCWG_L2CP_Peering_Profile1 l2cp-peerings l2cp-peering 01:80:C2:00:00:0E ethertype 46
+mef-global l2cp-peering-profiles profile PCCWG_L2CP_Peering_Profile1 l2cp-peerings l2cp-peering 01:80:C2:00:00:0E ethertype 47
+mef-global l2cp-peering-profiles profile PCCWG_L2CP_Peering_Profile1 l2cp-peerings l2cp-peering 01:80:C2:00:00:3F ethertype 48
+!

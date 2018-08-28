@@ -1,0 +1,82 @@
+mef-interfaces carrier-ethernet subscriber-interfaces uni MMPOP1-ce1-Slot1-Port2 default-ce-vlan-id 1 l2cp-address-set cta admin-state false max-frame-size 1600 max-num-of-evcs 1 physical-layers links link 1 ieee8023-phy ieee8023-1000BASE-SX
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni MMPOP1-ce2-Slot2-Port1 default-ce-vlan-id 1 l2cp-address-set cta admin-state false max-frame-size 1600 max-num-of-evcs 1 physical-layers links link 2 ieee8023-phy ieee8023-1000BASE-SX
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni MMPOP1-ce2-Slot2-Port2 default-ce-vlan-id 1 l2cp-address-set cta admin-state false max-frame-size 1600 max-num-of-evcs 1 physical-layers links link 2 ieee8023-phy ieee8023-1000BASE-SX
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni MMPOP1-ce3-Slot3-Port3 default-ce-vlan-id 1 l2cp-address-set cta admin-state false max-frame-size 1600 max-num-of-evcs 1 physical-layers links link 3 ieee8023-phy ieee8023-1000BASE-SX
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni MMPOP1-ce3-Slot3-Port4 default-ce-vlan-id 1 l2cp-address-set cta admin-state false max-frame-size 1600 max-num-of-evcs 1 physical-layers links link 3 ieee8023-phy ieee8023-1000BASE-SX
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni MMPOP1-ce4-Slot4-Port3 default-ce-vlan-id 1 l2cp-address-set cta admin-state false max-frame-size 1600 max-num-of-evcs 1 physical-layers links link 4 ieee8023-phy ieee8023-1000BASE-SX
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni MMPOP1-ce4-Slot4-Port4 default-ce-vlan-id 1 l2cp-address-set cta admin-state false max-frame-size 1600 max-num-of-evcs 1 physical-layers links link 4 ieee8023-phy ieee8023-1000BASE-SX
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni CYPOP1-ce3-Slot3-Port3 default-ce-vlan-id 1 l2cp-address-set cta admin-state false max-frame-size 1600 max-num-of-evcs 1 physical-layers links link 3 ieee8023-phy ieee8023-1000BASE-SX
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni CYPOP1-ce3-Slot3-Port4 default-ce-vlan-id 1 l2cp-address-set cta admin-state false max-frame-size 1600 max-num-of-evcs 1 physical-layers links link 3 ieee8023-phy ieee8023-1000BASE-SX
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni CYPOP1-ce4-Slot4-Port3 default-ce-vlan-id 1 l2cp-address-set cta admin-state false max-frame-size 1600 max-num-of-evcs 1 physical-layers links link 4 ieee8023-phy ieee8023-1000BASE-SX
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni CYPOP1-ce4-Slot4-Port4 default-ce-vlan-id 1 l2cp-address-set cta admin-state false max-frame-size 1600 max-num-of-evcs 1 physical-layers links link 4 ieee8023-phy ieee8023-1000BASE-SX
+!
+!=======================
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni CYPOP1-ce4-Slot4-Port3 token-share-enabled true ingress-envelopes envelope U3_EPL2_High1 coupling-enabled false type per-evc bwp-flows bwp-flow 1 parameters high1-bwp-uni
+!Next one was commented out
+mef-interfaces carrier-ethernet subscriber-interfaces uni CYPOP1-ce4-Slot4-Port3 ingress-envelopes envelope U3_EPL2_High2 coupling-enabled false type per-evc bwp-flows bwp-flow 1 parameters high2-bwp-uni
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni CYPOP1-ce4-Slot4-Port3 ingress-envelopes envelope U3_EPL2_Medium1 coupling-enabled false type per-evc bwp-flows bwp-flow 1 parameters medium1-bwp-uni
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni CYPOP1-ce4-Slot4-Port3 ingress-envelopes envelope U3_EPL2_Medium2 coupling-enabled false type per-evc bwp-flows bwp-flow 1 parameters medium2-bwp-uni
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni CYPOP1-ce4-Slot4-Port3 ingress-envelopes envelope U3_EPL2_Low1 coupling-enabled false type per-evc bwp-flows bwp-flow 1 parameters low1-bwp-uni
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni CYPOP1-ce4-Slot4-Port3 ingress-envelopes envelope U3_EPL2_Low2 coupling-enabled false type per-evc bwp-flows bwp-flow 1 parameters low2-bwp-uni
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni CYPOP1-ce4-Slot4-Port3 egress-envelopes envelope eMM_EPL2 coupling-enabled false type per-evc bwp-flows bwp-flow 1 parameters high2-bwp-uni
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni CYPOP1-ce4-Slot4-Port3 egress-envelopes envelope eMM_EPL2 coupling-enabled false type per-evc bwp-flows bwp-flow 1 parameters low2-bwp-uni
+!
+!=======================
+!
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni MMPOP1-ce2-Slot2-Port1 token-share-enabled false
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni MMPOP1-ce2-Slot2-Port1 ingress-envelopes envelope MM_EPL_High coupling-enabled false type per-evc bwp-flows bwp-flow 1 parameters high1-bwp-uni
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni MMPOP1-ce2-Slot2-Port1 ingress-envelopes envelope MM_EPL_Medium coupling-enabled false type per-evc bwp-flows bwp-flow 1 parameters medium1-bwp-uni
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni MMPOP1-ce2-Slot2-Port1 ingress-envelopes envelope MM_EPL_Low coupling-enabled false type per-evc bwp-flows bwp-flow 1 parameters low1-bwp-uni
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni MMPOP1-ce2-Slot2-Port1 egress-envelopes envelope eMM_EPL_High coupling-enabled false type per-evc bwp-flows bwp-flow 1 parameters high2-bwp-uni
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni MMPOP1-ce2-Slot2-Port1 egress-envelopes envelope eMM_EPL_Medium coupling-enabled false type per-evc bwp-flows bwp-flow 1 parameters medium2-bwp-uni
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni MMPOP1-ce2-Slot2-Port1 egress-envelopes envelope eMM_EPL_Low coupling-enabled false type per-evc bwp-flows bwp-flow 1 parameters low2-bwp-uni
+!
+!=========================
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni CYPOP1-ce3-Slot3-Port4 elmi-enabled true
+!
+!=========================
+! EPL Use Case 1:
+mef-interfaces carrier-ethernet subscriber-interfaces uni MMPOP1-ce0-Slot0-Port1 l2cp-address-set cta admin-state false max-frame-size 1600 max-num-of-evcs 1 all-to-one-bundling-enabled false token-share-enabled true
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni MMPOP1-ce0-Slot0-Port1 default-ce-vlan-id 100
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni MMPOP1-ce0-Slot0-Port1 physical-layers links link 0 ieee8023-phy ieee8023-1000BASE-SX
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni MMPOP1-ce0-Slot0-Port1 elmi-enabled true
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni MMPOP1-ce0-Slot0-Port1 l2cp-address-set ctb2 l2cp-peering L2CP_Peering_Profile1
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni MMPOP1-ce1-Slot1-Port1 l2cp-address-set cta admin-state false max-frame-size 1600 max-num-of-evcs 1 all-to-one-bundling-enabled false
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni MMPOP1-ce1-Slot1-Port1 default-ce-vlan-id 100
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni MMPOP1-ce1-Slot1-Port1 physical-layers links link 1 ieee8023-phy ieee8023-1000BASE-SX
+!
+mef-interfaces carrier-ethernet subscriber-interfaces uni MMPOP1-ce1-Slot1-Port1 l2cp-address-set ctb2 l2cp-peering L2CP_Peering_Profile1
+!
+!=========================

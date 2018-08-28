@@ -1,0 +1,164 @@
+
+! EPL Use Case 1
+mef-topology devices device ce0 role ce interfaces interface GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
+! EPL Use Case 2
+mef-topology devices device ce0 interfaces interface GigabitEthernet0/2 ieee8023-phy ieee8023-1000BASE-SX
+! EVPL Use Case 1
+mef-topology devices device ce0 interfaces interface GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
+! c0 link to pe0
+mef-topology devices device ce0 interfaces interface GigabitEthernet0/4 ieee8023-phy ieee8023-1000BASE-SX
+!
+mef-topology devices device ce0 interfaces interface Loopback0
+! EPL Use Case 1
+mef-topology devices device ce1 role ce interfaces interface GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
+! EVPL Use Case 2
+mef-topology devices device ce1 interfaces interface GigabitEthernet0/2 ieee8023-phy ieee8023-1000BASE-SX
+! EVPL Use Case 1
+mef-topology devices device ce1 interfaces interface GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
+! c1 link to pe0
+mef-topology devices device ce1 interfaces interface GigabitEthernet0/4 ieee8023-phy ieee8023-1000BASE-SX
+! EVPL Use Case 2
+mef-topology devices device ce2 role ce interfaces interface GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
+! c2 link to pe0
+mef-topology devices device ce2 interfaces interface GigabitEthernet0/2 ieee8023-phy ieee8023-1000BASE-SX
+! EVPL Use Case 1 and EPL Use Case 2
+mef-topology devices device ce2 interfaces interface GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
+! EVPL Use Case 2
+mef-topology devices device ce3 role ce interfaces interface GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
+! c3 link to pe1
+mef-topology devices device ce3 interfaces interface GigabitEthernet0/4 ieee8023-phy ieee8023-1000BASE-SX
+! EPL Use Case 2
+mef-topology devices device ce4 role ce interfaces interface GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
+! c4 link to pe2
+mef-topology devices device ce4 interfaces interface GigabitEthernet0/4 ieee8023-phy ieee8023-1000BASE-SX
+! EP-LAN Use Case 1
+mef-topology devices device ce5 role ce interfaces interface GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
+! EP-TREE Use Case 1
+mef-topology devices device ce5 interfaces interface GigabitEthernet0/2 ieee8023-phy ieee8023-1000BASE-SX
+! EVP-LAN Use Case 1
+mef-topology devices device ce5 interfaces interface GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
+! EVP-TREE Use Case 1
+mef-topology devices device ce5 interfaces interface GigabitEthernet0/4 ieee8023-phy ieee8023-1000BASE-SX
+! c5 link to pe2
+mef-topology devices device ce5 interfaces interface GigabitEthernet0/5 ieee8023-phy ieee8023-1000BASE-SX
+! EPL Use Case 2
+mef-topology devices device ce5 interfaces interface GigabitEthernet0/6 ieee8023-phy ieee8023-1000BASE-SX
+! EP-LAN Use Case 1
+mef-topology devices device ce6 role ce interfaces interface GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
+! EP-TREE Use Case 1
+mef-topology devices device ce6 interfaces interface GigabitEthernet0/2 ieee8023-phy ieee8023-1000BASE-SX
+! EVP-LAN Use Case 1 and EVP-TREE Use Case 1
+mef-topology devices device ce6 interfaces interface GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
+! c6 link to pe3
+mef-topology devices device ce6 interfaces interface GigabitEthernet0/4 ieee8023-phy ieee8023-1000BASE-SX
+! EP-LAN Use Case 1
+mef-topology devices device ce7 role ce interfaces interface GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
+! EP-TREE Use Case 1
+mef-topology devices device ce7 interfaces interface GigabitEthernet0/2 ieee8023-phy ieee8023-1000BASE-SX
+! EVP-LAN Use Case 1 and EVP-TREE Use Case 1
+mef-topology devices device ce7 interfaces interface GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
+! c7 link to pe3
+mef-topology devices device ce7 interfaces interface GigabitEthernet0/4 ieee8023-phy ieee8023-1000BASE-SX
+! Used for Negative Tests
+mef-topology devices device ce8 role ce interfaces interface GigabitEthernet0/1 ieee8023-phy ieee8023-1000BASE-SX
+! EP-TREE Use Case 1
+mef-topology devices device ce8 interfaces interface GigabitEthernet0/2 ieee8023-phy ieee8023-1000BASE-SX
+! EVP-LAN Use Case 1 and EVP-TREE Use Case 1
+mef-topology devices device ce8 interfaces interface GigabitEthernet0/3 ieee8023-phy ieee8023-1000BASE-SX
+! C8 link to pe3
+mef-topology devices device ce8 interfaces interface GigabitEthernet0/4 ieee8023-phy ieee8023-1000BASE-SX
+! c9 link to pe1
+mef-topology devices device ce9 role ce interfaces interface fe-3-1 ieee8023-phy ieee8023-100BASE-TX
+!
+mef-topology devices device ce9 interfaces interface fe-3-2 ieee8023-phy ieee8023-100BASE-TX
+!
+mef-topology devices device ce9 interfaces interface fe-4-1 ieee8023-phy ieee8023-100BASE-TX
+!
+mef-topology devices device ce9 interfaces interface fe-4-2 ieee8023-phy ieee8023-100BASE-TX
+! c10 link to pe1
+mef-topology devices device ce10 role ce interfaces interface fe-3-1 ieee8023-phy ieee8023-100BASE-TX
+!
+mef-topology devices device ce10 interfaces interface fe-3-2 ieee8023-phy ieee8023-100BASE-TX
+!
+mef-topology devices device ce10 interfaces interface fe-4-1 ieee8023-phy ieee8023-100BASE-TX
+!
+mef-topology devices device ce10 interfaces interface fe-4-2 ieee8023-phy ieee8023-100BASE-TX
+!
+mef-topology devices device CSR-1_0 role pe interfaces interface GigabitEthernet1 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-1_0 interfaces interface GigabitEthernet2 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-1_0 interfaces interface GigabitEthernet3 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-1_0 interfaces interface GigabitEthernet4 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-1_0 interfaces interface GigabitEthernet5 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-1_0 interfaces interface GigabitEthernet6 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-1_0 interfaces interface GigabitEthernet7 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-1_0 interfaces interface GigabitEthernet8 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-1_0 interfaces interface GigabitEthernet9 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-1_0 interfaces interface GigabitEthernet10 ieee8023-phy ieee8023-1000BASE-X
+!
+mef-topology devices device CSR-2_0 role pe interfaces interface GigabitEthernet1 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-2_0 interfaces interface GigabitEthernet2 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-2_0 interfaces interface GigabitEthernet3 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-2_0 interfaces interface GigabitEthernet4 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-2_0 interfaces interface GigabitEthernet5 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-2_0 interfaces interface GigabitEthernet6 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-2_0 interfaces interface GigabitEthernet7 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-2_0 interfaces interface GigabitEthernet8 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-2_0 interfaces interface GigabitEthernet9 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-2_0 interfaces interface GigabitEthernet10 ieee8023-phy ieee8023-1000BASE-X
+!
+mef-topology devices device CSR-3_0 role pe interfaces interface GigabitEthernet1 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-3_0 interfaces interface GigabitEthernet2 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-3_0 interfaces interface GigabitEthernet3 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-3_0 interfaces interface GigabitEthernet4 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-3_0 interfaces interface GigabitEthernet5 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-3_0 interfaces interface GigabitEthernet6 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-3_0 interfaces interface GigabitEthernet7 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-3_0 interfaces interface GigabitEthernet8 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-3_0 interfaces interface GigabitEthernet9 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-3_0 interfaces interface GigabitEthernet10 ieee8023-phy ieee8023-1000BASE-X
+!
+mef-topology devices device CSR-4_0 role pe interfaces interface GigabitEthernet1 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-4_0 interfaces interface GigabitEthernet2 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-4_0 interfaces interface GigabitEthernet3 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-4_0 interfaces interface GigabitEthernet4 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-4_0 interfaces interface GigabitEthernet5 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-4_0 interfaces interface GigabitEthernet6 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-4_0 interfaces interface GigabitEthernet7 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-4_0 interfaces interface GigabitEthernet8 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-4_0 interfaces interface GigabitEthernet9 ieee8023-phy ieee8023-1000BASE-X
+mef-topology devices device CSR-4_0 interfaces interface GigabitEthernet10 ieee8023-phy ieee8023-1000BASE-X
+!
+mef-topology devices device pe0 role pe interfaces interface GigabitEthernet0/0/0/1
+mef-topology devices device pe0 interfaces interface GigabitEthernet0/0/0/2
+mef-topology devices device pe0 interfaces interface GigabitEthernet0/0/0/3
+mef-topology devices device pe0 interfaces interface GigabitEthernet0/0/0/4
+mef-topology devices device pe1 role pe interfaces interface GigabitEthernet0/0/0/1
+mef-topology devices device pe1 interfaces interface GigabitEthernet0/0/0/2
+mef-topology devices device pe1 interfaces interface GigabitEthernet0/0/0/3
+mef-topology devices device pe1 interfaces interface GigabitEthernet0/0/0/4
+mef-topology devices device pe2 role pe interfaces interface xe-0/0/0
+mef-topology devices device pe2 interfaces interface xe-0/0/1
+mef-topology devices device pe2 interfaces interface xe-0/0/2
+mef-topology devices device pe2 interfaces interface xe-0/0/3
+mef-topology devices device pe3 role pe interfaces interface GigabitEthernet0/0/0/1
+mef-topology devices device pe3 interfaces interface GigabitEthernet0/0/0/2
+mef-topology devices device pe3 interfaces interface GigabitEthernet0/0/0/3
+mef-topology devices device pe3 interfaces interface GigabitEthernet0/0/0/4
+mef-topology devices device pe3 interfaces interface GigabitEthernet0/0/0/5
+mef-topology devices device p0 role p interfaces interface TenGig1/0/1
+mef-topology devices device p0 interfaces interface TenGig1/0/2
+mef-topology devices device p0 interfaces interface TenGig1/0/3
+mef-topology devices device p0 interfaces interface TenGig1/0/4
+mef-topology devices device p1 role p interfaces interface TenGig0/0/1
+mef-topology devices device p1 interfaces interface TenGig0/0/2
+mef-topology devices device p1 interfaces interface TenGig0/0/3
+mef-topology devices device p1 interfaces interface TenGig0/0/4
+mef-topology devices device p2 role p interfaces interface TenGig0/0/1
+mef-topology devices device p2 interfaces interface TenGig0/0/2
+mef-topology devices device p2 interfaces interface TenGig0/0/3
+mef-topology devices device p2 interfaces interface TenGig0/0/4
+mef-topology devices device p3 role p interfaces interface TenGig1/0/1
+mef-topology devices device p3 interfaces interface TenGig1/0/2
+mef-topology devices device p3 interfaces interface TenGig1/0/3
+mef-topology devices device p3 interfaces interface TenGig1/0/4
+!

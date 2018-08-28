@@ -1,0 +1,221 @@
+! Global CoS Profiles
+mef-global cos-profile profile MEF62_ApdxA_CoS cos-evc evc-cos-name Krypton
+!
+mef-global cos-profile profile AcmePCP cos-pcp pcp 5 cos-name Krypton
+!
+mef-global cos-profile profile AcmePCP cos-pcp pcp 3 cos-name Argon
+!
+mef-global cos-profile profile AcmePCP cos-pcp pcp 1 cos-name Neon
+!
+mef-global cos-profile profile AcmePCP cos-pcp pcp 7 discard
+!
+mef-global cos-profile profile AcmePCP cos-pcp pcp 6 discard
+!
+mef-global cos-profile profile AcmePCP cos-pcp pcp 4 discard
+!
+mef-global cos-profile profile AcmePCP cos-pcp pcp 2 discard
+!
+mef-global cos-profile profile AcmePCP cos-pcp pcp 0 discard
+!
+mef-global cos-profile profile AcmePCP cos-pcp default-pcp-cos-name Argon
+!
+mef-global cos-profile profile MEF103_Table13 cos-pcp pcp 7 cos-name Gold
+!
+mef-global cos-profile profile MEF103_Table13 cos-pcp pcp 6 cos-name Gold
+!
+mef-global cos-profile profile MEF103_Table13 cos-pcp pcp 5 cos-name Gold
+!
+mef-global cos-profile profile MEF103_Table13 cos-pcp pcp 4 cos-name Gold
+!
+mef-global cos-profile profile MEF103_Table13 cos-pcp pcp 3 cos-name Silver
+!
+mef-global cos-profile profile MEF103_Table13 cos-pcp pcp 2 discard
+!
+mef-global cos-profile profile MEF103_Table13 cos-pcp pcp 1 discard
+!
+mef-global cos-profile profile MEF103_Table13 cos-pcp pcp 0 cos-name Silver
+!
+mef-global cos-profile profile MEF103_Table13 cos-pcp default-pcp-cos-name Gold
+!
+mef-global cos-profile profile MEF103_Table14 cos-pcp pcp 7 cos-name Platinum
+!
+mef-global cos-profile profile MEF103_Table14 cos-pcp pcp 6 cos-name Gold
+!
+mef-global cos-profile profile MEF103_Table14 cos-pcp pcp 5 cos-name Gold
+!
+mef-global cos-profile profile MEF103_Table14 cos-pcp pcp 4 cos-name Gold
+!
+mef-global cos-profile profile MEF103_Table14 cos-pcp pcp 3 cos-name Gold
+!
+mef-global cos-profile profile MEF103_Table14 cos-pcp pcp 2 cos-name Gold
+!
+mef-global cos-profile profile MEF103_Table14 cos-pcp pcp 1 cos-name Gold
+!
+mef-global cos-profile profile MEF103_Table14 cos-pcp pcp 0 cos-name Gold
+!
+mef-global cos-profile profile MEF103_Table14 cos-pcp default-pcp-cos-name Gold
+!
+mef-global cos-profile profile MEF231 cos-pcp default-pcp-cos-name H pcp 7 cos-name H
+!
+mef-global cos-profile profile MEF213 cos-pcp pcp 3 cos-name M
+!
+mef-global cos-profile profile MEF213 cos-pcp default-pcp-cos-name L
+!
+mef-global cos-profile profile MEF103_Figure25_BWP3 cos-pcp default-pcp-cos-name L pcp 7 discard
+!
+mef-global cos-profile profile MEF103_Figure25_BWP3 cos-pcp default-pcp-cos-name L pcp 6 discard
+!
+mef-global cos-profile profile MEF103_Figure25_BWP2 cos-pcp default-pcp-cos-name L pcp 5 discard
+!
+mef-global cos-profile profile MEF103_Figure25_BWP2 cos-pcp default-pcp-cos-name L pcp 4 discard
+!
+mef-global cos-profile profile MEF103_Figure25_BWP1 cos-pcp default-pcp-cos-name L pcp 3 discard
+!
+mef-global cos-profile profile MEF103_Figure25_BWP1 cos-pcp default-pcp-cos-name L pcp 2 discard
+!
+mef-global cos-profile profile MEF103_Figure25_BWP1 cos-pcp default-pcp-cos-name L pcp 1 discard
+!
+mef-global cos-profile profile MEF103_Figure25_BWP1 cos-pcp default-pcp-cos-name L pcp 0 discard
+!
+mef-global cos-profile profile MEF103_Table23 cos-dscp default-ipv4-cos-name Sophomore default-ipv6-cos-name Sophomore ipv4-dscp 11 cos-name Sophomore
+!
+mef-global cos-profile profile MEF103_Table23 cos-dscp default-ipv4-cos-name Sophomore default-ipv6-cos-name Sophomore ipv4-dscp 37 cos-name Sophomore
+!
+mef-global cos-profile profile MEF103_Table23 cos-dscp default-ipv4-cos-name Sophomore default-ipv6-cos-name Sophomore ipv4-dscp 45 cos-name Sophomore
+!
+mef-global cos-profile profile MEF103_Table23 cos-dscp default-ipv4-cos-name Senior default-ipv6-cos-name Senior ipv4-dscp 8 cos-name Senior
+!
+mef-global cos-profile profile MEF103_Table23 cos-dscp default-ipv4-cos-name Senior default-ipv6-cos-name Senior ipv4-dscp 10 cos-name Senior
+!
+mef-global cos-profile profile MEF103_Table23 cos-dscp default-ipv4-cos-name Senior default-ipv6-cos-name Senior ipv4-dscp 12 cos-name Senior
+!
+mef-global cos-profile profile MEF103_Table23 cos-dscp default-ipv4-cos-name Freshman default-ipv6-cos-name Freshman
+!
+mef-global cos-profile profile MEF103_Table23 cos-dscp default-ipv4-cos-name Sophomore default-ipv6-cos-name Sophomore ipv6-dscp 11 cos-name Sophomore
+!
+mef-global cos-profile profile MEF103_Table23 cos-dscp default-ipv4-cos-name Sophomore default-ipv6-cos-name Sophomore ipv6-dscp 37 cos-name Sophomore
+!
+mef-global cos-profile profile MEF103_Table23 cos-dscp default-ipv4-cos-name Sophomore default-ipv6-cos-name Sophomore ipv6-dscp 45 cos-name Sophomore
+!
+mef-global cos-profile profile MEF103_Table23 cos-dscp default-ipv4-cos-name Freshman default-ipv6-cos-name Freshman ipv6-dscp 38 cos-name Freshman
+!
+mef-global cos-profile profile MEF103_Table23 cos-dscp default-ipv4-cos-name Freshman default-ipv6-cos-name Freshman ipv6-dscp 63 cos-name Freshman
+!
+mef-global cos-profile profile MEF103_Table23 cos-dscp default-ipv4-cos-name Freshman default-ipv6-cos-name Freshman
+!
+mef-global cos-profile profile COS_DSCP_1 cos-dscp default-ipv4-cos-name pccwg_gold default-ipv6-cos-name pccwg_gold ipv4-dscp 56 cos-name pccwg_gold
+!
+mef-global cos-profile profile COS_DSCP_1 cos-dscp default-ipv4-cos-name pccwg_gold default-ipv6-cos-name pccwg_gold ipv4-dscp 48 cos-name pccwg_gold
+!
+mef-global cos-profile profile COS_DSCP_1 cos-dscp default-ipv4-cos-name pccwg_gold default-ipv6-cos-name pccwg_gold ipv4-dscp 46 cos-name pccwg_gold
+!
+mef-global cos-profile profile COS_DSCP_1 cos-dscp default-ipv4-cos-name pccwg_gold default-ipv6-cos-name pccwg_gold ipv4-dscp 40 cos-name pccwg_gold
+!
+mef-global cos-profile profile COS_DSCP_1 cos-dscp default-ipv4-cos-name pccwg_silverplus default-ipv6-cos-name pccwg_silverplus ipv4-dscp 38 cos-name pccwg_silverplus
+!
+mef-global cos-profile profile COS_DSCP_1 cos-dscp default-ipv4-cos-name pccwg_silverplus default-ipv6-cos-name pccwg_silverplus ipv4-dscp 36 cos-name pccwg_silverplus
+!
+mef-global cos-profile profile COS_DSCP_1 cos-dscp default-ipv4-cos-name pccwg_silverplus default-ipv6-cos-name pccwg_silverplus ipv4-dscp 34 cos-name pccwg_silverplus
+!
+mef-global cos-profile profile COS_DSCP_1 cos-dscp default-ipv4-cos-name pccwg_silverplus default-ipv6-cos-name pccwg_silverplus ipv4-dscp 32 cos-name pccwg_silverplus
+!
+mef-global cos-profile profile COS_DSCP_1 cos-dscp default-ipv4-cos-name pccwg_silver default-ipv6-cos-name pccwg_silver ipv4-dscp 30 cos-name pccwg_silver
+!
+mef-global cos-profile profile COS_DSCP_1 cos-dscp default-ipv4-cos-name pccwg_silver default-ipv6-cos-name pccwg_silver ipv4-dscp 28 cos-name pccwg_silver
+!
+mef-global cos-profile profile COS_DSCP_1 cos-dscp default-ipv4-cos-name pccwg_silver default-ipv6-cos-name pccwg_silver ipv4-dscp 26 cos-name pccwg_silver
+!
+mef-global cos-profile profile COS_DSCP_1 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv6-cos-name pccwg_bronze ipv4-dscp 24 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_DSCP_1 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv6-cos-name pccwg_bronze ipv4-dscp 22 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_DSCP_1 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv6-cos-name pccwg_bronze ipv4-dscp 20 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_DSCP_1 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv6-cos-name pccwg_bronze ipv4-dscp 18 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_DSCP_1 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv6-cos-name pccwg_bronze ipv4-dscp 16 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_DSCP_1 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv6-cos-name pccwg_bronze ipv4-dscp 14 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_DSCP_1 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv6-cos-name pccwg_bronze ipv4-dscp 12 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_DSCP_1 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv6-cos-name pccwg_bronze ipv4-dscp 10 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_DSCP_1 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv6-cos-name pccwg_bronze ipv4-dscp 8 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_DSCP_1 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv6-cos-name pccwg_bronze ipv4-dscp 0 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_DSCP_1 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv6-cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_PCP_1 cos-pcp pcp 7 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_PCP_1 cos-pcp pcp 6 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_PCP_1 cos-pcp pcp 5 cos-name pccwg_gold
+!
+mef-global cos-profile profile COS_PCP_1 cos-pcp pcp 4 cos-name pccwg_silverplus
+!
+mef-global cos-profile profile COS_PCP_1 cos-pcp pcp 3 cos-name pccwg_silver
+!
+mef-global cos-profile profile COS_PCP_1 cos-pcp pcp 0 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_PCP_1 cos-pcp default-pcp-cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_DSCP_2 cos-dscp default-ipv4-cos-name pccwg_gold default-ipv6-cos-name pccwg_gold ipv4-dscp 56 cos-name pccwg_gold
+!
+mef-global cos-profile profile COS_DSCP_2 cos-dscp default-ipv4-cos-name pccwg_gold default-ipv6-cos-name pccwg_gold ipv4-dscp 48 cos-name pccwg_gold
+!
+mef-global cos-profile profile COS_DSCP_2 cos-dscp default-ipv4-cos-name pccwg_gold default-ipv6-cos-name pccwg_gold ipv4-dscp 46 cos-name pccwg_gold
+!
+mef-global cos-profile profile COS_DSCP_2 cos-dscp default-ipv4-cos-name pccwg_gold default-ipv6-cos-name pccwg_gold ipv4-dscp 40 cos-name pccwg_gold
+!
+mef-global cos-profile profile COS_DSCP_2 cos-dscp default-ipv4-cos-name pccwg_silverplus default-ipv6-cos-name pccwg_silverplus ipv4-dscp 38 cos-name pccwg_silverplus
+!
+mef-global cos-profile profile COS_DSCP_2 cos-dscp default-ipv4-cos-name pccwg_silverplus default-ipv6-cos-name pccwg_silverplus ipv4-dscp 36 cos-name pccwg_silverplus
+!
+mef-global cos-profile profile COS_DSCP_2 cos-dscp default-ipv4-cos-name pccwg_silverplus default-ipv6-cos-name pccwg_silverplus ipv4-dscp 34 cos-name pccwg_silverplus
+!
+mef-global cos-profile profile COS_DSCP_2 cos-dscp default-ipv4-cos-name pccwg_silverplus default-ipv6-cos-name pccwg_silverplus ipv4-dscp 32 cos-name pccwg_silverplus
+!
+mef-global cos-profile profile COS_DSCP_2 cos-dscp default-ipv4-cos-name pccwg_silver default-ipv6-cos-name pccwg_silver ipv4-dscp 30 cos-name pccwg_silver
+!
+mef-global cos-profile profile COS_DSCP_2 cos-dscp default-ipv4-cos-name pccwg_silver default-ipv6-cos-name pccwg_silver ipv4-dscp 28 cos-name pccwg_silver
+!
+mef-global cos-profile profile COS_DSCP_2 cos-dscp default-ipv4-cos-name pccwg_silver default-ipv6-cos-name pccwg_silver ipv4-dscp 26 cos-name pccwg_silver
+!
+mef-global cos-profile profile COS_DSCP_2 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv6-cos-name pccwg_bronze ipv4-dscp 24 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_DSCP_2 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv6-cos-name pccwg_bronze ipv4-dscp 22 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_DSCP_2 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv6-cos-name pccwg_bronze ipv4-dscp 20 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_DSCP_2 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv6-cos-name pccwg_bronze ipv4-dscp 18 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_DSCP_2 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv6-cos-name pccwg_bronze ipv4-dscp 16 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_DSCP_2 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv6-cos-name pccwg_bronze ipv4-dscp 14 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_DSCP_2 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv6-cos-name pccwg_bronze ipv4-dscp 12 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_DSCP_2 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv6-cos-name pccwg_bronze ipv4-dscp 10 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_DSCP_2 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv6-cos-name pccwg_bronze ipv4-dscp 8 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_DSCP_2 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv6-cos-name pccwg_bronze ipv4-dscp 0 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_DSCP_2 cos-dscp default-ipv4-cos-name pccwg_bronze default-ipv6-cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_PCP_2 cos-pcp pcp 7 cos-name pccwg_gold
+!
+mef-global cos-profile profile COS_PCP_2 cos-pcp pcp 6 cos-name pccwg_gold
+!
+mef-global cos-profile profile COS_PCP_2 cos-pcp pcp 5 cos-name pccwg_gold
+!
+mef-global cos-profile profile COS_PCP_2 cos-pcp pcp 4 cos-name pccwg_silverplus
+!
+mef-global cos-profile profile COS_PCP_2 cos-pcp pcp 3 cos-name pccwg_silver
+!
+mef-global cos-profile profile COS_PCP_2 cos-pcp pcp 0 cos-name pccwg_bronze
+!
+mef-global cos-profile profile COS_PCP_2 cos-pcp default-pcp-cos-name pccwg_bronze
+!

@@ -1,0 +1,11 @@
+/bin/
+*fxs
+*jar
+/src/java/build
+/load-dir/
+/private-jar/
+/shared-jar/
+.classpath
+.DS_Store
+.project
+/src/java/*.log

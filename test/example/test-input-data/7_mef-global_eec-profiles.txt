@@ -1,0 +1,151 @@
+! Global EEC Profiles
+mef-global eec-profiles profile MEF103_Table23 eec-dscp default-ipv4-eec-name Sophomore default-ipv6-eec-name Sophomore ipv4-dscp 11 eec-name Sophomore
+!
+mef-global eec-profiles profile MEF103_Table23 eec-dscp default-ipv4-eec-name Sophomore default-ipv6-eec-name Sophomore ipv4-dscp 37 eec-name Sophomore
+!
+mef-global eec-profiles profile MEF103_Table23 eec-dscp default-ipv4-eec-name Sophomore default-ipv6-eec-name Sophomore ipv4-dscp 45 eec-name Sophomore
+!
+mef-global eec-profiles profile MEF103_Table23 eec-dscp default-ipv4-eec-name Senior default-ipv6-eec-name Senior ipv4-dscp 8 eec-name Senior
+!
+mef-global eec-profiles profile MEF103_Table23 eec-dscp default-ipv4-eec-name Senior default-ipv6-eec-name Senior ipv4-dscp 10 eec-name Senior
+!
+mef-global eec-profiles profile MEF103_Table23 eec-dscp default-ipv4-eec-name Senior default-ipv6-eec-name Senior ipv4-dscp 12 eec-name Senior
+!
+mef-global eec-profiles profile MEF103_Table23 eec-dscp default-ipv4-eec-name Freshman default-ipv6-eec-name Freshman
+!
+mef-global eec-profiles profile MEF103_Table23 eec-dscp default-ipv4-eec-name Sophomore default-ipv6-eec-name Sophomore ipv6-dscp 11 eec-name Sophomore
+!
+mef-global eec-profiles profile MEF103_Table23 eec-dscp default-ipv4-eec-name Sophomore default-ipv6-eec-name Sophomore ipv6-dscp 37 eec-name Sophomore
+!
+mef-global eec-profiles profile MEF103_Table23 eec-dscp default-ipv4-eec-name Sophomore default-ipv6-eec-name Sophomore ipv6-dscp 45 eec-name Sophomore
+!
+mef-global eec-profiles profile MEF103_Table23 eec-dscp default-ipv4-eec-name Junior default-ipv6-eec-name Junior ipv6-dscp 38 eec-name Junior
+!
+mef-global eec-profiles profile MEF103_Table23 eec-dscp default-ipv4-eec-name Junior default-ipv6-eec-name Junior ipv6-dscp 63 eec-name Junior
+!
+mef-global eec-profiles profile MEF103_Table23 eec-dscp default-ipv4-eec-name Freshman default-ipv6-eec-name Freshman
+!
+mef-global eec-profiles profile MEF62_ApdxA eec-pcp pcp 5 eec-name Krypton
+!
+mef-global eec-profiles profile MEF62_ApdxA eec-pcp pcp 3 eec-name Argon
+!
+mef-global eec-profiles profile MEF62_ApdxA eec-pcp pcp 1 eec-name Neon
+!
+mef-global eec-profiles profile MEF62_ApdxA eec-pcp default-pcp-eec-name Neon
+!
+mef-global eec-profiles profile EEC_DSCP_1 eec-dscp default-ipv4-eec-name pccwg_gold default-ipv6-eec-name pccwg_gold ipv4-dscp 56 eec-name pccwg_gold
+!
+mef-global eec-profiles profile EEC_DSCP_1 eec-dscp default-ipv4-eec-name pccwg_gold default-ipv6-eec-name pccwg_gold ipv4-dscp 48 eec-name pccwg_gold
+!
+mef-global eec-profiles profile EEC_DSCP_1 eec-dscp default-ipv4-eec-name pccwg_gold default-ipv6-eec-name pccwg_gold ipv4-dscp 46 eec-name pccwg_gold
+!
+mef-global eec-profiles profile EEC_DSCP_1 eec-dscp default-ipv4-eec-name pccwg_gold default-ipv6-eec-name pccwg_gold ipv4-dscp 40 eec-name pccwg_gold
+!
+mef-global eec-profiles profile EEC_DSCP_1 eec-dscp default-ipv4-eec-name pccwg_silverplus default-ipv6-eec-name pccwg_silverplus ipv4-dscp 38 eec-name pccwg_silverplus
+!
+mef-global eec-profiles profile EEC_DSCP_1 eec-dscp default-ipv4-eec-name pccwg_silverplus default-ipv6-eec-name pccwg_silverplus ipv4-dscp 36 eec-name pccwg_silverplus
+!
+mef-global eec-profiles profile EEC_DSCP_1 eec-dscp default-ipv4-eec-name pccwg_silverplus default-ipv6-eec-name pccwg_silverplus ipv4-dscp 34 eec-name pccwg_silverplus
+!
+mef-global eec-profiles profile EEC_DSCP_1 eec-dscp default-ipv4-eec-name pccwg_silverplus default-ipv6-eec-name pccwg_silverplus ipv4-dscp 32 eec-name pccwg_silverplus
+!
+mef-global eec-profiles profile EEC_DSCP_1 eec-dscp default-ipv4-eec-name pccwg_silver default-ipv6-eec-name pccwg_silver ipv4-dscp 30 eec-name pccwg_silver
+!
+mef-global eec-profiles profile EEC_DSCP_1 eec-dscp default-ipv4-eec-name pccwg_silver default-ipv6-eec-name pccwg_silver ipv4-dscp 28 eec-name pccwg_silver
+!
+mef-global eec-profiles profile EEC_DSCP_1 eec-dscp default-ipv4-eec-name pccwg_silver default-ipv6-eec-name pccwg_silver ipv4-dscp 26 eec-name pccwg_silver
+!
+mef-global eec-profiles profile EEC_DSCP_1 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv6-eec-name pccwg_bronze ipv4-dscp 24 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_DSCP_1 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv6-eec-name pccwg_bronze ipv4-dscp 22 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_DSCP_1 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv6-eec-name pccwg_bronze ipv4-dscp 20 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_DSCP_1 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv6-eec-name pccwg_bronze ipv4-dscp 18 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_DSCP_1 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv6-eec-name pccwg_bronze ipv4-dscp 16 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_DSCP_1 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv6-eec-name pccwg_bronze ipv4-dscp 14 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_DSCP_1 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv6-eec-name pccwg_bronze ipv4-dscp 12 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_DSCP_1 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv6-eec-name pccwg_bronze ipv4-dscp 10 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_DSCP_1 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv6-eec-name pccwg_bronze ipv4-dscp 8 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_DSCP_1 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv6-eec-name pccwg_bronze ipv4-dscp 0 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_DSCP_1 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv6-eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_PCP_1 eec-pcp pcp 7 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_PCP_1 eec-pcp pcp 6 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_PCP_1 eec-pcp pcp 5 eec-name pccwg_gold
+!
+mef-global eec-profiles profile EEC_PCP_1 eec-pcp pcp 4 eec-name pccwg_silverplus
+!
+mef-global eec-profiles profile EEC_PCP_1 eec-pcp pcp 3 eec-name pccwg_silver
+!
+mef-global eec-profiles profile EEC_PCP_1 eec-pcp pcp 0 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_PCP_1 eec-pcp default-pcp-eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_DSCP_2 eec-dscp default-ipv4-eec-name pccwg_gold default-ipv6-eec-name pccwg_gold ipv4-dscp 56 eec-name pccwg_gold
+!
+mef-global eec-profiles profile EEC_DSCP_2 eec-dscp default-ipv4-eec-name pccwg_gold default-ipv6-eec-name pccwg_gold ipv4-dscp 48 eec-name pccwg_gold
+!
+mef-global eec-profiles profile EEC_DSCP_2 eec-dscp default-ipv4-eec-name pccwg_gold default-ipv6-eec-name pccwg_gold ipv4-dscp 46 eec-name pccwg_gold
+!
+mef-global eec-profiles profile EEC_DSCP_2 eec-dscp default-ipv4-eec-name pccwg_gold default-ipv6-eec-name pccwg_gold ipv4-dscp 40 eec-name pccwg_gold
+!
+mef-global eec-profiles profile EEC_DSCP_2 eec-dscp default-ipv4-eec-name pccwg_gold default-ipv6-eec-name pccwg_gold ipv4-dscp 38 eec-name pccwg_gold
+!
+mef-global eec-profiles profile EEC_DSCP_2 eec-dscp default-ipv4-eec-name pccwg_silverplus default-ipv6-eec-name pccwg_silverplus ipv4-dscp 36 eec-name pccwg_silverplus
+!
+mef-global eec-profiles profile EEC_DSCP_2 eec-dscp default-ipv4-eec-name pccwg_silverplus default-ipv6-eec-name pccwg_silverplus ipv4-dscp 34 eec-name pccwg_silverplus
+!
+mef-global eec-profiles profile EEC_DSCP_2 eec-dscp default-ipv4-eec-name pccwg_silverplus default-ipv6-eec-name pccwg_silverplus ipv4-dscp 32 eec-name pccwg_silverplus
+!
+mef-global eec-profiles profile EEC_DSCP_2 eec-dscp default-ipv4-eec-name pccwg_silver default-ipv6-eec-name pccwg_silver ipv4-dscp 30 eec-name pccwg_silver
+!
+mef-global eec-profiles profile EEC_DSCP_2 eec-dscp default-ipv4-eec-name pccwg_silver default-ipv6-eec-name pccwg_silver ipv4-dscp 28 eec-name pccwg_silver
+!
+mef-global eec-profiles profile EEC_DSCP_2 eec-dscp default-ipv4-eec-name pccwg_silver default-ipv6-eec-name pccwg_silver ipv4-dscp 26 eec-name pccwg_silver
+!
+mef-global eec-profiles profile EEC_DSCP_2 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv6-eec-name pccwg_bronze ipv4-dscp 24 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_DSCP_2 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv6-eec-name pccwg_bronze ipv4-dscp 22 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_DSCP_2 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv6-eec-name pccwg_bronze ipv4-dscp 20 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_DSCP_2 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv6-eec-name pccwg_bronze ipv4-dscp 18 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_DSCP_2 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv6-eec-name pccwg_bronze ipv4-dscp 16 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_DSCP_2 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv6-eec-name pccwg_bronze ipv4-dscp 14 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_DSCP_2 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv6-eec-name pccwg_bronze ipv4-dscp 12 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_DSCP_2 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv6-eec-name pccwg_bronze ipv4-dscp 10 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_DSCP_2 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv6-eec-name pccwg_bronze ipv4-dscp 8 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_DSCP_2 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv6-eec-name pccwg_bronze ipv4-dscp 0 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_DSCP_2 eec-dscp default-ipv4-eec-name pccwg_bronze default-ipv6-eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_PCP_2 eec-pcp pcp 7 eec-name pccwg_gold
+!
+mef-global eec-profiles profile EEC_PCP_2 eec-pcp pcp 6 eec-name pccwg_gold
+!
+mef-global eec-profiles profile EEC_PCP_2 eec-pcp pcp 5 eec-name pccwg_gold
+!
+mef-global eec-profiles profile EEC_PCP_2 eec-pcp pcp 4 eec-name pccwg_silverplus
+!
+mef-global eec-profiles profile EEC_PCP_2 eec-pcp pcp 3 eec-name pccwg_silver
+!
+mef-global eec-profiles profile EEC_PCP_2 eec-pcp pcp 0 eec-name pccwg_bronze
+!
+mef-global eec-profiles profile EEC_PCP_2 eec-pcp default-pcp-eec-name pccwg_bronze
+!

@@ -1,0 +1,81 @@
+! Global Ingress Bandwidth Profiles are Ordered-By User
+mef-global bwp-flow-parameter-profiles profile low1-bwp-uni cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile medium1-bwp-uni cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile high1-bwp-uni cir 20000 cir-max 20000 cbs 64000 eir 0 eir-max 50000 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile low2-bwp-uni cir 400000 cir-max 0 cbs 9000 eir 10000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile medium2-bwp-uni cir 2000000 cir-max 0 cbs 10000 eir 10000 eir-max 0 ebs 10000  color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile high2-bwp-uni cir 10000000 cir-max 0 cbs 12000 eir 0 eir-max 0 ebs 0  color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile high3-bwp-uni cir 20000 cir-max 20000 cbs 64000 eir 0 eir-max 50000 ebs 0 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile medium3-bwp-uni cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 30000 ebs 0 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile low3-bwp-uni cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile chicago-bwp-uni cir 10000000 cir-max 0 cbs 12000 eir 10000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile denver-bwp-uni cir 2000000 cir-max 0 cbs 10000 eir 10000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile chicago-bwp-evc cir 400000 cir-max 0 cbs 9000 eir 10000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile denver-bwp-evc cir 400000 cir-max 0 cbs 9000 eir 10000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile itest-bwp1 cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile itest-bwp2 cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile INGRESS_BWP_100mbps cir 100000 cir-max 200000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile INGRESS_BWP_70mbps cir 70000 cir-max 200000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile INGRESS_BWP_2mbps cir 2000 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile INGRESS_BWP_200kbps cir 200 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile INGRESS_BWP_800kbps cir 800 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false
+! Global Egress Bandwidth Profiles are Ordered-By User
+mef-global bwp-flow-parameter-profiles profile low1-bwp-uni cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile medium1-bwp-uni cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 0 ebs 0 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile high1-bwp-uni cir 20000 cir-max 20000 cbs 64000 eir 0 eir-max 50000 ebs 0 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile low2-bwp-uni cir 400000 cbs 9000 eir 10000 eir-max 0 ebs 10000  color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile medium2-bwp-uni cir 2000000 cir-max 0 cbs 10000 eir 10000 eir-max 0 ebs 10000  color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile high2-bwp-uni cir 10000000 cir-max 0 cbs 12000 eir 0 eir-max 0 ebs 0  color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile high3-bwp-uni cir 20000 cir-max 20000 cbs 64000 eir 0 eir-max 0 ebs 0 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile medium3-bwp-uni cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 0 ebs 0 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile low3-bwp-uni cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 2000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile chicago-bwp-uni cir 10000000 cir-max 0 cbs 12000 eir 10000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile denver-bwp-uni cir 2000000 cir-max 0 cbs 10000 eir 10000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile chicago-bwp-evc cir 400000 cir-max 0 cbs 9000 eir 10000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile denver-bwp-evc cir 400000 cir-max 0 cbs 9000 eir 10000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile etest-bwp1 cir 5000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile etest-bwp2 cir 14000 cir-max 20000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile EGRESS_BWP_100mbps cir 100000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile EGRESS_BWP_70mbps cir 70000 cir-max 20000 cbs 12800 eir 50000 eir-max 0 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile EGRESS_BWP_2mbps cir 2000 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile EGRESS_BWP_200kbps cir 200 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false
+!
+mef-global bwp-flow-parameter-profiles profile EGRESS_BWP_800kbps cir 800 cir-max 4000 cbs 32000 eir 0 eir-max 30000 ebs 10000 color-mode color-blind coupling-enabled false
+!
