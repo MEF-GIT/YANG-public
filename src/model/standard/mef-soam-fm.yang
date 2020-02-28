@@ -145,11 +145,13 @@ module mef-soam-fm {
       type enumeration {
         enum lock {
         description
-          "Indicates the resource is administrativelyprohibited from use.";
+          "Indicates the resource is administratively
+prohibited from use.";
         }
         enum unlock {
         description
-          "Indicates the resource is notadministratively prohibited from use.";
+          "Indicates the resource is not
+administratively prohibited from use.";
         }
       }
 
@@ -487,8 +489,10 @@ module mef-soam-fm {
          pattern. This attribute is only applicable to the MEP receiving ETH-Test 
          messages.
 
-         The BER error count is independent of the CRC error count and is usedto
-         indicate a data pattern error, while the CRC error is used to indicate
+         The BER error count is independent of the CRC error count and is used
+to
+         indicate a data pattern error, while the CRC error is used to 
+indicate
          a TLV CRC error.";
       reference
         "[MEF7.1] 9.3.4.4";
@@ -566,7 +570,7 @@ module mef-soam-fm {
           description
             "2-octet integer/big endian";
         }
-        enum rfc2865-vpn-id {
+        enum rfc2685-vpn-id {
           value 4;
           description
             "RFC 2685 VPN ID 3 octet VPN authority Organizationally Unique Identifier
@@ -585,7 +589,7 @@ module mef-soam-fm {
       description
         "This enumeration indicates the format of the MEG ID that is
          sent in the OAM PDUs. The primary-vid, char-string,
-         unsigned-int16, and rfc2865-vpn-id types are more fully
+         unsigned-int16, and rfc2685-vpn-id types are more fully
          explained in [802.1q] 17.5. The icc-based type is from [Y.1731]
          Annex A.";
       reference
@@ -640,12 +644,15 @@ module mef-soam-fm {
       units "milliseconds";
 
       description
-        " This attribute specifies a configurable time interval to detect a
+        " This attribute specifies a configurable time interval to 
+detect a
          change in Connectivity Status. This is the timer timeout value that
-         is used by the Remote Maintenance Endpoint (MEP)state machine.
+         is used by the Remote Maintenance Endpoint (MEP)
+state machine.
 
 
-         This attribute overrides the standard CCMloss of connectivity
+         This attribute overrides the standard CCM
+loss of connectivity
          time interval which is 3.5 times the CCM interval.";
       reference
         "[MEF17] R2c, [802.1q] 20.1";
@@ -884,9 +891,12 @@ module mef-soam-fm {
 
       description
         "This attribute specifies whether a MEP uses unicast or multicast
-         to send the ETH-LB messages (LBM). The 802.1ag standardonly allows
-         unicast LBM. ITU-T Y.1731 allows LBM to be multicast.This attribute
-         allows the MEP to send either multicast or unicastLBM on a per MEP
+         to send the ETH-LB messages (LBM). The 802.1ag standard
+only allows
+         unicast LBM. ITU-T Y.1731 allows LBM to be multicast.
+This attribute
+         allows the MEP to send either multicast or unicast
+LBM on a per MEP
          basis.
 
          The value 'true' indicates multicast is enabled.
@@ -907,7 +917,8 @@ module mef-soam-fm {
         "This attribute specifies the period between LBM transmissions in an LB
          Session. For an LB Session, the period for LBM transmission
          is configurable in the range 0 and sixty seconds (60 s). Granularity
-         of 100ms is required.
+         of 100ms is required.
+
 
          The transmission of the next LBM is not dependent upon the
          reception the first LBR. The next LBM is sent out based upon
@@ -936,7 +947,8 @@ module mef-soam-fm {
          EVC.
 
          The range of frame sizes from 64 through 2000 octets, in 4 octet increments,
-         MUST be supported, and the range of frame sizes from 2004through 9600
+         MUST be supported, and the range of frame sizes from 2004
+through 9600
          octets, in 4 octet increments, SHOULD be supported.
 
          The adjustment to the frame size of the standard LBM PDU size is accomplished
